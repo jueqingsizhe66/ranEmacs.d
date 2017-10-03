@@ -182,6 +182,9 @@ M-up/dowm 上下移动列表项
 
 ```
 
+注意，在标题上面或者总任务上面的尾巴添加上[%]或者[/]即可，emacs org-mode会自动进行计算任务的[总进度][87]。
+只有在任务list才能添加勾选checkbox，标题不添加。
+
 ### 8. chez-scheme的集成(scheme-editing.el)
 
 注意你的scheme路径，参考 [emacs][16]
@@ -1242,4 +1245,5 @@ orgmode计时,
 [84]:https://www.atlassian.com/git/tutorials/comparing-workflows
 [85]:http://members.optusnet.com.au/~charles57/GTD/remember.html
 [86]:https://github.com/jueqingsizhe66/zhaoEmacs.d 
+[87]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E5%88%97%E8%A1%A8
 
