@@ -975,32 +975,32 @@ seen from [jianshu][74]
     6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
 6. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
 
-   a. Capture(collect what has your attention)
-       ```
-       Use an in-tray, notepad, digital list, or voice recorder to capture everything that has your attention. 
-       Little, big, personal and professional—all your to-do’s, projects, things to handle or finish. 
-       ```
-   b. Clarify(Process what it means)
-       ```
-       Take everything that you capture and ask: Is it actionable? If no, then trash it, incubate it, 
-       or file it as reference. If yes, decide the very next action required. If it will take less than 
-       two minutes, do it now. If not, delegate it if you can; or put it on a list to do when you can. 
-       ```
-   c. Organize(put it where it belongs)
-       ```
-       Put action reminders on the right lists. For example, create lists for the appropriate categories
-       —calls to make, errands to run, emails to send, etc. 
-       ```
-   d. Reflect(review frequently,weekly review, monthly review)
-       ```
-       Look over your lists as often as necessary to trust your choices about what to do next. Do a weekly 
-       review to get clear, get current, and get creative. 
-       ```
-   e. Engage(Simply do)
-       ```
-       Use your system to take appropriate actions with confidence. 
-       ```
-   
+a. Capture(collect what has your attention)
+```
+Use an in-tray, notepad, digital list, or voice recorder to capture everything that has your attention. 
+Little, big, personal and professional—all your to-do’s, projects, things to handle or finish. 
+```
+b. Clarify(Process what it means)
+```
+Take everything that you capture and ask: Is it actionable? If no, then trash it, incubate it, 
+or file it as reference. If yes, decide the very next action required. If it will take less than 
+two minutes, do it now. If not, delegate it if you can; or put it on a list to do when you can. 
+    ```
+c. Organize(put it where it belongs)
+```
+Put action reminders on the right lists. For example, create lists for the appropriate categories
+—calls to make, errands to run, emails to send, etc. 
+```
+d. Reflect(review frequently,weekly review, monthly review)
+```
+Look over your lists as often as necessary to trust your choices about what to do next. Do a weekly 
+review to get clear, get current, and get creative. 
+```
+e. Engage(Simply do)
+```
+Use your system to take appropriate actions with confidence. 
+```
+
 
 
 
