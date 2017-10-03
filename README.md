@@ -985,7 +985,7 @@ b. Clarify(Process what it means)
 Take everything that you capture and ask: Is it actionable? If no, then trash it, incubate it, 
 or file it as reference. If yes, decide the very next action required. If it will take less than 
 two minutes, do it now. If not, delegate it if you can; or put it on a list to do when you can. 
-    ```
+```
 c. Organize(put it where it belongs)
 ```
 Put action reminders on the right lists. For example, create lists for the appropriate categories
