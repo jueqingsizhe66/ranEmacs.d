@@ -1,0 +1,36 @@
+** <2015-05-03 Sun>                                                             :COACH:
+ - What did I enjoy doing today?
+
+ - What would I like to more of?
+
+ - What would I like to do less of?
+
+ - What did I learn today?
+
+ - What will I do differently tomorrow?
+
+ - Thought for the day
+* 2017
+** 2017-09 九月
+*** 2017-09-26 星期二
+**** <2017-09-26 周二>                                             :COACH: 
+ - What did I enjoy doing today?
+
+ - What would I like to more of?
+
+ - What would I like to do less of?
+
+ - What did I learn today?
+
+ - What will I do differently tomorrow?
+
+ - Thought for the day
+
+Two video below come from http://emacsrocks.com/
+
+1. http://pan.baidu.com/s/1boCCjUJ  Parens of the Dead (Clojure + Emacs) (原视频地址:http://www.parens-of-the-dead.com/)
+2. http://pan.baidu.com/s/1qY0W5Jm  Emacs Rocks (Emacs) (原视频地址:http://emacsrocks.com/)
+
+https://clojure.org/api/cheatsheet  clojure官方API
+
+https://github.com/sicper/emacs-for-clojure  专为 Clojure 初学者准备的 Emacs 开发环境 

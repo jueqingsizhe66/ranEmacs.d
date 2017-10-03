@@ -1,0 +1,8 @@
+* NEXT emacs tweaking and extending also with orgmode
+[2017-09-28 周四 14:47]
+
+SCHEDULED: <2017-09-28 周四 .+1d/3d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:

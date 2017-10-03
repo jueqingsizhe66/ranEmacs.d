@@ -1,0 +1,7 @@
+ :PROPERTIES:
+ :Title:    %?
+ :Author:  
+ :Year:      
+ :Publisher:
+ :END:
+ Comments:

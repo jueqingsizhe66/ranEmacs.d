@@ -1,0 +1,52 @@
+#+OPTIONS: ^:{}
+
+* 创意
+** Introduction
+*** subtree
+*** open the link
+** review of related literature
+** description of study
+** methodology
+** results and analysis
+** [ ] conclusionn
+*** 学习 [#B] [ ] hel                                  :CANCELLED:紧急重要:
+- State "学习"       from "工作"       [2017-09-18 周一 14:30]
+- State "工作"       from "BUG"        [2017-09-18 周一 14:14]
+- State "BUG"        from "KNOWNCAUSE" [2017-09-18 周一 14:13]
+- State "KNOWNCAUSE" from "FIXED"      [2017-09-18 周一 14:13]
+- State "FIXED"      from "PENDING"    [2017-09-18 周一 14:13]
+- State "PENDING"    from "TODO"       [2017-09-18 周一 14:13]
+- State "TODO"       from "DONE"       [2017-09-18 周一 14:13]
+- State "DONE"       from "ABORT"      [2017-09-18 周一 14:13]
+- State "ABORT"      from "DONE"       [2017-09-18 周一 14:13]
+- State "DONE"       from "ABORT"      [2017-09-18 周一 14:13]
+
+- dsf
+H_2 O
+#<<tag1>>
+* TODO hekf [0/1]
+- State "TODO"       from              [2017-09-29 周五 23:42]
+- [ ] dg
+- [X] dgg
+- [X] df [3/3]
+  - [X] helo
+  - [X] hdf
+  - [X] dfa
+DEADLINE:<2017-09-20 周三>
++ sdsdf
++ sdfgs
+  + 
+
+
+[[tag1]]
+** KNOWNCAUSE test agenda
+SCHEDULED: <2017-09-20 周三>
+
++ [X] sdf
++ sddf
++ s
++ [ ] 
++ [ ] 
++ [ ] df
++ sdfdsf
++ sdfs

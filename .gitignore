@@ -1,0 +1,13 @@
+rubbish*/
+.swp
+backups/*
+.recentf
+.recentf~
+.session
+.smex-items
+ido-last
+ido-last~
+auto-save-list/*
+server/*
+cider-history
+projectile-bookmarks.eld

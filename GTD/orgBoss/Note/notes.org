@@ -1,0 +1,137 @@
+ Quick notes
+:LOGBOOK:
+CLOCK: [2017-10-02 周一 11:09]
+CLOCK: [2017-09-29 周五 11:03]j
+
+
+CLOCK: [2017-09-28 周四 13:41]--[2017-09-28 周四 13:42] =>  0:01
+:END:
+** tomato time [#B]                                                  :@F708:
+                           Added: [2017-10-02 周一 11:09]
+  ● 开心网的偷菜游戏？你是不是老是惦记着收菜的时间？你收的不是菜，是番茄
+  ● 奥运会倒计时，高考倒计时？很大很重要的一个番茄
+  ● 老板明天要的资料？味道不怎么样的番茄
+我想说的是，番茄时间的核心是倒计时所产生的紧迫感。这是中科院心理学专业毕业的老郭（郭军峰）告诉我的，感谢哦。
+** cljrefactor call last thread call [#B]                            :@work:
+                           Added: [2017-09-30 周六 05:21]
+-https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
+
+
+** cljr thread first all [#B]                                        :@work:
+                           Added: [2017-09-30 周六 05:23]
+                           
+https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-last-all
+
+Start with:
+
+(map square (filter even? [1 2 3 4 5]))
+
+Put your cursor in front of the s-exp, and call cljr-thread-last-all:
+
+(->> [1 2 3 4 5]
+     (filter even?)
+     (map square))
+
+** CFD nacell wiwith bump [#B]                                       :@work:
+                           Added: [2017-09-29 周五 11:02]
+     首先，总算完成了大小网格的嵌套功能。 划分到机舱的过程中基本上比较正常，就是做了几次o剖而已，然后对应关联而已，
+只不过在几何的处理上，有一个很小的技巧就是需要把机舱的线往前copy一个buffer长度的距离，这样就能够做到两次o剖，第三次o剖在过渡到
+圆上，在两次o剖后，就可以把机舱的内部网格删掉；而在第三次o剖圆的过程，把圆内的网格再删掉； 还有在第一次o剖机舱头部的时候，需要把
+机舱上尾部的点进行split block,尾部的点、线进行关联操作，当然机舱的头部也要进行split block，进行线关联。
+     完成了上述的过程之后，也就是最后一步达到buffer区域圆的删除，就可以进一步做bump的切割。这一步的切割很有讲究，流线方向上切上两刀
+即可（这边需要注意的是，不要切上三刀，只是bump的前后面即可，把他当作一个正方体去对待，防止切多了，不需要进行流线的线关联了，事先在机
+舱头的o剖就已经进行了关联）。注意在你每进行切割的时候，都得把质量检查打开，防止出现太糟糕的网格质量。 要注意的是，从bump开始的切割都
+是使用visible select block的方式，而不是All, 现在得选择bump上面的三个block快，然后选择斜边，选择bump竖直方向的第二个点，紧接着切割选择
+第三个点，这样就算完成了，然后就是一个关联工作，把bump点关联上，然后是线关联。
+      至此完工。 这边有一个对应关系，也就是你需要把梯形体，想成六面体进行切割，正如你在进行o剖的时候，把直翼段想成圆柱段的感觉一样，
+然后进行o剖。
+** emacs auto open gtd file                                           :NOTE:
+                           Added: [2017-09-28 周四 13:40]
+  
+== Automatically open your todo.org every time you start Emacs ==
+
+Make your life a little bit easier by automatically opening ~/todo.org every time you open Emacs. Add this to the end of your Emacs configuration. To do that,
+
+    C-x C-f ~/.emacs.d/init.el - use find-file to open your configuration file. If it does not yet exist, it is created.
+    Go to the end of this file. (Handy shortcut: C-end)
+    Add (find-file "~/todo.org")
+    Save with C-x C-s (save-buffer).
+
+You can test it with M-x eval-buffer while looking at your ~/.emacs.d/init.el. If it works, it should show you your ~/todo.org file.
+
+You have just written a little Emacs Lisp. Totally not scary.
+
+
+
+http://members.optusnet.com.au/~charles57/GTD/datetree.html
+ %^g prompts for a tag
+I timestamp all my captured items with the line: Added: %U
+Some of my items are filed after a specific headline in a file. Appointments are filed under a heading Calendar.
+Other entries are filed in date trees. These are explained in the next section
+
+
+http://blog.csdn.net/u011729865/article/details/54236547
+
+
+http://blog.csdn.net/jiluben/article/details/39587723
+关于org-capture-templates配置代码的解释
+原创 2014年09月26日 22:13:02
+
+      对于org-capture-templates的配置，网上只有如下几行代码：
+
+   (setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+             "* %?\nEntered on %U\n  %i\n  %a")))
+    大家都是这么写，但是并没有解释每个代码的含义。
+    经过几次的测试，各个代码的意义大体如下：
+    
+    现在以
+
+("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+
+为例进行说明。
+   "t"代表快捷键，如果我们要调用org-capture，必须按下C-c c的组合键，此时emacs就会显示出
+一写字母等，如t、j等，这个"t"就是代码中的"t",我们可以根据自己的意愿设置。
+   "Todo"目前还不清楚。
+    当为"file+headline"时，后面要跟两个参数，一个是文件的地址，如"~/org/gtd.org"，另一个是
+我们当前文档所属的标题。本配置中是"Tasks",意味着当我们在按下C-c c t，并输入内容，再按下
+C-c C-c后，我们的内容会自动归档到gtd.org文件的Tasks标题下，若文件gtd.org中没有Tasks标题，
+系统会自动产生一个。
+    "*"具体意义不知道，如果没有，在按下C-c c后，再按t，无法调出gtd文件。
+     "TODO"会显示再文本标题中，大家也可以换成"SOMEDAY"等，自己想要的状态。
+      "%a"代表你按C-c c前，鼠标所在的内容。
+      其它的内容还没有弄明白。
+
+     附：
+
+     %a          annotation, normally the link created with org-store-link
+     %i          initial content, the region when capture is called with C-u.
+     %t          timestamp, date only
+     %T          timestamp with date and time
+     %u, %U      like the above, but inactive timestamps
+     %?          表示cursor定位于此 开始输入
+
+http://doc.norang.ca/org-mode.html
+
+https://github.com/bbatsov/prelude
+
+https://www.zhihu.com/question/26384934/answer/32686989
+大半年前正值我开写博士论文， 对于这种大部头的写作， 提纲无疑十分重要， 我也尝试过许多mindmap软件来做规划， 结果都乱做一团。 最后还是把维度降到1
+
+
+Org能识别无序列表、有序列表、和描述表
+
+
+https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
+                         
+
+* Quick notes
+** data science for making decision [#B]                             :@work:
+                           Added: [2017-10-02 周一 21:08]
+                           
+Data science involves principles（原则）, processes（过程）,
+ and techniques（技术  也就是说在后文会介绍这些方面的个中信息） for understanding phenomena via the (automated) analysis of data. For the perspective of this article, the ultimate goal of data science is improving decision making（终极目标提高决策能力）, 
+as this generally is of paramount interest to business（对商业来说也是特别重要的）. 
