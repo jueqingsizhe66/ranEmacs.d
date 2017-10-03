@@ -1,6 +1,0 @@
-:PROPERTIES:
-  :Director:  
-  :Year:      
-  :Genre:
-  :Country:
-:END:

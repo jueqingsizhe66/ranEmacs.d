@@ -1,3 +1,0 @@
-* IDEA
-** TODO get the line contour from image 
-  With Image Processing
