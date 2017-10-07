@@ -1481,7 +1481,7 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 
 
 
-[1]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/new.jpg
+[1]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/new.jpg
 [2]:https://github.com/clojure-emacs/clj-refactor.el 
 [3]:https://github.com/jaypei/emacs-neotree 
 [4]:https://github.com/domtronn/all-the-icons.el 
@@ -1499,7 +1499,7 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [16]:http://www.yinwang.org/blog-cn/2013/04/11/scheme-setup 
 [17]:http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html
 [18]: https://www.masteringemacs.org/article/beginners-guide-to-emacs
-[19]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/holyshit.jpg
+[19]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/holyshit.jpg
 [20]:https://www.braveclojure.com/basic-emacs/
 [21]:https://github.com/magnars/multiple-cursors.el
 [22]:https://github.com/tpope/vim-surround
@@ -1509,7 +1509,7 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [26]:http://oremacs.com/swiper/
 [27]:https://github.com/abo-abo/swiper
 [28]:https://github.com/emacs-helm/helm
-[29]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/calenar.jpg
+[29]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/calenar.jpg
 [30]:https://github.com/winterTTr/ace-jump-mode
 [31]:https://github.com/emacs-evil/evil-surround
 [32]:https://github.com/company-mode/company-mode
@@ -1523,23 +1523,23 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [40]:http://emacsrocks.com/e09.html
 [41]:http://emacsrocks.com/e02.html
 [42]:http://emacsrocks.com/e16.html
-[43]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/dired.jpg
-[44]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/ace.png
+[43]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/dired.jpg
+[44]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ace.png
 [45]:http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html
 [46]:https://github.com/magnars/.emacs.d 
 [47]:https://github.com/rooney/zencoding
 [48]:https://github.com/emacsfodder/move-text
 [49]:https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
-[50]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/baby-org-mode.png
+[50]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/baby-org-mode.png
 [51]:https://github.com/bbatsov/projectile
 [52]:https://github.com/vim-ctrlspace/vim-ctrlspace
 [53]:https://github.com/fxbois/web-mode
 [54]:http://web-mode.org/
-[55]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/projectile.jpg
+[55]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/projectile.jpg
 [56]:http://lists.gnu.org/archive/html/emacs-orgmode/2010-03/msg00367.html
 [57]:https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
 [58]:https://github.com/nashamri/spacemacs-theme
-[59]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/spacemacs.jpg
+[59]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/spacemacs.jpg
 [60]:http://todotxt.org/
 [61]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-last-all
 [62]:https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
@@ -1552,21 +1552,21 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [69]:https://github.com/ffevotte/fortran-index-args
 [70]:http://showterm.io/f5554b8857041dd28dd38#slow
 [71]:https://github.com/rosenbrockc/fortpy-el
-[72]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/f90mode.jpg
+[72]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/f90mode.jpg
 [73]:https://nbcache03.baidupcs.com/file/62c420102bc49b75c2f72eb0bc3376bb?bkt=p3-0000077349e2346b1ab12907a893d1a7719e&xcode=0dca202c7cf6f6cd67dfbddd458d6a75d22b36318ae4295e9717ec4418c70769&fid=1822475311-250528-779334003473883&time=1506791959&sign=FDTAXGERLQBHSK-DCb740ccc5511e5e8fedcff06b081203-ANTjhB%2F5BIHnqoS%2Box7c5vXYJVA%3D&to=p7&size=15370238&sta_dx=15370238&sta_cs=7&sta_ft=jar&sta_ct=6&sta_mt=6&fm2=MH,Yangquan,Netizen-anywhere,,beijing,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000077349e2346b1ab12907a893d1a7719e&sl=79364174&expires=8h&rt=sh&r=741626513&mlogid=6332918318081198732&vuk=3546319256&vbdid=2539911141&fin=leiningen-2.7.1-standalone.jar&fn=leiningen-2.7.1-standalone.jar&rtype=1&iv=0&dp-logid=6332918318081198732&dp-callid=0.1.1&hps=1&tsl=100&csl=100&csign=kcI5aH%2F04aSv%2F9sgQdx%2FfIpDnLM%3D&so=0&ut=6&uter=4&serv=0&uc=2541648437&ic=1957061296&ti=42c2e66164287fda4cfd66f9ec9b2ab620b13e6f45aa1efd305a5e1275657320&by=themis
 [74]:http://www.jianshu.com/p/1bd09e10f6db
-[75]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/quicksort.png
+[75]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/quicksort.png
 [76]:http://www.howardism.org/Technical/Emacs/literate-devops.html
 [77]:http://orgmode.org/worg/org-contrib/babel/how-to-use-Org-Babel-for-R.html
 [78]:http://www.howardism.org/
 [79]:http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html
-[80]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/org-bullet.jpg
-[81]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/betterbullet.jpg
+[80]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/org-bullet.jpg
+[81]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/betterbullet.jpg
 [82]:http://doc.norang.ca/org-mode.html#ClockingInDefaultTask
 [83]:http://gettingthingsdone.com/
 [84]:https://www.atlassian.com/git/tutorials/comparing-workflows
 [85]:http://members.optusnet.com.au/~charles57/GTD/remember.html
-[86]:https://github.com/jueqingsizhe66/zhaoEmacs.d 
+[86]:https://github.com/jueqingsizhe66/ranEmacs.d 
 [87]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E5%88%97%E8%A1%A8
 [88]:http://wenshanren.org/?p=327
 [89]:http://www.3zso.com/archives/orgmode-babel.html
@@ -1585,4 +1585,4 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [102]:http://orgmode.org/org.html#Capture
 [103]:https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#auto-insert-a-journal-template
 [104]:https://github.com/bastibe/org-journal
-[105]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/oo.jpg
+[105]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/oo.jpg
