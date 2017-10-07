@@ -1154,6 +1154,99 @@ writing can be seen from your organization and simplication.
 orgmode计时,
  在todo.org中，移到一个条目上，按`Ctrl-c Ctrl-x Ctrl-i`即可对该条目开始计时，`Ctrl-c Ctrl-x Ctrl-o`停止当前计时。
  如果在Agenda中，移到条目按I(大写)即可对该条目开始计时，O(大写)即可停止计时。
+
+
+### 51. custome code block
+
+when you need to memorize the source code in the .org file, one way you can use
+`<s tab` , the other way you can refer to [wenshanren][88]
+
+```
+(defun org-insert-src-block (src-code-type)
+  "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
+  (interactive
+   (let ((src-code-types
+          '("emacs-lisp" "python" "C" "sh" "java" "js" "clojure" "C++" "css"
+            "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
+            "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
+            "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
+            "scheme" "sqlite")))
+     (list (ido-completing-read "Source code type: " src-code-types))))
+  (progn
+    (newline-and-indent)
+    (insert (format "#+BEGIN_SRC %s\n" src-code-type))
+    (newline-and-indent)
+    (insert "#+END_SRC\n")
+    (previous-line 2)
+    (org-edit-src-code)))
+```
+
+通过`M-x org-insert-src-block`,然后输入代码类型,也不错。
+
+除了emacs-lisp不需要设置org-babel-load-language外，其他都得设置loading language true. 
+
+1. [org-babel语言配置][90]
+2. [org-babel介绍][89]
+3. [org-babel支持的语言][91]
+4. [安装graphviz][92]
+     先安装，并添加到path中，然后执行代码块， 所有的配置可以参考.orgConf.el。
+     
+ ```
+ 
+ 
+ #+BEGIN_SRC emacs-lisp
+   (+ 1 2 3 4)
+ #+END_SRC
+
+ #+RESULTS:
+ : 10
+
+
+;you need to set the language for running the python source code 
+
+ #+BEGIN_SRC python
+   a=1+1
+   print a
+ #+END_SRC
+
+ #+RESULTS:
+ : None
+
+
+;; you need to set the language for running the perl source code
+ #+BEGIN_SRC perl
+   my $hello="df";
+   print "$hello \n perl \n";
+ #+END_SRC
+
+ #+RESULTS:
+ : 1
+
+
+;; You need to set the language for running the c++ source code
+ #+BEGIN_SRC C++
+     int a=1;
+     int b=1;
+     printf("%d\n", a+b);
+ #+END_SRC
+
+ #+RESULTS:
+
+ #+BEGIN_SRC dot :file a.png
+       digraph colla_schema {  
+           UserA -> UserB[label = "Liked", color = green];  
+           UserB -> UserA[label = "Liked_By", color = red];  
+       }  
+ #+END_SRC
+
+ #+RESULTS:
+ [[file:a.png]]
+ ```
+ 
+ 在每一个代码块执行`C-c C-c`即可看到结果（在windows配置完path之后，得重启系统,有些命令才有效)。
+ 很有意思的文学编程。
+ 
+ 
 <hr/>
     <hr/>
 
@@ -1246,4 +1339,8 @@ orgmode计时,
 [85]:http://members.optusnet.com.au/~charles57/GTD/remember.html
 [86]:https://github.com/jueqingsizhe66/zhaoEmacs.d 
 [87]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E5%88%97%E8%A1%A8
-
+[88]:http://wenshanren.org/?p=327
+[89]:http://www.3zso.com/archives/orgmode-babel.html
+[90]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E6%8F%92%E5%85%A5%E6%BA%90%E4%BB%A3%E7%A0%81
+[91]:http://orgmode.org/worg/org-contrib/babel/languages.html
+[92]:http://www.graphviz.org/Download_windows.php

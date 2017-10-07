@@ -1,2 +1,28 @@
-**  [2015-05-04 Mon 00:46] %^g
-%?
+* 2017
+** 2017-10 十月
+*** 2017-10-07 星期六
+**** 镇江花销 [2017-10-07 周六 16:04]                             :laptop:
+
+| Date              | Category |  Money | People |
+|-------------------+----------+--------+--------|
+| <2017-10-07 周六> | Book     |   30.6 |        |
+| <2017-10-09 周一> | Film     |   70.6 |        |
+| <2017-11-10 周五> | Bus      |   50.2 |        |
+| <2017-11-11 周六> | Bus      |   60.2 | xinran |
+| <2017-11-12 周日> | Eating   |   1000 | Ye     |
+|-------------------+----------+--------+--------|
+|                   | Total:   | 1211.6 |        |
+#+TBLFM: @>$3=vsum(@2..@-1)   
+
+
+#+BEGIN_EXAMPLE
+@> The @ specifies a row, and this refers to the last row in a table.
+    $3 The $ specifies a column, so this refers to the third column.
+    vsum A vertical sum function with parameters given in parenthesis
+    @2 The second row. Notice that it the Amount header is @1 and the dashes separating the header from the body is ignored.
+    @-1 The next to the last row. Using these relative references mean that we can add rows to our table, and still have the sum formula work.
+
+
+http://www.howardism.org/Technical/Emacs/spreadsheet.html
+#+END_EXAMPLE
+

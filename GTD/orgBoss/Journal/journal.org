@@ -1,0 +1,59 @@
+
+* 2017
+** 2017-10 十月
+*** 2017-10-07 星期六
+**** testOrgmore[#B] 
+输入于： [2017-10-07 周六 16:07]
+ 
+ [[file:~/.emacs.d/.orgConf.el::%25?]]
+
+;; In the emacs-lisp , you don't need to set the orgconf, to load the language for running source code
+
+ #+BEGIN_SRC emacs-lisp
+   (+ 1 2 3 4)
+ #+END_SRC
+
+ #+RESULTS:
+ : 10
+
+
+;you need to set the language for running the python source code 
+
+ #+BEGIN_SRC python
+   a=1+1
+   print a
+ #+END_SRC
+
+ #+RESULTS:
+ : None
+
+
+;; you need to set the language for running the perl source code
+ #+BEGIN_SRC perl
+   my $hello="df";
+   print "$hello \n perl \n";
+   print "5\n";
+ #+END_SRC
+
+ #+RESULTS:
+ : 1
+
+
+;; You need to set the language for running the c++ source code
+ #+BEGIN_SRC C++
+     int a=1;
+     int b=1;
+     printf("%d\n", a+b);
+ #+END_SRC
+
+ #+RESULTS:
+
+ #+BEGIN_SRC dot :file a.png
+       digraph colla_schema {  
+           UserA -> UserB[label = "Liked", color = green];  
+           UserB -> UserA[label = "Liked_By", color = red];  
+       }  
+ #+END_SRC
+
+ #+RESULTS:
+ [[file:a.png]]

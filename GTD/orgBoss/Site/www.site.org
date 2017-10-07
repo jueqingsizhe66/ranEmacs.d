@@ -36,3 +36,19 @@ Many todos are too much,so don't worry ,make the Most important taks(MIP)
  边界层转捩
 ** http://en.wikipedia.org/wiki/Flow_separation
  Flow separation
+** https://github.com/LightTable/LightTable
+ the-next code generation editor
+** https://www.clojure-toolbox.com/
+ clojure Toolbox
+** https://github.com/trending?l=clojure
+ clojure github 项目排名
+** http://wiki.fnil.net/
+ 庄周梦蝶 lendcloud
+http://blog.fnil.net/blog/archives/
+** https://github.com/functional-koans/clojure-koans
+ A set of exercises for learning Clojure
+ The Clojure Koans are a fun way to get started with Clojure - no experience assumed or required.
+ Follow the instructions below to start making tests pass!
+** https://github.com/trending/python
+ python的小型项目
+http://wenshanren.org/?p=924 如果重新学编程，我会怎么做
