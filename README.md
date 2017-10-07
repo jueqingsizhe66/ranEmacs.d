@@ -1473,6 +1473,9 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 
 有点遗憾的地方，没有让org-capture-templates中的entry执行函数，还不清楚为什么。
 
+![oo][105]
+
+
 <hr/>
     <hr/>
 
