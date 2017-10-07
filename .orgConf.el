@@ -780,10 +780,10 @@ Captured %<%Y-%m-%d %H:%M>
 ;;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org           ;;
 (font-lock-add-keywords            ; A bit silly but my headers are now          ;;
    'org-mode `(("^\\*+ \\(TODO\\) "  ; shorter, and that is nice canceled        ;;
-                (1 (progn (compose-region (match-beginning 1) (match-end 1) "TODO") ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "○") ;;
                           nil)))                                                 ;;
                ("^\\*+ \\(DOING\\) "                                             ;;
-                (1 (progn (compose-region (match-beginning 1) (match-end 1) "DOING") ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "●") ;;
                           nil)))                                                 ;;
                ("^\\*+ \\(CANCELED\\) "                                          ;;
                 (1 (progn (compose-region (match-beginning 1) (match-end 1) "✘") ;;
