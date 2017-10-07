@@ -33,4 +33,6 @@ Two video below come from http://emacsrocks.com/
 
 https://clojure.org/api/cheatsheet  clojure官方API
 
-https://github.com/sicper/emacs-for-clojure  专为 Clojure 初学者准备的 Emacs 开发环境 
+https://github.com/sicper/emacs-for-clojure  专为 Clojure 初学者准备的 Emacs 开发环境
+** 2017-10 十月
+*** 2017-10-07 星期六

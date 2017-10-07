@@ -52,3 +52,16 @@ http://blog.fnil.net/blog/archives/
 ** https://github.com/trending/python
  python的小型项目
 http://wenshanren.org/?p=924 如果重新学编程，我会怎么做
+** https://www.emacswiki.org/emacs/PrettySymbol
+ pretty symbol
+** https://github.com/abo-abo
+ abo-abo大神
+** https://www.wired.com/2015/02/on-the-joy-of-mastery
+ design something to be hard to use
+** https://github.com/clojure/core.logic
+ core-logic
+** https://github.com/howardabrams/dot-files/blob/master/emacs-fixes.org#next-and-previous-file
+ split strings with number
+** http://archive.3zso.com/archives/plantuml-quickstart.html
+ 
+emacs org-mode plantuml

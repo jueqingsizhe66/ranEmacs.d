@@ -45,9 +45,14 @@
                        "~/.emacs.d/GTD/orgBoss/Site/www.site.org"
                        "~/.emacs.d/GTD/writing.org"
                        "~/.emacs.d/GTD/orgBoss/Habit/habits.org"
+                       ;(append (file-expand-wildcards "~/.emacs.d/GTD/orgBoss/Journal/2*"))
+                       ;"~/.emacs.d/GTD/orgBoss/Journal/"
                         ))  
 ;  )
 
+
+
+;(setq org-agenda-files (append (file-expand-wildcards "~/.emacs.d/GTD/OrgBoss/Journal/2*") org-agenda-files))
 ;;C-c C-w to redefine terms to different files
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
@@ -158,13 +163,23 @@ Captured %<%Y-%m-%d %H:%M>
 
 %i
 ")
-
+(defun my/expense-template ()
+  (format "Hello world %s" (plist-get org-capture-plist :account)))
 (setq org-capture-templates 
       '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/writing.org" "创意") 
-                        "* %?\n %i\n %a") 
-        ("j" "Journal" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" ) 
-                        "* %? [#B] \n输入于： %U\n %i\n %a"
+                        "* %?\n %i\n %a")
+;; file+datetree changed to file+olp-dateree 
+        ("J" "Journal" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" ) 
+                        "* %? [#B] \n输入于： %U\n %i\n\n %a"
                         :clock-in t :clock-resume t)
+        ("j" "Journal Note"
+         ;entry (file+olp+datetree (get-journal-file-today))
+        ; entry (function get-journal-file-today)
+        ; entry (format "%S%S\" \"~/.emacs.d/GTD/orgBoss/Journal/\"" (format-time-string "%Y%m%d"))
+         ;entry (file (concat "~/.emacs.d/GTD/orgBoss/Journal/" "journal.org"))
+         entry (file "~/.emacs.d/GTD/orgBoss/Journal/20171007")
+         "* Event: %?\n\n  %i\n\n  From: %a"
+         :empty-lines 1 )
         ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
                     "* TODO [#B] %^{Task} %^g
                     :PROPERTIES:
@@ -184,16 +199,16 @@ Captured %<%Y-%m-%d %H:%M>
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
                         "* TODO [#A] %^{What's your IDEA (Briefly)}  \n %?" 
                         :immediate-finish t)
-          ("c" "Clipboard" entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
+          ("c" "Clipboard" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
                         "** %^{Head Line} %U %^g\n%c\n%?"  
                         :immediate-finish t)
-          ("R" "Finance" entry  (file+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
+          ("R" "Finance" entry  (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
                         "** %^{BriefDesc} %U %^g\n%?"   )
-          ("b" "Book" entry  (file+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
+          ("b" "Book" entry  (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
                         "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
-          ("f" "Film" entry (  file+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")  
+          ("f" "Film" entry (  file+olp+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")  
                         "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n")
-          ("d" "Daily Review" entry   (file+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")  
+          ("d" "Daily Review" entry   (file+olp+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")  
                         "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n")
           ("a" "Appointment Or Meeting" entry (file+headline "~/.emacs.d/CalendarDairy/diary.org")
                         "** APP [#B] %^{Description} %^g
@@ -202,13 +217,13 @@ Captured %<%Y-%m-%d %H:%M>
                         :clock-in :clock-resume)
         ("w" "SITES" entry  (file+headline "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "SITES")  
                         "* %^{Enter the Name of the Site}\n %?" )
-          ("s" "Someday"  entry   (file+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org") 
+          ("s" "Someday"  entry   (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org") 
                         "** %^{Someday Heading} [#B] %U\n%?\n"  )
-          ("v" "Vocab"  entry (file+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
+          ("v" "Vocab"  entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
                         "** %^{Word?}\n%?\n"  )
-          ( "p" "Private" entry (file+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
+          ( "p" "Private" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
                          "\n* %^{topic} [#A] %T \n%i%?\n")
-         ("o" "contact"  entry  (file+datetree "~/.emacs.d/gtd/phone.org" ) 
+         ("o" "contact"  entry  (file+olp+datetree "~/.emacs.d/gtd/phone.org" ) 
                         "\n* %^{name} :contact:\n\n")
          ("q" "Quick note" item
           (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Quick notes")
@@ -474,7 +489,7 @@ Captured %<%Y-%m-%d %H:%M>
 ;; Registers allow you to jump to a file or other location quickly. To jump to a register, use C-x r j followed by the letter of the register. Using registers for all these file shortcuts is probably a bit of a waste since I can easily define my own keymap, but since I rarely go beyond register A anyway. Also, I might as well add shortcuts for refiling.
 (defvar my/refile-map (make-sparse-keymap))
 
-(defmacro my/defshortcut (key file)
+(defmacro my/defshortcut (key file)  
   `(progn
      (set-register ,key (cons 'file ,file))
      (define-key my/refile-map
@@ -758,3 +773,214 @@ Captured %<%Y-%m-%d %H:%M>
    (perl . t)
    (C . t)
    ))
+
+
+
+
+;;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org           ;;
+(font-lock-add-keywords            ; A bit silly but my headers are now          ;;
+   'org-mode `(("^\\*+ \\(TODO\\) "  ; shorter, and that is nice canceled        ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "TODO") ;;
+                          nil)))                                                 ;;
+               ("^\\*+ \\(DOING\\) "                                             ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "DOING") ;;
+                          nil)))                                                 ;;
+               ("^\\*+ \\(CANCELED\\) "                                          ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "✘") ;;
+                          nil)))                                                 ;;
+               ("^\\*+ \\(DONE\\) "                                              ;;
+                (1 (progn (compose-region (match-beginning 1) (match-end 1) "✔") ;;
+                          nil)))))                                               ;;
+
+
+(defvar org-journal-dir "~/.emacs.d/GTD/orgBoss/Journal/")
+
+;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#journaling
+;;These files do not have a .org extension, but we’re talking about Emacs, so I use this code to have org-mode be the default mode for filenames consisting of nothing but numbers: 
+
+(defun get-journal-file-today ()
+  "Return filename for today's journal entry."
+  (let ((daily-name (format-time-string "%Y%m%d")))
+    ;(format "\"%S\"" (expand-file-name (concat org-journal-dir daily-name)))
+    (expand-file-name (concat org-journal-dir daily-name))
+    
+    ;(concat org-journal-dir daily-name)
+    ))
+
+(defun journal-file-today ()
+  "Create and load a journal file based on today's date."
+  (interactive)
+  (find-file (get-journal-file-today)))
+
+
+;add to orgmode
+(add-to-list 'auto-mode-alist '(".*/[0-9]*$" . org-mode))
+
+;; snippet
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defun journal-file-insert ()                                              ;;
+;;   "Insert's the journal heading based on the file's name."                 ;;
+;;   (interactive)                                                            ;;
+;;   (when (string-match "\\(20[0-9][0-9]\\)\\([0-9][0-9]\\)\\([0-9][0-9]\\)" ;;
+;;                       (buffer-name))                                       ;;
+;;     (let ((year  (string-to-number (match-string 1 (buffer-name))))        ;;
+;;           (month (string-to-number (match-string 2 (buffer-name))))        ;;
+;;           (day   (string-to-number (match-string 3 (buffer-name))))        ;;
+;;           (datim nil))                                                     ;;
+;;       (setq datim (encode-time 0 0 0 day month year))                      ;;
+;;       (insert (format-time-string                                          ;;
+;;                  "#+TITLE: Journal Entry- %Y-%b-%d (%A)\n\n" datim)))))    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun journal-file-insert ()
+  "Insert's the journal heading based on the file's name."
+  (interactive)
+  (let* ((year  (string-to-number (substring (buffer-name) 0 4)))
+         (month (string-to-number (substring (buffer-name) 4 6)))
+         (day   (string-to-number (substring (buffer-name) 6 8)))
+         (datim (encode-time 0 0 0 day month year)))
+
+      (insert (format-time-string org-journal-date-format datim))
+      (insert "\n\n  $0\n") ; Start with a blank separating line
+
+      ;; Note: The `insert-file-contents' leaves the cursor at the
+      ;; beginning, so the easiest approach is to insert these files
+      ;; in reverse order:
+
+      ;; If the journal entry I'm creating matches today's date:
+      (when (equal (file-name-base (buffer-file-name))
+                   (format-time-string "%Y%m%d"))
+        (insert-file-contents "journal-dailies-end.org")
+
+        ;; Insert dailies that only happen once a week:
+        (let ((weekday-template (downcase
+                                 (format-time-string "journal-%a.org"))))
+          (when (file-exists-p weekday-template)
+            (insert-file-contents weekday-template)))
+        (insert-file-contents "journal-dailies.org")
+        (insert "$0")
+
+        (let ((contents (buffer-string)))
+          (delete-region (point-min) (point-max))
+          (yas-expand-snippet contents (point-min) (point-max))))))
+
+(define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
+
+
+
+(setq auto-insert t)
+(setq auto-insert-query t)
+(add-hook 'find-file-hook 'auto-insert)
+
+;(add-to-list 'auto-insert-alist '(".*/[0-9]*$" . journal-file-insert))
+;(define-auto-insert '(".*/[0-9]*$" . journal-file-insert))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defvar auto-insert-alist '())                   ;;
+;; (setq auto-insert-alist                          ;;
+;;       (append '(                                 ;;
+;;             (".*/[0-9]*$" . journal-file-insert) ;;
+;;                                                  ;;
+;;             )                                    ;;
+;;            auto-insert-alist))                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(global-set-key (kbd "C-c f j") 'journal-file-today)
+
+
+(defun get-journal-file-yesterday ()
+  "Return filename for yesterday's journal entry."
+  (let* ((yesterday (time-subtract (current-time) (days-to-time 1)))
+         (daily-name (format-time-string "%Y%m%d" yesterday)))
+    (expand-file-name (concat org-journal-dir daily-name))))
+
+(defun journal-file-yesterday ()
+  "Creates and load a file based on yesterday's date."
+  (interactive)
+  (find-file (get-journal-file-yesterday)))
+
+(global-set-key (kbd "C-c f y") 'journal-file-yesterday)
+;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#displaying-last-years-journal-entry
+
+(defun journal-last-year-file ()
+  "Returns the string corresponding to the journal entry that
+happened 'last year' at this same time (meaning on the same day
+of the week)."
+(let* ((last-year-seconds (- (float-time) (* 365 24 60 60)))
+       (last-year (seconds-to-time last-year-seconds))
+       (last-year-dow (nth 6 (decode-time last-year)))
+       (this-year-dow (nth 6 (decode-time)))
+       (difference (if (> this-year-dow last-year-dow)
+                       (- this-year-dow last-year-dow)
+                     (- last-year-dow this-year-dow)))
+       (target-date-seconds (+ last-year-seconds (* difference 24 60 60)))
+       (target-date (seconds-to-time target-date-seconds)))
+  (format-time-string "%Y%m%d" target-date)))
+
+(defun journal-last-year ()
+  "Loads last year's journal entry, which is not necessary the
+same day of the month, but will be the same day of the week."
+  (interactive)
+  (let ((journal-file (concat org-journal-dir (journal-last-year-file))))
+    (find-file journal-file)))
+
+  (global-set-key (kbd "C-c f L") 'journal-last-year)
+
+
+
+
+(defun ha/org-return (&optional ignore)                                          ;;
+  "Add new list item, heading or table row with RET.                             ;;
+A double return on an empty element deletes it.                                  ;;
+Use a prefix arg to get regular RET. "                                           ;;
+  (interactive "P")                                                              ;;
+  (if ignore                                                                     ;;
+      (org-return)                                                               ;;
+    (cond                                                                        ;;
+     ;; Open links like usual                                                    ;;
+     ((eq 'link (car (org-element-context)))                                     ;;
+      (org-return))                                                              ;;
+     ;; lists end with two blank lines, so we need to make sure we are also not  ;;
+     ;; at the beginning of a line to avoid a loop where a new entry gets        ;;
+     ;; created with only one blank line.                                        ;;
+     ((and (org-in-item-p) (not (bolp)))                                         ;;
+      (if (org-element-property :contents-begin (org-element-context))           ;;
+          (org-insert-heading)                                                   ;;
+        (beginning-of-line)                                                      ;;
+        (setf (buffer-substring                                                  ;;
+               (line-beginning-position) (line-end-position)) "")                ;;
+        (org-return)))                                                           ;;
+     ((org-at-heading-p)                                                         ;;
+      (if (not (string= "" (org-element-property :title (org-element-context)))) ;;
+          (progn (org-end-of-meta-data)                                          ;;
+                 (org-insert-heading))                                           ;;
+        (beginning-of-line)                                                      ;;
+        (setf (buffer-substring                                                  ;;
+               (line-beginning-position) (line-end-position)) "")))              ;;
+     ((org-at-table-p)                                                           ;;
+      (if (-any?                                                                 ;;
+           (lambda (x) (not (string= "" x)))                                     ;;
+           (nth                                                                  ;;
+            (- (org-table-current-dline) 1)                                      ;;
+            (org-table-to-lisp)))                                                ;;
+          (org-return)                                                           ;;
+        ;; empty row                                                             ;;
+        (beginning-of-line)                                                      ;;
+        (setf (buffer-substring                                                  ;;
+               (line-beginning-position) (line-end-position)) "")                ;;
+        (org-return)))                                                           ;;
+     (t                                                                          ;;
+      (org-return)))))                                                           ;;
+                                                                                 ;;
+(define-key org-mode-map (kbd "RET")  #'ha/org-return)                           ;;
+
+
+(setq flyspell-issue-welcome-flag nil) ;; fix flyspell problem
+
+(custom-set-variables
+    '(ispell-dictionary "british")
+    '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe"))
+
+
+;;;M-x reinstall many times ,finally get installed
+(require 'org-journal)
+(setq org-journal-dir "~/.emacs.d/GTD/orgBoss/journal/")

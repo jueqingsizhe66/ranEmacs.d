@@ -6,6 +6,9 @@ and ubuntu, all valid for newer.
 
 [原始记录版本][86]
 
+*注意，标题55引入了flyspell问题，所以在windows得安装aspell,这个错误会在
+调用org-agenda的时候出现(本质是调用flyspell mode失败)*
+
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
 
@@ -1244,9 +1247,230 @@ when you need to memorize the source code in the .org file, one way you can use
  ```
  
  在每一个代码块执行`C-c C-c`即可看到结果（在windows配置完path之后，得重启系统,有些命令才有效)。
- 很有意思的文学编程。
+ 很有意思的文学编程。( dame it, flyspell mode(flyspell mode 1) in the .orgConf.el)
  
- 
+### 53. 常用的clojure-snippet
+
+[howardabrams clojure snippet][93]
+[magnars clojure snippet][94]
+
+
+### 54. org-autolist
+
+[autolist][95]好处是可以前进(ret)回退的时候(backspace) 增加或者去掉整个当前的list
+
+### 55. failed enable flyspell mode in window10
+
+1. 首先安装Aspell
+[Install aspell][96]
+2. 然后安装[dictionary][100] ,安装完aspell之后，然后选择enlish version即可
+, 在aspell目录下会产生dict文件夹.在customizations文件夹rar一个windows安装完english dictionary的aspell.rar文件，作为windows版本的备份，
+linux版本需要额外配置一下。(另外如果不配置也不会另org-agenda崩溃，只是会提醒而已)
+
+其他相关链接,
+
+[solution with aspell][97]
+[Effective spell check in Emacs][98]
+[What's the best spell check set up in emacs][99]
+
+```
+(custom-set-variables
+    '(ispell-dictionary "british")
+    '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe"))
+```
+
+If Aspell can not determine the language from the LC_MESSAGES locale than it will default to ``en_US''
+
+
+### 56. 如何把journal.org分成每天日志的形式
+
+[journal-org][101] : 类似于vimwiki的形式，每一个dairy都可以使用当天的hhmmdd.wiki创建，然后diary汇总。
+现在也是创建一个journal文件夹，然后创建每天的journal。
+
+```
+(setq org-capture-template
+    ...
+       ("j" "Journal Note"
+         ;entry (file+olp+datetree (find-file (get-journal-file-today)))
+         entry (function get-journal-file-today)
+         "* Event: %?\n\n  %i\n\n  From: %a"
+         :empty-lines 1 )
+    ...
+)
+
+;;; some other function
+
+(defvar org-journal-dir "~/.emacs.d/GTD/orgBoss/Journal/")
+
+;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#journaling
+;;These files do not have a .org extension, but we’re talking about Emacs, so I use this code to have org-mode be the default mode for filenames consisting of nothing but numbers: 
+
+(defun get-journal-file-today ()
+  "Return filename for today's journal entry."
+  (let ((daily-name (format-time-string "%Y%m%d")))
+    (format "\"%S\"" (expand-file-name (concat org-journal-dir daily-name)))
+    ;(concat org-journal-dir daily-name)
+    ))
+
+(defun journal-file-today ()
+  "Create and load a journal file based on today's date."
+  (interactive)
+  (find-file (get-journal-file-today)))
+
+
+;add to orgmode
+(add-to-list 'auto-mode-alist '(".*/[0-9]*$" . org-mode))
+
+;; snippet
+(defun journal-file-insert ()
+  "Insert's the journal heading based on the file's name."
+  (interactive)
+  (when (string-match "\\(20[0-9][0-9]\\)\\([0-9][0-9]\\)\\([0-9][0-9]\\)"
+                      (buffer-name))
+    (let ((year  (string-to-number (match-string 1 (buffer-name))))
+          (month (string-to-number (match-string 2 (buffer-name))))
+          (day   (string-to-number (match-string 3 (buffer-name))))
+          (datim nil))
+      (setq datim (encode-time 0 0 0 day month year))
+      (insert (format-time-string
+                 "#+TITLE: Journal Entry- %Y-%b-%d (%A)\n\n" datim)))))
+
+(setq auto-insert t)
+(setq auto-insert-query t)
+(add-hook 'find-file-hook 'auto-insert)
+
+;(add-to-list 'auto-insert-alist '(".*/[0-9]*$" . journal-file-insert))
+;(define-auto-insert '(".*/[0-9]*$" . journal-file-insert))
+(defvar auto-insert-alist '())
+(setq auto-insert-alist
+      (append '(
+            (".*/[0-9]*$" . journal-file-insert)
+           
+            )
+           auto-insert-alist))
+
+
+(global-set-key (kbd "C-c f j") 'journal-file-today)
+
+
+(defun get-journal-file-yesterday ()
+  "Return filename for yesterday's journal entry."
+  (let* ((yesterday (time-subtract (current-time) (days-to-time 1)))
+         (daily-name (format-time-string "%Y%m%d" yesterday)))
+    (expand-file-name (concat org-journal-dir daily-name))))
+
+(defun journal-file-yesterday ()
+  "Creates and load a file based on yesterday's date."
+  (interactive)
+  (find-file (get-journal-file-yesterday)))
+
+(global-set-key (kbd "C-c f y") 'journal-file-yesterday)
+;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#displaying-last-years-journal-entry
+
+(defun journal-last-year-file ()
+  "Returns the string corresponding to the journal entry that
+happened 'last year' at this same time (meaning on the same day
+of the week)."
+(let* ((last-year-seconds (- (float-time) (* 365 24 60 60)))
+       (last-year (seconds-to-time last-year-seconds))
+       (last-year-dow (nth 6 (decode-time last-year)))
+       (this-year-dow (nth 6 (decode-time)))
+       (difference (if (> this-year-dow last-year-dow)
+                       (- this-year-dow last-year-dow)
+                     (- last-year-dow this-year-dow)))
+       (target-date-seconds (+ last-year-seconds (* difference 24 60 60)))
+       (target-date (seconds-to-time target-date-seconds)))
+  (format-time-string "%Y%m%d" target-date)))
+
+(defun journal-last-year ()
+  "Loads last year's journal entry, which is not necessary the
+same day of the month, but will be the same day of the week."
+  (interactive)
+  (let ((journal-file (concat org-journal-dir (journal-last-year-file))))
+    (find-file journal-file)))
+
+  (global-set-key (kbd "C-c f L") 'journal-last-year)
+
+
+
+
+```
+
+file+dateree have been deprecated, changed to date+olp+dateree
+see [capture][102]
+
+
+但是`C-c c j`还存在bug，因为entry调用函数失败！！
+
+
+[journal-file-insert][103]更新，
+
+```
+(defun journal-file-insert ()
+  "Insert's the journal heading based on the file's name."
+  (interactive)
+  (let* ((year  (string-to-number (substring (buffer-name) 0 4)))
+         (month (string-to-number (substring (buffer-name) 4 6)))
+         (day   (string-to-number (substring (buffer-name) 6 8)))
+         (datim (encode-time 0 0 0 day month year)))
+
+      (insert (format-time-string org-journal-date-format datim))
+      (insert "\n\n  $0\n") ; Start with a blank separating line
+
+      ;; Note: The `insert-file-contents' leaves the cursor at the
+      ;; beginning, so the easiest approach is to insert these files
+      ;; in reverse order:
+
+      ;; If the journal entry I'm creating matches today's date:
+      (when (equal (file-name-base (buffer-file-name))
+                   (format-time-string "%Y%m%d"))
+        (insert-file-contents "journal-dailies-end.org")
+
+        ;; Insert dailies that only happen once a week:
+        (let ((weekday-template (downcase
+                                 (format-time-string "journal-%a.org"))))
+          (when (file-exists-p weekday-template)
+            (insert-file-contents weekday-template)))
+        (insert-file-contents "journal-dailies.org")
+        (insert "$0")
+
+        (let ((contents (buffer-string)))
+          (delete-region (point-min) (point-max))
+          (yas-expand-snippet contents (point-min) (point-max))))))
+
+(define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
+
+```
+
+配合[org-journal][104],更好的记录journal,
+默认需要配置org-journal-dir，`(setq org-journal-dir "~/.emacs.d/GTD/orgBoss/Journal/`
+然后就可以使用常用的命令，甚至在calendar也可以配合使用
+
+```
+
+Bindings available in org-journal-mode:
+
+    C-c C-f - go to the next journal file.
+    C-c C-b - go to the previous journal file.
+    C-c C-j - insert a new entry into the current journal file (creates the file if not present).
+    C-c C-s - search the journal for a string.
+
+All journal entries are registered in the Emacs Calendar. To see available journal entries do M-x calendar. Bindings available in the calendar-mode:
+
+    j - view an entry in a new buffer.
+    C-j - view an entry but do not switch to it.
+    i j - add a new entry into the day’s file (creates the file if not present).
+    f w - search in all entries of the current week.
+    f m - search in all entries of the current month.
+    f y - search in all entries of the current year.
+    f f - search in all entries of all time.
+    [ - go to previous day with journal entries.
+    ] - go to next day with journal entries.
+
+```
+
+有点遗憾的地方，没有让org-capture-templates中的entry执行函数，还不清楚为什么。
+
 <hr/>
     <hr/>
 
@@ -1344,3 +1568,15 @@ when you need to memorize the source code in the .org file, one way you can use
 [90]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E6%8F%92%E5%85%A5%E6%BA%90%E4%BB%A3%E7%A0%81
 [91]:http://orgmode.org/worg/org-contrib/babel/languages.html
 [92]:http://www.graphviz.org/Download_windows.php
+[93]:https://github.com/howardabrams/clojure-snippets
+[94]:https://github.com/magnars/.emacs.d/tree/master/snippets/clojure-mode
+[95]:https://github.com/calvinwyoung/org-autolist
+[96]:http://ftp.gnu.org/gnu/aspell/w32/Aspell-0-50-3-3-Setup.exe
+[97]:https://stackoverflow.com/questions/3805647/enabling-flyspell-mode-on-emacs-w32
+[98]:http://blog.binchen.org/posts/effective-spell-check-in-emacs.html
+[99]:http://blog.binchen.org/posts/what-s-the-best-spell-check-set-up-in-emacs.html
+[100]:http://aspell.net/win32/
+[101]:http://www.howardism.org/Technical/Emacs/journaling-org.html
+[102]:http://orgmode.org/org.html#Capture
+[103]:https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#auto-insert-a-journal-template
+[104]:https://github.com/bastibe/org-journal

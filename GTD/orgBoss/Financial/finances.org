@@ -25,4 +25,3 @@
 
 http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
-

@@ -1,4 +1,4 @@
- Quick notes
+Quick notes
 :LOGBOOK:
 CLOCK: [2017-10-02 周一 11:09]
 CLOCK: [2017-09-29 周五 11:03]j
@@ -129,6 +129,26 @@ https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
                          
 
 * Quick notes
+** design something hard to use [#B]                                 :@F708:
+                           Added: [2017-10-07 周六 22:08]
+                           
+http://www.howardism.org/
+22 Feb 2015
+
+After reading the Wired article, Why We Should Design Some Things to Be Difficult to Use, I finally realize that Emacs should be hard to use, and we really should just give up changing it to be easier for new-comers.
+
+This quote sums up my 20 year experience with Emacs:
+
+    [Fujifilm took] the controls out of deep menu functions and putting them back on chrome knobs that just beg to be twiddled.
+
+    I bought a Fujifilm X100 two years ago. It was the first piece of technology I’d bought in 15 years where I had to read the manual. Actually, I’ve read the manual at least four times. Now I’m taking the best pictures of my life, and I love it. By being hard to use, my X100 made me a better photographer.
+
+Seems like Emacs users are now in some elite club where the hazing ritual amounts to learning Lisp. Consequently, I’ve decided to start signing all my Emacs-related correspondence with:
+
+    Yours in Emacs,
+
+    Howard
+
 ** data science for making decision [#B]                             :@work:
                            Added: [2017-10-02 周一 21:08]
                            

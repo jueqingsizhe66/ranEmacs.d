@@ -201,13 +201,15 @@
    (quote
     (name old-name general-category decomposition numeric-value iso-10646-comment uppercase lowercase titlecase)))
  '(git-gutter:handled-backends (quote (svn hg git)))
+ '(ispell-dictionary "british")
+ '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe")
  '(muse-project-alist
    (quote
     (("WikiPlanner"
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -295,3 +297,53 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(find-file "~/.emacs.d/GTD/newgtd.org")
 
+
+;;better bookmark
+;;https://github.com/howardabrams/dot-files/blob/master/emacs.org
+; (setq bookmark-save-flag 1)
+; (defun ha/add-bookmark (name)
+;   (interactive
+;    (list (let* ((filename  (file-name-base (buffer-file-name)))
+;                 (project   (projectile-project-name))
+;                 (func-name (which-function))
+;                 (initial   (format "%s::%s:%s " project filename func-name)))
+;            (read-string "Bookmark: " initial))))
+;   (bookmark-set name))
+;
+; (global-unset-key (kbd "C-x r m"))
+; (global-unset-key (kbd "C-x r b"))
+; (global-set-key (kbd "C-x r b") 'helm-bookmarks)
+; (global-set-key (kbd "C-x r m") 'ha/add-bookmark)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package bookmark                                                           ;;
+;;   :init                                                                         ;;
+;;   :config                                                                       ;;
+;;   (defun ha/add-bookmark (name)                                                 ;;
+;;     (interactive                                                                ;;
+;;      (list (let* ((filename  (file-name-base (buffer-file-name)))               ;;
+;;                   (project   (projectile-project-name))                         ;;
+;;                   (func-name (which-function))                                  ;;
+;;                   (initial   (format "%s::%s:%s " project filename func-name))) ;;
+;;              (read-string "Bookmark: " initial))))                              ;;
+;;     (bookmark-set name))                                                        ;;
+;;   :bind  (("C-c b m" . ha/add-bookmark)                                         ;;
+;;           ("C-x r m" . ha/add-bookmark)                                         ;;
+;;           ("C-x r b" . helm-bookmarks)))                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;https://www.emacswiki.org/emacs/PrettyGreek
+ (defun pretty-greek ()
+  (let ((greek '("alpha" "beta" "gamma" "delta" "epsilon" "zeta" "eta" "theta" "iota" "kappa" "lambda" "mu" "nu" "xi" "omicron" "pi" "rho" "sigma_final" "sigma" "tau" "upsilon" "phi" "chi" "psi" "omega")))
+    (loop for word in greek
+          for code = 97 then (+ 1 code)
+          do  (let ((greek-char (make-char 'greek-iso8859-7 code))) 
+                (font-lock-add-keywords nil
+                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[a-zA-Z]")
+                                           (0 (progn (decompose-region (match-beginning 2) (match-end 2))
+                                                     nil)))))
+                (font-lock-add-keywords nil 
+                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[^a-zA-Z]")
+                                           (0 (progn (compose-region (match-beginning 2) (match-end 2)
+                                                                     ,greek-char)
+                                                     nil)))))))))  (add-hook 'lisp-mode-hook 'pretty-greek)
+  (add-hook 'emacs-lisp-mode-hook 'pretty-greek)

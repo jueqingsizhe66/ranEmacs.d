@@ -82,6 +82,7 @@ CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
 ** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
 SCHEDULED: <2017-09-29 周五 . +1w>
 
+- State "TODO"       from "TODO"          [2017-10-08 周日 02:33]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
@@ -167,3 +168,5 @@ That's your gtd
 
 http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
+
+
