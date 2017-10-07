@@ -359,7 +359,7 @@ Captured %<%Y-%m-%d %H:%M>
 (setq org-todo-keywords
   '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
     (type "REPORT(r!)" "BUG(b!)" "KNOWNCAUSE(k!)" "|" "FIXED(f!)")
-    (sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
+    (sequence "PENDING(p!)" "TODO(t!)" "DOING(i!)" "|" "DONE(d!)" "CANCELED(c!)" "ABORT(a@/!)")
 ))
 (setq org-todo-keyword-faces
   '(("工作" .      (:background "red" :foreground "white" :weight bold))
@@ -371,7 +371,9 @@ Captured %<%Y-%m-%d %H:%M>
     ("FIXED" .      (:foreground "yellow" :weight bold)) 
     ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
     ("TODO" .      (:background "DarkOrange" :foreground "black" :weight bold))
+    ("DOING" .     (:background "yellow" :foreground "purple" :weight bold ))
     ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
+    ("CANCELED" . (:background "LightGray" :foreground "black"))
     ("ABORT" .     (:background "gray" :foreground "black"))
 ))
 

@@ -1580,3 +1580,4 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [102]:http://orgmode.org/org.html#Capture
 [103]:https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#auto-insert-a-journal-template
 [104]:https://github.com/bastibe/org-journal
+[105]:https://github.com/jueqingsizhe66/zhaoEmacs.d/blob/develop/customizations/img/oo.jpg

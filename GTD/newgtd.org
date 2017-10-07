@@ -5,8 +5,13 @@ Added: [2015-05-03 Sun 19:04]
 ** TODO finish a learning report about the java                                 :javaxml:
    - 
 Added: [2015-05-03 Sun 19:17]
-** TODO TestTodo                                                      :@Test:
-*** TODO [#A] little [100%]                                        :funnny:
+** DOING TestTodo                                                      :@Test:
+- State "DOING"      from "TODO"         [2017-10-08 周日 03:19]
+*** CANCELED [#A] little [100%]                                           :funnny:
+CLOSED: [2017-10-08 周日 03:18]
+- State "CANCELED"   from "DOING"         [2017-10-08 周日 03:18]
+- State "DOING"      from "DONE"          [2017-10-08 周日 03:18]
+- State "DONE"       from "TODO"         [2017-10-08 周日 03:18]
 - State "TODO"       from "DONE"       [2017-09-27 周三 16:51]
 - State "DONE"       from "TODO"       [2017-09-27 周三 16:51]
  - [X] first
