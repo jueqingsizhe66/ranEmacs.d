@@ -1251,13 +1251,15 @@ when you need to memorize the source code in the .org file, one way you can use
  
 ### 53. 常用的clojure-snippet
 
+
 [howardabrams clojure snippet][93]
+
 [magnars clojure snippet][94]
 
 
 ### 54. org-autolist
 
-[autolist][95]好处是可以前进(ret)回退的时候(backspace) 增加或者去掉整个当前的list
+[autolist][95]好处是可以在编辑列表项时候，前进(ret)回退的时候(backspace) 增加或者去掉整个当前的list项，详细看官方文档。
 
 ### 55. failed enable flyspell mode in window10
 
