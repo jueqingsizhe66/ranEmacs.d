@@ -81,7 +81,9 @@
 
 (define-abbrev-table 'cljr--change-signature-mode-abbrev-table '())
 
-(define-abbrev-table 'clojure-mode-abbrev-table '())
+(define-abbrev-table 'clojure-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'clojurec-mode-abbrev-table '())
 
@@ -95,6 +97,10 @@
 
 (define-abbrev-table 'debugger-mode-abbrev-table '())
 
+(define-abbrev-table 'diary-fancy-display-mode-abbrev-table '())
+
+(define-abbrev-table 'diary-mode-abbrev-table '())
+
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
 (define-abbrev-table 'dsssl-mode-abbrev-table '())
@@ -103,7 +109,9 @@
 
 (define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
 
-(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
+(define-abbrev-table 'emacs-lisp-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'ert-results-mode-abbrev-table '())
 
@@ -164,6 +172,10 @@
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-mode-abbrev-table '())
+
+(define-abbrev-table 'org-export-stack-mode-abbrev-table '())
+
+(define-abbrev-table 'org-journal-mode-abbrev-table '())
 
 (define-abbrev-table 'org-mode-abbrev-table '())
 

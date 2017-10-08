@@ -1,4 +1,7 @@
 ﻿* Tasks
+#+REVEAL_THEME: night
+#+REVEAL: split
+#+REVEAL_MAX_SCALE: 0.95
 ** TODO java learning,you should take care the XML                              :javaxml:
 
 Added: [2015-05-03 Sun 19:04]
@@ -98,12 +101,14 @@ DEADLINE: <2017-10-23 周一> SCHEDULED: <2017-10-02 周一>
                     :END:
                     Captured 2017-10-02 11:05
 ** TODO [#A] 开题报告+文献综述+中央高校基金                         :@work:
+#+REVEAL: split
 DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
                     Captured 2017-10-03 14:15
        开题报告得包含以下几个部分，
+#+REVEAL: split
 ***** TODO 数值模拟 静态偏航+动态偏航+ 流固耦合(参考仇永兴 姚世刚 陈晓明 范钟瑶 李媛 任会来) [0%]
 - State "TODO"       from "TODO"       [2017-10-03 周二 14:25]
 - State "TODO"       from "ABORT"      [2017-10-03 周二 14:25] [ ] 
@@ -122,6 +127,7 @@ DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
      1. [X] 单向
      2. [ ] 双向
   5. [ ] FVM 自由涡尾迹(参考仇永兴)
+#+REVEAL: split
 ***** TODO 实验部分 NREL5MW的数值模拟(参考赵宗德 周广鑫 李新凯) [0%]
 - State "TODO"       from              [2017-10-03 周二 14:25]
 - [ ] 任务分解
@@ -133,7 +139,35 @@ DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
       - [ ] 偏航实验
       - [ ] 前后四周晃动实验
   - [ ] 丝线实验 流场可视化实验
+** DOING [#B] 办理工程热物理注册问题   [16%]                             :@work:
+SCHEDULED: <2017-10-08 周日>
+                    :PROPERTIES:
+                    :Effort: 1:00
+                    :END:
+                    - State "DOING"      from "TODO"          [2017-10-09 周一 02:25]
+                    Captured 2017-10-08 22:29
 
+1. [ ] 询问财务处，9号办理汇款是否可以在10号前拿到汇款凭证
+2. [ ] 询问是否需要统一汇款还是分开汇款(分开回执，估计是分开汇款）
+汇款账号
+
+#+BEGIN_EXAMPLE
+户名：江苏大学镇江流体工程装备技术研究院
+银行：农业银行镇江江大支行（行号：1033 1403 1235）
+账号：1031 2301 0400 0615 2
+纳税人识别号：3211 0046 8697 050 
+银行地址：镇江新区丁卯经十五路99号国家大学科技园D43楼
+
+#+END_EXAMPLE
+
+电话联系人：
+联系人：裴吉，手机：13776474939
+
+1. [ ] 务必在回执邮件落款著名联系人姓名、手机和邮箱
+2. [X] 回执邮件中请务必将转账/汇款凭证扫描件附在邮件中一起发送
+3. [ ] 务必在汇款备注中注明“参会编号（GJ-XX）-发票抬头-第一位作者姓名”，例如“GJ-015-清华大学-李四”
+4. [ ] 确认康老师的住房预定问题
+  
 * Tasks
 ** TODO Most important thing that you have to do       :graduation:紧急重要:
 ** TODO Second most important thing that you have to do
@@ -153,7 +187,7 @@ That's your gtd
 |                   | Total:   | 1211.6 |        |      |
 #+TBLFM: @>$3=vsum(@2..@-1)   
 
-
+#+REVEAL: split
 #+BEGIN_EXAMPLE
 @> The @ specifies a row, and this refers to the last row in a table.
     $3 The $ specifies a column, so this refers to the third column.
@@ -165,4 +199,4 @@ That's your gtd
 http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
 
-q
+

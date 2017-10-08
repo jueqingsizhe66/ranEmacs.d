@@ -178,7 +178,8 @@
 
 
 
-
+;(setq speed-of-thought-mode t)
+(speed-of-thought-mode t)
 
 
 

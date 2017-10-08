@@ -24,9 +24,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** http://archiv")
- (rear-context-string . "ngs with number\n")
- (position . 2477))
+ (front-context-string . "** https://githu")
+ (rear-context-string . "he color themes\n")
+ (position . 3046))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

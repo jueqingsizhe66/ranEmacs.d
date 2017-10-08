@@ -72,3 +72,14 @@ emacs org-mode plantuml
 https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items
 ** https://potentpages.com/web-design/reveal-js/tutorials
  reveal-js ppt presentation
+** https://github.com/Malabarba/lazy-map-clojure
+ lazy map : new data structure for clojure
+** http://orgmode.org/worg/org-color-themes.html
+ tour all the color themes
+** https://github.com/jonnay/org-beautify-theme/issues/1
+ M-x load-theme  
+M-x desrcibe-theme
+** https://gist.github.com/holtzermann17/6953779/revisions
+ github  gist
+** https://gist.github.com/discover
+ All gist

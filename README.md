@@ -1534,6 +1534,19 @@ F9后一页slide(后一个标题)
 ```
 设置完，导出reveal.js的html才不会乱码！！
 
+
+### 58. Good job for clojure and lisp
+
+Here is the good job from [Malabarba][112] who write the two completion feature for clojure and lisp;
+
+1. elisp names [sotlisp][110]
+   [elisp缩写词][113]
+2. clojure names [sotclojure][111]
+   [clojure缩写词][114]
+
+使用方式得激活`M-x speed-of-thought-mode`
+或者在editing.el中添加`(speed-of-thought-mode t)`即可。
+
 <hr/>
     <hr/>
 
@@ -1648,3 +1661,8 @@ F9后一页slide(后一个标题)
 [107]:https://github.com/takaxp/org-tree-slide
 [108]:https://github.com/hakimel/reveal.js/
 [109]:https://github.com/hexmode/ox-reveal
+[110]:https://github.com/Malabarba/speed-of-thought-lisp
+[111]:https://github.com/Malabarba/speed-of-thought-clojure
+[112]:https://github.com/Malabarba/
+[113]:https://github.com/Malabarba/speed-of-thought-lisp/blob/89dfed2b5d2e9a3b16bfc47f169412b583626059/sotlisp.el#L238
+[114]:https://github.com/Malabarba/speed-of-thought-clojure/blob/ceac82aa691e8d98946471be6aaff9c9a4603c32/sotclojure.el#L117
