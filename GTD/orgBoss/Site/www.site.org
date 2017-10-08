@@ -67,3 +67,8 @@ http://wenshanren.org/?p=924 如果重新学编程，我会怎么做
 emacs org-mode plantuml
 ** https://github.com/emacs-china/hello-emacs
  hello emacs
+** https://github.com/howardabrams/demo-it
+ demo-it for presentations
+https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items
+** https://potentpages.com/web-design/reveal-js/tutorials
+ reveal-js ppt presentation

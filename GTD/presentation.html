@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Presenting with Emacs</title>
+<meta name="author" content="(Ye Zhaoliang)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/css/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Presenting with Emacs</h1><h2 class="author">Ye Zhaoliang</h2><p class="date">Created: 2017-10-08 周日 22:04</p>
+</section>
+
+
+<section>
+<section id="slide-org35050ce">
+<h2 id="org35050ce">choosing themes</h2>
+<p>
+Choosing Themes
+You can choose from several built in presentations, including default, beige, sky, night (my favorite), serif, simple, moon
+</p>
+
+<p>
+You can also make your own theme by creating a new CSS file and defining styles to for that theme.
+</p>
+
+<p>
+Define which theme you want using the code:
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org45cdc57">
+<h2 id="org45cdc57">Transitions</h2>
+<p>
+There are several built in styles of transition effects to move from one slide to another. I find linear the most pleasing, as it simply slides the content in from the right or bottom to. Cube is quite a nice rotating cube in the middle of the screen, so you may not get the full benefit of a wide screen display. Zoom is a bit to much for my delicate eyes.
+</p>
+
+<p>
+The available tranistions include: default, cube, page, concave, zoom, linear, fade, none
+</p>
+
+<p>
+Define a transition before any of the slide content (before the first heading) using the code:
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc10b0aa">
+<h2 id="orgc10b0aa">title1</h2>
+</section>
+</section>
+<section>
+<section id="slide-orge29cca6">
+<h2 id="orge29cca6">title 2</h2>
+<div class="outline-text-2" id="text-orge29cca6">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org64a46f4">
+<h3 id="org64a46f4">sub-title 2.1</h3>
+</section>
+</section>
+<section>
+<section id="slide-org81184f5">
+<h3 id="org81184f5">sub-title 2.2</h3>
+</section>
+</section>
+<section>
+<section id="slide-org9885efc">
+<h2 id="org9885efc">title 3</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge2adb05">
+<h2 id="orge2adb05">A very interesting slide</h2>
+<p>
+**This slide is interesting because I am a geek :)
+</p>
+<ul>
+<li>bullet points can be added in moderation</li>
+<li>dont get too carried away with them</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org3aefb13">
+<h2 id="org3aefb13"></h2>
+<p>
+<a href="https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items">https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items</a>   
+<a href="http://www.google.com">http://www.google.com</a> 
+</p>
+
+<p>
+<a href="https://www.baidu.com">百度</a>
+<a href="http://www.google.co.uk">Google search engine</a>
+</p>
+
+
+
+
+<div class="figure">
+<p><img src="../customizations/img/ace.png" alt="ace.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgf218e88">
+<h2 id="orgf218e88">different background</h2>
+<p>
+:reveal_background: #FF0000
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3bddead">
+<h2 id="org3bddead">image background</h2>
+<p>
+:reveal_background: ../customizations/img/new.jpg
+:reveal_background_trans: slide
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga242dfb">
+<h2 id="orga242dfb">Effects within Slides</h2>
+<ul class="fragment roll-in">
+<li>all these bullet-points</li>
+<li>show up on the page</li>
+<li>as soon as its shown</li>
+
+</ul>
+
+
+<ul class="fragment highlight-red">
+<li>this last one is then highlighted in red</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orged3b1ee">
+<h2 id="orged3b1ee">Fragment Styles</h2>
+<p>
+Available fragment styles are:
+</p>
+
+<p>
+grow
+shrink
+roll-in
+fade-out
+highlight-red
+highlight-green
+highlight-blue
+appear
+</p>
+
+<p>
+Setting :frag t will use Reveal.js default fragment style, which can be overridden by local option #+REVEAL_DEFAULT_FRAG_STYLE
+ or global variable org-reveal-default-frag-style.
+</p>
+
+<ul>
+<li>I will grow.</li>
+<li>I will shrink.</li>
+<li>I rolled in.</li>
+<li>I will fade out.</li>
+<li>I don't fragment.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org7e43850">
+<h3 id="org7e43850">Fragment Index</h3>
+<p>
+Fragment sequence can be changed by assigning adding :frag_idx property to
+ each fragmented element.
+And, this paragraph shows at last.
+This paragraph shows secondly.
+This paragraph shows at first.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org74e3382">
+<h3 id="org74e3382">List Fragments</h3>
+<p>
+All items grow.
+As a whole.
+</p>
+
+<p>
+To define fragment styles for every list item, please enumerate each item’s style in a lisp list.
+</p>
+
+<p>
+none in the style list will disable fragment for the corresponding list item.
+</p>
+
+<p>
+Custom fragment sequence should also be enumerated for each list item.
+</p>
+</section>
+</section>
+</div>
+</div>
+Ye Zhaoliang
+<script src="file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

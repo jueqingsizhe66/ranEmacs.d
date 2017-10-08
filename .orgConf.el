@@ -988,9 +988,41 @@ Use a prefix arg to get regular RET. "                                          
 (setq org-journal-dir "~/.emacs.d/GTD/orgBoss/journal/")
 
 
+(setq org-export-with-sub-superscripts nil)
+(setq org-export-with-section-numbers nil)
+(setq org-html-include-timestamps nil)
+
+(setq org-export-with-toc nil)
+(setq org-html-toplevel-hlevel 2)
+(setq org-export-htmlize-output-type 'css)
+
+
+(setq user-full-name "Ye Zhaoliang")
+
 ;;ox-reveal outside emacs slide(inside emacs use org-tree-slide)
 (require 'ox-reveal)
 ;(setq org-reveal-root "file:///~/.emacs.d/GTD/reveal.js")
 ;(setq org-reveal-root "~/.emacs.d/GTD/reveal.js/")
 (setq org-reveal-root "file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js")
 (setq org-reveal-postamble "Ye Zhaoliang")
+
+
+;;org-tree-slide
+; (use-package org-tree-slide
+;    :ensure t
+;    :init
+;    (setq org-tree-slide-skip-outline-level 4)
+;    (org-tree-slide-simple-profile))
+(when (require 'org-tree-slide nil t)
+  (global-set-key (kbd "<f7>") 'org-tree-slide-mode)
+  (global-set-key (kbd "S-<f7>") 'org-tree-slide-skip-done-toggle)
+  (define-key org-tree-slide-mode-map (kbd "<f8>")
+    'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "<f9>")
+    'org-tree-slide-move-next-tree)
+  (define-key org-tree-slide-mode-map (kbd "S-<f9>")
+    'org-tree-slide-content)
+  (setq org-tree-slide-skip-outline-level 4)
+  (setq org-reveal-hlevel 2) ;; the default is one, means only header1 is arranged horizontal
+  (org-tree-slide-narrowing-control-profile)
+  (setq org-tree-slide-skip-done nil)) 

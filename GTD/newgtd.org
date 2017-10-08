@@ -20,15 +20,6 @@ CLOSED: [2017-10-08 周日 03:18]
  - :q
 
 Added: [2015-05-03 Sun 21:38]
-*** TODOS PhaseVi mesh manufactory                                  :@work:
-1. do for the nacelle yaw
-Added: [2017-09-18 周一 11:07]
-** BUG TODOS Combine Plan into org-mode                           :Plan:mode:
-
-
-
-   - State "BUG"        from              [2017-09-05 周二 16:48]
-   Addd: [2015-05-04 Mon 02:37]
 ** DONE TODOS setting CFD calculation                                :@work:
 CLOSED: [2017-09-29 周五 23:41] SCHEDULED: <2017-09-13 周三>
  
@@ -68,13 +59,13 @@ Captured 2017-09-27 22:52
                     :Effort: 4:00
                     :END:
                     Captured 2017-09-28 11:21
-*** 1. you capture the ideas or todos
-**** 2. you capture your todos with time, so you have time pocket(momentum); However
-**** 2.5 however, you will be overwhelmed by tasks, so you can also group tasks into projects or context.(group tasks into project)
-**** 3. List your todos or tasks with routines and checklists, so you can do things consistently even if fuzzy brains
-***** 4. you need to schedule the most important thing to be done , so you don't take off the ball and focus a little things(You dont'
+*** 1. you capture the ideas or todos(capture--refile--consider,organize---review---do)
+*** 2. you capture your todos with time, so you have time pocket(momentum); However
+*** 2.5 however, you will be overwhelmed by tasks, so you can also group tasks into projects or context.(group tasks into project)
+*** 3. List your todos or tasks with routines and checklists, so you can do things consistently even if fuzzy brains
+*** 4. you need to schedule the most important thing to be done , so you don't take off the ball and focus a little things(You dont'
 worry about missing deadline.(scheduled tasks will be informed of you)
-****** 5. but still too much. So be realistics and add priviledge to your schedule tasks, eliminate some not so important not so hurry
+*** 5. but still too much. So be realistics and add priviledge to your schedule tasks, eliminate some not so important not so hurry
 *** 6. finally you track all you task (so you know what the time went by)
 *** 7. also you do some overview the process (so you do appreciate how things adds up)
 ** DONE [#A] new mesh for the double-sliding mesh :@work::multiAxis:紧急重要:
@@ -151,15 +142,15 @@ You can also take notes underneath each heading, like this
 
 That's your gtd
 
-| Date              | Category |  Money | People |
-|-------------------+----------+--------+--------|
-| <2017-10-07 周六> | Book     |   30.6 |        |
-| <2017-10-09 周一> | Film     |   70.6 |        |
-| <2017-11-10 周五> | Bus      |   50.2 |        |
-| <2017-11-11 周六> | Bus      |   60.2 | xinran |
-| <2017-11-12 周日> | Eating   |   1000 | Ye     |
-|-------------------+----------+--------+--------|
-|                   | Total:   | 1211.6 |        |
+| Date              | Category |  Money | People | Note |
+|-------------------+----------+--------+--------+------|
+| <2017-10-07 周六> | Book     |   30.6 |        |      |
+| <2017-10-09 周一> | Film     |   70.6 |        |      |
+| <2017-11-10 周五> | Bus      |   50.2 |        |      |
+| <2017-11-11 周六> | Bus      |   60.2 | xinran |      |
+| <2017-11-12 周日> | Eating   |   1000 | Ye     |      |
+|-------------------+----------+--------+--------+------|
+|                   | Total:   | 1211.6 |        |      |
 #+TBLFM: @>$3=vsum(@2..@-1)   
 
 
@@ -174,4 +165,4 @@ That's your gtd
 http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
 
-
+q

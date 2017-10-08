@@ -1,0 +1,119 @@
+#+Title: Presenting with Emacs
+#+Author: Ye Zhaoliang
+#+Email: yezhaoliang@ncepu.edu.cn
+
+#+OPTIONS: toc:nil reveal_mathjax:t
+
+
+* choosing themes
+#+REVEAL_THEME: night
+Choosing Themes
+You can choose from several built in presentations, including default, beige, sky, night (my favorite), serif, simple, moon
+
+You can also make your own theme by creating a new CSS file and defining styles to for that theme.
+
+Define which theme you want using the code:
+
+* Transitions
+There are several built in styles of transition effects to move from one slide to another. I find linear the most pleasing, as it simply slides the content in from the right or bottom to. Cube is quite a nice rotating cube in the middle of the screen, so you may not get the full benefit of a wide screen display. Zoom is a bit to much for my delicate eyes.
+
+The available tranistions include: default, cube, page, concave, zoom, linear, fade, none
+
+Define a transition before any of the slide content (before the first heading) using the code:
+
+#+REVEAL_TRANS: linear    
+
+* title1
+* title 2
+** sub-title 2.1
+** sub-title 2.2
+* title 3
+
+
+* A very interesting slide
+
+**This slide is interesting because I am a geek :)
+  - bullet points can be added in moderation
+  - dont get too carried away with them
+
+* 
+[[https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items]]   
+[[http://www.google.com]] 
+
+[[https://www.baidu.com][百度]]
+[[http://www.google.co.uk][Google search engine]]
+
+
+
+[[../customizations/img/ace.png]]
+
+
+* different background
+
+:PROPERTIES:
+:reveal_background: #FF0000
+:END:
+
+
+* image background
+
+:PROPERTIES:
+:reveal_background: ../customizations/img/new.jpg
+:reveal_background_trans: slide
+:END:
+
+* Effects within Slides
+
+
+#+ATTR_REVEAL: :frag roll-in
+- all these bullet-points
+- show up on the page
+- as soon as its shown
+
+
+#+ATTR_REVEAL: :frag highlight-red
+- this last one is then highlighted in red
+
+* Fragment Styles
+
+Available fragment styles are:
+
+    grow
+    shrink
+    roll-in
+    fade-out
+    highlight-red
+    highlight-green
+    highlight-blue
+    appear
+
+Setting :frag t will use Reveal.js default fragment style, which can be overridden by local option #+REVEAL_DEFAULT_FRAG_STYLE
+ or global variable org-reveal-default-frag-style.
+
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
+   * I will grow.
+   * I will shrink.
+   * I rolled in.
+   * I will fade out.
+   * I don't fragment.
+
+** Fragment Index
+
+Fragment sequence can be changed by assigning adding :frag_idx property to
+ each fragmented element.
+And, this paragraph shows at last.
+This paragraph shows secondly.
+This paragraph shows at first.
+
+** List Fragments
+
+#+ATTR_REVEAL: :frag frag-style above a list defines fragment style for the list as a whole.
+
+    All items grow.
+    As a whole.
+
+To define fragment styles for every list item, please enumerate each item’s style in a lisp list.
+
+none in the style list will disable fragment for the corresponding list item.
+
+Custom fragment sequence should also be enumerated for each list item.
