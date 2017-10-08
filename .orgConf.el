@@ -986,3 +986,11 @@ Use a prefix arg to get regular RET. "                                          
 ;;;M-x reinstall many times ,finally get installed
 (require 'org-journal)
 (setq org-journal-dir "~/.emacs.d/GTD/orgBoss/journal/")
+
+
+;;ox-reveal outside emacs slide(inside emacs use org-tree-slide)
+(require 'ox-reveal)
+;(setq org-reveal-root "file:///~/.emacs.d/GTD/reveal.js")
+;(setq org-reveal-root "~/.emacs.d/GTD/reveal.js/")
+(setq org-reveal-root "file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js")
+(setq org-reveal-postamble "Ye Zhaoliang")

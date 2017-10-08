@@ -9,6 +9,8 @@ and ubuntu, all valid for newer.
 *注意，标题55引入了flyspell问题，所以在windows得安装aspell,这个错误会在
 调用org-agenda的时候出现(本质是调用flyspell mode失败)*
 
+*注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
+
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
 
@@ -1475,6 +1477,62 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 
 ![oo][105]
 
+### 57. org as an presentations
+
+[howardabrams][106] alternated between the browser-based presentation tool, [reveal.js][108] and staying in Emacs with [org-tree-slide][107].
+
+#### In emacs, org-tree-slide(边写org，边做幻灯片)
+
+##### 函数
+
+1. org-tree-slide-move-next-tree (C->)
+2. org-tree-slide-move-previous-tree (C-<)
+3. org-tree-slide-content (C-x s c) 目录
+4. org-tree-slide-skip-done-toggle 切换slide模式
+5. org-tree-slide-mode 进入slide mode
+
+I. first install `M-x package-install org-tree-slide`
+
+II. 在ui.el添加如下配置
+```
+(when (require 'org-tree-slide nil t)
+  (global-set-key (kbd "<f7>") 'org-tree-slide-mode)
+  (global-set-key (kbd "S-<f7>") 'org-tree-slide-skip-done-toggle)
+  (define-key org-tree-slide-mode-map (kbd "<f8>")
+    'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "<f9>")
+    'org-tree-slide-move-next-tree)
+  (define-key org-tree-slide-mode-map (kbd "S-<f9>")
+    'org-tree-slide-content)
+  (setq org-tree-slide-skip-outline-level 4)
+  (org-tree-slide-narrowing-control-profile)
+  (setq org-tree-slide-skip-done nil)))
+```
+
+F7表示进入slide模式，S-F7退出slide模式
+F8前一页slide（前一个标题)
+F9后一页slide(后一个标题)
+
+
+#### Outside emacs, ox-reveal
+
+1. first install [ox-reveal][109] `M-x package-install ox-reveal`
+
+2. 第一次使用一定得load-library（不行就多试几次)
+` M-x load-library ox-reveal
+`
+
+3. C-c c-e R R （中文乱码）
+和C-c C-e h h用的不是同一个函数。
+
+于是修改所有的org文件从ANSI的utf-8
+
+特别注意,添加语言环境到init.el,这样所有新文件就会是utf-8编码格式
+```
+(set-language-environment "utf-8")
+
+```
+设置完，导出reveal.js的html才不会乱码！！
 
 <hr/>
     <hr/>
@@ -1586,3 +1644,7 @@ All journal entries are registered in the Emacs Calendar. To see available journ
 [103]:https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#auto-insert-a-journal-template
 [104]:https://github.com/bastibe/org-journal
 [105]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/oo.jpg
+[106]:https://github.com/howardabrams/dot-files/blob/master/emacs-org.org#presentations
+[107]:https://github.com/takaxp/org-tree-slide
+[108]:https://github.com/hakimel/reveal.js/
+[109]:https://github.com/hexmode/ox-reveal

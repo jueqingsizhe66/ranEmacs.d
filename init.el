@@ -114,10 +114,14 @@
      flycheck
      flycheck-pos-tip
      flycheck-clojure
-     ;;use-package
+    ; use-package
+     org-journal
+     org-bullets
+     org-tree-slide
+     org-autolist
     ))
 
-;; On OS X, an Emacs instance started from the graphical user
+;; on OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
 ;; terminal window, because OS X does not run a shell during the
 ;; login. Obviously this will lead to unexpected results when
@@ -209,7 +213,7 @@
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -347,3 +351,15 @@
                                                                      ,greek-char)
                                                      nil)))))))))  (add-hook 'lisp-mode-hook 'pretty-greek)
   (add-hook 'emacs-lisp-mode-hook 'pretty-greek)
+
+
+(set-language-environment "utf-8")
+
+
+;(set-language-environment "Chinese-GB")
+
+;(set-language-environment-charset "utf-8")
+;(set-language-environment-coding-systems "utf-8")
+
+
+

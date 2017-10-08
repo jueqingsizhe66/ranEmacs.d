@@ -1,4 +1,4 @@
-** speed and excitement <2015-05-03 Sun>                                        :FILM:
+ï»¿** speed and excitement <2015-05-03 Sun>                                        :FILM:
 :PROPERTIES:
   :Director:  
   :Year:      
@@ -6,9 +6,9 @@
   :Country:
 :END:
 * 2017
-** 2017-09 ¾ÅÔÂ
-*** 2017-09-13 ĞÇÆÚÈı
-**** Õ½ÀÇ2 <2017-09-13 ÖÜÈı>                                           :FILM: 
+** 2017-09 ä¹æœˆ
+*** 2017-09-13 æ˜ŸæœŸä¸‰
+**** æˆ˜ç‹¼2 <2017-09-13 å‘¨ä¸‰>                                           :FILM: 
      :PROPERTIES:
      :Director: Wu Jing
      :Year: 2017

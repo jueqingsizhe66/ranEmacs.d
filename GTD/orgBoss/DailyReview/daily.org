@@ -1,4 +1,4 @@
-** <2015-05-03 Sun>                                                             :COACH:
+ï»¿** <2015-05-03 Sun>                                                             :COACH:
  - What did I enjoy doing today?
 
  - What would I like to more of?
@@ -11,9 +11,9 @@
 
  - Thought for the day
 * 2017
-** 2017-09 ¾ÅÔÂ
-*** 2017-09-26 ĞÇÆÚ¶ş
-**** <2017-09-26 ÖÜ¶ş>                                             :COACH: 
+** 2017-09 ä¹æœˆ
+*** 2017-09-26 æ˜ŸæœŸäºŒ
+**** <2017-09-26 å‘¨äºŒ>                                             :COACH: 
  - What did I enjoy doing today?
 
  - What would I like to more of?
@@ -28,11 +28,11 @@
 
 Two video below come from http://emacsrocks.com/
 
-1. http://pan.baidu.com/s/1boCCjUJ  Parens of the Dead (Clojure + Emacs) (Ô­ÊÓÆµµØÖ·:http://www.parens-of-the-dead.com/)
-2. http://pan.baidu.com/s/1qY0W5Jm  Emacs Rocks (Emacs) (Ô­ÊÓÆµµØÖ·:http://emacsrocks.com/)
+1. http://pan.baidu.com/s/1boCCjUJ  Parens of the Dead (Clojure + Emacs) (åŸè§†é¢‘åœ°å€:http://www.parens-of-the-dead.com/)
+2. http://pan.baidu.com/s/1qY0W5Jm  Emacs Rocks (Emacs) (åŸè§†é¢‘åœ°å€:http://emacsrocks.com/)
 
-https://clojure.org/api/cheatsheet  clojure¹Ù·½API
+https://clojure.org/api/cheatsheet  clojureå®˜æ–¹API
 
-https://github.com/sicper/emacs-for-clojure  ×¨Îª Clojure ³õÑ§Õß×¼±¸µÄ Emacs ¿ª·¢»·¾³
-** 2017-10 Ê®ÔÂ
-*** 2017-10-07 ĞÇÆÚÁù
+https://github.com/sicper/emacs-for-clojure  ä¸“ä¸º Clojure åˆå­¦è€…å‡†å¤‡çš„ Emacs å¼€å‘ç¯å¢ƒ
+** 2017-10 åæœˆ
+*** 2017-10-07 æ˜ŸæœŸå…­

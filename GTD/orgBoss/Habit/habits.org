@@ -1,7 +1,7 @@
-* NEXT emacs tweaking and extending also with orgmode
-[2017-09-28 ÖÜËÄ 14:47]
+ï»¿* NEXT emacs tweaking and extending also with orgmode
+[2017-09-28 å‘¨å›› 14:47]
 
-SCHEDULED: <2017-09-28 ÖÜËÄ .+1d/3d>
+SCHEDULED: <2017-09-28 å‘¨å›› .+1d/3d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT

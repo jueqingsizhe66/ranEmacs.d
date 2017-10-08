@@ -1,9 +1,9 @@
-** df g
+ï»¿** df g
 
 ** FIXED g df
-   CLOSED: [2017-09-12 ÖÜ¶þ 17:45]
+   CLOSED: [2017-09-12 å‘¨äºŒ 17:45]
 
 
-   - State "FIXED"      from              [2017-09-12 ÖÜ¶þ 17
+   - State "FIXED"      from              [2017-09-12 å‘¨äºŒ 17
 
 

@@ -1,4 +1,4 @@
-* Tasks
+ï»¿* Tasks
 ** TODO java learning,you should take care the XML                              :javaxml:
 
 Added: [2015-05-03 Sun 19:04]
@@ -6,14 +6,14 @@ Added: [2015-05-03 Sun 19:04]
    - 
 Added: [2015-05-03 Sun 19:17]
 ** DOING TestTodo                                                      :@Test:
-- State "DOING"      from "TODO"         [2017-10-08 ÖÜÈÕ 03:19]
+- State "DOING"      from "TODO"         [2017-10-08 å‘¨æ—¥ 03:19]
 *** CANCELED [#A] little [100%]                                           :funnny:
-CLOSED: [2017-10-08 ÖÜÈÕ 03:18]
-- State "CANCELED"   from "DOING"         [2017-10-08 ÖÜÈÕ 03:18]
-- State "DOING"      from "DONE"          [2017-10-08 ÖÜÈÕ 03:18]
-- State "DONE"       from "TODO"         [2017-10-08 ÖÜÈÕ 03:18]
-- State "TODO"       from "DONE"       [2017-09-27 ÖÜÈı 16:51]
-- State "DONE"       from "TODO"       [2017-09-27 ÖÜÈı 16:51]
+CLOSED: [2017-10-08 å‘¨æ—¥ 03:18]
+- State "CANCELED"   from "DOING"         [2017-10-08 å‘¨æ—¥ 03:18]
+- State "DOING"      from "DONE"          [2017-10-08 å‘¨æ—¥ 03:18]
+- State "DONE"       from "TODO"         [2017-10-08 å‘¨æ—¥ 03:18]
+- State "TODO"       from "DONE"       [2017-09-27 å‘¨ä¸‰ 16:51]
+- State "DONE"       from "TODO"       [2017-09-27 å‘¨ä¸‰ 16:51]
  - [X] first
  - [X] second
  - [X] last
@@ -22,18 +22,18 @@ CLOSED: [2017-10-08 ÖÜÈÕ 03:18]
 Added: [2015-05-03 Sun 21:38]
 *** TODOS PhaseVi mesh manufactory                                  :@work:
 1. do for the nacelle yaw
-Added: [2017-09-18 ÖÜÒ» 11:07]
+Added: [2017-09-18 å‘¨ä¸€ 11:07]
 ** BUG TODOS Combine Plan into org-mode                           :Plan:mode:
 
 
 
-   - State "BUG"        from              [2017-09-05 ÖÜ¶ş 16:48]
+   - State "BUG"        from              [2017-09-05 å‘¨äºŒ 16:48]
    Addd: [2015-05-04 Mon 02:37]
 ** DONE TODOS setting CFD calculation                                :@work:
-CLOSED: [2017-09-29 ÖÜÎå 23:41] SCHEDULED: <2017-09-13 ÖÜÈı>
+CLOSED: [2017-09-29 å‘¨äº” 23:41] SCHEDULED: <2017-09-13 å‘¨ä¸‰>
  
-- State "DONE"       from              [2017-09-29 ÖÜÎå 23:41]
- Added: [2017-09-13 ÖÜÈı 01:22]
+- State "DONE"       from              [2017-09-29 å‘¨äº” 23:41]
+ Added: [2017-09-13 å‘¨ä¸‰ 01:22]
 *dfdf* 
  /slash/
 ** TODOS read the elisp code                                         :@F708:
@@ -44,19 +44,19 @@ Jumping to code
 (bind-key "C-c f" 'find-function)
 
 
-Added: [2017-09-27 ÖÜÈı 17:50]
+Added: [2017-09-27 å‘¨ä¸‰ 17:50]
 ** PENDING STARTED drink tea
-SCHEDULED: <2017-09-29 ÖÜÎå +1d> DEADLINE: <2017-09-27 ÖÜÈı>
+SCHEDULED: <2017-09-29 å‘¨äº” +1d> DEADLINE: <2017-09-27 å‘¨ä¸‰>
 :PROPERTIES:
-:LAST_REPEAT: [2017-09-28 ÖÜËÄ 15:16]
+:LAST_REPEAT: [2017-09-28 å‘¨å›› 15:16]
 :END:
-- State "DONE"       from "TODO"       [2017-09-28 ÖÜËÄ 15:16]
-- State "TODO"       from              [2017-09-28 ÖÜËÄ 14:34]
+- State "DONE"       from "TODO"       [2017-09-28 å‘¨å›› 15:16]
+- State "TODO"       from              [2017-09-28 å‘¨å›› 14:34]
 :PROPERties:
 :EFFORT: 0:30
 :END:
 :LOGBOOK:
-CLOCK: [2017-09-27 ÖÜÈı 22:34]--[2017-09-27 ÖÜÈı 22:44] =>  0:10
+CLOCK: [2017-09-27 å‘¨ä¸‰ 22:34]--[2017-09-27 å‘¨ä¸‰ 22:44] =>  0:10
 :END:
 ** TODO find the army software
 :PROPERTIES:
@@ -77,87 +77,87 @@ worry about missing deadline.(scheduled tasks will be informed of you)
 ****** 5. but still too much. So be realistics and add priviledge to your schedule tasks, eliminate some not so important not so hurry
 *** 6. finally you track all you task (so you know what the time went by)
 *** 7. also you do some overview the process (so you do appreciate how things adds up)
-** DONE [#A] new mesh for the double-sliding mesh :@work::multiAxis:½ô¼±ÖØÒª:
-CLOSED: [2017-09-29 ÖÜÎå 23:40] SCHEDULED: <2017-09-28 ÖÜËÄ>
+** DONE [#A] new mesh for the double-sliding mesh :@work::multiAxis:ç´§æ€¥é‡è¦:
+CLOSED: [2017-09-29 å‘¨äº” 23:40] SCHEDULED: <2017-09-28 å‘¨å››>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
-                    - State "DONE"       from "TODO"       [2017-09-29 ÖÜÎå 23:40]
+                    - State "DONE"       from "TODO"       [2017-09-29 å‘¨äº” 23:40]
                     Captured 2017-09-28 13:52
-** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:½ô¼±ÖØÒª:
-SCHEDULED: <2017-09-29 ÖÜÎå . +1w>
+** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:ç´§æ€¥é‡è¦:
+SCHEDULED: <2017-09-29 å‘¨äº” . +1w>
 
-- State "TODO"       from "TODO"          [2017-10-08 ÖÜÈÕ 02:33]
+- State "TODO"       from "TODO"          [2017-10-08 å‘¨æ—¥ 02:33]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
                     Captured 2017-09-28 13:58
 ** DONE [#B] change the list style in org-mode                    :PERSONAL:
-CLOSED: [2017-09-29 ÖÜÎå 09:45] DEADLINE: <2017-09-28 ÖÜËÄ>
+CLOSED: [2017-09-29 å‘¨äº” 09:45] DEADLINE: <2017-09-28 å‘¨å››>
                     :PROPERTIES:
                     :Effort: 0:15
                     :END:
-                    - State "DONE"       from "TODO"       [2017-09-29 ÖÜÎå 09:45]
+                    - State "DONE"       from "TODO"       [2017-09-29 å‘¨äº” 09:45]
                     Captured 2017-09-28 14:07
                 Doesn't work!                   
 ** TODO [#B] First Report for your graduation                        :@work:
-DEADLINE: <2017-10-23 ÖÜÒ»> SCHEDULED: <2017-10-02 ÖÜÒ»>
+DEADLINE: <2017-10-23 å‘¨ä¸€> SCHEDULED: <2017-10-02 å‘¨ä¸€>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
                     Captured 2017-10-02 11:05
-** TODO [#A] ¿ªÌâ±¨¸æ+ÎÄÏ××ÛÊö+ÖĞÑë¸ßĞ£»ù½ğ                         :@work:
-DEADLINE: <2017-10-22 ÖÜÈÕ> SCHEDULED: <2017-10-03 ÖÜ¶ş>
+** TODO [#A] å¼€é¢˜æŠ¥å‘Š+æ–‡çŒ®ç»¼è¿°+ä¸­å¤®é«˜æ ¡åŸºé‡‘                         :@work:
+DEADLINE: <2017-10-22 å‘¨æ—¥> SCHEDULED: <2017-10-03 å‘¨äºŒ>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
                     Captured 2017-10-03 14:15
-       ¿ªÌâ±¨¸æµÃ°üº¬ÒÔÏÂ¼¸¸ö²¿·Ö£¬
-***** TODO ÊıÖµÄ£Äâ ¾²Ì¬Æ«º½+¶¯Ì¬Æ«º½+ Á÷¹ÌñîºÏ(²Î¿¼³ğÓÀĞË Ò¦ÊÀ¸Õ ³ÂÏşÃ÷ ·¶ÖÓÑş ÀîæÂ ÈÎ»áÀ´) [0%]
-- State "TODO"       from "TODO"       [2017-10-03 ÖÜ¶ş 14:25]
-- State "TODO"       from "ABORT"      [2017-10-03 ÖÜ¶ş 14:25] [ ] 
-- [-] ÈÎÎñ·Ö½â [20%]
-  1. [ ] ±³¾°½éÉÜ
-     1. [ ]¡¶·çµç13Îå¹æ»®¡·
-     2. [ ]¡¶2006-2016·çµç×°»úÈİÁ¿·¢Õ¹¡·
-     3. [ ]¡¶2016Äê¶ÈÈ«Çò·çµç±¨¸æ¡· 4%Õ¼È«Çò×Ü·¢µçÁ¿
-     4. [ ] Æøµ¯·ÇÎÈ¶¨ĞÔ
-  2. [X] ¾²Ì¬Æ«º½
-  3. [-] ¶¯Ì¬Æ«º½
-     1. [X] ¶¯Ì¬ÈëÁ÷½Ç
-        ÔÚcfxµÄ½á¹û£¬ÔİÊ±ÒÔÊ§°Ü¸æÖÕ¡£
-     2. [ ] »ú²ÕÆ«º½
-  4. [-] Á÷¹ÌñîºÏ(²Î¿¼Ò¦ÊÀ¸Õ ÀîæÂ ÀîĞÂ¿­ ³ÂÏşÃ÷)
-     1. [X] µ¥Ïò
-     2. [ ] Ë«Ïò
-  5. [ ] FVM ×ÔÓÉÎĞÎ²¼£(²Î¿¼³ğÓÀĞË)
-***** TODO ÊµÑé²¿·Ö NREL5MWµÄÊıÖµÄ£Äâ(²Î¿¼ÕÔ×ÚµÂ ÖÜ¹ãöÎ ÀîĞÂ¿­) [0%]
-- State "TODO"       from              [2017-10-03 ÖÜ¶ş 14:25]
-- [ ] ÈÎÎñ·Ö½â
-  - [ ] NREL5MWµÄÊµÑéÑĞ¾¿
-    - [ ] Ò¶Æ¬½éÉÜ
-    - [ ] ÂÖì±+Ëş¼Ü½éÉÜ
-    - [ ] ¿ØÖÆÏµÍ³½éÉÜ
-    - [ ] ÊµÑé·½°¸½éÉÜ
-      - [ ] Æ«º½ÊµÑé
-      - [ ] Ç°ºóËÄÖÜ»Î¶¯ÊµÑé
-  - [ ] Ë¿ÏßÊµÑé Á÷³¡¿ÉÊÓ»¯ÊµÑé
+       å¼€é¢˜æŠ¥å‘Šå¾—åŒ…å«ä»¥ä¸‹å‡ ä¸ªéƒ¨åˆ†ï¼Œ
+***** TODO æ•°å€¼æ¨¡æ‹Ÿ é™æ€åèˆª+åŠ¨æ€åèˆª+ æµå›ºè€¦åˆ(å‚è€ƒä»‡æ°¸å…´ å§šä¸–åˆš é™ˆæ™“æ˜ èŒƒé’Ÿç‘¶ æåª› ä»»ä¼šæ¥) [0%]
+- State "TODO"       from "TODO"       [2017-10-03 å‘¨äºŒ 14:25]
+- State "TODO"       from "ABORT"      [2017-10-03 å‘¨äºŒ 14:25] [ ] 
+- [-] ä»»åŠ¡åˆ†è§£ [20%]
+  1. [ ] èƒŒæ™¯ä»‹ç»
+     1. [ ]ã€Šé£ç”µ13äº”è§„åˆ’ã€‹
+     2. [ ]ã€Š2006-2016é£ç”µè£…æœºå®¹é‡å‘å±•ã€‹
+     3. [ ]ã€Š2016å¹´åº¦å…¨çƒé£ç”µæŠ¥å‘Šã€‹ 4%å å…¨çƒæ€»å‘ç”µé‡
+     4. [ ] æ°”å¼¹éç¨³å®šæ€§
+  2. [X] é™æ€åèˆª
+  3. [-] åŠ¨æ€åèˆª
+     1. [X] åŠ¨æ€å…¥æµè§’
+        åœ¨cfxçš„ç»“æœï¼Œæš‚æ—¶ä»¥å¤±è´¥å‘Šç»ˆã€‚
+     2. [ ] æœºèˆ±åèˆª
+  4. [-] æµå›ºè€¦åˆ(å‚è€ƒå§šä¸–åˆš æåª› ææ–°å‡¯ é™ˆæ™“æ˜)
+     1. [X] å•å‘
+     2. [ ] åŒå‘
+  5. [ ] FVM è‡ªç”±æ¶¡å°¾è¿¹(å‚è€ƒä»‡æ°¸å…´)
+***** TODO å®éªŒéƒ¨åˆ† NREL5MWçš„æ•°å€¼æ¨¡æ‹Ÿ(å‚è€ƒèµµå®—å¾· å‘¨å¹¿é‘« ææ–°å‡¯) [0%]
+- State "TODO"       from              [2017-10-03 å‘¨äºŒ 14:25]
+- [ ] ä»»åŠ¡åˆ†è§£
+  - [ ] NREL5MWçš„å®éªŒç ”ç©¶
+    - [ ] å¶ç‰‡ä»‹ç»
+    - [ ] è½®æ¯‚+å¡”æ¶ä»‹ç»
+    - [ ] æ§åˆ¶ç³»ç»Ÿä»‹ç»
+    - [ ] å®éªŒæ–¹æ¡ˆä»‹ç»
+      - [ ] åèˆªå®éªŒ
+      - [ ] å‰åå››å‘¨æ™ƒåŠ¨å®éªŒ
+  - [ ] ä¸çº¿å®éªŒ æµåœºå¯è§†åŒ–å®éªŒ
 
 * Tasks
-** TODO Most important thing that you have to do       :graduation:½ô¼±ÖØÒª:
+** TODO Most important thing that you have to do       :graduation:ç´§æ€¥é‡è¦:
 ** TODO Second most important thing that you have to do
 You can also take notes underneath each heading, like this
-** TODO »¨Ïú(expense)
+** TODO èŠ±é”€(expense)
 
 That's your gtd
 
 | Date              | Category |  Money | People |
 |-------------------+----------+--------+--------|
-| <2017-10-07 ÖÜÁù> | Book     |   30.6 |        |
-| <2017-10-09 ÖÜÒ»> | Film     |   70.6 |        |
-| <2017-11-10 ÖÜÎå> | Bus      |   50.2 |        |
-| <2017-11-11 ÖÜÁù> | Bus      |   60.2 | xinran |
-| <2017-11-12 ÖÜÈÕ> | Eating   |   1000 | Ye     |
+| <2017-10-07 å‘¨å…­> | Book     |   30.6 |        |
+| <2017-10-09 å‘¨ä¸€> | Film     |   70.6 |        |
+| <2017-11-10 å‘¨äº”> | Bus      |   50.2 |        |
+| <2017-11-11 å‘¨å…­> | Bus      |   60.2 | xinran |
+| <2017-11-12 å‘¨æ—¥> | Eating   |   1000 | Ye     |
 |-------------------+----------+--------+--------|
 |                   | Total:   | 1211.6 |        |
 #+TBLFM: @>$3=vsum(@2..@-1)   

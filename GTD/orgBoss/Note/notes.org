@@ -1,24 +1,24 @@
-Quick notes
+ï»¿Quick notes
 :LOGBOOK:
-CLOCK: [2017-10-02 ÖÜÒ» 11:09]
-CLOCK: [2017-09-29 ÖÜÎå 11:03]j
+CLOCK: [2017-10-02 å‘¨ä¸€ 11:09]
+CLOCK: [2017-09-29 å‘¨äº” 11:03]j
 
 
-CLOCK: [2017-09-28 ÖÜËÄ 13:41]--[2017-09-28 ÖÜËÄ 13:42] =>  0:01
+CLOCK: [2017-09-28 å‘¨å›› 13:41]--[2017-09-28 å‘¨å›› 13:42] =>  0:01
 :END:
 ** tomato time [#B]                                                  :@F708:
-                           Added: [2017-10-02 ÖÜÒ» 11:09]
-  ¡ñ ¿ªĞÄÍøµÄÍµ²ËÓÎÏ·£¿ÄãÊÇ²»ÊÇÀÏÊÇµë¼Ç×ÅÊÕ²ËµÄÊ±¼ä£¿ÄãÊÕµÄ²»ÊÇ²Ë£¬ÊÇ·¬ÇÑ
-  ¡ñ °ÂÔË»áµ¹¼ÆÊ±£¬¸ß¿¼µ¹¼ÆÊ±£¿ºÜ´óºÜÖØÒªµÄÒ»¸ö·¬ÇÑ
-  ¡ñ ÀÏ°åÃ÷ÌìÒªµÄ×ÊÁÏ£¿Î¶µÀ²»ÔõÃ´ÑùµÄ·¬ÇÑ
-ÎÒÏëËµµÄÊÇ£¬·¬ÇÑÊ±¼äµÄºËĞÄÊÇµ¹¼ÆÊ±Ëù²úÉúµÄ½ôÆÈ¸Ğ¡£ÕâÊÇÖĞ¿ÆÔºĞÄÀíÑ§×¨Òµ±ÏÒµµÄÀÏ¹ù£¨¹ù¾ü·å£©¸æËßÎÒµÄ£¬¸ĞĞ»Å¶¡£
+                           Added: [2017-10-02 å‘¨ä¸€ 11:09]
+  â— å¼€å¿ƒç½‘çš„å·èœæ¸¸æˆï¼Ÿä½ æ˜¯ä¸æ˜¯è€æ˜¯æƒ¦è®°ç€æ”¶èœçš„æ—¶é—´ï¼Ÿä½ æ”¶çš„ä¸æ˜¯èœï¼Œæ˜¯ç•ªèŒ„
+  â— å¥¥è¿ä¼šå€’è®¡æ—¶ï¼Œé«˜è€ƒå€’è®¡æ—¶ï¼Ÿå¾ˆå¤§å¾ˆé‡è¦çš„ä¸€ä¸ªç•ªèŒ„
+  â— è€æ¿æ˜å¤©è¦çš„èµ„æ–™ï¼Ÿå‘³é“ä¸æ€ä¹ˆæ ·çš„ç•ªèŒ„
+æˆ‘æƒ³è¯´çš„æ˜¯ï¼Œç•ªèŒ„æ—¶é—´çš„æ ¸å¿ƒæ˜¯å€’è®¡æ—¶æ‰€äº§ç”Ÿçš„ç´§è¿«æ„Ÿã€‚è¿™æ˜¯ä¸­ç§‘é™¢å¿ƒç†å­¦ä¸“ä¸šæ¯•ä¸šçš„è€éƒ­ï¼ˆéƒ­å†›å³°ï¼‰å‘Šè¯‰æˆ‘çš„ï¼Œæ„Ÿè°¢å“¦ã€‚
 ** cljrefactor call last thread call [#B]                            :@work:
-                           Added: [2017-09-30 ÖÜÁù 05:21]
+                           Added: [2017-09-30 å‘¨å…­ 05:21]
 -https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
 
 
 ** cljr thread first all [#B]                                        :@work:
-                           Added: [2017-09-30 ÖÜÁù 05:23]
+                           Added: [2017-09-30 å‘¨å…­ 05:23]
                            
 https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-last-all
 
@@ -33,20 +33,20 @@ Put your cursor in front of the s-exp, and call cljr-thread-last-all:
      (map square))
 
 ** CFD nacell wiwith bump [#B]                                       :@work:
-                           Added: [2017-09-29 ÖÜÎå 11:02]
-     Ê×ÏÈ£¬×ÜËãÍê³ÉÁË´óĞ¡Íø¸ñµÄÇ¶Ì×¹¦ÄÜ¡£ »®·Öµ½»ú²ÕµÄ¹ı³ÌÖĞ»ù±¾ÉÏ±È½ÏÕı³££¬¾ÍÊÇ×öÁË¼¸´ÎoÆÊ¶øÒÑ£¬È»ºó¶ÔÓ¦¹ØÁª¶øÒÑ£¬
-Ö»²»¹ıÔÚ¼¸ºÎµÄ´¦ÀíÉÏ£¬ÓĞÒ»¸öºÜĞ¡µÄ¼¼ÇÉ¾ÍÊÇĞèÒª°Ñ»ú²ÕµÄÏßÍùÇ°copyÒ»¸öbuffer³¤¶ÈµÄ¾àÀë£¬ÕâÑù¾ÍÄÜ¹»×öµ½Á½´ÎoÆÊ£¬µÚÈı´ÎoÆÊÔÚ¹ı¶Éµ½
-Ô²ÉÏ£¬ÔÚÁ½´ÎoÆÊºó£¬¾Í¿ÉÒÔ°Ñ»ú²ÕµÄÄÚ²¿Íø¸ñÉ¾µô£»¶øÔÚµÚÈı´ÎoÆÊÔ²µÄ¹ı³Ì£¬°ÑÔ²ÄÚµÄÍø¸ñÔÙÉ¾µô£» »¹ÓĞÔÚµÚÒ»´ÎoÆÊ»ú²ÕÍ·²¿µÄÊ±ºò£¬ĞèÒª°Ñ
-»ú²ÕÉÏÎ²²¿µÄµã½øĞĞsplit block,Î²²¿µÄµã¡¢Ïß½øĞĞ¹ØÁª²Ù×÷£¬µ±È»»ú²ÕµÄÍ·²¿Ò²Òª½øĞĞsplit block£¬½øĞĞÏß¹ØÁª¡£
-     Íê³ÉÁËÉÏÊöµÄ¹ı³ÌÖ®ºó£¬Ò²¾ÍÊÇ×îºóÒ»²½´ïµ½bufferÇøÓòÔ²µÄÉ¾³ı£¬¾Í¿ÉÒÔ½øÒ»²½×öbumpµÄÇĞ¸î¡£ÕâÒ»²½µÄÇĞ¸îºÜÓĞ½²¾¿£¬Á÷Ïß·½ÏòÉÏÇĞÉÏÁ½µ¶
-¼´¿É£¨Õâ±ßĞèÒª×¢ÒâµÄÊÇ£¬²»ÒªÇĞÉÏÈıµ¶£¬Ö»ÊÇbumpµÄÇ°ºóÃæ¼´¿É£¬°ÑËûµ±×÷Ò»¸öÕı·½ÌåÈ¥¶Ô´ı£¬·ÀÖ¹ÇĞ¶àÁË£¬²»ĞèÒª½øĞĞÁ÷ÏßµÄÏß¹ØÁªÁË£¬ÊÂÏÈÔÚ»ú
-²ÕÍ·µÄoÆÊ¾ÍÒÑ¾­½øĞĞÁË¹ØÁª£©¡£×¢ÒâÔÚÄãÃ¿½øĞĞÇĞ¸îµÄÊ±ºò£¬¶¼µÃ°ÑÖÊÁ¿¼ì²é´ò¿ª£¬·ÀÖ¹³öÏÖÌ«Ôã¸âµÄÍø¸ñÖÊÁ¿¡£ Òª×¢ÒâµÄÊÇ£¬´Óbump¿ªÊ¼µÄÇĞ¸î¶¼
-ÊÇÊ¹ÓÃvisible select blockµÄ·½Ê½£¬¶ø²»ÊÇAll, ÏÖÔÚµÃÑ¡ÔñbumpÉÏÃæµÄÈı¸öblock¿ì£¬È»ºóÑ¡ÔñĞ±±ß£¬Ñ¡ÔñbumpÊúÖ±·½ÏòµÄµÚ¶ş¸öµã£¬½ô½Ó×ÅÇĞ¸îÑ¡Ôñ
-µÚÈı¸öµã£¬ÕâÑù¾ÍËãÍê³ÉÁË£¬È»ºó¾ÍÊÇÒ»¸ö¹ØÁª¹¤×÷£¬°Ñbumpµã¹ØÁªÉÏ£¬È»ºóÊÇÏß¹ØÁª¡£
-      ÖÁ´ËÍê¹¤¡£ Õâ±ßÓĞÒ»¸ö¶ÔÓ¦¹ØÏµ£¬Ò²¾ÍÊÇÄãĞèÒª°ÑÌİĞÎÌå£¬Ïë³ÉÁùÃæÌå½øĞĞÇĞ¸î£¬ÕıÈçÄãÔÚ½øĞĞoÆÊµÄÊ±ºò£¬°ÑÖ±Òí¶ÎÏë³ÉÔ²Öù¶ÎµÄ¸Ğ¾õÒ»Ñù£¬
-È»ºó½øĞĞoÆÊ¡£
+                           Added: [2017-09-29 å‘¨äº” 11:02]
+     é¦–å…ˆï¼Œæ€»ç®—å®Œæˆäº†å¤§å°ç½‘æ ¼çš„åµŒå¥—åŠŸèƒ½ã€‚ åˆ’åˆ†åˆ°æœºèˆ±çš„è¿‡ç¨‹ä¸­åŸºæœ¬ä¸Šæ¯”è¾ƒæ­£å¸¸ï¼Œå°±æ˜¯åšäº†å‡ æ¬¡oå‰–è€Œå·²ï¼Œç„¶åå¯¹åº”å…³è”è€Œå·²ï¼Œ
+åªä¸è¿‡åœ¨å‡ ä½•çš„å¤„ç†ä¸Šï¼Œæœ‰ä¸€ä¸ªå¾ˆå°çš„æŠ€å·§å°±æ˜¯éœ€è¦æŠŠæœºèˆ±çš„çº¿å¾€å‰copyä¸€ä¸ªbufferé•¿åº¦çš„è·ç¦»ï¼Œè¿™æ ·å°±èƒ½å¤Ÿåšåˆ°ä¸¤æ¬¡oå‰–ï¼Œç¬¬ä¸‰æ¬¡oå‰–åœ¨è¿‡æ¸¡åˆ°
+åœ†ä¸Šï¼Œåœ¨ä¸¤æ¬¡oå‰–åï¼Œå°±å¯ä»¥æŠŠæœºèˆ±çš„å†…éƒ¨ç½‘æ ¼åˆ æ‰ï¼›è€Œåœ¨ç¬¬ä¸‰æ¬¡oå‰–åœ†çš„è¿‡ç¨‹ï¼ŒæŠŠåœ†å†…çš„ç½‘æ ¼å†åˆ æ‰ï¼› è¿˜æœ‰åœ¨ç¬¬ä¸€æ¬¡oå‰–æœºèˆ±å¤´éƒ¨çš„æ—¶å€™ï¼Œéœ€è¦æŠŠ
+æœºèˆ±ä¸Šå°¾éƒ¨çš„ç‚¹è¿›è¡Œsplit block,å°¾éƒ¨çš„ç‚¹ã€çº¿è¿›è¡Œå…³è”æ“ä½œï¼Œå½“ç„¶æœºèˆ±çš„å¤´éƒ¨ä¹Ÿè¦è¿›è¡Œsplit blockï¼Œè¿›è¡Œçº¿å…³è”ã€‚
+     å®Œæˆäº†ä¸Šè¿°çš„è¿‡ç¨‹ä¹‹åï¼Œä¹Ÿå°±æ˜¯æœ€åä¸€æ­¥è¾¾åˆ°bufferåŒºåŸŸåœ†çš„åˆ é™¤ï¼Œå°±å¯ä»¥è¿›ä¸€æ­¥åšbumpçš„åˆ‡å‰²ã€‚è¿™ä¸€æ­¥çš„åˆ‡å‰²å¾ˆæœ‰è®²ç©¶ï¼Œæµçº¿æ–¹å‘ä¸Šåˆ‡ä¸Šä¸¤åˆ€
+å³å¯ï¼ˆè¿™è¾¹éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œä¸è¦åˆ‡ä¸Šä¸‰åˆ€ï¼Œåªæ˜¯bumpçš„å‰åé¢å³å¯ï¼ŒæŠŠä»–å½“ä½œä¸€ä¸ªæ­£æ–¹ä½“å»å¯¹å¾…ï¼Œé˜²æ­¢åˆ‡å¤šäº†ï¼Œä¸éœ€è¦è¿›è¡Œæµçº¿çš„çº¿å…³è”äº†ï¼Œäº‹å…ˆåœ¨æœº
+èˆ±å¤´çš„oå‰–å°±å·²ç»è¿›è¡Œäº†å…³è”ï¼‰ã€‚æ³¨æ„åœ¨ä½ æ¯è¿›è¡Œåˆ‡å‰²çš„æ—¶å€™ï¼Œéƒ½å¾—æŠŠè´¨é‡æ£€æŸ¥æ‰“å¼€ï¼Œé˜²æ­¢å‡ºç°å¤ªç³Ÿç³•çš„ç½‘æ ¼è´¨é‡ã€‚ è¦æ³¨æ„çš„æ˜¯ï¼Œä»bumpå¼€å§‹çš„åˆ‡å‰²éƒ½
+æ˜¯ä½¿ç”¨visible select blockçš„æ–¹å¼ï¼Œè€Œä¸æ˜¯All, ç°åœ¨å¾—é€‰æ‹©bumpä¸Šé¢çš„ä¸‰ä¸ªblockå¿«ï¼Œç„¶åé€‰æ‹©æ–œè¾¹ï¼Œé€‰æ‹©bumpç«–ç›´æ–¹å‘çš„ç¬¬äºŒä¸ªç‚¹ï¼Œç´§æ¥ç€åˆ‡å‰²é€‰æ‹©
+ç¬¬ä¸‰ä¸ªç‚¹ï¼Œè¿™æ ·å°±ç®—å®Œæˆäº†ï¼Œç„¶åå°±æ˜¯ä¸€ä¸ªå…³è”å·¥ä½œï¼ŒæŠŠbumpç‚¹å…³è”ä¸Šï¼Œç„¶åæ˜¯çº¿å…³è”ã€‚
+      è‡³æ­¤å®Œå·¥ã€‚ è¿™è¾¹æœ‰ä¸€ä¸ªå¯¹åº”å…³ç³»ï¼Œä¹Ÿå°±æ˜¯ä½ éœ€è¦æŠŠæ¢¯å½¢ä½“ï¼Œæƒ³æˆå…­é¢ä½“è¿›è¡Œåˆ‡å‰²ï¼Œæ­£å¦‚ä½ åœ¨è¿›è¡Œoå‰–çš„æ—¶å€™ï¼ŒæŠŠç›´ç¿¼æ®µæƒ³æˆåœ†æŸ±æ®µçš„æ„Ÿè§‰ä¸€æ ·ï¼Œ
+ç„¶åè¿›è¡Œoå‰–ã€‚
 ** emacs auto open gtd file                                           :NOTE:
-                           Added: [2017-09-28 ÖÜËÄ 13:40]
+                           Added: [2017-09-28 å‘¨å›› 13:40]
   
 == Automatically open your todo.org every time you start Emacs ==
 
@@ -74,55 +74,55 @@ http://blog.csdn.net/u011729865/article/details/54236547
 
 
 http://blog.csdn.net/jiluben/article/details/39587723
-¹ØÓÚorg-capture-templatesÅäÖÃ´úÂëµÄ½âÊÍ
-Ô­´´ 2014Äê09ÔÂ26ÈÕ 22:13:02
+å…³äºorg-capture-templatesé…ç½®ä»£ç çš„è§£é‡Š
+åŸåˆ› 2014å¹´09æœˆ26æ—¥ 22:13:02
 
-      ¶ÔÓÚorg-capture-templatesµÄÅäÖÃ£¬ÍøÉÏÖ»ÓĞÈçÏÂ¼¸ĞĞ´úÂë£º
+      å¯¹äºorg-capture-templatesçš„é…ç½®ï¼Œç½‘ä¸Šåªæœ‰å¦‚ä¸‹å‡ è¡Œä»£ç ï¼š
 
    (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
              "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
              "* %?\nEntered on %U\n  %i\n  %a")))
-    ´ó¼Ò¶¼ÊÇÕâÃ´Ğ´£¬µ«ÊÇ²¢Ã»ÓĞ½âÊÍÃ¿¸ö´úÂëµÄº¬Òå¡£
-    ¾­¹ı¼¸´ÎµÄ²âÊÔ£¬¸÷¸ö´úÂëµÄÒâÒå´óÌåÈçÏÂ£º
+    å¤§å®¶éƒ½æ˜¯è¿™ä¹ˆå†™ï¼Œä½†æ˜¯å¹¶æ²¡æœ‰è§£é‡Šæ¯ä¸ªä»£ç çš„å«ä¹‰ã€‚
+    ç»è¿‡å‡ æ¬¡çš„æµ‹è¯•ï¼Œå„ä¸ªä»£ç çš„æ„ä¹‰å¤§ä½“å¦‚ä¸‹ï¼š
     
-    ÏÖÔÚÒÔ
+    ç°åœ¨ä»¥
 
 ("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
              "* TODO %?\n  %i\n  %a")
 
-ÎªÀı½øĞĞËµÃ÷¡£
-   "t"´ú±í¿ì½İ¼ü£¬Èç¹ûÎÒÃÇÒªµ÷ÓÃorg-capture£¬±ØĞë°´ÏÂC-c cµÄ×éºÏ¼ü£¬´ËÊ±emacs¾Í»áÏÔÊ¾³ö
-Ò»Ğ´×ÖÄ¸µÈ£¬Èçt¡¢jµÈ£¬Õâ¸ö"t"¾ÍÊÇ´úÂëÖĞµÄ"t",ÎÒÃÇ¿ÉÒÔ¸ù¾İ×Ô¼ºµÄÒâÔ¸ÉèÖÃ¡£
-   "Todo"Ä¿Ç°»¹²»Çå³ş¡£
-    µ±Îª"file+headline"Ê±£¬ºóÃæÒª¸úÁ½¸ö²ÎÊı£¬Ò»¸öÊÇÎÄ¼şµÄµØÖ·£¬Èç"~/org/gtd.org"£¬ÁíÒ»¸öÊÇ
-ÎÒÃÇµ±Ç°ÎÄµµËùÊôµÄ±êÌâ¡£±¾ÅäÖÃÖĞÊÇ"Tasks",ÒâÎ¶×Åµ±ÎÒÃÇÔÚ°´ÏÂC-c c t£¬²¢ÊäÈëÄÚÈİ£¬ÔÙ°´ÏÂ
-C-c C-cºó£¬ÎÒÃÇµÄÄÚÈİ»á×Ô¶¯¹éµµµ½gtd.orgÎÄ¼şµÄTasks±êÌâÏÂ£¬ÈôÎÄ¼şgtd.orgÖĞÃ»ÓĞTasks±êÌâ£¬
-ÏµÍ³»á×Ô¶¯²úÉúÒ»¸ö¡£
-    "*"¾ßÌåÒâÒå²»ÖªµÀ£¬Èç¹ûÃ»ÓĞ£¬ÔÚ°´ÏÂC-c cºó£¬ÔÙ°´t£¬ÎŞ·¨µ÷³ögtdÎÄ¼ş¡£
-     "TODO"»áÏÔÊ¾ÔÙÎÄ±¾±êÌâÖĞ£¬´ó¼ÒÒ²¿ÉÒÔ»»³É"SOMEDAY"µÈ£¬×Ô¼ºÏëÒªµÄ×´Ì¬¡£
-      "%a"´ú±íÄã°´C-c cÇ°£¬Êó±êËùÔÚµÄÄÚÈİ¡£
-      ÆäËüµÄÄÚÈİ»¹Ã»ÓĞÅªÃ÷°×¡£
+ä¸ºä¾‹è¿›è¡Œè¯´æ˜ã€‚
+   "t"ä»£è¡¨å¿«æ·é”®ï¼Œå¦‚æœæˆ‘ä»¬è¦è°ƒç”¨org-captureï¼Œå¿…é¡»æŒ‰ä¸‹C-c cçš„ç»„åˆé”®ï¼Œæ­¤æ—¶emacså°±ä¼šæ˜¾ç¤ºå‡º
+ä¸€å†™å­—æ¯ç­‰ï¼Œå¦‚tã€jç­‰ï¼Œè¿™ä¸ª"t"å°±æ˜¯ä»£ç ä¸­çš„"t",æˆ‘ä»¬å¯ä»¥æ ¹æ®è‡ªå·±çš„æ„æ„¿è®¾ç½®ã€‚
+   "Todo"ç›®å‰è¿˜ä¸æ¸…æ¥šã€‚
+    å½“ä¸º"file+headline"æ—¶ï¼Œåé¢è¦è·Ÿä¸¤ä¸ªå‚æ•°ï¼Œä¸€ä¸ªæ˜¯æ–‡ä»¶çš„åœ°å€ï¼Œå¦‚"~/org/gtd.org"ï¼Œå¦ä¸€ä¸ªæ˜¯
+æˆ‘ä»¬å½“å‰æ–‡æ¡£æ‰€å±çš„æ ‡é¢˜ã€‚æœ¬é…ç½®ä¸­æ˜¯"Tasks",æ„å‘³ç€å½“æˆ‘ä»¬åœ¨æŒ‰ä¸‹C-c c tï¼Œå¹¶è¾“å…¥å†…å®¹ï¼Œå†æŒ‰ä¸‹
+C-c C-cåï¼Œæˆ‘ä»¬çš„å†…å®¹ä¼šè‡ªåŠ¨å½’æ¡£åˆ°gtd.orgæ–‡ä»¶çš„Tasksæ ‡é¢˜ä¸‹ï¼Œè‹¥æ–‡ä»¶gtd.orgä¸­æ²¡æœ‰Tasksæ ‡é¢˜ï¼Œ
+ç³»ç»Ÿä¼šè‡ªåŠ¨äº§ç”Ÿä¸€ä¸ªã€‚
+    "*"å…·ä½“æ„ä¹‰ä¸çŸ¥é“ï¼Œå¦‚æœæ²¡æœ‰ï¼Œåœ¨æŒ‰ä¸‹C-c cåï¼Œå†æŒ‰tï¼Œæ— æ³•è°ƒå‡ºgtdæ–‡ä»¶ã€‚
+     "TODO"ä¼šæ˜¾ç¤ºå†æ–‡æœ¬æ ‡é¢˜ä¸­ï¼Œå¤§å®¶ä¹Ÿå¯ä»¥æ¢æˆ"SOMEDAY"ç­‰ï¼Œè‡ªå·±æƒ³è¦çš„çŠ¶æ€ã€‚
+      "%a"ä»£è¡¨ä½ æŒ‰C-c cå‰ï¼Œé¼ æ ‡æ‰€åœ¨çš„å†…å®¹ã€‚
+      å…¶å®ƒçš„å†…å®¹è¿˜æ²¡æœ‰å¼„æ˜ç™½ã€‚
 
-     ¸½£º
+     é™„ï¼š
 
      %a          annotation, normally the link created with org-store-link
      %i          initial content, the region when capture is called with C-u.
      %t          timestamp, date only
      %T          timestamp with date and time
      %u, %U      like the above, but inactive timestamps
-     %?          ±íÊ¾cursor¶¨Î»ÓÚ´Ë ¿ªÊ¼ÊäÈë
+     %?          è¡¨ç¤ºcursorå®šä½äºæ­¤ å¼€å§‹è¾“å…¥
 
 http://doc.norang.ca/org-mode.html
 
 https://github.com/bbatsov/prelude
 
 https://www.zhihu.com/question/26384934/answer/32686989
-´ó°ëÄêÇ°ÕıÖµÎÒ¿ªĞ´²©Ê¿ÂÛÎÄ£¬ ¶ÔÓÚÕâÖÖ´ó²¿Í·µÄĞ´×÷£¬ Ìá¸ÙÎŞÒÉÊ®·ÖÖØÒª£¬ ÎÒÒ²³¢ÊÔ¹ıĞí¶àmindmapÈí¼şÀ´×ö¹æ»®£¬ ½á¹û¶¼ÂÒ×öÒ»ÍÅ¡£ ×îºó»¹ÊÇ°ÑÎ¬¶È½µµ½1
+å¤§åŠå¹´å‰æ­£å€¼æˆ‘å¼€å†™åšå£«è®ºæ–‡ï¼Œ å¯¹äºè¿™ç§å¤§éƒ¨å¤´çš„å†™ä½œï¼Œ æçº²æ— ç–‘ååˆ†é‡è¦ï¼Œ æˆ‘ä¹Ÿå°è¯•è¿‡è®¸å¤šmindmapè½¯ä»¶æ¥åšè§„åˆ’ï¼Œ ç»“æœéƒ½ä¹±åšä¸€å›¢ã€‚ æœ€åè¿˜æ˜¯æŠŠç»´åº¦é™åˆ°1
 
 
-OrgÄÜÊ¶±ğÎŞĞòÁĞ±í¡¢ÓĞĞòÁĞ±í¡¢ºÍÃèÊö±í
+Orgèƒ½è¯†åˆ«æ— åºåˆ—è¡¨ã€æœ‰åºåˆ—è¡¨ã€å’Œæè¿°è¡¨
 
 
 https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
@@ -130,7 +130,7 @@ https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
 
 * Quick notes
 ** design something hard to use [#B]                                 :@F708:
-                           Added: [2017-10-07 ÖÜÁù 22:08]
+                           Added: [2017-10-07 å‘¨å…­ 22:08]
                            
 http://www.howardism.org/
 22 Feb 2015
@@ -141,17 +141,17 @@ This quote sums up my 20 year experience with Emacs:
 
     [Fujifilm took] the controls out of deep menu functions and putting them back on chrome knobs that just beg to be twiddled.
 
-    I bought a Fujifilm X100 two years ago. It was the first piece of technology I¡¯d bought in 15 years where I had to read the manual. Actually, I¡¯ve read the manual at least four times. Now I¡¯m taking the best pictures of my life, and I love it. By being hard to use, my X100 made me a better photographer.
+    I bought a Fujifilm X100 two years ago. It was the first piece of technology Iâ€™d bought in 15 years where I had to read the manual. Actually, Iâ€™ve read the manual at least four times. Now Iâ€™m taking the best pictures of my life, and I love it. By being hard to use, my X100 made me a better photographer.
 
-Seems like Emacs users are now in some elite club where the hazing ritual amounts to learning Lisp. Consequently, I¡¯ve decided to start signing all my Emacs-related correspondence with:
+Seems like Emacs users are now in some elite club where the hazing ritual amounts to learning Lisp. Consequently, Iâ€™ve decided to start signing all my Emacs-related correspondence with:
 
     Yours in Emacs,
 
     Howard
 
 ** data science for making decision [#B]                             :@work:
-                           Added: [2017-10-02 ÖÜÒ» 21:08]
+                           Added: [2017-10-02 å‘¨ä¸€ 21:08]
                            
-Data science involves principles£¨Ô­Ôò£©, processes£¨¹ı³Ì£©,
- and techniques£¨¼¼Êõ  Ò²¾ÍÊÇËµÔÚºóÎÄ»á½éÉÜÕâĞ©·½ÃæµÄ¸öÖĞĞÅÏ¢£© for understanding phenomena via the (automated) analysis of data. For the perspective of this article, the ultimate goal of data science is improving decision making£¨ÖÕ¼«Ä¿±êÌá¸ß¾ö²ßÄÜÁ¦£©, 
-as this generally is of paramount interest to business£¨¶ÔÉÌÒµÀ´ËµÒ²ÊÇÌØ±ğÖØÒªµÄ£©. 
+Data science involves principlesï¼ˆåŸåˆ™ï¼‰, processesï¼ˆè¿‡ç¨‹ï¼‰,
+ and techniquesï¼ˆæŠ€æœ¯  ä¹Ÿå°±æ˜¯è¯´åœ¨åæ–‡ä¼šä»‹ç»è¿™äº›æ–¹é¢çš„ä¸ªä¸­ä¿¡æ¯ï¼‰ for understanding phenomena via the (automated) analysis of data. For the perspective of this article, the ultimate goal of data science is improving decision makingï¼ˆç»ˆæç›®æ ‡æé«˜å†³ç­–èƒ½åŠ›ï¼‰, 
+as this generally is of paramount interest to businessï¼ˆå¯¹å•†ä¸šæ¥è¯´ä¹Ÿæ˜¯ç‰¹åˆ«é‡è¦çš„ï¼‰. 

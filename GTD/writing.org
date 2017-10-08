@@ -1,6 +1,6 @@
-#+OPTIONS: ^:{}
+Ôªø#+OPTIONS: ^:{}
 
-* ¥¥“‚
+* ÂàõÊÑè
 ** Introduction
 *** subtree
 *** open the link
@@ -9,30 +9,30 @@
 ** methodology
 ** results and analysis
 ** [ ] conclusionn
-*** —ßœ∞ [#B] [ ] hel                                  :CANCELLED:ΩÙº±÷ÿ“™:
-- State "—ßœ∞"       from "π§◊˜"       [2017-09-18 ÷‹“ª 14:30]
-- State "π§◊˜"       from "BUG"        [2017-09-18 ÷‹“ª 14:14]
-- State "BUG"        from "KNOWNCAUSE" [2017-09-18 ÷‹“ª 14:13]
-- State "KNOWNCAUSE" from "FIXED"      [2017-09-18 ÷‹“ª 14:13]
-- State "FIXED"      from "PENDING"    [2017-09-18 ÷‹“ª 14:13]
-- State "PENDING"    from "TODO"       [2017-09-18 ÷‹“ª 14:13]
-- State "TODO"       from "DONE"       [2017-09-18 ÷‹“ª 14:13]
-- State "DONE"       from "ABORT"      [2017-09-18 ÷‹“ª 14:13]
-- State "ABORT"      from "DONE"       [2017-09-18 ÷‹“ª 14:13]
-- State "DONE"       from "ABORT"      [2017-09-18 ÷‹“ª 14:13]
+*** Â≠¶‰π† [#B] [ ] hel                                  :CANCELLED:Á¥ßÊÄ•ÈáçË¶Å:
+- State "Â≠¶‰π†"       from "Â∑•‰Ωú"       [2017-09-18 Âë®‰∏Ä 14:30]
+- State "Â∑•‰Ωú"       from "BUG"        [2017-09-18 Âë®‰∏Ä 14:14]
+- State "BUG"        from "KNOWNCAUSE" [2017-09-18 Âë®‰∏Ä 14:13]
+- State "KNOWNCAUSE" from "FIXED"      [2017-09-18 Âë®‰∏Ä 14:13]
+- State "FIXED"      from "PENDING"    [2017-09-18 Âë®‰∏Ä 14:13]
+- State "PENDING"    from "TODO"       [2017-09-18 Âë®‰∏Ä 14:13]
+- State "TODO"       from "DONE"       [2017-09-18 Âë®‰∏Ä 14:13]
+- State "DONE"       from "ABORT"      [2017-09-18 Âë®‰∏Ä 14:13]
+- State "ABORT"      from "DONE"       [2017-09-18 Âë®‰∏Ä 14:13]
+- State "DONE"       from "ABORT"      [2017-09-18 Âë®‰∏Ä 14:13]
 
 - dsf
 H_2 O
 #<<tag1>>
 * TODO hekf [0/1]
-- State "TODO"       from              [2017-09-29 ÷‹ŒÂ 23:42]
+- State "TODO"       from              [2017-09-29 Âë®‰∫î 23:42]
 - [ ] dg
 - [X] dgg
 - [X] df [3/3]
   - [X] helo
   - [X] hdf
   - [X] dfa
-DEADLINE:<2017-09-20 ÷‹»˝>
+DEADLINE:<2017-09-20 Âë®‰∏â>
 + sdsdf
 + sdfgs
   + 
@@ -40,7 +40,7 @@ DEADLINE:<2017-09-20 ÷‹»˝>
 
 [[tag1]]
 ** KNOWNCAUSE test agenda
-SCHEDULED: <2017-09-20 ÷‹»˝>
+SCHEDULED: <2017-09-20 Âë®‰∏â>
 
 + [X] sdf
 + sddf

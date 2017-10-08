@@ -280,3 +280,23 @@
 
 ;;Move files between split panes
 (setq dired-dwim-target t)
+
+
+;;org-tree-slide
+; (use-package org-tree-slide
+;    :ensure t
+;    :init
+;    (setq org-tree-slide-skip-outline-level 4)
+;    (org-tree-slide-simple-profile))
+(when (require 'org-tree-slide nil t)
+  (global-set-key (kbd "<f7>") 'org-tree-slide-mode)
+  (global-set-key (kbd "S-<f7>") 'org-tree-slide-skip-done-toggle)
+  (define-key org-tree-slide-mode-map (kbd "<f8>")
+    'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "<f9>")
+    'org-tree-slide-move-next-tree)
+  (define-key org-tree-slide-mode-map (kbd "S-<f9>")
+    'org-tree-slide-content)
+  (setq org-tree-slide-skip-outline-level 4)
+  (org-tree-slide-narrowing-control-profile)
+  (setq org-tree-slide-skip-done nil)) 
