@@ -83,3 +83,7 @@ M-x desrcibe-theme
  github  gist
 ** https://gist.github.com/discover
  All gist
+** https://en.wikibooks.org/wiki/LaTeX
+ latex入门到精通
+** https://www.zhihu.com/people/noinil/answers?page=2
+ chen tao

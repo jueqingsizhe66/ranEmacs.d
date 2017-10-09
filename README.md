@@ -1692,6 +1692,132 @@ Headline1 become purple now.
 see the journal folder @ `~/.emacs.d/GTD/orgBoss/`
 
 
+### 63. Now I am listening music with emms in Windows10
+
+1. [emms][118] 安装： `M-x package-install emms`
+
+emms会去调用mplayer播放音乐和电影，所以得把mplayer下载，然后添加到path目录下，
+这样emms.el就回去调用该播放器。
+
+2. 离开emacs, [mplayer][119]下载，我把其放在E:/mpalyer底下（可以参看[mplayer官网][120]
+```
+ E:\MPlayer 的目录
+
+2016/12/04  10:33    <DIR>          .
+2016/12/04  10:33    <DIR>          ..
+2016/12/04  10:33    <DIR>          fonts
+2016/12/04  10:33            18,437 LICENSE.txt
+2016/12/04  10:33        29,576,704 mencoder.exe
+2016/12/04  10:33    <DIR>          mplayer
+2016/12/04  10:33        31,128,064 mplayer.exe
+2016/12/04  10:33           633,017 MPlayer.html
+2016/12/04  10:33           534,832 MPlayer.man.html
+2013/02/18  13:28             4,306 README.win32.txt
+               6 个文件     61,895,360 字节
+               4 个目录 50,590,359,552 可用字节
+```
+3. 添加E:/mplayer路径到path目录下
+
+4. 回到emacs,在customizations文件夹下创建setup-emms.el,添加如下内容
+
+以下配置来自[Chen Tao][122]
+```
+;; =============================================================================
+
+;; emms mode settings ===================================================
+;;   ___ _ __ ___  _ __ ___  ___
+;;  / _ \ '_ ` _ \| '_ ` _ \/ __|
+;; |  __/ | | | | | | | | | \__ \
+;;  \___|_| |_| |_|_| |_| |_|___/
+;;
+(require 'emms-setup)
+(emms-all)
+(require 'emms-i18n)
+(require 'emms-history)
+
+;; (emms-default-players)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq emms-player-list       ;;
+;;       '(emms-player-mplayer  ;;
+;;         emms-player-mpg321   ;;
+;;         emms-player-ogg123)) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; use mplayer , that's enough!
+(setq emms-player-list '(emms-player-mplayer) emms-player-mplayer-command-name "mplayer" emms-player-mplayer-parameters '("-slave"))
+
+(setq emms-playlist-buffer-name "*Music*")
+
+(add-hook 'emms-player-started-hook 'emms-show)
+(setq emms-show-format "Now Playing: %s")
+(setq emms-source-file-default-directory "H:/Classic/") ;;depend on yourself!! Change your music or movie directory
+
+;; emms-playlist mode keys map
+(global-set-key (kbd "C-c m s") 'emms-stop)
+(global-set-key (kbd "C-c m P") 'emms-pause)
+(global-set-key (kbd "C-c m n") 'emms-next)
+(global-set-key (kbd "C-c m p") 'emms-previous)
+(global-set-key (kbd "C-c m f") 'emms-show)
+(global-set-key (kbd "C-c m >") 'emms-seek-forward)
+(global-set-key (kbd "C-c m <") 'emms-seek-backward)
+
+(global-set-key (kbd "C-c m S") 'emms-start)
+(global-set-key (kbd "C-c m g") 'emms-playlist-mode-go)
+(global-set-key (kbd "C-c m d") 'emms-play-directory-tree)
+(global-set-key (kbd "C-c m h") 'emms-shuffle)
+(global-set-key (kbd "C-c m e") 'emms-play-file)
+(global-set-key (kbd "C-c m l") 'emms-play-playlist)
+(global-set-key (kbd "C-c m r") 'emms-toggle-repeat-track)
+(global-set-key (kbd "C-c m R") 'emms-toggle-repeat-playlist)
+
+(add-hook 'emms-playlist-mode-hook
+          (lambda ()
+(toggle-truncate-lines 1)))
+
+```
+
+使用mplayer即可，解决所有emacs的music  and movie(注意播放电影的时候，实际上已经不在emacs界面下，
+使用q退出mplayer,使用上下左右方向键进行快进等)播放问题。
+
+自己定制你的音乐文件夹`emms-source-file-default-directory`!
+
+5. 使用感受(m是music和movie的缩写）
+
+- 常用函数
+  + C-c m d(emms-play-directory-tree) 打开一个播放文件夹
+  + C-c m g(emms-playlist-mode-go)  打开播放列表
+  + RET 在播放列表下按下enter键表示播放
+  ------------------------------------------------------以上三个命令够了
+  + C-c m n(emms-next) 下一首
+  + C-c m p(emms-previous) 上一首
+  + C-c m P (emms-Pause)暂停
+  + C-c m s (emms-stop) 停止
+  + C-c m S (emms-start) 开始
+
+首先打开一个音乐文件夹(不喜欢一个文件打开 `M-x emms-play-file(c-c m e) `,
+喜欢使用`M-x emms-play-directory-tree(C-c m d)`；
+
+![musiclist][123]
+
+然后打开播放列表(使用`M-x emms或者M-x emms-playlist-mode-go(C-c m g)`)
+
+有时候要播放下一首，就使用(`M-x emms-next(c-c m n)` 类似前一首`M-x emms-previous(C-c m p`)
+
+
+[网友][121]，提供一个播放多个电影文件的方法
+
+```
+通過 Dired 打開電影目錄，比如其中有一個文件夾 辛德勒名單 ，裏面有4 個媒體文件：
+辛德勒名單CD1.avi、辛德勒名單CD2.avi、辛德勒名單CD3.avi、辛德勒名單CD4.avi。我只需要將光標停在 辛德勒名單 文件夾上，
+按 C-c e d ，調用 emms-play-dired 函數，則會自動建立播放列表，mplayer 按順序播放這4個文件。
+
+比如有一個電視劇的文件夾 手機 ，裏面共有 36 集，我今天想看 10-12集，用 Dired 進入 手機 文件夾，用 m 在 10-12 集上做標記，
+然後按 C-c e d ，mplayer 就會順次播放 10-12集。
+```
+
+
+
 <hr/>
     <hr/>
 
@@ -1814,3 +1940,9 @@ see the journal folder @ `~/.emacs.d/GTD/orgBoss/`
 [115]:https://github.com/vvvvalvalval/scope-capture/blob/master/doc/Tutorial.md
 [116]:https://github.com/vvvvalvalval/scope-capture
 [117]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/purple.jpg
+[118]:https://www.gnu.org/software/emms/
+[119]:http://oss.netfarm.it/mplayer/
+[120]:http://www.mplayerhq.hu/design7/news.html
+[121]:http://darksun.blog.51cto.com/3874064/1339029
+[122]:https://github.com/noinil/prelude/blob/75d41be0c5da3383cde1bd073c2aa5a9f4b7d792/personal/noinil.el#L195
+[123]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/music.jpg

@@ -150,9 +150,86 @@ https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
   (highlight-regexp "0[0-9]\\{2\\}-[0-9]\\{8\\}" 'phone-number-lock-face)
   (highlight-regexp "Lisp\\|Scheme" 'language-lock-face)
   (highlight-regexp "神之编辑器\\|编辑器之神" 'emacs-vim-lock-face)
+
+
 )
 
 ; org mode 中开启高亮
 (add-hook 'org-mode-hook 'bigboss-highlight)
 
 https://www.zhihu.com/question/28830039?sort=created
+** latex author [#B]                                                 :@work:
+                         Added: [2017-10-09 周一 21:41]
+                          LaTeX 的作者 Leslie Lamport 
+
+本论文全篇使用Emacs25.3进行文字编辑，Tex Live 2013进行排版设计，git2.13进行版本控制
+org——mode进行进度管理。因此要感谢Emacs的发明者Richard Stallman;Tex的发明者Donald Knuth;
+git的发明者Linus Torvalds, latex的作者Lesile Lamport;以及Org-mode的发明者carsten Dominik.
+** schedule zone [#B]                                                :@work:
+                         Added: [2017-10-09 周一 21:44]
+                         精确到时间是可以的，时间区间都可以。 格式是：
+SCHEDULED: <2015-04-04 Sat 09:00-12:00 ++1d>
+这样。上面这句的意思是从4-4日开始， 每天早上的9-12点规划干某件事情。
+
+至于提醒功能， 可以试试org-notify， 不过这个我自己没有用过， 所以不好回答你。
+** shift+l [#B]                                                      :@work:
+                         Added: [2017-10-09 周一 21:49]
+             
+你好～想问一下第一张图里面的每个Day下的时间是怎么显示的，
+我用C-c C-s 和C-c C-d设置了时间，但是在界面里面却没有显示，我现在用的是emacs25.1。
+
+在 org-agenda 里面按 Shift-l 就可以啦
+** add clock summary [#B]                                            :@work:
+                         Added: [2017-10-09 周一 22:14]
+                         
+如何在一个org文件创建clock summary
+C-c C-x C-r
+** org blog jekyll [#B]                                              :@work:
+                         Added: [2017-10-09 周一 22:16]
+                         
+org-mode可以直接拿来写blog， 这不是什么新鲜事了。  不过最近发现几个项目， 可以方便地从org 输出到jekyll支持的格式。
+对于喜欢jekyll，但更喜欢org-mode的同学是个好的解决方案。  当然也有直接从org-mode生成静态网页的。
+
+
+https://github.com/noinil/prelude/blob/master/personal/noinil.el
+https://github.com/noinil/prelude/blob/75d41be0c5da3383cde1bd073c2aa5a9f4b7d792/personal/noinil.el#L397
+** emacs 看电影 [#B]                                                 :@F708:
+                         Added: [2017-10-09 周一 22:46]
+                         用Emacs看电影
+
+大多数人用emacs听歌，我却喜欢用emacs看电影。用 EMMS 和 mplayer 结合，看电影真是太方便了。
+
+不要从源里安装EMMS，它可能给你安装别的播放器，没必要，我们有 mplayer 足够了。从 EMMS 的主页下载，然后编译安装 EMMS 。
+
+然后在 .emacs 中加入如下的配置：
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+	
+(require 'emms-setup)
+(emms-standard)
+(setq emms-player-list '(emms-player-mplayer) emms-player-mplayer-command-name "mplayer" emms-player-mplayer-parameters '("-slave"))
+(setq emms-repeat-playlist nil emms-source-file-default-directory "~/音乐/" emms-lyrics-dir "~/音乐/" emms-lyrics-coding-system nil emms-playlist-buffer-name "*EMMS*")
+(global-set-key (kbd "C-c e g") 'emms-play-directory)
+(global-set-key (kbd "C-c e d") 'emms-play-dired)
+(global-set-key (kbd "C-c e v") 'emms-playlist-mode-go)
+(global-set-key (kbd "C-c e x") 'emms-start)
+(global-set-key (kbd "C-c e SPC") 'emms-pause)
+(global-set-key (kbd "C-c e s") 'emms-stop)
+(global-set-key (kbd "C-c e n") 'emms-next)
+(global-set-key (kbd "C-c e p") 'emms-previous)
+
+我的emms設置比較簡單，我只是通過它調用mplayer聽歌看電影，不需要看歌詞等額外的功能。我要说的是用 EMMS + mplayer + Dired 可以非常方便地看碟。
+
+通過 Dired 打開電影目錄，比如其中有一個文件夾 辛德勒名單 ，裏面有4 個媒體文件：辛德勒名單CD1.avi、辛德勒名單CD2.avi、辛德勒名單CD3.avi、辛德勒名單CD4.avi。我只需要將光標停在 辛德勒名單 文件夾上，按 C-c e d ，調用 emms-play-dired 函數，則會自動建立播放列表，mplayer 按順序播放這4個文件。
+
+比如有一個電視劇的文件夾 手機 ，裏面共有 36 集，我今天想看 10-12集，用 Dired 進入 手機 文件夾，用 m 在 10-12 集上做標記，然後按 C-c e d ，mplayer 就會順次播放 10-12集。

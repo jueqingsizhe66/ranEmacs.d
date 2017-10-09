@@ -692,7 +692,6 @@ Captured %<%Y-%m-%d %H:%M>
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 
-
 ;; better bullets                                                                                                ;;
 (font-lock-add-keywords 'org-mode                                                                                ;;
                         '(("^ +\\([-*]\\) "                                                                      ;;
