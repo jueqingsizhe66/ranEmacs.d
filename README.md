@@ -1806,4 +1806,4 @@ Headline1 become purple now.
 [114]:https://github.com/Malabarba/speed-of-thought-clojure/blob/ceac82aa691e8d98946471be6aaff9c9a4603c32/sotclojure.el#L117
 [115]:https://github.com/vvvvalvalval/scope-capture/blob/master/doc/Tutorial.md
 [116]:https://github.com/vvvvalvalval/scope-capture
-[117]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/purple
+[117]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/purple.jpg
