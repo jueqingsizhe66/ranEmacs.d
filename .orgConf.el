@@ -369,7 +369,7 @@ Captured %<%Y-%m-%d %H:%M>
     ("BUG" .      (:background "white" :foreground "red" :weight bold))
     ("KNOWNCAUSE" .      (:foreground "MediumBlue" :weight bold)) 
     ("FIXED" .      (:foreground "yellow" :weight bold)) 
-    ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
+    ("PENDING" .   (:background "Purple" :foreground "gray" :weight bold))
     ("TODO" .      (:background "DarkOrange" :foreground "black" :weight bold))
     ("DOING" .     (:background "yellow" :foreground "purple" :weight bold ))
     ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 

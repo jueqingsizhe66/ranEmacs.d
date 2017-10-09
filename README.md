@@ -1782,7 +1782,7 @@ see the journal folder @ `~/.emacs.d/GTD/orgBoss/`
 [83]:http://gettingthingsdone.com/
 [84]:https://www.atlassian.com/git/tutorials/comparing-workflows
 [85]:http://members.optusnet.com.au/~charles57/GTD/remember.html
-[86]:https://github.com/jueqingsizhe66/ranEmacs.d 
+[86]:https://github.com/jueqingsizhe66/zhaoEmacs.d 
 [87]:http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/#%E5%88%97%E8%A1%A8
 [88]:http://wenshanren.org/?p=327
 [89]:http://www.3zso.com/archives/orgmode-babel.html
