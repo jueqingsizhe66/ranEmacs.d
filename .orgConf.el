@@ -698,14 +698,24 @@ Captured %<%Y-%m-%d %H:%M>
                         '(("^ +\\([-*]\\) "                                                                      ;;
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))              ;;
 
+;(defface hi-red-b '((t (:foreground "#e50062"))) t)
+;(defface hi-purple-b '((t (:foreground "#871F78"))) t)
+(defface hi-purple-b '((t (:foreground "#9F5F9F"))) t)
+;(defface hi-purple-b '((t (:foreground "#CC3299"))) t)
+;(defface hi-purple-b '((t (:foreground "#800080"))) t)
 ;;; let header become better                                                                                     ;; ;;
 (let* ((variable-tuple (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))                       ;; ;;
                              ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))                         ;; ;;
                              ((x-list-fonts "Verdana")         '(:font "Verdana"))                               ;; ;;
                              ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))                          ;; ;;
                              (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))           ;; ;;
+      ; (base-font-color     (face-foreground 'default nil 'default))
+       (base-font-color2    (face-foreground 'hi-purple-b nil 'default))
        (base-font-color     (face-foreground 'default nil 'default))                                             ;; ;;
-       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))                       ;; ;;
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color))
+       (headline2           `(:inherit default :weight bold :foreground ,base-font-color2))
+)                       ;; ;;
+       
                                                                                                                  ;; ;;
   (custom-theme-set-faces 'user                                                                                  ;; ;;
                           `(org-level-8 ((t (,@headline ,@variable-tuple))))                                     ;; ;;
@@ -715,7 +725,7 @@ Captured %<%Y-%m-%d %H:%M>
                           `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))                         ;; ;;
                           `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))                        ;; ;;
                           `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))                         ;; ;;
-                          `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))                        ;; ;;
+                          `(org-level-1 ((t (,@headline2 ,@variable-tuple :height 1.75))))                        ;; ;;
                           `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil)))))) ;; ;;
 
 

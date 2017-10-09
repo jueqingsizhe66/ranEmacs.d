@@ -128,3 +128,31 @@ Org能识别无序列表、有序列表、和描述表
 https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
                          
 
+* Quick notes
+** emacs highlight [#B]                                              :@F708:
+                         Added: [2017-10-09 周一 15:07]
+                         作者：BigBoss
+链接：https://www.zhihu.com/question/28830039/answer/44110077
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+(global-hi-lock-mode 1) ;开启全局 hi lock 模式
+;避免每次开启 hi lock mode 时询问是否需要高亮指定表达式
+(setq hi-lock-file-patterns-policy #'(lambda (dummy) t)) 
+; 各种 face 的定义
+(defface phone-number-lock-face '((t (:foreground "FF0000"))) t)
+(defface language-lock-face '((t (:foreground "00FF00"))) t)
+(defface emacs-vim-lock-face '((t (:foreground "9900FF"))) t)
+
+; 利用 highlight-regexp 高亮指定的正则表达式
+(defun bigboss-highlight ()
+  (interactive)
+  (highlight-regexp "0[0-9]\\{2\\}-[0-9]\\{8\\}" 'phone-number-lock-face)
+  (highlight-regexp "Lisp\\|Scheme" 'language-lock-face)
+  (highlight-regexp "神之编辑器\\|编辑器之神" 'emacs-vim-lock-face)
+)
+
+; org mode 中开启高亮
+(add-hook 'org-mode-hook 'bigboss-highlight)
+
+https://www.zhihu.com/question/28830039?sort=created

@@ -1645,6 +1645,46 @@ project.clj添加`M-x cljr-add-missing-lib`,添加scope-capture
 
 其他参考[Tutorial][115]
 
+
+
+### 61. customize the face for org top topic
+
+
+Customize the face @.orgConf.el
+```
+
+
+(defface hi-purple-b '((t (:foreground "#9F5F9F"))) t)
+;;; let header become better                                                                                     ;; ;;
+                         
+let* ((variable-tuple (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))                       ;; ;;
+                             ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))                         ;; ;;
+                             ((x-list-fonts "Verdana")         '(:font "Verdana"))                               ;; ;;
+                             ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))                          ;; ;;
+                             (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))           ;; ;;
+      ; (base-font-color     (face-foreground 'default nil 'default))
+       (base-font-color2    (face-foreground 'hi-purple-b nil 'default))
+       (base-font-color     (face-foreground 'default nil 'default))                                             ;; ;;
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color))
+       (headline2           `(:inherit default :weight bold :foreground ,base-font-color2))
+)                       ;; ;;
+       
+                                                                                                                 ;; ;;
+  (custom-theme-set-faces 'user                                                                                  ;; ;;
+                          `(org-level-8 ((t (,@headline ,@variable-tuple))))                                     ;; ;;
+                          `(org-level-7 ((t (,@headline ,@variable-tuple))))                                     ;; ;;
+                          `(org-level-6 ((t (,@headline ,@variable-tuple))))                                     ;; ;;
+                          `(org-level-5 ((t (,@headline ,@variable-tuple))))                                     ;; ;;
+                          `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))                         ;; ;;
+                          `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))                        ;; ;;
+                          `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))                         ;; ;;
+                          `(org-level-1 ((t (,@headline2 ,@variable-tuple :height 1.75))))    ;;here                     ;; ;;
+                          `(org-document-title ((t (,@headline ,@variable-tuple :height 1.5 :underline nil)))))
+```
+
+Headline1 become purple now.
+
+![headline1][117]
 <hr/>
     <hr/>
 
@@ -1766,3 +1806,4 @@ project.clj添加`M-x cljr-add-missing-lib`,添加scope-capture
 [114]:https://github.com/Malabarba/speed-of-thought-clojure/blob/ceac82aa691e8d98946471be6aaff9c9a4603c32/sotclojure.el#L117
 [115]:https://github.com/vvvvalvalval/scope-capture/blob/master/doc/Tutorial.md
 [116]:https://github.com/vvvvalvalval/scope-capture
+[117]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/purple

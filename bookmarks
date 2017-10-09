@@ -24,7 +24,7 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "- * 测试 [#B]  :@w")
+ (front-context-string . "** emacs highlig")
  (rear-context-string . "\n\n* Quick notes\n")
  (position . 4779))
 ("core.clj"
