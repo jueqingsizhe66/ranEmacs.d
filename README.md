@@ -1685,6 +1685,13 @@ let* ((variable-tuple (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sa
 Headline1 become purple now.
 
 ![headline1][117]
+
+
+### 62. add journal additional files for generate day-jounal
+
+see the journal folder @ `~/.emacs.d/GTD/orgBoss/`
+
+
 <hr/>
     <hr/>
 

@@ -39,19 +39,6 @@ Jumping to code
 
 
 Added: [2017-09-27 周三 17:50]
-** PENDING STARTED drink tea
-SCHEDULED: <2017-09-29 周五 +1d> DEADLINE: <2017-09-27 周三>
-:PROPERTIES:
-:LAST_REPEAT: [2017-09-28 周四 15:16]
-:END:
-- State "DONE"       from "TODO"       [2017-09-28 周四 15:16]
-- State "TODO"       from              [2017-09-28 周四 14:34]
-:PROPERties:
-:EFFORT: 0:30
-:END:
-:LOGBOOK:
-CLOCK: [2017-09-27 周三 22:34]--[2017-09-27 周三 22:44] =>  0:10
-:END:
 ** TODO find the army software
 :PROPERTIES:
 :Effort: 0:15
@@ -101,14 +88,12 @@ DEADLINE: <2017-10-23 周一> SCHEDULED: <2017-10-02 周一>
                     :END:
                     Captured 2017-10-02 11:05
 ** TODO [#A] 开题报告+文献综述+中央高校基金                         :@work:
-#+REVEAL: split
 DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
                     Captured 2017-10-03 14:15
        开题报告得包含以下几个部分，
-#+REVEAL: split
 ***** TODO 数值模拟 静态偏航+动态偏航+ 流固耦合(参考仇永兴 姚世刚 陈晓明 范钟瑶 李媛 任会来) [0%]
 - State "TODO"       from "TODO"       [2017-10-03 周二 14:25]
 - State "TODO"       from "ABORT"      [2017-10-03 周二 14:25] [ ] 
@@ -139,16 +124,19 @@ DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
       - [ ] 偏航实验
       - [ ] 前后四周晃动实验
   - [ ] 丝线实验 流场可视化实验
-** DOING [#B] 办理工程热物理注册问题   [16%]                             :@work:
+** TODO [#B] 办理工程热物理注册问题   [85%]                             :@work:
 SCHEDULED: <2017-10-08 周日>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "TODO"       from "DOING"          [2017-10-09 周一 15:52]
                     - State "DOING"      from "TODO"          [2017-10-09 周一 02:25]
                     Captured 2017-10-08 22:29
 
-1. [ ] 询问财务处，9号办理汇款是否可以在10号前拿到汇款凭证
-2. [ ] 询问是否需要统一汇款还是分开汇款(分开回执，估计是分开汇款）
+1. [X] 询问财务处，9号办理汇款是否可以在10号前拿到汇款凭证
+       当天上午办理 当天下午即可查询，并且可以拖上几天，只要跟裴老师说一声即可
+2. [X] 询问是否需要统一汇款还是分开汇款(分开回执，估计是分开汇款）
+       可以统一汇款，备注相关信息即可
 汇款账号
 
 #+BEGIN_EXAMPLE
@@ -163,11 +151,19 @@ SCHEDULED: <2017-10-08 周日>
 电话联系人：
 联系人：裴吉，手机：13776474939
 
-1. [ ] 务必在回执邮件落款著名联系人姓名、手机和邮箱
+1. [X] 务必在回执邮件落款著名联系人姓名、手机和邮箱
 2. [X] 回执邮件中请务必将转账/汇款凭证扫描件附在邮件中一起发送
-3. [ ] 务必在汇款备注中注明“参会编号（GJ-XX）-发票抬头-第一位作者姓名”，例如“GJ-015-清华大学-李四”
-4. [ ] 确认康老师的住房预定问题
-  
+3. [X] 务必在汇款备注中注明“参会编号（GJ-XX）-发票抬头-第一位作者姓名”，例如“GJ-015-清华大学-李四”
+4. [X] 确认康老师的住房预定问题
+5. [ ] 10月11号 周三办理 汇款程序
+** TODO [#B] Doing sports(must be)                               :@Dormitry:
+SCHEDULED: <2017-10-09 周一 +1d>
+                    :PROPERTIES:
+                    :Effort: 1:00
+                    :END:
+                    Captured 2017-10-09 15:53
+ 坚持每一天都做运动
+                   
 * Tasks
 ** TODO Most important thing that you have to do       :graduation:紧急重要:
 ** TODO Second most important thing that you have to do

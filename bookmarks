@@ -23,10 +23,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "** emacs highlig")
- (rear-context-string . "\n\n* Quick notes\n")
- (position . 4779))
+ (filename . "~/.emacs.d/GTD/newgtd.org")
+ (front-context-string . "** TODO [#B] Doi")
+ (rear-context-string . "0月11号 周三办理 汇款程序\n")
+ (position . 5950))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)
