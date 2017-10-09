@@ -182,4 +182,15 @@
 (speed-of-thought-mode t)
 
 
+(defun my/insert-line-before (times)
+  "Insert a  newline(s) above the line containing the cursor."
+  (interactive "p")
+  (save-excursion 
+    (move-beginning-of-line 1)
+    (newline times))
+  )
+
+(global-set-key (kbd "C-c i") 'my/insert-line-before)
+
+
 

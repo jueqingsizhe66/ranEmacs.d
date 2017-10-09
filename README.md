@@ -1540,12 +1540,110 @@ F9后一页slide(后一个标题)
 Here is the good job from [Malabarba][112] who write the two completion feature for clojure and lisp;
 
 1. elisp names [sotlisp][110]
+
    [elisp缩写词][113]
+   
 2. clojure names [sotclojure][111]
+
    [clojure缩写词][114]
+   
 
 使用方式得激活`M-x speed-of-thought-mode`
 或者在editing.el中添加`(speed-of-thought-mode t)`即可。
+
+
+### 59. 自定义了插入一行
+
+```
+
+(defun my/insert-line-before (times)
+  "Insert a  newline(s) above the line containing the cursor."
+  (interactive "p")
+  (save-excursion 
+    (move-beginning-of-line 1)
+    (newline times))
+  )
+
+(global-set-key (kbd "C-c i") 'my/insert-line-before)
+
+```
+
+函数说明: 
+1. save-excursion保存当前位置
+2. newline移动多少行(C-1 C-c i表示一行 C-6 C-c i表示6行，1和6由times接受.
+
+
+目的： 可以使用C-c i在当前行插入一行，以示划分，一来留白，二来更清晰
+
+### 60. 使用scope-capture
+
+此topic和emacs配置无关， 和clojure项目有关。
+
+
+github repo: [Scope-capture][116]
+
+
+当你使用`lein new app app-name` 创建一个clojure项目，可以在
+project.clj添加`M-x cljr-add-missing-lib`,添加scope-capture 
+
+```
+:dependencies [[org.clojure/clojure "1.8.0"]
+                 [vvvvalvalval/scope-capture "0.1.0"]
+                 [vvvvalvalval/scope-capture-nrepl "0.2.0"]]
+```
+
+在对应的clojure中使用
+```
+(ns first-example.core
+  (:require [clojure.string :as str]
+            sc.api))
+```
+具体使用，
+
+```
+(def distance
+  (let [earth-radius 6.371e6
+        radians-per-degree (/ Math/PI 180.0)]
+    (fn [p1 p2]
+      (let [[lat1 lng1] p1
+            [lat2 lng2] p1
+            phi1 (* lat1 radians-per-degree)
+            lambda1 (* lng1 radians-per-degree)
+            phi2 (* lat2 radians-per-degree)
+            lambda2 (* lng2 radians-per-degree)]
+        (sc.api/spy (* 2 earth-radius
+                       (Math/asin 
+                        (Math/sqrt
+                         (+  
+                          (haversine (- phi2 phi1))
+                          (* 
+                           (Math/cos phi1)
+                           (Math/cos phi2)
+                           (haversine (- lambda2 lambda1)))
+                          )))))
+        ))))
+
+(def Paris [48.8566 2.3522])
+(def New-York [40.7134 -74.0055])
+(def Athens [37.9838 23.7275])
+
+(distance Paris New-York)
+(distance Paris Athens)
+(distance New-York Athens)
+
+(sc.api/ep-info 1)
+
+(sc.api/defsc 1)
+
+```
+
+
+1. sc.api/spy 监视函数，插入code中,并结合(sc.api/defsc 1)就可以使用C-x C-e，进行逐行debug模式(监测段代码对应行进行evaluate)。
+
+2. sc.api/ep-info 显示相关local name信息
+3. sc.api/defsc   集合spy进行使用
+
+其他参考[Tutorial][115]
 
 <hr/>
     <hr/>
@@ -1666,3 +1764,5 @@ Here is the good job from [Malabarba][112] who write the two completion feature 
 [112]:https://github.com/Malabarba/
 [113]:https://github.com/Malabarba/speed-of-thought-lisp/blob/89dfed2b5d2e9a3b16bfc47f169412b583626059/sotlisp.el#L238
 [114]:https://github.com/Malabarba/speed-of-thought-clojure/blob/ceac82aa691e8d98946471be6aaff9c9a4603c32/sotclojure.el#L117
+[115]:https://github.com/vvvvalvalval/scope-capture/blob/master/doc/Tutorial.md
+[116]:https://github.com/vvvvalvalval/scope-capture

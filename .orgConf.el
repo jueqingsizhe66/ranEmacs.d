@@ -225,9 +225,9 @@ Captured %<%Y-%m-%d %H:%M>
                          "\n* %^{topic} [#A] %T \n%i%?\n")
          ("o" "contact"  entry  (file+olp+datetree "~/.emacs.d/gtd/phone.org" ) 
                         "\n* %^{name} :contact:\n\n")
-         ("q" "Quick note" item
+         ("q" "Quick note" entry
           (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Quick notes")
-                        "** %^{Keyword?} [#B]  %^g
+                        "* %^{Keyword?} [#B]  %^g
                          Added: %U
                          %?"
                         :clock-in t :clock-resume t                    

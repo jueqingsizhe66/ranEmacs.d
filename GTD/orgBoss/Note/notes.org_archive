@@ -1,0 +1,403 @@
+
+Archived entries from file c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/Note/notes.org
+
+
+* Quick notes
+:PROPERTIES:
+:ARCHIVE_TIME: 2017-10-09 周一 12:09
+:ARCHIVE_FILE: ~/.emacs.d/GTD/orgBoss/Note/notes.org
+:ARCHIVE_CATEGORY: notes
+:END:
+
+** emacs crash [#B]                                                  :@work:
+                           Added: [2017-10-09 周一 12:04]
+                           
+看了下 emacs debug 说明，纯 elisp 代码只会让 emacs 卡住，只有涉及到C代码的部分才会导致 crash。** org-color-theme [#B]                                              :@F708:
+                           Added: [2017-10-09 周一 02:16]
+                           
+Org Color Themes
+Table of Contents
+
+{Back to Worg's index}
+Org Colour Themes
+
+A popular way of customizing Emacs colours is to use the color-theme package (see color-theme emacswiki page.)
+
+Here is a list of color themes that are aware of Org: You can see screen shots of these themes here. Once you have installed a theme it is easy to tweak its appearance by editing the theme's lisp file.
+
+Some of these themes are available in Worg in the color-themes directory, whilst others are linked either to the author's site, or to Github.
+
+There is a page with screenshots of each of the themes here .
+color-theme-zenburn.el (maintained by Daniel Brockman)
+color-theme-colorful-obsolescence.el (Scott Jaderholm)
+
+Links to Scott's themes all point directly to his site.
+color-theme-wombat.el (Scott Jaderholm)
+color-theme-active.el (Scott Jaderholm)
+color-theme-leuven.el (Fabrice Niessen)
+color-theme-zenburn.el (Daniel Brockman Adrian C., Bastien Guerry)
+color-theme-tangotango.el (Julien Barnier)
+
+Link to Julien's blog post about tangotango. Link to the Github repository.
+color-theme-folio.el color-theme-folio.el (David O'Toole)
+color-theme-manoj.el (maintained by Memnon)
+color-theme-zenash.el (maintained by Yavuz Arkun)
+
+A modified version of zenburn. Link to the Github repository.
+color-theme-dark-emacs.el (maintained by Suvayu Ali)
+
+Based on theme made by the emacswiki user, ZWZ. The original theme can be found here. Suvayu has also made some org-mode font modifications outside of the colour theme, which can be obtained here. Suvayu's init.el gives more information on how to use his customizations.
+
+NB: This theme is not maintained anymore, and won't work with the trunk version of Emacs 24.1. Emacs 24.1 removes support for the deprecated 3rd argument form for face-spec-set. This breaks the color-theme package in general; so instead of waiting for it to be fixed, dark-emacs is now available as an Emacs 24 custom theme. The latest version can be found here.
+cyberpunk-theme.el (Nick Van Horn)
+
+Cyberpunk color theme for the emacs 24+ built-in color theme support known loosely as deftheme. The theme is mostly a direct port of the overtone/emacs-live theme of the same name (designed originally for the color-theme package). Many mode-specific customizations, particularly with respect to org-mode, have also been added.
+Installing Org Colour Themes.
+
+First make sure that you have the Emacs color-theme package installed. Copy the lisp files for the themes into a directory in your Emacs load path.
+
+If you want to be able to easily cycle between different colour schemes, you need something like the following in your .emacs:
+
+(require 'color-theme)
+(setq color-theme-is-global t)
+(color-theme-initialize)
+
+(load "color-theme-colorful-obsolescence")
+(load "color-theme-zenburn")
+(load "color-theme-tangotango")
+(load "color-theme-railscast")
+(load "color-theme-leuven")
+(load "color-theme-folio")
+(load "color-theme-zenash")
+(load "color-theme-manoj")
+
+(setq my-color-themes (list
+  'color-theme-tangotango
+  'color-theme-colorful-obsolescence 'color-theme-zenburn
+  'color-theme-leuven 'color-theme-folio 
+  'color-theme-manoj 'color-theme-zenash
+  'color-theme-railscast
+))
+
+(defun my-theme-set-default () ; Set the first row
+      (interactive)
+      (setq theme-current my-color-themes)
+      (funcall (car theme-current)))
+     
+    (defun my-describe-theme () ; Show the current theme
+      (interactive)
+      (message "%s" (car theme-current)))
+     
+   ; Set the next theme (fixed by Chris Webber - tanks)
+    (defun my-theme-cycle ()            
+      (interactive)
+      (setq theme-current (cdr theme-current))
+      (if (null theme-current)
+      (setq theme-current my-color-themes))
+      (funcall (car theme-current))
+      (message "%S" (car theme-current)))
+    
+    (setq theme-current my-color-themes)
+    (setq color-theme-is-global nil) ; Initialization
+    (my-theme-set-default)
+    (global-set-key [f4] 'my-theme-cycle)
+  
+
+Now you can cycle through the installed themes using the F4 key.
+
+** clojure abbrev [#B]                                               :@F708:
+                           Added: [2017-10-09 周一 00:56]
+                          ("a"   . "and ")
+    ("am"  . "alter-meta! ")
+    ("amb" . "alter-meta! ")
+    ("ai"  . "assoc-in ")
+    ("as"  . "assoc ")
+    ("ap"  . "associative? ")
+    ("b"   . "binding [$]")
+    ("bl"  . "butlast ")
+    ("c"   . "count ")
+    ("ca"  . ":as ")
+    ("ck"  . ":keys [$] ")
+    ("co"  . ":or {$}")
+    ("con" . ":only [$]")
+    ("cp"  . "coll? ")
+    ("cr"  . ":refer [$]")
+    ("cs"  . ":strs [$]")
+    ("cy"  . ":syms [$]")
+    ("d"  . "def ")
+    ("di"  . "dissoc ")
+    ("df"  . "defn $ []\n  ")
+    ("dm"  . "defmacro $\n  \"\"\n  []\n  ")
+    ("dv"  . "def $ nil\n  \"\"")
+    ("ds"  . "doseq [it $]")
+    ("dt"  . "deftest ")
+    ("ep"  . "empty? ")
+    ("f"   . "first ")
+    ("fi"  . "filter ")
+    ("fp"  . "fn? ")
+    ("fn"  . "fn [$]")
+    ("g"   . "get ")
+    ("gb"  . "group-by ")
+    ("gi"  . "get-in ")
+    ("i"   . "into ")
+    ("ip"  . "instance? ")
+    ("idp" . "identical? ")
+    ("il"  . "if-let [$]")
+    ("kp"  . "keyword? ")
+    ("l"   . "let [$]")
+    ("let" . "let [$]")
+    ("loop" . "loop [$]")
+    ("lp"  . "list? ")
+    ("m"   . "map ")
+    ("mc"  . "mapcat ")
+    ("mp"  . "map? ")
+    ("n"   . "not ")
+    ("np"  . "number? ")
+    ("pl"  . "println ")
+    ("pn"  . "println ")
+    ("r"   . "reduce ")
+    ("rb"  . "reset! ")
+    ("re"  . "remove ")
+    ("rf"  . "re-find #\"$\"")
+    ("rs"  . "re-seq #\"$\"")
+    ("s"   . "str ")
+    ("sb"  . "swap! ")
+    ("sk"  . "select-keys ")
+    ("sp"  . "seq? ")
+    ("stp" . "string? ")
+    ("syp" . "symbol? ")
+    ("t"   . "throw (Exception. \"$\")")
+    ("tt"  . "testing \"$\"")
+    ("u"  . "update ")
+    ("ui"  . "update-in $ []")
+    ("vm"  . "vary-meta ")
+    ("vp"  . "vector? ")
+    ("w"   . "when ")
+    ("wn"  . "when-not ")
+    ("wl"  . "when-let [$]")
+    ("wb"  . "with-bindings ")
+    ("wm"  . "with-meta ")
+    ("wo"  . "with-open [$]")
+    ("wr"  . "with-redefs [$]")
+    ("wis" . "with-in-str ")
+    ("wos" . "with-out-str ")
+)
+** emacs lisp abbrev [#B]                                            :@F708:
+                           Added: [2017-10-09 周一 00:49]
+                               ("a" . "and ")
+    ("ah" . "add-hook '")
+    ("atl" . "add-to-list '")
+    ("bb" . "bury-buffer")
+    ("bc" . "forward-char -1")
+    ("bfn" . "buffer-file-name")
+    ("bl" . "buffer-list$")
+    ("blp" . "buffer-live-p ")
+    ("bn" . "buffer-name")
+    ("bod" . "beginning-of-defun")
+    ("bol" . "forward-line 0$")
+    ("bp" . "boundp '")
+    ("bs" . "buffer-string$")
+    ("bsn" . "buffer-substring-no-properties")
+    ("bss" . "buffer-substring ")
+    ("bw" . "forward-word -1")
+    ("c" . "concat ")
+    ("ca" . "char-after$")
+    ("cb" . "current-buffer$")
+    ("cc" . "condition-case er\n$\n(error nil)")
+    ("ci" . "call-interactively ")
+    ("cip" . "called-interactively-p 'any")
+    ("csv" . "customize-save-variable '")
+    ("d" . "delete-char 1")
+    ("dc" . "delete-char 1")
+    ("dcu" . "defcustom $ t\n  \"\"\n  :type 'boolean")
+    ("df" . "defun $ ()\n  \"\"\n  ")
+    ("dfa" . "defface $ \n  '((t))\n  \"\"\n  ")
+    ("dfc" . "defcustom $ t\n  \"\"\n  :type 'boolean")
+    ("dff" . "defface $ \n  '((t))\n  \"\"\n  ")
+    ("dfv" . "defvar $ t\n  \"\"")
+    ("dk" . "define-key ")
+    ("dl" . "dolist (it $)")
+    ("dt" . "dotimes (it $)")
+    ("dmp" . "derived-mode-p '")
+    ("dm" . "defmacro $ ()\n  \"\"\n  ")
+    ("dr" . "delete-region ")
+    ("dv" . "defvar $ t\n  \"\"")
+    ("e" . "error \"$\"")
+    ("ef" . "executable-find ")
+    ("efn" . "expand-file-name ")
+    ("eol" . "end-of-line")
+    ("f" . "format \"$\"")
+    ("fb" . "fboundp '")
+    ("fbp" . "fboundp '")
+    ("fc" . "forward-char 1")
+    ("ff" . "find-file ")
+    ("fl" . "forward-line 1")
+    ("fp" . "functionp ")
+    ("frp" . "file-readable-p ")
+    ("fs" . "forward-sexp 1")
+    ("fu" . "funcall ")
+    ("fw" . "forward-word 1")
+    ("g" . "goto-char ")
+    ("gc" . "goto-char ")
+    ("gsk" . "global-set-key ")
+    ("i" . "insert ")
+    ("ie" . "ignore-errors ")
+    ("ii" . "interactive")
+    ("il" . "if-let (($))")
+    ("ir" . "indent-region ")
+    ("jcl" . "justify-current-line ")
+    ("jl" . "delete-indentation")
+    ("jos" . "just-one-space")
+    ("jr" . "json-read$")
+    ("jtr" . "jump-to-register ")
+    ("k" . ("kbd " (format "%S" (key-description (read-key-sequence-vector "Key: ")))))
+    ("kb" . "kill-buffer")
+    ("kn" . "kill-new ")
+    ("kp" . "keywordp ")
+    ("l" . "lambda ($)")
+    ("la" . ("looking-at \"" - "\""))
+    ("lap" . "looking-at-p \"$\"")
+    ("lb" . "looking-back \"$\"")
+    ("lbp" . "line-beginning-position")
+    ("lep" . "line-end-position")
+    ("let" . "let (($))")
+    ("lp" . "listp ")
+    ("m" . "message \"$%s\"")
+    ("mb" . "match-beginning 0")
+    ("mc" . "mapcar ")
+    ("mct" . "mapconcat ")
+    ("me" . "match-end 0")
+    ("ms" . "match-string 0")
+    ("msn" . "match-string-no-properties 0")
+    ("msnp" . "match-string-no-properties 0")
+    ("msp" . "match-string-no-properties 0")
+    ("mt" . "mapconcat ")
+    ("n" . "not ")
+    ("nai" . "newline-and-indent$")
+    ("nl" . "forward-line 1")
+    ("np" . "numberp ")
+    ("ntr" . "narrow-to-region ")
+    ("ow" . "other-window 1")
+    ("p" . "point$")
+    ("pm" . "point-marker$")
+    ("pa" . "point-max$")
+    ("pg" . "plist-get ")
+    ("pi" . "point-min$")
+    ("pz" . "propertize ")
+    ("r" . "require '")
+    ("ra" . "use-region-p$")
+    ("rap" . "use-region-p$")
+    ("rb" . "region-beginning")
+    ("re" . "region-end")
+    ("rh" . "remove-hook '")
+    ("rm" . "replace-match \"$\"")
+    ("ro" . "regexp-opt ")
+    ("rq" . "regexp-quote ")
+    ("rris" . "replace-regexp-in-string ")
+    ("rrs" . "replace-regexp-in-string ")
+    ("rs" . "while (search-forward $ nil t)\n(replace-match \"\") nil t)")
+    ("rsb" . "re-search-backward \"$\" nil 'noerror")
+    ("rsf" . "re-search-forward \"$\" nil 'noerror")
+    ("s" . "setq ")
+    ("sb" . "search-backward $ nil 'noerror")
+    ("sbr" . "search-backward-regexp $ nil 'noerror")
+    ("scb" . "skip-chars-backward \"$\\r\\n[:blank:]\"")
+    ("scf" . "skip-chars-forward \"$\\r\\n[:blank:]\"")
+    ("se" . "save-excursion")
+    ("sf" . "search-forward $ nil 'noerror")
+    ("sfr" . "search-forward-regexp $ nil 'noerror")
+    ("sic" . "self-insert-command")
+    ("sl" . "setq-local ")
+    ("sm" . "string-match \"$\"")
+    ("smd" . "save-match-data")
+    ("sn" . "symbol-name ")
+    ("sp" . "stringp ")
+    ("sq" . "string= ")
+    ("sr" . "save-restriction")
+    ("ss" . "substring ")
+    ("ssn" . "substring-no-properties ")
+    ("ssnp" . "substring-no-properties ")
+    ("stb" . "switch-to-buffer ")
+    ("sw" . "selected-window$")
+    ("syp" . "symbolp ")
+    ("tap" . "thing-at-point 'symbol")
+    ("tf" . "thread-first ")
+    ("tl" . "thread-last ")
+    ("u" . "unless ")
+    ("ul" . "up-list")
+    ("up" . "unwind-protect\n(progn $)")
+    ("urp" . "use-region-p$")
+    ("w" . "when ")
+    ("wcb" . "with-current-buffer ")
+    ("wf" . "write-file ")
+    ("wh" . "while ")
+    ("wl" . "when-let (($))")
+    ("we" . "window-end")
+    ("ws" . "window-start")
+    ("wsw" . "with-selected-window ")
+    ("wtb" . "with-temp-buffer")
+    ("wtf" . "with-temp-file ")
+)
+** clojure default snippet [#B]                                      :@work:
+                           Added: [2017-10-08 周日 21:37]
+                           
+Default snippets for Clojure
+
+The snippets that are available in Spacemacs can be found in the yasnippet github repository or in the ~/.emacs.d/elpa/yasnippet-20160501.1841/snippets/clojure-mode directory on your laptop (when yasnippet package is updated then name of that directory will change).
+
+All the current snippets for Clojure mode are in the following table, indicating which tab stops they have.
+Snippet 	Description 	Tab Stops
+bench 	benchmark an expression, using the time function 	body
+bp 	depreciated: break point in swank 	
+def 	def expression 	N/A
+defm 	defmacro expression, with name, doc-string, arguments & body tabstops 	name, docstring, args, body
+defn 	defn expression, with name, doc-string, arguments & body tabstops 	name, docstring, args, body
+defr 	defrecord 	docstring, object, args, body
+deft 	deftype 	docstring, object, args, body
+doseq 	doseq 	name, body
+fn 	fn - anonymous function 	name, body
+for 	for 	condition, body
+if 	if 	condition, body
+ifl 	if-let - if true, bind a local name 	binding, body
+import 	import java library 	library name
+is 	is - clojure test assertion 	value, expected
+let 	let - bind a local name to a value 	name, value, body
+map 	map 	fn, col, col
+map.lambda 	map with anonymous function #() 	fn, body
+mdoc 	metadata docstring 	docstring
+ns 	ns - expression with the current namespace inserted automatically 	N/A
+opts 	destructuring a map with :keys, :or for default values, :as for entire vector 	:key binding, or defaults, :as binding
+pr 	prn - print function 	string/value
+print 	println - print function 	string/value
+reduce 	reduce - reduce expression with an anonymous function 	args, body
+require 	:require expression with library and alias 	library, alias
+test 	deftest expression 	test description, value/expected
+try 	try & catch expression 	try expression, exception name, body
+use 	depreciated: use require instead 	
+when 	when 	when expression, body
+whenl 	when-let - local binding on when condition 	binding, body** design something hard to use [#B]                                 :@F708:
+                           Added: [2017-10-07 周六 22:08]
+                           
+http://www.howardism.org/
+22 Feb 2015
+
+After reading the Wired article, Why We Should Design Some Things to Be Difficult to Use, I finally realize that Emacs should be hard to use, and we really should just give up changing it to be easier for new-comers.
+
+This quote sums up my 20 year experience with Emacs:
+
+    [Fujifilm took] the controls out of deep menu functions and putting them back on chrome knobs that just beg to be twiddled.
+
+    I bought a Fujifilm X100 two years ago. It was the first piece of technology I’d bought in 15 years where I had to read the manual. Actually, I’ve read the manual at least four times. Now I’m taking the best pictures of my life, and I love it. By being hard to use, my X100 made me a better photographer.
+
+Seems like Emacs users are now in some elite club where the hazing ritual amounts to learning Lisp. Consequently, I’ve decided to start signing all my Emacs-related correspondence with:
+
+    Yours in Emacs,
+
+    Howard
+
+** data science for making decision [#B]                             :@work:
+                           Added: [2017-10-02 周一 21:08]
+                           
+Data science involves principles（原则）, processes（过程）,
+ and techniques（技术  也就是说在后文会介绍这些方面的个中信息） for understanding phenomena via the (automated) analysis of data. For the perspective of this article, the ultimate goal of data science is improving decision making（终极目标提高决策能力）, 
+as this generally is of paramount interest to business（对商业来说也是特别重要的）. 
