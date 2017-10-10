@@ -1816,7 +1816,97 @@ emms会去调用mplayer播放音乐和电影，所以得把mplayer下载，然�
 然後按 C-c e d ，mplayer 就會順次播放 10-12集。
 ```
 
+### 64. 增强dired
 
+从现在开始我[使用use-package][128]安装新的pacakge
+
+github:[use-package][129]
+
+[Spotlight: use-package, a declarative configuration tool][130]
+```
+It’s a declarative way of expressing package configuration in Emacs but without the tears. It’s written by the inimitable John Wiegley, the new GNU Emacs lead maintainer and author of many, many cool tools like a commandline ledger, Emacs’s Eshell, and much more.
+```
+
+安装dired-narrow,参考[此链接][124]
+a. 问题: 出现dired-mode-map symbol无法解析的问题是因为没有`required 'dired`
+b. 出现步骤：之前放置dired配置代码在ui.el，其实应该防止setup-dired.el当中
+```
+;;narrow dired to match filter
+(use-package dired-narrow
+  :ensure t
+  :bind (:map dired-mode-map
+              ("/" . dired-narrow)))
+```
+
+这样配置完就可以在`M-x dired(C-x d)`中使用/表示filter了
+
+真的有[增强Dired][125]
+
+
+[dired-range][126] is bookmark for dired,
+These bookmarks are not persistent. If you want persistent bookmarks use the bookmarks provided by emacs, see (info "(emacs) Bookmarks").
+
+
+[Copy and paste files with dired-ranger][127]
+```
+(use-package dired-ranger
+  :ensure t
+  :bind (:map dired-mode-map
+              ("W" . dired-ranger-copy)
+              ("X" . dired-ranger-move)
+              ("Y" . dired-ranger-paste)))
+```
+
+
+This also sets up some useful keybindings. Now in a dired buffer, 
+you can mark multiple files and then hit W to copy them (really they are 
+added to a copy ring). You could then optionally go to another directory 
+and mark more files and hit C-u W to add those to the same entry in the 
+copy ring as the previous files. This builds up a virtual collection of 
+files that you can then copy or move. Now go to the target directory and
+hit X to move the copied files(从copy ring中移走） to that directory (i.e. they are deleted
+from their original location) or Y to copy the files to the target directory (the originals remain where they were). 
+
+注意D代表删除。
+
+
+[dired-rainbow][131]
+
+只有require或者use-package dired-rainbow才可以通过`C-h f RET dired-rainbow-define`找到该函数.
+
+```
+(use-package dired-rainbow
+  :ensure t
+  :preface
+  (defconst my-dired-media-files-extensions
+  '("mp3" "mp4" "MP3" "MP4" "avi" "mpg" "flv" "ogg")
+  "Media files.")
+  :config
+  (dired-rainbow-define html "#4e9a06" ("htm" "html" "xhtml"))
+  (dired-rainbow-define media "#ce5c00" my-dired-media-files-extensions)
+; boring regexp due to lack of imagination
+  (dired-rainbow-define log (:inherit default
+                           :italic t) ".*\\.log")
+; highlight executable files, but not directories
+  (dired-rainbow-define-chmod executable-unix "Green" "-[rw-]+x.*"))
+
+```
+
+[dired-subtree][132]
+
+flat-list to tree list
+```
+(use-package dired-subtree
+  :config
+  (bind-keys :map dired-mode-map
+             ("i" . dired-subtree-insert)
+             (";" . dired-subtree-remove)))
+```
+
+
+有了这个插件真的挺方便的，勇气dired来，得心应手的.
+
+在dired目录下使用i打开折叠目录(关闭折叠，展开)，;则可以用来折叠目录。
 
 <hr/>
     <hr/>
@@ -1946,3 +2036,12 @@ emms会去调用mplayer播放音乐和电影，所以得把mplayer下载，然�
 [121]:http://darksun.blog.51cto.com/3874064/1339029
 [122]:https://github.com/noinil/prelude/blob/75d41be0c5da3383cde1bd073c2aa5a9f4b7d792/personal/noinil.el#L195
 [123]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/music.jpg
+[124]:http://pragmaticemacs.com/emacs/dynamically-filter-directory-listing-with-dired-narrow/
+[125]:http://lifegoo.pluskid.org/wiki/EnhanceDired.html
+[126]:https://github.com/Fuco1/dired-hacks
+[127]:http://pragmaticemacs.com/emacs/copy-and-paste-files-with-dired-ranger/
+[128]:http://pragmaticemacs.com/emacs/install-packages/
+[129]:https://github.com/jwiegley/use-package
+[130]:https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool
+[131]:https://github.com/Fuco1/dired-hacks#dired-rainbow
+[132]:http://pragmaticemacs.com/emacs/tree-style-directory-views-in-dired-with-dired-subtree/

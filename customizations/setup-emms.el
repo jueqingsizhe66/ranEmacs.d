@@ -50,3 +50,27 @@
 (add-hook 'emms-playlist-mode-hook
           (lambda ()
 (toggle-truncate-lines 1)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defun play-smooth-jazz ()                                              ;;
+;;   "Start up some nice Jazz"                                             ;;
+;;   (interactive)                                                         ;;
+;;   (emms-play-streamlist "http://thejazzgroove.com/itunes.pls"))         ;;
+;;                                                                         ;;
+;; (defun play-smooth-Ambient ()                                           ;;
+;;   "Start up some nice Ambient"                                          ;;
+;;   (interactive)                                                         ;;
+;;   (emms-play-streamlist "http://stereoscenic.com/pls/pill-hi-mp3.pls")) ;;
+;;                                                                         ;;
+;; (defun play-smooth-Trance ()                                            ;;
+;;   "Start up some nice Trance"                                           ;;
+;;   (interactive)                                                         ;;
+;;   (emms-play-streamlist "http://www.1.fm/tunein/trance64k.pls"))        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (define-sequence 'personal-music-map "<f9> m" 'emms-play-streamlist ;;
+;;   '(("a" "http://stereoscenic.com/pls/pill-hi-mp3.pls") ;; Ambient  ;;
+;;     ("t" "http://www.1.fm/tunein/trance64k.pls")        ;; Trance   ;;
+;;     ("j" "http://thejazzgroove.com/itunes.pls")))       ;; Jazz     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

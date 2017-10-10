@@ -271,14 +271,4 @@
 
 
 
-;;;dired-detailsdir
-
-
-(require 'dired-details)
-(setq-default dired-details-hidden-string "--- ")
-(dired-details-install)
-
-;;Move files between split panes
-(setq dired-dwim-target t)
-
 

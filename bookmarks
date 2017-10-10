@@ -29,9 +29,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "** emacs 看电影 [#B")
- (rear-context-string . "/noinil.el#L397\n")
- (position . 7385))
+ (front-context-string . "** blog idea [#B")
+ (rear-context-string . "写代码，通过宏的扩展自动实现。\n")
+ (position . 9890))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

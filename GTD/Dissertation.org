@@ -1,0 +1,119 @@
+* TODO PhD Dissertation
+** TODO Preparation [/]
+- State "TODO"       from              [2017-10-10 周二 00:55]
+  1. [ ] one
+  2. [ ] 
+  3. [ ] 
+  4. [ ] 
+  5. [ ] 
+
+
+** TODO Outline [%]
+
+- State "TODO"       from              [2017-10-10 周二 00:55]
+** TODO Wind Energy
+
+- State "TODO"       from              [2017-10-10 周二 00:55]
+*** Introduction
+
+*** Methods
+
+*** Results and discussion
+
+**** steady analysis
+
+**** unsteady analysis
+
+**** dynamic analysis
+
+*** Summary
+
+
+** TODO Sun Papers
+
+- State "TODO"       from              [2017-10-10 周二 00:55]
+*** Introduction
+
+**** something
+
+*** Methods
+
+*** Results and discussion
+**** dynamic charcateristics
+**** Total Power characteristics
+**** ...
+*** Conclusion
+
+** TODO China papers
+
+- State "TODO"       from              [2017-10-10 周二 00:55]
+*** 图
+
+*** Introduction
+
+*** Methods
+
+*** Results and Analysis
+
+*** Summary
+
+** TODO Introduction
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** Basic from func...
+
+*** Multi axis
+
+*** Robot
+
+*** wind energy
+
+*** wind tunnel
+
+** TODO Conclusion
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** one
+
+*** two
+
+** TODO Abstraction
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** One 
+
+*** two
+
+*** three
+
+** TODO Format & typesetting
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** 排版
+
+*** 缩写 文章汇总第一次出现的专业术语，要有英文注释
+
+*** 文献  人名缩写
+
+*** 页眉页脚
+
+** TODO Revision  from professor  wang
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** One
+
+*** two
+
+*** three
+
+** TODO Revision from professor Kang
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+*** one
+*** two
+*** three
+** TODO My Revision
+
+- State "TODO"       from              [2017-10-10 周二 00:56]
+** 
+
