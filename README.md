@@ -11,6 +11,8 @@ and ubuntu, all valid for newer.
 
 *注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
 
+*注意，在标题66我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
+
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
 
@@ -1908,6 +1910,127 @@ flat-list to tree list
 
 在dired目录下使用i打开折叠目录(关闭折叠，展开)，;则可以用来折叠目录。
 
+
+### 65. org-mind-map 结合grpahviz创建思维导图
+
+1. [graphviz][133]安装
+
+2. [org-mind-map][134]安装，`M-x org-mind-map`
+
+3. 在org文件中，使用org-mind-map-write-tree写出pdf文件
+
+
+org范例文件
+```
+* 1. This is an org-mode tree with tags
+:PROPERTIES:
+:OMM-COLOR: GREEN
+:OMM-LEGEND: Legend entry
+:END:
+
+** 1.1 Branch A 
+*** Sub-Branch 1                                                    :@work:
+*** Sub-Branch 2                                                    :crypt:
+*** Sub-Branch 3                                                     :WORK:
+
+** 1.2 Branch B
+
+
+** 1.3 Branch C                                                     :@NCEPU:
+** 1.4 Branch D 
+* 2. Here is another tree
+** 2.1 Branch One                                                     :HOLD:
+** 2.2 Branch Two                                                     :java:
+   [[Branch C]]
+** 2.3 Branch Three                                                  :@home:
+
+   [[Branch One][Another link]]
+
+   [[Sub-Branch 1][Yet Another Link]]
+
+```
+使用[[]] 来访问标题。
+
+org-mind-map-write: 输出的pdf文件
+
+![map][135]
+每次org-mind-map-write的tag颜色都是随机的。
+
+
+### 66. 有些topic不想让别人看到org-crypt
+
+加密分为两种方式对称和非对称，org[默认EasyPG包已经安装][141],也可以查找当地elpa包，查找epa-file.el即可。
+
+但是EasyPG只是一个接口，用于调用[gnupg软件][142]，我直接[下载windows版本][143]
+[linux版本参考coldnew][144], ubuntu使用`apt-get install gpg`
+现在就不把该exe(太大,自己去官网下载，说明我有事先打开kleopatra-gnupg-win3.0软件
+
+*本小段内容可以不做*，我的目的是在保存的过程中不需要重复输入密码，于是我创建了key-pair密匙，输入名字和邮箱，然后输入两次密码生成一个证书，并把gpg key ID设置到org-crypt-key中，默认是nil,则会每次保存时候提示你输入密码，再次输入密码！）
+
+
+这样就可以加密了，默认windows安装之后gpg已放入path路径，所以打开cmd是可以找到gpg的)放入.emacs.d的customization文件夹了(aspell是放在其中了，解压缩即可使用)
+
+[Emacs中使用GPG进行加密][140]，可了解ububtu创建gpg密匙，跨系统的时候有帮助。
+
+.orgConf.el进行配置
+```
+(require 'epa-file)
+;;base on the easyPG, org-crypt can crypt some entry or topic ,rather than
+;; total file
+(require 'org-crypt)                                      ;;
+(org-crypt-use-before-save-magic)                         ;;
+(setq org-tags-exclude-from-inheritance (quote("crypt"))) ;;
+(setq org-crypt-key nil)       ;;
+;;
+```
+
+加密效果:
+![crypt][145]
+
+不想加密，在你的本机只需要`M-x org-decrypt-entry`即可(也可以decrypt-entries全部去除加密),(不需要添加gpg后缀文件，只需要在对应的大标题下添加crypt tag即可，
+会提醒输入密码（该密码任意，只需要配对即可，和你的kleopatra-gnupg-win3.0的证书密码可以不一样）
+
+另外我特别烦每次保存都需要输入密码，于是在.orgConf做了一次修改,使用我自己的GPG key ID([加密用的密匙][144]，看之前那一段不需要做的部分)
+
+![gnupg key id][146]
+
+```
+;(setq org-crypt-key nil)
+
+(setq org-crypt-key "6285F68F72D6D3C2")
+```
+
+好处是，保存的时候不需要询问我的密码，而打开的时候则会询问我密码，密码就是我通过
+Kleopatra创建证书时候输入两次密码时候对应的密码。还有好处是解密时候在你的本机上也不需要输入密码(在你的电脑里C:\Users\电脑名\AppData\Roaming\gnupg\文件夹下有
+相关的密匙文件)。
+
+加密是保密知识劳动成果的一种意识(扯淡!尿性！)
+
+That's all, funny with enctypt files.
+
+### 67. org-alert 提醒功能
+
+org-alert Provides notifications for scheduled or deadlined agenda entries.
+
+其实需要配套安装四个插件
+
+1. gntp
+2. [log4e][139]
+3. [alert][137]
+4. [org-alert][138]
+
+只需要`M-x package install RET org-alert`即可，只不过有时候网络问题，可能
+根本没安装上，所以需要逐个进行安装（这种情况是常见问题，反复安插件是常态）
+
+在ui.el添加了
+
+```
+(require 'org-alert)
+(setq alert-default-style 'libnotify)
+(setq org-alert-interval 1800) ;; default 300s too short
+```
+
+`M-x org-alert-enable`即可（需不需要输入？）
 <hr/>
     <hr/>
 
@@ -2045,3 +2168,17 @@ flat-list to tree list
 [130]:https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool
 [131]:https://github.com/Fuco1/dired-hacks#dired-rainbow
 [132]:http://pragmaticemacs.com/emacs/tree-style-directory-views-in-dired-with-dired-subtree/
+[133]:http://graphviz.org/
+[134]:https://github.com/theodorewiles/org-mind-map
+[135]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/map.jpg
+[136]:http://www.jianshu.com/p/cf43baf957a5
+[137]:https://github.com/jwiegley/alert
+[138]:https://github.com/spegoraro/org-alert
+[139]:https://github.com/aki2o/log4e
+[140]:http://wiki.ubuntu.org.cn/GPG/PGP
+[141]:http://www.jianshu.com/p/bd4266fb4551
+[142]:https://www.gnupg.org/download/
+[143]:https://www.gpg4win.org/download.html
+[144]:https://coldnew.github.io/4bb1df06/
+[145]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/crypt.jpg
+[146]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnupg.jpg

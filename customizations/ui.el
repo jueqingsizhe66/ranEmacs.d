@@ -270,5 +270,3 @@
 ;; C-c C-a to amend without any prompt
 
 
-
-

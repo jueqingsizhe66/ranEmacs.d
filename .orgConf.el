@@ -45,6 +45,8 @@
                        "~/.emacs.d/GTD/orgBoss/Site/www.site.org"
                        "~/.emacs.d/GTD/writing.org"
                        "~/.emacs.d/GTD/orgBoss/Habit/habits.org"
+                       "~/.emacs.d/GTD/phd1.org"
+                       "~/.emacs.d/GTD/Dissertation.org"
                        ;(append (file-expand-wildcards "~/.emacs.d/GTD/orgBoss/Journal/2*"))
                        ;"~/.emacs.d/GTD/orgBoss/Journal/"
                         ))  
@@ -142,7 +144,7 @@
  ;   ("BlogToPublish" ?b "* %^{Enter the Name of the Blog}\n %a %?" "~/.emacs.d/GTD/.notes.org" "BlogToPublish")))
  
 ;接下来我对Remember的配置如下:
-;实现规划好 几个文件的地方
+;事先规划好 几个文件的地方
  (setq org-directory "~/.emacs.d/GTD/orgBoss/")
  (setq org-default-notes-file "~/.emacs.d/GTD/orgBoss/.notes")
  (setq remember-annotation-functions '(org-remember-annotation))
@@ -521,6 +523,9 @@ Captured %<%Y-%m-%d %H:%M>
 (my/defshortcut ?l "~/.emacs.d/GTD/orgBoss/learning.org")
 (my/defshortcut ?q "~/.emacs.d/GTD/orgBoss/questions.org")
 (my/defshortcut ?w "~/.emacs.d/GTD/writing.org")
+(my/defshortcut ?p "~/.emacs.d/GTD/phd1.org")
+(my/defshortcut ?D "~/.emacs.d/GTD/Dissertation.org")
+
 
 
 
@@ -1035,3 +1040,27 @@ Use a prefix arg to get regular RET. "                                          
   (setq org-reveal-hlevel 2) ;; the default is one, means only header1 is arranged horizontal
   (org-tree-slide-narrowing-control-profile)
   (setq org-tree-slide-skip-done nil)) 
+
+
+
+;;add alert notify
+(require 'org-alert)
+(setq alert-default-style 'libnotify)
+(setq org-alert-interval 1800);;default 300s
+
+
+
+;;add crypt tag 
+
+(require 'epa-file)
+;;base on the easyPG, org-crypt can crypt some entry or topic ,rather than
+;; total file
+(require 'org-crypt)                                      ;;
+(org-crypt-use-before-save-magic)                         ;;
+(setq org-tags-exclude-from-inheritance (quote("crypt"))) ;;
+;(setq org-crypt-key nil)
+
+(setq org-crypt-key "6285F68F72D6D3C2")
+
+
+

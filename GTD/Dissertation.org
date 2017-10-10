@@ -106,12 +106,14 @@
 
 *** three
 
-** TODO Revision from professor Kang
-
-- State "TODO"       from              [2017-10-10 周二 00:56]
-*** one
-*** two
-*** three
+** TODO Revision from professor Kang                                    :crypt:
+-----BEGIN PGP MESSAGE-----
+
+jA0EBwMC2DZkjOaHtvfC0nsBLkFYuZM77lrPNdF3ZkZr4AWeCFyIIuUE3tnUyj+9
+EBhAaT4QCmvN63Z1ApHZecg4Tt7GFEptQrecbeBMbnzPUGIoXwjmpqbhS8CAm0mk
+0FGJGsT+oIj4Mp5OVBhZTu0fqZnxu7CoB9qEHo58k0yP9+lUGL28kSxcXu0=
+=OBvU
+-----END PGP MESSAGE-----
 ** TODO My Revision
 
 - State "TODO"       from              [2017-10-10 周二 00:56]

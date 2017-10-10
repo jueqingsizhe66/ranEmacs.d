@@ -1,5 +1,5 @@
 rubbish*/
-.swp
+*.swp
 backups/*
 .recentf
 .recentf~
@@ -11,3 +11,4 @@ auto-save-list/*
 server/*
 cider-history
 projectile-bookmarks.eld
+*.pdf
