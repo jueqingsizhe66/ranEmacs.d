@@ -86,8 +86,16 @@ M-x desrcibe-theme
 ** https://en.wikibooks.org/wiki/LaTeX
  latex入门到精通
 ** https://www.zhihu.com/people/noinil/answers?page=2
+https://github.com/noinil/prelude
  chen tao
 ** http://pragmaticemacs.com/emacs/dynamically-filter-directory-listing-with-dired-narrow/#
  good website for learning emacs
 ** http://www.woola.net/tag/redirect/lisp
  大雄--lisp（不错的tornado博客）
+** http://www.nsfc.gov.cn/
+ 自然科学基金委，了解idea的产生
+** http://z.caudate.me/on-whose-authority/
+ Chris Zheng
+** http://www.lispcast.com/cognitect-clojure
+ 3 Things Java Programmers can steal from clojure
+The 100 Most Used Clojure Expressions

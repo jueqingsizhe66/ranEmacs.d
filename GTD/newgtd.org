@@ -124,10 +124,12 @@ DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
       - [ ] 偏航实验
       - [ ] 前后四周晃动实验
   - [ ] 丝线实验 流场可视化实验
-** TODO [#B] 办理工程热物理注册问题   [85%]                             :@work:
-DEADLINE: <2017-10-11 周三> SCHEDULED: <2017-10-08 周日>
+** DONE [#B] 办理工程热物理注册问题   [100%]                           :@work:
+CLOSED: [2017-10-11 周三 17:48] DEADLINE: <2017-10-11 周三> SCHEDULED: <2017-10-08 周日>
 
 
+- State "DONE"       from "TODO"         [2017-10-11 周三 17:48]
+- State "TODO"       from "TODO"         [2017-10-11 周三 17:48]
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
@@ -157,7 +159,7 @@ DEADLINE: <2017-10-11 周三> SCHEDULED: <2017-10-08 周日>
 2. [X] 回执邮件中请务必将转账/汇款凭证扫描件附在邮件中一起发送
 3. [X] 务必在汇款备注中注明“参会编号（GJ-XX）-发票抬头-第一位作者姓名”，例如“GJ-015-清华大学-李四”
 4. [X] 确认康老师的住房预定问题
-5. [ ] 10月11号 周三办理 汇款程序
+5. [X] 10月11号 周三办理 汇款程序
 ** PENDING [#B] Doing sports(must be)                            :@Dormitry:
 SCHEDULED: <2017-10-10 周二 +1d>
                     :PROPERTIES:
@@ -201,6 +203,4 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
 
 
-* fdf
-SCHEDULED: <2017-10-09 周一>
 

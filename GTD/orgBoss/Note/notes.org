@@ -271,3 +271,19 @@ socket 也就是 syscall的问题
 understand, hard to use,总是有简单和复杂才能构成真实的世界，都简单的话
 那就肯定不真实，这样想也能拓宽你的知识面、认识面)
 http://www.woola.net/me
+** 产学研 [#B]                                                       :@work:
+                         Added: [2017-10-11 周三 11:19]
+                         
+学校忙着发论文，评职称。私企忙着签合同赚钱。
+国企忙着完成资金计划，形象工程。这三者之间有一个共同的利益纽带，是钱。而不是科学。
+** RSS Feed [#B]                                                     :@F708:
+                         Added: [2017-10-11 周三 22:19]
+                         
+Use ‘G R’ in the group buffer to create a new group for the feed. When asked, paste the URL to the XML or RDF file 
+(I usually paste the URL to the RSS 1.0 feed when given the choice). (You must use G R only when the pointer is not 
+on any other group, else it triggers group rename. 
+An empty line in the group buffer should work fine.)
+
+The ‘G R’ method does not work for me on gnus 5.10.8, for instance when tried with the url below it says “no such
+ newsgroup nnrss:EmacsWiki”. What works for me is hitting ‘G m’ then typing a group name, and specifying nnrss as 
+the backend, this creates a group, when entering the group for the first time it prompts for a url.

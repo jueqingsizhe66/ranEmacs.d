@@ -1,0 +1,487 @@
+星期三, 2017/10/11
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 23:25 I found out about this diatribe as I sat down to spend the day (my weekend) continuing to work for the Clojure ecosystem. Time spent in lieu of spending time with my wife, having already spent the work week on spec, my Conj talk, and the Clojure 1.9 release.
+
+I don't believe diatribes such as these deserve attention, but, to the extent they foster misconceptions, they do harm that must be addressed.
+
+Cognitect does not make money from Clojure. Period. We want the same things from/for Clojure as other businesses using it - stability and quality. Absolutely no decisions are made regarding Clojure that impact our revenues because we have no revenue from Clojure itself whatsoever. We spend money on Clojure (i.e. paying a non-billable salary so Alex Miller can support the community and the language) because we rely upon it and want it to thrive. We don't make money from Clojure conferences. I personally am over $200k in the negative overall due to my initial work on Clojure. Money I have no prospects of getting back. Not that that is anyone else's business, but anyone sitting around thinking Cognitect or I am making money on Clojure is mistaken.
+
+Lots of great people work for Cognitect, it's true. And what makes them great is primarily the fact that they are really good people. People too nice to respond to such diatribes in kind. Makers. And givers - there's not a person at Cognitect who wouldn't freely give you their time and best advice if you sought their help, who haven't given their time speaking at user groups, and building open-source tools and libraries, writing books, sharing their knowledge and investing their spare time acquiring it. They don't make money off Clojure, they make money through their ongoing effort writing new software to solve customer problems, or by making Datomic for companies that still value software enough to pay for it. Cognitect is not 'the establishment', it's a small company that provides a livelihood and healthy nurturing culture for those that work here. No one is getting rich.
+
+This consistent sense of entitlement to the efforts of makers, amongst a community of supposed makers, is baffling and counterproductive. It is a cancer of the software development community at large and will inevitably lead to the devaluation of software and those who make it, and has already.
+
+I've done months of design work on the next phase of spec, and we have an agenda to take on implementing that after the 1.9 release and Conj. It is astounding to see something like spec characterized as an attack on another library or abnegation of the community. I've invested about 9 months of my life on spec, for which I and Cognitect will never see a dime, and am open-sourcing my effort. And this is the response? With spec, I was just pursuing what I thought was a good idea (as was Luke with Arachne). That can't become wrong due to some supposed community obligation or we'll never have novelty.
+
+The posts asks "On Whose Authority?" but doesn't use the word again.
+
+Here's what 'authority' means (from dictionary.com):
+
+"from Latin auctoritatem (nominative auctoritas) "invention, advice, opinion, influence, command," from auctor "master, leader, author" (see author (n.))"
+
+and 'author':
+
+"literally "one who causes to grow," agent noun from auctus, past participle of augere "to increase" (see augment)"
+
+Thus authority comes along with authorship, and is accorded first to the makers, people who've added to the world. I don't know why that is no longer obvious. Thinking otherwise yields a broken economic model, where people are not entitled to control over the products of their own labor, and thus are without control over their livelihood.
+
+Clojure was not originally primarily a community effort, and it isn't primarily one now. That has to be ok. The presumption that everything is or ought to be a community endeavor is severely broken. A true community respects the autonomy of its participants, else it degenerates into a cult of need/want.
+
+Cognitect is a terrific supporter of Clojure, and happens to be where I work, but the ultimate authority and stewardship of Clojure remains with me and I am responsible for the decisions governing it, good or bad.
+
+To those who think that Datomic ought to be open source: We don't see a viable economic model there. If you think otherwise, come up with the money to buy the IP and make a go of it. If you can't, then recognize your arguments for the hot air of entitlement they are.
+
+We can argue about the software economy and open source models all day. In the end it's about people. You can't say f**k XYZ and deny that it is an attack on the people who work on XYZ. Cognitect is not some evil corporate entity, it's a bunch of people with families trying to make a living, pay their mortgages and send their kids to college. And, if you are talking about Clojure, you are talking to me. The indirection doesn't mask the attack on people, their work and their choices.
+
+I have to say now to those for whom such expressions are cathartic - they hurt people, a lot. I don't believe the sentiments in the post are widely held - most people who are happily using Clojure aren't as vocal. But it doesn't take many arrows to bring someone down.
+
+Every time I have to process such a diatribe and its aftermath, and its effects on myself, my family, and my co-workers, I have to struggle back from "Why should I bother?", and every time it gets harder to justify to myself and my family that it's worth the time, energy and emotional burden. Every time a community engages with such a diatribe without calling it out, and decrying its tone, the civility of our discourse and treatment of others heads further down the drain. It's time for people who value other people to speak out, in this domain and elsewhere:
+
+Chris Zheng, your diatribe is despicable. Your post demonstrates a lack of respect for people, their hard work, their contributions, their independence, and their economic, social and familial responsibilities. Grow up.
+
+    永久連結embed檢舉
+
+[–]Borkdude 44 指標 3 天前* 
+
+Well said Rich. I'm very grateful for all the hard work you and Cognitect put into Clojure. I and other people should probably say this out loud more often.
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] -1 指標 2 天前* 
+
+@Borkdude. I will have to leech off of your good sentiments to Rich because my reply dropped off the thread due to negative votes.
+
+I personally don't mind negativity. I do think that populist sentiment does little to address the problem that I want this thread to self-reference: When Rich and other members of the Cognitect community poopoos something, the community is also given the 'authoritative reference' to poopoo.
+
+This was reflected in how the Reddit thread changed before and after Rich replied. He is a rockstar, there's no doubt about that.
+
+Midje was a great project but it has pretty much died and one of the reasons was that there was a reluctance from the core to say anything positive about it. https://groups.google.com/forum/#!topic/clojure/T8fIW27kDYE
+
+In the end, it's about intent. My intent stands on solid foundation and I'm happy to be mocked/blasted/challenged. They say that the ultimate fear of ambition is to be held in obscurity. I welcome all.
+
+    永久連結embed上層留言檢舉
+
+[–]alexelcu 5 指標 2 天前 
+
+    I personally don't mind negativity. I do think that populist sentiment does little to address the problem that I want this thread to self-reference
+
+It's probably because you haven't received much negativity, plus your personal opinion on this is irrelevant when other people are clearly getting hurt. I'm also an open source software author, interacting with other software makers and I can relate to Rich's pain here.
+
+Programming in general isn't a science. Much like math, a big part of programming is communication and collaboration. You might classify this response as a "populist sentiment", however by phrasing your opinions in the disrespectful way that you did, it's pretty obvious that you're not looking for a dialog, so you shouldn't be surprised if you're not getting one.
+
+    This was reflected in how the Reddit thread changed before and after Rich replied.
+
+That's because people on the Internet tend to be really mean under the cover of anonymity. Just like when you are in traffic and feel the need to honk loudly or swear at other people for not moving at the green light in a split second, things you would never do when face to face out of fear of being punched.
+
+That Rich Hickey tempered the thread, that's not because he's a "rockstar", but because he reminded people of the personal sacrifices he and others are making.
+
+    Midje was a great project but it has pretty much died.
+
+I've never seen Midje, but reading that thread I do see many counter points I agree with. For example I also think that "mocking" is a serious code smell and should never happen, unless the code is too tightly coupled with side effects. The solution IMO shouldn't be to provide better tools for mocking, but to encourage architectures that don't need mocking at all.
+
+But anyway, there are many reasons for why open source projects live or die and I'm pretty sure that you're oversimplifying the issue. I've been working on Monix since 2014, a project whose popularity rose only in the last year and a half. And for that to happen, I had to go at conferences to teach people about it, I had to be super responsive on its Gitter channel, literally helping all new users with their problems, I had to keep developing it, adding new features in response to competition, I had to make it play nice with other libraries in the ecosystem, etc.
+
+Projects don't win just on technical merits, but also on finding a product-market fit, on marketing and on collaboration, a painful truth that many of us ignore because this requires soft skills many of us don't possess.
+
+    In the end, it's about intent. My intent stands on solid foundation and I'm happy to be mocked/blasted/challenged. They say that the ultimate fear of ambition is to be held in obscurity. I welcome all.
+
+No, in the end it's about being able to work with others in order to deliver products and being an ambitious dick is nothing to be proud of.
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 2 指標 2 天前 
+
+    being an ambitious dick is nothing to be proud of.
+
+pride is never a good thing.
+
+    永久連結embed上層留言檢舉
+
+[–]ReflectiveTeaTowel 1 指標 5小時前 
+
+Patently bollocks. Having pride in your work means you give a shit if it's good or not
+
+    永久連結embed上層留言檢舉
+
+[–]grammati 58 指標 3 天前 
+
+Rich, I am in my office giving this reply a standing ovation. I firmly believe that 99.9% of the Clojure community is doing the same.
+
+Remember that for every whining malcontent that posts nonsense like this, there are 1000 happy, productive Clojure programmers. I am one of them. I have worked with many others. We are out here, quietly writing software, creating things, and enjoying every minute of it. You may not hear much from us; most of us don't blog, or comment on Reddit. But please know that we, the silent majority, are deeply grateful for the years of hard work that you and others have put into Clojure. Thank you.
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] -3 指標 2 天前* 
+
+It's not about 'content' vs 'malcontent'. Please don't have 'us' vs 'them' blinders on the topic. I'm one person sharing my own experience - both the good and the bad. When posts such as these gets labelled as 'diatribe' and put into the 'reject' basket, it does not bring anything new to the table.
+
+    永久連結embed上層留言檢舉
+
+[–]umpc 3 指標 2 天前 
+
+I only had to read a single line.
+
+    ...Fuck Clojure.
+
+Yup. It's a diatribe.
+
+Not only that, it is a definitive example of one. There is no ambiguity as to whether or not it even is one. Who cares what the rest of it even says?
+
+You purposely disrespected the people who gave up and give up their limited time to develop Clojure, so fuck your opinion. :)
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 0 指標 2 天前 
+
+Thanks for taking the time out of your hectic schedule to give me your thoughts on how to pick out a diatribe.
+
+    永久連結embed上層留言檢舉
+
+[–]Michaelmrose 2 指標 2 天前 
+
+You didn't even present coherent complaints. Nothing you whined about made sense. Why don't you quit while you are behind?
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] -2 指標 2 天前 
+
+@michaelmrose: one word. wow.
+
+    永久連結embed上層留言檢舉
+
+[–]gorrepati 25 指標 3 天前 
+
+Clojure is a big reason why I fell in love with programming again. I feel your (and your colleagues) efforts are thoroughly appreciated by many a people like me, albeit silently.
+
+The thing is, there are a lot of smart people in the world without good taste. Even though the things they do work, they place a lot of unseen mental burden on us lesser programmers. Please please be aware that there are lot of discerning (but may not be capable) engineers like us, who appreciate the time, work and emotional energy you put into it.
+
+I haven't grown up with a Apple computer as a kid; never seen it until I was an adult. I distinctly remember my heart leaping in joy the first time I used it. I had the same feeling when I first came to Clojure. That is the highest praise I can give to someone who sweat, fought against status quo and raised the standards for everyone else. Thank you so very much!
+
+    永久連結embed上層留言檢舉
+
+[–]yogthos 10 指標 3 天前 
+
+Thank you for all the work you've done on Clojure, it is very much appreciated.
+
+    永久連結embed上層留言檢舉
+
+[–]daemianmack 23 指標 3 天前 
+
+Thanks for the clarity above, Rich, and moreover: thank you for so carefully designing and stewarding Clojure.
+
+    永久連結embed上層留言檢舉
+
+[–]I_am_a_haiku_bot 1 指標 3 天前 
+
+Thanks for the clarity above,
+
+Rich, and moreover: *thank you for so*
+
+carefully designing and stewarding Clojure.
+
+-english_haiku_bot
+
+    永久連結embed上層留言檢舉
+
+[–]ertucetin 15 指標 3 天前 
+
+Well said, he needs to grow up!
+
+    永久連結embed上層留言檢舉
+
+[–]ferociousturtle 16 指標 3 天前 
+
+    Every time I have to process such a diatribe and its aftermath, and its effects on myself, my family, and my co-workers, I have to struggle back from "Why should I bother?", and every time it gets harder to justify to myself and my family that it's worth the time, energy and emotional burden.
+
+Man. I'm sorry to hear this. Clojure is a beautiful language. It's easily my favorite language. The hard work you have put into it, and especially the hard work you've put into saying no to additional complexity and keeping the core small... Well, there are a whole lot of folks who appreciate it and probably don't tell you that often enough.
+
+I hope you continue to bother for a very long time.
+
+    永久連結embed上層留言檢舉
+
+[–]un_passant 12 指標 3 天前 
+
+Just taking the opportunity of your post to thank you for all the work you put into making this awesome gift that is Clojure !
+
+    永久連結embed上層留言檢舉
+
+[–]Owengjones 12 指標 3 天前 
+
+Thank you Rich. And thank you, Alex, Cognitect and the entire community for Clojure. I assume there are many like me who happily use Clojure in drama-less silence everyday; maybe we need to speak up more.
+
+    永久連結embed上層留言檢舉
+
+[–]Naomarik 13 指標 3 天前 
+
+    Every time I have to process such a diatribe and its aftermath, and its effects on myself, my family, and my co-workers, I have to struggle back from "Why should I bother?", and every time it gets harder to justify to myself and my family that it's worth the time, energy and emotional burden. Every time a community engages with such a diatribe without calling it out, and decrying its tone, the civility of our discourse and treatment of others heads further down the drain. It's time for people who value other people to speak out, in this domain and elsewhere.
+
+I am one of silent happy clojure users. I am someone who can appreciate what the language can do after developing projects in others before.
+
+Cognitect's work on clojure/script has given me the ability to execute on work that I would find impossible to do in languages I've used previously. All the work you guys do reading those 1970s research papers that are incomprehensible to me and implementing the ideas into clojure have had a massive impact in the life I have now. I'm not someone who zealously enjoys programming, I just enjoy being able to make a living creating things on my own schedule.
+
+I'm extremely grateful for the work you put in. clojure.spec completely blew me away when I realized what it can do especially with generative testing. Datomic looks amazing and is on my todo list of things to learn properly but I'm still managing to move quickly without it on my current project.
+
+If I look at other languages I just feel like everything is a complete mess. Please keep doing what you're doing. Having tasted clojure with one master chef who is very meticulous about what he's doing, nothing else is tempting.
+
+I'm looking forward to your next talk, Rich.
+
+    永久連結embed上層留言檢舉
+
+[–]joncampbelldev 9 指標 3 天前 
+
+Well said. As one of the usually less vocal but happy people I'd like to say thank you, clojure has given me a significant boost in happiness (and efficiency) at my job and in my hobby projects.
+
+Also I can't help but smile that you go to the original definition of a word in anger as well as in conference talks.
+
+    永久連結embed上層留言檢舉
+
+[–]aisamu 8 指標 3 天前 
+
+Thank you, Rich.
+
+For Clojure, for Datomic, for your wonderful talks.
+
+    永久連結embed上層留言檢舉
+
+[–]mobiledevguy5554 4 指標 2 天前* 
+
+Rich the silent majority greatly appreciates and respects the efforts of you and your team in building out this incredible ecosystem. I personally can’t wait to find a reason to buy a license for your database. I no longer just thank folks providing these wonderful open source projects, I pay them on patreon or some other service.
+
+Guys like you, Rob Pike, Anders h, Alan kay, the list goes on and on are my personal heroes (and I’m 50!). While I can’t operate at your level, your writings and talks inspire me to always keep improving always getting better.
+
+    永久連結embed上層留言檢舉
+
+[–]bit_cmdr 6 指標 3 天前 
+
+‪I really appreciate all the work that you & Cognitect have put into Clojure. I admire your stewardship of the language and your passion for it. It’s one of the things that draws me towards Clojure. Personally, I have found Clojure and the Clojure community to be one of the more welcoming and friendly ecosystems. Clojure and its community continue to be my favorite. Don’t let a few bad apples spoil the bunch. Thank you and all involved.
+
+    永久連結embed上層留言檢舉
+
+[–]deafmacro 5 指標 3 天前 
+
+Thank you for Clojure. It is a piece of art!
+
+    永久連結embed上層留言檢舉
+
+[–]theothagod 6 指標 3 天前 
+
+Clojure is amazing! Thank you Rich. Please keep it amazing forever!
+
+    永久連結embed上層留言檢舉
+
+[–]dansjay 5 指標 3 天前 
+
+With giving us Clojure you made us believe that we are hackers, problem solvers and a strong community, who are crazy enough to take the risk for what we believe in. Thank you for bothering to address this post. We are looking forward to the Clojure 1.9 release and specially to your next Conj talk sir.
+
+    永久連結embed上層留言檢舉
+
+[–]the2bears 5 指標 2 天前 
+
+After toiling for years in Java, and slowly losing any passion for software, Clojure was responsible for helping me regain it. Thank-you for that.
+
+    永久連結embed上層留言檢舉
+
+[–]the_evergrowing_fool 6 指標 3 天前* 
+
+    Clojure was not originally primarily a community effort, and it isn't primarily one now.
+
+This is arguably the best part of Clojure.
+
+The worst part...the zealots in this community.
+
+    永久連結embed上層留言檢舉
+
+[–]afmoreno 2 指標 2 天前 
+
+Rich,
+
+You like words--thought I would give you the definition of Auctor from Peter Lombard's Libri Sententiarum:
+
+The Method of making a book is fourfold. For someone writes the materials of others, adding and changing nothing, and this person is said to be merely the scribe [scriptor]. Someone else writes the materials of others, adding, but nothing of his own, and this person is said to be the compiler [compilator]. Someone else writes both the materials of other men, and of his own, but the materials of others as the principal materials, and his own annexed for the purpose of clarifying them, and this person is said to be the commentator [commentator], not the author [auctor]. Someone else writes both his own materials and those of others, but his own as the principal materials, and the materials of others annexed for the purpose of confirming his own, and such must be called the author [auctor].
+
+I think of you and the core contributors as "authors" with the rest of the community in one of the other three roles. I like Clojure because I recognize the thoughtfulness behind the language: the "right" definition of literals, the "right" implementation of key Lisp features, the ecumenical approach towards being a hosted language, careful towers of abstraction, etc. I have invested learning Clojure because I believe it makes me smarter (per the quote that floats the ether) and also because it makes programming fun again. All my best to you and those who toil for our benefit. Thanks.
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 0 指標 2 天前 
+
+@afmoreno: I'm curious if there's a metaphor in what you just wrote.
+
+    永久連結embed上層留言檢舉
+
+[–]afmoreno 1 指標 1 天前 
+
+I thought the quote apt because it captures the idea that all software development consists of dwarfs standing on the shoulders of giants: Rich is that author of Clojure but his work stands on the foundation of the JVM, etc. Similarly, I think of library authors as "commentators", i.e., they add to the language but are minor players. Programmers tend to be "compilators": we poke around to find stuff that will work and we stitch it together, more often than not without a great deal of value-add. I think the analogy breaks down here.
+
+Cheers!
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 1 指標 1 天前 
+
+I love it. It does put things into perspective.
+
+    永久連結embed上層留言檢舉
+
+[–]dirtyvagabond 5 指標 3 天前 
+
+Thank you Rich, for all that you do
+
+    永久連結embed上層留言檢舉
+
+[–]nathants 3 指標 3 天前 
+
+thank you, rich.
+
+    永久連結embed上層留言檢舉
+
+[–]jwr 4 指標 2 天前 
+
+    Every time I have to process such a diatribe and its aftermath, and its effects on myself, my family, and my co-workers, I have to struggle back from "Why should I bother?"
+
+Rich, please do bother. Thanks to your work many other people (me included) are able to pay their bills and support their families. If it wasn't for Clojure and ClojureScript, I would not have been able to tame the complexity of my SaaS app, so I owe you quite a bit.
+
+I've seen many of these types of rants about the "language" and "community" over the years. Most of the time they are written by people who do not write and maintain apps for a living. People that actually do write apps to support themselves tend to be rather quiet. They've got things to do, and they are grateful for the tools that others have provided.
+
+I am in that "quiet" category most of the time, but now is the time to speak up and support what you're doing.
+
+    永久連結embed上層留言檢舉
+
+[–]neverfox 3 指標 2 天前* 
+
+Another thank you, Rich. I have not only had the joy of using Clojure has my primary language (for work and play) but also the joy of teaching it to others and watching the epiphany that comes from using a powerful and simple functional language. It angers and frustrates me that things like this happen that threaten to undermine its future. I consider it a careless attack on my livelihood and the livelihood of those like me. It's personal for us too.
+
+    永久連結embed上層留言檢舉
+
+[–]surya_aditya 2 指標 3 天前 
+
+Your efforts are highly appreciated Rich, it has had positive influence on the community, it is a great acheivement. thanks again.
+
+    永久連結embed上層留言檢舉
+
+[–]bpiel 2 指標 3 天前 
+
+Thanks, Rich & Cognitect. I sincerely wish you were all getting rich.
+
+    永久連結embed上層留言檢舉
+
+[–]kingnuscodus 2 指標 2 天前 
+
+Well said Rich..Thank You for your amazing work and for giving the world Clojure - which for me made programming fun again. It would be nice if the author of the post could write another with a formal apology - in the meantime, please know that the very vast majority of us will be forever grateful for your stewardship and many other contributions to the language!
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 1 指標 2 天前 
+
+Let's hope that this dialectic will produce a more reasoned synthesis. Apologies are way too cheap by my reckoning.
+
+    永久連結embed上層留言檢舉
+
+[–]addamsson 1 指標 1 天前 
+
+I'm a long time user and admirer of Clojure. I don't think that naysayers like this guy are worth addressing, but I see that if they reach a critical mass they must be put to their place.
+
+On the other hand there are a lot of programmers like me who are also not vocal but think that you are a very positive and influential figure and Clojure is worth learning and using so here it is. Keep up the good work!
+
+    a simple Clojure user
+
+    永久連結embed上層留言檢舉
+
+[–]foobarbazquix 1 指標 2 天前 
+
+On the flip side: In a conversation this week I praised the maintainers of Clojure for their stewardship of the language and what I perceive as exhaustive consideration given to the smallest of changes. I attributed this to part of why the language is so well designed and stable and why I think overall it’s the best language we have been given to date. When I said I sometimes wish the language had a larger community the other person said that would destroy the Clojure I know and love, that the language would be changed to accommodate something like the least common denominator, that it wouldn’t be Clojure anymore. I proudly and with complete confidence said Clojure’s maintainers would never allow that to happen. I recommended Clojure to someone on Twitter who said they liked metaprogramming. I had a positive interaction with a Cognitect employee. I recommended Clojure for in house projects at my company because we are tiny and I find the language confers something like an unfair advantage to those who use it. I worked on a library written in Clojure that can record the operations of functions, simultaneously read the definition of a function from its source and persist all this to another file. I was able to do this fairly easily, and it worked even when the calling code was run from within the file that was being read from. I despaired at the thought of attempting anything like this in any other programming language.
+
+    永久連結embed上層留言檢舉
+
+[+]zcaudate[S] 留言分數低於臨界標準 * (36 下層留言)
+
+[+]downvotes_puffins 留言分數低於臨界標準  (7 下層留言)
+
+[+]visible_gravity 留言分數低於臨界標準  (6 下層留言)
+
+[–]keymone -2 指標 3 天前* 
+
+Thank you for Clojure and continued efforts in making it and ecosystem around it amazing.
+
+Edit: wow, this sub doesn’t react well to puns, noted and removed it.
+
+    永久連結embed上層留言檢舉
+
+[–]zcaudate[S] 1 指標 3 天前 
+
+... it definitely reacts
+
+    永久連結embed上層留言檢舉
+
+[–]Michaelmrose 0 指標 2 天前 
+
+    Every time I have to process such a diatribe and its aftermath, and its effects on myself, my family, and my co-workers, I have to struggle back from "Why should I bother?", and every time it gets harder to justify to myself and my family that it's worth the time, energy and emotional burden. Every time a community engages with such a diatribe without calling it out, and decrying its tone, the civility of our discourse and treatment of others heads further down the drain. It's time for people who value other people to speak out, in this domain and elsewhere:
+
+I honestly don't know why you care. Hate and stupidity are pervasive human qualities. One of the great things about the Internet is the breadth of the perspective it brings. Go looking far enough and you could and whatever your interests, beliefs nationality, race there are probably at least few hundred people who would like to kill you and use you for fertilizer for who you are.
+
+Going to look for idiots on the Internet is bad, engaging them and wasting your energy, feeling bad or angry is worse. You will never enlighten them and the exercise only hurts you and wastes your time which is better spent with work that makes you fulfilled or with your family. Fuck stupid people.
+https://www.reddit.com/r/Clojure/comments/73yznc/on_whose_authority/do1olag/
+
+** 23:27 On whose authority?
+
+by Chris Zheng,
+
+...Fuck Clojure.
+
+There I've said it and God it feels good.
+
+I say it with much admiration and respect to all the members of community. I've learnt so much from being in this microcosm of dynamism, ideas and learning over the past 8 years. Clojure has allowed me to get to know so many amazing people, to travel to a whole bunch of places and to do things that I had never thought possible.
+
+Having said that, I've gone from a wide-eyed, idealistic fanboy to someone less idealistic, and almost cynical about the trajectory of the language. I have gained so much - but at the same time, I had expected more. Now I'm just tired.
+
+Like the ending of a long love affair with a girl way out of my league, I loved and loathed every single minute of my time as a clojure developer. The experience, though unforgettable, has taken a toll on my mental and physical well-being. I feel that I have given my all. Now that the party is over and sunrise begins to reveal the plastic fairy lights and overdone makeup, I begin to question my life as well as the values that I am looking for within it.
+
+I remember when I first got into Clojure. I had been struggling to build a concurrent system for years (and to this day, I'm still clueless about how to do it with locks and semaphores). I had been working with python back then and it was really hard work. Then I read Paul Graham's hacker's and painter's book in his article Revenge of the Nerds
+
+"As one data point on the curve, at any rate, if you were to compete with ITA and chose to write your software in C, they would be able to develop software twenty times faster than you. If you spent a year on a new feature, they'd be able to duplicate it in less than three weeks. Whereas if they spent just three months developing something new, it would be five years before you had it too."
+
+My thinking at the time was. Wow. I want to be elite and so after a brief spell with Common Lisp, decided on Clojure. The hook for me (like probably a lot of people) was watching Rich Hickey's epic refutation of OOP and his infamous Ants demo. I was flabbergasted at the fact that I spent 3 months trying to figure out how to get two processes to talk to each other and there was this guy running a graphical simulation of over 100 threads syncing flawlessly. It was a real wake up call to what was possible.
+
+So I dove right in. At the time, no one was employing for Clojure and so I worked as an IT guy in a new age crystal store learning the craft. No one really knew what I was doing and as most of the staff had the innate ability to talk to crystals, they assumed I had the same type of talent except with electronic equiptment. I have very fond memories of the time there both working and learning. I remember that it was around 2010-2013 period where Clojure was really growing in terms of the community and all the interesting ideas that people were implementing. Because of my isolation, I had to resort to asking questions on stackoverflow. I stopped asking a while back but the count of my clojure related questions is currently at 205. Of course, there were a few assholes on SO that find enjoyment marking questions as 'closed' or 'irrelevent' because they didn't understand it correctly. If those questions had been allowed to stay, my SO clojure related count would have been about 230. But who's counting anyways.
+
+There was also the Monthly Melbourne Clojure Meetup Group organised by James and Hank. It was a real treat to talk to those that solved problems through deduction, logic and language instead of massages, eagle feathers and putting crystal on each other.
+
+In the period of 2010 to 2013, so much cool shit came out on a weekly basis. I don't know how it happened. It was a time where I was constantly challenged to improve my thought and design process. The highlights showcased in the 2011 and 2012 conj talks were phenomenal and the level of innovation and experimentation was beyond anything I had experienced. As someone still new to the scene, I was star stuck. 2013 marked the year where clojure 'jumped the shark' so to speak. This marked the path to 'enterprise clojure'. One of the real treats for 2013 was the talk by prismatic where the community was shown that it was not only conceivable, but also possible that an entire platform could be built on clojure. That talk set the bar and the trend of the enterprise platform has continued over the years. Now, it's a staple of a conference to have about half a dozen talks where a team lead (but not necessarily dev) of a well known organisation saying "look everyone, we've built this large data analytics platform using clojure". While it was cool about 5 years ago, I've lost the excitement that those talks once brought.
+
+I've decided to break from actively contributing to the community. This is mainly from actions that I've seen from my perspective that have fragmented community. I'm putting the focus on Cognitect and the company's impact on developer culture.
+
+One. The Establishment and the myth of the Rockstar Developer
+
+I understand that there is great pressure for a company to increase it's product range, market its brand and make money. However, in the case of Cognitect, I feel that the company has had an unreasonable amount of influence of the language. Like a single mother with custody over her kids, Cognitect has definitely been the major force in shaping the direction of development. This is however a double-edged sword. I have had a couple of pull-requests rejected and then introduced a year after I released a library for the feature. I don't think I'm the only person with the experience.
+
+The fact that Cognitect have hired so many high profile contributors to the Clojure ecosystem has resulted in a boost for both the company, as well as the people that work there. Who doesn't want to play guitar and talk immutability with Rich at the watercooler? Rich epitomizes this concept of a 'Rockstar Programmer' - a brilliant, all-round individual who could solve any problem known to man - all in his sleep. I know I believed in it - and the things that I would have given to be part of the 'establishment'
+
+How this mythos influences the community however is subtle, but present. The mythos attracts the gunslingers and the lone rangers of tech. Those that know that anything is possible. For many in the community (including myself to some extent), it also brings out the darker attributes of genius such as narcissim and jealousy. In short, clojure amplifies the qualities inherent within an individual with a tool that is extremely powerful. The need for cooperating with others diminishes and this is not good for community.
+
+Two. Standards and Ignoring the Defacto Community
+
+With great power comes great responsibility. I feel that Cognitect could do a lot more to promote other projects with the clojure ecosystem that are not internal to the company. One example was some of a 'defacto standard' going away was Noir. At it's peak, Noir was a great library for building webapps due to it's emphasis on documentation and design. It had the potential to be something pretty cool if more people supported it. I don't know what happened but suddenly, it was not the flavor of the month anymore. If more collaboration had occured then maybe it would have been different. I don't know. Maybe using compojure was enough. I don't know. I just felt that Noir had the potential to be the 'django of clojure' and due to whatever reason, it never did. Noir was essentially dead in 2013 when Chris Granger started on Light Table and his attention moved else where.
+
+In the last couple of years, two projects gave me doubts as to the intentions of the core. The first was the Arachne project and the second was clojure.spec. I believe that both projects undermined the spirit of generousity by putting the interests of the establishment over that of the whole. Whether deliberate or not, there was a certain set of blinkers put on that ignored alot of what was going on within the broader community.
+
+Since the post was published, there was a a bit of confusion about my portrayal about the status of Arachne. I wanted to clarify that Arachne is not an 'official' Cognitect project. However, there is a certain prestige gained from working at Cognitect and this was what I wanted to express. I personally found the Arachne kickstarter campaign a little bit condescending and I was interested to read yogthos's comment on reddit. I didn't think we needed yet another web framework - we need more documentation, examples and sexy home pages for existing ones. However shallow that may be, it worked for Noir and countless frameworks in other languages. A sexy webpage for Ring would be amazing. I personally would contribute because the library has helped me immensely over the years. I thought that all the campaign was to confuse an already fragmented landscape of web frameworks.
+
+When clojure.spec came out, I was quite sad because I had grown very attached to prismatic/schema. I felt that schema was on the verge of establishing itself as the 'defacto' standard and although spec offered 'additional' features, it meant that the community was forced to choose. The energy and momentum going into schema suddenly stopped and it's a real shame because once the 'official' version comes out, the alternatives tend to be overlooked.
+
+Three. Datomic
+
+Just please open source it already. GraphQL is here to stay and gaining ground. The breakthough technology is somewhat emulated with gundb and very soon the technology could be superceeded.
+
+Quite a few things have happened that made me recently that made me reevaluate how long I should be a developer.
+
+I think I'm still ahead of the curve but I've realised that I can't keep running anymore. Technology pushes forward in leaps and bounds and we the technologists end up getting in the way most of the time. The things we thought impossible has become the norm today. Money, fame, success - they are all so short lived. What's important is community, respect and understanding because it's through others that we grow.
+
+Fuck. Clojure.
+
+Update: I've taken note of some of the confusion with language around the timeline of Noir and the timeline of Arachne and updated the post. Also, the relationship of Arachne and Cognitect can be better explained by Tim Baldridge of Cognitect in the featured comments. 
+http://z.caudate.me/on-whose-authority/

@@ -29,9 +29,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "** blog idea [#B")
- (rear-context-string . "鍐欎唬鐮侊紝閫氳繃瀹忕殑鎵╁睍鑷姩瀹炵幇銆俓n")
- (position . 9890))
+ (front-context-string . "** RSS Feed [#B]")
+ (rear-context-string . "的利益纽带，是钱。而不是科学。\n")
+ (position . 10437))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

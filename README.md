@@ -2031,6 +2031,109 @@ org-alert Provides notifications for scheduled or deadlined agenda entries.
 ```
 
 `M-x org-alert-enable`即可（需不需要输入？）
+
+
+### 68. gnus
+
+相信你也查了很多的gnus，我找到了三个花时间的地方
+
+1. 我使用126或者163邮箱，所以我得事先打开pop3/SMTP服务(打开邮箱，设置里面就有)，这样会要求你输入一个客户端的文本密码，这个是和登陆密码不一致（即使你输入一致也会叫你重新输入不一致，注意这个文本密码在下面的设置是有用的）
+2. 有了文本密码了，现在就去`M-x gnus`?no,gnus会打开一个组，如果没有在~/.gnus.el设置select-first-method,就会报错。如果没有first-method就设置为nnnil，我是这样设置的，不然老是报错
+3. ~/.gnus.el的~在windows是指`C:\Users\YeZhao\AppData\Roaming`
+注意Pop3是110，smtp是25（gmail的设置又不一样 比如578）
+
+下面是我的配置
+```
+ 
+(setq gnus-select-method '(nnnil)) 
+(setq gnus-secondary-select-methods '((nntp "news.gwene.org")))  
+;(setq gnus-secondary-select-methods '((nnml "")))   
+(setq mail-sources  
+'((pop :server "pop.126.com"  
+:user "zh**key@126.com"  
+:port 110  
+:password "457***ran")))   ;;文本密码
+(setq gnus-secondary-select-methods '((nnfolder "")))  
+(setq user-full-name "Ye zhaoliang")  
+(setq user-mail-address "zh***key@126.com")  
+(setq smtpmail-auth-credentials  
+'(("smtp.126.com"  
+25  
+"zh***key@126.com"  
+"457***ran")))   ;;文本密码
+(setq smtpmail-default-smtp-server "smtp.126.com")  
+(setq smtpmail-smtp-server "smtp.126.com")  
+(setq message-send-mail-function 'smtpmail-send-it)  
+(set-language-environment 'Chinese-GB)  
+(setq gnus-default-charset 'chinese-iso-8bit  
+gnus-group-name-charset-group-alist '((".*" . chinese-iso-8bit))  
+gnus-summary-show-article-charset-alist  
+'((1 . chinese-iso-8bit)  
+(2 . gbk)  
+(3 . big5)  
+(4 . utf-8))  
+gnus-newsgroup-ignored-charsets  
+'(unknown-8bit x-unknown iso-8859-1))  
+;;(eval-after-load "mm-decode"  
+;;'(progn  
+;;(add-to-list 'mm-discouraged-alternatives "text/html")  
+;;(add-to-list 'mm-discouraged-alternatives "text/richtext")))  
+(setq gnus-default-subscribed-newsgroups  
+'("gnu.emacs.help"  
+"cn.comp.os.linux"  
+"cn.bbs.comp.network.programming"  
+"comp.std.c"  
+"comp.protocols.tcp-ip"  
+"comp.os.linux.development.system"  
+"cn.bbs.comp.emacs"))  
+  
+;; * 键，帖子被拷贝到本地的 cache 中保存起来，再次 Meta-* 取消  
+(setq gnus-use-cache 'passive)  
+;; 可以保留同主体中已读邮件，把 'some 改为t可以下载所有文章  
+(setq gnus-fetch-old-headers 'some)  
+;; 保留已发邮件  
+;; 在 group buffer 里键入`G m'，然后输入组名"mail.sent.mail", 接着是输入"nnfolder", 这个组就建好了，然后用同样的方式建立"mail.sent.news"组。  
+(setq gnus-message-archive-group  
+'((if (message-news-p)  
+"nnfolder:mail.sent.news"  
+"nnfolder:mail.sent.mail")))  
+ 
+ (setq gnus-summary-line-format "%U%R%z%d %I%(%[ %F %] %s %)\n")
+```
+
+有了这个配置还不行，你得有一个~/.authinfo.gpg（我在66有配置了加密，gpg加密)
+不然邮件发不出去。
+
+```
+machine smtp.126.com login zh***key@126.com password 45***ran port 25
+machine pop.126.com login zh***key@126.com password 45***ran port 110
+
+```
+
+把上述邮箱改为你的邮箱，把密码改为你的文本密码（不要用登陆密码！）
+
+到这里，你就可以使用`M-x gnus`
+
+G m创建组
+U 显示所有的组信息
+m 创建邮件
+
+ok, 简单使用就这样！
+
+
+### 69. nyan-mode 让小猫左右扭起来
+
+[nyan-mode][147]
+
+简单配置ui.el
+```
+(nyan-mode t)
+
+```
+
+这样在你的statusline就出现了彩色尾迹的小猫，每当你的cursor下移cat往右走，cursor上移往左走。
+
+
 <hr/>
     <hr/>
 
@@ -2182,3 +2285,4 @@ org-alert Provides notifications for scheduled or deadlined agenda entries.
 [144]:https://coldnew.github.io/4bb1df06/
 [145]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/crypt.jpg
 [146]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnupg.jpg
+[147]:https://github.com/TeMPOraL/nyan-mode/

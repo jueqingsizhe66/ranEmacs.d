@@ -1,9 +1,8 @@
-﻿** df g
+﻿* none of
 
-** FIXED g df
-   CLOSED: [2017-09-12 周二 17:45]
-
-
-   - State "FIXED"      from              [2017-09-12 周二 17
-
-
+** df g
+dsfdsf
+*** gdsg                                                          :@office:
+*** sgd
+*** paper detail
+*** hel                                                      :不紧急不重要:

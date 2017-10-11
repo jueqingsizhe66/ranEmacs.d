@@ -204,6 +204,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(canlock-password "9d4c00813f66a64dfd7ed230bf179494796588e6")
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
@@ -220,8 +221,11 @@
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
- '(session-use-package t nil (session)))
+    (nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(session-use-package t nil (session))
+ '(smtpmail-smtp-server "smtp.163.com")
+ '(smtpmail-smtp-service 25))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
