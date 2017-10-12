@@ -1,0 +1,4 @@
+* Hansen Wind turbine aerodynamic
+** P49 the description of blade(with twist angle and chord length)
+** P50 three dimension rotation effect
+** P74 multi-axis angle

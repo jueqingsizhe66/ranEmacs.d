@@ -28,10 +28,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "** RSS Feed [#B]")
- (rear-context-string . "的利益纽带，是钱。而不是科学。\n")
- (position . 10437))
+ (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
+ (front-context-string . "** http://www.li")
+ (rear-context-string . "y/\n Chris Zheng\n")
+ (position . 3701))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

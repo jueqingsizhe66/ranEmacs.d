@@ -31,7 +31,7 @@
 ;(if (boundp 'org-user-agenda-files)
 ;  (setq org-agenda-files org-user-agenda-files)
  (setq org-agenda-files (list
-                       "~/.emacs.d/GTD/newgtd.org" 
+                       "~/.emacs.d/GTD/orgBoss/newgtd.org" 
                        "~/.emacs.d/GTD/orgBoss/Book/book.org"
                        "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org"
                        "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org"
@@ -43,10 +43,11 @@
                        "~/.emacs.d/GTD/orgBoss/Someday/someday.org"
                        "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org"
                        "~/.emacs.d/GTD/orgBoss/Site/www.site.org"
-                       "~/.emacs.d/GTD/writing.org"
+                       "~/.emacs.d/GTD/orgBoss/writing.org"
                        "~/.emacs.d/GTD/orgBoss/Habit/habits.org"
                        "~/.emacs.d/GTD/phd1.org"
                        "~/.emacs.d/GTD/Dissertation.org"
+                       "~/.emacs.d/GTD/thesis-proposal.org"
                        ;(append (file-expand-wildcards "~/.emacs.d/GTD/orgBoss/Journal/2*"))
                        ;"~/.emacs.d/GTD/orgBoss/Journal/"
                         ))  
@@ -168,7 +169,7 @@ Captured %<%Y-%m-%d %H:%M>
 (defun my/expense-template ()
   (format "Hello world %s" (plist-get org-capture-plist :account)))
 (setq org-capture-templates 
-      '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/writing.org" "创意") 
+      '(("l" "灵感" entry (file+headline "~/.emacs.d/GTD/orgBoss/writing.org" "创意") 
                         "* %?\n %i\n %a")
 ;; file+datetree changed to file+olp-dateree 
         ("J" "Journal" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Journal/journal.org" ) 
@@ -182,7 +183,7 @@ Captured %<%Y-%m-%d %H:%M>
          entry (file "~/.emacs.d/GTD/orgBoss/Journal/20171007")
          "* Event: %?\n\n  %i\n\n  From: %a"
          :empty-lines 1 )
-        ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
+        ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")
                     "* TODO [#B] %^{Task} %^g
                     :PROPERTIES:
                     :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
@@ -192,10 +193,10 @@ Captured %<%Y-%m-%d %H:%M>
 
                     %i
                     " )
-        ("T" "QuickTask" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
+        ("T" "QuickTask" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
                         "* TODO [#C] %^{Task}\nSCHEDULED:%t\n"
                         :immediate-finish t)
-        ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")  
+        ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
                         "* STARTED %^{Task}"
                         :clock-in :clock-resume)
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
