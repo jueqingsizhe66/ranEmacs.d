@@ -2155,7 +2155,7 @@ ok, 简单使用就这样！
          :empty-lines 1 )
 ```
 
-用函数的方式返回不行，但是用setq的方式确实可以。Good!
+用函数的方式返回不行，但是用setq的方式确实可以,这样就可以使用calendar（ij插入当天的记录，又可以使用ctrl-c c Ret j产生Event)。Good!
 
 <hr/>
     <hr/>
