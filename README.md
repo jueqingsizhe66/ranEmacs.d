@@ -2134,6 +2134,29 @@ ok, 简单使用就这样！
 这样在你的statusline就出现了彩色尾迹的小猫，每当你的cursor下移cat往右走，cursor上移往左走。
 
 
+### 70. 修正journal的模板创建问题
+
+在[标题56][148]留下一个bug，终于解决了.
+
+.orgConf.el配置如下,
+
+```
+
+(defvar org-jou-dir "~/.emacs.d/GTD/orgBoss/Journal/"
+"gtd org files location")
+
+;(setq org-default-notes-file (expand-file-name "index.org" org-agenda-dir))
+(setq current-time-file (expand-file-name (format-time-string "%Y%m%d") org-jou-dir))
+
+ ("j" "Journal Note"
+        ; entry (file+headline current-time-file "Write it!Pls") ;; it works
+         entry (file current-time-file )
+         "* Event: %?\n\n  %i\n\n  From: %a"
+         :empty-lines 1 )
+```
+
+用函数的方式返回不行，但是用setq的方式确实可以。Good!
+
 <hr/>
     <hr/>
 
@@ -2286,3 +2309,4 @@ ok, 简单使用就这样！
 [145]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/crypt.jpg
 [146]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnupg.jpg
 [147]:https://github.com/TeMPOraL/nyan-mode/
+[148]:https://github.com/jueqingsizhe66/ranEmacs.d#56-%E5%A6%82%E4%BD%95%E6%8A%8Ajournalorg%E5%88%86%E6%88%90%E6%AF%8F%E5%A4%A9%E6%97%A5%E5%BF%97%E7%9A%84%E5%BD%A2%E5%BC%8F

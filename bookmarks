@@ -28,10 +28,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** http://www.li")
- (rear-context-string . "y/\n Chris Zheng\n")
- (position . 3701))
+ (filename . "~/.emacs.d/GTD/orgBoss/Journal/20171012")
+ (front-context-string . "** Event: It fin")
+ (rear-context-string . "* Write it!Pls\n\n")
+ (position . 230))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

@@ -166,6 +166,12 @@ Captured %<%Y-%m-%d %H:%M>
 
 %i
 ")
+(defvar org-jou-dir "~/.emacs.d/GTD/orgBoss/Journal/"
+"gtd org files location")
+
+;(setq org-default-notes-file (expand-file-name "index.org" org-agenda-dir))
+(setq current-time-file (expand-file-name (format-time-string "%Y%m%d") org-jou-dir))
+
 (defun my/expense-template ()
   (format "Hello world %s" (plist-get org-capture-plist :account)))
 (setq org-capture-templates 
@@ -180,7 +186,9 @@ Captured %<%Y-%m-%d %H:%M>
         ; entry (function get-journal-file-today)
         ; entry (format "%S%S\" \"~/.emacs.d/GTD/orgBoss/Journal/\"" (format-time-string "%Y%m%d"))
          ;entry (file (concat "~/.emacs.d/GTD/orgBoss/Journal/" "journal.org"))
-         entry (file "~/.emacs.d/GTD/orgBoss/Journal/20171007")
+        ; entry (file "~/.emacs.d/GTD/orgBoss/Journal/20171007")
+        ; entry (file+headline current-time-file "Write it!Pls") ;; it works
+         entry (file current-time-file )
          "* Event: %?\n\n  %i\n\n  From: %a"
          :empty-lines 1 )
         ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")
@@ -237,7 +245,11 @@ Captured %<%Y-%m-%d %H:%M>
           )
          ("h" "Habit" entry (file "~/.emacs.d/GTD/orgBoss/Habit/habits.org")
           "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
-
+         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+         ;; ("k" "work" entry (file+headline org-default-notes-file "Cocos2D-X") ;;
+         ;;  "* Cos [#A] %?\n  %i\n %U"                                          ;;
+         ;;  :empty-lines 1)                                                     ;;
+         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ))
 
 ;; Custom agenda command definitions
