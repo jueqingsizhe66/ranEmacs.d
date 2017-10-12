@@ -6,12 +6,12 @@ and ubuntu, all valid for newer.
 
 [原始记录版本][86]
 
-*注意，标题55引入了flyspell问题，所以在windows得安装aspell,这个错误会在
+*注意，[标题55][149]引入了flyspell问题，所以在windows得安装aspell,这个错误会在
 调用org-agenda的时候出现(本质是调用flyspell mode失败)*
 
 *注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
 
-*注意，在标题66我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
+*注意，在[标题66][150]我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
 
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
@@ -587,7 +587,7 @@ emacs对应的先标记
 然后调回来使用，
 `C-x r j` ,输入a即可
  
- 有些人也说可以用C-SPC，然后C-x c-x跳转即可(进一步可以参考标题16)。
+ 有些人也说可以用C-SPC，然后C-x c-x跳转即可(进一步可以参考[标题16][151])。
  
  
 ### 26. transpose character and words
@@ -2310,3 +2310,6 @@ ok, 简单使用就这样！
 [146]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnupg.jpg
 [147]:https://github.com/TeMPOraL/nyan-mode/
 [148]:https://github.com/jueqingsizhe66/ranEmacs.d#56-%E5%A6%82%E4%BD%95%E6%8A%8Ajournalorg%E5%88%86%E6%88%90%E6%AF%8F%E5%A4%A9%E6%97%A5%E5%BF%97%E7%9A%84%E5%BD%A2%E5%BC%8F
+[149]:https://github.com/jueqingsizhe66/ranEmacs.d#55-failed-enable-flyspell-mode-in-window10
+[150]:https://github.com/jueqingsizhe66/ranEmacs.d#66-%E6%9C%89%E4%BA%9Btopic%E4%B8%8D%E6%83%B3%E8%AE%A9%E5%88%AB%E4%BA%BA%E7%9C%8B%E5%88%B0org-crypt
+[151]:https://github.com/jueqingsizhe66/ranEmacs.d#16-multiple-cursorseditiingel

@@ -29,9 +29,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Journal/20171012")
- (front-context-string . "** Event: It fin")
- (rear-context-string . "* Write it!Pls\n\n")
- (position . 230))
+ (front-context-string . "* Event: yes it ")
+ (rear-context-string . "ter/org-gtd.el\n\n")
+ (position . 394))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)
