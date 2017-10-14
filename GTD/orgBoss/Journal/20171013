@@ -1,0 +1,36 @@
+星期五, 2017/10/13
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 15:01 find 
+
+星期五, 2017/10/13
+
+
+
+
+** 15:32 
+
+* Event: org time budget
+
+* How does this differ from Effort estimates?
+
+Effort is an estimate of how long a task will take you to complete. You might get overdue or finish sooner, and that's fine because estimates are guesswork. However, time/clock budget is a fixed quantity you can't go overdue with. A person working 40-hour week has only about 40 hours of free time (5h for 5 work days and 2x10 for weekend), and that's it.
+
+To plan your tasks you use effort estimates, to schedule them within weeks or months you use budget (sometimes called capacity or goal).
+
+For example, you can have a task which might have 30 hour estimate, and you wish to work on it for 3 weeks. Therefore, you'd budget 10 hours weekly to work on this task and no more, allocating the rest of the time to other tasks. If your estimate was too little, you will simply extend the period for another week of 10 hours. If it was too little, you can re-budget the surplus time on other tasks.
+Why should I want to budget my time?
+
+Resource allocation is the basis of effectivity. With a purposeful budget you won't get overwhelmed about thinking what to do when. Once you use up all your hours it means you need to work on something else. This way you can spread your work on different tasks to avoid burnout. Coupled with basic scheduling this can lead to surprising amount of "administration" time saved.
+When should I budget my time?
+
+A "recommended" work-flow is to have a weekly (or by-weekly) recurring task called "Plan for next week" (fortnight/month...) where you consolidate your tasks and refine your budgets, review stale tasks etc. This can take anywhere from 10 to 60 minutes depending on your level of sophistication. Hitting the sweet-spot of not wasting more time than necessary while freeing you from all the cognitive burden during the week might take some practice and discipline.
+  
+
+  From: https://github.com/Fuco1/org-clock-budget
+

@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("rupeng.sql"
+(("yan"
+ (filename . "~/.emacs.d/GTD/phd1.org")
+ (front-context-string . "                ")
+ (rear-context-string . "\n\n\n*** 研究内容    ")
+ (position . 6983))
+("phd1.org"
+ (filename . "~/.emacs.d/GTD/phd1.org")
+ (front-context-string . "力线\n升力面方法一般是在环量求解")
+ (rear-context-string . "典型控制规律\n\n\n* 升力面和升")
+ (position . 12415))
+("rupeng.sql"
  (filename . "h:/rupeng.sql")
  (front-context-string . "ues(null,'card_v")
  (rear-context-string . "o T_Settings val")
@@ -28,10 +38,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Journal/20171012")
- (front-context-string . "* Event: yes it ")
- (rear-context-string . "ter/org-gtd.el\n\n")
- (position . 394))
+ (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
+ (front-context-string . "** TODO [#C] 测试2")
+ (rear-context-string . "017-10-15 01:37\n")
+ (position . 8001))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

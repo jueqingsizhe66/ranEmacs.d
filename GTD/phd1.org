@@ -118,9 +118,70 @@
 ** 多轴角项目
 *** 项目名称 
 基于多轴角运动模型的风轮非定常气动特性与三维流动研究
-*** 中文摘要
-*** Abstraction
+*** 中文摘要    [%]                                                 :crypt:
+-----BEGIN PGP MESSAGE-----
+
+hQEMAw1pL9obieEVAQf7BHdCnme8ghZ5JSp/edmHyvcflvnQcw6byteXi0jIWShB
+P8ixsthvK3KiUZIgU3epvu5B427WiCw8TrGoauoVCdGcIG5JMW4BPOlIilRFgy/J
+lzcB2+w40Vmv4leKShomZMm4vhlG0zh7G/dtxTreAq4wW1L0K0ZDU/pG9z/DpOhP
+wJv/UQGfPQhwydhTX4M2CZxHF+LuaDCGljhdepHd14sdtpdG8HooLNeBsHolWHak
+3kECkdfYLMPkC+8BE7M5tONwdPq7UVdViVQZAJUyRxwoapfGp5/0qI3cXumVbw+F
+XjXCzIvcCyOXj2zt95RuyBHrihT0V3I+7SNOvr1H1NLpAS4Z8DQGBht4SROwHLV/
+BflPzsS6fT2GC8c+oSRph6pztVyRaY/7Ch8wOR5TYo1W4KLsyoQVqgzKS0cxjuFe
+YhKjZbUfE3MdIW7sLIyP0x8KgDnPE+o9ZhT8Kp6hBbHg6c1FnlIIqkwY0HgHpzIA
+ItmdkvTPZzhYzExTfdPZfbOPjKCvOK+g2oBpc+OVru8XpBXoTHEvT6t5DBFIoC9t
+CU8VrgXG81JEppmfwh4WvelvJILT4JghR7FKn4CTdg98emXJgn1xh8gAJGHxjy0r
+sVjOwW6zHenulCcn6bRc7Cvt/GF4jPCBgfE7eBsUEi+CqJCko7XdfwgKW+/C7JiE
+mGyDP2wyp0pFZFph9bcQFE52YCuzasKsSAKDSrOzsqWzRS47M/I6QIHULfV2N7Q/
+pVcF3a1e1ejgMPU1CHUOJky4SO2aa4eJ7hz6QaEGnySKXfTKbe6Bm1X8kydc2VJK
+dcDCRDqhj8eRgWWxJP2OrGZSr0wic/lcCZ6UDpAmeq2j1oGUN3rnN1hbL0D5eGJj
+Ltk7Una+Z1O1e85FcOTVsLZ6qxOZcWwR1GlPV4wfXSlpdutngykqR2A/FzwaCART
+1JYwm/u3Of8I9xLmLCs4NlpHKBctuSUP6I80suttWGzvx3uMO+9md57guf5s7yEf
+uDgaxBfKZ+5wYHbHZugaiyjAr4ng5kpO+0d4EGNlYaftI5QR5+mpHVeeRGQ3dPQl
+K6w/pdU0P2BgGUJzjcKC3BSTb0/6IsXEK2X0PXALIl8+rBlmkKDHXacLtTakRs+F
+3TxoELGZ/zD5sR+fSpyULQYmuU6bInfFWrzp4T7azSj2vU9A1fc5kdin+lECl/ra
+43lYmbtKfnT7eHDFQ2BZS/IvVhGYieCbnvY7rFiz5SxiUJgk3N8+NUsfZHOxRxut
+7nnhMhoUUrRZPZJWvzl/6BFH1RZuR9QpbfY9eVYsemuYd8HhMKV4blUfw0fHzRav
+IYq/3qcQGMNPDyFxK1rC9GF/oVItU3MyFRa5jd7lXfg6jPw1lHY9LcOMEYfA3Jnc
+T0L1jqvjOYD5DYhhuTTv5r4ogzs/YhcQwslToJM39Y0Ci0xQa0kfE5I44kW3k6ps
+HvIvJCbyp937deqldVWt9r4wETFXlbMBwFJoIoXpOyzWu4lg07JSO0lPRpU1X3RY
+evw=
+=9INX
+-----END PGP MESSAGE-----
+*** 关键词
+水平轴风力机；多轴角运动；非定常流动；CFD模拟；风洞实验
+*** Abstraction                                                     :crypt:
+-----BEGIN PGP MESSAGE-----
+
+hQEMAw1pL9obieEVAQf+KVIBfmqsyKPh/nlHIb07vb355MSbVPQLYuMl28s5YyHc
+agXkciqtiU927Mclo5znrALKPEHLc+Dvrocue/H1TNFV6IzeqfzvDSLK43G4cEqE
+zJ+1yAy5L1I7k3Xdqah4MPXUVw6v9rPX11A/vyi3zKkHSo4241hR4yQ5+IOBRYR3
+2HHtqoIR+cR+J5vWgyKbf+NAHEKJaFj8zVUDv6Wla7/HjyUK6vvMW4bLczipFL6n
+e6HJ1aKtx36vwlgZ2QHo0VkThjP2I7DEbo8gi8FwcQ34+fePFziQCEvxyhMR4uWW
+Vh/wWFz+qxqO0Ocwzy+hwMVBTpz5XmOFA+0rBL3H6tLpAa8CKos5MlK5DIuWhPC1
+hCUx7288+u3fRoghDxVX+OTII8QK81Lk6A7xFJkRpu58n9onEIyuLKKTorSnPy5r
+Pa8EwQv1ROdovKIJVuNL+dTENdrGjA1QpUsYhV10OyoMwYaKzKCu4rb5oThT7x3a
+vVu42qR/TvylPrDRhGBtd290x0UX+qvNAfXxbJWN6krF1opyzwVNoFidCkgWeVhe
+79HKBMIxIoekXGE4cCNlZFlDzYF5AvRoN7UKEaNJf1Y7GIUOp3uTYBh36u/f9s0e
+Ms2fUt7GmoEl6RW11ii454eM82Zpmyj7fx1bP88XNnhyR2cdyPumwwB4mEHm03r6
+Bs08CZnU8Qi0TRUXas73TYX4JltVNkt+3OJxsvORz1ELxuwfJZHvwU42lULL58ul
+UsRB+cMfwTWkZa2TaS4avkBaSPhWbBFuEESy4oEn3O4WkbRmA4cOHt9dDUWrJxRa
+4LwbMe9ffA6qJvcpWGlEPNMYQmDxz19q5Qkf92g1zliusvLjzZ9l2hqa0L6glocj
+rxC/nJkGgDuCcOPmn2wZfAKsNY+SturA2rT5AqC4qxPuZPxaq/wklYTwL8NnFDNs
+gdiF6jzfUlrHkeme9V11UGA5fepZ3DNhIQDfoqtb8Ub4SQewfNZ2r2BaFIXW3dEM
+HzWsOUhMK+CfdLwXPRRhgr7Ah5XkyFfHtlGMpud+bVdH/nOkiMH5Co4U1b1nvxYf
+RNaOqzbQ1RbgQfjbcOyAFt1Gfb7cMl4QG1aUH5iZSHZfOV9x9Ka5L5nD5d7W1s/y
+Mh+VkJFVMbUqJzl0SRONtC09W9+ecF83f97d6T2L046LOC8MkfJdgHWdy1Nf6JGs
+8scWz+vwei1cyqB5+xsEhsVHtlD1oLdiI0RynclU+3JXz0FsSFknHlxCXOj+/F6h
+tB4LuPyEJNLTSCZHKk57CQnuqPkmDiCIL8NJmTOxPARaS8Y0fM2odNdc1C0ucdrk
+hQIIgUnhsFcqHv37mntvKOy/amIhZVzbIZYebeGRYp/8RKU4Ct5ir6aL4SD/kWm6
+ugBlmxuGXfH67rUneo3xSHYPKNdzfuvHrEX2Mhk+9pN23GPBKFfyrel1nKXBIiZZ
+RdIYja5qSuvE8g==
+=LewD
+-----END PGP MESSAGE-----
 *** keyword
+horizontal axis wind turbine; multi-axis angular motion; unsteady flow;
+CFD simulations; wind tunnel experiments
 *** 预算说明书                                                      :crypt:
 -----BEGIN PGP MESSAGE-----
 
@@ -149,3 +210,137 @@ ITGMN2nU/Q50Rv37CKdZ8YzG6Z80O/dlWNRw3esIe5KGIOZfzmtXQNm3jO1wAgFa
 F8eWfZ09vPoFWjhnfYUqm92U
 =A6vW
 -----END PGP MESSAGE-----
+
+
+*** 研究内容                                                        :crypt:
+-----BEGIN PGP MESSAGE-----
+
+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
+=4DGw
+-----END PGP MESSAGE-----
+
+
+
+*** 拟采用的研究方案和技术路线                                      :crypt:
+-----BEGIN PGP MESSAGE-----
+
+hQEMAw1pL9obieEVAQgAhyhM6daElK2Zu97I6vi0vTZm+YhDyE4BfG4T52Z+wGGb
+rP6hll3tgNBmWwt61a8+XHEbDCZTEG8cLbkSHsEfsuPS7r9J3Nlo8oBSMujukkOB
+QSnrYif/BjiiNbDg7x3ChSn6/U9Eb1KEewlACEZGQapmIpcfjQEP6d0a7z/qseAI
+SuTetGxT4XflrjzTjzKsyg5lXXrCfcejENzh8rHzAWR/UEjkbfV714fyaHSx/MGg
+d72TbEM/VQseDHs0F2yxTPBgdqR7RfzsD1puoFvZO/0yQ5jOtiZw/XANaKTX99FE
+25EA8widjQfLPUBhdZ+jSwWigMNQ7ih70c5gg5jqcNLpAdpL8IFr5ffmucsKABsW
+7gKHEjNntrTthE4WwubQmFR65LAcneSmP1tTIpPj4q+DdvAj+TiP02NnsfME4SIe
+KwAUgNblYDqsbvz154GcBYuhabBh1RkEaX0N3tPVBiPjBcEPxcRXhp62EKIWbZC2
+Nrqg/Vv3I4hvydTBbfaxIOqr4H2Bq/fqjWTE+HmFSvobM684D9x9wAYS68rRsFI/
+AEcpntXc3NfMp2BywnvN+lTDUWeUclPb2acGVTcXbXfuNqtgMUFct1qgsPnTEVQB
+MHllxxet3UXbwvaWWGluFOxO/bEN6qwv9Ss35qlGMJQkmRoILcNAE0HHI0zN9fks
+J5L6GL0QAvhmKzHvAEut1FWZdrXbQe5SzVCdiy4EAa7JsL6xTHsMyOFAA2azc6lA
+LKD9TOhT60ChQghuGfdlN6XXLRSeiHnrNgq+mTSOZ6sZtIod549q05aqPnkeY9Kj
+T6NY2aSv9eOOyWO3LZlqSzALzn66XMAbeYB4BysWa/DBmE2h1DSoDZj3sDm3yLD/
+CFn3+9XU8cBG8tZuwUiOVIBgmMqWTda+mftqb8dOC0HAUZtuJcbozF0TupvYSJtU
+6avFBI8UTKwcW+w7r983+pXqs9oRM5slJRpJv6mrRkZcLJTirK+2ak8Qsw/1JStq
+tmXn5jIrsZ3H2A9Jgek8/p7AEyaqWmiCSk5r07jlCOe6OXEVWWVzYJWcSCZkqDZK
+Tmtw8uVig09v5GyQ2YETuk6zoeuJZn4OgMmYzyoHiF5mQiNsrHqD51rxZJAwxpa8
+gf92AMm3VXKrPYVh3VJyy6pvlf4pi2aDGhEx8bHZS7xPFBQXfgnwhqvdFx1bLUQ0
+VprAltuPj6oR3uHJFTb78yWKA2oLfNbjRbI6tIKGX6VbPNDJp3g8VxHcmDJtKY0Q
+/uFdlUHOdItFZDivp+gjOOl+mZQer8utcI+9S8Rg9pnve2/HZhY=
+=qhJB
+-----END PGP MESSAGE-----
+
+*** 预期成果
+
+*** 可行性分析
+
+在本课题研究之前，实验组于2012年开始关于风力机叶轮失谐影响的课题展开研究，开发了基于自由涡尾迹的风力机涡分析方法，构建了
+CFD/CSD的全三维流固耦合模拟平添。在方法正确的基础上，针对风轮系统的多种失谐因素，建立了基于非嵌入式概率配置点法风轮失谐
+敏感性分析方法，从而可以分析、减少或利用那些具有高敏感度的失谐问题对风力机高效稳定运行的影响。
+课题采用递进增加复杂度的方法进行研究。以创建风轮多轴角运动为目标，首先研究单个角运动对三维非定常的影响。然后，进行两个角运动
+叠加对风轮和塔架的三维非定常流动的影响。以此递进增加复杂度。同时，通过敏感性分析可以获得各个角运动对流动的影响程度，对影响程度
+小的进一步进行简化。
+*** 创新点
+
+1. 建立多轴角运动模型，用于。。。
+*** 
+- [ ] 前后往复运动
+  - [ ] 可以在数值风洞中实现(CFD里面试一下）
+- [ ] 多轴角运动
+- [ ] 典型控制规律
+
+
+* 升力面和升力线
+升力面方法一般是在环量求解时基于流动无分离假设，当解出叶片攻角后再通过翼型气动数据算出气动力，因此
+叶片绕流分离越大时，叶片环量计算偏差越大。
+升力线方法在叶片环量计算时就引入翼型气动数据，环量计算更有效。但是，叶片环量方程组是隐式非线性方程组，在
+较大偏航角工况等叶片环量分布存在较强的非线性时，方程迭代比较容易发散。
+  
+* 偏航机理
+
+均匀来流条件下，大小相等方向相反的偏航来流，会在风轮旋转平面上产生完全相反的气动载荷分布。其原因主要在于
+偏航风速平行于风轮旋转平面的速度分量，与叶片的相对运动状态：若同向，则气动载荷增大，反之，则气动载荷下降。
+并且，若偏航风造成风轮上半部分载荷高，下半部分载荷低，在叠加了垂直切变风的作用后，上半部分载荷会更高，而下半部分的载荷
+更低，叶片的气动载荷波动幅值会增大，更容易造成叶片疲劳。相反，若偏航风造成风轮下半部分载荷高，上半部分载荷低，
+则叠加垂直切变风的作用后载荷的波动幅值会有所下降。(垂直切变风在风轮上半部分风速较高，下半部分风速较低，因此风轮气动载荷
+也呈现出相同的分布特点。)
+
+
+切变影响:整个风轮的气弹载荷仍然显示出2p(3p)波动；单个叶片载荷和流动参数随方位角呈近似余弦函数式的周期性波动，在整个风轮
+旋转平面内呈现上下不对成分布
+
+耦合影响: 风轮载荷和叶片变形呈周期性震荡；平移变形显示出滞后性(怎么看平移变形),但对于风速的相位差沿展向基本不变，而扭转变形
+与载荷的周向变化保持相同的规律，可见叶片的扭转变形是影响载荷分布的主要原因：耦合作用使內叶展扭角减小，攻角增大，载荷增加；
+外叶展相反，进而减小了轴向载荷极值；。。。
+
+上下不对称会引起俯仰力矩，而左右不对称会产生偏航力矩，从而影响塔架以及整个风力机的振动规律
+
+

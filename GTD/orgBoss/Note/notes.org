@@ -1,6 +1,6 @@
-﻿Quick notes
+﻿* Quick notes
 :LOGBOOK:
-CLOCK: [2017-10-02 周一 11:09]
+CLOCK: [2017-10-02 周一 11:09]--[2017-10-02 周一 11:10] =>  0:01
 CLOCK: [2017-09-29 周五 11:03]j
 
 
@@ -126,15 +126,47 @@ Org能识别无序列表、有序列表、和描述表
 
 
 https://link.zhihu.com/?target=http%3A//orgmode.org/org.pdf
+** org-bookmark-heading [#B]                                         :@work:
+                         Added: [2017-10-14 周六 20:05]
                          
+This package provides Emacs bookmark support for org-mode. You can bookmark headings in org-mode files and jump to them using standard Emacs bookmark commands.
+
+It seems like this file should be named org-bookmark.el, but a package by that name already exists in org-mode/contrib which lets org-mode links point to Emacs bookmarks, sort-of the reverse of this package.
+
+It also seems like this should be built-in to org-mode… ;)
+** org time budget [#B]                                              :@work:
+:LOGBOOK:
+CLOCK: [2017-10-14 周六 23:23]--[2017-10-14 周六 23:30] =>  0:07
+:END:
+                         Added: [2017-10-14 周六 23:23]
+** 秀才饿死不买书 [#B]                                               :@F708:
+:LOGBOOK:
+CLOCK: [2017-10-15 周日 00:29]--[2017-10-15 周日 00:29] =>  0:00
+:END:
+                         Added: [2017-10-15 周日 00:28]
+                        
+壮士饿死不迈剑 
+** 工作 [#B]                                                         :@work:
+:LOGBOOK:
+CLOCK: [2017-10-15 周日 01:18]--[2017-10-15 周日 01:24] =>  0:06
+:END:
+                         Added: [2017-10-15 周日 01:17]
+                         
+1. 你做了什么
+2. 你希望的结果是什么
+3. 实际上的结果是什么
+https://github.com/marboo/orgmode-cn/blob/master/org.org#Clocking%20work%20time
+
+
+8.1 时间戳
+http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-8
+跟普通时间戳一样，但是这里是方括号而不是尖括号。这种时间戳是未激活的
+，它 不 会让一个条目显示在议程中
 
 * Quick notes
 ** emacs highlight [#B]                                              :@F708:
                          Added: [2017-10-09 周一 15:07]
                          作者：BigBoss
-链接：https://www.zhihu.com/question/28830039/answer/44110077
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 (global-hi-lock-mode 1) ;开启全局 hi lock 模式
 ;避免每次开启 hi lock mode 时询问是否需要高亮指定表达式
@@ -254,7 +286,7 @@ socket 也就是 syscall的问题
 1:技术是设计的基础，有了技术然后运用技术就能设计出好的产品
 2:答：没有设计的产品技术再牛逼也没用，设计才是有技术含量的
 技术都是垃圾
-** 学习 pattern for life [#B]                                         :NOTE:
+** 学习 pattern for life [#B]                                         :NOTE:mm
 - State "学习"       from              [2017-10-12 周四 09:55]
                          Added: [2017-10-10 周二 14:00]
                        
@@ -288,3 +320,12 @@ An empty line in the group buffer should work fine.)
 The ‘G R’ method does not work for me on gnus 5.10.8, for instance when tried with the url below it says “no such
  newsgroup nnrss:EmacsWiki”. What works for me is hitting ‘G m’ then typing a group name, and specifying nnrss as 
 the backend, this creates a group, when entering the group for the first time it prompts for a url.
+** fortran+c混编 [#B]                                             :PERSONAL:
+:LOGBOOK:
+CLOCK: [2017-10-14 周六 22:24]--[2017-10-14 周六 22:25] =>  0:01
+:END:
+                         Added: [2017-10-12 周四 21:31]
+                         
+你肯定是没用 ISO_C_binding
+现在有了规范的混编方法，一切都简单而优美 
+

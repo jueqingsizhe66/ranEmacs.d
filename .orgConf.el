@@ -192,37 +192,38 @@ Captured %<%Y-%m-%d %H:%M>
          "* Event: %?\n\n  %i\n\n  From: %a"
          :empty-lines 1 )
         ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")
-                    "* TODO [#B] %^{Task} %^g
+                    "* TODO [#B] %^{Task} %T %^g
                     :PROPERTIES:
                     :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
                     :END:
-                    Captured %<%Y-%m-%d %H:%M>
+                    
                     %?
 
                     %i
-                    " )
+                    "  :clock-in t :clock-resume t )
         ("T" "QuickTask" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
-                        "* TODO [#C] %^{Task}\nSCHEDULED:%t\n"
-                        :immediate-finish t)
+                        "* TODO [#C] %^{Task} %T\nSCHEDULED:%t\n"
+                        :clock-in t :clock-resume t :immediate-finish t)
         ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
                         "* STARTED %^{Task}"
                         :clock-in :clock-resume)
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
-                        "* TODO [#A] %^{What's your IDEA (Briefly)}  \n %?" 
-                        :immediate-finish t)
+                        "* TODO [#A] %^{What's your IDEA (Briefly)} %T \n %?" 
+                        :clock-in t :clock-resume t :immediate-finish t)
           ("c" "Clipboard" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
                         "** %^{Head Line} %U %^g\n%c\n%?"  
                         :immediate-finish t)
           ("R" "Finance" entry  (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
-                        "** %^{BriefDesc} %U %^g\n%?"   )
+                        "** %^{BriefDesc} %T %^g\n%?"   :clock-in t :clock-resume t :immediate-finish t )
           ("b" "Book" entry  (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
                         "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
           ("f" "Film" entry (  file+olp+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")  
                         "** %^{Enter the Film Name} %t :FILM: \n%[~/.emacs.d/GTD/orgTemplate/.film_template.txt]\n")
           ("d" "Daily Review" entry   (file+olp+datetree "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")  
-                        "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n")
+                        "** %t :COACH: \n%[~/.emacs.d/GTD/orgTemplate/.daily_review.txt]\n"  :clock-in t :clock-resume t)
           ("a" "Appointment Or Meeting" entry (file+headline "~/.emacs.d/CalendarDairy/diary.org")
                         "** APP [#B] %^{Description} %^g
+                        
                         %?
                         Added: %U" 
                         :clock-in :clock-resume)
@@ -244,7 +245,7 @@ Captured %<%Y-%m-%d %H:%M>
                         :clock-in t :clock-resume t                    
           )
          ("h" "Habit" entry (file "~/.emacs.d/GTD/orgBoss/Habit/habits.org")
-          "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+          "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"  :clock-in t :clock-resume t )
          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
          ;; ("k" "work" entry (file+headline org-default-notes-file "Cocos2D-X") ;;
          ;;  "* Cos [#A] %?\n  %i\n %U"                                          ;;
@@ -1077,3 +1078,111 @@ Use a prefix arg to get regular RET. "                                          
 
 
 
+(defun now ()
+  "Insert string for the current time formatted like '2:34 PM'."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%-I:%M %p"))
+)
+
+(defun nowTimePoint ()
+  "Insert string for the current time formatted like '2:34 PM'."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%H:%M"))
+)
+
+
+
+(defun today ()
+  "Insert string for today's date nicely formatted in American style,
+e.g. Sunday, September 17, 2000."
+  (interactive)                 ; permit invocation in minibuffer
+  ;(insert (format-time-string "%A, %B %e, %Y"))
+  (insert (format-time-string "<%Y-%m-%d %H:%M>"))
+)
+
+
+;; Get the time exactly 24 hours from now.  This produces three integers,
+;; like the current-time function.  Each integers is 16 bits.  The first and second
+;; together are the count of seconds since Jan 1, 1970.  When the second word
+;; increments above 6535, it resets to zero and carries 1 to the high word.
+;; The third integer is a count of milliseconds (on machines which can produce
+;; this granularity).  The math in the defun below, then, is to accommodate the
+;; way the current-time variable is structured.  That is, the number of seconds
+;; in a day is 86400.  In effect, we add 65536 (= 1 in the high word) + 20864
+;; to the current-time.  However, if 20864 is too big for the low word, if it
+;; would create a sum larger than 65535, then we "add" 2 to the high word and
+;; subtract 44672 from the low word.
+
+(defun tomorrow-time ()
+ "*Provide the date/time 24 hours from the time now in the same format as current-time."
+  (setq
+   now-time (current-time)              ; get the time now
+   hi (car now-time)                    ; save off the high word
+   lo (car (cdr now-time))              ; save off the low word
+   msecs (nth 2 now-time)               ; save off the milliseconds
+   )
+
+  (if (> lo 44671)                      ; If the low word is too big for adding to,
+      (setq hi (+ hi 2)  lo (- lo 44672)) ; carry 2 to the high word and subtract from the low,
+    (setq hi (+ hi 1) lo (+ lo 20864))  ; else, add 86400 seconds (in two parts)
+    )
+  (list hi lo msecs)                    ; regurgitate the new values
+  )
+
+;(tomorrow-time)
+
+(defun tomorrow ()
+  "Insert string for tomorrow's date nicely formatted in American style,
+e.g. Sunday, September 17, 2000."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%A, %B %e, %Y" (tomorrow-time)))
+)
+
+
+
+;; Get the time exactly 24 hours ago and in current-time format, i.e.,
+;; three integers.  Each integers is 16 bits.  The first and second
+;; together are the count of seconds since Jan 1, 1970.  When the second word
+;; increments above 6535, it resets to zero and carries 1 to the high word.
+;; The third integer is a count of milliseconds (on machines which can produce
+;; this granularity).  The math in the defun below, then, is to accomodate the
+;; way the current-time variable is structured.  That is, the number of seconds
+;; in a day is 86400.  In effect, we subtract (65536 [= 1 in the high word] + 20864)
+;; from the current-time.  However, if 20864 is too big for the low word, if it
+;; would create a sum less than 0, then we subtract 2 from the high word
+;; and add 44672 to the low word.
+
+(defun yesterday-time ()
+"Provide the date/time 24 hours before the time now in the format of current-time."
+  (setq
+   now-time (current-time)              ; get the time now
+   hi (car now-time)                    ; save off the high word
+   lo (car (cdr now-time))              ; save off the low word
+   msecs (nth 2 now-time)               ; save off the milliseconds
+   )
+
+  (if (< lo 20864)                      ; if the low word is too small for subtracting
+      (setq hi (- hi 2)  lo (+ lo 44672)) ; take 2 from the high word and add to the low
+    (setq hi (- hi 1) lo (- lo 20864))  ; else, add 86400 seconds (in two parts)
+    )
+  (list hi lo msecs)                    ; regurgitate the new values
+  )                                     ; end of yesterday-time
+
+(defun yesterday ()
+  "Insert string for yesterday's date nicely formatted in American style,
+e.g. Sunday, September 17, 2000."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%A, %B %e, %Y" (yesterday-time)))
+)
+
+
+;;org-clock-convinience
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package org-clock-convenience                                    ;;
+;;   :ensure t                                                           ;;
+;;   :bind (:map org-agenda-mode-map                                     ;;
+;;    	   ("<S-up>" . org-clock-convenience-timestamp-up)               ;;
+;;    	   ("<S-down>" . org-clock-convenience-timestamp-down)           ;;
+;;    	   ("ö" . org-clock-convenience-fill-gap)                        ;;
+;;    	   ("é" . org-clock-convenience-fill-gap-both)))                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

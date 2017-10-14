@@ -99,3 +99,15 @@ https://github.com/noinil/prelude
 ** http://www.lispcast.com/cognitect-clojure
  3 Things Java Programmers can steal from clojure
 The 100 Most Used Clojure Expressions
+** https://www.baidu.com/s?wd=4-20ma%E8%A1%A8%E5%A4%B4&rsv_spt=1&rsv_iqid=0xf4212a0100032585&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=16&rsv_sug1=9&rsv_sug7=100&rsv_t=1aa9w3wsifO0%2BaD%2F1FEkrqtbJiox7Jx7ylPF%2Fb49Yb9U1sfQ8ZjEbbcOxwghSng1D9AP&rsv_sug2=0&inputT=6360&rsv_sug4=6360
+ 4-20ma表头
+接地，为了实现各种电气设备的零电位点与大地作良性电气连接，由金属接地体引至各种电气设备零电位部位的一切装置的总称。 
+可靠接地，应该值得是接地系统的可靠性吧，
+为减小接地电阻尽量采取利用自然接地体，多点接地，网状接地等。
+** TODO https://github.com/CarpenterLee/JCFInternals
+- State "TODO"       from              [2017-10-14 周六 14:26]
+ 深入理解java collections
+** https://github.com/dfeich/org-babel-examples
+ org-babel example for many languages
+** https://github.com/redguardtoo/emacs.d
+ 陈斌  chen bin

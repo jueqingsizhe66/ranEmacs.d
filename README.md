@@ -1463,12 +1463,12 @@ Bindings available in org-journal-mode:
 
 All journal entries are registered in the Emacs Calendar. To see available journal entries do M-x calendar. Bindings available in the calendar-mode:
 
-    j - view an entry in a new buffer.
+    j - view an entry in a new buffer.(org-journal-new-entry)
     C-j - view an entry but do not switch to it.
-    i j - add a new entry into the day’s file (creates the file if not present).
-    f w - search in all entries of the current week.
-    f m - search in all entries of the current month.
-    f y - search in all entries of the current year.
+    i j - add a new entry into the day’s file (creates the file if not present).(org-journal-new-date-entry)
+    f w - search in all entries of the current week.(org-journal-search-calendar-week 可以快速查找一周内的日记内容) 
+    f m - search in all entries of the current month.(org-jounal-search-calendar-month 月查记录)
+    f y - search in all entries of the current year.(org-journal-search-calendar-year 年查记录)
     f f - search in all entries of all time.
     [ - go to previous day with journal entries.
     ] - go to next day with journal entries.
@@ -2157,6 +2157,72 @@ ok, 简单使用就这样！
 
 用函数的方式返回不行，但是用setq的方式确实可以,这样就可以使用calendar（ij插入当天的记录，又可以使用ctrl-c c Ret j产生Event)。Good!
 
+
+
+### 71. org-bookmark-heading
+
+github: [org-bookmark-heading][152]
+
+我们在emacs会使用`C-x r m `来标记一个文件到bookmark系统，通过`C-x r l`或者`C-x r b`来跳转
+
+现在我们想把org文件里面的heading也当作一个文件的方式，写入到bookmark系统，类似文件的方式。
+
+### 72. 经典的org clock操作和拓展
+
+
+[org-clock-convienience][154]教会你如何在agenda画面中修改由于某件事情耽搁（但是你又是一哥时间控，无时无刻都在用org clock-in 模式)，这样你就需要多添加一些时间，
+延长或者减少了,但是不用
+
+[org-clock-budget][153]教会你的是如何给一件事情分配多少时间，并且安排很多星期去做，
+如果一个星期没做完，那就下星期多分配点。
+
+
+### 73. 关于时间格式的说明
+
+I have seen the time format about [the agenda here][156], and I want to add it in the agenda view.
+so I visit the [link about the time format][155].
+
+在.orgConf.el中add the time and now,
+
+1. when time is surrounded  with square, it means unactive,
+   when time is surrounded with angle bracket, it means active, in addition ,if add in the headline, it 
+   will show todo headline in the agenda view
+
+2. C-c C-x C-t can change the style of time format
+
+`M-x nowTimePoint` insert time point
+`M-x today` insert current day time
+`M-x tommorow` insert tomorrow time
+`M-x yesterday` insert yesterday time
+
+
+```
+
+(defun now ()
+  "Insert string for the current time formatted like '2:34 PM'."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%-I:%M %p"))
+)
+
+(defun nowTimePoint ()
+  "Insert string for the current time formatted like '2:34 PM'."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%H:%M"))
+)
+
+
+
+(defun today ()
+  "Insert string for today's date nicely formatted in American style,
+e.g. Sunday, September 17, 2000."
+  (interactive)                 ; permit invocation in minibuffer
+  ;(insert (format-time-string "%A, %B %e, %Y"))
+  (insert (format-time-string "<%Y-%m-%d %H:%M>"))
+)
+
+```
+
+
 <hr/>
     <hr/>
 
@@ -2313,3 +2379,8 @@ ok, 简单使用就这样！
 [149]:https://github.com/jueqingsizhe66/ranEmacs.d#55-failed-enable-flyspell-mode-in-window10
 [150]:https://github.com/jueqingsizhe66/ranEmacs.d#66-%E6%9C%89%E4%BA%9Btopic%E4%B8%8D%E6%83%B3%E8%AE%A9%E5%88%AB%E4%BA%BA%E7%9C%8B%E5%88%B0org-crypt
 [151]:https://github.com/jueqingsizhe66/ranEmacs.d#16-multiple-cursorseditiingel
+[152]:https://github.com/alphapapa/org-bookmark-heading
+[153]:https://github.com/Fuco1/org-clock-budget
+[154]:https://github.com/dfeich/org-clock-convenience
+[155]:http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-8
+[156]:http://www.360doc.com/content/11/1107/18/7735641_162571835.shtml

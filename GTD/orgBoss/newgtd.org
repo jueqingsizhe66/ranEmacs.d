@@ -92,6 +92,10 @@ DEADLINE: <2017-10-22 周日> SCHEDULED: <2017-10-03 周二>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-14 周六 23:42]--[2017-10-15 周日 00:29] =>  0:47
+                    CLOCK: [2017-10-14 周六 23:30]--[2017-10-14 周六 23:36] =>  0:06
+                    :END:
                     Captured 2017-10-03 14:15
        开题报告得包含以下几个部分，
 ***** TODO 数值模拟 静态偏航+动态偏航+ 流固耦合(参考仇永兴 姚世刚 陈晓明 范钟瑶 李媛 任会来) [0%]
@@ -169,9 +173,31 @@ SCHEDULED: <2017-10-10 周二 +1d>
                     - State "DONE"       from "TODO"          [2017-10-09 周一 20:55]
                     Captured 2017-10-09 15:53
  坚持每一天都做运动
- 
-* Tasks
-** TODO Most important thing that you have to do       :graduation:紧急重要:
+** TODO [#C] 提醒王老师转捩对风轮旋转的影响
+DEADLINE: <2017-10-16 周一> SCHEDULED:<2017-10-12 周四>
+** TODO [#B] 通知赵老板安装推力软件                                  :@work:
+DEADLINE: <2017-10-21 周六>
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    Captured 2017-10-13 21:20
+** TODO [#B] turbsim reading   [2017-10-15 周日 00:58-02:08]
+                                                         :@work:
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-15 周日 01:24]--[2017-10-15 周日 01:25] =>  0:01
+                    CLOCK: [2017-10-15 周日 00:31]--[2017-10-15 周日 01:18] =>  0:47
+                    CLOCK: [2017-10-15 周日 00:30]--[2017-10-15 周日 00:30] =>  0:00
+                    :END:
+                    Captured 2017-10-15 00:29
+                    
+刘文为主
+
+*  Tasks
+DEADLINE: <2017-10-25 周三>
+** TODO Most important thing that you have to do          :graduation:紧急重要:
 
 ** TODO Second most important thing that you have to do
 You can also take notes underneath each heading, like this
