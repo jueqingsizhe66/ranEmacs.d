@@ -48,6 +48,17 @@ click [all-the-icons][4]
 注意，在第一次使用时候，执行`M-x  all-the-icons-install-fonts`,会提示安装字体，不然
 打开neotree会出现部分无法显示。
 
+在lisp系语言，注意下列四种风格的括号
+
+- open/close parentheses
+- square braces
+- curly braces
+- angle braces
+
+两种引号
+
+- double quote
+- single quote
 
 2. 并且在ui.el添加了
 ```
@@ -1553,6 +1564,9 @@ Here is the good job from [Malabarba][112] who write the two completion feature 
 使用方式得激活`M-x speed-of-thought-mode`
 或者在editing.el中添加`(speed-of-thought-mode t)`即可。
 
+clojure的定义函数，得在开启REPL模式下，才可以使用`C-c f`来调用`sotclojure-find-or-define-function`
+
+`M-return`调用`sotlisp-newline-and-parentheses`
 
 ### 59. 自定义了插入一行
 
@@ -2222,6 +2236,46 @@ e.g. Sunday, September 17, 2000."
 
 ```
 
+### 74.rust的冲动
+
+简单
+[rust github][https://github.com/rust-lang/rust]
+
+[rust mode][157]
+
+
+[rust-example][158]
+
+[rust-cargo][159] 类似于leiningen maven
+
+放弃他
+
+### 75. 删掉没有必要的remember
+
+在orgConf中 删掉关于muse planner, remember三个包，简化system 大小。
+
+重要的elisp编写技巧
+
+```
+C-M-d   Move down into a list(进入）
+C-M-u   Move up outof a list(跳出)
+```
+
+快速编写括号相关的代码。
+move down into a list ,the point will jump into the nearest balanced expression of parentheses ahead of the point ....
+
+Inside the newer verions of Emacs, you can use `C-M-u`
+inside a string to jump to the opening quote
+
+
+Also `C-M-k` kill the balanced s-expression
+
+list内部还有同级操作
+
+```
+C-M-n  move forward to the next list
+C-M-p  move backward to the previous list
+```
 
 <hr/>
     <hr/>
@@ -2384,3 +2438,6 @@ e.g. Sunday, September 17, 2000."
 [154]:https://github.com/dfeich/org-clock-convenience
 [155]:http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-8
 [156]:http://www.360doc.com/content/11/1107/18/7735641_162571835.shtml
+[157]:https://github.com/rust-lang/rust-mode
+[158]:https://rustbyexample.com/
+[159]:https://github.com/kwrooijen/cargo.el

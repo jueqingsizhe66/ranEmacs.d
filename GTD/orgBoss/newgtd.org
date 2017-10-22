@@ -173,8 +173,9 @@ SCHEDULED: <2017-10-10 周二 +1d>
                     - State "DONE"       from "TODO"          [2017-10-09 周一 20:55]
                     Captured 2017-10-09 15:53
  坚持每一天都做运动
-** TODO [#C] 提醒王老师转捩对风轮旋转的影响
-DEADLINE: <2017-10-16 周一> SCHEDULED:<2017-10-12 周四>
+** DONE [#C] 提醒王老师旋转对风轮转捩的影响
+CLOSED: [2017-10-18 周三 13:29] DEADLINE: <2017-10-16 周一> SCHEDULED:<2017-10-12 周四>
+- State "DONE"       from "TODO"          [2017-10-18 周三 13:29]
 ** TODO [#B] 通知赵老板安装推力软件                                  :@work:
 DEADLINE: <2017-10-21 周六>
                     :PROPERTIES:
@@ -194,9 +195,79 @@ DEADLINE: <2017-10-21 周六>
                     Captured 2017-10-15 00:29
                     
 刘文为主
-
+** TODO [#B] 干好一件事 <2017-10-16 周一 23:48>                      :@work:
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-16 周一 23:48]--[2017-10-16 周一 23:49] =>  0:01
+                    :END:
+                    
+                    
+全年一件事，干好一件事即可！
+男人能干好一件事即可
+** DONE [#B] 确认长峪城下雨情况 <2017-10-18 周三 14:39>                :@NCEPU:
+CLOSED: [2017-10-21 周六 00:51] DEADLINE: <2017-10-19 周四>
+                    :PROPERTIES:
+                    :Effort: 0:05
+                    :END:
+                    - State "DONE"       from "TODO"          [2017-10-21 周六 00:51]
+                    :LOGBOOK:
+                    CLOCK: [2017-10-18 周三 14:39]--[2017-10-18 周三 14:40] =>  0:01
+                    :END:
+** TODO [#B] 中科院赵明多轴角运动 <2017-10-18 周三 20:48>            :@work:
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-18 周三 20:49]--[2017-10-18 周三 20:49] =>  0:00
+                    :END:
+                    
+                    
+探讨fluent的udf多轴角编写问题
+** TODO [#B] 完成入党申请资料 <2017-10-19 周四 19:52>                :@F708:
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-19 周四 19:53]--[2017-10-19 周四 19:53] =>  0:00
+                    :END:
+                    
+                    
+入党申请
+** TODO [#B] 学习sketchup和几何画板 <2017-10-19 周四 20:02>          :@work:
+                    :PROPERTIES:
+                    :Effort: 1:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-19 周四 20:02]--[2017-10-19 周四 20:02] =>  0:00
+                    :END:
+                    
+                    
+抓紧提个时间学习
+** TODO [#B] Somethings need to be done by yourself <2017-10-21 周六 21:12> :@work:
+DEADLINE: <2019-10-21 周一>
+                    :PROPERTIES:
+                    :Effort: 1:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-21 周六 21:13]--[2017-10-21 周六 21:14] =>  0:01
+                    :END:
+                    
+                    
+Somethings you need to be done by yourself
+** TODO [#B] SCI结果后处理 <2017-10-21 周六 21:58>                   :@work:
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-10-21 周六 21:58]--[2017-10-21 周六 22:48] =>  0:50
+                    :END:
+                    
+                    
+关于动态偏航和动态入流，分三个阶段写：定常  非定常（时均解） 动态入流
 *  Tasks
-DEADLINE: <2017-10-25 周三>
+
 ** TODO Most important thing that you have to do          :graduation:紧急重要:
 
 ** TODO Second most important thing that you have to do

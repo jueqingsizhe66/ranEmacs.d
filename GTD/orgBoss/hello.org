@@ -1,0 +1,161 @@
+[4] 杜朝辉. 水平轴风力机的几个关键气动问题探讨[J]. 上海汽轮机. 2002(01): 30-35.
+[5] 陈培，杜绵银，刘杰平. 风力机专用翼型发展现状及其关键气动问题分析[J]. 电网与清洁能源. 2009(02): 36-40.
+[6] Jackson K J, Zuteck M D, van Dam C P, et al. Innovative design approaches for large wind turbine blades[J]. Wind Energy. 2005, 8(2): 141-171.
+[7] Hand M M, Simms D A, Fingersh L J, et al. Unsteady aerodynamics experiment phase VI: wind tunnel test configuration and available data campaigns[R]. National Renewable Energy Laboratory, 2001.
+[8] Hau E, Von Renouard H. Wind turbines: fundamentals, technologies, application, economics[M]. Springer, 2013.
+[9] Hansen M H. Aeroelastic instability problems for wind turbines[J]. Wind Energy. 2007, 10(6): 551-577.
+[10] Leishman J G. Challenges in modelling the unsteady aerodynamics of wind turbines[J]. Wind energy. 2002, 5(2‐3): 85-132.
+[11] Pereira R, Schepers G, Pavel M D. Validation of the Beddoes–Leishman dynamic stall model for horizontal axis wind turbines using MEXICO data[J]. Wind Energy. 2013, 16(2): 207-219.
+[12] Dos Santos Pereira R B. Validating the Beddoes-Leishman Dynamic Stall Model in the Horizontal Axis Wind Turbine Environment[D]. 2010.
+[13] Gordon L J. Principles of helicopter aerodynamics[J]. Second editions. 2006(12).
+[14] Breton S. Study of the stall delay phenomenon and of wind turbine blade dynamics using numerical approaches and NREL’s wind tunnel tests[D]. 2008.
+[15] Mc Croskey W J. Measurements of boundary layer transition, separation and streamline direction on rotating blades[J]. 1971.
+[16] Lindenburg C. Modelling of rotational augmentation based on engineering considerations and measurements[C]. 2004.
+[17] Ronsten G. Static pressure measurements on a rotating and a non-rotating 2.375 m wind turbine blade. Comparison with 2D calculations[J]. Journal of Wind Engineering and Industrial Aerodynamics. 1992, 39(1): 105-118.
+[18] 高峰，孙茂. 旋转效应对动态失速的影响: 第六届全国流体力学学术会议[Z]. 中国上海: 20015.
+[19] 李媛，康顺，仇永兴，等. 风切变条件下风轮流固耦合数值模拟研究[J]. 工程热物理学报. 2013, 34(03): 462-466.
+[20] Hansen M O L, Sørensen J N, Voutsinas S, et al. State of the art in wind turbine aerodynamics and aeroelasticity[J]. Progress in aerospace sciences. 2006, 42(4): 285-330.
+[21] Riziotis V A, Voutsinas S G, Politis E S, et al. Aeroelastic stability of wind turbines: the problem, the methods and the issues[J]. Wind Energy. 2004, 7(4): 373-392.
+[22] Moeller T. Blade cracks signal new stress problem[J]. Wind Power Monthly, 1997, 25
+[23] 荆丰梅,肖钢,熊志民等. 潮流能水轮机单向流固耦合计算方法[J].振动与冲击, 2013,32(8):91-95
+[24] 吴云峰. 双向流固耦合两种计算方法的比较[D].天津大学,2009. 
+[25] 陈锡栋,杨婕,赵晓栋等. 有限元法的发展现状及应用[J].中国制造业信息化, 2010, 39(11):6-8
+[26] Cundall P A, Hart R D. Development of Generalized 2-D and 3-D Distinct Element Programs for Modelling Joint-ed Rock [R]. ITASCA Consulting Group, Misc. Paper SL-85-1, 1985
+[27] Loewy R G. Review of rotary-wing V/STOL dynamic and aeroelastic problem[J]. Journal of the American Helicopter Society,1969,14(3)：3-23
+[28] Friedmann P P.Renaissance of aeroelasticity and its future[J].Journal of Aircraft. 1999, 36(1)：105-121
+[29] Zaki A. Using tightly-coupled CFD/CSD simulation for rotorcraft stability analysis [D]. Atlanta, GA: Georgia Institute of Technology,2012
+[30] Bazilevs Y, Hsu M C, Scott M A. Isogeometric fluid–structure interaction analysis with emphasis on non-matching discretizations, and with application to wind turbines[J]. Computer Methods in Applied Mechanics and Engineering, 2012, 249: 28-41
+[31] Hsu M C, Bazilevs Y. Fluid–structure interaction modeling of wind turbines: simulating the full machine[J]. Computational Mechanics, 2012, 50(6): 821-833
+[32] Bazilevs Y, Hsu M C, Kiendl J, et al. 3D simulation of wind turbine rotors at full scale. Part II: Fluid–structure interaction modeling with composite blades[J]. International Journal for Numerical Methods in Fluids, 2011, 65(1‐3): 236-253
+[33] Korobenko A, Hsu M C, Akkerman I, et al. Structural mechanics modeling and FSI simulation of wind turbines[J]. Mathematical Models and Methods in Applied Sciences, 2013, 23(02): 249-272
+[34] Hsu M C, Akkerman I, Bazilevs Y. Finite element simulation of wind turbine aerodynamics: validation study using NREL Phase VI experiment[J]. Wind Energy, 2014, 17(3): 461-481
+[35] Gebhardt C G, Roccia B A. Non-linear aeroelasticity: An approach to compute the response of three-blade large-scale horizontal-axis wind turbines[J]. Renewable Energy, 2014, 66: 495-514
+[36] Hsu M C, Akkerman I, Bazilevs Y. High-performance computing of wind turbine aerodynamics using isogeometric analysis[J]. Computers & Fluids, 2011, 49(1): 93-100
+[37] Bazilevs Y, Korobenko A, Deng X, et al. Fluid–structure interaction modeling of vertical-axis wind turbines[J]. Journal of Applied Mechanics, 2014, 81(8): 081006
+[38] Kamakoti R, Shyy W.Fluid–structure interaction for aeroelastic applications [J]. Progress in Aerospace Sciences, 2004, 40(8): 535-558
+[39] Lee Y J, Jhan Y T, Chung C H. Fluid–structure interaction of FRP wind turbine blades under aerodynamic effect[J]. Composites Part B: Engineering, 2012, 43(5): 2180-2191
+[40] 陈海萍,孙文磊,郭健. 风力发电机叶片的流固耦合分析[J]. 机床与液压, 2010, 19: 79-82
+[41] 梁明轩,陈长征. 风力机叶片流固耦合效应研究[C].全国振动工程及应用学术会议论文集.2010:130-132
+[42] 胡鹏飞,曹丽华,李勇. 风力机叶片及塔架流固耦合分析[J]. 可再生能源, 2013,11:66-71
+[43] 张瑞琴,翁建生. 基于流固耦合的叶片颤振分析[J].计算机仿真, 2011, 28(3): 48-51
+[44] 李林凌,黄其柏. 风机叶片气固耦合特性研究[J]. 流体机械, 2006, 34(04): 23-27
+[45] Zhang J, Guo L, Wu H, et al. The influence of wind shear on vibration of geometrically nonlinear wind turbine blade under fluid structure interaction[J].  Ocean Engineering, 2014, 84: 14-19
+[46] 李媛. 风力机叶片流固耦合数值模拟[D].华北电力大学（北京）,2013 
+[47] 姚世刚．两个不同尺度水平轴风力机叶片流固耦合数值模拟[D]：华北电力大学(北京)，2016
+[48] 张浬萍，郭刚. 变风速下风力机叶片载荷特性研究[J]. 西南科技大学学报. 2011(01): 73-77
+[49] 范忠瑶. 风力机定常与非定常气动问题的数值模拟研究[D]. 华北电力大学（北京）, 2011
+[50] Ivanell S, Sørensen J N, Henningson D. Numerical computations of wind turbine wakes[D]. Springer, 2007.
+[51] Vermeer L J, Sørensen J N, Crespo A. Wind turbine wake aerodynamics[J]. Progress in Aerospace Sciences. 2003, 39(6–7): 467-510.
+[52] Cho T, Kim C. Wind tunnel test results for a 2/4.5 scale MEXICO rotor[J]. Renewable Energy. 2012, 42: 152-156.
+[53] 陈坤，贺德馨. 风力机尾流数学模型及尾流对风力机性能的影响研究[J]. 流体力学实验与测量. 2003, 17(01): 84-87.
+[54] Højstrup J. Spectral coherence in wind turbine wakes[J]. Journal of Wind Engineering and Industrial Aerodynamics. 1999, 80(1): 137-146.
+[55] Högström U, Asimakopoulos D N, Kambezidis H, et al. A field study of the wake behind a 2 MW wind turbine[J]. Atmospheric Environment (1967). 1988, 22(4): 803-820.
+[56] Ross J N, Ainslie J F. Wake measurements in clusters of model wind turbines using laser doppler anemometry[C]. 1981.
+[57] Alfredsson P H, Bark F H, Dahlberg J A. Some properties of the wake behind horizontal axis wind turbines[C]. 1980.
+[58] Adaramola M S, Krogstad P Å. Experimental investigation of wake effects on wind turbine performance[J]. Renewable Energy. 2011, 36(8): 2078-2086.
+[59] Chu C, Chiang P. Turbulence effects on the wake flow and power production of a horizontal-axis wind turbine[J]. Journal of Wind Engineering and Industrial Aerodynamics. 2014, 124: 82-89.
+[60] Thomsen K, Sørensen P. Fatigue loads for wind turbines operating in wakes[J]. Journal of Wind Engineering and Industrial Aerodynamics. 1999, 80(1–2): 121-136.
+[61] Thomsen K, Madsen H A. A new simulation method for turbines in wake—applied to extreme response during operation[J]. Wind Energy. 2005, 8(1): 35-47.
+[62] Shen X, Zhu X, Du Z. Wind turbine aerodynamics and loads control in wind shear flow[J]. Energy. 2011, 36(3): 1424-1434.
+[63] Namik H, Stol K. Performance analysis of individual blade pitch control of offshore wind turbines on two floating platforms[J]. Mechatronics. 2011, 21(4): 691-703.
+[64] Zhang D, Cross P, Ma X, et al. Improved control of individual blade pitch for wind turbines[J]. Sensors and Actuators A: Physical. 2013, 198: 8-14.
+[65] Quirante J J G. Control of Wind Turbines for Power Regulation and Load Reduction[D]. 2007.
+[66] Zhang M, Yu W, Xu J. Aerodynamic physics of smart load control for wind turbine due to extreme wind shear[J]. Renewable Energy. 2014, 70: 204-210.
+[67] Pf, Bep, Ksh. The Tjæreborg wind turbine loads during normal operation mode for CEC[R]., 1994
+[68] Simms D A, Schreck S, Hand M, et al. NREL unsteady aerodynamics experiment in the NASA-Ames wind tunnel: A comparison of predictions to measurements[R]. National Renewable Energy Laboratory Colorado, USA, 2001.
+[69] Snel H, Schepers J G, Montgomerie B. The MEXICO project (Model Experiments in Controlled Conditions): The database and first results of data processing and interpretation[C]. IOP Publishing, 2007.
+[70] Cho T, Kim C. Wind tunnel test results for a 2/4.5 scale MEXICO rotor[J]. Renewable Energy. 2012, 42: 152-156.
+[71] Haans W, Sant T, van Kuik G, et al. HAWT near‐wake aerodynamics, Part I: axial flow conditions[J]. Wind Energy. 2008, 11(3): 245-264.
+[72] Sant T. Improving BEM-based aerodynamic models in wind turbine design codes[D]. 2007.
+[73] Haans W, Sant T, Van Kuik G, et al. Measurement and modelling of tip vortex paths in the wake of a hawt under yawed flow conditions[C]. 2005.
+[74] 胡丹梅，田杰，杜朝辉. 水平轴风力机尾迹流场PIV实验研究[J]. 太阳能学报. 2007, 28(02): 200-206.
+[75] 胡丹梅，欧阳华，杜朝辉. 水平轴风力机尾迹流场试验[J]. 太阳能学报. 2006, 27(06): 606-612.
+[76] 张立茹，汪建文，刘冬冬，等. 水平轴风力机风轮下游尾迹的实验研究: 中国工程热物理学会流体机械2009年学术会议[Z]. 大连: 20091-6.
+[77] Adaramola M S, Krogstad P Å. Experimental investigation of wake effects on wind turbine performance[J]. Renewable Energy. 2011, 36(8): 2078-2086.
+[78] Lignarolo L E M, Ragni D, Krishnaswami C, et al. Experimental analysis of the wake of a horizontal-axis wind-turbine model[J]. Renewable Energy. 2014, 70: 31-46.
+[79] Glauert H. Airplane propellers[M]. Aerodynamic theory, Springer, 1935, 169-360.
+[80] Gupta S, Leishman J G. Comparison of momentum and vortex methods for the aerodynamic analysis of wind turbines[C]. 2005.
+[81] Wilson R E, Lissaman P B. Applied aerodynamics of wind power machines[R]. Oregon State Univ., Corvallis (USA), 1974.
+[82] Bramwell A R S. Helicopter dynamics[M]. Edward Arnold London, 1976.
+[83] Oye S. Tjaereborg wind turbine, first dynamic inflow measurements[J]. AFM Notak Vk-189. 1991.
+[84] Peters D A, Haquang N. Dynamic inflow for practical applications[J]. 1988.
+[85] Gaonkar G H, Peters D. Review of dynamic inflow modeling for rotorcraft flight dynamics.[J]. VERTICA. 1988, 12(3): 213-242.
+[86] Pitt D M. Rotor dynamic inflow derivatives and time constants from various inflow models[J]. 1980.
+[87] Pitt D M, Peters D A. Theoretical prediction of dynamic-inflow derivatives[J]. Vertica. 1981, 5(1): 21-34.
+[88] Sørensen J N, Kock C W. A model for unsteady rotor aerodynamics[J]. Journal of Wind Engineering and Industrial Aerodynamics. 1995, 58(3): 259-275.
+[89] Suzuki A. Application of dynamic inflow theory to wind turbine rotors[M]. 2000.
+[90] Suzuki A, Hanson A. Generalized dynamic wake model for YawDyn[C]. 1999.
+[91] Snel H, Schepers J G, Nederland S E C. Joint investigation of dynamic inflow effects and implementation of an engineering method[R]. Netherlands Energy Research Foundation ECN, 1995.
+[92] 刘雄，张宪民，陈严，等. 基于动态入流理论的水平轴风力机动态气动载荷计算模型[J]. 太阳能学报. 2009(04): 412-419.
+[93] Hess J L, Smith A M. Calculation of non-lifting potential flow about arbitrary three-dimensional bodies[R]. DTIC Document, 1962.
+[94] Hess J L. Calculation of potential flow about arbitrary three-dimensional lifting bodies[R]. DTIC Document, 1972.
+[95] 张利军. 螺旋桨性能预报的速度势面元法研究[D]. 大连理工大学, 2006.
+[96] Wachspress D A, Quackenbush T R, Boschitsch A H. First-principles free-vortex wake analysis for helicopters and tiltrotors[C]. AMERICAN HELICOPTER SOCIETY, INC, 2003.
+[97] Leishman J G, Bhagwat M J, Bagai A. Free-vortex filament methods for the analysis of helicopter rotor wakes[J]. Journal of Aircraft. 2002, 39(5): 759-775.
+[98] 赵景根，徐国华，招启军. 基于自由尾迹分析的直升机旋翼下洗流场计算方法[J]. 兵工学报. 2006, 27(01): 63-68.
+[99] White J A, Nce U G. Aerodynamic Analysis of a Horizontal Axis Wind Turbine by Use of Helical Vortex Theory[J]. 1985.
+[100] Dumitrescu H, Cardoş V. Predictions of unsteady hawt aerodynamics by lifting line theory[J]. Mathematical and Computer Modelling. 2001, 33(4–5): 469-481.
+[101] 王国强，徐立新，杨晨俊，等. 螺旋桨性能预估的非线性涡格法[J]. 中国造船. 1992(02): 24-34.
+[102] 王适存，徐国华. 直升机旋翼空气动力学的发展[J]. 南京航空航天大学学报. 2001(03): 203-211.
+[103] 王国强，胡寿根. 螺旋桨性能和压力分布预估方法的改进[J]. 中国造船. 1988(01): 24-37.
+[104] Lee D J, Na S U. Numerical simulations of wake structure generated by rotating blades using a time marching, free vortex blob method[J]. European Journal of Mechanics - B/Fluids. 1999, 18(1): 147-159.
+[105] Wald Q R. The aerodynamics of propellers[J]. Progress in Aerospace Sciences. 2006, 42(2): 85-128.
+[106] Renick D H. Unsteady Propeller Hydrodynamics[R]. DTIC Document, 2001.
+[107] Roura M, Cuerva A, Sanz Andrés A, et al. A panel method free‐wake code for aeroelastic rotor predictions[J]. Wind Energy. 2010, 13(4): 357-371.
+[108] Sezer Uzol N, Uzol O. Effect of steady and transient wind shear on the wake structure and performance of a horizontal axis wind turbine rotor[J]. Wind Energy. 2013, 16(1): 1-17.
+[109] 沈昕，竺晓程，杜朝辉. 两种自由尾迹模型在风力机气动性能预测中的应用[J]. 太阳能学报. 2010, 31(07): 923-927.
+[110] Mctavish S, Feszty D, Nitzsche F. Aeroelastic Simulations of the NREL Phase VI Wind Turbine using a Discrete Vortex Method Coupled with a Nonlinear Beam Model[J]. 2009.
+[111] Jeong M, Kim S, Lee I, et al. The impact of yaw error on aeroelastic characteristics of a horizontal axis wind turbine blade[J]. Renewable Energy. 2013, 60: 256-268.
+[112] Sebastian T, Lackner M. Analysis of the Induction and Wake Evolution of an Offshore Floating Wind Turbine[J]. Energies. 2012, 5(4): 968-1000.
+[113] Sebastian T. UNDERSTANDING THE UNSTEADY AERODYNAMICS AND NEAR WAKE OF AN OFFSHORE FLOATING HORIZONTAL AXIS WIND TURBINE[D]. University of Massachusetts Amherst, 2011.
+[114] Sebastian T, Lackner M A. Development of a free vortex wake method code for offshore floating wind turbines[J]. Renewable Energy. 2012, 46: 269-275.
+[115] Sørensen J N, Larsen P S, Pedersen B M, et al. Three-level, viscous-inviscid interaction technique for the prediction of separated flow past rotating wing[D]. Technical University of DenmarkDanmarks Tekniske Universitet, AdministrationAdministration, Office for Finance and AccountingAfdelingen for Økonomi og Regnskab, 1986.
+[116] Drela M, Giles M B. Viscous-inviscid analysis of transonic and low Reynolds number airfoils[J]. AIAA journal. 1987, 25(10): 1347-1355.
+[117] Ramos-García N, S Rensen J N R R, Shen W Z. Validation of a three-dimensional viscous–inviscid interactive solver for wind turbine rotors[J]. Renewable Energy. 2014, 70: 78-92.
+[118] 王强. 水平轴风力机三维空气动力学计算模型研究[D]. 中国科学院研究生院（工程热物理研究所）, 2014.
+[119] Sørensen J N, Shen W Z. Numerical modeling of wind turbine wakes[J]. Journal of fluids engineering. 2002, 124(2): 393-399.
+[120] Ahlström A. Aeroelastic simulation of wind turbine dynamics[D]. Karlstad University, 2005.
+[121] Tongchitpakdee C, Benjanirat S, Sankar L N. Numerical simulation of the aerodynamics of horizontal axis wind turbines under yawed flow conditions[J]. TRANSACTIONS-AMERICAN SOCIETY OF MECHANICAL ENGINEERS JOURNAL OF SOLAR ENERGY ENGINEERING. 2005, 127(4): 464.
+[122] Jameson A, Schmidt W, Turkel E. Numerical solutions of the Euler equations by finite volume methods using Runge-Kutta time-stepping schemes[J]. AIAA paper. 1981, 1259: 1981.
+[123] 范忠瑶，康顺. 边界层转捩对风力机气动性能模拟结果的影响[J]. 工程热物理学报. 2008, 29(10): 1685-1687.
+[124] 范忠瑶，康顺，王建录. 风力机叶片三维数值计算方法确认研究[J]. 太阳能学报. 2010, 31(03): 279-285.
+[125] 范忠瑶，康顺，赵萍. 2.5兆瓦风力机气动性能数值模拟研究[J]. 工程热物理学报. 2010(02): 287-291.
+[126] 范忠瑶，康顺，赵萍. 上风向风力机塔影效应的数值模拟研究[J]. 工程热物理学报. 2012, 33(10): 1707-1710.
+[127] 范忠瑶，康顺，钟贤和. 大分离条件下风力机叶片三维定常数值模拟研究[J]. 工程热物理学报. 2011, 32(01): 47-51.
+[128] Li Y, Paik K, Xing T, et al. Dynamic overset CFD simulations of wind turbine aerodynamics[J]. Renewable Energy. 2012, 37(1): 285-298.
+[129] Mo J, Choudhry A, Arjomandi M, et al. Large eddy simulation of the wind turbine wake characteristics in the numerical wind tunnel model[J]. Journal of Wind Engineering and Industrial Aerodynamics. 2013, 112: 11-24.
+[130] Li C, Zhu S, Xu Y, et al. 2.5D large eddy simulation of vertical axis wind turbine in consideration of high angle of attack flow[J]. Renewable Energy. 2013, 51: 317-330.
+[131] Ivanell S, Sørensen J N, Henningson D. Numerical computations of wind turbine wakes[D]. Springer, 2007.
+[132] Baez-Vidal A, Lehmkuhl O, Valdivieso D M, et al. Parallel Large Eddy Simulations of Wind Farms with the Actuator Line Method[J]. Procedia Engineering. 2013, 61: 227-232.
+[133] Troldborg N, Sørensen J N, Mikkelsen R F. Numerical simulations of wakes of wind turbines operating in sheared and turbulent inflow[J]. 2009.
+[134] Ivanell S, Mikkelsen R, Sørensen J N, et al. Three dimensional actuator disc modelling of wind farm wake interaction[J]. interaction. 2008, 1(2): 3.
+[135] Porté-Agel F, Wu Y, Lu H, et al. Large-eddy simulation of atmospheric boundary layer flow through wind turbines and wind farms[J]. Journal of Wind Engineering and Industrial Aerodynamics. 2011, 99(4): 154-168.
+[136] Thomsen K, Madsen H A. A new simulation method for turbines in wake—applied to extreme response during operation[J]. Wind Energy. 2005, 8(1): 35-47.
+[137] Massouh F, Dobrev I. Exploration of the vortex wake behind of wind turbine rotor[C]. IOP Publishing, 2007.
+
+
+写综述也不是好的综述。综述也是针对一个小点展开的!!!
+
+最大的问题是没有重点
+
+王晓东老师 2017/10/18 19:49:06
+写综述也不是好的综述。综述也是针对一个小点展开的
+
+王晓东老师 2017/10/18 19:49:26
+你这是在编书
+
+王晓东老师 2017/10/18 19:49:34
+面面俱到而没有重点
+
+无关紧要的东西太多！！！
+19:44:08
+王晓东老师 2017/10/18 19:44:08
+最多允许你写1万字
+
+王晓东老师 2017/10/18 19:44:18
+超出的越多说明写的越差
+
+
+要讲清楚：1）什么是多轴角运动；2）它对风力机可能带来的影响，研究的意义和重要性；
+找到关键科学问题或技术问题。
+然后才是已经目标c、内容，方法、技术途径等等

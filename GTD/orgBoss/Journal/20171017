@@ -1,0 +1,114 @@
+星期二, 2017/10/17
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 10:38 clojure dir-fn
+
+{{{
+user> (require 'clojure.repl 'clojure.string)
+nil
+user> (pprint (clojure.repl/dir-fn 'clojure.string))
+(blank?
+ capitalize
+ ends-with?
+ escape
+ includes?
+ index-of
+ join
+ last-index-of
+ lower-case
+ re-quote-replacement
+ replace
+ replace-first
+ reverse
+ split
+ split-lines
+ starts-with?
+ trim
+ trim-newline
+ triml
+ trimr
+ upper-case)
+nil
+}}}
+
+** 11:09 loop do cucur
+
+user> (loop [i 1] (if (< i  5) (println i) (recur (inc i))))
+1
+nil
+user> (loop [i 1] (if (< i 5) (do (println i) (recur (inc i)))))
+1
+2
+3
+4
+nil
+user> (loop [i 1] (when (< i 5) (println i) (recur (inc i))))
+1
+2
+3
+4
+nil
+
+** 12:17 clojure典型工作过程
+
+
+
+许多 Java 程序员在开始写 Clojure 程序的时候，将写 Java 程序的工作习惯一道带了过来。但是，这两种语言是非常不同的，在 Java 方面工作良好的工作习惯，却不能发挥出 Clojure 的威力。
+
+下文全部用 Cursive IDE 说明。Clojure 高效工作流程的基础，在于：
+
+    REPL。这是威力最强大的武器！我的习惯是一旦打开项目，立即启动 REPL。在 cursive 下，就是按下 cmd+R （第一次运行 REPL 时需要用右键点 project.clj)。
+
+    快捷键，快捷键，快捷键！重要的事说三次。要高效使用 REPL，就不可能把一只手放在鼠标上。在 settings 里搜索 clojure keybinding，使用快捷键。如果你不是疯狂的 Emacs 爱好者，选择 cursive 方案会容易一点。
+
+    随手 Load 代码。写完或改完任何函数后，我会立即按下 Ctrl+C, Ctrl+K 来把程序送进 REPL, 以保证 REPL 里总是最新的版本。
+
+    在文件中写随手测试，并将其送到 REPL，而不是直接在 REPL 中敲键盘！除了正规的测试外，程序中我们会经常尝试些想法，与其每次把这些想法反复敲出来，不如放在源文件中。我一般会在文件结尾放一个 comment，里面放随手尝试代码。只要用cmd+option+x 键就可以把 form 送进 REPL 看结果啦！象这样：
+
+(comment
+  (my-function "hello")
+  )
+
+    小步写程序。一个函数一个函数写，边写边使用 REPL 试验它们。深思熟虑地一次写一大批代码可能看起来很酷，却往往不是 Clojure 的最佳做法。
+
+https://segmentfault.com/a/1190000004392158
+
+** 12:21 add-remote-javadoc
+
+http://clojure-api-cn.readthedocs.io/en/latest/clojure.java.javadoc/add-remote-javadoc.html
+添加路径 url 到远程 javadoc 路径的列表， package-prefix 是 URL 对应的 javadoc 的包名的开始部分。
+
+** 12:39 三个境界(clojure state management)
+
+可以参考《clojure pratical》
+其實這個「看山是山，看山不是山，看山仍是山」是禪宗青原行思禪師對自己修行的總結。也是修行人對境緣的三個見地層次：
+起初「看山是山」，形容我們在未修行的時候，人家說山我們就一堆妄念，覺得山應該如何如何，要高要翠綠要有這個要有那個等等。打個比方就如在學校學到了很多書本上的知識，覺得這個世界應該是如何如何，尊老愛幼，廉潔正直，做人要有道德等等。一說到某政黨或者國家，大家自然生起一系列聯想。(只是看了）
+
+然後「看山不是山」，就是開始參悟佛理，精進修行，體悟一切的虛幻不實和無常，那裏還來個「山」呢？不過是因緣和合而有之物。繼續用上面的比方，就如當發現一些平常接觸不到的歷史和聽到看到讀到某些平常不讓看的新聞，立馬三觀盡毀，這個世界原來不是我們想像那樣啊！為老不尊，貪污腐敗，少年早熟，一切唯利是圖等等。(看多了，反而乱了)
+(观点太多了，似是而非）
+
+最後「看山仍是山」，則是我們徹悟本來，不被虛幻欺騙，可以真真實實地直視世間一切，不再有“應該這樣”、“應該那樣”的聯想。繼續上面的例子：不再執著於“三觀”，任它好壞，世間即是世間，對其喜好厭惡都是我們自己自作多情強加上去的。某國就是某國，貪污也是某國，廉潔也是某國，不再因為對某些元素的喜好厭惡而妄作判斷。能平和無爭，自在無礙地看著，抽離了世俗的眼光而觀。不會再“驚呆了”。(看清楚了，就不乱了)
+
+** 13:53 文献综述
+
+其他作者是怎么描述该作者的工作
+
+该作者做了那个工作，别人是怎么描述的
+
+** 17:26 全球风电2017发展状况
+
+一、过去五年，风电产业取得快速的发展和成长。中国在2012年的时候，风电总装机容量约是6000万千瓦，到2017年已经接近2012年的3倍。而全球的风电产业也取得了重大进展。2012年全球风电总装机容量是2.8亿千瓦，而现在已经超过5亿千瓦，大约是2012的2倍。所以说，风电产业在过去的五年当中取得了很大的成绩。虽然风电市场的增长有它的波动性，不可能总是复制中国2006年3000多万千瓦新增装机容量这样发展的速度，但是如果我们看到最近3年全球新增风电装机容量和3年之前相比，最近3年是之前3年1.4倍。所以说，从全球来看风电产业正在快速成长。
+
+** 17:30 2017年中国风电并网量
+
+http://www.nea.gov.cn/2017-04/25/c_136234299.htm
+1-3月，全国风电新增并网容量352万千瓦，截至3月底，累计并网容量达到1.51亿千瓦，累计并网容量同比增长13%；1-3月，全国风电上网电量687亿千瓦时，同比增长26%；平均利用小时数468小时，同比增加46小时；风电弃风电量135亿千瓦时，比去年同期减少57亿千瓦时，弃风限电情况明显好转。
+
+** 23:00 世界主要国家人均能源消费量
+
+http://news.bjx.com.cn/html/20141030/559169.shtml

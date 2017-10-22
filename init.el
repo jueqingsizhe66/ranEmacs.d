@@ -13,12 +13,30 @@
 (add-to-list 'package-archives
              '("gnu" . "http://elpa.gnu.org/packages/") t)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (add-to-list 'package-archives                                    ;;           ;;
+;;              '(("melpa" . "http://melpa.milkbox.net/packages/")                ;;
+;;                ;("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/") ;;
+;;                ;("melpa" . "http://elpa.emacs-china.org/melpa/")               ;;
+;;                ;("marmalada" . "http://elpa.emacs-china.org/marmalade/")       ;;
+;;                ) ) ;;                                                          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.mill.box.net/packages/") t)
 
 (add-to-list 'package-archives 
              '("org" . "http://orgmode.org/elpa/") t)
 
+(add-to-list 'package-archives 
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (add-to-list 'package-archives                             ;;
+;;              '("melpa" . "https://melpa.org/packages/") t) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
@@ -189,7 +207,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-
+(load "setup-rust.el")
 (load "fortran-editing.el")
 (load "fortran-index-args.el")
 

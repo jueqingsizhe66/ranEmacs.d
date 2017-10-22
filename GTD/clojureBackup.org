@@ -1,0 +1,366 @@
++***  clojure-part ***
+;;   This defines a new local minor-mode `sotclojure-mode', which is
+;;   activated by the global `speed-of-thought-mode' on any clojure
+;;   buffers.
+;;
+;;   The mode is quite simple, and is composed of two parts:
+;;
+;; 1.1 Abbrevs
+;; ───────────
+;;
+;;   A large number of abbrevs which expand function initials to their
+;;   name. A few examples:
+;;
+;;   • wl -> when-let [|]
+;;   • n -> not
+;;   • wo -> with-open
+;;   • np -> number? (the p stands for predicate)
+;;   • ck -> :keys [|] (the c stands for colon)
+;;
+;;   Note that, in order to avoid frustration, the 1-letter abbrevs will
+;;   only expand after a `(' or after a `/', so you can still use 1-letter
+;;   local variables like `a' and `n'.
+;;
+;; 1.2 Commands
+;; ────────────
+;;
+;;   It also defines 4 commands, which really fit into this "follow the
+;;   thought-flow" way of writing. The bindings are as follows:
+;;   `M-RET': Break line, and insert `()' with point in the middle.
+;;   `C-RET': Do `forward-up-list', then do M-RET.
+;;
+;;   Hitting RET followed by a `(' was one of the most common key sequences
+;;   for me while writing elisp, so giving it a quick-to-hit key was a
+;;   significant improvement.
+;;
+;;   `C-c f': Find function under point. If it is not defined, create a
+;;   definition for it below the current function and leave point inside.
+;;
+;;   With these commands, you just write your code as you think of it. Once
+;;   you hit a “stop-point” of sorts in your tought flow, you hit `C-c f/v'
+;;   on any undefined functions/variables, write their definitions, and hit
+;;   `C-u C-SPC' to go back to the main function.
+;;
+;; 1.3 Small Example
+;; ─────────────────
+;;
+;;   With the above (assuming you use something like paredit or
+;;   electric-pair-mode), if you write:
+;;
+;;   ┌────
+;;   │ (wl SPC {ck SPC x C-f C-RET (a SPC (np SPC y C-f SPC f SPC y
+;;   └────
+;;
+;;   You get
+;;
+;;   ┌────
+;;   │ (when-let [{:keys [x]}
+;;   │            (and (number? y) (first y))])
+;;   └────
+
+
+
+;;; Abbrev definitions
+(defconst sotclojure--default-function-abbrevs
+  '(
+    ("a"   . "and ")
+    ("am"  . "alter-meta! ")
+    ("amb" . "alter-meta! ")
+    ("ai"  . "assoc-in ")
+    ("as"  . "assoc ")
+    ("ap"  . "associative? ")
+    ("b"   . "binding [$]")
+    ("bl"  . "butlast ")
+    ("c"   . "count ")
+    ("ca"  . ":as ")
+    ("ck"  . ":keys [$] ")
+    ("co"  . ":or {$}")
+    ("con" . ":only [$]")
+    ("cp"  . "coll? ")
+    ("cr"  . ":refer [$]")
+    ("cs"  . ":strs [$]")
+    ("cy"  . ":syms [$]")
+    ("d"  . "def ")
+    ("di"  . "dissoc ")
+    ("df"  . "defn $ []\n  ")
+    ("dm"  . "defmacro $\n  \"\"\n  []\n  ")
+    ("dv"  . "def $ nil\n  \"\"")
+    ("ds"  . "doseq [it $]")
+    ("dt"  . "deftest ")
+    ("ep"  . "empty? ")
+    ("f"   . "first ")
+    ("fi"  . "filter ")
+    ("fp"  . "fn? ")
+    ("fn"  . "fn [$]")
+    ("g"   . "get ")
+    ("gb"  . "group-by ")
+    ("gi"  . "get-in ")
+    ("i"   . "into ")
+    ("ip"  . "instance? ")
+    ("idp" . "identical? ")
+    ("il"  . "if-let [$]")
+    ("kp"  . "keyword? ")
+    ("l"   . "let [$]")
+    ("let" . "let [$]")
+    ("loop" . "loop [$]")
+    ("lp"  . "list? ")
+    ("m"   . "map ")
+    ("mc"  . "mapcat ")
+    ("mp"  . "map? ")
+    ("n"   . "not ")
+    ("np"  . "number? ")
+    ("pl"  . "println ")
+    ("pn"  . "println ")
+    ("r"   . "reduce ")
+    ("rb"  . "reset! ")
+    ("re"  . "remove ")
+    ("rf"  . "re-find #\"$\"")
+    ("rs"  . "re-seq #\"$\"")
+    ("s"   . "str ")
+    ("sb"  . "swap! ")
+    ("sk"  . "select-keys ")
+    ("sp"  . "seq? ")
+    ("stp" . "string? ")
+    ("syp" . "symbol? ")
+    ("t"   . "throw (Exception. \"$\")")
+    ("tt"  . "testing \"$\"")
+    ("u"  . "update ")
+    ("ui"  . "update-in $ []")
+    ("vm"  . "vary-meta ")
+    ("vp"  . "vector? ")
+    ("w"   . "when ")
+    ("wn"  . "when-not ")
+    ("wl"  . "when-let [$]")
+    ("wb"  . "with-bindings ")
+    ("wm"  . "with-meta ")
+    ("wo"  . "with-open [$]")
+    ("wr"  . "with-redefs [$]")
+    ("wis" . "with-in-str ")
+    ("wos" . "with-out-str ")
+    )
+  "Alist of (ABBREV . EXPANSION) used by `sotclojure'.")
+
+
+
+
+
+###  part of the speed of the thought lisp ###
+
+
+;;; Commentary:
+;;
+;; This defines a new global minor-mode `speed-of-thought-mode', which
+;; activates locally on any supported buffer.  Currently, only
+;; `emacs-lisp-mode' buffers are supported.
+;;
+;; The mode is quite simple, and is composed of two parts:
+;;
+;;; Abbrevs
+;;
+;; A large number of abbrevs which expand function
+;; initials to their name.  A few examples:
+;;
+;; - wcb -> with-current-buffer
+;; - i -> insert
+;; - r -> require '
+;; - a -> and
+;;
+;; However, these are defined in a way such that they ONLY expand in a
+;; place where you would use a function, so hitting SPC after "(r"
+;; expands to "(require '", but hitting SPC after "(delete-region r"
+;; will NOT expand the `r', because that's obviously not a function.
+;; Furthermore, "#'r" will expand to "#'require" (note how it omits
+;; that extra quote, since it would be useless here).
+;;
+;;; Commands
+;;
+;; It also defines 4 commands, which really fit into this "follow the
+;; thought-flow" way of writing.  The bindings are as follows, I
+;; understand these don't fully adhere to conventions, and I'd
+;; appreciate suggestions on better bindings.
+;;
+;; - M-RET :: Break line, and insert "()" with point in the middle.
+;; - C-RET :: Do `forward-up-list', then do M-RET.
+;;
+;; Hitting RET followed by a `(' was one of the most common key sequences
+;; for me while writing elisp, so giving it a quick-to-hit key was a
+;; significant improvement.
+;;
+;; - C-c f :: Find function under point.  If it is not defined, create a
+;; definition for it below the current function and leave point inside.
+;; - C-c v :: Same, but for variable.
+;;
+;; With these commands, you just write your code as you think of it.  Once
+;; you hit a "stop-point" of sorts in your thought flow, you hit `C-c f/v`
+;; on any undefined functions/variables, write their definitions, and hit
+;; `C-u C-SPC` to go back to the main function.
+;;
+;;; Small Example
+;;
+;; With the above (assuming you use something like paredit or
+;; electric-pair-mode), if you write:
+;;
+;;   ( w t b M-RET i SPC text
+;;
+;; You get
+;;
+;;   (with-temp-buffer (insert text))
+
+;;; Abbrev definitions
+(defconst sotlisp--default-function-abbrevs
+  '(
+    ("a" . "and ")
+    ("ah" . "add-hook '")
+    ("atl" . "add-to-list '")
+    ("bb" . "bury-buffer")
+    ("bc" . "forward-char -1")
+    ("bfn" . "buffer-file-name")
+    ("bl" . "buffer-list$")
+    ("blp" . "buffer-live-p ")
+    ("bn" . "buffer-name")
+    ("bod" . "beginning-of-defun")
+    ("bol" . "forward-line 0$")
+    ("bp" . "boundp '")
+    ("bs" . "buffer-string$")
+    ("bsn" . "buffer-substring-no-properties")
+    ("bss" . "buffer-substring ")
+    ("bw" . "forward-word -1")
+    ("c" . "concat ")
+    ("ca" . "char-after$")
+    ("cb" . "current-buffer$")
+    ("cc" . "condition-case er\n$\n(error nil)")
+    ("ci" . "call-interactively ")
+    ("cip" . "called-interactively-p 'any")
+    ("csv" . "customize-save-variable '")
+    ("d" . "delete-char 1")
+    ("dc" . "delete-char 1")
+    ("dcu" . "defcustom $ t\n  \"\"\n  :type 'boolean")
+    ("df" . "defun $ ()\n  \"\"\n  ")
+    ("dfa" . "defface $ \n  '((t))\n  \"\"\n  ")
+    ("dfc" . "defcustom $ t\n  \"\"\n  :type 'boolean")
+    ("dff" . "defface $ \n  '((t))\n  \"\"\n  ")
+    ("dfv" . "defvar $ t\n  \"\"")
+    ("dk" . "define-key ")
+    ("dl" . "dolist (it $)")
+    ("dt" . "dotimes (it $)")
+    ("dmp" . "derived-mode-p '")
+    ("dm" . "defmacro $ ()\n  \"\"\n  ")
+    ("dr" . "delete-region ")
+    ("dv" . "defvar $ t\n  \"\"")
+    ("e" . "error \"$\"")
+    ("ef" . "executable-find ")
+    ("efn" . "expand-file-name ")
+    ("eol" . "end-of-line")
+    ("f" . "format \"$\"")
+    ("fb" . "fboundp '")
+    ("fbp" . "fboundp '")
+    ("fc" . "forward-char 1")
+    ("ff" . "find-file ")
+    ("fl" . "forward-line 1")
+    ("fp" . "functionp ")
+    ("frp" . "file-readable-p ")
+    ("fs" . "forward-sexp 1")
+    ("fu" . "funcall ")
+    ("fw" . "forward-word 1")
+    ("g" . "goto-char ")
+    ("gc" . "goto-char ")
+    ("gsk" . "global-set-key ")
+    ("i" . "insert ")
+    ("ie" . "ignore-errors ")
+    ("ii" . "interactive")
+    ("il" . "if-let (($))")
+    ("ir" . "indent-region ")
+    ("jcl" . "justify-current-line ")
+    ("jl" . "delete-indentation")
+    ("jos" . "just-one-space")
+    ("jr" . "json-read$")
+    ("jtr" . "jump-to-register ")
+    ("k" . ("kbd " (format "%S" (key-description (read-key-sequence-vector "Key: ")))))
+    ("kb" . "kill-buffer")
+    ("kn" . "kill-new ")
+    ("kp" . "keywordp ")
+    ("l" . "lambda ($)")
+    ("la" . ("looking-at \"" - "\""))
+    ("lap" . "looking-at-p \"$\"")
+    ("lb" . "looking-back \"$\"")
+    ("lbp" . "line-beginning-position")
+    ("lep" . "line-end-position")
+    ("let" . "let (($))")
+    ("lp" . "listp ")
+    ("m" . "message \"$%s\"")
+    ("mb" . "match-beginning 0")
+    ("mc" . "mapcar ")
+    ("mct" . "mapconcat ")
+    ("me" . "match-end 0")
+    ("ms" . "match-string 0")
+    ("msn" . "match-string-no-properties 0")
+    ("msnp" . "match-string-no-properties 0")
+    ("msp" . "match-string-no-properties 0")
+    ("mt" . "mapconcat ")
+    ("n" . "not ")
+    ("nai" . "newline-and-indent$")
+    ("nl" . "forward-line 1")
+    ("np" . "numberp ")
+    ("ntr" . "narrow-to-region ")
+    ("ow" . "other-window 1")
+    ("p" . "point$")
+    ("pm" . "point-marker$")
+    ("pa" . "point-max$")
+    ("pg" . "plist-get ")
+    ("pi" . "point-min$")
+    ("pz" . "propertize ")
+    ("r" . "require '")
+    ("ra" . "use-region-p$")
+    ("rap" . "use-region-p$")
+    ("rb" . "region-beginning")
+    ("re" . "region-end")
+    ("rh" . "remove-hook '")
+    ("rm" . "replace-match \"$\"")
+    ("ro" . "regexp-opt ")
+    ("rq" . "regexp-quote ")
+    ("rris" . "replace-regexp-in-string ")
+    ("rrs" . "replace-regexp-in-string ")
+    ("rs" . "while (search-forward $ nil t)\n(replace-match \"\") nil t)")
+    ("rsb" . "re-search-backward \"$\" nil 'noerror")
+    ("rsf" . "re-search-forward \"$\" nil 'noerror")
+    ("s" . "setq ")
+    ("sb" . "search-backward $ nil 'noerror")
+    ("sbr" . "search-backward-regexp $ nil 'noerror")
+    ("scb" . "skip-chars-backward \"$\\r\\n[:blank:]\"")
+    ("scf" . "skip-chars-forward \"$\\r\\n[:blank:]\"")
+    ("se" . "save-excursion")
+    ("sf" . "search-forward $ nil 'noerror")
+    ("sfr" . "search-forward-regexp $ nil 'noerror")
+    ("sic" . "self-insert-command")
+    ("sl" . "setq-local ")
+    ("sm" . "string-match \"$\"")
+    ("smd" . "save-match-data")
+    ("sn" . "symbol-name ")
+    ("sp" . "stringp ")
+    ("sq" . "string= ")
+    ("sr" . "save-restriction")
+    ("ss" . "substring ")
+    ("ssn" . "substring-no-properties ")
+    ("ssnp" . "substring-no-properties ")
+    ("stb" . "switch-to-buffer ")
+    ("sw" . "selected-window$")
+    ("syp" . "symbolp ")
+    ("tap" . "thing-at-point 'symbol")
+    ("tf" . "thread-first ")
+    ("tl" . "thread-last ")
+    ("u" . "unless ")
+    ("ul" . "up-list")
+    ("up" . "unwind-protect\n(progn $)")
+    ("urp" . "use-region-p$")
+    ("w" . "when ")
+    ("wcb" . "with-current-buffer ")
+    ("wf" . "write-file ")
+    ("wh" . "while ")
+    ("wl" . "when-let (($))")
+    ("we" . "window-end")
+    ("ws" . "window-start")
+    ("wsw" . "with-selected-window ")
+    ("wtb" . "with-temp-buffer")
+    ("wtf" . "with-temp-file ")
+    )
+  "Alist of (ABBREV . EXPANSION) used by `sotlisp'.")

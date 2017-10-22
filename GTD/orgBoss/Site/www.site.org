@@ -111,3 +111,70 @@ The 100 Most Used Clojure Expressions
  org-babel example for many languages
 ** https://github.com/redguardtoo/emacs.d
  陈斌  chen bin
+** https://github.com/judasn/IntelliJ-IDEA-Tutorial
+ IDEA简体中文教程
+http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/
+** https://clojuredocs.org/
+ clojure documents
+** joyofclojure.com
+ the joy of clojure
+** http://clojure-api-cn.readthedocs.io/en/latest/
+ clojure手册
+** https://github.com/huangz1990/clojure_api_cn/blob/master/clojure.repl/dir-fn.rst
+ clojure_api_cn
+** http://www.cnblogs.com/fxjwind/archive/2013/01/22/2871860.html
+ doc and find-doc, 帮助文档
+
+The doc, look up the documentation associated with any other function or macro.
+
+user=> (doc +) 
+------------------------- 
+clojure.core/+ 
+([] [x] [x y] [x y & more]) 
+Returns the sum of nums. (+) returns 0.
+
+The find-doc function accepts a string, which can be a regex pattern. It then finds the documentation for all functions or macros whose names or associated documentation match the supplied pattern.
+
+user> (find-doc "lazy") 
+------------------------- 
+clojure.core/concat 
+([] [x] [x y] [x y & zs]) 
+Returns a lazy seq representing the concatenation of... 
+------------------------- 
+clojure.core/cycle 
+([coll]) 
+Returns a lazy (infinite!) sequence of repetitions of... 
+... more results
+** http://blog.csdn.net/ithomer/article/details/78170870
+ 技术博客，坚持始终
+** http://blog.csdn.net/ithomer/article/details/78170870
+ 写博客创作，输出知识和思想，才是读书的最高境界！朋友，你的回答看似文不对题，
+另辟蹊径，但实质你已达到了读书的最高境界，
+看书是书，看书不是书，看书还是书，写着你自己的书，细思极恐啊，世外高人
+
+老僧三十年前，未参禅时，见山是山，见水是水。 
+
+乃至后来，亲见知识（佛家称明师曰善知识），有个入处，见山不是山，见水不是水。 
+
+而今得个休歇处，见山只是山，见水只是水。 
+
+大众！者三般见解，是同是别，有人缁素（代表黑白分明）得出，许汝亲见老僧
+
+https://www.zhihu.com/question/20146527
+** https://www.thewindpower.net/statistics_en.php
+ 全球风电统计
+** http://www.mei.net.cn/dgdq/201710/751674.html
+ 
+球风能理事会秘书长Steve Sawyer：中国是全球风电最主要的增长极（附图） 
+** https://www.bp.com/zh_cn/china.html
+ BP全球中国统计年鉴
+** https://wenku.baidu.com/view/a9533b120b4e767f5acfce27.html
+ simpack交通大学
+** http://www.simpack.com/videos.html?&L=0%3Fcid%3D373%3Fcid%3D654
+ simpack  video
+** http://isabelle.in.tum.de/ 
+sabelle 又发新版了，好羡慕。
+我们 HOL4 社区的用户数量相比之下太少了（不过也比 HOL Light 强，都快被榨干了）
+** https://www.bilibili.com/video/av12818669/?from=search&seid=18118687468980995416#page=3
+ oeasy 教你玩rust
+

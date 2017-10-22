@@ -117,3 +117,11 @@
       "C:/Program Files (x86)/Mozilla Firefox/firefox.exe")
 (setq browse-url-generic-program "google-chrome")
 (setq browse-url-browser-function 'browse-url-generic)
+
+(setq browse-url-chrome-program
+      "c:/Users/YeZhao/AppData/Local/Google/Chrome/Application/chrome.exe")
+
+;; when you use M-x apropos , it will generate the realted topic into ones
+
+(setq apropos-sort-by-scores t) 
+ 

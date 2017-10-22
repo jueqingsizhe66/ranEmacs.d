@@ -121,35 +121,33 @@
 *** 中文摘要    [%]                                                 :crypt:
 -----BEGIN PGP MESSAGE-----
 
-hQEMAw1pL9obieEVAQf7BHdCnme8ghZ5JSp/edmHyvcflvnQcw6byteXi0jIWShB
-P8ixsthvK3KiUZIgU3epvu5B427WiCw8TrGoauoVCdGcIG5JMW4BPOlIilRFgy/J
-lzcB2+w40Vmv4leKShomZMm4vhlG0zh7G/dtxTreAq4wW1L0K0ZDU/pG9z/DpOhP
-wJv/UQGfPQhwydhTX4M2CZxHF+LuaDCGljhdepHd14sdtpdG8HooLNeBsHolWHak
-3kECkdfYLMPkC+8BE7M5tONwdPq7UVdViVQZAJUyRxwoapfGp5/0qI3cXumVbw+F
-XjXCzIvcCyOXj2zt95RuyBHrihT0V3I+7SNOvr1H1NLpAS4Z8DQGBht4SROwHLV/
-BflPzsS6fT2GC8c+oSRph6pztVyRaY/7Ch8wOR5TYo1W4KLsyoQVqgzKS0cxjuFe
-YhKjZbUfE3MdIW7sLIyP0x8KgDnPE+o9ZhT8Kp6hBbHg6c1FnlIIqkwY0HgHpzIA
-ItmdkvTPZzhYzExTfdPZfbOPjKCvOK+g2oBpc+OVru8XpBXoTHEvT6t5DBFIoC9t
-CU8VrgXG81JEppmfwh4WvelvJILT4JghR7FKn4CTdg98emXJgn1xh8gAJGHxjy0r
-sVjOwW6zHenulCcn6bRc7Cvt/GF4jPCBgfE7eBsUEi+CqJCko7XdfwgKW+/C7JiE
-mGyDP2wyp0pFZFph9bcQFE52YCuzasKsSAKDSrOzsqWzRS47M/I6QIHULfV2N7Q/
-pVcF3a1e1ejgMPU1CHUOJky4SO2aa4eJ7hz6QaEGnySKXfTKbe6Bm1X8kydc2VJK
-dcDCRDqhj8eRgWWxJP2OrGZSr0wic/lcCZ6UDpAmeq2j1oGUN3rnN1hbL0D5eGJj
-Ltk7Una+Z1O1e85FcOTVsLZ6qxOZcWwR1GlPV4wfXSlpdutngykqR2A/FzwaCART
-1JYwm/u3Of8I9xLmLCs4NlpHKBctuSUP6I80suttWGzvx3uMO+9md57guf5s7yEf
-uDgaxBfKZ+5wYHbHZugaiyjAr4ng5kpO+0d4EGNlYaftI5QR5+mpHVeeRGQ3dPQl
-K6w/pdU0P2BgGUJzjcKC3BSTb0/6IsXEK2X0PXALIl8+rBlmkKDHXacLtTakRs+F
-3TxoELGZ/zD5sR+fSpyULQYmuU6bInfFWrzp4T7azSj2vU9A1fc5kdin+lECl/ra
-43lYmbtKfnT7eHDFQ2BZS/IvVhGYieCbnvY7rFiz5SxiUJgk3N8+NUsfZHOxRxut
-7nnhMhoUUrRZPZJWvzl/6BFH1RZuR9QpbfY9eVYsemuYd8HhMKV4blUfw0fHzRav
-IYq/3qcQGMNPDyFxK1rC9GF/oVItU3MyFRa5jd7lXfg6jPw1lHY9LcOMEYfA3Jnc
-T0L1jqvjOYD5DYhhuTTv5r4ogzs/YhcQwslToJM39Y0Ci0xQa0kfE5I44kW3k6ps
-HvIvJCbyp937deqldVWt9r4wETFXlbMBwFJoIoXpOyzWu4lg07JSO0lPRpU1X3RY
-evw=
-=9INX
+hQEMAw1pL9obieEVAQf/by15nA1d6a3Rl3Jtxlc9q8GJqxwihaa3GyFnQ6YlpatO
+0RdroFqQKR2DxBHMtey9IHUBbTFRDV7mYsdcFJCRJW/OpJjEQE9LgmVAdGfigadD
+79XFzDYcFfNMD0BC/I/BIq8/9djG2EJ5kHRXWfCzCvXQ5psFIxF1zXfwyJ+pkT3O
+JICDgCKRlYuctBZwOdThSEnJULfPHvxFcCQy2OAfQ7lyk60TP8UrufZ4C0GvXezO
+BC4V87qal3ywUwi/5a3/tJ7QDnMKCcqleVMkEZO8RVX/dD2Z5LdNqYLArR/VyBqM
+JgFb1ePqivfkyaac9qp68lBBrZbyNwYbqRgN6QD7adLpARfwIMs1v1X3yir26qCh
+rLwsyO5osHUQq8q/9KsZf43VbZ8UjvN+5LooxUWv7JSItO5XJurW4ICpNB6iR3rE
+NjO714GbDPQn47r+2eR1uBWHS71LDBsgKUYF+7QlI3tVJqHBd8xtFPyUwWLGWRON
+7MKRUV4ET9VJHvVpN+yLsdVasWZKq7lqxUuJYb3h2zk4xD61uCRWGZKU6IBbbyy8
+HTxZZzneFwOQmsFtrM975POPONYajWR/DUWpa/o5xCBmQdfMYXFRd6bDT0FtWsfn
+lIooGyeRw2td/C2sFR/rAZTpsj5MhN0/bzwDF3+oMrIYR+JwjD59HKoN8pXDcI6c
+a1SIc9P4pIGFu7pvPP6moslpNBb4GALa1Iye/ndLViusHSZj5dZ6dRThBpW23SKz
+vtHa96bsVLGtu1CAD8t0YYYUPb3siKS08c+5GCRwA7bvuzmlZlXWTCBeAeiYY7Hz
+4u0WhJuQ4Nr/utLDkAV/JYb/QelIMy04RHnrLpTHEabKhJbGhiEWgcGEJ7AZO2w/
+zDI/4O/ZXWg86TtcQyyotuJeofoGMcXCDLFQkWkjS7c3lhfF06nVuu96MXOmm1kf
+c37jYtEMdcBY23sb2kb+SdmAngHktpUFe9G/hHkq68NEYEwcUHkOcjm/ZtAFW6De
+gco5Pwzcn1ncvh0IJoLuid3Au2pLPuDUzak4lnXO5QtFePknOsjLhzXt72oKDHr1
+VZOZDLevaslzbFxgSRuj72uGwV5955BlcY1UfE/LyQiSEm0Z4ZKGQ4aEiT6A1ypC
+7RsvfY4QpnIHjo14rYZFejbmx/BNhSM6tb72FP4hut84RuXhh97mM+GBGP2nTDWP
+GHifz0d9mQgaiC4OoC13QB17eQfejvPc0u1p8tLtJ4fsOaL69q4fL3hpUHBFmtzp
+6HBaEpgCc2G8+iXwraEgQaWgR9dSBdB1Du3FmWES7rnDVbCCVhp68VpD5KQjbBMR
+/pv3PnrwsR9mpMTCJxvwmvBmZu5kq0LZmz1+i4MRlau+7vhWO8KzMG1PAnfKkU9x
+LtJc1N+1gejYWNDRn4TPPOZYX+k3O1nzFFJEH4mD2QAF1Zt38oljQnw3wyBhUBAx
+bWx59sohut8NKaogc4rWwP6g3Vlv28SJ9D2gkK2Adbf+rVsDFcbCX/PpaG9T/6a4
+IfzIdqRHUYvXUsZRwJI=
+=xnhA
 -----END PGP MESSAGE-----
-*** 关键词
-水平轴风力机；多轴角运动；非定常流动；CFD模拟；风洞实验
 *** Abstraction                                                     :crypt:
 -----BEGIN PGP MESSAGE-----
 
@@ -342,5 +340,51 @@ CFD/CSD的全三维流固耦合模拟平添。在方法正确的基础上，针�
 外叶展相反，进而减小了轴向载荷极值；。。。
 
 上下不对称会引起俯仰力矩，而左右不对称会产生偏航力矩，从而影响塔架以及整个风力机的振动规律
+
+
+* 气弹非稳定性调研
+
+气弹失稳包含三种类型：
+1. 失速诱导振动(stall-induced vibrations) 主要是失速型风力机，变桨型风力机主要是
+是在停机、较大公交。。
+2. 经典颤振(classical flutter) 主要存在于变桨型风力机(为什么失速型不存在？)
+
+3. 控制系统诱发失稳， 基本上都是变桨型
+
+** 影响因素
+
+1. 翼型气动特性(翼型失速特性）
+2. 振动方向（叶片相对于风轮平面的振动方向)
+3. 结构阻尼(若有负气动阻尼，需要结构阻尼补偿
+
+** 必要条件
+1. 附着流动(叶片向攻角增大方向扭转时，流动依然是附着的)
+2. 高尖速比（叶片附着流动相对速度足够大，比如：超速、片行风
+3. 较低的刚度（叶片扭转模态和挥舞弯曲模态的自然频率足够低，在颤振中耦合
+4. 质心后移(叶片截面的质心位于气动中心之后，保证颤振的弯曲和扭转部分处于正确的
+相位
+** 三维失速延迟模型与动态失速模型的结合
+
+三维失速延迟模型：Du-Selig模型
+动态失速模型：Beddoes-Leishman模型分为以下四个部分的计算
+1. 附着流(环量项+脉冲项)
+2. 分离流（尾缘分离)
+3. 涡升力(前缘分离)
+4. 叠加
+*** 存在的问题
+Du-selig的计算过程，首先加载2D翼型启动数据，然后选择某个计算位置，叶片
+展向截面位置，计算该截面的AOA，进而查表得到对应的CL CD，进行Du-Selig
+模型的3D计算(三维修正)
+
+而Beddoes-Leishman既可以在2D翼型数据也可以在3D翼型数据的基础上进行计算--
+也是类似道理，找到对应截面的AOA，查找2D或者3D对应的升阻力系数随攻角变化
+
+曲线表，进而确定该截面的CL CD,然后把该截面的气动特性载入到动态气动计算模型
+(Beddoes-Leishman模型)，进而获得动态条件的Cl Cd
+
+然而这种耦合存在的问题是三维失速延迟模型与动态失速模型不相容（不对肯定相容的）
+(理论上来说）
+(SDM:三维失速模型   DSM:动态失速模型）
+*** 两种模型的结合
 
 

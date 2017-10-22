@@ -1,0 +1,137 @@
+星期日, 2017/10/22
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 15:11 Lisp fantasity
+
+What makes LISP such a fantastic language is that the source code
+and data structures are intrinsically one and the same:
+the lisp source code you read as a human is almost identical to
+how the code is manipulated as a data structure by lisp---the distinction
+between the questions "What is data?" and "What is code" are nil
+
+The data as code,the macro system and the ability to "advise" arbitrary
+functions--meaning you can modify the behavior of existing code without
+copying and modifying the original---give you an unprecedented ability
+to alter Emacs to suit your needs.
+
+You can *hook* , replace or alter existing routines in Emacs to suit
+your needs without rewriting large swathes of someone else's source 
+code.
+
+Emacs is a living systems. When you write elisp, you are not just
+writing snippets of code run in a sandbox, isolated from everything
+It is a living system; an operationg system running on an operating
+system. It is an interpreter
+
+** 15:39 what is buffer in emacs
+
+The buffer is the data structure(this is very important(extremely powerful concept 
+because the very same command you use to move around and edit in Emacs
+are almost always the same ones you use behind-the-scenes in elisp.
+
+** 15:45 window
+
+Think of it as a physical window having a frame, each 
+frame made up of window panes(each window is an window)
+
+why introduce the Point and mark!
+
+keystrokes(key bindings) 
+
+.emacs.d init.el and .eamcs
+
+Major mode and minor mode(key function  highlight --one file extension bind to only one major mode)
+
+** 15:54 font locking
+
+Font locking is the correct term for syntax high-lighting in Emacs, and in turn
+is made up of faces of properties(color, font, text size, text style etc) that
+the font locking engines use to pretty-point the text.
+
+You are free to change a buffer's major mode at any time by typing the command
+for another one.
+
+** 16:03 client-server
+
+Emacs has a client-server architecture(emacs client-server mode)
+Emacs --daemon will run emacs as a daemon. It will call server-start,
+as above, but will return control to your terminal immediately and run
+in background ,waiting for client requests.
+
+** 16:13 M-x
+
+M-x means the execute extended command(M-x) interface and key bindings
+
+So if you're a package author, you have to choose if a particular function 
+is accessible to the end-user through the M-x interface(Mx) . Marking 
+it as interactive will make it accessible to the end users.
+
+In other words, if it's not interactive ,you cannot run it from M-x nor 
+can you bind it to a key
+
+** 16:39 You know what's my talents?
+
+That is what I want? That is why I came here.
+
+** 16:42 Self-documenting editor
+
+Emacs is a sophisticated self-documenting editor. Every facet of
+emacs is searchable or describable. Learning how to do this
+is absolutely esssential to mastering Emacs.
+
+I use emacs's self-documenting functionality all the time.
+
+Knowing how to get help is critical because
+1. emacs knows best .
+2. you will find more beautiful and functional features in emacs.
+
+** 16:47 emacs document system
+
+diveded into 3 parts
+1. the info manual
+2. Apropos(Emacs has an extensive apropos systems that works in much the same 
+way as apropos does on the command line.The Apropos system is specially useful
+if you 're not entirely sure what you are looking for.(C-h a: M-x apropos-command)
+(Hint : Apropos can sort results by relevancy . To enable this
+add (setq apropos-sort-by-scores t)
+3. the describle system---a living system which describe yourself system.(your
+
+personalize Emacs(M-x describe-mode or C-h m   
+C-h f: M-x describe-function
+C-h v: M-x describe-variable
+C-h k: M-x describe-key
+
+** 学习 16:57 the theory of movement
+SCHEDULED: <2017-10-22 周日>
+
+- State "学习"       from              [2017-10-22 周日 17:04]
+Getting around, and getting around efficiently, is as important as 
+knowing how to edit quickly and efficiently.
+
+But movement in Emacs is more than characters in a buffer.
+There's a host of supplementary skills that make up navigation,
+like understanding Emacs's rather complicated windowing system.
+
+I've laid things out ,so you can start at the beginning and work
+your way through, picking up bits and pieces as you read. The most important
+part, as I've stressed many times, is to give it time and practice 
+take a moment in your day-to-day life to ask yourself if there's a 
+better way of solving with which you are faced
+
+** 17:24 syntax table
+
+syntax table let you choose which is the comment character,
+what character make up a word?(symbol. punctuation,comment etc)
+as a syntactic unit . So when you move the point around on
+the screen, it moves according to the syntax table 
+and the general rules governing forward-word and backward-word
+
+Every editor has an equivalent of Emacs's syntax table, but
+what sets Emacs apart from other editors is that 
+you can inspect and change the syntax table, which in turn will
+effect how you invoke certain commands.

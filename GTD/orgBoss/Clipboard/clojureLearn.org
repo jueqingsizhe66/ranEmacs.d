@@ -1,0 +1,26 @@
+
+* 2017
+** 2017-10 十月
+*** 2017-10-16 星期一
+**** deftype [2017-10-16 周一 21:12]                               :@work:
+(my/defshortcut ?D "~/.emacs.d/GTD/Dissertation.org")
+**** deftype [2017-10-16 周一 21:15] 
+**** defstructure [2017-10-16 周一 21:16] 
+**** defrecord [2017-10-16 周一 21:17] 
+ 
+ what's the difference between defrecord
+**** refs [2017-10-16 周一 22:02] 
+ 
+ refs are the only game in town  to ensure that the
+necessary coordinated change occurs synchronously.
+**** clojure STM [2017-10-16 周一 22:09] 
+ 
+ Clojure transaction model
+
+locking process , locking management
+*** 2017-10-17 星期二
+**** reify [2017-10-17 周二 00:57] 
+ 
+ how reify is intended to realize a single instance
+of a type, protocol, or interface-in other words, abstractions.
+12.1 generating objects on the fly with proxy

@@ -55,7 +55,7 @@
 
 
 
-;(setq org-agenda-files (append (file-expand-wildcards "~/.emacs.d/GTD/OrgBoss/Journal/2*") org-agenda-files))
+(setq org-agenda-files (append (file-expand-wildcards "~/.emacs.d/GTD/OrgBoss/Journal/2*") org-agenda-files))
 ;;C-c C-w to redefine terms to different files
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
@@ -119,20 +119,28 @@
 
 ;;; 注意路径得写对了
 ;(add-to-list 'load-path "/usr/share/emacs/24.3/lisp/org/")
- (add-to-list 'load-path "~/.emacs.d/GTD/muse-3.20/lisp")
- (add-to-list 'load-path "~/.emacs.d/GTD/planner-3.42")
- (add-to-list 'load-path "~/.emacs.d/GTD/remember-2.0")
+
+;;<2017-10-22 15:23>  
+;https://github.com/jueqingsizhe66/ranEmacs.d#73-%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E7%9A%84%E8%AF%B4%E6%98%8E
+;M-x today
+;(add-to-list 'load-path "~/.emacs.d/GTD/muse-3.20/lisp")
+; (add-to-list 'load-path "~/.emacs.d/GTD/planner-3.42")
+; (add-to-list 'load-path "~/.emacs.d/GTD/remember-2.0")
 
 
- (setq planner-project "WikiPlanner")
-     (setq muse-project-alist
-           '(("WikiPlanner"
-             ("~/.emacs.d/GTD/myPlan/"   ;; Or wherever you want your planner files to be
-             :default "index"
-             :major-mode planner-mode
-	     :visit-link planner-visit-link))))
-     (require 'planner)
-(require 'remember)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  (setq planner-project "WikiPlanner")                                                            ;;
+;;      (setq muse-project-alist                                                                    ;;
+;;            '(("WikiPlanner"                                                                      ;;
+;;              ("~/.emacs.d/GTD/myPlan/"   ;; Or wherever you want your planner files to be        ;;
+;;              :default "index"                                                                    ;;
+;;              :major-mode planner-mode                                                            ;;
+;; 	     :visit-link planner-visit-link))))                                                     ;;
+;;  ;    (require 'planner)                                                                         ;;
+;; ;(require 'remember)                                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;<2017-10-22 15:24> end
 ;(org-remember-insinuate) 
 ;; You cannot use ctrl+alt+f12 ubuntu  terminal global key
  ;(setq org-default-notes-file  "~/.emacs.d/GTD/.notes.org") 
@@ -205,14 +213,16 @@ Captured %<%Y-%m-%d %H:%M>
                         "* TODO [#C] %^{Task} %T\nSCHEDULED:%t\n"
                         :clock-in t :clock-resume t :immediate-finish t)
         ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
-                        "* STARTED %^{Task}"
+                        "* STARTED %^{Task} %T"
                         :clock-in :clock-resume)
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
                         "* TODO [#A] %^{What's your IDEA (Briefly)} %T \n %?" 
                         :clock-in t :clock-resume t :immediate-finish t)
-          ("c" "Clipboard" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")  
-                        "** %^{Head Line} %U %^g\n%c\n%?"  
-                        :immediate-finish t)
+          ("c" "ClojureLearning" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")  
+                      ;  "** %^{Head Line} %U %^g\n%c\n%?"  
+                         "** %^{Tip} %U \n \n %?"
+                        ;:immediate-finish t
+                        )
           ("R" "Finance" entry  (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
                         "** %^{BriefDesc} %T %^g\n%?"   :clock-in t :clock-resume t :immediate-finish t )
           ("b" "Book" entry  (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
@@ -527,7 +537,7 @@ Captured %<%Y-%m-%d %H:%M>
 (my/defshortcut ?s "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
 (my/defshortcut ?S "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
 (my/defshortcut ?B "~/.emacs.d/GTD/orgBoss/Book/book.org")
-(my/defshortcut ?c "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org")
+(my/defshortcut ?c "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")
 (my/defshortcut ?b "~/.emacs.d/GTD/orgBoss/business/business.org")
 (my/defshortcut ?e "~/.emacs.d/GTD/orgBoss/code/codes.org")
 (my/defshortcut ?W "~/.emacs.d/GTD/orgBoss/Site/blog.org")
@@ -539,6 +549,8 @@ Captured %<%Y-%m-%d %H:%M>
 (my/defshortcut ?w "~/.emacs.d/GTD/writing.org")
 (my/defshortcut ?p "~/.emacs.d/GTD/phd1.org")
 (my/defshortcut ?D "~/.emacs.d/GTD/Dissertation.org")
+(my/defshortcut ?n "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+
 
 
 

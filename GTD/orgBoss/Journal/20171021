@@ -1,0 +1,30 @@
+星期六, 2017/10/21
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 00:49 align rules
+
+down vote
+favorite
+10
+	
+
+I saw this somewhere, but cannot find it now. Is there a built-in function in emacs, or does someone have elisp, to line up all the equals signs in a series of inititialization statments in cc-mode?
+
+Before:
+
+int t=9;
+Graphics g = new Graphics();
+List<String> list = new List<String>();
+
+After:
+
+int          t    = 9;
+Graphics     g    = new Graphics();
+List<String> list = new List<String>();
+
+

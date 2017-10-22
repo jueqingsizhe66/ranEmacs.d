@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "zencoding-mode" "zencoding-mode.el" (22986
-;;;;;;  26904 0 0))
+;;;### (autoloads nil "zencoding-mode" "zencoding-mode.el" (23018
+;;;;;;  12800 0 0))
 ;;; Generated autoloads from zencoding-mode.el
 
 (autoload 'zencoding-expand-line "zencoding-mode" "\

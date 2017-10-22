@@ -162,6 +162,63 @@ https://github.com/marboo/orgmode-cn/blob/master/org.org#Clocking%20work%20time
 http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-8
 跟普通时间戳一样，但是这里是方括号而不是尖括号。这种时间戳是未激活的
 ，它 不 会让一个条目显示在议程中
+** defmulti [#B]                                                     :@work:
+:LOGBOOK:
+CLOCK: [2017-10-15 周日 13:49]--[2017-10-15 周日 13:49] =>  0:00
+:END:
+                         Added: [2017-10-15 周日 13:49]
+
+                         http://clojuredocs.org/clojure.core/defmulti
+** clojure programming [#B]                                          :@F708:
+:LOGBOOK:
+CLOCK: [2017-10-16 周一 09:16]--[2017-10-16 周一 10:23] =>  1:07
+:END:
+                         Added: [2017-10-16 周一 09:15]
+                         
+programming clojure2012.pdf
+
+Chapter7
+
+Macro
+
+With most programming techniques, you build features within language.
+
+when you write macros, it is more accurate to say that you area
+"adding features to" the language. This is a powerful and dangerous
+ability, so you should follow the rules in 7.1
+
+At least until you have enough experience to decide for yourself when
+to bend the rules.
+
+While powerful, macros are not always simple. Clojure works to make macros
+as simple as feasible by including convenience to solve many common
+problems that occur when writing macros.
+
+taxonomy(分类系统) taxonomy of Macros(7.4 introduces a taxonomy of 
+clojure macros, based on the macros in clojure and contrib libraries.
+
+In clojure, you just implement feature X using a macro(while in most
+languages, you sense that incompleteness whenever you say,"My life
+would be easier if only my language had feature X."
+
+Some expressions, such as
+1. numbers
+   1. Integers
+   2. floats
+   3. rationals
+2. symbols
+3. keywords(numbers,symbols and keywords are self evaluating)
+4. Booleans
+5. characters
+6. functions
+7. functions calls
+8. macros
+9. strings
+10. literal maps
+11. vectors
+12. queues
+13. records
+14. sets
 
 * Quick notes
 ** emacs highlight [#B]                                              :@F708:
@@ -327,5 +384,4 @@ CLOCK: [2017-10-14 周六 22:24]--[2017-10-14 周六 22:25] =>  0:01
                          Added: [2017-10-12 周四 21:31]
                          
 你肯定是没用 ISO_C_binding
-现在有了规范的混编方法，一切都简单而优美 
-
+现在有了规范的混编方法，一切都简单而优美
