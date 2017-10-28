@@ -391,4 +391,6 @@
 ;(set-language-environment-coding-systems "utf-8")
 
 
-
+;;fuck notify you for settning https://github.com/sriramkswamy/ryo-emacs/blob/master/init.el
+(setq coding-system-for-read 'utf-8)										  	; use utf-8 by default for reading
+(setq coding-system-for-write 'utf-8) 

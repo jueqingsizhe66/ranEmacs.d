@@ -2284,12 +2284,15 @@ C-M-p  move backward to the previous list
    3. 使用cljr-refactor快速重构
    4. 使用highlight进行着色
    
-2. yasnippet帮你快速打出相关的语句
+   
+2. yasnippet帮你快速打出相关的语句(一般是敲入key名字然后tab完成缩写补全）
    1. clojure相关的snippets
    2. elisp相关的snippets
+   3. 不同于sotclojure或者sotlisp使用def空格(不需要tab)等完成缩写
    
 3. company为你提供一些completion word
 
+4. expand-region帮你快速选择要给text-object
 他真的为你做的就只有这些？
 
 org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，帮你记录，提醒你该做什么？

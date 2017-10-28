@@ -21,9 +21,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/clojure-home/" (23018 14686 0 0) "undead_zoobie/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure/" "clj-new-github/" "book-source/" "a.rs" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/" (23018 12810 0 0) "writing.org_archive" "writing.org" "writing.html" "Vocab/" "Someday/" "Site/" "Private/" "Note/" "newgtd.org_archive" "newgtd.org" "newgtd.html" "Journal/" "IDEA/" "hello.rs" "hello.org" "Habit/" "Financial/" "Film/" "DailyReview/" "Clipboard/" "Book/" "../" "./")
 
- ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/Journal/" (23020 19575 0 0) "journal.org" "journal-XYZ.org" "journal-mon.org" "journal-dailies.org" "journal-dailies-end.org" "a.png" "20171022" "20171021" "20171019" "20171017" "20171013" "20171012" "20171011" "20171010" "20171009" "20171008" "20171007" "../" "./")
+ ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/Journal/" (23024 2912 0 0) "journal.org" "journal-XYZ.org" "journal-mon.org" "journal-dailies.org" "journal-dailies-end.org" "a.png" "20171025" "20171023" "20171022" "20171021" "20171019" "20171017" "20171013" "20171012" "20171011" "20171010" "20171009" "20171008" "20171007" "../" "./")
+
+ ("e:/clojure-home/" (23018 14686 0 0) "undead_zoobie/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure/" "clj-new-github/" "book-source/" "a.rs" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")
 
  ("e:/clojure-home/first-example/" (23010 58885 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "first-example.iml" "doc/" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".idea/" ".hgignore" ".gitignore" "../" "./")
 
