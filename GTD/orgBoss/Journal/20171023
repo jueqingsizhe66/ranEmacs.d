@@ -1,0 +1,21 @@
+星期一, 2017/10/23
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 22:31 
+
+** 1  四次剖
+    1 大外场关联
+    2 一次o剖
+    3 机舱前头正方形o剖，然后关联
+    4 切割buffer区域 和机舱尾部，关联机舱表面的流向网格线，删除机舱的网格block块
+    5.第三次o剖，关联buffer区域的圆，删除buffer内部园，
+
+开始布置网格节点和质量检查
+检查差不多，进行第二步散热器的网格划分
+2  散热器部分单独选取block快进行o剖
+    2.1 注意选取bump上面三个block，

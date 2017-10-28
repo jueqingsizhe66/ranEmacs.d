@@ -49,9 +49,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B] SCI")
- (rear-context-string . "one by yourself\n")
- (position . 10023))
+ (front-context-string . "** TODO [#B] [0%")
+ (rear-context-string . "  非定常（时均解） 动态入流\n")
+ (position . 10402))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

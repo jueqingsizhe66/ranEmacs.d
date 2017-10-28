@@ -2277,6 +2277,25 @@ C-M-n  move forward to the next list
 C-M-p  move backward to the previous list
 ```
 
+### 76. Emacs到底为你做了什么？
+
+1. clojure: 使用cider结合jvm产生一个可编译平台
+   2. 使用paredit快速编写括号相关的forms
+   3. 使用cljr-refactor快速重构
+   4. 使用highlight进行着色
+   
+2. yasnippet帮你快速打出相关的语句
+   1. clojure相关的snippets
+   2. elisp相关的snippets
+   
+3. company为你提供一些completion word
+
+他真的为你做的就只有这些？
+
+org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，帮你记录，提醒你该做什么？
+
+额外再补充……
+
 <hr/>
     <hr/>
 

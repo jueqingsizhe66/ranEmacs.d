@@ -177,4 +177,26 @@ sabelle 又发新版了，好羡慕。
 我们 HOL4 社区的用户数量相比之下太少了（不过也比 HOL Light 强，都快被榨干了）
 ** https://www.bilibili.com/video/av12818669/?from=search&seid=18118687468980995416#page=3
  oeasy 教你玩rust
+** https://github.com/technomancy/dotfiles
+ very beautiful keyboard mouse 头盔
+** http://www.torque2018.org/
 
+ The Science of Making Torque from Wind (TORQUE 2018)
+** http://geek.wasai.org/member/
+ 王掌柜的会员
+** http://www.howardism.org/Technical/Emacs/spreadsheet.html
+ lots of spreedsheet电子表格  
+howardism.org
+其实我们停下来想想，emacs的配置对于不经常玩电脑的人来说，简直是大麻烦。但是如果你经常玩，而且喜欢配置，那么emacs就好象一个不错的点心，他的定位不是为了简单，反而是为了expert design     有兴趣可以看看https://www.wired.com/2015/02/on-the-joy-of-mastery/ 
+
+
+我知道我们应该想着设计简单，包括你在工作中也是想着怎么给client带来更好的用户体验，一键到底。但是有时候也可以反过来想想复杂的精细化设计（长见识哈哈）
+https://www.wired.com/2015/02/on-the-joy-of-mastery/
+
+看上面link来自howardism(org-mode文学编程的倡导者）的blog : http://www.howardism.org/#Yours%20in%20Emacs 
+** 
+** https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md
+ 
+awk gnu programming (examples for awk gnu)
+** https://github.com/learnbyexample/scripting_course/blob/master/Perl_curated_resources.md
+ perl scripting resources

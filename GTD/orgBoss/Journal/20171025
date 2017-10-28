@@ -1,0 +1,19 @@
+星期三, 2017/10/25
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 11:54 Solidworks 重建
+
+ctrl+b 简单重建  刷新
+ctrl+q 全部重建（试试他） 在炸不到问题时候，就用它  深层次重建
+
+** 23:48 机械系统
+
+机械系统一般是由若干个物体组成，通过一系列的几何约束连接起来以完成预期动作
+的一个整体，因此也可以把整个机械系统叫做多体系统。如果将系统中每个物体都看做
+不变性的刚性体，则称该系统为多刚体系统；若系统中有一些物体必须计算其变形，则称之
+为多柔体系统或柔性多体系统。多体动力学(MBD)软件的理论基础是多体动力学

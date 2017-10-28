@@ -1,0 +1,7 @@
+* 星期四, 2017/10/26
+
+** 22:26 reagent
+
+reagent 是 react 与 cljs 的一个桥接，抽象的比较好，写页面爽多了
+不过相比 Clojure，cljs 还是年轻些，工具不是很成熟，但是用没问题
+ 可能是个小众需求，但是这个过程使用 react + cljs + reagent，也方便回来讲

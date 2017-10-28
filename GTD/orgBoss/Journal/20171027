@@ -1,0 +1,45 @@
+星期五, 2017/10/27
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 12:42 mstsc 远程登陆
+
+首先输入mstsc 然后登陆10.10.10.31(你的电IP是10.10.10.30），注意采用直连的方式进行，
+eta机用户名为lzhpc
+密码为111111
+
+注意该台电脑是ping不同的，需要在系统设置中 打开允许远程访问的命令
+
+** 15:59 毕业论文长短
+我反复提醒自己，毕业论文不在于长短，关键是要言之有物，最起码要在实实在在的工作（代码为证）基础上把所做的内容说清楚，
+并且文字要简洁以免给读者造成负担。背景知识可以有但也不必抄书。但除此之外我还可以有别的创新：有时候实现或发现了某个东西是一回事
+，正确地解释它则是另一回事。
+
+
+** 16:31 what on earth emacs  does what you need it
+
+My question is–do you all find that Emacs (and Emacs alone) does what
+ you need it to do for your day-to-day work? Or do you find yourselves 
+using IDEs regularly, for the fancy features?
+
+100% emacs at all times, for all languages. Even MATLAB!
+
+MATLAB session is in emacs buffer. Can call MATLAB functions, launch plot windows, etc. I usually open another emacs window to edit a .m file in and run it from the shell buffer.
+
+I set it up years ago so I don't remember the details, but there's info online.
+
+
+**** IDE feature(Add the feature as you want)
+
+That would mean that everyone who use Emacs should implement all ide features. Obviously everyone don’t use every feature, so there is definately situations where it is okay to not have som feature which your coworkers ide has.
+
+** 21:44 let tools to solve problem
+
+Good god, no. The company I work for is pretty deep in Microsoft land, so at a very minimum I need to keep a Windows VM around for Lync and (to some extent) Outlook. Similarly, despite the advances made by Emacs in the area, I doubt I'll be replacing the web browser with Emacs any time soon, web apps (like the Atlassian tools) are way too heavily integrated at my workplace. Code wise I'm happy with Emacs, but then again I don't write Java.
+
+As a professional developer, I think it's important not to get too attached to the tools. They exist to help us solve problems, and when one tool doesn't cut it you pick a different one for the job. 
+

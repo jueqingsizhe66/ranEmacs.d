@@ -219,8 +219,20 @@ Some expressions, such as
 12. queues
 13. records
 14. sets
+** PIC [#B]                                                          :@F708:
+:LOGBOOK:
+CLOCK: [2017-10-25 周三 18:32]--[2017-10-25 周三 18:33] =>  0:01
+:END:
+                         Added: [2017-10-25 周三 18:32]
+                         
+PIC:记忆时候需要考虑三个组成部分，一purpose二interesting三curiosity也就是你要对你的记忆的目的有一个理性的认识，
+进行理性的思考，才能明白其重要性，才能让你持续性工作(理性和专注)，这个过程还得有趣，这样能够保持你的好奇心
 
-* Quick notes
+当你能跟别人讲的清楚的时候，事先你的记忆也肯定是完全清楚的
+
+好奇心和童心挺像，也就是保持空杯状态
+
+目标写在纸上，量化并且场景化，会让你理性和专注* Quick notes
 ** emacs highlight [#B]                                              :@F708:
                          Added: [2017-10-09 周一 15:07]
                          作者：BigBoss
