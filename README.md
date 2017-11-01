@@ -2200,7 +2200,7 @@ github: [org-bookmark-heading][152]
 如果一个星期没做完，那就下星期多分配点。
 
 <2017-11-01 19:53> 现在迷上了clock，实现clock-in功能，然后在emacs的status-bar就会保留你正在进行clock的entry
-在同一文件使用`C-c C-x C-j`实现跳转。
+在同一文件使用`C-c C-x C-j`实现跳转(工作流:捕捉一个todo，直接进行，然后等结束后才`C-c C-c`停止捕获,原先工作流是先创建不管clock in问题)。
 
 ![clock-in][160]
 
