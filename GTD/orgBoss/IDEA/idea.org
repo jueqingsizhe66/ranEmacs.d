@@ -1,3 +1,131 @@
 ﻿* IDEA
 ** TODO get the line contour from image 
   With Image Processing
+* IDEA
+** TODO [#A] system thinking <2017-10-30 周一 11:10> 
+:LOGBOOK:
+CLOCK: [2017-10-30 周一 11:10]--[2017-10-30 周一 11:10] =>  0:00
+:END:
+ 
+系统思考意味着权衡利弊，知其各部件之不足，优化配置，进而达到最优利用
+system thinking,同时也意味着链状思考，进一步上升到螺旋式思考，行
+程整体性的金字塔思考，系统分层思考和构建，持续性思考的能力
+** TODO [#A] module organization <2017-10-30 周一 20:48> 
+:LOGBOOK:
+CLOCK: [2017-10-30 周一 20:49]--[2017-10-30 周一 20:49] =>  0:00
+:END:
+ 
+Module organization
+
+Regardless of language, we can define a module as a collection of code that tries to solve one problem. This problem can be
+ broad or not, but the idea is to encapsulate this problem into small pieces so the user does not have to think about what 
+is inside. With that in mind, there are some precautions that are considered good taste:
+
+    A MATLAB module is a folder containing functions. So try to keep all your code into one folder. Each file must contain 
+one function that solves one problem inside this bigger problem. If this function needs a helper function, really specific 
+to that domain, then it can be appended to this same file; the outside scripts will not see this helper function. Unless 
+it is desired that it appears somewhere else or it is used repeatedly, this helper should not have a script file for its own.
+    Whenever possible, try to solve your problem using only one script file. Most solutions should be considered just another
+ procedure to be included in someone else's code. This is not always the case, since some problems actually need user interfaces
+ and the whatnot, but it can be really nice to just incorporate a single file to the codebase instead of a whole system.
+
+One issue that I have come accross during this time working with this language is that there is considerable namespace pollution 
+given MATLAB does not have any mechanisms to deal with it. Therefore some care is desired when work with them:
+
+    Unless the given module is always used, do not incorporate it directly to MATLAB. Instead, for each script, run the addpath
+ function with the module path. This will keep the current namespace organized. The same applies to the Java classpath.
+    One thing to pay attention is that MATLAB does not add nested modules when a folder is inserted to its path. Therefore it 
+might be a good idea to write a function to add the modules whithin for better incorporation, unless you've got somethign to 
+hide from everyone else.
+** TODO [#A] paragraph better than document <2017-10-30 周一 20:54> 
+:LOGBOOK:
+CLOCK: [2017-10-30 周一 20:54]--[2017-10-30 周一 20:54] =>  0:00
+:END:
+ 
+Your code is mostly like a text, with sentences are paragraphs. Therefore it is a good idea
+ to visually separate concerns within your code with empty lines so new-comers know these 
+concerns. Sometimes, this separations of paragraphs is more useful than documentation itself.
+** TODO [#A] programming is about thinking <2017-10-30 周一 23:10> 
+:LOGBOOK:
+CLOCK: [2017-10-30 周一 23:11]--[2017-10-30 周一 23:11] =>  0:00
+:END:
+ 
+
+
+    Good design is not about making grand plans, but about taking things apart.
+
+    Programming is not about typing...it's about thinking.
+** TODO [#A] humor has a certain relationship to seriousness <2017-10-31 周二 11:13> 
+:LOGBOOK:
+CLOCK: [2017-10-31 周二 11:13]--[2017-10-31 周二 11:13] =>  0:00
+:END:
+ 
+Humor has a certain relationship to seriousness. It is appropriate to
+ joke about serious things, but only after the right amount of time
+ has passed. For example, it took years for me to be able to crack
+ a smile when I remember my favorite uncle��s last words: ��Hold my beer.��
+** TODO [#A] simple design clojure <2017-10-31 周二 16:01> 
+:LOGBOOK:
+CLOCK: [2017-10-31 周二 16:01]--[2017-10-31 周二 16:04] =>  0:03
+:END:
+ 
+Structure your program flow into simple,elegant ways. Keep this 
+in mind will help you break down your tasks into discrete,small
+units of code, and orchestrate the flow of data between functions.
+** TODO [#A] programming craft based on write and modify <2017-10-31 周二 16:05> 
+:LOGBOOK:
+CLOCK: [2017-10-31 周二 16:06]--[2017-10-31 周二 16:09] =>  0:03
+:END:
+ 
+Elegant programming craft is based on the code writing and modifying
+
+you should write it more and more, and modify it with your effect(many 
+effect until to achieve the beauty and elegance , more functions) 
+
+vars into functions, then upgrades into modules, upgrade into project,
+upgrade into problem domain
+** TODO [#A] visual memory of clojure <2017-10-31 周二 16:17> 
+:LOGBOOK:
+CLOCK: [2017-11-01 周三 17:14]--[2017-11-01 周三 17:15] =>  0:01
+CLOCK: [2017-10-31 周二 16:18]--[2017-10-31 周二 16:26] =>  0:08
+:END:
+ 
+
+Under ground, we will have a seed, we carry a seed in our hand.
+we are only one sand in the dessert, if you can grow into one
+tree, nobody will care, nobody will stand below your body wing.
+
+Upgrade into module
+upgrade into packages
+upgrade into projects
+upgrade into domain specific language
+
+Finally into trees
+
+That's your destination, and it  is very important, need 
+a lot of time to achieve.
+
+Every tree nodes have left branch and right branch. Every 
+branch have many tree nodes. Every tree node is your effect
+and blood
+
+大家对于树状逻辑还不是特别能够运用，就比如吉林省长春市西天光路
+漏了一个宽城区，也不知道怎么补，当然百度会出来，究其原因是会理清楚
+在市和路中少了一个区
+** TODO [#A] 要记得使用sw的曲面造型技术 <2017-10-31 周二 22:08> 
+:LOGBOOK:
+CLOCK: [2017-10-31 周二 22:08]--[2017-11-01 周三 00:19] =>  2:11
+:END:
+ 
+
+可以使用边界曲面绘制两个面间的平面
+
+今晚学会了边界曲面和相交曲面的创建
+
+记住一点Solidworks的面操作还是比ICEM强的，先修复几何然后在进行面操作
+** TODO [#A] 学问和研究 <2017-11-01 周三 18:18> 
+:LOGBOOK:
+CLOCK: [2017-11-01 周三 18:19]--[2017-11-01 周三 18:20] =>  0:01
+:END:
+疑而问，问而学，学而知，学而不得，便有研究
+以小见大，循序渐进，实乃学术通义

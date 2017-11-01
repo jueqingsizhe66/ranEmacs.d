@@ -3,11 +3,15 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        ivy-switch-buffer
+        keyboard-escape-quit
         kill-region
         ))
 
 (setq mc/cmds-to-run-once
       '(
         end-of-buffer
+        markdown-outdent-or-delete
         mouse-set-region
+        paredit-backslash
         ))

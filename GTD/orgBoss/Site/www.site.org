@@ -200,3 +200,29 @@ https://www.wired.com/2015/02/on-the-joy-of-mastery/
 awk gnu programming (examples for awk gnu)
 ** https://github.com/learnbyexample/scripting_course/blob/master/Perl_curated_resources.md
  perl scripting resources
+* SITES
+** http://www.inoteexpress.com/aegean/ 
+
+可以方便插入参考文献
+** https://addons.mozilla.org/en-US/firefox/addon/org-capture/
+ org capture
+** http://www.blogjava.net/killme2008/archive/2012/02/16/370144.html
+ clojure IO
+** http://clojure.github.io/java.jdbc/
+** https://github.com/clojure/math.combinatorics
+ clojure math
+** https://stackoverflow.com/questions/18246549/cartesian-product-in-clojure
+ 关于clojure数学方面计算的讨论
+** https://github.com/nicferrier
+ Nic ferrier 专业lisp
+** http://www.fxyqpx.org/KQDLXXB/2015-02-246.htm
+ 中国空气动力学报
+** http://man.chinaunix.net/newsoft/Emac/book.html
+ 
+emacs window 配置
+** https://cemerick.com/2011/07/05/flowchart-for-choosing-the-right-clojure-type-definition-form/
+ flow chart to describe how to define type
+** http://clojure.github.io/clojure/index.html
+ clojure API
+** https://www.braveclojure.com/concurrency/
+ 并发 clojure

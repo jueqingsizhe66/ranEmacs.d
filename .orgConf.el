@@ -211,13 +211,13 @@ Captured %<%Y-%m-%d %H:%M>
                     "  :clock-in t :clock-resume t )
         ("T" "QuickTask" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
                         "* TODO [#C] %^{Task} %T\nSCHEDULED:%t\n"
-                        :clock-in t :clock-resume t :immediate-finish t)
+                        :clock-in t :clock-resume t )
         ("r" "Interrupted Task" entry  (file+headline "~/.emacs.d/GTD/orgBoss/newgtd.org" "Tasks")  
                         "* STARTED %^{Task} %T"
                         :clock-in :clock-resume)
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
                         "* TODO [#A] %^{What's your IDEA (Briefly)} %T \n %?" 
-                        :clock-in t :clock-resume t :immediate-finish t)
+                        :clock-in t :clock-resume t )
           ("c" "ClojureLearning" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")  
                       ;  "** %^{Head Line} %U %^g\n%c\n%?"  
                          "** %^{Tip} %U \n \n %?"
@@ -243,7 +243,7 @@ Captured %<%Y-%m-%d %H:%M>
                         "** %^{Someday Heading} [#B] %U\n%?\n"  )
           ("v" "Vocab"  entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
                         "** %^{Word?}\n%?\n"  )
-          ( "p" "Private" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
+          ( "r" "Private" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
                          "\n* %^{topic} [#A] %T \n%i%?\n")
          ("o" "contact"  entry  (file+olp+datetree "~/.emacs.d/gtd/phone.org" ) 
                         "\n* %^{name} :contact:\n\n")
@@ -261,7 +261,15 @@ Captured %<%Y-%m-%d %H:%M>
          ;;  "* Cos [#A] %?\n  %i\n %U"                                          ;;
          ;;  :empty-lines 1)                                                     ;;
          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ))
+       
+         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+         ("p" "Protocol" entry (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Inbox")      ;;
+          "* %^{Title} \nSource: \n\n\n%?")                                                         ;;
+         ("L" "Protocol Link" entry (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Inbox") ;;
+          "* %? [[%:link][%:description]] \nCaptured On: %U")                                       ;;
+         
+         ))
+
 
 ;; Custom agenda command definitions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1198,3 +1206,22 @@ e.g. Sunday, September 17, 2000."
 ;;    	   ("ö" . org-clock-convenience-fill-gap)                        ;;
 ;;    	   ("é" . org-clock-convenience-fill-gap-both)))                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (load "orca.el")                                    ;;
+;; (require 'orca)                                     ;;
+;; (setq orca-handler-list                             ;;
+;;       '((orca-handler-match-url                     ;;
+;;          "https://www.reddit.com/emacs/"            ;;
+;;          "~/.emacs.d/GTD/orgBoss/Site/www.site.org" ;;
+;;          "Reddit")                                  ;;
+;;         (orca-handler-match-url                     ;;
+;;          "https://emacs.stackexchange.com/"         ;;
+;;          "~/.emacs.d/GTD/orgBoss/Site/www.site.org" ;;
+;;          "\\* Questions")                           ;;
+;;         (orca-handler-current-buffer                ;;
+;;          "\\* Tasks")                               ;;
+;;         (orca-handler-file                          ;;
+;;          "~/.emacs.d/GTD/orgBoss/newgtd.org"        ;;
+;;          "\\* Articles")))                          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

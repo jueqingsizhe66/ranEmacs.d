@@ -397,3 +397,165 @@ CLOCK: [2017-10-14 周六 22:24]--[2017-10-14 周六 22:25] =>  0:01
                          
 你肯定是没用 ISO_C_binding
 现在有了规范的混编方法，一切都简单而优美
+* Inbox
+* Quick notes
+** logical sequence introduction [#B]                                :@work:
+:LOGBOOK:
+CLOCK: [2017-10-29 周日 22:06]--[2017-10-29 周日 22:15] =>  0:09
+:END:
+                         Added: [2017-10-29 周日 22:05]
+                         
+
+Before we look at the primary collection types individually, we'll 
+discuss the things they have in common. For example, you may have 
+heard of clojure's sequence abstraction(都是基于sequence)---all the
+persistent collection use it(all :keyword, they :keyword , collective
+nouns and abjectives), so we'll examine that as well as some algorithmic
+complexity concepts we'll refer to throughout the chapter.
+
+
+Before....individually ... in common....
+
+is very important. 一方面可以体现出你的逻辑的完整性，另一方面体现你的专业性
+同时也可以让你把握重要性，这部分内容只是描述性部分，充当点缀，不是特别核心的地方
+相当于引言部分，核心的在不同的地方。
+
+如果你第一次碰到该句话，就可以当作是一个全面性的了解
+所以他也是挺重要的
+** clojure interop with java [#B]                                    :@work:
+:LOGBOOK:
+CLOCK: [2017-10-29 周日 22:31]--[2017-10-29 周日 22:31] =>  0:00
+:END:
+                         Added: [2017-10-29 周日 22:31]
+                         
+
+Handling Interop with Java
+
+When a new language comes into being, it faces the library problem. That is, to be useful in everyday situations, 
+a language needs to do all the things that current dominant languages do. These current dominant languages have a 
+full array of libraries that support things like parsing JSON and logging.
+
+Clojure solved this new language library problem by running on the JVM and having interoperability with Java
+ classes. When you use Clojure, you can use Java classes and Java libraries. Clojure builds on the strength 
+of the production-hardened and tested JVM and existing Java libraries. In fact, many of the popular Clojure
+ libraries in use today utilize Java libraries as fundamental building blocks. We are going to cover the most
+ common areas that you will encounter: how to import Java libraries/classes, how to create new instances of 
+them, and how to interact with their methods.
+** matlab coding style [#B]                                          :@F708:
+:LOGBOOK:
+CLOCK: [2017-10-30 周一 20:57]--[2017-10-30 周一 20:57] =>  0:00
+:END:
+                         Added: [2017-10-30 周一 20:57]
+                         
+MATLAB Coding Style
+
+This document suggests a MATLAB coding style. This file is directed to those who code with me in the lab, but might serve for everyone out there.
+Coding style
+
+    No whitespace at the end of the line.
+    Use Unix style line breaks (LF only).
+    Keep line lenghts under 80 characters.
+    Use 4 spaces to indent code. Add indentation for each logic level but the function operator:
+
+function a = ackermann(m, n)
+% Computes the Ackermann function.
+%
+if m == 0
+    a = n+1;
+elseif and(m > 0, n == 0)
+    a = ackermann(m-1, 1);
+else
+    a = ackermann(m-1, ackermann(m, n-1));
+end
+
+    For while loops, the counter variable must be declared just before the while keyword:
+
+n = 0;
+while n <= 10
+    disp(n);
+    n = n+10;
+end
+
+    If a line is not enough to write the whole statement, break it into meaningful places, like after an operator or separating a line for each function argument:
+
+pyt = sqrt(x^2 + ...
+           y^2);
+set(handles.edit, ...
+    'String', ...
+    sprintf('This is worth %.2f$', ...
+            pyt));
+
+Keep LISP style indentation in this case for better legibility. Sometimes, it might be a good idea too to break the line before a mathematical operator, to give a more meaningful sense to your code:
+
+result = viscosity ...
+       + shear ...
+       - (acceleration * mass);
+
+    Name variables and functions using camelCase, as it is Java after all.
+    Name constants using UPPERCASE_SEPARATED_BY_UNDERSCORES.
+    Always add a space near the equals sign.
+    Add spaces after and before brackets in case they define an array or a cell. This space is not needed when accessing data, calling a function or anything like that:
+
+% defining cells or arrays:
+emptyCell = { };
+someNumbers = [ 1 1 2 3 5 8 13 42 ];
+
+% function call:
+someNumbers(5);
+someTrouble = ackermann(4, 2);
+
+% accessing data:
+emptyCell{end+1} = 19;
+
+    Add spaces between expressions to make them more readable in case they are too long or full of text:
+
+% expressions that needs space for readability:
+result = sqrt(x1^2 + y1^2) + sqrt(x2^2 + y2^2) + sqrt(x3^2 + y3^2);
+force = mass * acceleration;
+
+% expressions that does not need space for readability:
+z = i+1;
+f = m*a;
+
+    Your code is mostly like a text, with sentences are paragraphs. Therefore it is a good idea to visually separate concerns within your code with empty lines so new-comers know these concerns. Sometimes, this separations of paragraphs is more useful than documentation itself.
+
+General practices
+
+    Write documentation before writing code. Write documentation before writing code. Write documentation before writing code.
+    State your functions' inputs and outputs when documenting it, specially the data types.
+    Whenever possible, try to use MATLAB's own math functions. And try to make your own functions comply with their functions. This will make your script a lot more faster and readable.
+    Make every function return something unless it is a procedure. 'What does it mean?', you might ask. Ask why for MATLAB and it will answer for you. Actually not. Procedures here can be understand as a series of transformations and steps to achieve a goal, while a function is the transformation itself. A procedure's goal is to cause a side-effect on your system, and this side-effect must be well documented and defined. A function's goal is to create another variable based on other variable's state. This distinction will make your programs less confusing to outsiders, even if they do not know it is there; specially when there are graphical user interfaces (GUIs for short) involved. For example: when you a press a button, it will usually cause a side-effect somewhere, like saving some data to a file or change something else on your GUI. This can be done by performing a procedure, creating and updating variables based on the system's current state. This distinction is subtle but turns everything clearer with practice. Seriously.
+
+Module organization
+
+Regardless of language, we can define a module as a collection of code that tries to solve one problem. This problem can be broad or not, but the idea is to encapsulate this problem into small pieces so the user does not have to think about what is inside. With that in mind, there are some precautions that are considered good taste:
+
+    A MATLAB module is a folder containing functions. So try to keep all your code into one folder. Each file must contain one function that solves one problem inside this bigger problem. If this function needs a helper function, really specific to that domain, then it can be appended to this same file; the outside scripts will not see this helper function. Unless it is desired that it appears somewhere else or it is used repeatedly, this helper should not have a script file for its own.
+    Whenever possible, try to solve your problem using only one script file. Most solutions should be considered just another procedure to be included in someone else's code. This is not always the case, since some problems actually need user interfaces and the whatnot, but it can be really nice to just incorporate a single file to the codebase instead of a whole system.
+
+One issue that I have come accross during this time working with this language is that there is considerable namespace pollution given MATLAB does not have any mechanisms to deal with it. Therefore some care is desired when work with them:
+
+    Unless the given module is always used, do not incorporate it directly to MATLAB. Instead, for each script, run the addpath function with the module path. This will keep the current namespace organized. The same applies to the Java classpath.
+    One thing to pay attention is that MATLAB does not add nested modules when a folder is inserted to its path. Therefore it might be a good idea to write a function to add the modules whithin for better incorporation, unless you've got somethign to hide from everyone else.
+** 流动分离 [#B]                                                     :@work:
+:LOGBOOK:
+CLOCK: [2017-11-01 周三 14:22]--[2017-11-01 周三 16:43] =>  2:21
+:END:
+                         Added: [2017-11-01 周三 14:21]
+                         
+
+风力机时常处于变风速的流动中，当来流风速接近或超过设计风速时，在叶片的根部或大部分叶展范围都有可能发生流动分离。发生流动分离后，分离流的湍流强度大大增加，引起气动损失迅速增加。同时，流动分离区导致压力平台，减小了内叶展甚至中叶展位置翼型的升力，增加了翼型的阻力。通过在叶片表面加装涡发生器，可以有效控制流动分离，提高翼型升力，降低翼型阻力，从而提高叶片风能吸收效率。
+** 三维旋转效应和流动分离 [#B]                                       :@work:
+:LOGBOOK:
+CLOCK: [2017-11-01 周三 18:20]
+CLOCK: [2017-11-01 周三 17:17]--[2017-11-01 周三 18:19] =>  1:02
+:END:
+                         Added: [2017-11-01 周三 17:17]
+                         
+[风力机叶片表面压力的计算与外场测试分析][李仁年] 外场试验表明，叶片表面压力分布
+特征沿展向出现较大的差异性，主要原因是在外场多变环境下，高速旋转的风力机叶片存在
+较强的三维旋转效应，且三维旋转效应越靠近叶片根部越明显。
+
+当风速超过额定风速后，沿叶展方向的翼型截面会发生动态失速现象，尾涡的形成
+和脱落涡将对叶片表面压力分布产生较大影响，产生剧烈的压力波动，致使叶片表面
+压力与计算值出现较大差异

@@ -106,9 +106,10 @@ C-h f: M-x describe-function
 C-h v: M-x describe-variable
 C-h k: M-x describe-key
 
-** 学习 16:57 the theory of movement
-SCHEDULED: <2017-10-22 周日>
+** DONE 16:57 the theory of movement
+CLOSED: [2017-10-30 周一 09:07] SCHEDULED: <2017-10-22 周日>
 
+- State "DONE"       from "学习"       [2017-10-30 周一 09:07]
 - State "学习"       from              [2017-10-22 周日 17:04]
 Getting around, and getting around efficiently, is as important as 
 knowing how to edit quickly and efficiently.

@@ -90,3 +90,4 @@
     (cljr-add-keybindings-with-prefix "C-c C-m"))
 
 
+(key-chord-define-global "fe" 'cljr-create-fn-from-example)

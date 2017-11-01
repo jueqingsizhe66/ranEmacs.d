@@ -353,6 +353,15 @@ Seen from [emacs-rocks-13][37]
 键，表示确认
 。
 
+<2017-11-01 19:26> add below readme:
+
+```
+注意配合上M+= 选择区域，然后选择C->逐个向下选择，或者c-<逐个向上选择
+亦可以C-c C-<全部选择当前的选择快相同的单元
+
+如果没有配合上M+=,则C->表示选择下一行，C-<表示选择上一行(比较少用，也比较没用)。
+```
+
 较常用的命令，`M-x mc/mark-all-words-like-this`
 
 ### 17. vim-surround to evil-surround
@@ -2190,13 +2199,18 @@ github: [org-bookmark-heading][152]
 [org-clock-budget][153]教会你的是如何给一件事情分配多少时间，并且安排很多星期去做，
 如果一个星期没做完，那就下星期多分配点。
 
+<2017-11-01 19:53> 现在迷上了clock，实现clock-in功能，然后在emacs的status-bar就会保留你正在进行clock的entry
+在同一文件使用`C-c C-x C-j`实现跳转。
+
+![clock-in][160]
 
 ### 73. 关于时间格式的说明
 
 I have seen the time format about [the agenda here][156], and I want to add it in the agenda view.
 so I visit the [link about the time format][155].
 
-在.orgConf.el中add the time and now,
+在.orgConf.el中add the time and now,; When there's a cider error, show its buffer and switch to it
+
 
 1. when time is surrounded  with square, it means unactive,
    when time is surrounded with angle bracket, it means active, in addition ,if add in the headline, it 
@@ -2299,8 +2313,29 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 
 额外再补充……
 
+
+### 77. Emacs encode system乱码
+
+```
+;;;windows system
+;;fuck notify you for settning https://github.com/sriramkswamy/ryo-emacs/blob/master/init.el
+(setq coding-system-for-read 'utf-8)										  	; use utf-8 by default for reading
+(setq coding-system-for-write 'utf-8)
+(set-language-environment 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(setq-default pathname-coding-system 'utf-8)
+(setq default-process-coding-system 
+            '(utf-8 . utf-8))
+(set-buffer-file-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+;(set-clipboard-coding-system 'utf-8)
+
+```
+
+如果(set-clipboard-coding-system 'utf-8)可能导致复制时候出现乱码，raw-text保存。
+
 <hr/>
-    <hr/>
+<hr/>
 
 
 
@@ -2463,3 +2498,4 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 [157]:https://github.com/rust-lang/rust-mode
 [158]:https://rustbyexample.com/
 [159]:https://github.com/kwrooijen/cargo.el
+[160]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/clock-in.png
