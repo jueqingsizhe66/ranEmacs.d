@@ -1,4 +1,5 @@
-﻿* Quick notes
+* Quick notes
+
 :LOGBOOK:
 CLOCK: [2017-10-02 周一 11:09]--[2017-10-02 周一 11:10] =>  0:01
 CLOCK: [2017-09-29 周五 11:03]j
@@ -396,9 +397,8 @@ CLOCK: [2017-10-14 周六 22:24]--[2017-10-14 周六 22:25] =>  0:01
                          Added: [2017-10-12 周四 21:31]
                          
 你肯定是没用 ISO_C_binding
-现在有了规范的混编方法，一切都简单而优美
-* Inbox
-* Quick notes
+现在有了规范的混编方法，一切都简单而优
+
 ** logical sequence introduction [#B]                                :@work:
 :LOGBOOK:
 CLOCK: [2017-10-29 周日 22:06]--[2017-10-29 周日 22:15] =>  0:09
@@ -547,7 +547,7 @@ CLOCK: [2017-11-01 周三 14:22]--[2017-11-01 周三 16:43] =>  2:21
 风力机时常处于变风速的流动中，当来流风速接近或超过设计风速时，在叶片的根部或大部分叶展范围都有可能发生流动分离。发生流动分离后，分离流的湍流强度大大增加，引起气动损失迅速增加。同时，流动分离区导致压力平台，减小了内叶展甚至中叶展位置翼型的升力，增加了翼型的阻力。通过在叶片表面加装涡发生器，可以有效控制流动分离，提高翼型升力，降低翼型阻力，从而提高叶片风能吸收效率。
 ** 三维旋转效应和流动分离 [#B]                                       :@work:
 :LOGBOOK:
-CLOCK: [2017-11-01 周三 18:20]
+CLOCK: [2017-11-01 周三 18:20]--[2017-11-02 周四 00:55] =>  6:35
 CLOCK: [2017-11-01 周三 17:17]--[2017-11-01 周三 18:19] =>  1:02
 :END:
                          Added: [2017-11-01 周三 17:17]
@@ -559,3 +559,89 @@ CLOCK: [2017-11-01 周三 17:17]--[2017-11-01 周三 18:19] =>  1:02
 当风速超过额定风速后，沿叶展方向的翼型截面会发生动态失速现象，尾涡的形成
 和脱落涡将对叶片表面压力分布产生较大影响，产生剧烈的压力波动，致使叶片表面
 压力与计算值出现较大差异
+** whatis habits [#B]                                                :@work:
+:LOGBOOK:
+CLOCK: [2017-11-02 周四 20:59]--[2017-11-02 周四 21:00] =>  0:01
+:END:
+                         Added: [2017-11-02 周四 20:59]
+                         
+5.3.3 Tracking your habits
+
+Org has the ability to track the consistency of a special category of TODOs, called “habits”. A habit has the following properties:
+
+    You have enabled the habits module by customizing org-modules.
+    The habit is a TODO item, with a TODO keyword representing an open state.
+    The property STYLE is set to the value habit.
+    The TODO has a scheduled date, usually with a .+ style repeat interval. A ++ style may be appropriate for habits with time constraints, e.g., must be done on weekends, or a + style for an unusual habit that can have a backlog, e.g., weekly reports.
+    The TODO may also have minimum and maximum ranges specified by using the syntax ‘.+2d/3d’, which says that you want to do the task at least every three days, but at most every two days.
+    You must also have state logging for the DONE state enabled (see Tracking TODO state changes), in order for historical data to be represented in the consistency graph. If it is not enabled it is not an error, but the consistency graphs will be largely meaningless. 
+
+To give you an idea of what the above rules look like in action, here's an actual habit with some history:
+{{{
+     ** TODO Shave
+        SCHEDULED: <2009-10-17 Sat .+2d/4d>
+        - State "DONE"       from "TODO"       [2009-10-15 Thu]
+        - State "DONE"       from "TODO"       [2009-10-12 Mon]
+        - State "DONE"       from "TODO"       [2009-10-10 Sat]
+        - State "DONE"       from "TODO"       [2009-10-04 Sun]
+        - State "DONE"       from "TODO"       [2009-10-02 Fri]
+        - State "DONE"       from "TODO"       [2009-09-29 Tue]
+        - State "DONE"       from "TODO"       [2009-09-25 Fri]
+        - State "DONE"       from "TODO"       [2009-09-19 Sat]
+        - State "DONE"       from "TODO"       [2009-09-16 Wed]
+        - State "DONE"       from "TODO"       [2009-09-12 Sat]
+        :PROPERTIES:
+        :STYLE:    habit
+        :LAST_REPEAT: [2009-10-19 Mon 00:36]
+        :END:
+}}}
+What this habit says is: I want to shave at most every 2 days (given by the SCHEDULED date and repeat interval) and
+ at least every 4 days. If today is the 15th, then the habit first appears in the agenda on Oct 17, after the minimum 
+of 2 days has elapsed, and will appear overdue on Oct 19, after four days have elapsed.
+
+What's really useful about habits is that they are displayed along with a consistency graph, to show how consistent
+ you've been at getting that task done in the past. This graph shows every day that the task was done over the past 
+three weeks, with colors for each day. The colors used are:
+
+Blue
+    If the task wasn't to be done yet on that day.
+Green
+    If the task could have been done on that day.
+Yellow
+    If the task was going to be overdue the next day.
+Red
+    If the task was overdue on that day. 
+
+In addition to coloring each day, the day is also marked with an asterisk if the task was actually done that day,
+ and an exclamation mark to show where the current day falls in the graph.
+
+There are several configuration variables that can be used to change the way habits are displayed in the agenda.
+
+org-habit-graph-column
+    The buffer column at which the consistency graph should be drawn. This will overwrite any text in that column,
+ so it is a good idea to keep your habits' titles brief and to the point.
+org-habit-preceding-days
+    The amount of history, in days before today, to appear in consistency graphs.
+org-habit-following-days
+    The number of days after today that will appear in consistency graphs.
+org-habit-show-habits-only-for-today
+    If non-nil, only show habits in today's agenda view. This is set to true by default. 
+
+Lastly, pressing K in the agenda buffer will cause habits to temporarily be disabled and they won't appear at all. 
+Press K again to bring them back. They are also subject to tag filtering, 
+if you have habits which should only be done in certain contexts, for example. 
+https://www.gnu.org/software/emacs/manual/html_mono/org.html#Tracking-your-habits
+** tags important [#B]                                               :@work:
+:LOGBOOK:
+CLOCK: [2017-11-02 周四 21:04]--[2017-11-02 周四 21:04] =>  0:00
+:END:
+                         Added: [2017-11-02 周四 21:04]
+                         
+An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines.
+ Org mode has extensive support for tags.
+
+Every headline can contain a list of tags; they occur at the end of the headline. Tags are normal words containing 
+letters, numbers, ‘_’, and ‘@’. Tags must be preceded and followed by a single colon, e.g., ‘:work:’. Several tags
+ can be specified, as in ‘:work:urgent:’. Tags will by default be in bold face with the same color as the headline. 
+You may specify special faces for 
+specific tags using the option org-tag-faces, in much the same way as you can for TODO keywords (see Faces for TODO keywords). 

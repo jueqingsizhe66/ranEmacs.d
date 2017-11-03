@@ -2204,6 +2204,20 @@ github: [org-bookmark-heading][152]
 
 ![clock-in][160]
 
+在对应的headline(一般是带todo标签）进行clock-in(`C-c C-x C-i`),clock-out(`C-c C-x C-o`)(典型工作流),如果你觉得该headline已经做完了，
+那就clock-out 并进行`C-c C-x C-r` 表示你已经做完了
+
+如果在一个大标题下，使用clock review的话，就可以针对所有的子标题,每次只能有一个clock（不能有多个clock记录，你一个人做不了多件事情，
+但是可以在一个大标题下)（<2017-11-03 11:19> from now on ,开始clock生活)
+
+所以在org-mode中有一个Effort-All的变量，他代表的意思是一次clock-in-out的时间倒计时
+```
+(add-to-list 'org-global-properties
+      '("Effort_ALL". "0:10 0:15 0:30 1:00 2:00 3:00 4:00 6:00 8:00 12:00 15:00 20:00"))
+```
+
+一般人定的最长时间4小时就不错，长期保持不变做一件事情，一般是科研方面或者coding activity.
+
 ### 73. 关于时间格式的说明
 
 I have seen the time format about [the agenda here][156], and I want to add it in the agenda view.

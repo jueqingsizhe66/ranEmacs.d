@@ -565,7 +565,7 @@ Captured %<%Y-%m-%d %H:%M>
 
 
 (add-to-list 'org-global-properties
-      '("Effort_ALL". "0:05 0:15 0:30 1:00 2:00 3:00 4:00"))
+      '("Effort_ALL". "0:10 0:15 0:30 1:00 2:00 3:00 4:00 6:00 8:00 12:00 15:00 20:00"))
 
 
 
