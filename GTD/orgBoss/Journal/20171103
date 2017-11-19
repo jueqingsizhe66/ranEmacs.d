@@ -1,0 +1,195 @@
+星期五, 2017/11/3
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 17:02 为什么要使用defmacro?
+
+LISP里的宏之所以被称为宏，是因为它确实包装了很多步骤的操作，两大步：
+第一步，像函数那样，宏的body对你传入宏的参数进行操作，进行处理，进行加工；注意，传入宏的参数，是不会被求值的。
+第二步，第一步处理的结果，会被LISP-eval，也就是会被LISP执行；而在函数里，整个函数body的执行结果是不会被再次执行的。第二步的再次被执行，这种特性在动态生成代码中是非常OK的，第一步用来生成代码，第二步用来执行这段代码。为什么要动态生成代码呢?
+
+动态变化的过程是data transformation的过程
+
+可以到别的地方去执行，比如
+(defmacro make-test(name body)
+`(defun ,name ,body)
+....)
+需要定义测试加法的函数，就可以这样调用 ; (make-test test-+ body)
+然后调用test-+
+
+用来创建domain specific language. 换句话来说就是让你的语法更适合问题所在的domain.
+
+Common Lisp的宏特别之处可能就在于能在run time之前多一层macro expansion time。宏扩展的时候可以把代码当作数据来处理，并可以控制宏参数的evalute次数、顺序等。依据这些特性可以用宏生成新的语法规则。写宏的时候要注意variable capture以及form参数的多次evalute.
+
+(defmacro kv [& args]
+  `(let [args# (list ~@args)]
+     (zipmap (map #(keyword %) '(~@args)) args#)))
+
+
+(defmacro defn-request [func-name api-key method & args]
+  `(defn ~func-name [~@args]
+     (url-request-jsonlize
+      (request-hof
+       ~api-key
+       ~method
+       (kv ~@args)))))
+虽然不是common lisp, 但也是lisp方言(clojure).. 这是我用的比较舒服的宏.. 用参数定义request的发送函数 包括参数表之类的 外围用起来一个很舒服...
+
+
+
+
+** 17:24 defmacro really generate the clojure expression
+
+defmacro will not evaluate the parameter, but the body will evaluate some arguments with ~ and ~@ surround with `
+
+Macro是函数式编程里面很重要的一个概念，在之前，我们已经使用了Clojure里面的一些macro，譬如when，and等，我们可以通过macroexpand获知：
+
+user=> (macroexpand '(when true [1 2 3])))
+(if true (do [1 2 3]))
+user=> (doc when)
+-------------------------
+clojure.core/when
+([test & body])
+Macro
+  Evaluates test. If logical true, evaluates body in an implicit do.
+nil
+
+可以看到，when其实就是if + do的封装，很类似C语言里面的macro。
+defmacro
+
+我们可以通过defmacro来定义macro：
+
+user=> (defmacro my-plus
+  #_=> "Another plus for a + b"
+  #_=> [args]
+  #_=> (list (second args) (first args) (last args)))
+#'user/my-plus
+user=> (my-plus (1 + 1))
+2
+user=> (macroexpand '(my-plus (1 + 1)))
+(+ 1 1)
+
+macro的定义比较类似函数的定义，我们需要定义一个macro name，譬如上面的my-plus，一个可选择的macro document，一个参数列表以及macro body。body通常会返回一个list用于后续被Clojure进行执行。
+
+我们可以在macro body里面使用任何function，macro以及special form，然后使用macro的时候就跟函数调用一样。但是跟函数不一样的地方在于函数在调用的时候，参数都是先被evaluated，然后才被传入函数里面的，但是对于macro来说，参数是直接传入macro，而没有预先被evaluated。
+
+我们也能在macro里面使用argument destructuring技术，进行参数绑定：
+
+user=> (defmacro my-plus2
+  #_=> [[op1 op op2]]
+  #_=> (list op op1 op2))
+#'user/my-plus2
+user=> (my-plus2 (1 + 1))
+
+Symbol and Value
+
+编写macro的时候，我们其实就是构建list供Clojure去evaluate，所以在macro里面，我们需要quote expression，这样才能给Clojure返回一个没有evaluated的list，而不是在macro里面就自己evaluate了。也就是说，我们需要明确了解symbol和value的区别。
+
+譬如，现在我们要实现这样一个功能，一个macro，接受一个expression，打印并且输出它的值，可能看起来像这样:
+
+user=> (let [result 1] (println result) result)
+1
+1
+
+然后我们定义这个macro：
+
+user=> (defmacro my-print
+  #_=> [expression]
+  #_=> (list let [result expression]
+  #_=> (list println result)
+  #_=> result))
+
+我们会发现出错了，错误为"Can't take value of a macro: #'clojure.core/let"，为什么呢？在上面这个例子中，我们其实想得到的是let symbol，而不是得到let这个symbol引用的value，这里let并不能够被evaluate。
+
+所以为了解决这个问题，我们需要quote let，只是返回let这个symbol，然后让Clojure外面去负责evaluate，如下：
+
+user=> (defmacro my-print
+  #_=> [expression]
+  #_=> (list 'let ['result expression]
+  #_=> (list 'println 'result)
+  #_=> 'result))
+#'user/my-print
+user=> (my-print 1)
+1
+1
+
+Quote
+Simple Quoting
+
+如果我们仅仅想得到一个没有evaluated的symbol，我们可以使用quote:
+
+user=> (+ 1 2)
+3
+user=> (quote (+ 1 2))
+(+ 1 2)
+user=> '(+ 1 2)
+(+ 1 2)
+user=> '123
+123
+user=> 123
+123
+user=> 'hello
+hello
+user=> hello
+
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: hello in this context
+
+Syntax Quoting
+
+在前面，我们通过'以及quote了解了simple quoting，Clojure还提供了syntax quoting `
+
+user=> `1
+1
+user=> `+
+clojure.core/+
+user=> '+
++
+
+可以看到，syntax quoting会返回fully qualified symbol，所以使用syntax quoting能够让我们避免命名冲突。
+
+另一个syntax quoting跟simple quoting不同的地方在于，我们可以在syntax quoting里面使用~来unquote一些form，这等于是说，我要quote这一个expression，但是这个expression里面某一个form先evaluate，譬如:
+
+user=> `(+ 1 ~(inc 1))
+(clojure.core/+ 1 2)
+user=> `(+ 1 (inc 1))
+(clojure.core/+ 1 (clojure.core/inc 1))
+
+这里还需要注意一下unquote splicing:
+
+user=> `(+ ~(list 1 2 3))
+(clojure.core/+ (1 2 3))
+user=> `(+ ~@(list 1 2 3))
+(clojure.core/+ 1 2 3)
+
+syntax quoting会让代码更加简洁，具体到前面print那个例子，我们let这些都加了quote，代码看起来挺丑陋的，如果用syntax quoting，如下:
+
+user=> (defmacro my-print2
+  #_=> [expression]
+  #_=> `(let [result# ~expression]
+  #_=> (println result#)
+  #_=> result#))
+#'user/my-print2
+user=> (my-print2 1)
+1
+1
+
+
+
+宏存在第二步，这是之前没注意到的，也就是在解释完macro body之后还得解释macro-expansion的内容（这是核心的内容)
+让他变着花样地执行！经常会用到的技能是，参数的次序调换。(不求值阶段和求值阶段，两部分，但是说到不求值，也是可以求的
+比如~x  ~@(list...)---- 第一阶段code is data, 第二阶段data(list data) is code.
+
+code->data->code->data->code...
+eval->apply->eval->apply->eval...
+
+
+how to uprade your thinking from function to macro?
+
+如果真的是参数比如，红参数中x是5
+但是你在宏body肯定使用的是5 如果你使用`(+   4 x) 那么最后就会报错，你得获得x symbol的value，
+这时候你就需要使用`(+ 4 ~x) 来执行了，这样你形成的表达式才是(+ 4 5) ,而不是(+ 4 x),他会报错的（在第二阶段中)
+也就是宏的第一阶段具备c语言早先的文本替换功能，然后才是clojure升级版的对应地方做执行。

@@ -16,6 +16,23 @@ and ubuntu, all valid for newer.
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
 
+
+## 当前.emacs.d安装和使用方法
+
+1. 打开git bash，` git clone https://github.com/jueqingsizhe66/ranEmacs.d` 下载当钱包，
+windows放在`C:\Users\用户名\AppData\Roaming`，linux系统放在~目录下即可。因为init.el存在很多当前
+系统的custom-face-variable信息，所以需要下载后将其删除对应expression的信息
+2. 下载emacs工具 ，[emacs25-3.1][161]
+3. 下载gnupg软件，[gnupg-for-win][162],配置相关密匙即可，进一步参考[标题66][150]
+4. 下载aspell 软件，已经在customization目录下，解压缩到`C:\Program Files (x86)\Aspell`即可，Aspell下一级目录为bin，data等，已包含对应字典(所以windows很方便),注意aspell的配置信息存放在.orgConf.el中。
+5. clojure配置
+   5.1 安装[java-se-9.0.1开发包][163] 
+   5.2 搜索leiningen或者boot-cli，当前搜索[leiningen][164],并安装对应的lein.bat
+   到`C:\Windows\System32`,然后执行`lein self-install`即可,进一步可以参考我写的[emacs和clojure安装教程For ubuntu和windows][39]
+   
+截止到2017.11.19所用到的配件都在[emacs百度云][165],方便大家使用。另有一本the joy
+of the clojure电子书.
+
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
 click [clj-refactor][2]
@@ -2513,3 +2530,8 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 [158]:https://rustbyexample.com/
 [159]:https://github.com/kwrooijen/cargo.el
 [160]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/clock-in.png
+[161]:http://mirrors.ustc.edu.cn/gnu/emacs/windows/
+[162]: https://www.gpg4win.org/download.html
+[163]:http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[164]:https://leiningen.org/
+[165]:http://pan.baidu.com/s/1nvoo3DR

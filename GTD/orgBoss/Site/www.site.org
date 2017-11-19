@@ -231,3 +231,17 @@ emacs window 配置
 * SITES
 ** http://dp.pconline.com.cn/dphoto/list_3365009.html
  very beautiful picture about flowers
+** https://github.com/matthiasn/Clojure-Resources
+ clojure resources
+** https://www.clojure-toolbox.com/
+ clojure-toolbox做的相当不错，挺适合开发者寻找插件
+** https://letoverlambda.com/
+ defun defmacro, a special book works for clojure macro transform
+** http://www.hzwindpower.com/
+ 中国海装 <2017-11-05 21:10> 已经能够生产海上型风力机171m
+远景现在已经能够140m塔架 131m的风轮直径 2.2MW，市面上普遍的都是E120m
+左右的风轮直径。
+** https://www.icax.org/forum-324-1.html
+ SpaceClaim(Pidex简称)
+** https://s-haensch.github.io/visual-cheatsheet/
+ 可视化clojure核心函数
