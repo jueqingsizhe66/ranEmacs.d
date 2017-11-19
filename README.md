@@ -19,17 +19,20 @@ C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的majo
 
 ## 当前.emacs.d安装和使用方法
 
-1. 打开git bash，` git clone https://github.com/jueqingsizhe66/ranEmacs.d` 下载当钱包，
+1. 打开git bash，` git clone https://github.com/jueqingsizhe66/ranEmacs.d` 下载当前配置包，
 windows放在`C:\Users\用户名\AppData\Roaming`，linux系统放在~目录下即可。因为init.el存在很多当前
 系统的custom-face-variable信息，所以需要下载后将其删除对应expression的信息
 2. 下载emacs工具 ，[emacs25-3.1][161]
 3. 下载gnupg软件，[gnupg-for-win][162],配置相关密匙即可，进一步参考[标题66][150]
 4. 下载aspell 软件，已经在customization目录下，解压缩到`C:\Program Files (x86)\Aspell`即可，Aspell下一级目录为bin，data等，已包含对应字典(所以windows很方便),注意aspell的配置信息存放在.orgConf.el中。
 5. clojure配置
-   5.1 安装[java-se-9.0.1开发包][163] 
-   5.2 搜索leiningen或者boot-cli，当前搜索[leiningen][164],并安装对应的lein.bat
+   * 安装[java-se-9.0.1开发包][163] 
+   * 搜索leiningen或者boot-cli，当前搜索[leiningen][164],并安装对应的lein.bat
    到`C:\Windows\System32`,然后执行`lein self-install`即可,进一步可以参考我写的[emacs和clojure安装教程For ubuntu和windows][39]
-   
+6. 然后再配合[totalCommander][166],可以使用emacs快速打开window文件(server+client模式),在选项中--Edit/view(Editor for F4)设置打开的模式为emacsclientw即可(注意解压totalcommand破解文件到安装目录覆盖即可)。同时
+带上[everything][167]比较好，这样就构成一个比较好的系统了。
+7. 在使用`C-x C-f`需要设置一下你的项目目录，在custom.el对应修改一下，默认是我电脑上的`E:/clojure-home`是不对的。
+
 截止到2017.11.19所用到的配件都在[emacs百度云][165],方便大家使用。另有一本the joy
 of the clojure电子书.
 
@@ -984,8 +987,8 @@ Successfully installed argparse-1.4.0 asn1crypto-0.23.0 bcrypt-3.1.3 cffi-1.11.0
 
 You need to have java in your system first.
 
-1. download [leining baiduyun][72],and put it under the ~/.lein/self-installs/ directory.
-2. download the [lein script][73] in the official network, chmod +x lein
+1. download [leining-2.71.1-standalone.jar][165],and put it under the ~/.lein/self-installs/ directory(解决国内有时候网络原因无法下载该jar包).
+2. download the [lein script][164] in the official network, chmod +x lein
 3. lein repl, ok it runs
 
 
@@ -2442,7 +2445,6 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 [70]:http://showterm.io/f5554b8857041dd28dd38#slow
 [71]:https://github.com/rosenbrockc/fortpy-el
 [72]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/f90mode.jpg
-[73]:https://nbcache03.baidupcs.com/file/62c420102bc49b75c2f72eb0bc3376bb?bkt=p3-0000077349e2346b1ab12907a893d1a7719e&xcode=0dca202c7cf6f6cd67dfbddd458d6a75d22b36318ae4295e9717ec4418c70769&fid=1822475311-250528-779334003473883&time=1506791959&sign=FDTAXGERLQBHSK-DCb740ccc5511e5e8fedcff06b081203-ANTjhB%2F5BIHnqoS%2Box7c5vXYJVA%3D&to=p7&size=15370238&sta_dx=15370238&sta_cs=7&sta_ft=jar&sta_ct=6&sta_mt=6&fm2=MH,Yangquan,Netizen-anywhere,,beijing,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000077349e2346b1ab12907a893d1a7719e&sl=79364174&expires=8h&rt=sh&r=741626513&mlogid=6332918318081198732&vuk=3546319256&vbdid=2539911141&fin=leiningen-2.7.1-standalone.jar&fn=leiningen-2.7.1-standalone.jar&rtype=1&iv=0&dp-logid=6332918318081198732&dp-callid=0.1.1&hps=1&tsl=100&csl=100&csign=kcI5aH%2F04aSv%2F9sgQdx%2FfIpDnLM%3D&so=0&ut=6&uter=4&serv=0&uc=2541648437&ic=1957061296&ti=42c2e66164287fda4cfd66f9ec9b2ab620b13e6f45aa1efd305a5e1275657320&by=themis
 [74]:http://www.jianshu.com/p/1bd09e10f6db
 [75]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/quicksort.png
 [76]:http://www.howardism.org/Technical/Emacs/literate-devops.html
@@ -2535,3 +2537,5 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 [163]:http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [164]:https://leiningen.org/
 [165]:http://pan.baidu.com/s/1nvoo3DR
+[166]:http://totalcmd.net/
+[167]:http://www.voidtools.com/
