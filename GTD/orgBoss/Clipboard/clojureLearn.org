@@ -24,3 +24,5 @@ locking process , locking management
  how reify is intended to realize a single instance
 of a type, protocol, or interface-in other words, abstractions.
 12.1 generating objects on the fly with proxy
+** 2017-12 十二月
+*** 2017-12-05 星期二

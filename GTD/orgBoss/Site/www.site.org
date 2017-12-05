@@ -245,3 +245,5 @@ emacs window 配置
  SpaceClaim(Pidex简称)
 ** https://s-haensch.github.io/visual-cheatsheet/
  可视化clojure核心函数
+** http://www.hi-id.com/?tag=%e8%ae%a4%e7%9f%a5%e5%bf%83%e7%90%86%e5%ad%a6
+ 不错的设计网站

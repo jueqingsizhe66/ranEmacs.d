@@ -4,7 +4,7 @@
 (
  ("h:/Classic/" . "Around The World/")
  ("h:/" . "CCTV8.Battle.of.Changsha.Complete.HDTV.iPad.720p.AAC.x264-CHDPAD/")
- ("H:/Classic/" . "Beethoven- Symphony No 9/")
+ ("H:/Classic/" . "Beethoven- Piano Trios (Complete Beethoven Edition Vol/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -21,7 +21,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/clojure-home/first-example/" (23013 38175 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "first-example.iml" "doc/" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".idea/" ".hgignore" ".gitignore" "../" "./")
+ ("H:/Classic/Dvorák- Symphonies Nos.6 - 9 -From the New World-/" (22653 62693 0 0) "4. Finale (Allegro).mp3" "4. Finale (Allegro con spirito).mp3" "4. Allegro ma non troppo.mp3" "4. Allegro con fuoco.mp3" "3. Scherzo (Vivace).mp3" "3. Scherzo (Molto vivace).mp3" "3. Scherzo (Furiant_ Presto).mp3" "3. Allegretto grazioso - Molto vivace.mp3" "2. Poco adagio.mp3" "2. Largo.mp3" "2. Adagio[1].mp3" "2. Adagio.mp3" "1. Allegro non tanto.mp3" "1. Allegro maestoso.mp3" "1. Allegro con brio.mp3" "1. Adagio - Allegro molto.mp3" "../" "./")
+
+ ("e:/clojure-home/first-example/" (23051 1202 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "first-example.iml" "doc/" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".idea/" ".hgignore" ".gitignore" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (23030 38763 0 0) "url/" "themes/" "srecode-map.el" "snippets/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "ispell/" "init.el" "ido.last~" "ido.last" "GTD/" "eshell/" "emms/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "abbrev_defs" ".smex-items" ".session" ".recentf~" ".recentf" ".python-environments/" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "#init.el#" "../" "./")
 

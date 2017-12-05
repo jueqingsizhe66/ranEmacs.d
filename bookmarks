@@ -48,10 +48,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** https://www.i")
- (rear-context-string . "是E120m\n左右的风轮直径。\n")
- (position . 8987))
+ (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
+ (front-context-string . "** TODO [#B] 提交基")
+ (rear-context-string . "     \n需要一些时间来磨合\n")
+ (position . 27909))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

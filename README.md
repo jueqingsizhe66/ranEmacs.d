@@ -2368,6 +2368,80 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 
 如果(set-clipboard-coding-system 'utf-8)可能导致复制时候出现乱码，raw-text保存。
 
+### 78. cool operation on editing clojure file
+
+1. fe . you use wishful thinking to write the upper code,
+and when you want to implement the internal function,just fe.
+2. M+Enter. you edit in the let block, then you can add parathesis
+   in your new line.
+3. M+X mc/mark all like this. When visual select the word or
+parase, then `C-c C-<`
+
+
+### 79. ediff的强大之处
+
+支持三个文档同时比较， 支持patch文件的导出(暂时不会),详细参考[Emacs 之 ediff 学习][168]以及[Vimdiff 使用][169]
+
+常用命令
+
+```
+M-x ediff   : 选择两个文件或者三个文件进行比较
+然后可以在ediff窗口中，摁下space或者n表示向下导航差别区域   p代表向上导航
+
+！ 代表重新比较
+
+| 代表垂直模式
+
+q 退出
+
+E 打开ediff文档
+
+v 向下翻滚
+
+V 向上翻滚
+
+a 把Buffer-A内容复制到Buffer-B
+
+b 把Buffer-B的内容复制到Buffer-A
+
+w a 保存Buffer-a到磁盘
+
+w b 保存Buffer-b到磁盘
+
+
+r a  回复Buffer-A 差异区域中被修改的内容
+```
+
+
+### 80 Editing arts
+
+首先阅读[你是如何成为Lisp程序员][170]，会看到lisp语言的强大和博大精深，
+重点提取Bob Glickstein 曾经写过一本[《Writing GNU Emacs Extensions》][171]
+
+然后开始讲讲[editing的故事：Seven habits of effective text editing ][172]，
+
+背景：
+
+    Most time is spent reading, checking for errors and looking for the right place to work on, rather than inserting new text or changing it. Navigating through the text is done very often, thus you should learn how to do that quickly.
+
+    Quite often you will want to search for some text you know is there. Or look at all lines where a certain word or phrase is used. You could simply use the search command /pattern to find the text,
+    
+    组织资料的过程中，占据最大时间块的工作是查资料。
+1. 单文件editing
+   2. navigation needs much more than editing(looking is the main work: function, structure, typedefs, modules, files, results ,excels, ppts)
+   3. repeat the work with dot
+   4. use abbr fix writing error
+   5. structured editing file
+2. 多文件editing
+3. You know you need to invest time to learn a skill(just write: learn to new commands and turn them into a habit,20% commands make 80% works , 20%time makes 80% profits  , 20% people makes 80% contributions)(repeat the 20% command day and night, now and then, finally automated)
+If you don't expect having to do it again,don't try to optimise it. 
+
+额外的vim阅读 
+
++ [learn vim the hardway][172]
++ [learn vim progressly][173]
+
+
 <hr/>
 <hr/>
 
@@ -2539,3 +2613,9 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 [165]:http://pan.baidu.com/s/1nvoo3DR
 [166]:http://totalcmd.net/
 [167]:http://www.voidtools.com/
+[168]:http://caobeixingqiu.is-programmer.com/posts/6783.html
+[169]:https://www.ibm.com/developerworks/cn/linux/l-vimdiff/
+[170]:http://caobeixingqiu.is-programmer.com/posts/16691.html
+[171]:https://zhidao.baidu.com/share/f280fd6b0524acc7f16e4b18eed0abc3.html
+[172]:http://learnvimscriptthehardway.stevelosh.com/
+[173]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
