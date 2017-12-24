@@ -1,6 +1,8 @@
 # -*- mode: snippet -*-
 # name: section
-# key: se
+# key: sec
 # --
-\section${1:*}{$2}
-${0:$$(reftex-label)}
+\section{${1:name}}
+\label{sec:${2:label}}
+
+$0

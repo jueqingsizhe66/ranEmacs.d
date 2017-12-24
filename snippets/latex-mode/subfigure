@@ -1,10 +1,13 @@
 # -*- mode: snippet -*-
-# name: sub figure
-# key: sfig
+# name: subfigure
+# key: subfig
 # --
-\begin{subfigure}[${1:b}]{${2:0.5}\textwidth}
-  ${6:\centering}
-  $5
-  \caption{$3}
-${0:$$(reftex-label)}
-\end{subfigure}
+\begin{figure}[ht]
+  \centering
+  \subfigure[$1]
+  {\label{fig:${2:label}} 
+    \includegraphics[width=.${3:5}\textwidth]{${4:path}}}
+
+  \caption{${5:caption}}
+\label{fig:${6:label}}
+\end{figure}

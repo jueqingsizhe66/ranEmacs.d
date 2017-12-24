@@ -1,10 +1,14 @@
 * Tasks
 
 
-** TODO java learning,you should take care the XML                              :javaxml:
+** DONE java learning,you should take care the XML                    :javaxml:
+CLOSED: [2017-12-11 周一 19:56]
 
+- State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
 Added: [2015-05-03 Sun 19:04]
-** TODO finish a learning report about the java                                 :javaxml:
+** DONE finish a learning report about the java                       :javaxml:
+CLOSED: [2017-12-11 周一 19:56]
+- State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
    - 
 Added: [2015-05-03 Sun 19:17]
 ** DOING TestTodo                                                      :@Test:
@@ -38,10 +42,12 @@ Jumping to code
 
 
 Added: [2017-09-27 周三 17:50]
-** TODO find the army software
+** DONE find the army software
+CLOSED: [2017-12-11 周一 19:56]
 :PROPERTIES:
 :Effort: 0:15
 :END:
+- State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
 Captured 2017-09-27 22:52
 ** TODO GetThingsDone
                     :PROPERTIES:
@@ -241,11 +247,12 @@ CLOSED: [2017-10-26 周四 11:07]
                     
                     
 入党申请
-** TODO [#B] [25%]学习sketchup和几何画板 <2017-10-19 周四 20:02>        :@work:
-SCHEDULED: <2017-10-26 周四>
+** DONE [#B] [25%]学习sketchup和几何画板 <2017-10-19 周四 20:02>        :@work:
+CLOSED: [2017-12-11 周一 19:57] SCHEDULED: <2017-10-26 周四>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "DONE"       from "TODO"          [2017-12-11 周一 19:57]
                     :LOGBOOK:
                     CLOCK: [2017-10-19 周四 20:02]--[2017-10-19 周四 20:02] =>  0:00
                     :END:
@@ -287,7 +294,7 @@ DEADLINE: <2019-10-21 周一>
                     
                     
 Somethings you need to be done by yourself
-** TODO [#B] SCI结果后处理 <2017-10-21 周六 21:58>                   :@work:
+** TODO [#A] SCI结果后处理 <2017-10-21 周六 21:58>                      :@work:
 DEADLINE: <2017-11-06 周一> SCHEDULED: <2017-10-29 周日>
                     :PROPERTIES:
                     :Effort: 4:00
@@ -388,8 +395,10 @@ CLOSED: [2017-10-30 周一 20:04] DEADLINE: <2017-11-05 周日>
 
 ** TODO Second most important thing that you have to do
 You can also take notes underneath each heading, like this
-** 花销(expense)
+** DONE 花销(expense)
+CLOSED: [2017-12-11 周一 19:56]
 
+- State "DONE"       from              [2017-12-11 周一 19:56]
 That's your gtd
 
 | Date              | Category |  Money | People     | Note |
@@ -505,10 +514,12 @@ http://dabei2006.blog.hexun.com/113493152_d.html  大悲金风科技
 *** 气动设计问题
 风力机的工程设计方法通常基于
 
-** TODO [#B] 两圈风轮20 30 60收集 <2017-11-02 周四 20:48>            :@work:
+** DONE [#B] 两圈风轮20 30 60收集 <2017-11-02 周四 20:48>               :@work:
+CLOSED: [2017-12-11 周一 19:56]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
                     :LOGBOOK:
                     CLOCK: [2017-11-03 周五 11:22]--[2017-11-04 周六 16:41] => 29:19
                     CLOCK: [2017-11-02 周四 21:04]--[2017-11-03 周五 11:22] => 14:18
@@ -521,10 +532,12 @@ http://dabei2006.blog.hexun.com/113493152_d.html  大悲金风科技
 30-60 计算30°
 WZ-YZL计算60°(180步  每隔2步保存一次)
 Node7计算20°(BookYZL)     
-** TODO [#B] spaceClaim 参考 <2017-11-06 周一 12:52>                 :@work:
+** DONE [#B] spaceClaim 参考 <2017-11-06 周一 12:52>                    :@work:
+CLOSED: [2017-12-22 周五 10:39]
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "DONE"       from "TODO"          [2017-12-22 周五 10:39]
                     :LOGBOOK:
                     CLOCK: [2017-11-06 周一 12:52]--[2017-11-06 周一 12:52] =>  0:00
                     :END:
@@ -532,25 +545,32 @@ Node7计算20°(BookYZL)
                     
 http://help.spaceclaim.com/2017.0.0/zh-Hans/
 花点时间思考
-** TODO [#B] 实验(本科生创新实验) <2017-11-09 周四 17:53>            :@work:
+** TODO [#A] 实验(本科生创新实验) <2017-11-09 周四 17:53>               :@work:
 SCHEDULED: <2017-11-14 周二>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
-** TODO [#B] 机舱偏航绘制 <2017-11-15 周三 10:44>                    :@work:
+                    - State "TODO"       from "TODO"          [2017-12-22 周五 10:39]
+                    - State "TODO"       from "DONE"          [2017-12-22 周五 10:38]
+                    - State "DONE"       from "TODO"          [2017-12-22 周五 10:38]
+** DONE [#B] 机舱偏航绘制 <2017-11-15 周三 10:44>                       :@work:
+CLOSED: [2017-12-11 周一 19:56]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
                     :LOGBOOK:
                     CLOCK: [2017-11-15 周三 16:49]--[2017-11-16 周四 13:51] => 21:02
                     CLOCK: [2017-11-15 周三 11:07]--[2017-11-15 周三 16:48] =>  5:41
                     CLOCK: [2017-11-15 周三 10:49]--[2017-11-15 周三 11:07] =>  0:18
                     CLOCK: [2017-11-15 周三 10:44]--[2017-11-15 周三 10:44] =>  0:00
                     :END:
-** TODO [#B] 球形晃动网格绘制 <2017-11-15 周三 10:47>                   :@work:
+** DONE [#B] 球形晃动网格绘制 <2017-11-15 周三 10:47>                   :@work:
+CLOSED: [2017-12-11 周一 19:56]
                     :PROPERTIES:
                     :Effort: 10:00
                     :END:
+                    - State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
                     :LOGBOOK:
                     CLOCK: [2017-11-15 周三 10:49]--[2017-11-15 周三 10:49] =>  0:00
                     CLOCK: [2017-11-15 周三 10:47]--[2017-11-15 周三 10:47] =>  0:00
@@ -562,10 +582,13 @@ SCHEDULED: <2017-11-14 周二>
                     :LOGBOOK:
                     CLOCK: [2017-11-15 周三 11:07]--[2017-11-15 周三 11:07] =>  0:00
                     :END:
-** TODO [#B] clojure学习 <2017-11-16 周四 13:52 +1d>                    :@F708:
+** PENDING [#B] clojure学习 <2017-11-20 周一 13:52 +1d>              :@F708:
                     :PROPERTIES:
                     :Effort: 1:00
+                    :LAST_REPEAT: [2017-12-22 周五 10:38]
                     :END:
+                    
+                    - State "DONE"       from "PENDING"    [2017-12-22 周五 10:38]
                     :LOGBOOK:
                     CLOCK: [2017-11-22 周三 12:07]--[2017-11-22 周三 13:38] =>  1:31
                     CLOCK: [2017-11-21 周二 17:51]--[2017-11-21 周二 22:38] =>  4:47
@@ -708,7 +731,7 @@ CLOSED: [2017-11-29 周三 00:23] SCHEDULED: <2017-11-21 周二>
                     
                     
 需要一些时间来磨合
-** TODO [#B] 提交基金进展报告 <2017-12-01 周五 14:40>                :@work:
+** TODO [#A] 提交基金进展报告 <2017-12-01 周五 14:40>                   :@work:
 SCHEDULED: <2017-12-01 周五> DEADLINE: <2018-01-15 周一>
                     :PROPERTIES:
                     :Effort: 2:00
@@ -734,5 +757,101 @@ SCHEDULED: <2017-12-05 周二>
                     :LOGBOOK:
                     CLOCK: [2017-12-05 周二 14:13]--[2017-12-05 周二 14:13] =>  0:00
                     :END:
+** TODO [#A] 流场可视化专利申请 <2017-12-06 周三 14:53>                 :@work:
+SCHEDULED: <2017-12-06 周三>
+                    :PROPERTIES:
+                    :Effort: 2:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-12-06 周三 14:53]--[2017-12-06 周三 14:54] =>  0:01
+                    :END:
                     
                     
+争取把它搞定
+** TODO [#B] 本科校友聚会 <2017-12-07 周四 01:10>                   :@NCEPU:
+DEADLINE: <2018-08-10 周五>
+                    :PROPERTIES:
+                    :Effort: 2:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2017-12-09 周六 22:03]--[2017-12-09 周六 22:08] =>  0:05
+                    CLOCK: [2017-12-07 周四 01:11]--[2017-12-08 周五 08:46] => 31:35
+                    :END:
+
+[[https://www.baidu.com][hello]]                    
+                    
+
+
+
+
+#<<hello>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[hello][内部]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sdf
+** DONE [#B] 中央高校基金写作 <2017-12-08 周五 08:46>                   :@work:
+CLOSED: [2017-12-11 周一 19:54]
+                    :PROPERTIES:
+                    :Effort: 2:00
+                    :END:
+                    - State "DONE"       from "TODO"          [2017-12-11 周一 19:54]
+                    :LOGBOOK:
+                    CLOCK: [2017-12-08 周五 08:46]--[2017-12-09 周六 22:03] => 37:17
+                    :END:
+                    
+                    
+

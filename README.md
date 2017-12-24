@@ -321,6 +321,7 @@ emacs经常地使用方式是
 比如在打开的markdown md后缀文件下，会打开markdown major-mode的帮助信息，有相关的
 快捷键等帮助信息
 
+<2017-12-10 01:27> 回头看看他还是挺有用的
 
 ### 14. 多窗口
 
@@ -2442,6 +2443,140 @@ If you don't expect having to do it again,don't try to optimise it.
 + [learn vim progressly][173]
 
 
+### 81. 再次学习link
+
+
+1. 定义锚点
+```
+#<<hello>>
+
+
+
+[[hello][hello内部链接]
+
+通过C-c C-o打开链接(open)
+通过C-c C-l (org-insert-link  创建修改链接
+```
+
+进一步链接file
+
+```
+
+file:~/code/main.c:255
+file:~/xx.org::MyTarget (找到目标<<My Target>>'
+```
+
+2. 定义脚注
+
+```
+
+定义脚注  [fn:footprint1]
+
+引用脚注  [[fn:footprint1][脚注1]]
+```
+
+3. 再次提及info
+
+```
+
+info:org:External%20links
+```
+
+
+[vim-plugins is good things][174]: 叶， you need to practice it!
+使用`\ntw`书写个人信息存储到$HOME\vimfiles\perl-support\perl.templates(修改位置也可以)中，然后使用`\ntr`
+重新载入即可。
+
+### 82. ruby的简单包加载
+
+放在custimations文件夹下的ruby-end.el，通过init.el load进去emacs系统
+当你敲入`def`之后自动补全`end`
+
+```
+load 'setup-ruby-mode.el'
+load 'ruby-end.el'
+
+```
+
+
+### 83. python 编译器集成到emacs
+
+参考[用Emacs进行Python开发][175]
+
+1. 安装python本身所需要的插件
+```
+ pip install ipython jedi flake8 importmagic autopep8 yapf
+```
+
+2. 安装emacs的插件
+
+配置下载仓库
+```
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+                         ("melpa-stable1" . "http://elpa.emacs-china.org/melpa-stable/")))
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+```
+
+然后在`setup-python.el`中添加codes below,其中(electric-pair-mode t)目的
+是配对小括号，大括号等
+
+```
+;;; setup-python.el --- 
+;;;(elpy-enable)
+
+(use-package python-mode
+  :mode (("SConstruct\\'" . python-mode)
+         ("SConscript\\'" . python-mode)
+         ("\\.py\\'"      . python-mode))
+  :config
+  (use-package elpy
+    :init
+    (elpy-enable)
+    (elpy-use-ipython)
+    (electric-pair-mode t)
+    ;; use flycheck not flymake with elpy
+    (when (require 'flycheck nil t)
+      (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+      (add-hook 'elpy-mode-hook 'flycheck-mode))))
+
+```
+
+3. 添加了一些snippets
+
+```
+for tab === >   for ... in ... :
+f tab   === >   def ,,  : 
+fd tab  === >    def .. : ""
+cl tab  === >   class name.. :
+ass tab === >    assert
+ae tab  === >    self.asserEqual()
+ifm tab === >    if __name__ == '__main__': ${1:main()}
+main tab ===>     def main(): $0
+from tab == >    from .. import ..
+if tab ==>
+ife tab ==>
+li tab  ==>     [i for exp in list]
+lam tab ==>      lambda ${1:x}: $0
+r tab ==> return $0
+reg tab ==> re.compiler
+wh tab ==> whil ${1:True}
+with tab ==> with ${1:expr}${2: as ${3:alias}}: 
+script tab ==> ifm+ main 的合体
+str tab    ==> def __str__(self): $0
+setup tab  ==>  一堆。。。
+p tab ==> 经常用
+try tab ==> try: ...
+tryelse
+
+
+plt tab ==> import matplotlib.pyplot as plt
+np  tab ==> import numpy as np
+
+
+```
 <hr/>
 <hr/>
 
@@ -2619,3 +2754,5 @@ If you don't expect having to do it again,don't try to optimise it.
 [171]:https://zhidao.baidu.com/share/f280fd6b0524acc7f16e4b18eed0abc3.html
 [172]:http://learnvimscriptthehardway.stevelosh.com/
 [173]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+[174]:https://wolfgangmehner.github.io/vim-plugins
+[175]:https://www.cnblogs.com/yangwen0228/p/6418969.html

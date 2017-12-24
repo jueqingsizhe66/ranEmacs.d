@@ -4,7 +4,7 @@
 (
  ("h:/Classic/" . "Around The World/")
  ("h:/" . "CCTV8.Battle.of.Changsha.Complete.HDTV.iPad.720p.AAC.x264-CHDPAD/")
- ("H:/Classic/" . "Beethoven- Piano Trios (Complete Beethoven Edition Vol/")
+ ("H:/Classic/" . "Around The World/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -21,6 +21,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("e:/clojure-home/" (23092 2814 0 0) "untitled/" "undead/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "parens-of-the-dead/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure/" "clj-new-github/" "book-source/" "ack" "a.rs" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")
+
  ("H:/Classic/Dvorák- Symphonies Nos.6 - 9 -From the New World-/" (22653 62693 0 0) "4. Finale (Allegro).mp3" "4. Finale (Allegro con spirito).mp3" "4. Allegro ma non troppo.mp3" "4. Allegro con fuoco.mp3" "3. Scherzo (Vivace).mp3" "3. Scherzo (Molto vivace).mp3" "3. Scherzo (Furiant_ Presto).mp3" "3. Allegretto grazioso - Molto vivace.mp3" "2. Poco adagio.mp3" "2. Largo.mp3" "2. Adagio[1].mp3" "2. Adagio.mp3" "1. Allegro non tanto.mp3" "1. Allegro maestoso.mp3" "1. Allegro con brio.mp3" "1. Adagio - Allegro molto.mp3" "../" "./")
 
  ("e:/clojure-home/first-example/" (23051 1202 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "first-example.iml" "doc/" "CHANGELOG.md" ".nrepl-port" ".lein-repl-history" ".idea/" ".hgignore" ".gitignore" "../" "./")
@@ -30,8 +32,6 @@
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/" (23018 12810 0 0) "writing.org_archive" "writing.org" "writing.html" "Vocab/" "Someday/" "Site/" "Private/" "Note/" "newgtd.org_archive" "newgtd.org" "newgtd.html" "Journal/" "IDEA/" "hello.rs" "hello.org" "Habit/" "Financial/" "Film/" "DailyReview/" "Clipboard/" "Book/" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/orgBoss/Journal/" (23024 2912 0 0) "journal.org" "journal-XYZ.org" "journal-mon.org" "journal-dailies.org" "journal-dailies-end.org" "a.png" "20171025" "20171023" "20171022" "20171021" "20171019" "20171017" "20171013" "20171012" "20171011" "20171010" "20171009" "20171008" "20171007" "../" "./")
-
- ("e:/clojure-home/" (23018 14686 0 0) "undead_zoobie/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure/" "clj-new-github/" "book-source/" "a.rs" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/" (23006 60698 0 0) "thesis-proposal.org.pdf" "thesis-proposal.org" "test.org.pdf" "test.org" "science.org" "reveal.js/" "remember-2.0/" "presentation.org" "presentation.html" "planner-3.42/" "phd1.org.pgp" "phd1.org" "package/" "orgTemplate/" "orgBoss/" "myPlan/" "muse-3.20/" "index.org" "hello.org.pdf.pdf" "hello.org.gpg" "hello.org" "email.org" "Dissertation.org" "current.pdf" ".notes.org" "../" "./")
 

@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: cite
-# key: ci
+# key: c
 # --
-${0:$$(reftex-citation)}
+\cite{$1} $0

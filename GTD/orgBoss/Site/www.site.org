@@ -247,3 +247,7 @@ emacs window 配置
  可视化clojure核心函数
 ** http://www.hi-id.com/?tag=%e8%ae%a4%e7%9f%a5%e5%bf%83%e7%90%86%e5%ad%a6
  不错的设计网站
+** https://wolfgangmehner.github.io/vim-plugins/gitsupport.html
+ vim - plugins  very important
+** http://steve-yegge.blogspot.com/
+ stevey's Blog Rangts 程序员的呐喊

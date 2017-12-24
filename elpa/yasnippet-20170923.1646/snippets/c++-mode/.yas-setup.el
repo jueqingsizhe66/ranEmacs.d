@@ -10,3 +10,4 @@ If found, the class name is returned, otherwise STR is returned"
 (defun yas-c++-class-method-declare-choice ()
   "Choose and return the end of a C++11 class method declaration"
   (yas-choose-value '(";" " = default;" " = delete;")))
+1

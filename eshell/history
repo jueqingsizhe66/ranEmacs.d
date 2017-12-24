@@ -1,2 +1,4 @@
 mplayer 20101227\ 借助文献计量工具分析科研机构与个人的科研产出.wrf
 ls
+ruby a.rb
+gem list
