@@ -2577,6 +2577,21 @@ np  tab ==> import numpy as np
 
 
 ```
+
+[python练习实例][176]
+```
+# -*- coding: UTF-8 -*-
+
+def a(n):
+   L = []
+   for i in range(2,n-1):
+       L.append(n%i)
+   if  0 not in L:
+      return True
+print filter(a,range(101,200))
+```
+
+
 <hr/>
 <hr/>
 
@@ -2756,3 +2771,4 @@ np  tab ==> import numpy as np
 [173]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [174]:https://wolfgangmehner.github.io/vim-plugins
 [175]:https://www.cnblogs.com/yangwen0228/p/6418969.html
+[176]:http://www.runoob.com/python/python-exercise-example12.html
