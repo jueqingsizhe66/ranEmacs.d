@@ -2799,4 +2799,4 @@ TotalCmd:
 [174]:https://wolfgangmehner.github.io/vim-plugins
 [175]:https://www.cnblogs.com/yangwen0228/p/6418969.html
 [176]:http://www.runoob.com/python/python-exercise-example12.html
-[177]:https://github.com/jueqingsizhe66/ranEmacs.d#84-everything-and-totalCMD
+[177]:https://github.com/jueqingsizhe66/ranEmacs.d#84-everything-and-totalcmd
