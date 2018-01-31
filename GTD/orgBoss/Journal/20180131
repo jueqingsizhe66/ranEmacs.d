@@ -1,0 +1,59 @@
+星期三, 2018/1/31
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 08:50 perl oo has function                                         :perl:
+
+has是perl oo 模块moose moo等的函数，用于构建对象属性的
+
+** 09:00 oracle安装                                                   :java:
+
+	1. 安装企业版3.27  字符集Unicode(Al32UTF8   口令自己设置
+	2. 需要解密HR 和Scoott两个数据库
+	3. cmd运行  sqlplus HR/123 或者sqlplus scott/123 是否进入
+	4. OracleServiceORCL是主服务，不能关掉，其他均可停掉，然后把启动类型从自动改为手动即可
+s使用SQLServer需要打开TNSLinstener服务，否则打不开
+
+
+** 09:03 oracle常用命令                                               :java:
+
+Sqlplus username/password 登陆
+
+Desc tablename 查看表结构
+
+Host cls 清屏
+
+Col tname for a15 (15个空格 相隔，print format  设置列宽度  tname表示列名，字段名，每个字段都可以设置的，然后for代表format意思，a代表一个字符，15代表15个字符   为了显示更加好看）
+设置行宽  set linesize 400;
+           
+Col tname for 99999 设置为默认。。。
+
+Set pagesize 20
+/ 表示执行上一条命令
+@文件名  执行sql文件（文件名前面加上一个@即可 类似mysql的source）
+
+** 09:03 oracle卸载                                                   :java:
+
+1. 停止Oracle服务相关
+2. 运行安装目录下的deinstall.bat
+3. 删除Oracle的注册表
+4. 环境变量删除
+
+** 09:08 oracle解锁用户
+
+2 解锁用户scott
+
+alter user scott account unlock
+
+3 一般解锁后同时修改密码
+
+alter user scott identified by 123
+
+** 09:15 oracle orcl user                                             :java:
+
+usertale: orcl
+管理口令  :  root(密码过于简单会警告 忽略即可)

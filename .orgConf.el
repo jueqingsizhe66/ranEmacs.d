@@ -413,9 +413,6 @@ Captured %<%Y-%m-%d %H:%M>
 
 ;;相当于设置  #+tags:  在每一个org文件中
 (setq org-tag-alist '((:startgroup . nil)
-                      ("@work" . ?w) 
-
-                      ("@errand" . ?e)
                       ("@office" . ?o)
                       ("@home" . ?H)
                       ("@Dormitry" . ?D)
@@ -424,28 +421,45 @@ Captured %<%Y-%m-%d %H:%M>
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
-                      ("laptop" . ?l) 
-                      ("java" . ?j)
-                      ("perl" . ?p)
-                      ("matlab" . ?m)
-                      ("clojure" . ?c)
-                      ("scheme" . ?s)
                       ("WAITING" . ?w)
                       ("HOLD" . ?h)
                       ("PERSONAL" . ?P)
-                      ("WORK" . ?W)
                       ("ORG" . ?O)
-                      ("crypt" . ?E)
-                      ("NOTE" . ?n)
-                      ("CANCELLED" . ?C)
-                      ("FLAGGED" . ??)
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
-                      ("++multiAxis" . ?t)
-                      ("++the-parens-of-dead" . ?z)
-                      ("++graduation" . ?g)
+                      ("EnglishPaper" . ?l) 
+                      ("java" . ?j)
+                      ("perl" . ?p)
+                      ("matlab" . ?m)
+                      ("Mysql" . ?M)
+                      ("Oracle" . ?O)
+                      ("clojure" . ?c)
+                      ("scheme" . ?s)
+                      ("python" . ?y)
+                      ("ruby" . ?r)
+                      ("emacslisp" . ?e) 
+                      ("crypt" . ?C)
                       (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("芝麻" . ?z)
+                      ("橘子" . ?J)
+                      ("西瓜" . ?x)
+                      ("大象" . ?X)
+                      ("大山" . ?M)
+                      ("地球" . ?E)
+                      ("太阳" . ?T)
+                      ("银行系" . ?Y)
+                      ("宇宙" . ?Z) 
+                      (:endgroup . nil)
+
+                      (:newline)
+                      (:startgroup . nil)
+                      ("multiAxis" . ?t)
+                      ("graduation" . ?g)
+                      (:endgroup . nil)
+
                       (:newline)
                       (:startgroup . nil)
                       ("紧急重要" . ?a)
@@ -563,9 +577,9 @@ Captured %<%Y-%m-%d %H:%M>
 
 
 
-
+;;; the minimum time is one tomato time:  0:30
 (add-to-list 'org-global-properties
-      '("Effort_ALL". "0:10 0:15 0:30 1:00 2:00 3:00 4:00 6:00 8:00 12:00 15:00 20:00"))
+      '("Effort_ALL". " 0:30 1:00 2:00 3:00 4:00 6:00 8:00 12:00 15:00 20:00"))
 
 
 
@@ -1182,7 +1196,7 @@ e.g. Sunday, September 17, 2000."
    )
 
   (if (< lo 20864)                      ; if the low word is too small for subtracting
-      (setq hi (- hi 2)  lo (+ lo 44672)) ; take 2 from the high word and add to the low
+   (setq hi (- hi 2)  lo (+ lo 44672)) ; take 2 from the high word and add to the low
     (setq hi (- hi 1) lo (- lo 20864))  ; else, add 86400 seconds (in two parts)
     )
   (list hi lo msecs)                    ; regurgitate the new values
@@ -1225,3 +1239,13 @@ e.g. Sunday, September 17, 2000."
 ;;          "~/.emacs.d/GTD/orgBoss/newgtd.org"        ;;
 ;;          "\\* Articles")))                          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq browse-url-browser-function 'eww-browse-url)
+
+
+(defvar my/espeak-command "c://eSpeak/command_line/espeak.exe")
+(defun my/say (string &optional speed)
+  (interactive "MString: ")
+  (setq speed (or speed 175))
+  (call-process my/espeak-command nil nil nil string "-s" speed))
+
+

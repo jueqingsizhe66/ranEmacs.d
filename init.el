@@ -212,7 +212,7 @@
 (add-to-list 'load-path "~/.emacs.d/customizations")
 ;;for magnars folders
 (add-to-list 'load-path "~/.emacs.d/customizations/magnars/")
-
+;;(set-fontset-font t 'han (font-spec :family "Microsoft Yahei" :size 16)
 (load "font-lock+.el")
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables

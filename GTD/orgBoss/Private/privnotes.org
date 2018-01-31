@@ -1,5 +1,5 @@
-﻿
 * 2017
+
 ** 2017-09 九月
 *** 2017-09-13 星期三
 **** file <2017-09-13 周三 00:55>
@@ -42,3 +42,9 @@ eJuJKOToxhUS7l/J1/xK/gUDMpT8r9GiZirvi5KLvbtm7sJEB9UpkKRp1xY=
 http://www.howardism.org/Technical/Emacs/spreadsheet.html
 #+END_EXAMPLE
 
+
+
+#+BEGIN_SRC java -n
+String phoneLine  = reader.readLine();
+
+#+END_SRC

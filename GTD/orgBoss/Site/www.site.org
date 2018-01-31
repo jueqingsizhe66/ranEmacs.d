@@ -1,253 +1,303 @@
 * Site
+www.orgmode.org/manual/index.html
+http://orgmode.org/orgcard.txt
+https://www.reddit.com/r/emacs/
 
-** www.orgmode.org/manual/index.html
-** http://orgmode.org/orgcard.txt
-** https://www.reddit.com/r/emacs/
- the best emacs website?
-** http://wenshanren.org/?p=386
-** https://www.slideshare.net/
-** https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
-** http://sachachua.com/
-** https://github.com/sachac/emacs-notes
- good place to learn emacs
-** https://github.com/rejeep/f.el
- modern ApI for emacs working with file and directories
-** https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
- Look it again
-one project(related many tasks),maybe one task related many todos.
-Many todos are too much,so don't worry ,make the Most important taks(MIP)
-(If you don't feel working on it, just 
-** http://planet.emacsen.org/
- good place for emacsman
-** http://lists.gnu.org/archive/html/emacs-orgmode/2010-03/msg00367.html
- Good for idle time for everything else
-** http://sachachua.com/blog/sketched-books/
-** http://orgmode.org/worg/org-hacks.html                :@NCEPU:不紧急重要:
- org-hacks
-** http://www.trollope.org/scheme.html
- scheme loves kids, and we all kids
-** http://www.lisperati.com/tellstuff/index.html
- computer scientist like it , like the website
-** http://www.defmacro.org/
- how to macro it? market model
-** http://www.jianshu.com/p/ce9c5a312174
- http://www.lisperati.com/clojure-spels/casting.html
- casting spels in lisp
-** https://en.wikipedia.org/wiki/Laminar-turbulent_transition
- 边界层转捩
-** http://en.wikipedia.org/wiki/Flow_separation
- Flow separation
-** https://github.com/LightTable/LightTable
- the-next code generation editor
-** https://www.clojure-toolbox.com/
- clojure Toolbox
-** https://github.com/trending?l=clojure
- clojure github 项目排名
-** http://wiki.fnil.net/
- 庄周梦蝶 lendcloud
-http://blog.fnil.net/blog/archives/
-** https://github.com/functional-koans/clojure-koans
- A set of exercises for learning Clojure
- The Clojure Koans are a fun way to get started with Clojure - no experience assumed or required.
- Follow the instructions below to start making tests pass!
-** https://github.com/trending/python
- python的小型项目
-http://wenshanren.org/?p=924 如果重新学编程，我会怎么做
-** https://www.emacswiki.org/emacs/PrettySymbol
- pretty symbol
-** https://github.com/abo-abo
- abo-abo大神
-** https://www.wired.com/2015/02/on-the-joy-of-mastery
- design something to be hard to use
-** https://github.com/clojure/core.logic
- core-logic
-** https://github.com/howardabrams/dot-files/blob/master/emacs-fixes.org#next-and-previous-file
- split strings with number
-** http://archive.3zso.com/archives/plantuml-quickstart.html
- 
+the best emacs website?
+http://wenshanren.org/?p=386
+https://www.slideshare.net/
+https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
+http://sachachua.com/
+https://github.com/sachac/emacs-notes
+
+good place to learn emacs
+https://github.com/rejeep/f.el
+
+modern ApI for emacs working with file and directories
+https://github.com/sachac/baby-steps-org-todo/blob/master/index.org
+
+Look it again one project(related many tasks),maybe one task related many todos. Many todos are too much,so don’t worry ,make the Most important taks(MIP) (If you don’t feel working on it, just
+http://planet.emacsen.org/
+
+good place for emacsman
+http://lists.gnu.org/archive/html/emacs-orgmode/2010-03/msg00367.html
+
+Good for idle time for everything else
+http://sachachua.com/blog/sketched-books/
+http://orgmode.org/worg/org-hacks.html :@NCEPU:不紧急重要:
+
+org-hacks
+http://www.trollope.org/scheme.html
+
+scheme loves kids, and we all kids
+http://www.lisperati.com/tellstuff/index.html
+
+computer scientist like it , like the website
+http://www.defmacro.org/
+
+how to macro it? market model
+http://www.jianshu.com/p/ce9c5a312174
+
+http://www.lisperati.com/clojure-spels/casting.html casting spels in lisp
+https://en.wikipedia.org/wiki/Laminar-turbulent_transition
+
+边界层转捩
+http://en.wikipedia.org/wiki/Flow_separation
+
+Flow separation
+https://github.com/LightTable/LightTable
+
+the-next code generation editor
+https://www.clojure-toolbox.com/
+
+clojure Toolbox
+https://github.com/trending?l=clojure
+
+clojure github 项目排名
+http://wiki.fnil.net/
+
+庄周梦蝶 lendcloud http://blog.fnil.net/blog/archives/
+https://github.com/functional-koans/clojure-koans
+
+A set of exercises for learning Clojure The Clojure Koans are a fun way to get started with Clojure - no experience assumed or required. Follow the instructions below to start making tests pass!
+https://github.com/trending/python
+
+python的小型项目 http://wenshanren.org/?p=924 如果重新学编程，我会怎么做
+https://www.emacswiki.org/emacs/PrettySymbol
+
+pretty symbol
+https://github.com/abo-abo
+
+abo-abo大神
+https://www.wired.com/2015/02/on-the-joy-of-mastery
+
+design something to be hard to use
+https://github.com/clojure/core.logic
+
+core-logic
+https://github.com/howardabrams/dot-files/blob/master/emacs-fixes.org#next-and-previous-file
+
+split strings with number
+http://archive.3zso.com/archives/plantuml-quickstart.html
+
 emacs org-mode plantuml
-** https://github.com/emacs-china/hello-emacs
- hello emacs
-** https://github.com/howardabrams/demo-it
- demo-it for presentations
-https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items
-** https://potentpages.com/web-design/reveal-js/tutorials
- reveal-js ppt presentation
-** https://github.com/Malabarba/lazy-map-clojure
- lazy map : new data structure for clojure
-** http://orgmode.org/worg/org-color-themes.html
- tour all the color themes
-** https://github.com/jonnay/org-beautify-theme/issues/1
- M-x load-theme  
-M-x desrcibe-theme
-** https://gist.github.com/holtzermann17/6953779/revisions
- github  gist
-** https://gist.github.com/discover
- All gist
-** https://en.wikibooks.org/wiki/LaTeX
- latex入门到精通
-** https://www.zhihu.com/people/noinil/answers?page=2
-https://github.com/noinil/prelude
- chen tao
-** http://pragmaticemacs.com/emacs/dynamically-filter-directory-listing-with-dired-narrow/#
- good website for learning emacs
-** http://www.woola.net/tag/redirect/lisp
- 大雄--lisp（不错的tornado博客）
-** http://www.nsfc.gov.cn/
- 自然科学基金委，了解idea的产生
-** http://z.caudate.me/on-whose-authority/
- Chris Zheng
-** http://www.lispcast.com/cognitect-clojure
- 3 Things Java Programmers can steal from clojure
-The 100 Most Used Clojure Expressions
-** https://www.baidu.com/s?wd=4-20ma%E8%A1%A8%E5%A4%B4&rsv_spt=1&rsv_iqid=0xf4212a0100032585&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=16&rsv_sug1=9&rsv_sug7=100&rsv_t=1aa9w3wsifO0%2BaD%2F1FEkrqtbJiox7Jx7ylPF%2Fb49Yb9U1sfQ8ZjEbbcOxwghSng1D9AP&rsv_sug2=0&inputT=6360&rsv_sug4=6360
- 4-20ma表头
-接地，为了实现各种电气设备的零电位点与大地作良性电气连接，由金属接地体引至各种电气设备零电位部位的一切装置的总称。 
-可靠接地，应该值得是接地系统的可靠性吧，
-为减小接地电阻尽量采取利用自然接地体，多点接地，网状接地等。
-** TODO https://github.com/CarpenterLee/JCFInternals
-- State "TODO"       from              [2017-10-14 周六 14:26]
- 深入理解java collections
-** https://github.com/dfeich/org-babel-examples
- org-babel example for many languages
-** https://github.com/redguardtoo/emacs.d
- 陈斌  chen bin
-** https://github.com/judasn/IntelliJ-IDEA-Tutorial
- IDEA简体中文教程
-http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/
-** https://clojuredocs.org/
- clojure documents
-** joyofclojure.com
- the joy of clojure
-** http://clojure-api-cn.readthedocs.io/en/latest/
- clojure手册
-** https://github.com/huangz1990/clojure_api_cn/blob/master/clojure.repl/dir-fn.rst
- clojure_api_cn
-** http://www.cnblogs.com/fxjwind/archive/2013/01/22/2871860.html
- doc and find-doc, 帮助文档
+https://github.com/emacs-china/hello-emacs
+
+hello emacs
+https://github.com/howardabrams/demo-it
+
+demo-it for presentations https://emacs.stackexchange.com/questions/32795/org-presentation-using-transitions-revealing-items
+https://potentpages.com/web-design/reveal-js/tutorials
+
+reveal-js ppt presentation
+https://github.com/Malabarba/lazy-map-clojure
+
+lazy map : new data structure for clojure
+http://orgmode.org/worg/org-color-themes.html
+
+tour all the color themes
+https://github.com/jonnay/org-beautify-theme/issues/1
+
+M-x load-theme M-x desrcibe-theme
+https://gist.github.com/holtzermann17/6953779/revisions
+
+github gist
+https://gist.github.com/discover
+
+All gist
+https://en.wikibooks.org/wiki/LaTeX
+
+latex入门到精通
+https://www.zhihu.com/people/noinil/answers?page=2
+
+https://github.com/noinil/prelude chen tao
+http://pragmaticemacs.com/emacs/dynamically-filter-directory-listing-with-dired-narrow/#
+
+good website for learning emacs
+http://www.woola.net/tag/redirect/lisp
+
+大雄–lisp（不错的tornado博客）
+http://www.nsfc.gov.cn/
+
+自然科学基金委，了解idea的产生
+http://z.caudate.me/on-whose-authority/
+
+Chris Zheng
+http://www.lispcast.com/cognitect-clojure
+
+3 Things Java Programmers can steal from clojure The 100 Most Used Clojure Expressions
+https://www.baidu.com/s?wd=4-20ma%E8%A1%A8%E5%A4%B4&rsv_spt=1&rsv_iqid=0xf4212a0100032585&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=16&rsv_sug1=9&rsv_sug7=100&rsv_t=1aa9w3wsifO0%2BaD%2F1FEkrqtbJiox7Jx7ylPF%2Fb49Yb9U1sfQ8ZjEbbcOxwghSng1D9AP&rsv_sug2=0&inputT=6360&rsv_sug4=6360
+
+4-20ma表头 接地，为了实现各种电气设备的零电位点与大地作良性电气连接，由金属接地体引至各种电气设备零电位部位的一切装置的总称。 可靠接地，应该值得是接地系统的可靠性吧， 为减小接地电阻尽量采取利用自然接地体，多点接地，网状接地等。
+https://github.com/CarpenterLee/JCFInternals
+
+    State “TODO” from [2017-10-14 周六 14:26] 深入理解java collections
+
+https://github.com/dfeich/org-babel-examples
+
+org-babel example for many languages
+https://github.com/redguardtoo/emacs.d
+
+陈斌 chen bin
+https://github.com/judasn/IntelliJ-IDEA-Tutorial
+
+IDEA简体中文教程 http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/
+https://clojuredocs.org/
+
+clojure documents
+joyofclojure.com
+
+the joy of clojure
+http://clojure-api-cn.readthedocs.io/en/latest/
+
+clojure手册
+https://github.com/huangz1990/clojure_api_cn/blob/master/clojure.repl/dir-fn.rst
+
+clojure_api_cn
+http://www.cnblogs.com/fxjwind/archive/2013/01/22/2871860.html
+
+doc and find-doc, 帮助文档
 
 The doc, look up the documentation associated with any other function or macro.
 
-user=> (doc +) 
-------------------------- 
-clojure.core/+ 
-([] [x] [x y] [x y & more]) 
-Returns the sum of nums. (+) returns 0.
+user=> (doc +)
+
+clojure.core/+ ([] [x] [x y] [x y & more]) Returns the sum of nums. (+) returns 0.
 
 The find-doc function accepts a string, which can be a regex pattern. It then finds the documentation for all functions or macros whose names or associated documentation match the supplied pattern.
 
-user> (find-doc "lazy") 
-------------------------- 
-clojure.core/concat 
-([] [x] [x y] [x y & zs]) 
-Returns a lazy seq representing the concatenation of... 
-------------------------- 
-clojure.core/cycle 
-([coll]) 
-Returns a lazy (infinite!) sequence of repetitions of... 
-... more results
-** http://blog.csdn.net/ithomer/article/details/78170870
- 技术博客，坚持始终
-** http://blog.csdn.net/ithomer/article/details/78170870
- 写博客创作，输出知识和思想，才是读书的最高境界！朋友，你的回答看似文不对题，
-另辟蹊径，但实质你已达到了读书的最高境界，
-看书是书，看书不是书，看书还是书，写着你自己的书，细思极恐啊，世外高人
+user> (find-doc “lazy”)
 
-老僧三十年前，未参禅时，见山是山，见水是水。 
+clojure.core/concat ([] [x] [x y] [x y & zs]) Returns a lazy seq representing the concatenation of…
 
-乃至后来，亲见知识（佛家称明师曰善知识），有个入处，见山不是山，见水不是水。 
+clojure.core/cycle ([coll]) Returns a lazy (infinite!) sequence of repetitions of… … more results
+http://blog.csdn.net/ithomer/article/details/78170870
 
-而今得个休歇处，见山只是山，见水只是水。 
+技术博客，坚持始终
+http://blog.csdn.net/ithomer/article/details/78170870
+
+写博客创作，输出知识和思想，才是读书的最高境界！朋友，你的回答看似文不对题， 另辟蹊径，但实质你已达到了读书的最高境界， 看书是书，看书不是书，看书还是书，写着你自己的书，细思极恐啊，世外高人
+
+老僧三十年前，未参禅时，见山是山，见水是水。
+
+乃至后来，亲见知识（佛家称明师曰善知识），有个入处，见山不是山，见水不是水。
+
+而今得个休歇处，见山只是山，见水只是水。
 
 大众！者三般见解，是同是别，有人缁素（代表黑白分明）得出，许汝亲见老僧
 
 https://www.zhihu.com/question/20146527
-** https://www.thewindpower.net/statistics_en.php
- 全球风电统计
-** http://www.mei.net.cn/dgdq/201710/751674.html
- 
-球风能理事会秘书长Steve Sawyer：中国是全球风电最主要的增长极（附图） 
-** https://www.bp.com/zh_cn/china.html
- BP全球中国统计年鉴
-** https://wenku.baidu.com/view/a9533b120b4e767f5acfce27.html
- simpack交通大学
-** http://www.simpack.com/videos.html?&L=0%3Fcid%3D373%3Fcid%3D654
- simpack  video
-** http://isabelle.in.tum.de/ 
-sabelle 又发新版了，好羡慕。
-我们 HOL4 社区的用户数量相比之下太少了（不过也比 HOL Light 强，都快被榨干了）
-** https://www.bilibili.com/video/av12818669/?from=search&seid=18118687468980995416#page=3
- oeasy 教你玩rust
-** https://github.com/technomancy/dotfiles
- very beautiful keyboard mouse 头盔
-** http://www.torque2018.org/
+https://www.thewindpower.net/statistics_en.php
 
- The Science of Making Torque from Wind (TORQUE 2018)
-** http://geek.wasai.org/member/
- 王掌柜的会员
-** http://www.howardism.org/Technical/Emacs/spreadsheet.html
- lots of spreedsheet电子表格  
-howardism.org
-其实我们停下来想想，emacs的配置对于不经常玩电脑的人来说，简直是大麻烦。但是如果你经常玩，而且喜欢配置，那么emacs就好象一个不错的点心，他的定位不是为了简单，反而是为了expert design     有兴趣可以看看https://www.wired.com/2015/02/on-the-joy-of-mastery/ 
+全球风电统计
+http://www.mei.net.cn/dgdq/201710/751674.html
 
+球风能理事会秘书长Steve Sawyer：中国是全球风电最主要的增长极（附图）
+https://www.bp.com/zh_cn/china.html
 
-我知道我们应该想着设计简单，包括你在工作中也是想着怎么给client带来更好的用户体验，一键到底。但是有时候也可以反过来想想复杂的精细化设计（长见识哈哈）
-https://www.wired.com/2015/02/on-the-joy-of-mastery/
+BP全球中国统计年鉴
+https://wenku.baidu.com/view/a9533b120b4e767f5acfce27.html
 
-看上面link来自howardism(org-mode文学编程的倡导者）的blog : http://www.howardism.org/#Yours%20in%20Emacs 
-** 
-** https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md
- 
+simpack交通大学
+http://www.simpack.com/videos.html?&L=0%3Fcid%3D373%3Fcid%3D654
+
+simpack video
+http://isabelle.in.tum.de/
+
+sabelle 又发新版了，好羡慕。 我们 HOL4 社区的用户数量相比之下太少了（不过也比 HOL Light 强，都快被榨干了）
+https://www.bilibili.com/video/av12818669/?from=search&seid=18118687468980995416#page=3
+
+oeasy 教你玩rust
+https://github.com/technomancy/dotfiles
+
+very beautiful keyboard mouse 头盔
+http://www.torque2018.org/
+
+The Science of Making Torque from Wind (TORQUE 2018)
+http://geek.wasai.org/member/
+
+王掌柜的会员
+http://www.howardism.org/Technical/Emacs/spreadsheet.html
+
+lots of spreedsheet电子表格 howardism.org 其实我们停下来想想，emacs的配置对于不经常玩电脑的人来说，简直是大麻烦。但是如果你经常玩，而且喜欢配置，那么emacs就好象一个不错的点心，他的定位不是为了简单，反而是为了expert design 有兴趣可以看看https://www.wired.com/2015/02/on-the-joy-of-mastery/
+
+我知道我们应该想着设计简单，包括你在工作中也是想着怎么给client带来更好的用户体验，一键到底。但是有时候也可以反过来想想复杂的精细化设计（长见识哈哈） https://www.wired.com/2015/02/on-the-joy-of-mastery/
+
+看上面link来自howardism(org-mode文学编程的倡导者）的blog : http://www.howardism.org/#Yours%20in%20Emacs
+https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md
+
 awk gnu programming (examples for awk gnu)
-** https://github.com/learnbyexample/scripting_course/blob/master/Perl_curated_resources.md
- perl scripting resources
-** http://www.inoteexpress.com/aegean/ 
+https://github.com/learnbyexample/scripting_course/blob/master/Perl_curated_resources.md
+
+perl scripting resources
+http://www.inoteexpress.com/aegean/
 
 可以方便插入参考文献
-** https://addons.mozilla.org/en-US/firefox/addon/org-capture/
- org capture
-** http://www.blogjava.net/killme2008/archive/2012/02/16/370144.html
- clojure IO
-** http://clojure.github.io/java.jdbc/
-** https://github.com/clojure/math.combinatorics
- clojure math
-** https://stackoverflow.com/questions/18246549/cartesian-product-in-clojure
- 关于clojure数学方面计算的讨论
-** https://github.com/nicferrier
- Nic ferrier 专业lisp
-** http://www.fxyqpx.org/KQDLXXB/2015-02-246.htm
- 中国空气动力学报
-** http://man.chinaunix.net/newsoft/Emac/book.html
- 
+https://addons.mozilla.org/en-US/firefox/addon/org-capture/
+
+org capture
+http://www.blogjava.net/killme2008/archive/2012/02/16/370144.html
+
+clojure IO
+http://clojure.github.io/java.jdbc/
+https://github.com/clojure/math.combinatorics
+
+clojure math
+https://stackoverflow.com/questions/18246549/cartesian-product-in-clojure
+
+关于clojure数学方面计算的讨论
+https://github.com/nicferrier
+
+Nic ferrier 专业lisp
+http://www.fxyqpx.org/KQDLXXB/2015-02-246.htm
+
+中国空气动力学报
+http://man.chinaunix.net/newsoft/Emac/book.html
+
 emacs window 配置
-** https://cemerick.com/2011/07/05/flowchart-for-choosing-the-right-clojure-type-definition-form/
- flow chart to describe how to define type
-** http://clojure.github.io/clojure/index.html
- clojure API
-** https://www.braveclojure.com/concurrency/
- 并发 clojure
-** http://dp.pconline.com.cn/dphoto/list_3365009.html
- 太平洋摄影博客
+https://cemerick.com/2011/07/05/flowchart-for-choosing-the-right-clojure-type-definition-form/
+
+flow chart to describe how to define type
+http://clojure.github.io/clojure/index.html
+
+clojure API
+https://www.braveclojure.com/concurrency/
+
+并发 clojure
+http://dp.pconline.com.cn/dphoto/list_3365009.html
+
+太平洋摄影博客
+SITES
+http://dp.pconline.com.cn/dphoto/list_3365009.html
+
+very beautiful picture about flowers
+https://github.com/matthiasn/Clojure-Resources
+
+clojure resources
+https://www.clojure-toolbox.com/
+
+clojure-toolbox做的相当不错，挺适合开发者寻找插件
+https://letoverlambda.com/
+
+defun defmacro, a special book works for clojure macro transform
+http://www.hzwindpower.com/
+
+中国海装 <2017-11-05 21:10> 已经能够生产海上型风力机171m 远景现在已经能够140m塔架 131m的风轮直径 2.2MW，市面上普遍的都是E120m 左右的风轮直径。
+https://www.icax.org/forum-324-1.html
+
+SpaceClaim(Pidex简称)
+https://s-haensch.github.io/visual-cheatsheet/
+
+可视化clojure核心函数
+http://www.hi-id.com/?tag=%e8%ae%a4%e7%9f%a5%e5%bf%83%e7%90%86%e5%ad%a6
+
+不错的设计网站
+https://wolfgangmehner.github.io/vim-plugins/gitsupport.html
+
+vim - plugins very important
+http://steve-yegge.blogspot.com/
+
+stevey’s Blog Rangts 程序员的呐喊
 * SITES
-** http://dp.pconline.com.cn/dphoto/list_3365009.html
- very beautiful picture about flowers
-** https://github.com/matthiasn/Clojure-Resources
- clojure resources
-** https://www.clojure-toolbox.com/
- clojure-toolbox做的相当不错，挺适合开发者寻找插件
-** https://letoverlambda.com/
- defun defmacro, a special book works for clojure macro transform
-** http://www.hzwindpower.com/
- 中国海装 <2017-11-05 21:10> 已经能够生产海上型风力机171m
-远景现在已经能够140m塔架 131m的风轮直径 2.2MW，市面上普遍的都是E120m
-左右的风轮直径。
-** https://www.icax.org/forum-324-1.html
- SpaceClaim(Pidex简称)
-** https://s-haensch.github.io/visual-cheatsheet/
- 可视化clojure核心函数
-** http://www.hi-id.com/?tag=%e8%ae%a4%e7%9f%a5%e5%bf%83%e7%90%86%e5%ad%a6
- 不错的设计网站
-** https://wolfgangmehner.github.io/vim-plugins/gitsupport.html
- vim - plugins  very important
-** http://steve-yegge.blogspot.com/
- stevey's Blog Rangts 程序员的呐喊
+** 科研动力
+ http://www.howsci.com/sci-hub-alternative.html
