@@ -427,19 +427,29 @@ Captured %<%Y-%m-%d %H:%M>
                       ("EnglishPaper" . ?l) 
                       ("java" . ?j)
                       ("perl" . ?p)
+                      ("Linux" . ?L)
                       ("matlab" . ?m)
                       ("Mysql" . ?Q)
+                      ("Fortran" . ?f)
+                      ("Vim" . ?v)
                       ("Oracle" . ?O)
                       ("sqlite" . ?S)
                       ("clojure" . ?c)
                       ("scheme" . ?s)
                       ("python" . ?y)
                       ("ruby" . ?r)
-                      ("emacslisp" . ?e) 
+                      ("emacslisp" . ?e)
+                      ("git" . ?G)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+
                       ("crypt" . ?C)
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
+
+
                       ("芝麻" . ?z)
                       ("橘子" . ?J)
                       ("西瓜" . ?x)
@@ -569,6 +579,7 @@ Captured %<%Y-%m-%d %H:%M>
 (my/defshortcut ?p "~/.emacs.d/GTD/phd1.org")
 (my/defshortcut ?D "~/.emacs.d/GTD/Dissertation.org")
 (my/defshortcut ?n "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+(my/defshortcut ?o "~/.emacs.d/.orgConf.el")
 
 
 

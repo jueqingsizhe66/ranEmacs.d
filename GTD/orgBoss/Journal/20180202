@@ -1,0 +1,161 @@
+星期五, 2018/2/2
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 20:25 粥和稀饭的区别                                              :@Home:
+
+稀饭比粥水多，请人吃稀饭，自己吃就煮粥。 
+
+1、稠稀不同。
+粥比稀饭稠一点。稀饭在吃的时候还能见着米粒哟，粥就不能。 
+2、需要煮的时间不同。
+在做法上粥的时间比稀饭煲的长一些。
+3、煮粥时水比煮稀饭少一些。
+稀饭：米和水的比例是1:5。
+
+粥：米和水的比例是1:3。
+
+** 20:32 xshell sz 和rz的区别                                        :Linux:
+
+sz filename|direname  需要添加文件名，该文件在你的服务器上，然后会提示选择客户机上的路径，完成从服务器下载数据需要
+
+rz 不需要添加文件名，直接在客户机选取一文件，默认上传到Home目录下
+[[file:20180201::*21:37%20xshell%20use%20lrzsz%20to%20transfer%20files%20to%20ubunwtu/redhat][21:37 xshell use lrzsz to transfer files to ubunwtu/redhat]]
+
+** 20:56 git common command                                            :git:
+
+
+#+BEGIN_SRC sh
+  ubuntu for me
+
+  git init
+  git --global user.name "Ye Zhaoliang"
+  git --global user.email "977962587@qq.com"
+  cat .git/config
+  cat .git/HEAD
+  cat .git/refs/heads/master
+  cat .git/refs/tags/v1.0
+  .gitconfig  -----在$HOME目录下
+  git config user.name 'Ye Zhaoliangpiaoliang'
+  $ git config user.email '977962857@qq.com'
+  ls -l .git
+  ls -l .git/objects/
+   find  .git/objects/ -type f
+  ls -l .git/refs/tags/
+  git checkout -f HEAD
+  git hash-object main.c
+  git show 0b4e
+  git show 80ac
+  git cat-file -t ec87
+  git cat-file -t 80ac
+   git ls-tree 80ac
+  git show -s --pretty=raw ec87
+  git tag v1.0
+  git tag -a version1.0 -m "this is the first stable version"
+  find .git/objects/ -type f |wc -l
+  cat .git/refs/tags/version1.0
+   git archive --format=tar --prefix=ruby/ v1.0 |gzip > d:/temp/ruby1.0.tar.gz
+
+  git checkout v1.0
+  git branch testing
+  git branch
+  git checkout testing
+   git checkout -b testing1
+  git branch -D testing1
+  原来是可以在那个~/.bashrc  添加 alias ls="ls --show-control-chars --color=auto"
+
+
+  我现在知道我是用help.github.com/linux-set-up-git/
+  这边的设置方法进行git设置
+  sudo apt-get install git-core git-gui git-doc
+  git gui
+
+  不同的操作系统具有不同的ssh key所以你需要进行设置 在每一个操作系统上 即使你已经在windows创建了一个git ssh用你的一个邮箱 
+  在ubuntu 中一般是存在 cd ~/.ssh的
+  （
+  $ ls
+  1步
+  cd ~/.ssh
+  $ mkdir key_backup
+  $ cp id_rsa* key_backup
+  $ rm id_rsa*） 如果没有跳过这一步
+  2步
+  ssh-keygen -t rsa -C "your_email@youremail.com"
+  3步
+
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ ssh-keygen -t rsa -C "zhaoturkkey@163.com"
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/home/lisp/.ssh/id_rsa): 
+  Enter passphrase (empty for no passphrase): 
+  Enter same passphrase again: 
+  Your identification has been saved in /home/lisp/.ssh/id_rsa.
+  Your public key has been saved in /home/lisp/.ssh/id_rsa.pub.
+  The key fingerprint is:
+  29:20:36:ec:6b:55:36:11:bb:df:56:46:24:13:46:23 zhaoturkkey@163.com
+  The key's randomart image is:
+  +--[ RSA 2048]----+
+  |      o.E.B..    |
+  | .     o o =     |
+  |  = . =     .    |
+  | o o + o . .     |
+  |  . . o S   o    |
+  |   o   o . o     |
+  |  o     . o      |
+  | .       .       |
+  |                 |
+  +-----------------+
+
+  4步
+
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ ls
+  id_rsa  id_rsa.pub  key_backup  known_hosts
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ gedit id_rsa.pub 
+
+  把里面的内容挖到add key 肿  这样就设置完了远程的git
+
+  zhaoturkkey@163.com (be:ca:b2:93:69:80:bc:95:d7:cf:63:1c:cd:82:58:68) 
+  上面是我的windows
+  zhaoturkkey@163.com (29:20:36:ec:6b:55:36:11:bb:df:56:46:24:13:46:23) 
+  上面这个是我的ubuntu  虽然都是统一邮箱 但是操作系统不同
+
+  但是我发先这样是不行的  必须是不同的邮箱  相同的邮箱不好设置 总是出现故障
+  Are you sure you want to continue connecting (yes/no)? yes
+  Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+  Permission denied (publickey).
+
+  ---------------------------------------------
+  原来还会有这种错误
+  Issues when using sudo
+
+  You shouldn’t run sudo git unless you have a very good reason. If you don’t know if you have a good reason to use sudo, it’s likely that you do not have one.
+
+  If you are using sudo with git commands (e.g. using sudo git clone because you are deploying to a root-owned folder), ensure that you also generated the key using sudo. Otherwise, you will have generated a key for your current user, but when you are doing sudo git, you are actually the root user – thus, the keys will not match.
+
+  Simply put, if you are using sudo git, then also use sudo ssh-keygen.
+
+  从上面的总结我们知道  ubuntu肯定要求你用sudo来执行ssh -T但是你根本不是用sudo用户创建了ssh-keygen -t rsa -C "" 你是用lisp
+  所以肯定最后结果是冲突：
+  -----------------------------------解决方法
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ ssh-add ~/.ssh/id_rsa
+  Enter passphrase for /home/lisp/.ssh/id_rsa: 
+  Identity added: /home/lisp/.ssh/id_rsa (/home/lisp/.ssh/id_rsa)
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ ssh -T git@github.com
+  Hi jueqingsizhe66! You've successfully authenticated, but GitHub does not provide shell access.
+
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ git config --global user.name "Ye Zhaoliang"
+  lisp@lisp-Compaq-Presario-CQ40-Notebook-PC:~/.ssh$ git config --global user.email "jueqingsizhe66@gmail.com"
+
+  ---------------------------------------------
+  上部的结果是在你的～主目录下新建了一个 .gitconfig的一个全局git配置信息
+  原本如果没有这句话你是不会看到.gitconfig   即使你用 ls -la也是没用
+
+
+  cd (git linux)
+  cd "git linux"--------------------》最好是这样 不会出现问题
+
+#+END_SRC
+

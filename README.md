@@ -1,3 +1,6 @@
+# 主要目的：clojure learning
+次要目的: emacs learning(org-mode)
+
 Okay , it comes from flyingmchine,
 I have test in the two systems windows10
 and ubuntu, all valid for newer.
@@ -53,6 +56,11 @@ solution:
 ```
 just remove the custom-set-variables info about the font please,  sorry for bothering you!!
 ```
+
+9. 常用文件夹
+在setup_emms.el配置了默认音乐文件夹位`H:\Classical` ,每个系统不同需要改一下
+
+在scheme-editing.el 配置了chezscheme路径，也需要修改一下。
 
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
@@ -353,7 +361,7 @@ C-x 5 2 打开当前window相同的frame
 `C-x 0` delete the actie window right.
 
 
-### 15. 括号相关的跳转
+### 15. 括号相关的跳转(paredit-mode)
 
 `C-M-d`  Move down into a  list
 
@@ -368,7 +376,7 @@ C-x 5 2 打开当前window相同的frame
 `C-M-e`  Move to end       of defun
 
 
-### 16. multiple-cursors(editiing.el)
+### 16. multiple-cursors(editiing.el)(再次学习)
 
 Seen from [emacs-rocks-13][37]
 
@@ -379,12 +387,11 @@ Seen from [emacs-rocks-13][37]
 3. mc/mark-previous-like-this(C-<)
 4. mc/mark-all-like-this (C-c C-<)
 
-按照官网简单配置
 
 在没有[multiple-cursors][21]的前提下，你也可以使用`C-x r t` 来标记当前
 光标前的所有行，当作一个矩形区域，然后可以多行编辑
 
-当然你也可以使用`C-x Space Esc Down Down `等操作来标记多行
+当然你也可以使用`C-x Space Esc Down Down `(down必须向上或者向下箭头)等操作来标记多行
 
 而有了multiple-cursors, 你现在可以配合`M-h` 选择一个段落，然后`C-S-c C-S-c`
 

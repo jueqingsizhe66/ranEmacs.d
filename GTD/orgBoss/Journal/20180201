@@ -172,3 +172,135 @@ config in your git-bash.exe
   粘帖到你的github账户即可 
 #+END_SRC
 
+
+** 17:57 VMware screen go black                                      :Linux:
+
+
+#+BEGIN_SRC sh
+
+  1、以管理员身份运行cmd.exe 命令提示符 ；
+
+  2、依次执行下面5个命令：
+
+  netsh winsock reset
+
+  net stop VMAuthdService
+
+  net start VMAuthdService
+
+  net stop VMwareHostd
+
+  net start VMwareHostd
+
+  操作完成后直接运行VMware Workstation 14一般即可解决黑屏的问题！
+#+END_SRC
+
+
+** 20:58 Ubuntu17.04开通22端口                                  :Linux:芝麻:
+
+
+#+BEGIN_SRC sh
+  apt-get install openssh-server openssh-client
+
+  netstat -ntl ### check 22 is open?
+#+END_SRC
+
+
+
+** 21:07 Xshell connect to Vmware                                    :Linux:
+
+
+#+BEGIN_SRC sh
+  VMware下Ubuntu虚拟机NAT模式连接Xshell
+
+  1.Edit->Virtual NetWork Editor 
+  2.选择NAT->NAT Settings 配置端口映射关系 很重要！  
+
+  Host port： 真实主机 一般是Windows端口号， 端口号只要是在1024~65535 之间都行。 这里分配一个2225
+
+  Type：协议类型 选择 TCP
+
+  Virtual machine IP Address：虚拟机的ip地址，这里当然是Ubuntu的ip 192.168.80.128(ifconfig : inet)
+
+  Virtual machine port：虚拟机的端口号， 一般ssh服务默认端口 22， 这里不改
+
+  3. apt-get install openssh-server openssh-client  open the port 22.
+
+  4. open xshell or putty
+   input the 127.0.0.1:2225(local vmnet8    real port 2225)
+  
+   身份输入 用户名+密码 okay
+#+END_SRC
+
+
+** 21:29 vim windows configuration update                            :Linux:
+
+
+
+#+BEGIN_SRC sh
+  C:\Users\yzl\.vim\vimrc>git push origin develop
+  Counting objects: 8, done.
+  Delta compression using up to 4 threads.
+  Compressing objects: 100% (7/7), done.
+  Writing objects: 100% (8/8), 9.39 KiB | 2.35 MiB/s, done.
+  Total 8 (delta 5), reused 0 (delta 0)
+  remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+  To https://github.com/jueqingsizhe66/windowVimYe.git
+     cdec209..12eb7d3  develop -> develop
+
+
+
+
+  C:\Users\yzl\.vim\vimrc>git log --all
+  commit 12eb7d3055a1a96ebd761bd7481ade1eda3ded6f (HEAD -> develop, origin/develop)
+  Author: Ye Zhaoliang <zhaoturkkey@163.com>
+  Date:   Thu Feb 1 21:28:14 2018 +0800
+
+      2018-2-1 new colorscheme
+
+  commit cdec20914a05f6010fe932b95cfb19abf37bfa58
+  Author: Ye Zhaoliang <zhaoturkkey@163.com>
+  Date:   Mon Aug 21 18:37:37 2017 +0800
+
+      add ctags.exe es.exe
+#+END_SRC
+
+
+** 21:37 xshell use lrzsz to transfer files to ubunwtu/redhat
+
+
+#+BEGIN_SRC sh
+  apt-get install lrzsz
+
+  then you can use  rz in the xshell or putty to new a window to transfer files
+
+
+  or you can use xftp(use your school email to register valid codes)
+#+END_SRC
+
+
+** 23:50 vim edit todo.txt                                           :Linux:
+
+
+#+BEGIN_SRC sh
+  Sorting tasks:
+  <localleader>s Sort the file
+  <localleader>s+ Sort the file on +Projects
+  <localleader>s@ Sort the file on @Contexts
+  <localleader>sd Sort the file on dates
+  <localleader>sdd Sort the file on due dates
+  Edit priority:
+  <localleader>j Decrease the priority of the current line
+  <localleader>k Increase the priority of the current line
+  <localleader>a Add the priority (A) to the current line
+  <localleader>b Add the priority (B) to the current line
+  <localleader>c Add the priority (C) to the current line
+  Date:
+  <localleader>d Set current task's creation date to the current date
+  date<tab> (Insert mode) Insert the current date
+  Mark as done:
+  <localleader>x Mark current task as done
+  <localleader>X Mark all tasks as done
+  <localleader>D Move completed tasks to done.txt
+#+END_SRC
+
