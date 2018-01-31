@@ -30,7 +30,7 @@ windows放在`C:\Users\用户名\AppData\Roaming`，linux系统放在~目录下�
    * 搜索leiningen或者boot-cli，当前搜索[leiningen][164],并安装对应的lein.bat
    到`C:\Windows\System32`,然后执行`lein self-install`即可,进一步可以参考我写的[emacs和clojure安装教程For ubuntu和windows][39]
 6. 然后再配合[totalCommander][166],可以使用emacs快速打开window文件(server+client模式),在选项中--Edit/view(Editor for F4)设置打开的模式为emacsclientw即可(注意解压totalcommand破解文件到安装目录覆盖即可)。同时
-带上[everything][167]比较好，这样就构成一个比较好的系统了。
+带上[everything][167]比较好，这样就构成一个比较好的系统了。[标题84][177]
 7. 在使用`C-x C-f`需要设置一下你的项目目录，在custom.el对应修改一下，默认是我电脑上的`E:/clojure-home`是不对的。
 
 截止到2017.11.19所用到的配件都在[emacs百度云][165],方便大家使用。另有一本the joy
@@ -2591,6 +2591,33 @@ def a(n):
 print filter(a,range(101,200))
 ```
 
+### 84 everything and totalCMD
+
+everything:
+
+```
+1. 工具---选项---上下文菜单
+2. 打开(文件夹):
+  $exec("d:\totalcmd\TOTALCMD.EXE" /O /P=L /L="%1")
+
+3. 打开路径
+  $exec("d:\totalcmd\TOTALCMD.EXE" /O /P=L /L="%1")
+/O  如果存在进程则激活不存在则创建进程
+/P=L 激活TC的左侧列表
+/L= 设置左侧的路径
+```
+
+TotalCmd:
+
+注意配合快速搜索 Ctrl+Alt+字母
+
+```
+1. 配置---选项--其他
+2. Shift+F 快捷键--- em_usercmd1
+命令: D:\Program Files (x86)\Everything\Everything.exe
+参数：-search "%P" 
+```
+
 
 <hr/>
 <hr/>
@@ -2772,3 +2799,4 @@ print filter(a,range(101,200))
 [174]:https://wolfgangmehner.github.io/vim-plugins
 [175]:https://www.cnblogs.com/yangwen0228/p/6418969.html
 [176]:http://www.runoob.com/python/python-exercise-example12.html
+[177]:https://github.com/jueqingsizhe66/ranEmacs.d#84-everything-and-totalCMD
