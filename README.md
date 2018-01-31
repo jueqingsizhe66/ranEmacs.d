@@ -2773,6 +2773,26 @@ Add [defshortcut code][179] inside the .orgConf.el
 ```
 
 然后你就可以敲入`C-x r j` ，输入对应字母，跳转到对应的文件下。
+
+
+### 88. magit cannot commit
+
+when Commit the newest repos, error occurs, while actually I have git config --global.
+
+```
+
+fatal unable to auto-detect email address (got "some wrong email")
+```
+
+Solution:
+
+because emacs see `C:\Users\yzl\AppData\Roaming` as the home directory
+so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to auto-detect email address][183].
+
+
+
+
+
 <hr/>
 <hr/>
 
@@ -2959,3 +2979,4 @@ Add [defshortcut code][179] inside the .orgConf.el
 [180]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L804
 [181]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L858
 [182]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/9d5718b40992c163f82c2c822cd309f5cbf32c40/.orgConf.el#L415
+[183]:https://stackoverflow.com/questions/25671785/git-fatal-unable-to-auto-detect-email-address
