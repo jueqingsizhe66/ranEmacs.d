@@ -2619,6 +2619,67 @@ TotalCmd:
 ```
 
 
+### 85. 记录和查询记录
+
+1. 每次记录的时候添加tag, 归好类，事先想好下一次你会怎么找该条记录
+```
+setq org-tag-alist '((:startgroup . nil)
+                      ("@Company" . ?o)
+                      ("@Home" . ?H)
+                      ("@NCEPU" . ?n)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("WAITING" . ?w)
+                      ("HOLD" . ?h)
+                      
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("EnglishPaper" . ?l) 
+                      ("java" . ?j)
+                      ("perl" . ?p)
+                      ("matlab" . ?m)
+                      ("Mysql" . ?Q)
+                      ("Oracle" . ?O)
+                      ("sqlite" . ?S)
+                      ("clojure" . ?c)
+                      ("scheme" . ?s)
+                      ("python" . ?y)
+                      ("ruby" . ?r)
+                      ("emacslisp" . ?e) 
+                      ("crypt" . ?C)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+                      ("芝麻" . ?z)
+                      ("橘子" . ?J)
+                      ("西瓜" . ?x)
+                      ("大象" . ?X)
+                      ("大山" . ?M)
+                      ("地球" . ?E)
+                      ("太阳" . ?T)
+                      ("银行系" . ?Y)
+                      ("宇宙" . ?Z) 
+                      (:endgroup . nil)
+
+                      (:newline)
+                      (:startgroup . nil)
+                      ("multiAxis" . ?t)
+                      ("graduation" . ?g)
+                      (:endgroup . nil)
+
+                      (:newline)
+                      (:startgroup . nil)
+                      ("紧急重要" . ?a)
+                      ("紧急不重要" . ?b)
+                      ("不紧急重要" . ?c)
+                      ("不紧急不重要" . ?d)
+                      (:endgroup . nil)
+                      )
+```
+2. 查询的时候执行`C-c a m` 查找对那个的tag即可查到你需要的，很方便的一种管理系统。比如:`芝麻`。
+
 <hr/>
 <hr/>
 
