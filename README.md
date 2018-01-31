@@ -2644,7 +2644,7 @@ a    list all the holiday
 
 `(add-to-list 'auto-mode-alist '(".*/[0-9]*$" . org-mode))` 表示对数字文件添加org-mode形式。
 
-上述功能其实是[org-journal][178]提供的功能，而在当前的文档中，需要简单[配置][181] .orgConf.el.
+上述功能其实是[org-journal][178]提供的功能，而在当前的文档中，需要简单[journal-file-today][181] .orgConf.el.
 
 [tag-alist:][182]
 ```
@@ -2724,13 +2724,13 @@ setq org-tag-alist '((:startgroup . nil)
                             ))
 ```
 
-[source block][180]
+[org-edit-src-code][180]
 下次想要在你的org添加note的时候，只要`C-c s i`即可,会打开一个输入窗口`C-c '` 结束输入。 
 
 
 ### 87. shourcut the common files 
 
-Add code inside the [.orgConf.el][179]
+Add [defshortcut code][179] inside the .orgConf.el
 ```
 (my/defshortcut ?i "~/.emacs.d/GTD/newgtd.org")
 (my/defshortcut ?f "~/.emacs.d/GTD/orgBoss/Film/film.org")
