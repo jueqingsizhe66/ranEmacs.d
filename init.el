@@ -291,7 +291,7 @@
 ;  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ; 'noerror)
 ;
-(setq default-directory "e:/clojure-home")
+(setq default-directory "G:/clojure-home")
 ; (require 'org-install)
 ;
 ; ;; The following lines are always needed. Choose your own keys.
