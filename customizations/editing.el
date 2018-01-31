@@ -126,9 +126,9 @@
 (browse-kill-ring-default-keybindings)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-keyset-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-keyset-keyset-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-keyset-keyset-keyset-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;; (("C-c m t" . mc/mark-all-like-this)            ;;

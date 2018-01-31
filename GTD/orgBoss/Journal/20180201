@@ -1,0 +1,174 @@
+星期四, 2018/2/1
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 00:38 what a techniqe needs                                        :大山:
+
+
+1. java
+
+downdload java , JAVA_HOME=G:\JAVA\jdk1.8.0_161
+Path=%JAVA_HOME%\bin
+
+2. MAven
+
+MAVEN_HOME = G:\JAVA\apache-maven-3.3.9
+PATH=%MAVEN_HOME%\bind
+
+Test it 
+
+
+#+BEGIN_SRC sh
+  mvn -v
+#+END_SRC
+
+3. NEXUS
+
+edit wrapper.conf
+
+G:\JAVA\NEXUS_BUNDLE\nexus-2.14.1-01\bin\jsw\conf\wrapper.conf
+
+
+#+BEGIN_SRC java
+  wrapper.java.command=G:\JAVA\jdk1.8.0_161\bin\java
+
+#+END_SRC
+
+update to your java.exe path.
+
+
+
+#+BEGIN_SRC sh
+  ## into nexus bin
+  cd G:\JAVA\NEXUS_BUNDLE\nexus-2.14.1-01\bin
+
+  nexus install   ###add service into the system
+
+
+  nexus start  ### start nexus service
+#+END_SRC
+
+
+4. maven setting.xml
+
+
+#+BEGIN_SRC java
+  <?xml version="1.0" encoding="UTF-8"?>
+
+  <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>E:/JAVA/apache-maven-3.3.9/MyselfLib</localRepository>
+    <pluginGroups>
+        <!-- pluginGroup
+       | Specifies a further group identifier to use for plugin lookup.
+      <pluginGroup>com.your.plugins</pluginGroup>
+      -->
+    </pluginGroups>
+
+    <servers>
+      <server> 
+          <id>nexus-release</id>
+          <username>admin</username>
+          <password>admin123</password>
+      </server> 
+
+
+      <server> 
+          <id>nexus-snapshot</id>
+          <username>admin</username>
+          <password>admin123</password>
+      </server> 
+
+
+      <server> 
+          <id>nexus</id>
+          <username>admin</username>
+          <password>admin123</password>
+      </server> 
+    </servers>
+
+  <mirrors>
+  <!-- <mirror> -->
+      <!-- <id>nexus</id> -->
+      <!-- <mirrorOf>*</mirrorOf> -->
+      <!-- <url>http://localhost:8089/nexus/content/groups/public/</url> -->
+  <!-- </mirror> -->
+       <mirror> 
+         <id>nexus-releases</id> 
+         <mirrorOf>*</mirrorOf> 
+         <url>http://localhost:8089/nexus/content/groups/public</url> 
+       </mirror>
+       <mirror> 
+         <id>nexus-snapshots</id> 
+         <mirrorOf>*</mirrorOf> 
+         <url>http://localhost:8089/nexus/content/groups/public-snapshots</url> 
+       </mirror> 
+  </mirrors>
+  <profiles>
+  <profile>
+      <id>nexus</id>
+      <repositories>
+          <repository>
+              <id>nexus-releases</id>
+              <url>http://nexus-releases</url>
+              <releases><enabled>true</enabled></releases>
+              <snapshots><enabled>true</enabled></snapshots>
+          </repository>
+          <repository>
+              <id>nexus-snapshots</id>
+              <url>http://nexus-snapshots</url>
+              <releases><enabled>true</enabled></releases>
+              <snapshots><enabled>true</enabled></snapshots>
+          </repository>
+
+      </repositories>
+      <pluginRepositories>
+          <pluginRepository>
+              <id>nexus-releases</id>
+              <url>http://nexus-releases</url>
+              <releases><enabled>true</enabled></releases>
+              <snapshots><enabled>true</enabled></snapshots>
+          </pluginRepository>
+          <pluginRepository>
+              <id>nexus-snapshots</id>
+              <url>http://nexus-snapshots</url>
+              <releases><enabled>true</enabled></releases>
+              <snapshots><enabled>true</enabled></snapshots>
+          </pluginRepository>
+      </pluginRepositories>
+  </profile>
+  </profiles>
+  <activeProfiles>
+      <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+
+
+  </settings>
+
+
+#+END_SRC
+
+
+
+
+** 00:49 git something to talk about                                  :地球:
+
+
+config in your git-bash.exe 
+
+#+BEGIN_SRC sh
+  git config --user.name "Ye Zhaoliang" 
+  git config --user.email "zhaoturkkey@163.com" 
+
+  ssh-keygen -t rsa -C "zhaoturkkey@163.com" 
+    
+  eval "$(ssh-agent -s)" # Agent pid 59566 ssh-add ~/.ssh/id_rsa 
+  sudo apt-get install xclip # Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`) xclip -sel clip < ~/.ssh/id_rsa.pub # Copies the contents of the id_rsa.pub file to your clipboard
+  粘帖到你的github账户即可 
+#+END_SRC
+

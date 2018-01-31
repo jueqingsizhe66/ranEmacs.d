@@ -36,6 +36,24 @@ windows放在`C:\Users\用户名\AppData\Roaming`，linux系统放在~目录下�
 截止到2017.11.19所用到的配件都在[emacs百度云][165],方便大家使用。另有一本the joy
 of the clojure电子书.
 
+8. something wrong? like below
+```
+Debugger entered--Lisp error: (error "Font not available" #<font-spec nil nil Source\ Sans\ Pro nil nil nil nil nil nil nil nil nil ((:name . "Source Sans Pro") (:user-spec . "Source Sans Pro"))>)
+  internal-set-lisp-face-attribute(org-document-title :font "Source Sans Pro" #<frame emacs@DESKTOP-MKS6PSV 00000004008cd970>)
+  set-face-attribute(org-document-title #<frame emacs@DESKTOP-MKS6PSV 00000004008cd970> :inherit default :weight bold :foreground "#b2b2b2" :font "Source Sans Pro" :height 1.5 :underline nil)
+  apply(set-face-attribute org-document-title #<frame emacs@DESKTOP-MKS6PSV 00000004008cd970> (:inherit default :weight bold :foreground "#b2b2b2" :font "Source Sans Pro" :height 1.5 :underline nil))
+  face-spec-set-2(org-document-title #<frame emacs@DESKTOP-MKS6PSV 00000004008cd970> (:inherit default :weight bold :foreground "#b2b2b2" :font "Source Sans Pro" :height 1.5 :underline nil))
+  face-spec-recalc(org-document-title #<frame emacs@DESKTOP-MKS6PSV 00000004008cd970>)
+```
+
+you can debug it  , `runemacs.exe --debug-init`
+
+solution:
+
+```
+just remove the custom-set-variables info about the font please,  sorry for bothering you!!
+```
+
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
 click [clj-refactor][2]

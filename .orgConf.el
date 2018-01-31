@@ -270,7 +270,6 @@ Captured %<%Y-%m-%d %H:%M>
          
          ))
 
-
 ;; Custom agenda command definitions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (setq org-agenda-custom-commands                               ;;
@@ -925,8 +924,7 @@ Captured %<%Y-%m-%d %H:%M>
           (delete-region (point-min) (point-max))
           (yas-expand-snippet contents (point-min) (point-max))))))
 
-(defun (define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
-
+(define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
 
 
 (setq auto-insert t)
@@ -1246,4 +1244,5 @@ e.g. Sunday, September 17, 2000."
   (setq speed (or speed 175))
   (call-process my/espeak-command nil nil nil string "-s" speed))
 
+ 
 

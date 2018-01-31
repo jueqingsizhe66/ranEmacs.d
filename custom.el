@@ -1,6 +1,6 @@
 
-(setenv "HOME" "E:/clojure-home")
-(setenv "PATH" "E:/clojure-home")
+(setenv "HOME" "G:/clojure-home")
+(setenv "PATH" "G:/clojure-home")
 (setq default-directory "~/")
 
 
