@@ -2646,7 +2646,7 @@ a    list all the holiday
 
 上述功能其实是[org-journal][178]提供的功能，而在当前的文档中，需要简单[配置][181] .orgConf.el.
 
-tag-alist:
+[tag-alist:][182]
 ```
 setq org-tag-alist '((:startgroup . nil)
                       ("@Company" . ?o)
@@ -2940,3 +2940,4 @@ Add code inside the [.orgConf.el][179]
 [179]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L540
 [180]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L804
 [181]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L858
+[182]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/9d5718b40992c163f82c2c822cd309f5cbf32c40/.orgConf.el#L415
