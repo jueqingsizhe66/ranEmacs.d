@@ -2621,7 +2621,32 @@ TotalCmd:
 
 ### 85. 记录和查询记录
 
-1. 每次记录的时候添加tag, 归好类，事先想好下一次你会怎么找该条记录
+1. 每次记录的时候添加tag, 归好类，事先想好下一次你会怎么找该条记录.
+
+`C-c C-q` 添加标题的tag，一把我会在calendar下面摁下`ij`添加
+
+```
+global-set-key (kbd "C-c f y") 'journal-file-yesterday
+(global-set-key (kbd "C-c f L") 'journal-last-year)
+(global-set-key (kbd "C-c f j") 'journal-file-today)
+```
+
+在calendar-mode中默认提供了
+ 
+```
+i w  weeek
+i d  day
+i y  year
+i m  monthly 
+a    list all the holiday
+```
+但是这些只是在diary中插入数据，而`i j`则会创建一个entry文件，然后只记录当天的。
+
+`(add-to-list 'auto-mode-alist '(".*/[0-9]*$" . org-mode))` 表示对数字文件添加org-mode形式。
+
+上述功能其实是[org-journal][178]提供的功能，而在当前的文档中，需要简单[配置][181] .orgConf.el.
+
+tag-alist:
 ```
 setq org-tag-alist '((:startgroup . nil)
                       ("@Company" . ?o)
@@ -2680,6 +2705,56 @@ setq org-tag-alist '((:startgroup . nil)
 ```
 2. 查询的时候执行`C-c a m` 查找对那个的tag即可查到你需要的，很方便的一种管理系统。比如:`芝麻`。
 
+
+### 86. funny insert source block
+
+```
+(add-hook 'org-mode-hook '(lambda ()
+                            ;; turn on flyspell-mode by default
+                            (flyspell-mode 1)
+                            ;; C-TAB for expanding
+                            (local-set-key (kbd "C-<tab>")
+                                           'yas/expand-from-trigger-key)
+                            ;; keybinding for editing source code blocks
+                            (local-set-key (kbd "C-c s e")
+                                           'org-edit-src-code)
+                            ;; keybinding for inserting code blocks
+                            (local-set-key (kbd "C-c s i")
+                                           'org-insert-src-block)
+                            ))
+```
+
+[source block][180]
+下次想要在你的org添加note的时候，只要`C-c s i`即可,会打开一个输入窗口`C-c '` 结束输入。 
+
+
+### 87. shourcut the common files 
+
+Add code inside the [.orgConf.el][179]
+```
+(my/defshortcut ?i "~/.emacs.d/GTD/newgtd.org")
+(my/defshortcut ?f "~/.emacs.d/GTD/orgBoss/Film/film.org")
+(my/defshortcut ?v "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org")
+(my/defshortcut ?s "~/.emacs.d/GTD/orgBoss/Someday/someday.org")
+(my/defshortcut ?S "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
+(my/defshortcut ?B "~/.emacs.d/GTD/orgBoss/Book/book.org")
+(my/defshortcut ?c "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")
+ (my/defshortcut ?b "~/.emacs.d/GTD/orgBoss/business/business.org")
+(my/defshortcut ?e "~/.emacs.d/GTD/orgBoss/code/codes.org")
+(my/defshortcut ?W "~/.emacs.d/GTD/orgBoss/Site/blog.org")
+(my/defshortcut ?j "~/.emacs.d/GTD/orgBoss/Journal/journal.org")
+(my/defshortcut ?I "~/.emacs.d/GTD/orgBoss/IDEA/idea.org")
+(my/defshortcut ?d "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org")
+(my/defshortcut ?l "~/.emacs.d/GTD/orgBoss/learning.org")
+(my/defshortcut ?q "~/.emacs.d/GTD/orgBoss/questions.org")
+(my/defshortcut ?w "~/.emacs.d/GTD/writing.org")
+(my/defshortcut ?p "~/.emacs.d/GTD/phd1.org")
+(my/defshortcut ?D "~/.emacs.d/GTD/Dissertation.org")
+(my/defshortcut ?n "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+
+```
+
+然后你就可以敲入`C-x r j` ，输入对应字母，跳转到对应的文件下。
 <hr/>
 <hr/>
 
@@ -2861,3 +2936,7 @@ setq org-tag-alist '((:startgroup . nil)
 [175]:https://www.cnblogs.com/yangwen0228/p/6418969.html
 [176]:http://www.runoob.com/python/python-exercise-example12.html
 [177]:https://github.com/jueqingsizhe66/ranEmacs.d#84-everything-and-totalcmd
+[178]:https://www.emacswiki.org/emacs/OrgJournal
+[179]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L540
+[180]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L804
+[181]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L858

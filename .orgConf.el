@@ -925,7 +925,7 @@ Captured %<%Y-%m-%d %H:%M>
           (delete-region (point-min) (point-max))
           (yas-expand-snippet contents (point-min) (point-max))))))
 
-(define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
+(defun (define-auto-insert "/[0-9]\\{8\\}$" [journal-file-insert])
 
 
 
@@ -1240,7 +1240,7 @@ e.g. Sunday, September 17, 2000."
 (setq browse-url-browser-function 'eww-browse-url)
 
 
-(defvar my/espeak-command "c://eSpeak/command_line/espeak.exe")
+(defvar my/espeak-command "c://eSpeak//command_line//espeak.exe")
 (defun my/say (string &optional speed)
   (interactive "MString: ")
   (setq speed (or speed 175))
