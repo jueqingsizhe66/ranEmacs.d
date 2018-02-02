@@ -22,6 +22,9 @@ C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的majo
 
 ## 当前.emacs.d安装和使用方法
 
+又重装了一次window10系统，按照下述过程安装对应plugins,可直接使用(clojure项目的C-c Alt+J也没问题，正常的切换空间C-c Esc n)
+注意修改[custom.el][184]。
+
 1. 打开git bash，` git clone https://github.com/jueqingsizhe66/ranEmacs.d` 下载当前配置包，
 windows放在`C:\Users\用户名\AppData\Roaming`，linux系统放在~目录下即可。因为init.el存在很多当前
 系统的custom-face-variable信息，所以需要下载后将其删除对应expression的信息
@@ -205,7 +208,7 @@ click [expand-region][12]
 
 click [bookmark+][15]
 
-快捷键
+快捷键(对了数字键盘8直接打开，数字键盘7打开,可查看[ui.el][185])
 ```
 c-x r l : 查询bookmark
 c-x r m : 添加
@@ -2987,3 +2990,5 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 [181]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/b3fe1e49b86a79e6c54b28635e9c3ee7af8a6eb8/.orgConf.el#L858
 [182]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/9d5718b40992c163f82c2c822cd309f5cbf32c40/.orgConf.el#L415
 [183]:https://stackoverflow.com/questions/25671785/git-fatal-unable-to-auto-detect-email-address
+[184]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/custom.el
+[185]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/f9f7c4b308930b41f797931dade1de4bba27a776/customizations/ui.el#L159

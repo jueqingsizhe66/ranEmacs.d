@@ -159,3 +159,17 @@ rz 不需要添加文件名，直接在客户机选取一文件，默认上传�
 
 #+END_SRC
 
+
+** 21:22 emacs基本项目命令 for clojure                             :clojure:
+
+
+#+BEGIN_SRC clojure
+
+      ctrl-x ctrl-f 打开文件
+      M-x cider-jack-in 打开cider调用lein repl
+      ctrl-c ctrl-k 在cider接口编译clojure源文件(ctrl-c ctrl-e可以对新增部分进行编译）
+      Ctrl-c Esc n 切换命名空间
+      M-x packages-list-package ,然后U,最后x, 更新emacs插件包
+
+#+END_SRC
+
