@@ -440,6 +440,7 @@ Captured %<%Y-%m-%d %H:%M>
                       ("ruby" . ?r)
                       ("emacslisp" . ?e)
                       ("git" . ?G)
+                      ("Docker" . ?D)
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
