@@ -299,3 +299,23 @@ grade tables:
 #+END_SRC
 
 
+
+** 11:17 git stash                                                     :git:
+
+
+
+#+BEGIN_SRC sh
+  git stash
+        git stash save newStashName  也可以取个名字
+
+  git stash list
+
+  git stash apply  从栈顶弹出，（堆栈中依然存在）
+
+  git stash pop  从堆栈中弹出stash（堆栈中不存在了）
+
+
+  git stash clear  删除所有
+
+  git stash drop stashname  删除制定的stash
+#+END_SRC

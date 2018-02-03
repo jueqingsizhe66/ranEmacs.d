@@ -46,7 +46,7 @@
 		     ((:url . "https://github.com/Malabarba/aggressive-indent-mode")
 		      (:keywords "indent" "lisp" "maint" "tools"))])
  (ahungry-theme .
-		[(1 8 0)
+		[(1 10 0)
 		 ((emacs
 		   (24)))
 		 "Ahungry color theme for Emacs.  Make sure to (load-theme 'ahungry)." tar
@@ -63,7 +63,7 @@
 	((:url . "http://elpa.gnu.org/packages/ampc.html")
 	 (:keywords "ampc" "mpc" "mpd"))])
  (arbitools .
-	    [(0 91)
+	    [(0 94)
 	     ((cl-lib
 	       (0 5)))
 	     "Package for chess tournaments administration" single
@@ -265,7 +265,7 @@
 		((:url . "http://elpa.gnu.org/packages/dbus-codegen.html")
 		 (:keywords "comm" "dbus" "convenience"))])
  (debbugs .
-	  [(0 14)
+	  [(0 15)
 	   ((soap-client
 	     (3 1 1))
 	    (cl-lib
@@ -375,11 +375,13 @@
 	     ((:url . "http://elpa.gnu.org/packages/ediprolog.html")
 	      (:keywords "languages" "processes"))])
  (el-search .
-	    [(1 4 0 8)
+	    [(1 5 3)
 	     ((emacs
 	       (25))
 	      (stream
-	       (2 2 4)))
+	       (2 2 4))
+	      (cl-print
+	       (1 0)))
 	     "Expression based interactive search for Emacs Lisp" tar
 	     ((:keywords "lisp")
 	      (:url . "http://elpa.gnu.org/packages/el-search.html"))])
@@ -467,7 +469,7 @@
 	  ((:url . "https://github.com/leoliu/ggtags")
 	   (:keywords "tools" "convenience"))])
  (gited .
-	[(0 3 3)
+	[(0 3 4)
 	 ((emacs
 	   (24 4))
 	  (cl-lib
@@ -688,7 +690,7 @@
 	    ((:url . "http://elpa.gnu.org/packages/midi-kbd.html")
 	     (:keywords "convenience" "hardware" "multimedia"))])
  (mines .
-	[(1 2)
+	[(1 6)
 	 ((emacs
 	   (24 4))
 	  (cl-lib
@@ -784,11 +786,8 @@
 	     "guide your eyes while scrolling" single
 	     ((:url . "https://github.com/michael-heerdegen/on-screen.el")
 	      (:keywords "convenience"))])
- (org .
-      [(20171218)
-       nil "Outline-based notes management and organizer" tar nil])
  (org-edna .
-	   [(1 0 -2 3)
+	   [(1 0 -2 4)
 	    ((emacs
 	      (25 1))
 	     (seq
@@ -816,7 +815,7 @@
 	   ((:url . "http://elpa.gnu.org/packages/pabbrev.html")
 	    (:keywords))])
  (paced .
-	[(1 0)
+	[(1 0 1)
 	 ((emacs
 	   (25 1))
 	  (async
@@ -872,6 +871,11 @@
 		nil "Colorize color names in buffers" single
 		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
 		 (:keywords "faces"))])
+ (rbit .
+       [(0 1)
+	nil "Red-black persistent interval trees" single
+	((:url . "http://elpa.gnu.org/packages/rbit.html")
+	 (:keywords "data structures" "binary tree" "intervals"))])
  (rcirc-color .
 	      [(0 3)
 	       nil "color nicks" single
@@ -1120,7 +1124,7 @@
 	    ((:url . "https://elpa.gnu.org/packages/vigenere.html")
 	     (:keywords "data" "vigenere" "cipher"))])
  (vlf .
-      [(1 7)
+      [(1 7 1)
        nil "View Large Files" tar
        ((:keywords "large files" "utilities")
 	(:url . "https://github.com/m00natic/vlfi"))])
@@ -1156,7 +1160,7 @@
 	     ((:keywords "communication" "websocket" "server")
 	      (:url . "http://elpa.gnu.org/packages/websocket.html"))])
  (which-key .
-	    [(3 0 2)
+	    [(3 1 0)
 	     ((emacs
 	       (24 4)))
 	     "Display available keybindings in popup" tar
