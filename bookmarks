@@ -48,10 +48,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B] 提交文")
- (rear-context-string . "”\n    #+END_SRC\n")
- (position . 37040))
+ (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
+ (front-context-string . "** https://mooc.")
+ (rear-context-string . "识整理\n    人民卫生出版社\n")
+ (position . 9056))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

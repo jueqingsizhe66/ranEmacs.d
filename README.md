@@ -240,7 +240,7 @@ c-c shift-> 添加calendar鼠标下的日期
 
 
 M-RET 插入同级列表项
-M-S-RET 插入有 checkbox的同级列表项
+M-S-RET 插入有 checkbox的同级列表项(<2018-02-05 14:26> 再次用于工作中)
 C-c C-c 改变 checkbox状态
 M-left/right 改变列表项层级关系
 M-up/dowm 上下移动列表项
@@ -310,7 +310,7 @@ emacs经常地使用方式是
 
 类似于vim的help系统，emacs的info系统也做得很强大，
 
-使用 `C-h i` 可以得到一个info window, 一个不错的帮助平台
+使用 `C-h i` 可以得到一个info window, 一个不错的帮助平台（结合标题19进行学习）
 
 1. 使用space键执行翻屏(scroll one screen at a time)
 2. [ and ] Previous /Next node
@@ -511,7 +511,7 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 在查看org-agenda 的时候可以使用`v`来选择你要看的日、月、年视图等
 
-有趣的org帮助 `LINK:info:org:Top`.
+有趣的org帮助 `LINK:info:org:Top`.(鼠标左键点击或者C-c C-o)
 
 为了显示clean的org文档，在.org.conf添加了
 `(setq org-startup-indented t)`
@@ -2728,7 +2728,7 @@ a    list all the holiday
                       ("大山" . ?M)
                       ("地球" . ?E)
                       ("太阳" . ?T)
-                      ("银行系" . ?Y)
+                      ("银河系" . ?Y)
                       ("宇宙" . ?Z) 
                       (:endgroup . nil)
 
@@ -2819,9 +2819,44 @@ because emacs see `C:\Users\yzl\AppData\Roaming` as the home directory
 so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to auto-detect email address][183].
 
 
+### 89. 自定义agenda-view
 
 
+[storing search][186],针对所有org-agenda-files.
+```
+(setq org-agenda-custom-commands
+      '(("x" agenda)
+        ("y" agenda*)
+        ("w" todo "WAITING")
+        ("W" todo-tree "WAITING")
+        ("u" tags "+boss-urgent")
+        ("v" tags-todo "+boss-urgent")
+        ("U" tags-tree "+boss-urgent")
+        ("f" occur-tree "\\<FIXME\\>")
+        ("h" . "HOME+Name tags searches") ; description for "h" prefix
+        ("hl" tags "+home+Lisa")
+        ("hp" tags "+home+Peter")
+        ("hk" tags "+home+Kim")))
+```
 
+
+### 90. 自定义了全局标记和跳转
+
+`C-c %`摁下之后，状态栏会提醒使用`C-c *`进行跳转回去。
+
+```
+(global-set-key (kbd "C-c *") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c %") 'org-mark-ring-push)
+```
+
+这样我想起vim的[三个黄金操作之learn vim progressively][187]
+```
+
+        % : Go to the corresponding (, {, [.
+        * (resp. #) : go to next (resp. previous) occurrence of the word under the cursor
+```
+
+[升级版操作:vim as IDE][188]
 <hr/>
 <hr/>
 
@@ -3011,3 +3046,6 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 [183]:https://stackoverflow.com/questions/25671785/git-fatal-unable-to-auto-detect-email-address
 [184]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/custom.el
 [185]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/f9f7c4b308930b41f797931dade1de4bba27a776/customizations/ui.el#L159
+[186]:https://orgmode.org/manual/Storing-searches.html#Storing-searches
+[187]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+[188]:http://yannesposito.com/Scratch/en/blog/Vim-as-IDE/

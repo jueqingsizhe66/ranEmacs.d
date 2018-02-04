@@ -295,18 +295,56 @@ Captured %<%Y-%m-%d %H:%M>
           (todo "WAITING"))
          ((org-agenda-compact-blocks t))) ;; options set here apply to the entire block
         ;; ...other commands here
+        ("g" . "Go to somewhere tags search")
         ("go" "Office" 
-         (tags-todo "@F708")
-         (tags-todo "@work"))
-        ("gc" "Computer" tags-todo "computer")
-        ("gp" "Phone" tags-todo "phone")
-        ("gh" "Home" tags-todo "home")
-        ("gm" "Projects" tags-todo "+multiAxis")
+         (tags "@Company")
+         (tags "@NCEPU"))
+        ("gh" "Home" tags "@Home")
+        ("gm" "School" tags "@NCEPU")
 
         ("p" . "Priorities")
         ("pa" "A items" tags-todo "+PRIORITY=\"A\"")
         ("pb" "B items" tags-todo "+PRIORITY=\"B\"")
         ("pc" "C items" tags-todo "+PRIORITY=\"C\"")
+
+        ("z" . "概念宽度")
+        ("zz"  "芝麻" tags "+芝麻")
+        ("zj"  "橘子" tags "+橘子")
+        ("zg"  "西瓜" tags "+西瓜")
+        ("zd"  "大象" tags "+大象")
+        ("zq"  "地球" tags "+地球")
+        ("zt"  "太阳" tags "+太阳")
+        ("zh"  "银河系" tags "+银河系")
+        ("zy"  "宇宙" tags "+宇宙")
+
+        ("j" "加密" tags "+crypt")
+        ("s" . "重要程度" )
+        ("sa"  "紧急重要" tags "+紧急重要")
+        ("sb" "紧急不重要" tags "+紧急不重要")
+        ("sc" "不紧急重要" tags "+不紧急重要")
+        ("sd" "不紧急不重要" tags "+不紧急不重要") 
+
+        ("d" . "数据库")
+        ("do" "Oracle" tags "+Oracle")
+        ("ds" "sqlite" tags "+sqlite")
+        ("dm" "Mysql" tags "+Mysql")
+        
+        ("l" . "语言")
+        ("ll" "EnglishPaper" tags "+EnglishPaper" ) 
+        ("lj" "java" tags "+java")
+        ("lp" "perl" tags "+perl")
+        ("ln" "Linux" tags "+Linux")
+        ("lm" "matlab" tags "+matlab")
+        ("lf" "Fortran" tags "+Fortran")
+        ("lv" "Vim" tags "+Vim" )
+        ("lo" "clojure" tags "+clojure")
+        ("ls" "scheme" tags "+scheme")
+        ("lp" "python" tags "+python")
+        ("lr" "ruby" tags "+ruby")
+        ("le" "emacslisp" tags "+emacslisp")
+        ("lg" "git" tags "+git")
+        ("ld" "Docker" tags "+Docker")
+        ("lc" "CFD" tags "+CFD")
         ))
 ; (setq org-capture-templates
 ;     '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
@@ -462,7 +500,7 @@ Captured %<%Y-%m-%d %H:%M>
                       ("大山" . ?M)
                       ("地球" . ?E)
                       ("太阳" . ?T)
-                      ("银行系" . ?Y)
+                      ("银河系" . ?Y)
                       ("宇宙" . ?Z) 
                       (:endgroup . nil)
 
@@ -1262,3 +1300,5 @@ e.g. Sunday, September 17, 2000."
 
  
 
+(global-set-key (kbd "C-c *") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c %") 'org-mark-ring-push)
