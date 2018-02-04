@@ -1265,7 +1265,7 @@ when you need to memorize the source code in the .org file, one way you can use
 2. [org-babel介绍][89]
 3. [org-babel支持的语言][91]
 4. [安装graphviz][92]
-     先安装，并添加到path中，然后执行代码块， 所有的配置可以参考.orgConf.el。
+     先安装，并添加到path中，然后执行代码块， 所有的配置可以参考.orgConf.el(又重新学习了一遍)。
      
  ```
  
@@ -2676,7 +2676,8 @@ a    list all the holiday
 
 [tag-alist:][182]
 ```
-setq org-tag-alist '((:startgroup . nil)
+
+(setq org-tag-alist '((:startgroup . nil)
                       ("@Company" . ?o)
                       ("@Home" . ?H)
                       ("@NCEPU" . ?n)
@@ -2689,22 +2690,37 @@ setq org-tag-alist '((:startgroup . nil)
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
+                      ("Oracle" . ?O)
+                      ("sqlite" . ?S)
+                      ("Mysql" . ?Q)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
                       ("EnglishPaper" . ?l) 
                       ("java" . ?j)
                       ("perl" . ?p)
+                      ("Linux" . ?L)
                       ("matlab" . ?m)
-                      ("Mysql" . ?Q)
-                      ("Oracle" . ?O)
-                      ("sqlite" . ?S)
-                      ("clojure" . ?c)
+                      ("Fortran" . ?f)
+                      ("Vim" . ?v)
+                      ("clojure" . ?J)
                       ("scheme" . ?s)
                       ("python" . ?y)
                       ("ruby" . ?r)
-                      ("emacslisp" . ?e) 
+                      ("emacslisp" . ?e)
+                      ("git" . ?G)
+                      ("Docker" . ?D)
+                      ("CFD" . ?F)
+                      (:endgroup . nil)
+                      (:newline)
+                      (:startgroup . nil)
+
                       ("crypt" . ?C)
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)
+
+
                       ("芝麻" . ?z)
                       ("橘子" . ?J)
                       ("西瓜" . ?x)
@@ -2729,7 +2745,10 @@ setq org-tag-alist '((:startgroup . nil)
                       ("不紧急重要" . ?c)
                       ("不紧急不重要" . ?d)
                       (:endgroup . nil)
-                      )
+                      ))
+                      
+                      
+
 ```
 2. 查询的时候执行`C-c a m` 查找对那个的tag即可查到你需要的，很方便的一种管理系统。比如:`芝麻`。
 
