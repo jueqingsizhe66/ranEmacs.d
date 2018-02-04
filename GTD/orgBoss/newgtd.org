@@ -957,3 +957,17 @@ http://www.rupeng.com/Activities/59.shtml
     #+BEGIN_SRC python
       print “he”
     #+END_SRC
+** TODO [#B] 提交文章初稿给王老师 <2018-02-04 周日 11:43> :@NCEPU:EnglishPaper:
+DEADLINE: <2018-02-08 周四> SCHEDULED: <2018-02-04 周日>
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-02-04 周日 11:43]--[2018-02-04 周日 11:44] =>  0:01
+                    :END:
+                    
+                    
+so
+
+
+                    . -

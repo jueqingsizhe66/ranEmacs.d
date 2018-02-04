@@ -49,9 +49,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B] jav")
- (rear-context-string . "    \ntake care!\n")
- (position . 36510))
+ (front-context-string . "** TODO [#B] 提交文")
+ (rear-context-string . "”\n    #+END_SRC\n")
+ (position . 37040))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)
