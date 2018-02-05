@@ -2839,8 +2839,75 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
         ("hk" tags "+home+Kim")))
 ```
 
+最后修订为
 
-### 90. 自定义了全局标记和跳转
+```
+(setq org-agenda-custom-commands
+      '(("O" "Office block agenda"
+         ((agenda "" ((org-agenda-ndays 1))) 
+                      ;; limits the agenda display to a single day
+          (tags-todo "+PRIORITY=\"A\"")
+          (tags-todo "computer|office|phone")
+          (tags "project+CATEGORY=\"elephants\"")
+          ;(tags "review" ((org-agenda-files '("~/org/circuspeanuts.org"))))
+                          ;; limits the tag search to the file circuspeanuts.org
+          (todo "WAITING"))
+         ((org-agenda-compact-blocks t))) ;; options set here apply to the entire block
+        ;; ...other commands here
+        ("g" . "Go to somewhere tags search")
+        ("go" "Office" 
+         (tags "@Company")
+         (tags "@NCEPU"))
+        ("gh" "Home" tags "@Home")
+        ("gm" "School" tags "@NCEPU")
+
+        ("p" . "Priorities")
+        ("pa" "A items" tags-todo "+PRIORITY=\"A\"")
+        ("pb" "B items" tags-todo "+PRIORITY=\"B\"")
+        ("pc" "C items" tags-todo "+PRIORITY=\"C\"")
+
+        ("z" . "概念宽度")
+        ("zz"  "芝麻" tags "+芝麻")
+        ("zj"  "橘子" tags "+橘子")
+        ("zg"  "西瓜" tags "+西瓜")
+        ("zd"  "大象" tags "+大象")
+        ("zq"  "地球" tags "+地球")
+        ("zt"  "太阳" tags "+太阳")
+        ("zh"  "银河系" tags "+银河系")
+        ("zy"  "宇宙" tags "+宇宙")
+
+        ("j" "加密" tags "+crypt")
+        ("s" . "重要程度" )
+        ("sa"  "紧急重要" tags "+紧急重要")
+        ("sb" "紧急不重要" tags "+紧急不重要")
+        ("sc" "不紧急重要" tags "+不紧急重要")
+        ("sd" "不紧急不重要" tags "+不紧急不重要") 
+
+        ("d" . "数据库")
+        ("do" "Oracle" tags "+Oracle")
+        ("ds" "sqlite" tags "+sqlite")
+        ("dm" "Mysql" tags "+Mysql")
+        
+        ("l" . "语言")
+        ("ll" "EnglishPaper" tags "+EnglishPaper" ) 
+        ("lj" "java" tags "+java")
+        ("lp" "perl" tags "+perl")
+        ("ln" "Linux" tags "+Linux")
+        ("lm" "matlab" tags "+matlab")
+        ("lf" "Fortran" tags "+Fortran")
+        ("lv" "Vim" tags "+Vim" )
+        ("lo" "clojure" tags "+clojure")
+        ("ls" "scheme" tags "+scheme")
+        ("lp" "python" tags "+python")
+        ("lr" "ruby" tags "+ruby")
+        ("le" "emacslisp" tags "+emacslisp")
+        ("lg" "git" tags "+git")
+        ("ld" "Docker" tags "+Docker")
+        ("lc" "CFD" tags "+CFD")
+        ))
+```
+
+### 90. 自定义了全局标记和跳转（写文章必备）
 
 `C-c %`摁下之后，状态栏会提醒使用`C-c *`进行跳转回去。
 
@@ -2859,7 +2926,7 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 [升级版操作:vim as IDE][188]
 
 
-### 91. 项目中搜索内容和文件
+### 91. 项目中搜索内容和文件(现在才看到了你的美，妖娆，火辣)
 
 `C-c p f` 项目中搜索文件(嘿嘿，也可以用`C-c k` 调用counsel-ag也是一样的,默认至少输入3个字符)
 
