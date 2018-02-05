@@ -2907,13 +2907,23 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
         ))
 ```
 
-### 90. 自定义了全局标记和跳转（写文章必备）
+### 90. 自定义了全局标记和跳转（写文章必备）C-c w|e
 
 `C-c %`摁下之后，状态栏会提醒使用`C-c *`进行跳转回去。
 
 ```
 (global-set-key (kbd "C-c *") 'org-mark-ring-goto)
 (global-set-key (kbd "C-c %") 'org-mark-ring-push)
+```
+
+但是后来放弃了，因为`C-c *`会使得org文件内的文字变成一个最大标题所以舍去
+改为
+
+```
+
+(global-set-key (kbd "C-c e") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c w") 'org-mark-ring-push)
+
 ```
 
 这样我想起vim的[三个黄金操作之learn vim progressively][187]

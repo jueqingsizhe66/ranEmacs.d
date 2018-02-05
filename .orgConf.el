@@ -1300,5 +1300,6 @@ e.g. Sunday, September 17, 2000."
 
  
 
-(global-set-key (kbd "C-c *") 'org-mark-ring-goto)
-(global-set-key (kbd "C-c %") 'org-mark-ring-push)
+(global-set-key (kbd "C-c e") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c w") 'org-mark-ring-push)
+

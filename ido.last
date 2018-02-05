@@ -22,6 +22,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/yzl/Desktop/paperForTorque/frameOfWall/" (23160 31537 0 0) "Result.org" "Method.org" "Intro.org" "img/" "Conclusion.org" "Abstract.org" ".gitignore" ".git/" "../" "./")
+
  ("e:/clojure-home/" (23127 1757 0 0) "untitled/" "undead/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "parens-of-the-dead/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure-20180110.iws" "clojure-20180110.ipr" "clojure-20180110.iml" "clojure/" "clj-new-github/" "book-source/" "ack" "a.rs" "a.py" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")
 
  ("c:/Users/YeZhao/AppData/Roaming/.emacs.d/" (23150 34614 0 0) "url/" "themes/" "srecode-map.el" "snippets/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "ispell/" "init.el" "ido.last~" "ido.last" "GTD/" "eshell/" "emms/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "abbrev_defs" ".smex-items" ".session" ".recentf~" ".recentf" ".python-environments/" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "#init.el#" "../" "./")
