@@ -67,7 +67,7 @@
 
 ;;Ivy-based interface to standard commands
 
-;;(global-unset-key (kbd "C-s"))
+(global-unset-key (kbd "\C-s"))
 (global-set-key (kbd "\C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)

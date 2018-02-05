@@ -49,9 +49,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** https://mooc.")
- (rear-context-string . "识整理\n    人民卫生出版社\n")
- (position . 9056))
+ (front-context-string . "** https://githu")
+ (rear-context-string . "80005\n 吴恩达 机器学习\n")
+ (position . 9114))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

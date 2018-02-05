@@ -9,3 +9,36 @@
 ** 11:10 org-mode-help                                           :emacslisp:
 
 LINK:info:org:Top 
+
+** 16:55 ag  pk ack                                                  :Linux:
+
+
+#+BEGIN_SRC sh
+  ack test_blah ~/code/  104.66s user 4.82s system 99% cpu 1:50.03 total
+
+  ag test_blah ~/code/  4.67s user 4.58s system 286% cpu 3.227 total
+#+END_SRC
+
+https://github.com/ggreer/the_silver_searcher
+
+** 16:59 vimproc make search files easily                            :Linux:
+
+
+#+BEGIN_SRC sh
+  https://github.com/Shougo/vimproc.vim
+#+END_SRC
+
+
+** 19:38 git config credential省去输入密码                             :git:
+
+但是比较危险
+
+#+BEGIN_SRC sh
+  git config --global credential.helper store
+  会在~目录下新建一个.git-credential文件，包含用户名和密码，明文显示（特别不安全）
+#+END_SRC
+
+
+** 21:19 counsel-ag navigation.el                                :emacslisp:
+
+ag （还有 counsel-ag）会忽略在 gitignore 中设置的文件。

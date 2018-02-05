@@ -2857,6 +2857,25 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 ```
 
 [升级版操作:vim as IDE][188]
+
+
+### 91. 项目中搜索内容和文件
+
+`C-c p f` 项目中搜索文件(嘿嘿，也可以用`C-c k` 调用counsel-ag也是一样的,默认至少输入3个字符)
+
+`C-c p p ` 切换项目
+
+`C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中，并安装了`M-x package-install ag`文件。
+
+得经常看看[Counsel-projectile文档][191]
+
+删除editing.el的`C-s`配置，改用[swiper][27]的配置
+
+`C-s` 使用swiper正向搜索
+
+`C-c C-r` 使用swiper反向搜索
+
+
 <hr/>
 <hr/>
 
@@ -3049,3 +3068,6 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 [186]:https://orgmode.org/manual/Storing-searches.html#Storing-searches
 [187]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [188]:http://yannesposito.com/Scratch/en/blog/Vim-as-IDE/
+[189]:https://github.com/ggreer/the_silver_searcher
+[190]:https://github.com/ericdanan/counsel-projectile#the-counsel-projectile-ag-command
+[191]:https://github.com/ericdanan/counsel-projectile
