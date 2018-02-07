@@ -83,9 +83,9 @@ click [clj-refactor][2]
 
 ```
 
-### 2.为了使用类似nerdtree的neotree(ui.el)
+### 2.为了使用类似nerdtree的neotree(ui.el)【已删除】
 
-click [neotree][3]
+click [neotree][3]，不常用!使用ivy-counsel即可 参考标题91.
 
 click [all-the-icons][4]
 1. 在init.el添加了 

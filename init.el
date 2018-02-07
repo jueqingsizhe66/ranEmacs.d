@@ -146,8 +146,8 @@
     restclient;;;restclinet mode
     browse-kill-ring
 
-     neotree;;file list
-     all-the-icons   ;;;you need to download fonts
+     ;;neotree;;file list
+     ;;all-the-icons   ;;;you need to download fonts
 
      session
      markdown-mode+
