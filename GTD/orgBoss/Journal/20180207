@@ -1,0 +1,1071 @@
+星期三, 2018/2/7
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 03:41 电驴测试数据                                                 :java:
+
+https://pan.baidu.com/share/init?surl=jIlpjlc
+
+q64t
+
+** 04:10 try with resources                                           :java:
+
+只要是实现AutoCloseable接口(也就是你必须去查看该类 ，看看是否implements autocloseable  或者closeable)就放入try中，必须得有1.7以上jdk才可以执行
+
+#+BEGIN_SRC sh
+  有3个接口对于流类相当重要。其中两个接口是Closeable和Flushable，它们是在java.io包中定义的，并且是由JDK5添加的。
+
+  第3个接口是AutoColseable，它是由JDK7添加的新接口，被打包到java.lang包中。
+
+  AutoCloseable接口对JDK7新添加的带资源的try语句提供了支持，这种try语句可以自动执行资源关闭过程。只有实现了AutoCloseable接口的类的对象才可以由带资源的try语句进行管理。AutoCloseable接口只定义了close()方法：
+
+  https://my.oschina.net/fhd/blog/344961
+
+从JDK7开始，Closeable扩展了AutoCloseable。因此，在JDK7中，所有实现了Closeable接口的类也都实现了AutoCloseable接口。
+#+END_SRC
+
+
+
+#+BEGIN_SRC java
+   java  try-with-resources
+        try(
+                Connection conn = DriverManager.getConnection("jdbc:sqlite:G:\\IntellijHome\\rupengImprove\\verycd.sqlite3.db");
+                PreparedStatement ps = conn.prepareStatement("select * from verycd limit 0,30");
+                ResultSet rs = ps.executeQuery();
+                ){
+            while (rs.next()){
+                String title = rs.getString("title");
+                String ed2k = rs.getString("ed2k");
+                String content = rs.getString("content");
+
+                System.out.println(title+ "," + ed2k+ ","+ content);
+                System.out.println("-------------------------------------");
+            }
+        }
+
+#+END_SRC
+
+
+** 04:22 JAVA8_HOME的变量Maven配置                                    :java:
+
+
+1. pom.xml使用
+
+
+#+BEGIN_SRC xml
+
+   <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.1</version>
+                  <configuration>
+                      <verbose>true</verbose>
+                      <fork>true</fork>
+                      <executable>${JAVA8_HOME}/bin/javac</executable>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </build>
+#+END_SRC
+
+2. maven 的setting.xml配置JAVA8.xml
+
+
+#+BEGIN_SRC xml
+  <profiles>
+       <profile>
+           <id>custom-compiler</id>
+           <properties>
+               <JAVA8_HOME>G:\JAVA\jdk1.8.0_161 </JAVA8_HOME>
+           </properties>
+       </profile>
+
+   </profiles>
+
+
+ 
+   <activeProfiles>
+       <activeProfile>custom-compiler</activeProfile>
+   </activeProfiles>
+#+END_SRC
+
+3. 这样在idea中的pom.xml直接使用${JAVA8_HOME}变量就不会报错
+
+** 04:38 Intellij Idea解决source 1.5问题                              :java:
+
+
+#+BEGIN_SRC java
+   <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.1</version>
+                  <configuration>
+                      <verbose>true</verbose>
+                      <fork>true</fork>
+            <!--          <executable>${JAVA8_HOME}/bin/javac</executable>-->
+                      <source>1.8</source>
+                      <target>1.8</target>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </build>
+#+END_SRC
+
+
+** 04:43 Solr安装和打开                                               :java:
+
+
+#+BEGIN_SRC sh
+  G:\IntellijHome\solr-7.2.1\bin>solr.cmd
+
+  Usage: solr COMMAND OPTIONS
+         where COMMAND is one of: start, stop, restart, healthcheck, create, create_core, create_collection, delete, version, zk, auth, assert
+
+    Standalone server example (start Solr running in the background on port 8984):
+
+      solr start -p 8984
+
+    SolrCloud example (start Solr running in SolrCloud mode using localhost:2181 to connect to Zookeeper, with 1g max heap size and remote Java debug options enabled):
+
+      solr start -c -m 1g -z localhost:2181 -a "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044"
+
+  Pass -help after any COMMAND to see command-specific usage information,
+    such as:    solr start -help or solr stop -help
+
+
+#+END_SRC
+
+
+
+#+BEGIN_SRC sh
+  solr.cmd start
+#+END_SRC
+
+
+
+#+BEGIN_SRC sh
+  1、	solr的安装：官网https://lucene.apache.org/solr/。如果没配置环境变量JAVA_HOME和PATH(要配置用户环境变量，不要配置下面的系统环境变量），则先配置，指向JDK1.8环境；解压solr；命令行进入solr的bin目录，执行solr.cmd start，命令窗口不要关；浏览器打开http://127.0.0.1:8983/。这是以集成的jetty服务器方式去运行。还可以部署到tomcat等其他Web服务器上。
+#+END_SRC
+
+
+安装solr服务器的表（需要手动建表，比较麻烦！！！一个表一个文件夹，一个表一个core, 你可以建类似movies类似的很多文件夹， 比如movies3...）
+
+
+#+BEGIN_SRC sh
+
+  1)	core相当于“表”（solr目录表示数据库）
+  2)	server\solr\创建文件夹movies (进入solr7.2.1目录下 创建你自己的库或者表)
+  3)	把solor的server\solr\configsets\_default下的conf拷贝到server\solr\movies下
+  4)	 创建core（名字movies），相当于表：（这一步是在你打开的127.0.0.1:8389页面 add core）
+  5)	浏览器中打开solr控制台“Core Admin”→【Add core】，name和instanceDir都填movies，其他保持默认值。
+  6)	Solr6还是需要定义Schema的呢。新版本Solr7也默认支持SchemaLess了。
+#+END_SRC
+
+
+pom.xml配置
+
+
+#+BEGIN_SRC java
+
+       <dependency>
+              <groupId>org.apache.solr</groupId>
+              <artifactId>solr-solrj</artifactId>
+              <version>7.2.1</version>
+          </dependency>
+#+END_SRC
+
+
+
+#+BEGIN_SRC java
+
+  package com.f708.sousou;
+
+  import org.apache.solr.client.solrj.SolrServerException;
+  import org.apache.solr.client.solrj.impl.HttpSolrClient;
+  import org.apache.solr.common.SolrInputDocument;
+
+  import java.io.IOException;
+
+  public class SolrTest1 {
+      public static void main(String[] args) {
+          //movies就是你在solr7.2.1/server/movies 同时也是你在127.0.0.1/solr/ addcoremovies
+          HttpSolrClient.Builder builder = new HttpSolrClient.Builder("http://127.0.0.1:8983/solr/movies");
+          try(HttpSolrClient solrClient = builder.build()){
+             SolrInputDocument doc = new SolrInputDocument();
+
+             // 字段可以灵活添加
+             doc.setField("id","1");
+             doc.setField("title","泰坦尼克号");
+             doc.setField("ed2k","ed2:///dff.avi/df");
+             doc.setField("content","hello");
+             solrClient.add(doc);
+             solrClient.commit();
+
+             //删除
+             //solrClient.deleteById()
+          }catch (SolrServerException e){
+              e.printStackTrace();
+          }catch(IOException e){
+              e.printStackTrace();
+          }
+      }
+  }
+#+END_SRC
+
+执行完之后的标准就是  127.0.0.1：8983会出现numDoc多了一个记录即可（原先可能是0）
+
+** 05:10 Aliyun elasticsearch(直接外包运维给阿里)                     :java:
+
+不需要多添加一台电脑专门运行 ES（和solr一样比较消耗系统资源，吃内存）,只需要你专门修改你的搜索业务即可！！
+ 配置、运维、优化交给专业的阿里即可
+
+https://data.aliyun.com/product/elasticsearch?spm=5176.8142029.388261.355.e93976f4L7j2jP
+
+挺便宜的 1年2000多
+
+** 05:27 slf4j Error                                                  :java:
+
+
+bug:
+
+#+BEGIN_SRC java
+
+  SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+  SLF4J: Defaulting to no-operation (NOP) logger implementation
+  SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+#+END_SRC
+
+解决方法：
+
+#+BEGIN_SRC java
+
+  https://stackoverflow.com/questions/7421612/slf4j-failed-to-load-class-org-slf4j-impl-staticloggerbinder
+
+  !-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->  
+  <dependency>  
+      <groupId>org.slf4j</groupId>  
+      <artifactId>slf4j-simple</artifactId>  
+      <version>1.7.25</version>  
+  </dependency>  
+#+END_SRC
+
+
+** 05:45 solr 从sqlite批量插入数据到solr表中(core)                    :java:
+
+
+#+BEGIN_SRC java
+  package com.f708.sousou;
+
+  import org.apache.solr.client.solrj.impl.HttpSolrClient;
+  import org.apache.solr.common.SolrInputDocument;
+
+  import java.sql.Connection;
+  import java.sql.DriverManager;
+  import java.sql.PreparedStatement;
+  import java.sql.ResultSet;
+  import java.text.SimpleDateFormat;
+  import java.util.ArrayList;
+  import java.util.List;
+
+  public class InsertAllVeryIntoSolr {
+          public static void main(String[] args) throws Exception{
+
+                  // Solr parts
+                  HttpSolrClient.Builder builder =
+                                  new HttpSolrClient.Builder("http://127.0.0.1:8983/solr/movies");
+                  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+                  List<SolrInputDocument> batchDocs = new ArrayList<>();
+
+  // sqlite parts
+                  Class.forName("org.sqlite.JDBC");
+                  try(Connection conn =
+                                          DriverManager.getConnection("jdbc:sqlite:G:\\IntellijHome\\rupengImprove\\verycd.sqlite3.db");
+                          //前几条数据没用 所以得跳过
+                          PreparedStatement ps = conn.prepareStatement("select * from verycd where verycdid>=4077");
+                          ResultSet rs = ps.executeQuery();
+                          HttpSolrClient solrClient = builder.build())
+                  {
+                          while(rs.next())
+                          {
+                              // 从sqlite数据库获取信息
+                                  String id  = rs.getString("verycdid");
+                                  String title = rs.getString("title");
+                                  String ed2k = rs.getString("ed2k");
+                                  String content = rs.getString("content");
+                                  // 不能通过rs.getDate来解析，因为存储使用String形式
+                                  String pubtime = rs.getString("pubtime");
+                                  String category1 = rs.getString("category1");
+                                  String category2 = rs.getString("category2");
+
+                                  // 把信息放入到solr的doc中
+                                  SolrInputDocument doc = new SolrInputDocument();
+                                  doc.setField("id", id);//默认主键字段就是"id"
+                                  doc.setField("title",title);
+                                  doc.setField("ed2k",ed2k);
+                                  doc.setField("content", content);
+                                  try
+                                  {
+                                          // 数据可能有乱码， 直接跳过即可！！ 这是一个基本技能，也是关键  select * from verycd where verycdid?=81434
+                                          doc.setField("pubtime",dateFormat.parse(pubtime));
+                                  }
+                                  catch(java.text.ParseException ex)//日期格式错误
+                                  {
+                                          continue;//不处理这条非法数据
+                                  }
+                                  doc.setField("category1", category1);
+                                  doc.setField("category2", category2);
+                                  batchDocs.add(doc);
+
+                                  //solrClient.add(doc);//insert
+                                  if(batchDocs.size()==1000)//每1000条一批提交
+                                  {
+                                          solrClient.add(batchDocs);//批量插入，效率更高
+                                          batchDocs.clear();//清空
+                                          System.out.println("提交一批完成");
+                                  }
+
+                                  System.out.println(id);
+                          }
+                          if(!batchDocs.isEmpty())
+                          {
+                                  solrClient.add(batchDocs);//把剩下的不足1000条的最后一批再插入一次
+                          }
+
+                          solrClient.commit();
+                  }
+          }
+  }
+
+#+END_SRC
+
+
+** 13:23 solr search                                                  :java:
+
+使用于数据不是经常产生的,solr挺合适，现在es也可以
+
+#+BEGIN_SRC org
+  1)	SolrQuery query = new SolrQuery();是查询条件 
+  query.setQuery(“description:\”王宝强\””);// description字段中包含”王宝强”的 
+  QueryResponse resp = solr.query(query);
+  SolrDocumentList list =  resp.getResults();
+  2)	查询语法，支持AND、OR、NOT（必须是大写的），支持()运算符。 
+  title:杨中科 是只要title中有“杨中科”任何一个的都匹配，如果想完全匹配的就用 title:"杨中科"
+  范围比较。age在3到5之间的： Age:[3 TO 5]。age大于5的 Age:[5 TO *]
+  3)	排序： 
+  solrQuery.setSort("area", ORDER.desc);
+  4)	分页查询： 
+  solrQuery.setStart(起始行数 0开始);//limit 5,10
+  solrQuery.setRows(取的条数);
+  QueryResponse的getResults()为当前页查询的数据； 
+  SolrDocumentList的getNumFound()为查询结果总条数； 
+  5)	高亮显示
+  query.setHighlight(true); // 开启高亮组件
+  query.addHighlightField("content");// 高亮字段  
+  query.addHighlightField("title");
+  query.setHighlightSimplePre("<span class='kw'>");//标记，高亮关键字前缀  
+  query.setHighlightSimplePost("</span>");//后缀  
+                  读取高亮结果，在查询后
+  Map<String, Map<String, List<String>>> map = resp.getHighlighting();
+  然后
+  Object id = doc.getFieldValue("id");
+  String hlValue = map.get(id).get("content").get(0);
+            就可以获得了
+
+  5、	站内搜索思路：文章增删改查的时候也同步更新Solr；如果网站有文章、视频等不同类别的内容，就放到不同的Core中。
+
+#+END_SRC
+
+
+源代码
+
+
+#+BEGIN_SRC java
+
+  package com.f708.sousou;
+
+  import org.apache.solr.client.solrj.SolrQuery;
+  import org.apache.solr.client.solrj.SolrServerException;
+  import org.apache.solr.client.solrj.impl.HttpSolrClient;
+  import org.apache.solr.client.solrj.response.QueryResponse;
+  import org.apache.solr.common.SolrDocument;
+  import org.apache.solr.common.SolrDocumentList;
+
+  import java.io.IOException;
+  import java.util.List;
+  import java.util.Map;
+
+  public class TestSolrSearch {
+      public static void main(String[] args) throws IOException, SolrServerException {
+          HttpSolrClient.Builder builder =
+                  new HttpSolrClient.Builder("http://127.0.0.1:8983/solr/movies");
+          try(HttpSolrClient solrClient = builder.build();)
+          {
+              //SolrQuery  query = new SolrQuery("content:\"周星驰\"");
+              SolrQuery  query = new SolrQuery("content:\"周星驰\" AND title:\"周星驰\"");
+              //limit 3-6
+              query.setStart(3);
+              query.setRows(3);
+              //高亮显示
+              query.setHighlight(true);
+              query.addHighlightField("title");
+              query.addHighlightField("content");
+              query.setHighlightSimplePre("<span class='kw'>");//标记，高亮关键字前缀
+              query.setHighlightSimplePost("</span>");//后缀
+
+              QueryResponse resp = solrClient.query(query);
+
+              Map<String,Map<String,List<String>>> map = resp.getHighlighting();
+
+              SolrDocumentList results =resp.getResults();
+             for (SolrDocument doc:results){
+                 Object id =doc.getFieldValue("id");
+                 //Object id =doc.get('id');//类似
+                 String hlContent = map.get(id).get("content").get(0);
+                 String hlTitle = map.get(id).get("title").get(0);
+                 System.out.println(doc.get("id")+","+hlTitle+","+hlContent);
+                 //System.out.println(doc.get("id")+","+doc.get("title")+","+doc.get("content"));
+                 System.out.println("-----------------------------------------");
+                 System.out.println("-----------------------------------------");
+             }
+              System.out.println("Total serach count "+results.getNumFound());
+          }
+      }
+  }
+#+END_SRC
+
+** 13:27 elasticsearch 启用                                           :java:
+
+elasticsearch.bat -----127.0.0.1:9200 view(web界面)  127.0.0.1:9300编码
+（没有安装服务，占内存暂时不装）
+
+
+#+BEGIN_SRC org
+  1、	elastic search的安装
+  1)	官网 https://www.elastic.co/cn/downloads
+  2)	下载安装Java运行环境JDK1.8；解压elasticsearch-xxx.zip；环境变量中配置“JAVA_HOME”指向JDK的目录。
+  3)	打开cmd，cd到bin目录。运行elasticsearch.bat 如果报错“命令语法不正确”说明JAVA_HOME没配置好，然后好之后一定要重启cmd。
+  4)	如果elasticsearch运行报错： Error occurred during initialization of VMCould not reserve enough space for 2097152KB object heap 。那么说明是内存不足，就修改config/jvm.options下的 
+  -Xms1g
+  -Xmx1g
+  改成 
+  -Xms512m
+  -Xmx512m
+  5)	浏览器访问http://localhost:9200/，如果不报错就说明成功了
+  6)	运行成功后不要关闭cmd。
+
+#+END_SRC
+
+
+ELK: Elasticsearch   Kiberna   Logstash
+
+https://elasticsearch.cn/ 中文社区
+https://www.elastic.co/products/elasticsearch
+
+** 13:44 es简单插入                                                   :java:
+
+pom.xml
+
+
+#+BEGIN_SRC xml
+                <!-- https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch -->
+          <dependency>
+              <groupId>org.elasticsearch</groupId>
+              <artifactId>elasticsearch</artifactId>
+              <version>6.1.2</version>
+          </dependency>
+          <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/transport -->
+          <dependency>
+              <groupId>org.elasticsearch.client</groupId>
+              <artifactId>transport</artifactId>
+              <version>6.1.2</version>
+          </dependency>
+
+
+#+END_SRC
+
+
+#+BEGIN_SRC java
+         Settings settings = Settings.builder().build();
+          try(TransportClient client = new PreBuiltTransportClient(settings)
+                  .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300)))
+          {
+              HashMap<String, Object> data = new HashMap<String, Object>();
+              data.put("id", 4);
+              data.put("name", " Ye Zhao");
+              data.put("title", "Beautiful day");
+              data.put("content", "Welcome to F708");
+              IndexResponse indexRes = client.prepareIndex("rupeng", "persons").setId("3").setSource(data).get();
+              System.out.println(indexRes.getResult());
+          }
+#+END_SRC
+
+
+** 13:57 es批量插入sqlite数据                                         :java:
+
+耗时(942s)
+
+#+BEGIN_SRC org
+  2147483786
+  2147483787
+  2147483788
+  2147483789
+  2147483790
+  2147483791
+  Total time spend942316
+#+END_SRC
+
+
+#+BEGIN_SRC java
+  package com.f708.sousou;
+
+  import org.elasticsearch.action.bulk.BulkRequestBuilder;
+  import org.elasticsearch.action.bulk.BulkResponse;
+  import org.elasticsearch.action.index.IndexRequest;
+  import org.elasticsearch.client.transport.TransportClient;
+  import org.elasticsearch.common.settings.Settings;
+  import org.elasticsearch.common.transport.TransportAddress;
+  import org.elasticsearch.transport.client.PreBuiltTransportClient;
+
+  import java.net.InetAddress;
+  import java.net.UnknownHostException;
+  import java.sql.*;
+  import java.text.SimpleDateFormat;
+  import java.util.Date;
+  import java.util.HashMap;
+  import java.util.concurrent.ExecutionException;
+
+  public class ElasticSearchBulkInsert {
+          public static void main(String[] args) throws ClassNotFoundException, SQLException, UnknownHostException, ExecutionException, InterruptedException {
+                  long start = System.currentTimeMillis();
+
+                  //sqlite驱动
+                  Class.forName("org.sqlite.JDBC");
+                  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                  Settings settings = Settings.builder().build();
+                  try (
+                  //sqlite 部分
+                                  Connection conn =
+                                                  DriverManager.getConnection("jdbc:sqlite:G:\\IntellijHome\\rupengImprove\\verycd.sqlite3.db");
+                                  PreparedStatement ps = conn.prepareStatement("select * from verycd where verycdid>=4077");
+                                  ResultSet rs = ps.executeQuery();
+                                 // ES部分
+                                  TransportClient client = new PreBuiltTransportClient(settings)
+                                                  .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));//web      9200 ˿ڣ  ӿ   9300 ˿
+                  ) {
+                          // 每次得保证创建一个BUlkRequestBuilder
+                          BulkRequestBuilder bulkRequest = client.prepareBulk();
+//1.  sqlite  read ,   
+//2.  es write
+                          while (rs.next()) {
+//read record
+                                  String id = rs.getString("verycdid");
+                                  String title = rs.getString("title");
+                                  String ed2k = rs.getString("ed2k");
+                                  String content = rs.getString("content");
+                                  String pubtime = rs.getString("pubtime");
+                                  String category1 = rs.getString("category1");
+                                  String category2 = rs.getString("category2");
+                                  Date dPubTime;
+                                  try {
+                                          dPubTime = dateFormat.parse(pubtime);
+                                  } catch (java.text.ParseException ex)//
+                                  {
+                                          continue;//
+                                  }
+//write doc
+                                  HashMap<String, Object> doc = new HashMap<>();
+                                  doc.put("id", id);
+                                  doc.put("title", title);
+                                  doc.put("ed2k", ed2k);
+                                  doc.put("content", content);
+                                  doc.put("pubtime", dPubTime);
+                                  doc.put("category1", category1);
+                                  doc.put("category2", category2);
+
+                                  //IndexResponse indeResp =  client.prepareIndex("rupeng1", "dianlv").setId(id).setSource(doc).get();
+
+                                  // request 等待提交
+                  // rupeng1数据库名   dianlv表明
+                  // 每条记录是一个IndexRequest(recordRequest)
+                                  IndexRequest indexReq = client.prepareIndex("rupeng1", "dianlv").setId(id).setSource(doc).request();
+                                  bulkRequest.add(indexReq);
+                                  if (bulkRequest.numberOfActions() == 1000) {
+                                          BulkResponse bulkResp = bulkRequest.execute().actionGet();//executeGet()
+                                          if (bulkResp.hasFailures()) {
+                                                  System.out.println(bulkResp.buildFailureMessage());
+                                                  break;
+                                          }
+
+                                          bulkRequest = client.prepareBulk(); //
+                                  }
+                                  System.out.println(id);
+                                  //System.out.println(id+indeResp.getResult());
+                          }
+                          if (bulkRequest.numberOfActions() > 0)//    һ      1000
+                          {
+                                  BulkResponse bulkResp = bulkRequest.execute().get(); //立即执行 提交
+
+                          }
+                          long end = System.currentTimeMillis();
+                          System.out.println("Total time spend" + (end - start));
+                  }
+          }
+  }
+
+#+END_SRC
+
+
+** 14:02 es failed to get mapping more than one type                  :java:
+
+rejecting mapping update to [rupeng] as final mapping would have more than 1 type :[persons, dianlv]
+注意一个库只能有一个表(表类型)对应，即  rupeng--dianlv
+                            rupeng2--dianlv2 不能 rupeng2 --dianlv3
+actionGet()和get的区别
+
+
+
+#+BEGIN_SRC java
+
+#+END_SRC
+
+failed
+
+** 14:13 es clusterBlockException                                     :java:
+
+blocked by:[FORBIDDEN/12/index read-only /allow delete(api)]
+
+硬盘空间是否够呢？？？ high disk watermark exceeded on one or more(%多少不可用)
+
+ES will go into read only mode once a threshold is hit>>>>
+
+
+
+#+BEGIN_SRC org
+  执行批量操作：BulkResponse bulkResponse = bulkRequest.execute().actionGet();
+  不要一次性囤积太多批量操作再提交，否则会OOM，我的笔记本电脑累积了十几万条数据就OOM了。
+  每批都要创建新的BulkRequestBuilder对象，不要重复使用BulkRequestBuilder对象。
+
+  一个索引库下只能建一个type；
+  当磁盘可用空间低于一定比例的时候，就会进入只读模式，再插入就会报错：ClusterBlockException[blocked by: [FORBIDDEN/12/index read-only / allow delete (api)]
+
+#+END_SRC
+
+** 14:22 es 删除id                                                    :java:
+
+
+#+BEGIN_SRC java
+  5、	删除：DeleteResponse response = client.prepareDelete("rupeng", "persons", "6666").get();
+#+END_SRC
+
+** 14:31 es基本查询  matchPhrasequery                                          :java:
+
+
+#+BEGIN_SRC java
+  package com.f708.sousou;
+
+  import org.elasticsearch.action.search.SearchRequestBuilder;
+  import org.elasticsearch.action.search.SearchResponse;
+  import org.elasticsearch.client.transport.TransportClient;
+  import org.elasticsearch.common.settings.Settings;
+  import org.elasticsearch.common.transport.TransportAddress;
+  import org.elasticsearch.index.query.QueryBuilders;
+  import org.elasticsearch.search.SearchHit;
+  import org.elasticsearch.search.SearchHits;
+  import org.elasticsearch.transport.client.PreBuiltTransportClient;
+
+  import java.net.InetAddress;
+  import java.net.UnknownHostException;
+  import java.util.Map;
+
+  public class ElasticSearchBasicSearch {
+          public static void main(String[] args) throws UnknownHostException {
+                  Settings settings = Settings.builder().build();
+                  try (TransportClient client = new PreBuiltTransportClient(settings)
+                                  .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));//web      9200 ˿ڣ  ӿ   9300 ˿
+                  ) {
+                          SearchRequestBuilder responsebuilder = client.prepareSearch("rupeng1").setTypes("dianlv");
+                          SearchResponse resp = responsebuilder.setQuery(QueryBuilders.matchPhraseQuery("title", "王宝强")).setFrom(0)
+                                          .setSize(10).setExplain(true).execute().actionGet();
+  // setSize分页查询
+                          SearchHits searchHits = resp.getHits();
+
+                          System.out.println("Total search counts : " + searchHits.getTotalHits());
+
+                          SearchHit[] hits = searchHits.getHits();
+                          for (SearchHit hit : hits) {
+                                  Map<String, Object> map = hit.getSourceAsMap();
+                                  String id = (String) map.get("id");
+                                  String title = (String) map.get("title");
+                                  String content = (String) map.get("content");
+                                  System.out.println(title + "                                   " + content);
+                                  System.out.println("------------------------------------------------");
+                                  System.out.println("------------------------------------------------");
+                          }
+                  }
+          }
+  }
+
+#+END_SRC
+
+
+** 14:36 es multiPhrasequery                                          :java:
+
+
+#+BEGIN_SRC java
+                          SearchResponse resp = responsebuilder.setQuery(QueryBuilders.multiMatchQuery("爱情","title", "content")).setFrom(0)
+                                          .setSize(10).setExplain(true).execute().actionGet();
+
+#+END_SRC
+
+
+** 14:40 es termQuery                                                 :java:
+
+
+#+BEGIN_SRC java
+  SearchResponse resp = responsebuilder.setQuery(QueryBuilders.termQuery("category1", "欧美音乐")).setFrom(0)
+                                          .setSize(10).setExplain(true).execute().actionGet();
+
+
+  //不可以
+  SearchResponse resp = responsebuilder.setQuery(QueryBuilders.termQuery("id", "10000")).setFrom(0)
+                                          .setSize(10).setExplain(true).execute().actionGet();
+  //可以
+#+END_SRC
+
+
+查不到，因为分词原理存在，欧美音乐不是按照字面上存储的，可能为1 2 3 4等，类型不要用中文汉字
+
+** 14:46 es QueryBulders must mustNot should shouldNot                :java:
+
+
+querybuilders可以不断嵌套的%%…………  termQuery fuzzyquery multiPhrasequery等
+must表示AND
+should 表示or
+#+BEGIN_SRC java
+                  BoolQueryBuilder queryBuilder= QueryBuilders.boolQuery().must(QueryBuilders.matchPhraseQuery("content","王宝强"))
+                                          .mustNot(QueryBuilders.matchPhraseQuery("content","郝蕾"));
+                          SearchResponse resp = responsebuilder.setQuery(queryBuilder).setFrom(0)
+                                          .setSize(10).setExplain(true).execute().actionGet();
+#+END_SRC
+
+
+** 15:02 es add sort                                                  :java:
+
+fluent link style， lambda编程
+
+#+BEGIN_SRC java
+                          SearchResponse resp = responsebuilder.setQuery(queryBuilder).setFrom(0)
+                                          .setSize(100).addSort("pubtime",SortOrder.DESC).setExplain(true).execute().actionGet();
+#+END_SRC
+
+
+
+#+BEGIN_SRC org
+  a)	addSort(String field, SortOrder order)增加排序规则，基于性能考虑，默认是不能用字符串类型字段排序的，虽然说可以解除限制，但是不要这么做。
+#+END_SRC
+
+
+
+
+** 15:02 es highlight                                                 :java:
+
+
+#+BEGIN_SRC java
+          // 排序一般是按照数值类型不要，字符串（否则就没意义了）
+  HighlightBuilder hlBuilder =new HighlightBuilder();
+                  hlBuilder.preTags("<span style='color:yellow'>").postTags("</span>").field("content").field("title");
+                  responsebuilder.highlighter(hlBuilder);
+
+#+END_SRC
+
+
+注意Title可能没有要查找的值
+
+
+#+BEGIN_SRC java
+                          for (SearchHit hit : hits) {
+                                  Map<String, Object> map = hit.getSourceAsMap();
+                                  String id = (String) map.get("id");
+                                  String title = (String) map.get("title");
+                                  String content = (String) map.get("content");
+
+                                  // highlighter 得重新抽取
+                                  HighlightField hlTitle = hit.getHighlightFields().get("title");//Title可能不存在 title没有高亮的字
+                                  HighlightField hlContent = hit.getHighlightFields().get("content");
+                                  System.out.println((hlTitle==null?title:hlTitle) + "                                   " + (hlContent==null?content:hlContent));
+                                  System.out.println("------------------------------------------------");
+                                  System.out.println("------------------------------------------------");
+                          }
+#+END_SRC
+
+
+
+可能多段高亮
+#+BEGIN_SRC java
+  System.out.println((hlTitle==null?title:hlTitle.getFragments()[0]) + "                                   " + (hlContent==null?content:hlContent.getFragments()[0]));
+                                  S
+#+END_SRC
+
+
+** 15:21 ES combat with solr                                          :java:
+
+
+#+BEGIN_SRC org
+
+    9、	Solr和ES的比较
+    a)	ES是后起之秀，Solr比较成熟，不过比较传统；
+    b)	Solr对于“一边加入索引、一边搜索”这种实时搜索，性能比较低；
+    c)	ES对于实时搜索性能比较好，而且ES做集群更简单；
+    d)	没有特殊理由选择ES；
+
+    ES比较占用性能，充分利用性能
+#+END_SRC
+
+
+** 15:37 快速生成一个类到另一个类的setProperty                        :java:
+
+
+http://blog.xiaohansong.com/2017/02/03/codemaker/
+光标一定要在class关键字旁边
+
+** 15:56 lucen插入数据                                                :java:
+
+手动建立d:/temp/lucene文件夹
+
+
+#+BEGIN_SRC java
+
+  package com.f708.lucene;
+
+  import org.apache.lucene.analysis.Analyzer;
+  import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+  import org.apache.lucene.document.Document;
+  import org.apache.lucene.document.Field;
+  import org.apache.lucene.document.FieldType;
+  import org.apache.lucene.index.IndexOptions;
+  import org.apache.lucene.index.IndexWriter;
+  import org.apache.lucene.index.IndexWriterConfig;
+  import org.apache.lucene.store.Directory;
+  import org.apache.lucene.store.FSDirectory;
+
+  import java.io.IOException;
+  import java.nio.file.Paths;
+  import java.sql.*;
+
+  public class LuceInitalTest {
+      public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
+          //   中文分词解析器
+                  Analyzer luceneAnalyzer = new SmartChineseAnalyzer();
+                   //isEmpty=false   需要手动建立 d:/temp/lucene
+                  Directory dir = FSDirectory.open(Paths.get("d:/temp/lucene/"));
+
+                  IndexWriterConfig iwc = new IndexWriterConfig(luceneAnalyzer);
+                  iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
+  //5、	如果自己用Lucene开发，开发工作量比较大，需要控制好并发写入、集群等各种问题，而且由于检索服务器一般是单独一台服务器，还要自己开发服务接口供其他系统调用，因此一般不建议直接用Lucene。 
+          // writer只能单线程写入，要想多线程得用生产者消费者模式，进行改写
+          IndexWriter writer = new IndexWriter(dir, iwc);
+
+                  Class.forName("org.sqlite.JDBC");
+                  Connection conn =
+                                  DriverManager.getConnection("jdbc:sqlite:G:\\IntellijHome\\rupengImprove\\verycd.sqlite3.db");
+                  PreparedStatement ps = conn.prepareStatement("select * from verycd where title is not null limit 0,50000");
+                  ResultSet rs = ps.executeQuery();
+                  int i=0;
+
+                  FieldType fieldTypeStoreNotTokenized = new FieldType();
+                  fieldTypeStoreNotTokenized.setStored(true);//保存原始内容
+                  fieldTypeStoreNotTokenized.setTokenized(false);//
+
+                  FieldType fieldTypeStoreTokenized = new FieldType();
+                  fieldTypeStoreTokenized.setStored(true);//存储原始数据
+                  fieldTypeStoreTokenized.setTokenized(true);//进行分词保存
+                  fieldTypeStoreTokenized.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+                  fieldTypeStoreTokenized.setStoreTermVectorOffsets(true);
+                  fieldTypeStoreTokenized.setStoreTermVectorPositions(true);
+                  fieldTypeStoreTokenized.setStoreTermVectors(true);
+
+                  while(rs.next())
+                  {
+                          int id = rs.getInt("verycdid");
+                          String title=rs.getString("title");
+                          String ed2k=rs.getString("ed2k");
+                          String content=rs.getString("content");
+
+                          Document doc = new Document();
+                          doc.add(new Field("id", String.valueOf(id),  fieldTypeStoreNotTokenized));
+                  doc.add(new Field("title",title,fieldTypeStoreTokenized));// 查询字段
+                  doc.add(new Field("ed2k", ed2k,fieldTypeStoreNotTokenized));
+                  doc.add(new Field("content",content, fieldTypeStoreTokenized));// 查询字段
+                          writer.addDocument(doc);
+                          System.out.println(i++);
+                  }
+                  writer.flush();
+
+                  writer.close();
+                  dir.close();
+
+                  rs.close();
+                  ps.close();
+                  conn.close();
+          }
+
+  }
+#+END_SRC
+
+
+** 15:58 lucene查找                                                   :java:
+
+
+分词保存一定得做
+lucene一定得ts.reset()一下
+
+#+BEGIN_SRC java
+  package com.f708.lucene;
+
+  import org.apache.lucene.analysis.Analyzer;
+  import org.apache.lucene.analysis.TokenStream;
+  import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+  import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+  import org.apache.lucene.document.Document;
+  import org.apache.lucene.index.DirectoryReader;
+  import org.apache.lucene.index.IndexReader;
+  import org.apache.lucene.index.Term;
+  import org.apache.lucene.search.IndexSearcher;
+  import org.apache.lucene.search.PhraseQuery;
+  import org.apache.lucene.search.ScoreDoc;
+  import org.apache.lucene.search.TopDocs;
+  import org.apache.lucene.store.Directory;
+  import org.apache.lucene.store.FSDirectory;
+
+  import java.io.IOException;
+  import java.nio.file.Paths;
+  import java.util.ArrayList;
+
+  public class SearchWithLucene {
+      public static void main(String[] args) throws IOException {
+          Analyzer luceneAnalyzer = new SmartChineseAnalyzer();
+                   //isEmpty=false  ʾ
+                  Directory dir = FSDirectory.open(Paths.get("d:/temp/lucene/"));
+                  IndexReader indexReader = DirectoryReader.open(dir);
+
+                  IndexSearcher indexSearcher = new IndexSearcher(indexReader);
+
+                  ArrayList<String> words = new ArrayList<String>();
+                  TokenStream ts = luceneAnalyzer.tokenStream("content", "周润发");
+                  ts.reset();
+                  while(ts.incrementToken())
+                  {
+                          CharTermAttribute cta = ts.getAttribute(CharTermAttribute.class);
+                          words.add(cta.toString());
+                  }
+
+                  PhraseQuery.Builder queryBuilder =new PhraseQuery.Builder();
+                  for(String word : words)
+                  {
+                          queryBuilder.add(new Term("content",word));
+                  }
+                  queryBuilder.setSlop(10);
+
+
+                  PhraseQuery phraseQuery = queryBuilder.build();
+
+                  TopDocs docs = indexSearcher.search(phraseQuery,10);
+                  System.out.println("Total Counts "+docs.scoreDocs.length);
+                  for(ScoreDoc scoreDoc : docs.scoreDocs)
+                  {
+                          Document document =  indexSearcher.doc(scoreDoc.doc);
+                          System.out.println(document.get("content"));//     
+
+                  }
+      }
+  }
+
+#+END_SRC
+
+
+** 16:00 全文检索 combat with 全表扫描                                :java:
+
+
+#+BEGIN_SRC org
+
+  全文搜索引擎
+  1、	所有网站、App几乎都有搜索；
+  2、	like做搜索的缺点：全表扫描性能低。
+  3、	全文检索效率非常高，基本原理：文章进行分词处理，建立一个目录，目录记录每个词在哪篇文章中出现。 
+  4、	什么是全文检索，原理是什么？分词。
+ 
+  5、	全文检索引擎有很多，很多数据库本身也支持，也有开源的lucene等。直接用lucene开发难度比较大，有Solr、 elasticsearch等基于lucene开发的框架。
+  6、	Solr、elasticsearch等是一台单独的服务器，使用java编写；运行后我们的程序向solr服务器发请求插入数据，也可以向solr服务器发请求搜索数据； 
+
+
+#+END_SRC
+
+
+** 16:01 全文检索问题                                                 :java:
+
+
+#+BEGIN_SRC org
+  1、	面试常考问题：多少条数据(20万条左右)；占多大空间（3G）；索引写入用多长时间(10min,因为批量写入，较快)；
+  2、	补充：一元分词StandardAnalyzer、二元分词CJKAnalyzer、基于词库的分词SmartChineseAnalyzer
+
+#+END_SRC
+
+
+
+
+** 16:02 分词算法                                                     :java:
+
+分词: 把词语分成一个个字或者更短词语
+1. 1元分词，一个汉字一个词，效率最高
+2. 2元分词: 还要 要自  自己  己干 干活
+3. 基于字典分词: 
+       
+
+** 16:08 IDEvim 快捷键冲突了                                          :java:
+
+Setting - Other Settings -Vim Emulation中可以自己选择如何处理冲突的按键
+
+** 16:15 很有意思的字典分词                                           :java:
+
+
+#+BEGIN_SRC java
+  package com.f708.lucene;
+
+  import org.apache.lucene.analysis.Analyzer;
+  import org.apache.lucene.analysis.TokenStream;
+  import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+  import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+
+  import java.io.IOException;
+
+  public class FenCiTest {
+      public static void main(String[] args) throws IOException {
+          //StandardAnalyzer 一元分词
+          //CJKAnalyzer CJK Chinese Japanese Koren   中文分词  二元分词   CJK:苍井空
+          //SmartChineseAnalyzer  IKAnanlyzer 基于字典分词
+          Analyzer luceneAnalyzer = new SmartChineseAnalyzer();
+          //Analyzer luceneAnalyzer = new CJKAnalyzer();
+         // Analyzer luceneAnalyzer = new StandardAnalyzer();
+
+          TokenStream ts = luceneAnalyzer.tokenStream("content", "5、	如果自己用Lucene开发，开发工作量比较大，需要控制好并发写入、集群等各种问题，而且由于检索服务器一般是单独一台服务器，还要自己开发服务接口供其他系统调用，因此一般不建议直接用Lucene。 ");
+          ts.reset();
+          while(ts.incrementToken())
+          {
+              CharTermAttribute cta = ts.getAttribute(CharTermAttribute.class);
+              System.out.println(cta.toString());
+          }
+
+      }
+  }
+
+#+END_SRC
+
