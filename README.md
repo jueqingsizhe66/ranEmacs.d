@@ -2954,6 +2954,21 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 `C-c C-r` 使用swiper反向搜索
 
 
+### 92. update the elpa
+
+don't use stable!
+```
+;; load emacs 24's package system. Add MELPA repository.
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   ;; '("melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
+   '("melpa" . "http://melpa.milkbox.net/packages/")
+   t))
+```
+
+`M-x list-packages` ----> `u` ----> `x`  update
 <hr/>
 <hr/>
 

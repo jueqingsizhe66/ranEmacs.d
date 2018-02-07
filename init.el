@@ -56,9 +56,11 @@
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("melpa-stable1" . "http://elpa.emacs-china.org/melpa-stable/")))
+                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")))
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+           ;;  '("melpa-stable" . "http://stable.melpa.org/packages/") t;; many packages won't show if using stable
+             '("melpa" . "http://melpa.milkbox.net/packages/") 
+             )
 
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
