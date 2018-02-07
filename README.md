@@ -2942,8 +2942,9 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 
 `C-c p p ` 切换项目
 
-`C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中，并安装了`M-x package-install ag`文件。
+`C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中（支持中文，稍微等一小会），并安装了`M-x package-install ag`文件。
 
+`C-c k`也可以搜索但是不支持中文
 得经常看看[Counsel-projectile文档][191]
 
 删除editing.el的`C-s`配置，改用[swiper][27]的配置
