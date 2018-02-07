@@ -83,3 +83,57 @@ is a process which changes "slowly"(增加新的数据), "function " is a proces
 complete "micro computer", they can have inputs, giving back results(outputs), act as a memory on file system, perform computations, be
 interrupted, etc. Since a "Computer" can simulate all other computers(modulo time and space), having the notion of a process in a language allows useful ideas such as arrays,records,recursive procedures, etc.(拓展 all are process) to be added to the repertoire(指令表)
 at any time.
+
+** 14:35 非spring的轻量级IOC容器                                      :java:
+
+nutz
+http://www.nutzam.com/
+
+
+ 有按照 CDI规范吗？
+
+可以看看 actframework，使用 Genie 做 DI，完全符合 JSR330 规范。不过 CDI 还没有完全支持
+这个是 genie 的项目：
+https://github.com/osglworks/java-di
+
+
+和 Spring 以及 Guice 的比较：
+https://github.com/greenlaw110/di-benchmark
+
+** 14:55 jekyll启动                                                   :java:
+
+https://gitee.com/xiaodan_yu/resume.io
+
+#+BEGIN_SRC sh
+  gem install jekyll bundler
+
+  jekyll new my-awesome-site
+
+  cd my-awesome-site
+
+  bundle exec jekyll serve
+
+  # => Now browse to http://localhost:4000 
+#+END_SRC
+
+
+
+
+** 15:15 jdk8 往子类传变量都不用写final了 编译的时候自动给加上        :java:
+
+在你用 lambda的时候，还是需要的 是显式的加
+
+记得大部分final都不需要单独写了 jdk帮你加上了
+
+** 15:19 adobe acrobat快捷键                                  :EnglishPaper:
+
+space临时手工具（Esc退出）
+ctrl+中键滚轮 临时放大缩小工具（配合中键滚轮）
+
+Ctrl+H阅读模式最宽屏幕（Ctrl+L全屏模式）
+
+ctrl+3 最大试图显示
+
+** 22:08 科研动力 sci-hub                                     :EnglishPaper:
+
+http://www.howsci.com/sci-hub-alternative.html

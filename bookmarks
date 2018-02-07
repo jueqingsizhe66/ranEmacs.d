@@ -49,9 +49,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** https://githu")
- (rear-context-string . "80005\n 吴恩达 机器学习\n")
- (position . 9114))
+ (front-context-string . "** https://gitee")
+ (rear-context-string . "silver_searcher\n")
+ (position . 9184))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)
