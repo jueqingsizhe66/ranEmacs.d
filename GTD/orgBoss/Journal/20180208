@@ -1,0 +1,61 @@
+星期四, 2018/2/8
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 12:30 团队的抗狼性                                                 :芝麻:
+
++ 面粉（杠杆：借贷消费 超前消费）
++ 面包
+
+#+BEGIN_SRC org
+  如果融创未来两三年还能高速发展，房子卖到7000亿，8000亿一年，他的各项费用急剧增加，人员，管理，广告营销等都在当期发生。如果市场变天了，房子卖不动了，高杠杆的财务费用会极大侵蚀利润。当然大家都希望第一种情况发生，因为第二种情况发生，对企业是灾难性的。所以大家研究房地产必须持续观察，持续跟踪，不能静态的在哪算。一个好的房地产企业，可以分几个层面观察。
+  一是，战略对头，面粉低的时候玩命储存，放对了杠杆，
+  二是，把面包卖的比同行贵。
+  三是，企业经营牛逼，是个优秀的企业，团队有抗狼性，无论是内控，销售，产品研发都不错，单位成本控制的好。
+  四是，能拿到相对便宜的钱。
+
+  总体来说融创在内的几家龙头房企做的还不错，因为他们大了，腾挪空间有，能熨平好多风险。但是也不是说绝对，还得持续观察，因为市场在变，国家的政策在变，人们的需求在变，对产品的需求也在变。
+  总之一句话，自己研究明白了，面对股价的波动心里才踏实。千万别无脑的抄作业，因为是人都会犯错误，无脑抄会更让你无所适从，一定要消化吸收
+#+END_SRC
+
+
+http://blog.zhulong.com/u11238172/blogdetail8134397.html
+
+
+
+ 1、相互推诿，不能自觉主动承担责任，不能精益求精为企业创造利润；
+
+2、上下级部门和同级部门之间存在沟通鸿沟，甚至发生矛盾、产生冲突；
+3、工作心态不积极、消极怠工、工作被动、表现懒散；
+4、员工整体纪律性不强、团队协作能力差；
+
+5、员工缺乏责任心、缺乏感恩的心、玩忽职守、制造问题；
+6、组织中环境沉闷，缺乏活力；
+
+
+8、缺乏面对问题的勇气及解决问题的创造力；
+
+10、没有目标概念与实现达成目标的承诺性；
+
+** 13:32 HA_Qtranslate不错的翻译
+
+** 16:58 kubernetes(k8s)                                              :java:
+
+Kubernetes（通常写成“k8s”）是最开始由google设计开发最后贡献给Cloud Native Computing Foundation的开源容器集群管理项目。它的设计目标是在主机集群之间提供一个能够自动化部署、可拓展、应用容器可运营的平台。Kubernetes通常结合docker容器工具工作，并且整合多个运行着docker容器的主机集群。
+
+http://blog.csdn.net/liangyihuai/article/details/54983521
+https://github.com/kelseyhightower/kubernetes-the-hard-way
+
+https://kubernetes.io/docs/setup/pick-right-solution/
+
+https://github.com/kubernetes/kubernetes
+
+https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html  核心概念
+
+
+
+

@@ -1143,7 +1143,10 @@ Use a prefix arg to get regular RET. "                                          
 
 ;;add alert notify
 (require 'org-alert)
-(setq alert-default-style 'libnotify)
+;;(setq alert-default-style 'libnotify) ;; libnotify need you path *.so in ubuntu platform
+;(setq alert-default-style 'fringe)
+(setq alert-default-style 'mode-line)
+;(setq alert-default-style 'message)
 (setq org-alert-interval 1800);;default 300s
 
 
@@ -1303,3 +1306,24 @@ e.g. Sunday, September 17, 2000."
 (global-set-key (kbd "C-c e") 'org-mark-ring-goto)
 (global-set-key (kbd "C-c w") 'org-mark-ring-push)
 
+
+;;https://github.com/jacktasia/dumb-jump
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g i" . dumb-jump-go-prompt)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+;;(setq dumb-jump-debug t)   ;;when something wrong with dumb-jump,uncomment it 
+(setq dumb-jump-force-searcher 'ag)
+  :ensure)
+
+
+;;https://github.com/jacktasia/dumb-diff
+(use-package dumb-diff
+  :bind (("C-c d" . dumb-diff)
+         ("C-c 1" . dumb-diff-set-region-as-buffer1)
+         ("C-c 2" . dumb-diff-set-region-as-buffer2)
+         ("C-c q" . dumb-diff-quit))
+  :ensure t)

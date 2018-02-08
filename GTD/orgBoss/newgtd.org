@@ -105,6 +105,8 @@ CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
                     Captured 2017-09-28 13:52
 ** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
 SCHEDULED: <2017-09-29 周五 . +1w>
+:PROPERTIES:
+:END:
 
 - State "TODO"       from "TODO"          [2017-10-08 周日 02:33]
                     :PROPERTIES:
@@ -170,6 +172,8 @@ CLOSED: [2017-10-26 周四 10:29] DEADLINE: <2017-10-22 周日> SCHEDULED: <2017
   - [ ] 丝线实验 流场可视化实验
 ** DONE [#B] 办理工程热物理注册问题   [100%]                           :@work:
 CLOSED: [2017-10-11 周三 17:48] DEADLINE: <2017-10-11 周三> SCHEDULED: <2017-10-08 周日>
+:PROPERTIES:
+:END:
 
 
 - State "DONE"       from "TODO"         [2017-10-11 周三 17:48]
@@ -227,6 +231,8 @@ CLOSED: [2017-10-26 周四 10:30] DEADLINE: <2017-10-21 周六>
                     - State "DONE"       from "TODO"          [2017-10-26 周四 10:30]
                     Captured 2017-10-13 21:20
 ** TODO [#B] turbsim reading   [2017-10-15 周日 00:58-02:08]
+:PROPERTIES:
+:END:
                                                          :@work:
                     :PROPERTIES:
                     :Effort: 4:00
@@ -416,6 +422,8 @@ CLOSED: [2017-10-29 周日 22:57]
 那么等式2告诉我们，只比你努力一点的人，其实已经甩你很远
 ** DONE [#B] [75%]查新报告 <2017-10-27 周五 12:48>                      :@work:
 CLOSED: [2017-10-30 周一 20:04] DEADLINE: <2017-11-05 周日>
+:PROPERTIES:
+:END:
 
 - State "DONE"       from "TODO"          [2017-10-30 周一 20:04]
                     :PROPERTIES:
@@ -487,11 +495,15 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 
 
-** TODO [#B] 番茄时间(30min) <2017-10-28 周六 16:21 +1d>                :@work:
-SCHEDULED: <2017-10-28 周六>
+** PENDING [#B] 番茄时间(30min) <2017-10-28 周六 16:21 >             :@work:
                     :PROPERTIES:
                     :Effort: 0:30
+                    :LAST_REPEAT: [2018-02-08 周四 13:07]
                     :END:
+                    - State "DONE"       from "PENDING"    [2018-02-08 周四 13:07]
+                    - State "DONE"       from "PENDING"    [2018-02-08 周四 13:06]
+                    - State "PENDING"    from "PENDING"    [2018-02-08 周四 13:06]
+                    - State "DONE"       from "TODO"          [2018-02-08 周四 13:06]
                     :LOGBOOK:
                     CLOCK: [2017-10-28 周六 16:22]--[2017-10-28 周六 16:24] =>  0:02
                     :END:
@@ -501,7 +513,7 @@ SCHEDULED: <2017-10-28 周六>
           |-------------------------------------------------+--------+------|
           | *Total time*                                    | *0:02* |      |
           |-------------------------------------------------+--------+------|
-          | \_  番茄时间(30min) <2017-10-28 周六 16:21 +1d> |        | 0:02 |
+          | \_  番茄时间(30min) <2017-10-31 周二 16:21 +1d> |        | 0:02 |
           #+END:
           
                     
@@ -972,7 +984,7 @@ http://www.rupeng.com/Activities/59.shtml
       print “he”
     #+END_SRC
 ** TODO [#B] 提交文章初稿给王老师 <2018-02-04 周日 11:43> :@NCEPU:EnglishPaper:
-DEADLINE: <2018-02-08 周四> SCHEDULED: <2018-02-04 周日>
+DEADLINE: <2018-02-14 周三> SCHEDULED: <2018-02-04 周日>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
@@ -985,3 +997,16 @@ so
 
 
                     . -
+** TODO [#B] testOrg <2018-02-08 周四 23:54>                      :@Company:
+DEADLINE: <2018-02-10 周六>
+                    :PROPERTIES:
+                    :WILD_NOTIFIER_NOTIFY_BEFORE: 200 150 100 40 20 10 5
+                    :Effort:   2:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-02-08 周四 23:54]--[2018-02-08 周四 23:55] =>  0:01
+                    :END:
+                    
+                    
+
+

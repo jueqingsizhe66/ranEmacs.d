@@ -2949,7 +2949,7 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 
 删除editing.el的`C-s`配置，改用[swiper][27]的配置
 
-`C-s` 使用swiper正向搜索
+`C-s` 使用swiper正向搜索 ,注意搜索`\!\[ ` 会弹出所有的img名字相关的插入位置，很方便查找。
 
 `C-c C-r` 使用swiper反向搜索
 
@@ -2969,6 +2969,86 @@ don't use stable!
 ```
 
 `M-x list-packages` ----> `u` ----> `x`  update
+
+
+### 93. ag  or rg  or pt
+
+[dumb-jump][193] with [ag][195] or [rg][192]
+
+ag只要添加到path路径即可【windows系统】
+
+如果dumb-jump出现问题，可以调试的，参考[问题168][197]. 
+
+注意如果你使用dumb-jump,他支持你常用的java，perl(bash等)，fortran，clojure,emacs-lisp,scheme,R,c/c++,OCaml等
+但是他是类似于项目的概念，如果你的一个项目没有`.dumbjump`,`.git`,`.hg`,`.svn`,`.bzr`,`
+Makefile`,`PkgInfo`,`.projectile`,`.hg`等信息,那么文件夹顶层就不会被当作项目project来看待，dumb-jump会把
+上一次的项目目录当作你当前文件，这样查找code可能找不到了(真有问题debug一下） 
+
+默认查找路径:(dumb-jump will automatically look for a project root)
+```
+
+(setq dumb-jump-default-project "~/code") to change default project if one is not found (defaults to ~)
+```
+
+dumbjump特殊查找方法(类似.gitignore写法 +代表添加，-代表从搜索路径中剔除)
+
+```
+Example .dumbjump
+
+-tests
+-node_modules
+-build
+-images
++../some-lib/src
++/usr/lib/src
+
+```
+
+小结一下，选择ag模式下的dumb-jump, 在当前emacs编辑系统中注意projectile.bookmarks.el文件，保存着打开文件夹的路径。
+
+[dumb-diff][194], 很好玩的，`C-c d`打开一个3栏界面，上排两个为两个buffer比较，下排为比较结果。
+
+![dumb-diff][196]
+
+[rg ripgrep][192]
+
+[pt : the platinum_searcher][198]: 基于go语言编写的代码搜索工具，据测试略微比ag快点。
+
+
+### 94. yasnippet的工作原理
+
+在你的snippets底下有很多的\*-mode(比如c++-mode c-mode  clojure-mode ..) ,当你编辑的文档是c则会触发c-mode等
+所以其实是[yasnippet][201]会去think what major mode of the current file!!! 根据major mode来定会你的snippet/\*-mode文件夹
+
+
+
+[yasnippet效果欣赏][199]:特殊的代码补全工具
+
+
+嘿嘿  [yasnippet][201]中不同mode的[snippets][200]
+
+比如当前我的markdown-mode，我只要写入`ol`,摁下tab键，自动插入内容
+
+
+```
+1. Text
+2. 
+```
+
+再比如，我敲下`rimg ` ,摁下tab键，自动键入如下内容
+
+```
+![Alt Text][] 
+
+```
+
+easy for  life!!!
+
+
+
+
+
+
 <hr/>
 <hr/>
 
@@ -3164,3 +3244,13 @@ don't use stable!
 [189]:https://github.com/ggreer/the_silver_searcher
 [190]:https://github.com/ericdanan/counsel-projectile#the-counsel-projectile-ag-command
 [191]:https://github.com/ericdanan/counsel-projectile
+[192]:https://github.com/BurntSushi/ripgrep#installation
+[193]:https://github.com/jacktasia/dumb-jump
+[194]:https://github.com/jacktasia/dumb-diff
+[195]:https://github.com/ggreer/the_silver_searcher#installing
+[196]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/dumb-diff.png
+[197]:https://github.com/jacktasia/dumb-jump/issues/168
+[198]:https://github.com/monochromegane/the_platinum_searcher
+[199]:http://blog.csdn.net/u011729865/article/details/53240101#%E6%95%88%E6%9E%9C%E7%9A%84%E8%A7%86%E9%A2%91%E6%AC%A3%E8%B5%8F
+[200]:https://github.com/AndreaCrotti/yasnippet-snippets
+[201]:https://github.com/joaotavora/yasnippet

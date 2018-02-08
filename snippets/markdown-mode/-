@@ -1,4 +1,5 @@
-#name : Link
+#name : Unordered List
 #contributor: Peng Deng <dengpeng@gmail.com>
 # --
-[${1:Link Text}](${2:URL} $3) $0
+- ${1:Text}
+-$0

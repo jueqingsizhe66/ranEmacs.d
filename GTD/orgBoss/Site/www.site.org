@@ -313,3 +313,8 @@ Public Health
  the_silver_searcher
 ** https://gitee.com/hank-whu/turbo-rpc                               :java:
  turbo-rpc 是一款速度超凡的异步响应式RPC框架
+** http://www.cs.cornell.edu/courses/cs3110/2015fa/                 :scheme:
+ 数据结构和函数式编程
+** https://github.com/kelseyhightower/nocode
+ 佛系application
+nothing
