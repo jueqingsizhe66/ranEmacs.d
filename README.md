@@ -2091,6 +2091,42 @@ That's all, funny with enctypt files.
 相同邮箱 不同时间生成的密钥是完全不一样的，不可重复性)
 并且修改.orgConf.el中关于org-crypt-key的16位加密数字。保持证书+密匙一致性！！
 
+在kleopatra可以查找到我的注册名字的信息（那个信息应该是
+
+```
+
+workmad3 夸恩过时，至少对于当前gpg，如下? --allow-secret-key-import现在已废弃，不执行任何操作。
+
+发生在我身上的是，我无法正常导出。 只是在做 gpg --export不足，因为它只导出公共密钥。 在导出密钥时，必须对它们进行
+
+gpg --export-secret-keys >keyfile
+
+他们更多的原因" 密钥不可用" 消息： gpg版本不匹配
+```
+
+在每一次打开`M-x org-decrypt-entry`都会提醒您输入密码
+
+![gnucrypt][217]
+
+也就是为了备份必须在Kleopatra做两部工作
+
+1. 公匙备份，导出证书即可（服务器也会备份）（可被别人用于加密）
+2. 私匙备份，导出私匙文件
+
+进一步信息观看[baidu经验][216]
+
+还有打开`GPA`
+
+![GPA][218]
+
+如果只是导入公匙到Kleopatra,那么再GPA显示的时候是没有黄色的私匙只有银色的公匙
+
+![secret][219]
+
+所以这时候得从GPA导入私匙即可，很简单这里的import直接就可以导入密匙，这样
+重新打开Kleopatra即可，说了这么多一定得注意两把钥匙。
+
+
 ### 67. org-alert 提醒功能
 
 org-alert Provides notifications for scheduled or deadlined agenda entries.
@@ -3503,3 +3539,7 @@ close  $CollectFile
 [213]:https://github.com/bling/evil-visualstar 
 [214]:https://github.com/syl20bnr/evil-escape 
 [215]:https://github.com/nschum/window-numbering.el 
+[216]:https://jingyan.baidu.com/article/466506581be13ef549e5f82a.html 
+[217]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnucrypt.png
+[218]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gpa.png
+[219]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/secret.png

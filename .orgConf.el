@@ -1163,8 +1163,10 @@ Use a prefix arg to get regular RET. "                                          
 (setq org-tags-exclude-from-inheritance (quote("crypt"))) ;;
 ;(setq org-crypt-key nil)
 
-;;(setq org-crypt-key "6285F68F72D6D3C2")
-(setq org-crypt-key "34420FBAB207AB13")
+;;(setq org-crypt-key "6285F68F72D6D3C2") ;;old certi 2017
+;;(setq org-crypt-key "34420FBAB207AB13")  ;;new certi 20180304
+(setq org-crypt-key "99643CEA883D3C92")  ;;new certi 20180304
+
 
 
 

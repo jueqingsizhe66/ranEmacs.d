@@ -456,17 +456,16 @@ Du-selig的计算过程，首先加载2D翼型启动数据，然后选择某个�
 (SDM:三维失速模型   DSM:动态失速模型）
 *** 两种模型的结合
 
-
 ** test                                                              :crypt:
 -----BEGIN PGP MESSAGE-----
 
-hQEMA+S9hWOjXiU7AQgAnxfY0gwx0b5lhDOa2JGFzJR9wI4GJU+L/Ua4biCGHFUt
-u03w0lrK3hljnBpGERnwodhUZyGVMu5Ae3btWD1yheqe2/Zj0yfonXS+oRpt4udj
-VOkkw4jTDQYmabWJxUhf+yK4TWWNKeKDxVxELRXlf1rpGHofE6iW3+dvBuc66sBs
-Ycn7LRmKWSp/uk5l+NHyVPSTpgRgsgLbhqyc20MstioLRtPghH9IvcuLgSzVUVGC
-6l0SsrKlAiFT4aNVQTc50C3P1UrdnW/vXTr2HF8NZHNIDY+DRtFH02iWxU3kfK6O
-x1kdxXwzUVqXgEeOWUfuJC1BMAqifikU5kPLwUuJmdJDAenWAY4SGIyGHTPmis1w
-Y0SAD5NjNm5Z/dzzOUf87dasf9sWIv4XDQmmDCTrWikP5whIX0+Z6qyrWOgjvhhx
-mAgfrw==
-=JI+z
+hQEMAw7kGOoigxp9AQgAjUbLnnAv6PzD68eMXiHsoVOxjj5M+/qU2bzyRIVgtRpR
+Nu+67YhQXd4qOipgW+bHIiM5yc1G5I1aYUBvk3mrHYpz5YaLqIQ9DW3atnD+YEuo
+36bQuN/hbBsnAZ8DIuBp3w//3VS1CsNXpbbqhRua7hBNJyBp2OOJiSnnEknF0p6W
+E1kqcAQ3ADGmznAyAB5yGh2b6Qmc/AChmRsmtGz0MI022VJQZ7mXICB7FyALMNSr
+N5dzNRg2G4e8A5IpPFjaY/BFPyjQX+4q9NkzBQb3xE/aSA0Lo2FC1w+sqxIqD/TL
+cRLKliNWzpBUFyov42xZpqhIlrjOChzUYzclozcLpNJBAQArWyhDqPX4L+LXXnNF
+rZ2jk9CEGXtM1FemNw9ktjoKfn/8JXwQu8whgUa9rOL78KLlnJxYrOfa3YEWw3v9
++HE=
+=+ZuB
 -----END PGP MESSAGE-----
