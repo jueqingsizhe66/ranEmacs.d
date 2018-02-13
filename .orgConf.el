@@ -930,6 +930,7 @@ Captured %<%Y-%m-%d %H:%M>
 
 ;add to orgmode
 (add-to-list 'auto-mode-alist '(".*/[0-9]*$" . org-mode))
+;(add-to-list 'auto-mode-alist '(".*/[0-9]*summary[0-9_]*$" . org-mode))
 
 ;; snippet
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

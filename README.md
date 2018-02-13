@@ -3203,6 +3203,76 @@ setq-default evil-escape-key-sequence "jk")
 
 [window-numbering][215] , 在打开多个多个窗口的时候方便通过`M-0 M-1` 进行切换。
 
+
+### 100. 文件journal过多会报错
+
+error:
+
+```
+ apply : cannot create file process . too many file open . so some files need to archive
+```
+这说明需要定期把journal放到备份文件夹，重新archive进入一阶段文件放入到一个大文件中，进而减小文件数量（人一辈子也就几十本）
+所以我就写了个小perl脚本，读取一阶段文件，然后存入到一个文件夹中，注意把原先文件移到GTD文件夹的bakupJournal文件夹即可，别
+放在orgBoss或者其中即可
+
+solution:
+
+```
+perl momthSummary.pl
+```
+
+1. outputFile, you need to change the name into significant name
+2. 20171[01]* you need to check all the files need to be archived
+
+```
+use strict;
+use warnings;
+use utf8;
+
+#print "$_\n" foreach <"2017*">;
+
+##  First place need to be modified     100011 express 10 to 11
+my	$CollectFile_file_name = '2017100011';# output file name
+
+
+
+open  my $CollectFile, '>', $CollectFile_file_name
+    or die  "$0 : failed to open  output file '$CollectFile_file_name' : $!\n";
+
+
+##  second place need to be modified 
+foreach my $file ( <"20171[01]*"> ) {
+
+    print $CollectFile "## $file -----------------------------------\n";
+
+    
+    my	$IntoFile_file_name = $file;#  input file name
+
+    open  my $IntoFile, '<', $IntoFile_file_name
+        or die  "$0 : failed to open  input file '$IntoFile_file_name' : $!\n";
+
+
+
+    while ( <$IntoFile> ) {
+        print $CollectFile "$_";
+    }
+    ##    print $CollectFile <$IntoFile>;
+    # # while ( <$file> ) {
+    #     print "$_\n";
+    # }
+    close  $IntoFile
+        or warn "$0 : failed to close input file '$IntoFile_file_name' : $!\n";
+
+
+}
+close  $CollectFile
+    or warn "$0 : failed to close output file '$CollectFile_file_name' : $!\n";
+
+
+
+
+```
+
 <hr/>
 <hr/>
 
