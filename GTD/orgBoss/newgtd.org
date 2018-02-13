@@ -1007,7 +1007,23 @@ DEADLINE: <2018-02-10 周六>
                     :LOGBOOK:
                     CLOCK: [2018-02-08 周四 23:54]--[2018-02-08 周四 23:55] =>  0:01
                     :END:
+** TODO [#B] Capture the Class name in project folder <2018-02-14 周三 12:11> :@Home:
+                    :PROPERTIES:
+:
+
+                    :Effort: 1:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-02-14 周三 17:48]--[2018-02-14 周三 17:48] =>  0:00
+                    CLOCK: [2018-02-14 周三 12:29]--[2018-02-14 周三 17:48] =>  5:19
+                    CLOCK: [2018-02-14 周三 12:12]--[2018-02-14 周三 12:28] =>  0:16
+                    :END:
                     
-                    
+           ag支持正则表达式https://segmentfault.com/a/1190000011328038
+
+
+                    #+BEGIN_SRC sh
+                      G:\JavaBookmarks\hutool>ag "public\sclass\s\w*"
+                    #+END_SRC
 
 
