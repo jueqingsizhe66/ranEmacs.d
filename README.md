@@ -3113,7 +3113,7 @@ easy for  life!!!
 
 [vim-surround][206]一般配合vim的快操作, 而[evil-surround][205]一般配合[expand-region][12],
 
-只不过有一点不友好，需要[evil][211]当做vi layer。
+只不过有一点不友好，需要[evil][211]当做vi layer( <2018-02-20 14:29> 至此改用vim默认启动模式)。
 
 ```
 Add surrounding
@@ -3199,6 +3199,9 @@ setq-default evil-escape-key-sequence "jk")
 `M-x git-timemachine`
 
 
+### 99. window-numbering
+
+[window-numbering][215] , 在打开多个多个窗口的时候方便通过`M-0 M-1` 进行切换。
 
 <hr/>
 <hr/>
@@ -3418,3 +3421,4 @@ setq-default evil-escape-key-sequence "jk")
 [212]:https://github.com/redguardtoo/evil-matchit 
 [213]:https://github.com/bling/evil-visualstar 
 [214]:https://github.com/syl20bnr/evil-escape 
+[215]:https://github.com/nschum/window-numbering.el 

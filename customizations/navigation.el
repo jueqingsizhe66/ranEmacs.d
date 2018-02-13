@@ -117,3 +117,7 @@
 
 (setq apropos-sort-by-scores t) 
  
+
+;;for window-numbering
+(setq window-numbering-assign-func
+      (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
