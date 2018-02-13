@@ -3045,7 +3045,13 @@ Example .dumbjump
 easy for  life!!!
 
 
+### 95. emacs录制宏
 
+在vim中你可以使用`qa`或者`qb`等录制一个名字为a或者b的宏，并通过`@a`或者`@b`来执行 也可以通过`100@a`进行100次执行
+
+而在emacs中，你可以通过`C-x(` 开始录制， 通过`C-x)`结束录制，并通过`C-x e`执行录制宏，还可以通过`C-u 9 C-x e`或者`C-9 C-x e` 进行9次执行等。注意可以通过`M-x name-last-kbd-macro {Your macro name}`来持久化你的宏，然后通过`M-x {Your macro name}`进行调用。
+
+类似的重复性概念，还不如你可以`C-n`多次下移光标，但同时也可以通过`C-9 C-n`进行9行下移，对于阅读代码有帮助，当然也可以用`C-v`或者`M-v`进行正向和反向半屏阅读。    
 
 
 
@@ -3254,3 +3260,4 @@ easy for  life!!!
 [199]:http://blog.csdn.net/u011729865/article/details/53240101#%E6%95%88%E6%9E%9C%E7%9A%84%E8%A7%86%E9%A2%91%E6%AC%A3%E8%B5%8F
 [200]:https://github.com/AndreaCrotti/yasnippet-snippets
 [201]:https://github.com/joaotavora/yasnippet
+[202]:https://www.zhihu.com/question/22149184
