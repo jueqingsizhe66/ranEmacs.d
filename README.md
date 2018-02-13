@@ -3004,11 +3004,61 @@ Example .dumbjump
 
 ```
 
-小结一下，选择ag模式下的dumb-jump, 在当前emacs编辑系统中注意projectile.bookmarks.el文件，保存着打开文件夹的路径。
+小结一下，选择ag模式下的dumb-jump(`M-g j`), 在当前emacs编辑系统中注意projectile.bookmarks.el文件，保存着打开文件夹的路径。
 
 [dumb-diff][194], 很好玩的，`C-c d`打开一个3栏界面，上排两个为两个buffer比较，下排为比较结果。
 
 ![dumb-diff][196]
+
+
+.orgConf.el , 很有意思的dumb-jump go and back!! Very good for looking source code.
+
+```
+(global-set-key (kbd "C-c e") 'org-mark-ring-goto)
+(global-set-key (kbd "C-c w") 'org-mark-ring-push)
+
+
+;;https://github.com/jacktasia/dumb-jump
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g b" . dumb-jump-back)
+         ("M-g i" . dumb-jump-go-prompt)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+;;(setq dumb-jump-debug t)   ;;when something wrong with dumb-jump,uncomment it 
+(setq dumb-jump-force-searcher 'ag)
+  :ensure)
+
+
+;;https://github.com/jacktasia/dumb-diff
+(use-package dumb-diff
+  :bind (("C-c d" . dumb-diff)
+         ("C-c 1" . dumb-diff-set-region-as-buffer1)
+         ("C-c 2" . dumb-diff-set-region-as-buffer2)
+         ("C-c q" . dumb-diff-quit))
+  :ensure t)
+
+```
+
+而在vim中你可以使用[CtrlpFunc][203]来定义(cword表示当前光标下单词，
+
+```
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+```
+
+类似的还比如在ag中的使用`expand("<cword>")`
+```
+
+nmap <leader>q :Ag <c-r>=expand("<cword>")<cr><cr>
+nnoremap <space>/ :Ag 
+
+```
+
+类似的还有vim的 [vim-asterisk][204],可以使用`g*`的功能进行查找
 
 [rg ripgrep][192]
 
@@ -3261,3 +3311,5 @@ easy for  life!!!
 [200]:https://github.com/AndreaCrotti/yasnippet-snippets
 [201]:https://github.com/joaotavora/yasnippet
 [202]:https://www.zhihu.com/question/22149184
+[203]:https://github.com/tacahiroy/ctrlp-funky
+[204]:https://github.com/haya14busa/vim-asterisk
