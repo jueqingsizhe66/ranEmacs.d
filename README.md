@@ -1,6 +1,8 @@
 # 主要目的：clojure learning
 次要目的: emacs learning(org-mode)
 
+能为他人创造点价值，那是最好的feedback
+
 Okay , it comes from flyingmchine,
 I have test in the two systems windows10
 and ubuntu, all valid for newer.
