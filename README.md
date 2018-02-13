@@ -3055,6 +3055,8 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 类似的还比如在ag中的使用`expand("<cword>")`
 ```
 
+
+
 nmap <leader>q :Ag <c-r>=expand("<cword>")<cr><cr>
 nnoremap <space>/ :Ag 
 
@@ -3104,6 +3106,97 @@ easy for  life!!!
 而在emacs中，你可以通过`C-x(` 开始录制， 通过`C-x)`结束录制，并通过`C-x e`执行录制宏，还可以通过`C-u 9 C-x e`或者`C-9 C-x e` 进行9次执行等。注意可以通过`M-x name-last-kbd-macro {Your macro name}`来持久化你的宏，然后通过`M-x {Your macro name}`进行调用。
 
 类似的重复性概念，还不如你可以`C-n`多次下移光标，但同时也可以通过`C-9 C-n`进行9行下移，对于阅读代码有帮助，当然也可以用`C-v`或者`M-v`进行正向和反向半屏阅读。    
+
+### 96. evil-surround
+
+[evil-surround][205]对应[vim-surround][206]
+
+[vim-surround][206]一般配合vim的快操作, 而[evil-surround][205]一般配合[expand-region][12],
+
+只不过有一点不友好，需要[evil][211]当做vi layer。
+
+```
+Add surrounding
+
+You can surround in visual-state with S<textobject> or gS<textobject>. Or in normal-state with ys<textobject> or yS<textobject>.
+Change surrounding
+
+You can change a surrounding with cs<old-textobject><new-textobject>.
+Delete surrounding
+
+You can delete a surrounding with ds<textobject>.
+```
+
+
+
+```
+我通常用expand-region选中一段文本,然后按 S 或者 M-x evil-surround-region ,再按任意字符(比如双引号)就可以在文本首尾两端附加该字符.
+
+当然它也支持修改删除操作.
+
+之前提到的text object也完美支持.
+```
+
+evil额外插件(C-z快速切换回emacs模式—）
+
+```
+C-z runs the command evil-exit-emacs-state (found in
+evil-emacs-state-map), which is an interactive compiled Lisp function
+in ‘evil-commands.el’.
+
+It is bound to C-z.
+
+```
+
+[evil-visualstar][213]
+
+```
+Add (global-evil-visualstar-mode) to your configuration.
+
+Make a visual selection with v or V, and then hit * to search that selection forward, or # to search that selection backward.
+
+If the evil-visualstar/persistent option is not nil, visual-state will remain in effect, allowing for repeated * or #.
+```
+
+[evil-matchit][212]
+
+```
+本质就是你当前焦点在文件的某个位置A,你按 % 或者 M-x evilmi-jump-items,焦点移到位置B,你再按同样的键,又回到了位置A.
+
+比如在一个HTML文件中,你就可以在 <body> 和 </body> 间跳来跳去.其他各种编程语言都支持.
+```
+
+[evil-escape][214]
+
+还没用起来！
+```
+
+The key sequence can be customized with the variable evil-escape-key-sequence. For instance to change it for jk:
+
+setq-default evil-escape-key-sequence "jk")
+
+
+(global-set-key (kbd "C-c C-g") 'evil-escape)
+```
+
+
+### 97. git-gutter
+
+[emacs-git-gutter][207]模仿优秀的vim插件[vim-git-gutter][208]， 方便观察文件哪边发生了变化比如
+
+
+![git-gutter][209] 
+
+
+### 98. git-timemachine
+
+一个小git插件，显示一个文件的所有版本信息
+
+[git-timemachine][210]
+
+
+
+`M-x git-timemachine`
 
 
 
@@ -3315,3 +3408,13 @@ easy for  life!!!
 [202]:https://www.zhihu.com/question/22149184
 [203]:https://github.com/tacahiroy/ctrlp-funky
 [204]:https://github.com/haya14busa/vim-asterisk
+[205]:https://github.com/emacs-evil/evil-surround
+[206]:https://github.com/tpope/vim-surround
+[207]:https://github.com/syohex/emacs-git-gutter
+[208]:https://github.com/airblade/vim-gitgutter
+[209]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/git-gutter.png
+[210]:https://github.com/pidu/git-timemachine
+[211]:https://github.com/emacs-evil/evil 
+[212]:https://github.com/redguardtoo/evil-matchit 
+[213]:https://github.com/bling/evil-visualstar 
+[214]:https://github.com/syl20bnr/evil-escape 

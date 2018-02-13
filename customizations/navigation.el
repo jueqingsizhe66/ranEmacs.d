@@ -102,14 +102,6 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-;; Magit
-(global-set-key (kbd "C-x m") 'magit-status-fullscreen)
-(autoload 'magit-status-fullscreen "magit")
-
-
-
-;; magit
-(global-set-key (kbd "C-x g") 'magit-status)
 
 
 ;; for firefox

@@ -252,6 +252,7 @@
 (load "find-file-in-project.el")
 (load "setup-find-file-in-project.el")
 (load "setup-python.el")
+(load "setup-git.el")
 ;(load "orca.el")
 
 
@@ -275,7 +276,15 @@
    (quote
     (name old-name general-category decomposition numeric-value iso-10646-comment uppercase lowercase titlecase)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(git-gutter:added-sign "☀")
+ '(git-gutter:deleted-sign "☂")
+ '(git-gutter:diff-option "-w")
  '(git-gutter:handled-backends (quote (svn hg git)))
+ '(git-gutter:lighter " GG")
+ '(git-gutter:modified-sign "☁")
+ '(git-gutter:separator-sign "|")
+ '(git-gutter:update-interval 2)
+ '(git-gutter:window-width 2)
  '(ispell-dictionary "british")
  '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe")
  '(muse-project-alist
@@ -284,7 +293,7 @@
       ("~/.emacs.d/GTD/myPlan/" :default "index" :major-mode planner-mode :visit-link planner-visit-link)))))
  '(package-selected-packages
    (quote
-    (org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (evil-matchit evil-visualstar evil-escape git-timemachine git-gutter org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(smtpmail-smtp-server "smtp.163.com")
