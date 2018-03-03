@@ -48,10 +48,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
- (front-context-string . "** https://liubo")
- (rear-context-string . "ication\nnothing\n")
- (position . 9448))
+ (filename . "~/.emacs.d/GTD/orgBoss/IDEA/idea.org")
+ (front-context-string . "** TODO [#A] doc")
+ (rear-context-string . "定能够反复的帮你完成计划的执行\n")
+ (position . 7900))
 ("core.clj"
  (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
  (front-context-string)

@@ -1,0 +1,26 @@
+星期六, 2018/3/3
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 19:08 Increasing that knowledge                            :EnglishPaper:
+
+
+#+BEGIN_SRC org
+  A large-Eddy Simulation of Wind-Plant Aerodynamic
+
+  Increasing that knowledge would allow operators to more effectively run their plants and help developers to
+  better site turbines within wind plants to increase efficiency and mitigate loads. It would enable researchers to
+  create better turbine- and wind plant-level control systems. It would also assist manufacturers in engineering the
+  next generation of larger turbines that will be more flexible and, unless carefully designed, susceptible to wakeinduced
+  damage. Field measurements are necessary to increase our knowledge of wind turbine wakes. Although
+  important, experiments used to gather such data are costly and difficult given the large scale of wind plants. A
+  lower-cost complement to these experiments is LES, the subject of this work.
+
+
+  Few have performed LES of full wind plants.
+#+END_SRC
+
