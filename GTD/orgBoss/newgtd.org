@@ -1027,5 +1027,13 @@ CLOSED: [2018-02-14 周三 18:27]
                     #+BEGIN_SRC sh
                       G:\JavaBookmarks\hutool>ag "public\sclass\s\w*"
                     #+END_SRC
-
-
+** TODO [#B] python matplot练习 <2018-03-01 周四 22:04>                :@NCEPU:
+SCHEDULED: <2018-03-01 周四>
+                    :PROPERTIES:
+                    :Effort: 1:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-03-01 周四 22:05]--[2018-03-01 周四 22:05] =>  0:00
+                    :END:
+                    
+                    

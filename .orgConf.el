@@ -508,6 +508,7 @@ Captured %<%Y-%m-%d %H:%M>
                       (:startgroup . nil)
                       ("multiAxis" . ?t)
                       ("graduation" . ?g)
+                      ("blockchain" . ?b)
                       (:endgroup . nil)
 
                       (:newline)
