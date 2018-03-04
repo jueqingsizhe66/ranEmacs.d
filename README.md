@@ -17,6 +17,7 @@ and ubuntu, all valid for newer.
 *注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
 
 *注意，在[标题66][150]我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
+<font color="red">慎重加密！防止丢失！</font>
 
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
@@ -2031,7 +2032,7 @@ org-mind-map-write: 输出的pdf文件
 每次org-mind-map-write的tag颜色都是随机的。
 
 
-### 66. 有些topic不想让别人看到org-crypt
+### 66. 有些topic不想让别人看到org-crypt（慎重加密！！!防止丢失！！！！）
 
 加密分为两种方式对称和非对称，org[默认EasyPG包已经安装][141],也可以查找当地elpa包，查找epa-file.el即可。
 
@@ -2081,6 +2082,11 @@ Kleopatra创建证书时候输入两次密码时候对应的密码。还有好�
 加密是保密知识劳动成果的一种意识(扯淡!尿性！)
 
 That's all, funny with enctypt files.
+
+
+注意，由于重装系统删除了原先的asc证书文件，导致无法还原当时密钥，所以一些加密信息无法还原(干瞪眼），所以一定得从Kleopatra导出证书，并做好保存(相同用户名
+相同邮箱 不同时间生成的密钥是完全不一样的，不可重复性)
+并且修改.orgConf.el中关于org-crypt-key的16位加密数字。保持证书+密匙一致性！！
 
 ### 67. org-alert 提醒功能
 
