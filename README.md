@@ -17,7 +17,10 @@ and ubuntu, all valid for newer.
 *注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
 
 *注意，在[标题66][150]我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
-<font color="red">慎重加密！防止丢失！</font>
+
+``` org
+慎重加密！防止丢失！
+```
 
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
 [key-binding-convention][45]
