@@ -2619,6 +2619,8 @@ load 'ruby-end.el'
 
 ```
 
+
+
 3. 添加了一些snippets
 
 ```
@@ -2652,6 +2654,25 @@ np  tab ==> import numpy as np
 
 
 ```
+
+4. pip 豆瓣源配置
+
+
+路径: `C:\Users\{Computename}\pip`
+内容:
+```
+
+[global]
+timeout = 60
+index-url = http://pypi.douban.com/simple
+trusted-host = pypi.douban.com
+
+```
+
+
+这样直接pip install [包名]即可
+不需要 `pip install -i https://pypi.doubanio.com/simple/ numpy `
+
 
 [python练习实例][176]
 ```
@@ -3320,6 +3341,95 @@ close  $CollectFile
 
 ```
 
+### 101. sbcl(quicklisp) + slime 构建lisp平台
+
+怀念一下lisp，重新在emacs配置一下，原先使用[clisp][222]，今天查了一下发现自从2010年7月它都没update过，还是单线程，所以改用[sbcl][223],
+而在emacs可以使用slime很好的调用sbcl或者clisp.
+
+
+#### sbcl侧配置
+
+1. 下载 [quicklisp][224]
+2. 安装quicklisp,参照quicklisp官网
+
+```
+sbcl --load quicklisp.lisp
+
+(quicklisp-quickstart:install)
+
+
+
+```
+帮助信息可参考 `(quicklisp-quickstart:help)`
+
+3. 配置到sbcl启动文件中.sbclrc
+
+```
+  ==== quicklisp installed ====
+
+    To load a system, use: (ql:quickload "system-name")
+
+    To find systems, use: (ql:system-apropos "term")
+
+    To load Quicklisp every time you start Lisp, use: (ql:add-to-init-file)
+
+    For more information, see http://www.quicklisp.org/beta/
+
+```
+
+执行`(ql:add-to-init-file)` 会添加如下内容到你的`.sbclrc` 文件中
+
+```
+  ;;; The following lines added by ql:add-to-init-file:
+  #-quicklisp
+  (let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+                                         (user-homedir-pathname))))
+    (when (probe-file quicklisp-init)
+      (load quicklisp-init)))
+
+Press Enter to continue.
+
+#P"C:/Users/yzl/.sbclrc"
+```
+
+
+到这里你就可以使用(ql:quickload "包名")来安装lisp软件工具包了,
+使用(ql:system-apropos "包名")来查找lisp相关软件工具包。
+
+但是得注意一点，你得把.sbclrc和quicklisp文件夹【当你执行(quicklisp-quickstart:install,其实是在`c:\users\yzl\ 新建了一个quicklisp文件夹，并让以后你通过quicklisp管理的包都放入其中`】，统统拷贝到 `C:\Users\yzl\AppData\Roaming\ `文件夹下
+
+[slime-company][225] : 类似于slime-fancy, 源于这个[issue][226]
+
+#### emacs侧配置
+
+麻痹，真想爆粗口,只支持24和23.4
+```
+SLIME supports a wide range of operating systems and Lisp implementations. SLIME runs on Unix systems, Mac OSX, and Microsoft Windows. GNU Emacs versions 24 and 23.4 are supported. XEmacs is not supported anymore. 
+```
+
+但是也发现[有人在linux搭建成功][227]
+
+setupsbcl.el
+
+```
+
+(setq inferior-lisp-program "~/.emacs.d/customizations/sbcl/sbcl.exe");设置优先使用哪种Common Lisp实现
+(add-to-list 'load-path "~/.emacs.d/customizations/slime/");设置Slime路径
+(require 'slime)
+(slime-setup)
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy));让slime变得更好看，比如把sbcl的*变成CL-USER>
+```
+
+init.el
+
+```
+(load "setupsbcl.el");
+```
+
+这么不友好！！ 只好温柔的一删，不用slime也可以!只用sbcl+quicklisp
+搜一下[lispbox][228]你发现更新到2010 oct,人气不足.
+
 <hr/>
 <hr/>
 
@@ -3543,3 +3653,12 @@ close  $CollectFile
 [217]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gnucrypt.png
 [218]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/gpa.png
 [219]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/secret.png
+[220]:http://cnlox.is-programmer.com/posts/34114.html 
+[221]:https://www.tuicool.com/articles/FBzANvE 
+[222]:https://clisp.sourceforge.io/ 
+[223]:http://www.sbcl.org/getting.html 
+[224]:https://www.quicklisp.org/beta/ 
+[225]:https://github.com/anwyn/slime-company 
+[226]:https://github.com/slime/slime/issues/357 
+[227]:https://github.com/slime/slime/issues/411 
+[228]:https://github.com/andreer/lispbox 

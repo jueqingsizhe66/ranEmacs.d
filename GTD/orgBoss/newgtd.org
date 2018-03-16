@@ -711,6 +711,8 @@ any number of existing types and classes(similar to mix-ins ,traits, interfaces 
 languages)
 we can then use extend-type function, to extent the exist type into many new functions.
 
+
+#+BEGIN_SRC clojure
 (defprotocol Concatenatable
    (cat [this other]))
 
@@ -723,6 +725,9 @@ we can then use extend-type function, to extent the exist type into many new fun
    Concatenatable 
    (cat [this other]
       (concat this other)))
+
+
+#+END_SRC
 
 
 

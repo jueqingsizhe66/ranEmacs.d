@@ -55,20 +55,30 @@
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")                                             ;;
+;;                          ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")))                           ;;
+;; (add-to-list 'package-archives                                                                                      ;;
+;;            ;;  '("melpa-stable" . "http://stable.melpa.org/packages/") t;; many packages won't show if using stable ;;
+;;              '("melpa" . "http://melpa.milkbox.net/packages/")                                                      ;;
+;;              )                                                                                                      ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")))
-(add-to-list 'package-archives
-           ;;  '("melpa-stable" . "http://stable.melpa.org/packages/") t;; many packages won't show if using stable
-             '("melpa" . "http://melpa.milkbox.net/packages/") 
-             )
-
-(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
-
+                         ("melpa-stable" . "http://elpa.emacs-china.org/melpa-stable/")
+                         ("melpa" . "http://elpa.emacs-china.org/melpa/")
+                         ("marmalada" . "http://elpa.emacs-china.org/marmalade/")))
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
 (package-initialize)
-
+;(setq temporary-file-directory "D://SlimeTemp//") 
+;(setq temporary-file-directory "C:\\Users\\yzl\\SlimeTemp") 
+;(setq temporary-file-directory "C:/Users/Administrator/AppData/Local/Temp/") 
+(setq temporary-file-directory "C:/Users/yzl/AppData/Local/Temp/") 
+;(setq temporary-file-directory "C:/Users/Default/AppData/Local/Temp/") 
+;;(setq temporary-file-directory "C://Documents and Settings//Administrator//Local Settings//Temp") 
 ;; Download the ELPA archive description if needed.
 ;; This informs Emacs about the latest versions of all packages, and
 ;; makes them available for download.
@@ -242,6 +252,7 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
+;(load "setupsbcl.el")
 (load "setup-js.el")
 (load "setup-rust.el")
 (load "fortran-editing.el")
@@ -296,7 +307,7 @@
     ("~/.emacs.d/GTD/OrgBoss/Journal/20180129" "~/.emacs.d/GTD/OrgBoss/Journal/20180130" "~/.emacs.d/GTD/OrgBoss/Journal/20180131" "~/.emacs.d/GTD/OrgBoss/Journal/20180201" "~/.emacs.d/GTD/OrgBoss/Journal/20180202" "~/.emacs.d/GTD/OrgBoss/Journal/20180203" "~/.emacs.d/GTD/OrgBoss/Journal/20180204" "~/.emacs.d/GTD/OrgBoss/Journal/20180205" "~/.emacs.d/GTD/OrgBoss/Journal/20180206" "~/.emacs.d/GTD/OrgBoss/Journal/20180207" "~/.emacs.d/GTD/OrgBoss/Journal/20180208" "~/.emacs.d/GTD/OrgBoss/Journal/20180209" "~/.emacs.d/GTD/OrgBoss/Journal/20180213" "~/.emacs.d/GTD/OrgBoss/Journal/20180214" "~/.emacs.d/GTD/OrgBoss/Journal/20180215" "~/.emacs.d/GTD/OrgBoss/Journal/20180220" "~/.emacs.d/GTD/orgBoss/newgtd.org" "~/.emacs.d/GTD/orgBoss/Book/book.org" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org" "~/.emacs.d/GTD/orgBoss/Financial/finances.org" "~/.emacs.d/GTD/orgBoss/Film/film.org" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org" "~/.emacs.d/GTD/orgBoss/Someday/someday.org" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "~/.emacs.d/GTD/orgBoss/writing.org" "~/.emacs.d/GTD/orgBoss/Habit/habits.org" "~/.emacs.d/GTD/phd1.org" "~/.emacs.d/GTD/Dissertation.org" "~/.emacs.d/GTD/thesis-proposal.org")))
  '(package-selected-packages
    (quote
-    (window-numbering evil-matchit evil-visualstar evil-escape git-timemachine git-gutter org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (xpm window-numbering evil-matchit evil-visualstar evil-escape git-timemachine git-gutter org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(smtpmail-smtp-server "smtp.163.com")
@@ -308,7 +319,7 @@
 ;  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ; 'noerror)
 ;
-(setq default-directory "G:/clojure-home")
+(setq default-directory "K:/clojure-home")
 ; (require 'org-install)
 ;
 ; ;; The following lines are always needed. Choose your own keys.

@@ -1,0 +1,282 @@
+星期四, 2018/3/8
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 09:43 春种秋收冬藏                                                 :地球:
+
+任何时代都是这样，自己有一块小的自留地，春种，夏长，秋收，冬藏
+
+** 21:32 数据获取方式                                                 :java:
+
+1. 文件方式(loadFromFile(path)
+2. URL方式(网络流)loadFromStream(stream)
+3. 数据库方式loadFromSQL(connection)
+
+** 21:35 设计模式原则                                                 :java:
+
+1. 开闭原则
+对修改关闭，对扩展开放
+
+关修开拓， 开放拓展，关闭修改   
+
+这边的修改关闭是指，拓展新类的时候，只创建新类即可，不需要更改原先的兄弟类
+不修改，一般不修改其他子类，也不修改祖先类
+ 
+对拓展开放，是指系统拓展很方便 ，建立新的实现类或者继承类即可。
+
+2. 依赖倒置原则
+(使用父类)通俗的说就是：变量、参数、返回值类型尽量用接口/抽象类，而不用具体类，能用父接口/类，就不用子接口/类。
+
+3. 里氏原则
+任何基类可以出现的地方，子类一定可以出现。或者用如鹏课程的话语体系是：
+父类类型的变量可以指向子类类型的对象，调用方法的时候执行的是子类的实现(多态定义就这两句话，怎么用金包骨法 再改造一下呢）。
+
+儿子可以挂老子的名做生意，真正做事情就得靠儿子了。
+
+老子罩孩子， 孩子干老子(孩子可能千万千万，老子只有一个)。
+
+4. 	接口隔离原则 
+   
+
+5.  迪米特原则/最小知识原则
+
+
+一个对象要对其他对象有最少的认知。人话：
+         一个类不要把不必要的成员public；
+         一个类不要访问其他类的private成员；
+         一个类不要访问其他类的成员细节
+         第三点的解析：不要出现getA().getB().getC().getD()这种情况(连续调用对象 不好？！有点visitor pattern的感觉)。
+
+        
+6.优先使用组合，而不是继承。
+
+人话： 不然就插入一个 成员变量（某种数据类型，比如List, Map, Array等）
+也就是重用一个类的成员(局部变量？）的时候，尽量不要声明他的子类，而是组合。
+继承的坏处：如果直接继承基类，会破坏封装，因为继承将基类的实现细节暴露给子类；
+  如果基类的实现发生改变，则子类的实现也不得不发生改变
+  
+  所有人都可以继承某个类，但是如果收入门徒，很容易学了不应该学的（四不像），又很容易因为父类发生更改，而出现问题.
+还不如自创成员变量！！！除非是相同血脉的
+
+
+
+状态接口(和访问者的感觉类似，dom对象，html对象)定义了不同状态下不同的行为，不同状态用不同的类对象。
+	这样的好处：
+1）	不用大量的if，设计模式中很重要的一个目标是“消灭if”
+2）	由于接口定义了子类必须对行为做响应，不存在“忘了”处理某些状态的情况
+3）	增加新的状态只要增加新的子类即可，而用if的写法需要到处改N多的if，体现了“开闭原则”
+
+ 
+适配器：(在改不变所有的情况，到(注意 到最后还是用其他，只不过中间转了一下 AOP也有这种感觉）
+ usb电池
+ 苹果套上盖变android充电线
+ HDMI投屏器(同屏转换)
+  
+如果需要将“一些现存的对象”放在新的环境中应用，但是新环境要求的接口是这些现存对象所不满足的。那么就可以创建一个适配器让旧对象适用于新环境。
+
+
+责任链模式也是一种桥接模式!
+
+
+
+设计模式，最重要的意思就是，我不想让老成员少做变动（当进行拓展的时候），这就需要好好设计设计。
+当然也是为了用尽量少的方式、过程来达到目的。
+既能少做变动，又能实现目的，就是一种好的设计！(你现在掌握的知识并不是 最全面、最广泛、可进行拓展的，所以你在成长，一辈子都在成长着）
+
+你的目的是什么？ 学的是一种方法？？？？？科研的方法？ 研究的思路？？ 严谨性！！ 怎么培养？
+
+
+做最少的工作，完成最多的活(好难活啊！)
+
+
+装饰器模式和适配器模式的区别？
+
+装饰器必须是实现相同接口（比如可读list  都是实现List接口a)( 类似于镜子模式  特点：实现相同接口)
+而适配器模式并不需要实现相同接口，只是最后调用被适配的对象的方法即可(到那个时刻为止)(套接模式，对就是管道的套接的感觉 特点：适配器对象中有被适配器对象充当其属性。)
+
+
+能想明白就干（想不明白千万别干)  如何想明白？？？  明白到什么程度？？？
+
+
+
+#+BEGIN_SRC java
+          List<String> list = new SizeLimitList<>(new LinkedList<>(),10);
+
+          /*
+          此种方式类似于访问者模式的教程   new ---new ----new
+          也类似于函数式编程的特点
+         http://a-little-java-a-few-patterns.readthedocs.io/zh_CN/latest/
+       
+         装饰器分层，装饰器只干一层功能(最大好处)
+           ,*/
+          List<String> list2  = new StringLenLimitList(new SizeLimitList<>(new LinkedList<>(),10));
+
+#+END_SRC
+
+
+
+#+BEGIN_SRC java
+
+    Collections.synchronizedList(list); 转化为线程安全的list  内部实现了
+
+    static class synchronized () 内部类，进行了代码块同步的过程
+            return Collections.unmodifiableList(list);
+ 
+      return Collections.unmodifiableList(list);
+#+END_SRC
+
+
+
+#+BEGIN_SRC java
+          try(OutputStream os = new FileOutputStream("E://hello.txt");){
+              Writer osWriter = new OutputStreamWriter(os);
+              osWriter.write("hello ..................");
+          }
+
+          /*
+          装饰一下, 二进制GZIP保存模式（乱码了)
+           ,*/
+          try(OutputStream os2 = new GZIPOutputStream(new FileOutputStream("E://helloZip.txt"));){
+              Writer osWriter2 = new OutputStreamWriter(os2);
+              osWriter2.write("hello ..................");
+          }
+
+          /*
+          缓存一下，性能提高
+           ,*/
+          try(OutputStream os2 = new GZIPOutputStream(new FileOutputStream("E://helloZip.txt"));){
+              Writer osWriter2 = new BufferedWriter(new OutputStreamWriter(os2)) ;
+              osWriter2.write("hello ..................");
+          }
+
+#+END_SRC
+
+
+对于执行不带where语句的delete和update拒绝执行， 带显示sql功能
+
+
+
+#+BEGIN_SRC java
+  package f708.Connection;
+
+  import java.sql.*;
+  import java.util.Properties;
+  import java.util.logging.Logger;
+  import java.util.regex.Pattern;
+
+  public class CatDriver implements Driver {
+      private Driver target;
+      static {
+          try {
+              /*
+              自己注册给DriverManager
+
+              通过url格式是否accept? accept就是通过正则表达式进行编写的！！  新的url格式你认识？？？ 认识就调用自身的CatDriver
+              如果不认识就报没有这个Driver
+               ,*/
+              DriverManager.registerDriver(new CatDriver());
+          } catch (SQLException e) {
+              e.printStackTrace();
+          }
+      }
+      @Override
+      public Connection connect(String url, Properties info) throws SQLException {
+          if (!acceptsURL(url)) {
+              return null;
+          }
+          String[] segments = url.split("\\|");
+          String targetDriver = segments[1];
+          String targetUrl = segments[2];
+
+          try {
+              Class.forName(targetDriver); // 真正的jdbc方式 注册mysql驱动
+          } catch (ClassNotFoundException e) {
+              e.printStackTrace();
+          }
+          this.target= DriverManager.getDriver(targetUrl); // 真正jdbc方式获取
+          Connection conn =DriverManager.getConnection(targetUrl,info);// 真正获取链接
+          return new CatConnection(conn);
+      }
+
+      @Override
+      public boolean acceptsURL(String url) throws SQLException {
+          //jdbc:cat:|com.mysql.jdbc.Driver|jdbc:/mysql//localhost:3306...
+          Pattern pattern = Pattern.compile("jdbc:cat:|(.+)?|(.+)");
+          return pattern.matcher(url).matches();
+      }
+
+      @Override
+      public DriverPropertyInfo[] getPropertyInfo(String url, Properties info) throws SQLException {
+          return target.getPropertyInfo(url,info);
+      }
+
+      @Override
+      public int getMajorVersion() {
+          return target.getMajorVersion();
+      }
+
+      @Override
+      public int getMinorVersion() {
+          return target.getMinorVersion();
+      }
+
+      @Override
+      public boolean jdbcCompliant() {
+          return target.jdbcCompliant();
+      }
+
+      @Override
+      public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+          return target.getParentLogger();
+      }
+  }
+
+#+END_SRC
+
+
+https://github.com/alibaba/druid
+
+
+#+BEGIN_SRC java
+  package f708.Connection;
+
+  import java.sql.SQLException;
+  import java.util.Date;
+
+  /*
+  商用级运用不能用此种方式  t_where???
+
+  使用解释器模式……
+
+  写自己的解析器
+
+  分析sql语句，形成AST，来真正实现翻译，减少漏洞
+
+  Druid 不错！
+
+
+   ,*/
+  public class CatUtils {
+      public static void checkSQL(String sql) throws SQLException {
+          if (sql.startsWith("delete")&& !sql.contains("where")) {
+              throw new SQLException("Cannot delete records without sql!!!!!!");
+          }
+          if (sql.startsWith("update")&& !sql.contains("where")) {
+              throw new SQLException("Cannot update records without sql!!!!!!");
+          }
+      }
+
+      public static void log(String sql)  {
+          /*
+          可以用Log4j  记录下来 持久化
+           ,*/
+          System.out.println(new Date(System.currentTimeMillis())+": " +sql);
+
+      }
+  }
+
+#+END_SRC
