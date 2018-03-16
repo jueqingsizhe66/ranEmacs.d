@@ -3430,6 +3430,8 @@ init.el
 这么不友好！！ 只好温柔的一删，不用slime也可以!只用sbcl+quicklisp
 搜一下[lispbox][228]你发现更新到2010 oct,人气不足.
 
+后来发现[陈斌][229]的配置好使, 而且兼容slime,r,python,perldb等，强大啊！
+
 <hr/>
 <hr/>
 
@@ -3662,3 +3664,4 @@ init.el
 [226]:https://github.com/slime/slime/issues/357 
 [227]:https://github.com/slime/slime/issues/411 
 [228]:https://github.com/andreer/lispbox 
+[229]:https://github.com/redguardtoo/emacs.d 
