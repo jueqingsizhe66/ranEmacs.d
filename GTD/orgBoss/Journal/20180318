@@ -1,0 +1,70 @@
+星期日, 2018/3/18
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 17:59 print 递归                                                   :java:
+
+
+#+BEGIN_SRC java
+  编写打印遍历节点信息的方法，采用递归：
+  static void print(OrgItem orgItem,int depth)
+  {
+          //如果节点是员工节点
+          if(orgItem instanceof Staff)
+          {
+                  Staff staff = (Staff)orgItem;
+                  System.out.println(repeatTab(depth)+"员工："+orgItem.getName()+",级别:"+staff.getLevel()+"，岗位:"+staff.getJobName());
+          }
+          //如果是组织单元节点
+          else if(orgItem instanceof OrgUnit)
+          {
+                  OrgUnit ou = (OrgUnit)orgItem;
+                  //在前面输出depth个Tab进行缩进
+                  System.out.println(repeatTab(depth)+"组织单元："+orgItem.getName());
+                  //对于组织单元节点，输出子节点
+                  for(OrgItem item : ou.getChildren())
+                  {
+                          print(item,depth+1);//缩进深入一层
+                  }
+          }
+  }
+
+#+END_SRC
+
+
+** 23:40 Social engineering                                           :地球:
+
+
+#+BEGIN_SRC org
+  Who am I??
+
+
+  “没有一个系统是安全的”
+
+   “人不能总藏在他的计算机后面，最大的安全漏洞并不是存在于什么程序或者服务器内，人类才是最大的安全漏洞”
+
+  “所有黑客手段中最有效的、最伟大的幻想艺术——社交工程学”
+
+  “你的脸皮要足够厚，那样世界就会在你的脚下”
+
+  台词点明主题，这电影要表达的是黑客除了本职技术外，还需要回归到最传统的路子上，要会骗人。
+
+  “人类天生胆小且容易受骗” “人们只看到他们愿意看到的”
+
+  MRX用的招数是根据对方给自己设的陷阱反过来给对方设置陷阱，男主角学得很快，利用MRX的性格弱点使他落网，利用女调查员的弱点让自己和同伙逃脱，用剧中台词就是“黑掉人类”——每个人也就是更精密但一样有安全漏洞的电脑系统。
+
+
+  利用人的（同情、自负）弱点都很典型
+
+
+
+  1. “人类天生胆小且容易受骗” 
+  2. “人们只看到他们愿意看到的”
+
+  Social Engineering。针对人性的漏洞，不能讲遇到好心人，只要这个人有人性，就有漏洞可黑。凡人皆有恻隐。
+#+END_SRC
+
