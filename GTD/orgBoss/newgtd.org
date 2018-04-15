@@ -103,11 +103,13 @@ CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
                     :END:
                     - State "DONE"       from "TODO"       [2017-09-29 周五 23:40]
                     Captured 2017-09-28 13:52
-** TODO [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
-SCHEDULED: <2017-09-29 周五 . +1w>
+** PENDING [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
+SCHEDULED: <2017-10-06 周五 +1w>
 :PROPERTIES:
+:LAST_REPEAT: [2018-04-20 周五 00:04]
 :END:
 
+- State "DONE"       from "TODO"          [2018-04-20 周五 00:04]
 - State "TODO"       from "TODO"          [2017-10-08 周日 02:33]
                     :PROPERTIES:
                     :Effort: 4:00
@@ -334,11 +336,12 @@ DEADLINE: <2019-10-21 周一>
                     
                     
 Somethings you need to be done by yourself
-** TODO [#A] SCI结果后处理 <2017-10-21 周六 21:58>                      :@work:
-DEADLINE: <2017-11-06 周一> SCHEDULED: <2017-10-29 周日>
+** DONE [#A] SCI结果后处理 <2017-10-21 周六 21:58>                      :@work:
+CLOSED: [2018-04-20 周五 02:21] DEADLINE: <2017-11-06 周一> SCHEDULED: <2017-10-29 周日>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-04-20 周五 02:21]
                     :LOGBOOK:
                     CLOCK: [2017-10-21 周六 21:58]--[2017-10-21 周六 22:48] =>  0:50
                     :END:
@@ -957,11 +960,12 @@ CLOSED: [2018-04-09 周一 20:28] SCHEDULED: <2018-01-26 周五> DEADLINE: <2018
  
 审签单也是16000，这和合同上的40000不符，但是合起来24000是40000，所以这个问题
 得说清楚。[[*提交基金进展报告 <2017-12-01 周五 14:40>][提交基金进展报告 <2017-12-01 周五 14:40>]]
-** TODO [#B] 如鹏提高docker <2018-01-30 周二 15:19>                  :@home:
-SCHEDULED: <2018-02-01 周四>
+** DONE [#B] 如鹏提高docker <2018-01-30 周二 15:19>                     :@home:
+CLOSED: [2018-04-20 周五 00:04] SCHEDULED: <2018-02-01 周四>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-04-20 周五 00:04]
                     :LOGBOOK:
                     CLOCK: [2018-01-30 周二 15:19]--[2018-01-30 周二 15:20] =>  0:01
                     :END:
