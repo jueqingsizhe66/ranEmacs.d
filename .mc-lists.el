@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        evil-forward-char
         ivy-switch-buffer
         keyboard-escape-quit
         kill-region

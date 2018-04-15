@@ -226,34 +226,39 @@ c-x r b : 跳转
 
 [GTD Workflow][14]
 
-常用快捷键：
+常用快捷键
 
 ```
 Tab打开标题
-c-c c-n 光标沿标题方向向下移动
-c-c c-p 光标沿标题方向向上移动
-c-c c-q 添加标题的tag
-c-c a 打开agender
-c-c c-t 添加当前标题的todo
-c-c c-d 添加当前标题deadline
-c-c c-s 添加当前标题的schedule
-<s Tab 添加src块
-<e Tab  添加example快
 
-c-c shift-< 打开calendar
-c-c shift-> 添加calendar鼠标下的日期
+查找:--------
+    c-c c-n 光标沿标题方向向下移动
+    c-c c-p 光标沿标题方向向上移动
+    c-c c-q 添加标题的tag
+    c-c a 打开agender
+    c-c c-t 添加当前标题的todo
+    c-c c-d 添加当前标题deadline
+    c-c c-s 添加当前标题的schedule
+    <s Tab 添加src块
+    <e Tab  添加example快
 
+    c-c shift-< 打开calendar
+    c-c shift-> 添加calendar鼠标下的日期
 
+修改：------
 
-M-RET 插入同级列表项
-M-S-RET 插入有 checkbox的同级列表项(<2018-02-05 14:26> 再次用于工作中)
-C-c C-c 改变 checkbox状态
-M-left/right 改变列表项层级关系
-M-up/dowm 上下移动列表项
+    M-RET 插入同级列表项(插入一个同级标题 <2018-04-23 17:41>)
+    M-S-RET 插入有 checkbox的同级列表项(<2018-02-05 14:26> 再次用于工作中)
+    C-c C-c 改变 checkbox状态
+    M-left/right 改变列表项层级关系
+    M-S-left/right 将子树升降级
+    M-S-up/down 将子树上下移
+    M-up/dowm 上下移动列表项
 
-输入C-c . 会出现一个日历，我们点选相应的时间即可插入。
+    输入C-c . 会出现一个日历，我们点选相应的时间即可插入(现在一般用M-x today)。
 
 ```
+
 
 注意，在标题上面或者总任务上面的尾巴添加上[%]或者[/]即可，emacs org-mode会自动进行计算任务的[总进度][87]。
 只有在任务list才能添加勾选checkbox，标题不添加。
@@ -1078,12 +1083,21 @@ d. Reflect(review frequently,weekly review, monthly review)
 Look over your lists as often as necessary to trust your choices about what to do next. Do a weekly 
 review to get clear, get current, and get creative. 
 ```
-e. Engage(Simply do)
+e. Engage(Simply do)(engine <2018-04-23 19:04>)
 ```
 Use your system to take appropriate actions with confidence. 
 ```
 
+CCORE[C-CORE]
+Org---Interprete---Tag---Recite----apply-----
 
+原来文学编程也是可以设置变量
+
+```
+#+begin_src sh :session *ssh goblin.howardism.org* :var dir="/opt"
+   ls $dir
+#+end_src
+```
 
 
 ### 45. 更好的org-mode bullet
@@ -1233,8 +1247,8 @@ writing can be seen from your organization and simplication.
 ```
 
 
-orgmode计时,
- 在todo.org中，移到一个条目上，按`Ctrl-c Ctrl-x Ctrl-i`即可对该条目开始计时，`Ctrl-c Ctrl-x Ctrl-o`停止当前计时。
+orgmode计时[<2018-04-23 20:20> 再次review],
+ 在todo.org中，移到一个条目上[一般是一个标题下]，按`Ctrl-c Ctrl-x Ctrl-i`即可对该条目开始计时，`Ctrl-c Ctrl-x Ctrl-o`停止当前计时。
  如果在Agenda中，移到条目按I(大写)即可对该条目开始计时，O(大写)即可停止计时。
 
 
@@ -1327,6 +1341,11 @@ when you need to memorize the source code in the .org file, one way you can use
  
  在每一个代码块执行`C-c C-c`即可看到结果（在windows配置完path之后，得重启系统,有些命令才有效)。
  很有意思的文学编程。( dame it, flyspell mode(flyspell mode 1) in the .orgConf.el)
+ 
+ ```
+ C-c s i   创建一个代码块
+ C-c s e   编辑代码块
+ ```
  
 ### 53. 常用的clojure-snippet
 
@@ -2123,7 +2142,7 @@ gpg --export-secret-keys >keyfile
 
 ![secret][219]
 
-所以这时候得从GPA导入私匙即可，很简单这里的import直接就可以导入密匙，这样
+所以这时候得从GPA导入私匙即可(我保存在我的电脑某一重要文件夹下，保证不丢失！)，很简单这里的import直接就可以导入密匙，这样
 重新打开Kleopatra即可，说了这么多一定得注意两把钥匙。
 
 
@@ -2530,7 +2549,7 @@ If you don't expect having to do it again,don't try to optimise it.
 [[hello][hello内部链接]
 
 通过C-c C-o打开链接(open)
-通过C-c C-l (org-insert-link  创建修改链接
+通过C-c C-l (org-insert-link  创建修改链接[可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
 ```
 
 进一步链接file
@@ -3432,6 +3451,166 @@ init.el
 
 后来发现[陈斌][229]的配置好使, 而且兼容slime,r,python,perldb等，强大啊！
 
+### 102. orgmode 表格说明
+
+```
+如何引用表格中其他字段
+推荐写法，@row_index$col_index
+```
+
+#### 插入公式
+在表格中敲击`C-u C-c=`会显示
+
+公式格式=‘@6$2='(算法 空格划分的所有元素)’ ,也就是说`源=list表达式`
+比如
+```
+@6$2='(+ @4$2..@5$2)  4,5两行的第二列求和 
+```
+
+```
+Field Fomula @2$1=
+```
+表示当前你所在的表格是第二行 第一列（从1开始）
+
+```
+
+| Date              | Category | Money | People     | Note |   |
+|-------------------+----------+-------+------------+------+---|
+| <2017-10-30 周一> | 备用     | +3000 | Yezhaolian |      |   |
+| <2017-10-30 周一> | 备用     | +7000 | zhujian    |      |   |
+| <2017-10-30 周一> | 火车票   | -4000 | zhuijan    |      |   |
+|-------------------+----------+-------+------------+------+---|
+|                   | Total:   |  6000 |            |      |   |
+#+TBLFM: @>$3=vsum(@2..@-1)   
+
+#+REVEAL: split
+#+BEGIN_EXAMPLE
+    1. @> The @ specifies a row, and this refers to the last row in a table.
+    2. $3 The $ specifies a column, so this refers to the third column.
+    3. vsum A vertical sum function with parameters given in parenthesis
+       vmean 取平均值
+    3. @2 The second row. Notice that it the Amount header is @1 and the dashes separating the header from the body is ignored.
+    4. @-1 The next to the last row. Using these relative references mean that we can add rows to our table, 
+    5. and still have the sum formula work.
+
+
+http://www.howardism.org/Technical/Emacs/spreadsheet.html
+#+END_EXAMPLE
+
+
+```
+
+#### 重新计算
+
+光标停留在表格上，`C-u C-c *` 重新计算
+
+或者`C-c C-c`
+
+
+#### 快速列求和
+
+有一种不需要编写公式就可以对某列求和的方式，将光标定位到某个cell，然后按下C-c + ，就会看到mini buffer的提示，然后按下S-Insert 键，就自动出现了求和的值
+
+```
+
+#+CAPTION: DAU统计  
+|   日期 | 新增 | 日活 |   VV |             转化率 |
+|--------+------+------+------+--------------------|
+|    <6> |      |      |      |                    |
+|      / |    < |    > |      |                    |
+| 2015-05-01 |   11 |   20 | 42.0 |                2.1 |
+| 2015-05-04 |   12 |   20 | 41.0 |               2.05 |
+| 2015-05-05 |   22 |   41 | 79.0 | 1.9268292682926829 |
+| 2015-05-06 |   47 |   81 | 117. | 1.2098765432098766 |
+|    All |   92 |  162 | 155. | 1.6049382716049383 |
+#+TBLFM: @4$5='(/ $4 $3);N::@5$5='(/ $4 $3);N::@6$5='(/ $4 $3);N::@7$5='(/ $4 $3);N::@8$2='(+ @4$2..@-1$2);N::@8$3='(+ @4$3..@-1$3);N::@8$4='(+ @4$4..@-1$4);N::@8$5='(/ $4 $3);N  
+```
+
+@8$2='(+ @4$2..@-1$2)  这时候@-1表示第七行，@-1叫做last row to @8也就是第七行。右边计算，不加上行信息，表示当前信息
+
+
+####  显示所有公式【强大】【另类编辑公式】
+
+定位到当前表格中`C-c '` ,显示所有公式[从这里也可以看明白不同的公式之间使用双冒号划分]
+
+在该窗口下使用`C-c C-c` 结束编辑，类似于编辑代码块`C-c s i`
+
+这边得和`C-c \`` 区分开，后者是对当前字段产生一个窗口，进行编辑.
+
+####  美化输出
+
+使用format表达式即可。
+
+```
+#+ATTR_HTML: :border 2 :rules all :frame border    
+| 计算时长(分钟)       | 原时长 | 改造后时长 | 优化比率(%) |  
+|----------------------+--------+------------+-------------|  
+| 改造表计算时长总计   | 939.90 |      144.9 |       84.58 |  
+| 未改造表总计         |   1311 |       1131 |       13.73 |  
+| 未改造周期性提数总计 |     89 |         89 |        0.00 |  
+| 总计                 | 2339.9 |     1364.9 |       41.67 |  
+#+TBLFM: @5$2='(+ @2$2..@4$2);N::@5$3='(+ @2$3..@4$3);N::$4='(format "%0.2f" (* (/ (* (- $2 $3) 1.0) $2) 100));N 
+```
+
+[表格内容对齐][232]
+
+
+
+#### 回到开始
+
+有时候你并不能知道具体当前行是第几行第几列，那就`C-c }`就会toggle row index和col_index
+
+当然你也可以使用`C-c ?` 显示当前cell的信息
+
+
+####  新的编辑公式方法
+
+1. 在当前表格中，直接`:=vmean(元素段信息)`
+2. `C-c C-c` 即可，把公式添加在表格下面
+
+```
+将光标放在（空） [formula] 单元格中, 然后在此字段中输入 :=vmean（$2..$3） 。 该公式意味着：计算此行中第二（ $2 ）到 第三（ $3 ）单元格的字段平均值。 如果喜欢其他符号，请输入 :=vmean(B&..C&) – 其中 & 字符代表在这一行。
+
+在上面键入公式的行中，键入 C-c C-c , 你将观察到两点变化： 1） :=vmean（$2..$3） 已被计算结果代替，2）以 ＃+TBLFM 开头的新行已被插入到表的底部。
+
+＃+TBLFM 行包含表的所有公式，在手动编辑时应小心
+
+作者：brantou
+链接：https://www.jianshu.com/p/3b184915c8a3
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
+
+注：不用担心使用 M-<left/right> 左右移动列或 M-<up/down> 上下移动行会混淆 ＃+TBLFM 行中的引用，因为每次移动都会自动更新引用。
+
+#### 更强大的插入行功能
+
+一般我们使用`C-c Enter` 表示插入一个表头
+
+`M-enter` 表示在下面插入一个空行,光标下移
+
+`M-S 上下左右箭头`  分表代表增加减小行  增加和减小列
+
+`Tab` 表示调到下一字段， 相反为`S-Tab`
+
+`C-c Space` 清空当前表格
+
+`S-Enter` 将上一行的cell文本复制到下一行
+
+#### 为什么使用org-table
+
+[朴素也是一种美][230]！！
+
+```
+最后回到本质，org-mode 提倡的宗旨是用简单的列表（plain list) 管理生活的点点滴滴。它注重的是内容本身而不是花哨的外表。用得越多，越觉得，最简单的ASCII也能带来美的感受，美在朴素。
+```
+
+#### 如何把excel中数据复制到org-mode做成一张表格？
+
+[excel表格内容直接用于org-mode][231]，其实有命令。操作如下： 
+1. 选中所有行； (黏贴的数据)
+2. c-c | ；对应命令的描述如下：
+
 <hr/>
 <hr/>
 
@@ -3665,3 +3844,6 @@ init.el
 [227]:https://github.com/slime/slime/issues/411 
 [228]:https://github.com/andreer/lispbox 
 [229]:https://github.com/redguardtoo/emacs.d 
+[230]:https://www.zhihu.com/question/26964808?sort=created 
+[231]:https://blog.csdn.net/u011729865/article/details/54292985 
+[232]:https://blog.csdn.net/dalewzm/article/details/47621089 
