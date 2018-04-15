@@ -2003,7 +2003,7 @@ flat-list to tree list
 ```
 
 
-有了这个插件真的挺方便的，勇气dired来，得心应手的.
+有了这个插件真的挺方便的，用起dired来，得心应手的.
 
 在dired目录下使用i打开折叠目录(关闭折叠，展开)，;则可以用来折叠目录。
 
@@ -2056,9 +2056,15 @@ org-mind-map-write: 输出的pdf文件
 
 ### 66. 有些topic不想让别人看到org-crypt（慎重加密！！!防止丢失！！！！）
 
+windows下主要有两个软件(明白他们俩的作用)
+
+1. kleopatra
+2. GPA
+
 加密分为两种方式对称和非对称，org[默认EasyPG包已经安装][141],也可以查找当地elpa包，查找epa-file.el即可。
 
 但是EasyPG只是一个接口，用于调用[gnupg软件][142]，我直接[下载windows版本][143]
+
 [linux版本参考coldnew][144], ubuntu使用`apt-get install gpg`
 现在就不把该exe(太大,自己去官网下载，说明我有事先打开kleopatra-gnupg-win3.0软件
 
@@ -2308,7 +2314,7 @@ github: [org-bookmark-heading][152]
 ### 72. 经典的org clock操作和拓展
 
 
-[org-clock-convienience][154]教会你如何在agenda画面中修改由于某件事情耽搁（但是你又是一哥时间控，无时无刻都在用org clock-in 模式)，这样你就需要多添加一些时间，
+[org-clock-convienience][154]教会你如何在agenda画面中修改由于某件事情耽搁（但是你又是一个时间控，无时无刻都在用org clock-in 模式)，这样你就需要多添加一些时间，
 延长或者减少了,但是不用
 
 [org-clock-budget][153]教会你的是如何给一件事情分配多少时间，并且安排很多星期去做，
