@@ -430,7 +430,7 @@ add `evil-surround` into my-package list
 
 ### 18. mo-git-blame and ivy
 
-#### 函数名
+### 函数名
 
 1. ivy-resume
 2. counsel-M-x

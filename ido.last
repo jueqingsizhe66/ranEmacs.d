@@ -27,6 +27,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/yzl/AppData/Roaming/.emacs.d/elpa/ag-20180225.240/" (23243 33699 0 0) "ag.elc" "ag.el" "ag-pkg.el" "ag-autoloads.el" "../" "./")
+
  ("c:/Users/yzl/AppData/Roaming/.emacs.d/" (23211 55462 0 0) "url/" "themes/" "testLisp.lisp" "srecode-map.el" "snippets/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "ispell/" "init.el" "ido.last" "GTD/" "eshell/" "emms/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ag.exe" "abbrev_defs" ".smex-items" ".session" ".recentf" ".python-environments/" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "#init.el#" "../" "./")
 
  ("K:/clojure-home/" (23206 39867 0 0) "untitled/" "undead/" "the-joy-of-clojure/" "testClojure.iml" "test-tentacles/" "test-exception/" "test-clojure1/" "src/" "sotclojureAndelisp.clj" "reveal.js/" "parens-of-the-dead/" "mysql/" "my-app/" "luminus-template/" "luminus/" "LightTable/" "lib/" "hello.org" "hello.md" "hello.el" "first-example/" "examples/" "emacs-25.3-x86_64/" "emacs-25.2-x86_64/" "dot-files/" "clojure-snippets/" "clojure-20180110.iws" "clojure-20180110.ipr" "clojure-20180110.iml" "clojure/" "clj-new-github/" "book-source/" "ack" "a.rs" "a.py" "a.org" "a.md" "a.html" "a.el" ".idea/" ".gnus.el" "../" "./")

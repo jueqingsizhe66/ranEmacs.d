@@ -938,11 +938,12 @@ CLOSED: [2018-02-14 周三 00:03] SCHEDULED: <2018-02-14 周三>
                     
 回家的票（2张 欣然和我）
                     
-** TODO [#B] 年后报增 <2018-01-26 周五 17:30>                        :@work:
-SCHEDULED: <2018-01-26 周五> DEADLINE: <2018-02-26 周一>
+** DONE [#B] 年后报增 <2018-01-26 周五 17:30>                           :@work:
+CLOSED: [2018-04-09 周一 20:28] SCHEDULED: <2018-01-26 周五> DEADLINE: <2018-02-26 周一>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-04-09 周一 20:28]
                     :LOGBOOK:
                     CLOCK: [2018-01-26 周五 17:30]--[2018-01-26 周五 17:32] =>  0:02
                     :END:
@@ -989,11 +990,12 @@ http://www.rupeng.com/Activities/59.shtml
     #+BEGIN_SRC python
       print “he”
     #+END_SRC
-** TODO [#B] 提交文章初稿给王老师 <2018-02-04 周日 11:43> :@NCEPU:EnglishPaper:
-DEADLINE: <2018-02-14 周三> SCHEDULED: <2018-02-04 周日>
+** DONE [#B] 提交文章初稿给王老师 <2018-02-04 周日 11:43> :@NCEPU:EnglishPaper:
+CLOSED: [2018-04-09 周一 20:28] DEADLINE: <2018-02-14 周三> SCHEDULED: <2018-02-04 周日>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-04-09 周一 20:28]
                     :LOGBOOK:
                     CLOCK: [2018-02-04 周日 11:43]--[2018-02-04 周日 11:44] =>  0:01
                     :END:
@@ -1002,16 +1004,6 @@ DEADLINE: <2018-02-14 周三> SCHEDULED: <2018-02-04 周日>
 so
 
 
-                    . -
-** TODO [#B] testOrg <2018-02-08 周四 23:54>                      :@Company:
-DEADLINE: <2018-02-10 周六>
-                    :PROPERTIES:
-                    :WILD_NOTIFIER_NOTIFY_BEFORE: 200 150 100 40 20 10 5
-                    :Effort:   2:00
-                    :END:
-                    :LOGBOOK:
-                    CLOCK: [2018-02-08 周四 23:54]--[2018-02-08 周四 23:55] =>  0:01
-                    :END:
 ** DONE [#B] Capture the Class name in project folder <2018-02-14 周三 12:11> :@Home:
 CLOSED: [2018-02-14 周三 18:27]
 - State "DONE"       from "TODO"          [2018-02-14 周三 18:27]
