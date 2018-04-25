@@ -858,7 +858,8 @@ Captured %<%Y-%m-%d %H:%M>
 ;;bind key `C-c s i’ to the function org-inser-src-block
 (add-hook 'org-mode-hook '(lambda ()
                             ;; turn on flyspell-mode by default
-                            (flyspell-mode 1)
+                            (flyspell-mode 0)
+                            ;;(flyspell-mode 1)
                             ;; C-TAB for expanding
                             (local-set-key (kbd "C-<tab>")
                                            'yas/expand-from-trigger-key)
@@ -1117,7 +1118,7 @@ Use a prefix arg to get regular RET. "                                          
 (require 'ox-reveal)
 ;(setq org-reveal-root "file:///~/.emacs.d/GTD/reveal.js")
 ;(setq org-reveal-root "~/.emacs.d/GTD/reveal.js/")
-(setq org-reveal-root "file:///c:/Users/YeZhao/AppData/Roaming/.emacs.d/GTD/reveal.js")
+(setq org-reveal-root "file:///k:/reveal.js")
 (setq org-reveal-postamble "Ye Zhaoliang")
 
 

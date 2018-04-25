@@ -1630,6 +1630,20 @@ F9后一页slide(后一个标题)
 ```
 设置完，导出reveal.js的html才不会乱码！！
 
+在.orgConf.el中的设置
+
+```
+;;ox-reveal outside emacs slide(inside emacs use org-tree-slide)
+(require 'ox-reveal)
+;(setq org-reveal-root "file:///~/.emacs.d/GTD/reveal.js")
+;(setq org-reveal-root "~/.emacs.d/GTD/reveal.js/")
+(setq org-reveal-root "file:///k:/reveal.js")
+(setq org-reveal-postamble "Ye Zhaoliang")
+```
+
+注意一定得在磁盘根目录下的reveal.js文件夹下
+
+
 
 ### 58. Good job for clojure and lisp
 
