@@ -257,6 +257,7 @@ Tab打开标题
 
     输入C-c . 会出现一个日历，我们点选相应的时间即可插入(现在一般用M-x today)。
 
+<2018-04-26 23:59> M-x undo-tree-visualize(C-x u) 表示打开当前文件的undo tree，可以按照需要进行恢复，特别方便！！
 ```
 
 
@@ -1345,6 +1346,11 @@ when you need to memorize the source code in the .org file, one way you can use
  ```
  C-c s i   创建一个代码块
  C-c s e   编辑代码块
+ 
+ 当时用1. 2. 时候 ，使用Esc退出，然后使用o进行当前item的插入新行操作[有用的操作]
+
+ C-s-enter 表示插入大标题。<2018-04-27 00:14>
+ M-enter 表示继续插入item标题号。
  ```
  
 ### 53. 常用的clojure-snippet
@@ -1566,6 +1572,35 @@ All journal entries are registered in the Emacs Calendar. To see available journ
     f f - search in all entries of all time.
     [ - go to previous day with journal entries.
     ] - go to next day with journal entries.
+    
+    <2018-04-26 00:29> .好表示回到今日 
+    
+    g d 到指定年月日
+    g D 到某年的第几天
+    g w 到某年的第几周
+    o 到某年某月居中
+    
+    
+    C-a 到周的开始
+    C-e 到周的结束
+    M-a 到月的开始
+    M-e 到月的结束
+    
+    C-f 前移一天
+    C-b 后羿一天
+    C-n 前移一周
+    C-p 后移一周
+    M-} 前移一月
+    M-{ 后移一月
+    C-x -] 前移一年
+    C-x -[ 后移一年
+    
+    M-< 到年的开始
+    M-> 到年的结束
+    
+    
+    很有意思的一个命令：x  在日历窗口标出命令、
+          M-x holidays 在另一个窗口列出近三个月节日   a列出当前日历近三个月所有几日
 
 ```
 
@@ -2337,6 +2372,8 @@ github: [org-bookmark-heading][152]
 <2017-11-01 19:53> 现在迷上了clock，实现clock-in功能，然后在emacs的status-bar就会保留你正在进行clock的entry
 在同一文件使用`C-c C-x C-j`实现跳转(工作流:捕捉一个todo，直接进行，然后等结束后才`C-c C-c`停止捕获,原先工作流是先创建不管clock in问题)。
 
+<2018-04-25 19:24>再次学习！只针对org mode的情况才能使用`C-c C-x C-j`
+
 ![clock-in][160]
 
 在对应的headline(一般是带todo标签）进行clock-in(`C-c C-x C-i`),clock-out(`C-c C-x C-o`)(典型工作流),如果你觉得该headline已经做完了，
@@ -2770,7 +2807,7 @@ global-set-key (kbd "C-c f y") 'journal-file-yesterday
  
 ```
 i w  weeek
-i d  day
+i d  day[在dairy.org插入当前时间]
 i y  year
 i m  monthly 
 a    list all the holiday
