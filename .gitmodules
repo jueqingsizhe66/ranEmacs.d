@@ -1,0 +1,3 @@
+[submodule "customizations/emacs-presentation-mode"]
+	path = customizations/emacs-presentation-mode
+	url = https://github.com/zonuexe/emacs-presentation-mode

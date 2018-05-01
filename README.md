@@ -1112,7 +1112,36 @@ add code below in the .orgConf.el
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 ```
 
+
 ![bullet style][80]
+
+
+<2018-05-02 05:15> 改进无法显示的字符,通过修改org-bullets.el
+
+``` elisp
+
+(defcustom org-bullets-bullet-list
+  '(;;; Large
+    "◎"
+    "○"
+    "✸"
+    "✿"
+    ;; ♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
+    ;;; Small
+    ;; ► • ★ ▸
+    )
+  "List of bullets used in Org headings.
+It can contain any number of symbols, which will be repeated."
+  :group 'org-bullets
+  :type '(repeat (string :tag "Bullet character")))
+
+
+```
+
+要注意为了让org-bullet.el生效，必须删掉对应的org-bullet.elc[已编译的文件，emacs发现存在elc文件，则不会读取对应的el文件，所以必须先删掉它]
+
+如果真的找不到，一定得去icon label查找[你需要的图标][235]放入emacs text中
+
 
 ### 46. more better font title bullet
 
@@ -1252,7 +1281,18 @@ orgmode计时[<2018-04-23 20:20> 再次review],
  在todo.org中，移到一个条目上[一般是一个标题下]，按`Ctrl-c Ctrl-x Ctrl-i`即可对该条目开始计时，`Ctrl-c Ctrl-x Ctrl-o`停止当前计时。
  如果在Agenda中，移到条目按I(大写)即可对该条目开始计时，O(大写)即可停止计时。
 
+<2018-05-02 05:57>
+what is org-mode?
 
+```
+It’s an information organization platform. Its website says “Your life in plain text: 
+Org mode is for 
+
+1. keeping notes, 
+2. maintaining TODO lists, 
+3. planning projects, and 
+4. authoring documents with a fast and effective plain-text system.”
+```
 ### 51. custome code block
 
 when you need to memorize the source code in the .org file, one way you can use
@@ -1351,8 +1391,13 @@ when you need to memorize the source code in the .org file, one way you can use
 
  C-s-enter 表示插入大标题。<2018-04-27 00:14>
  M-enter 表示继续插入item标题号。
+ 
+ C-c ,  在标题上面敲入该快捷键，可以插入权限控制标记
  ```
  
+ 进一步关于[org-mode权限控制][238]
+
+另外关于org-mode的[property-syntax][239]也可以进行查看，快捷键是`C-c C-x p` to set property for org-mode files.
 ### 53. 常用的clojure-snippet
 
 
@@ -1678,7 +1723,104 @@ F9后一页slide(后一个标题)
 
 注意一定得在磁盘根目录下的reveal.js文件夹下
 
+<2018-05-02 02:36>  再次学习怎么使用[emacs+reveal.js做演讲][234]
 
+``` org
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
+   * I will grow.
+   * I will shrink.
+   * I rolled in.
+   * I will fade out.
+   * I don't fragment.
+
+```
+
+1. grow
+2. shrink
+3. roll-in
+4. fade-out
+5. highlight-red
+6. highlight-green
+7. highlight-blue
+8. appear
+
+
+关于使用情况进一步参考 [how-create-slides-emacs-org-mode-and-revealjs][234]
+
+一个完整的例子
+
+``` org
+
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_TRANS: Slide 
+#+REVEAL_THEME: Black
+#+Title: Slides by ox-reveal and reveal.js
+#+Author: Ye Zhaoliang
+#+Email: zhaoturkkey@163.com 
+
+
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
+
+* I will grow.
+* I will shrink.
+* I rolled in.
+* I will fade out.
+* I don't fragment.
+
+
+
+#+ATTR_REVEAL: :frag (appear)
+* I appear.
+* I appear.
+* I appear.
+
+** Advance
+
+#+BEGIN_NOTES
+My notes
+#+END_NOTES
+
+
+很有意思的
+
+
+#+BEGIN_SRC org
+  ,#+BEGIN_NOTES
+
+  演讲者模式
+  使用s，进入演讲者模式，类似ppt
+
+  ,#+END_NOTES
+#+END_SRC
+
+In interview with Magnar Sveen, he gives some good advice in learning Emacs:
+
+1. Learn Emacs on its own. Don't try to "learn Emacs and Clojure" for instance. I would suggest learn new tools before you have to use it.
+2. Grab a friend who already knows it. I would suggest that if you don't have that, at least learn it with a friend who is also learning it.
+3. Everyone has their own way of learning something new, so whether you make flash cards, graphical notes, or whatever, use what you know works for you.
+Unless Sacha Chua got you first, let me know if I can help.
+
+* image
+:PROPERTIES:
+:reveal_background: ./spacemacs.jpg
+:reveal_background_size: 800px
+:reveal_background_trans: slide
+:END:
+* mathJax
+
+${n! \over k!(n-k)!} = {n \choose k}$
+
+
+```
+
+很好看的结果
+
+![math][236]
+
+``` org
+#+REVEAL_TRANS: None/Fade/Slide/Convex/Concave/Zoom
+#+REVEAL_THEME: Black/White/League/Sky/Beige/Simple/Serif/Blood/Night/Moon/Solarized
+```
 
 ### 58. Good job for clojure and lisp
 
@@ -3615,7 +3757,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 #### 回到开始
 
-有时候你并不能知道具体当前行是第几行第几列，那就`C-c }`就会toggle row index和col_index
+有时候你并不能知道具体当前行是第几行第几列，那就`C-c }`就会toggle row index和col_index[<2018-05-02 06:47>]
 
 当然你也可以使用`C-c ?` 显示当前cell的信息
 
@@ -3632,10 +3774,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 ＃+TBLFM 行包含表的所有公式，在手动编辑时应小心
 
-作者：brantou
 链接：https://www.jianshu.com/p/3b184915c8a3
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 注：不用担心使用 M-<left/right> 左右移动列或 M-<up/down> 上下移动行会混淆 ＃+TBLFM 行中的引用，因为每次移动都会自动更新引用。
@@ -3668,6 +3807,18 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 1. 选中所有行； (黏贴的数据)
 2. c-c | ；对应命令的描述如下：
 
+表头一般是带有黑色背景，其他都灰色即可，类似于howardism的[database-example][237]
+
+### 103. presentation mode
+
+在init.el增加了对所有文件的展示功能，采用[presentation.el][233],`(load presentation.el)`, 可以让你打开的文件处于展示状态，文字放大方便观看，演示
+
+使用方式：`M-x presentation-mode` 进入展示模式，再次`M-x presentation-mode` 退出展示模式
+ 
+ 可以使用`C-x C-+`表示放大字体，使用`C-x C--` 来缩小字体
+
+
+通过这种方式，我们可以自己读读我们写下的电子稿,类似[该作者的想法][234]。
 <hr/>
 <hr/>
 
@@ -3904,3 +4055,10 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 [230]:https://www.zhihu.com/question/26964808?sort=created 
 [231]:https://blog.csdn.net/u011729865/article/details/54292985 
 [232]:https://blog.csdn.net/dalewzm/article/details/47621089 
+[233]:https://github.com/zonuexe/emacs-presentation-mode 
+[234]:https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs 
+[235]:http://nadeausoftware.com/articles/2007/11/latency_friendly_customized_bullets_using_unicode_characters 
+[236]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/math.png
+[237]:http://www.howardism.org/Technical/Emacs/literate-database-example.html 
+[238]:https://www.gnu.org/software/emacs/manual/html_node/org/Priorities.html#Priorities 
+[239]:https://www.gnu.org/software/emacs/manual/html_node/org/Property-syntax.html#Property-syntax 

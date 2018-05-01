@@ -271,6 +271,9 @@
 (load "setup-emms.el")
 ;;(require 'server)
 
+(add-to-list 'load-path "~/.emacs.d/customizations/emacs-presentation-mode/")
+(load "presentation.el")
+
 (server-start)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -307,7 +310,7 @@
     ("~/.emacs.d/GTD/OrgBoss/Journal/20180129" "~/.emacs.d/GTD/OrgBoss/Journal/20180130" "~/.emacs.d/GTD/OrgBoss/Journal/20180131" "~/.emacs.d/GTD/OrgBoss/Journal/20180201" "~/.emacs.d/GTD/OrgBoss/Journal/20180202" "~/.emacs.d/GTD/OrgBoss/Journal/20180203" "~/.emacs.d/GTD/OrgBoss/Journal/20180204" "~/.emacs.d/GTD/OrgBoss/Journal/20180205" "~/.emacs.d/GTD/OrgBoss/Journal/20180206" "~/.emacs.d/GTD/OrgBoss/Journal/20180207" "~/.emacs.d/GTD/OrgBoss/Journal/20180208" "~/.emacs.d/GTD/OrgBoss/Journal/20180209" "~/.emacs.d/GTD/OrgBoss/Journal/20180213" "~/.emacs.d/GTD/OrgBoss/Journal/20180214" "~/.emacs.d/GTD/OrgBoss/Journal/20180215" "~/.emacs.d/GTD/OrgBoss/Journal/20180220" "~/.emacs.d/GTD/orgBoss/newgtd.org" "~/.emacs.d/GTD/orgBoss/Book/book.org" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org" "~/.emacs.d/GTD/orgBoss/Financial/finances.org" "~/.emacs.d/GTD/orgBoss/Film/film.org" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org" "~/.emacs.d/GTD/orgBoss/Someday/someday.org" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "~/.emacs.d/GTD/orgBoss/writing.org" "~/.emacs.d/GTD/orgBoss/Habit/habits.org" "~/.emacs.d/GTD/phd1.org" "~/.emacs.d/GTD/Dissertation.org" "~/.emacs.d/GTD/thesis-proposal.org")))
  '(package-selected-packages
    (quote
-    (xpm window-numbering evil-matchit evil-visualstar evil-escape git-timemachine git-gutter org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
+    (epresent xpm window-numbering evil-matchit evil-visualstar evil-escape git-timemachine git-gutter org-wild-notifier dumb-diff dumb-jump fringe-current-line ag python-mode find-file-in-project highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-ranger dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal org-tree-slide pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy web-mode flycheck-pos-tip flycheck-clojure counsel-projectile spacemacs-theme w3m use-package engine-mode simplezen zencoding-mode js2-mode move-text highlight-escape-sequences htmlize dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(smtpmail-smtp-server "smtp.163.com")
@@ -443,21 +446,5 @@
 
 
  
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-document-title ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana" :height 1.5 :underline nil))))
- '(org-done ((t (:foreground "PaleGreen" :weight normal :strike-through t))))
- '(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t))))
- '(org-level-1 ((t (:inherit default :weight bold :foreground "#9F5F9F" :font "Verdana" :height 1.75))))
- '(org-level-2 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana" :height 1.5))))
- '(org-level-3 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana" :height 1.25))))
- '(org-level-4 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana" :height 1.1))))
- '(org-level-5 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana"))))
- '(org-level-6 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana"))))
- '(org-level-7 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana"))))
- '(org-level-8 ((t (:inherit default :weight bold :foreground "#b2b2b2" :font "Verdana")))))
 
 (global-set-key (kbd "C-x C-e") 'eval-last-sexp)
