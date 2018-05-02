@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: table3
+# key: table3
+# --
+#+NAME: $1
+| Date | Category | Amount |
+|------+----------+--------|
+|      | $0       |        |
+|------+----------+--------|
+|      | Total:   |   0.00 |
+#+TBLFM: @>\$3=vsum(@2..@-1);%.2f

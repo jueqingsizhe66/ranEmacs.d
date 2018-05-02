@@ -71,6 +71,10 @@ just remove the custom-set-variables info about the font please,  sorry for both
 
 在scheme-editing.el 配置了chezscheme路径，也需要修改一下。
 
+10. graphviz
+
+<2018-05-03 00:19> 后来我发现，如果没有安装graphviz到系统【指的是在path路径能够找到dot】,会报错误，详细看[标题65 org-mind-map][240]
+
 ### 1.为了引入clj-refactor(一个好用的补全包的工具)
 
 click [clj-refactor][2]
@@ -1368,6 +1372,17 @@ when you need to memorize the source code in the .org file, one way you can use
  #+END_SRC
 
  #+RESULTS:
+ 
+ 
+;; <2018-05-03 03:22>  再次学习
+#+BEGIN_SRC dot :file some-illustration.png
+  digraph {
+    a -> b;
+    b -> c:
+    c -> a;
+  }
+#+END_SRC
+
 
  #+BEGIN_SRC dot :file a.png
        digraph colla_schema {  
@@ -1379,9 +1394,67 @@ when you need to memorize the source code in the .org file, one way you can use
  #+RESULTS:
  [[file:a.png]]
  ```
- 
+
+[额外的控制][242]
+
+``` elisp
+Good Configuration
+To syntax highlight your code, set the following in your .emacs init file:
+
+(setq org-confirm-babel-evaluate nil
+      org-src-fontify-natively t
+      org-src-tab-acts-natively t)
+The last variable removes the annoying “Do you want to execute” your code when you type: C-c C-c
+```
+
+
+关于[emacs-calculator][243]:
+
+```
+
+   #+BEGIN_SRC calc :var a=2 b=9 c=64 x=5
+     ((a+b)^3 +sqrt(c))/(2x+1)
+   #+END_SRC
+
+   #+RESULTS:
+   : 121.727272727
+
+
+```
+
+使用时候必须，先`M-x load-library`,然后输如`ob-calc`就可以使用`C-c C-c` 了
+
  在每一个代码块执行`C-c C-c`即可看到结果（在windows配置完path之后，得重启系统,有些命令才有效)。
  很有意思的文学编程。( dame it, flyspell mode(flyspell mode 1) in the .orgConf.el)
+
+<hr/> 
+
+Code Evaluation?
+
+| 属性       | 说明                                                  |
+|------------|-------------------------------------------------------|
+| 1. dir     | specify directory the code should run … Tramp?        |
+| 2. session | re-use interpreter between code blocks                |
+| 3. file    | write results to the file system                      |
+| 4. eval    | limit evaluation of specific code blocks              |
+| 5. cache   | cache eval results to avoid re-evaluation of blocks   |
+| 6. var     | setting variables for a block (ignore with no-expand) |
+|            |                                                       |
+
+Exporting?
+
+|         |                                             |
+| results | either output or value and the formatting   |
+| exports | how the code and results should be exported |
+|         |                                             |
+
+Special Output and Formatting?
+
+| padline |                                       |
+| post    | post processing of code block results |
+| wrap    |                                       |
+| Misc    | hlines, colnames, rownames            |
+|         |                                       |
  
  ```
  C-c s i   创建一个代码块
@@ -1397,7 +1470,10 @@ when you need to memorize the source code in the .org file, one way you can use
  
  进一步关于[org-mode权限控制][238]
 
-另外关于org-mode的[property-syntax][239]也可以进行查看，快捷键是`C-c C-x p` to set property for org-mode files.
+另外关于org-mode的[property-syntax][239]也可以进行查看，快捷键是`C-c C-x p` to set property[<2018-05-03 00:55> PROPERTIES] for org-mode files.
+
+观察[org-mind-map][240]写法发现，一个标题对应一个属性列表，相当于一个标题是一个对象。
+
 ### 53. 常用的clojure-snippet
 
 
@@ -2203,6 +2279,10 @@ flat-list to tree list
 
 1. [graphviz][133]安装
 
+cannot use unknown "org" back-end as a parent,的原因就是你没有安装graphviz
+
+该错误原因并不是没有安装graphviz，而是因为没有在.orgConf.el添加`(require 'ox-org)`, 更进一步查看[官网FAQ][241]
+
 2. [org-mind-map][134]安装，`M-x org-mind-map`
 
 3. 在org文件中，使用org-mind-map-write-tree写出pdf文件
@@ -2244,6 +2324,9 @@ org-mind-map-write: 输出的pdf文件
 ![map][135]
 每次org-mind-map-write的tag颜色都是随机的。
 
+突然有种想法，针对emacs的org文档，一个标题相当于一个节点，一个对象，可以存在很多的节点属性(C-c C-x p)，也可以贴上节点标签(c-c C-q)
+
+这样就很方便对节点的显示做调整。
 
 ### 66. 有些topic不想让别人看到org-crypt（慎重加密！！!防止丢失！！！！）
 
@@ -3699,6 +3782,24 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 ```
 
+org-mode的[The spreadsheet说明][245]
+
+并额外增加了表格模板
+
+```
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: table2
+# key: table2
+# --
+#+NAME: $1
+| Category              | Amount |
+|-----------------------+--------|
+| $0                      |        |
+|-----------------------+--------|
+| Total:                |   0.00 |
+#+TBLFM: @>\$2=vsum(@2..@-1);%.2f
+```
+
 #### 重新计算
 
 光标停留在表格上，`C-u C-c *` 重新计算
@@ -3783,7 +3884,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 一般我们使用`C-c Enter` 表示插入一个表头
 
-`M-enter` 表示在下面插入一个空行,光标下移
+`M-enter` 表示在下面插入一个空行,光标下移[<2018-05-03 05:35> 有用！]
 
 `M-S 上下左右箭头`  分表代表增加减小行  增加和减小列
 
@@ -3791,7 +3892,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 `C-c Space` 清空当前表格
 
-`S-Enter` 将上一行的cell文本复制到下一行
+`S-Enter` 将上一行的cell文本复制到下一行[<2018-05-03 04:58>还真感觉挺有用的]
 
 #### 为什么使用org-table
 
@@ -4062,3 +4163,8 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 [237]:http://www.howardism.org/Technical/Emacs/literate-database-example.html 
 [238]:https://www.gnu.org/software/emacs/manual/html_node/org/Priorities.html#Priorities 
 [239]:https://www.gnu.org/software/emacs/manual/html_node/org/Property-syntax.html#Property-syntax 
+[240]:https://github.com/jueqingsizhe66/ranEmacs.d#65-org-mind-map-%E7%BB%93%E5%90%88grpahviz%E5%88%9B%E5%BB%BA%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE 
+[241]:https://github.com/theodorewiles/org-mind-map/issues/22 
+[242]:http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html 
+[243]:http://www.howardism.org/Technical/Emacs/calc.html#Top 
+[244]:http://orgmode.org/manual/The-spreadsheet.html 

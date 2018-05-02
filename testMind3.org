@@ -1,0 +1,132 @@
+* This is an org-mode tree with tags
+:PROPERTIES:
+:OMM-COLOR: GREEN
+:OMM-LEGEND: Legend entry
+:END:
+
+** Branch A 
+*** Sub-Branch 1 
+*** Sub-Branch 2 
+*** Sub-Branch 3 
+
+** Branch B
+
+
+** Branch C 
+** Branch D 
+* Here is another tree
+** Branch One* This is an org-mode tree with tags
+:PROPERTIES:
+:OMM-COLOR: GREEN
+:OMM-LEGEND: Legend entry
+:END:
+
+** Branch A 
+*** Sub-Branch 1 
+*** Sub-Branch 2 
+*** Sub-Branch 3 
+
+** Branch B
+
+
+** Branch C 
+** Branch D 
+* Here is another tree
+** Branch One
+** Branch Two
+   [[Branch C]]
+** Branch Three
+
+   [[Branch One][Another link]]
+
+   [[Sub-Branch 1][Yet Another Link]]** Branch Two
+   [[Branch C]]
+** Branch Three
+
+   #+BEGIN_SRC sh
+     ls -ls .
+   #+END_SRC
+
+   
+
+   #+BEGIN_SRC dot :file hello-graphviz.png
+     digraph{
+             a -> b;
+             c -> d;
+             c -> a;
+     }
+   #+END_SRC
+
+   #+RESULTS:
+   [[file:hello-graphviz.png]]
+   
+
+
+   #+BEGIN_SRC calc :var a=2 b=9 c=64 x=5
+     ((a+b)^3 +sqrt(c))/(2x+1)
+   #+END_SRC
+
+   #+RESULTS:
+   : 121.727272727
+   
+
+
+   #+BEGIN_SRC calc :var a=4 b=2
+     ((a+b)^3+sqrt(c))/(2x+1
+   #+END_SRC
+
+   #+RESULTS:
+   : (sqrt(c) + 216) / (2 x + 1)
+
+   | 属性       | 说明                                                  |
+   |------------+-------------------------------------------------------|
+   | 1. dir     | specify directory the code should run … Tramp?        |
+   | 2. session | re-use interpreter between code blocks                |
+   | 3. file    | write results to the file system                      |
+   | 4. eval    | limit evaluation of specific code blocks              |
+   | 5. cache   | cache eval results to avoid re-evaluation of blocks   |
+   | 6. var     | setting variables for a block (ignore with no-expand) |
+   |            |                                                       |
+
+Special Output and Formatting?
+
+| padline |                                       |
+| post    | post processing of code block results |
+| wrap    |                                       |
+| Misc    | hlines, colnames, rownames            |
+|         |                                       |
+  
+
+
+#+BEGIN_SRC emacs-lisp :var data='() only=5
+
+   (require 'cl)
+    (flet ((take (remaining lst)
+                 (if (> remaining 0)
+                   (cons (car lst) (take (1- remaining) (cdr lst)))
+                   '("..."))))
+      (take only data))
+#+END_SRC
+
+#+BEGIN_SRC python :post take(data=*this*,only=3)
+    return [x * x for x in range(1,20)]
+#+END_SRC
+
+
+#+NAME: expend 
+| Category | Amount |
+|----------+--------|
+| RDS1     |     34 |
+| RDS      |    120 |
+| car      |   63.4 |
+| taf      |   34.0 |
+| sdf      |   34.4 |
+|----------+--------|
+| TOTAL:   | 251.80 |
+#+TBLFM: @>$2=vsum(@3..@-1);%.2f
+
+| Date | Category | Amount |
+|------+----------+--------|
+|      | $0       |        |
+|------+----------+--------|
+|      | Total:   |   0.00 |

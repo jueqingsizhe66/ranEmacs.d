@@ -17,13 +17,13 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/yzl/AppData/Roaming/.emacs.d/" (23274 3993 0 0) "url/" "themes/" "testMind3_diagram.pdf" "testMind3.org" "testLisp.lisp" "srecode-map.el" "snippets/" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "ispell/" "init.el" "ido.last" "hello-graphviz.png" "GTD/" "eshell/" "emms/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ag.exe" "abbrev_defs" ".smex-items" ".session" ".recentf" ".python-environments/" ".orgConf.el" ".mc-lists.el" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/" (23273 59708 0 0) "thesis-proposal.org.pdf" "thesis-proposal.org" "testXmind.org" "testSlide.org" "testSlide.html" "test.org.pdf" "test.org" "spacemacs.jpg" "science.org" "reveal.js/" "presentation.org" "phd1.org.pgp" "phd1.org" "package/" "orgTemplate/" "orgBoss/" "myPlan/" "index.org" "hello.org.pdf.pdf" "hello.org.gpg" "hello.org" "email.org" "Dissertation.org" "current.pdf" "clojureBackup.org" "bakupJournal/" ".notes.org" "../" "./")
+
  ("c:/Users/yzl/AppData/Roaming/.emacs.d/CalendarDairy/" (23207 18728 0 0) "diary.org" "../" "./")
 
  ("c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/Journal/" (23264 17293 0 0) "summaryMonth.pl" "journal.org" "journal-XYZ.org" "journal-mon.org" "journal-dailies.org" "journal-dailies-end.org" "20180425" "20180424" "20180402" "20180401" "20180320" "20180318" "20180317" "20180315" "20180313" "20180311" "20180308" "20180307" "20180306" "20180304" "20180303" "20180228" "20180226" "20180225" "20180222" "20180220" "20180215" "20180214" "20180213" "20180209" "20180208" "20180207" "20180206" "20180205" "20180204" "20180203" "20180202" "20180201" "20180131" "20180130" "20180129" "2017100011" "../" "./")
-
- ("c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/" (23264 17540 0 0) "thesis-proposal.org.pdf" "thesis-proposal.org" "test.org.pdf" "test.org" "science.org" "reveal.js/" "presentation.org" "phd1.org.pgp" "phd1.org" "package/" "orgTemplate/" "orgBoss/" "myPlan/" "index.org" "hello.org.pdf.pdf" "hello.org.gpg" "hello.org" "email.org" "Dissertation.org" "current.pdf" "clojureBackup.org" "bakupJournal/" ".notes.org" "../" "./")
-
- ("c:/Users/yzl/AppData/Roaming/.emacs.d/" (23264 18097 0 0) "url/" "themes/" "testLisp.lisp" "srecode-map.el" "snippets/" "server/" "README.md" "projectile-bookmarks.eld" "ispell/" "init.el" "GTD/" "eshell/" "emms/" "elpa/" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ag.exe" "abbrev_defs" ".smex-items" ".session" ".recentf" ".python-environments/" ".orgConf.el" ".mc-lists.el" ".gitignore" ".git/" "#init.el#" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

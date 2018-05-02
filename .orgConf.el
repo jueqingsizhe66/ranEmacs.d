@@ -880,7 +880,9 @@ Captured %<%Y-%m-%d %H:%M>
                             ))
 
 ;;source code syntax highlight
-(setq org-src-fontify-natively t)
+(setq org-confirm-babel-evaluate nil
+      org-src-fontify-natively t
+      org-src-tab-acts-natively t)
 
 
 ;;you need to set the language for running the souce code block
@@ -1342,3 +1344,9 @@ e.g. Sunday, September 17, 2000."
          ("C-c 2" . dumb-diff-set-region-as-buffer2)
          ("C-c q" . dumb-diff-quit))
   :ensure t)
+
+
+
+;; org-mind-map
+
+(require 'ox-org)
