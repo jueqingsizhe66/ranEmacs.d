@@ -262,6 +262,9 @@ Tab打开标题
     输入C-c . 会出现一个日历，我们点选相应的时间即可插入(现在一般用M-x today)。
 
 <2018-04-26 23:59> M-x undo-tree-visualize(C-x u) 表示打开当前文件的undo tree，可以按照需要进行恢复，特别方便！！
+<2018-05-03 19:56> C-x k 删掉buffer ,在  C-x b切换buffer, C-x C-b 出现一个buffer列表
+
+C-c b 扫描所有的org文件！！！！【有用！】
 ```
 
 
@@ -3891,7 +3894,7 @@ org-mode的[The spreadsheet说明][244]
 
 `Tab` 表示调到下一字段， 相反为`S-Tab`
 
-`C-c Space` 清空当前表格
+`C-c Space` 清空当前表格(如果是单个单词的话，其实)
 
 `S-Enter` 将上一行的cell文本复制到下一行[<2018-05-03 04:58>还真感觉挺有用的]
 
@@ -3921,6 +3924,18 @@ org-mode的[The spreadsheet说明][244]
 
 
 通过这种方式，我们可以自己读读我们写下的电子稿,类似[该作者的想法][234]。
+
+
+### 104. counsel-org-clock 快速显示正在clock的header
+
+[counsel-org-clock][245], 类似的还有[org-mru-clock][246](mru:most-recently-used),他们两者[有些不同点][247]
+
+what is really the killer feature of counsel-org-clock package is that it can look through your agenda files and 
+prefill your clock history with (a given number of) things you actually clocked.
+
+1. supports more Ivy actions[show history, and goto the clocked item]
+2. more complete title shown in history list(while org-mru-clock is more simpler with "title(parent)" mode.
+
 <hr/>
 <hr/>
 
@@ -4169,3 +4184,6 @@ org-mode的[The spreadsheet说明][244]
 [242]:http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html 
 [243]:http://www.howardism.org/Technical/Emacs/calc.html#Top 
 [244]:http://orgmode.org/manual/The-spreadsheet.html 
+[245]:https://github.com/akirak/counsel-org-clock 
+[246]:https://github.com/unhammer/org-mru-clock 
+[247]:http://mbork.pl/2018-04-28_org-mru-clock 

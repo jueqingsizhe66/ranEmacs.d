@@ -1,0 +1,36 @@
+星期四, 2018/5/3
+
+
+* keep work with jounal (Good for you)
+[[https://github.com/howardabrams/dot-files/blob/b2e8a36832d4b9964042aca839f3ff0a3e6724a7/emacs-org.org]]
+
+[[https://github.com/jueqingsizhe66/ranEmacs.d]]
+
+** 13:54 Quality content
+
+Quality content avoids creating frustrated users.
+
+It helps the user effectively work with a product. 
+
+*** Five Cs
+1. Clear[清晰]
+   Technical writing requires clarity of expression and
+   therefore simplicity of languag
+2. Concise[精确到位、专业]
+   Short and to the point---that's the key to good documentation,
+   or any other content. No one wants to read lengthy explanations
+   or work their way through long procedures.
+3. Consistent[前后一致]
+   Consistency makes the documentation and product easier for user
+   to understand. What this means is a common tone, a common style
+   a common look and feel
+   1. A common tone
+   2. A common style
+   3. A common look
+   4. A common feel
+4. Complete[完备性]
+   A mathematical theory is not to be considered complete until you have made it so clear that you can explain it to the first man whom you meet on the street.
+  
+   Content should be available in a number of formats and be aimed
+   at a number of different levels and types of user
+5. Correct[不瞎说]
