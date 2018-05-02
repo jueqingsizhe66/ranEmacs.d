@@ -472,6 +472,7 @@ click [magit][5]
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
+<2018-05-03 13:25> 在magit的log view中可以使用 l来进行界面的更改
 ```
 
 
@@ -3782,7 +3783,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
 
 ```
 
-org-mode的[The spreadsheet说明][245]
+org-mode的[The spreadsheet说明][244]
 
 并额外增加了表格模板
 
