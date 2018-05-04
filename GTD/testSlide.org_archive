@@ -1,0 +1,44 @@
+
+Archived entries from file c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/testSlide.org
+
+
+* I don't fragment.
+:PROPERTIES:
+:ARCHIVE_TIME: 2018-05-04 周五 00:52
+:ARCHIVE_FILE: ~/.emacs.d/GTD/testSlide.org
+:ARCHIVE_CATEGORY: testSlide
+:END:
+
+
+
+#+ATTR_REVEAL: :frag (highlight-blue)
+    * I appear.
+    * I appear.
+    * I appear.
+
+** Advance
+
+#+BEGIN_NOTES
+My notes
+#+END_NOTES
+
+
+很有意思的
+
+
+#+BEGIN_SRC org
+  ,#+BEGIN_NOTES
+
+  演讲者模式
+  使用s，进入演讲者模式，类似ppt
+
+  ,#+END_NOTES
+#+END_SRC
+
+In interview with Magnar Sveen, he gives some good advice in learning Emacs:
+
+1. Learn Emacs on its own. Don't try to "learn Emacs and Clojure" for instance. I would suggest learn new tools before you have to use it.
+2. Grab a friend who already knows it. I would suggest that if you don't have that, at least learn it with a friend who is also learning it.
+3. Everyone has their own way of learning something new, so whether you make flash cards, graphical notes, or whatever, use what you know works for you.
+Unless Sacha Chua got you first, let me know if I can help.
+

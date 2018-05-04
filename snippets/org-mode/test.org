@@ -1,0 +1,55 @@
+#+TITLE:       Test
+#+AUTHOR:      Howard Abrams
+#+EMAIL:       howard.abrams@gmail.com
+#+DATE:        2018-5月-03 周四
+#+URI:         c:/Users/yzl/AppData/Roaming/.emacs.d/snippets/org-mode/test/
+#+TAGS:        
+#+KEYWORDS:    
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 
+
+
+#+TITLE: Journal Entry [2018-05-03 周四][2018-05-03 周四]
+
+
+* Projects
+
+* 
+
+#+BEGIN_SRC dot :file img/.png :cmdline -Kdot -Tpng :exports results :results silent
+  digraph G {
+    rankdir=LR;
+    bgcolor="#ffffff00" # RGBA (with alpha)
+    node [shape=box,
+          color="gray",    # node border color
+          fillcolor=white, # node fill color
+          style="filled,solid",
+          fontname="Verdana"]
+    edge [ penwidth=2, color=white ]
+
+    node [label=""] Base
+  }
+  #+END_SRC
+
+[[file:img/.png]]
+
+
+
+srcfil
+
+file
+
+srcfile
+
+todo
+
+TODO(key)
+
+:dir c:/Users/yzl/AppData/Roaming/.emacs.d/snippets/org-mode/
+
+tagke
+
+dsdf(dfsd)
+
+[[link][]]

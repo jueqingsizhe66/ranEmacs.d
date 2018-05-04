@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: reveal for title
+# key: rti
+# --
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_TRANS: ${1:Linear/Fade/Slide/Convex/Concave/Zoom/NONE}
+#+REVEAL_THEME: ${2:jr0cket/Black/White/League/Sky/Beige/Simple/Serif/Blood/Night/Moon/Solarized}
+#+OPTIONS: reveal_width:1200
+#+OPTIONS: reveal_height:800
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+OPTIONS: reveal_center:nil 
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t 
+#+Title: [${3:Title}] 
+#+Author: Ye Zhaoliang
+#+Email: zhaoturkkey@163.com 
+

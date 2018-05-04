@@ -1902,6 +1902,118 @@ ${n! \over k!(n-k)!} = {n \choose k}$
 #+REVEAL_THEME: Black/White/League/Sky/Beige/Simple/Serif/Blood/Night/Moon/Solarized
 ```
 
+
+<2018-05-03 23:28> 再次补充
+
+#### 插入图片
+
+直接使用双中括号即可，写入文件相对路径，ok！ 并且完美的支持，比如graphviz代码块生成的结果图片【无缝连接】
+
+详细可以观看[create cool slide with reveal.js inside emacs org-mode][248]
+
+#### 特别有趣的几个item控制或者超链接控制(伟大的ATTR_REVEAL)
+
+```
+
+[[http://www.google.co.uk][hyperlink-text]]
+
+#+ATTR_REVEAL: :frag roll-in
+  - bulletpoint
+翻转链接的3D效果特别棒！！！
+
+  
+  全部显示为蓝色
+#+ATTR_REVEAL: :frag highlight-blue
+   * Create
+   * Fragment
+   * At Ease
+   
+   
+  加了()逐个显示为蓝色{这个必须学会！！！}, 在这种情况得先选择一个单词，然后摁下S(大写的S)，输入左圆括号，就可以了
+#+ATTR_REVEAL: :frag (highlight-blue)
+    * I appear.
+    * I appear.
+    * I appear.
+
+** Advance
+   
+#+CAPTION: The Org text source.
+#+BEGIN_SRC org
+#+ATTR_REVEAL: :frag
+   * Create
+   * Fragment
+   * At Ease
+#+END_SRC
+
+
+```
+
+#### 伟大的ESC键
+
+
+<2018-05-04 01:24>   通过该键可以看到slide的全局布置
+
+#### 有趣的split属性(强大的#+REVEAL)
+
+reveal.js是通过split属性和标题进行划分一张幻灯片的，一般是header[1-6]每个header单独一张幻灯片，如果在header还想要
+单独划分一页ppt，那么split把，split属性下面的都是新的幻灯片，直到新的split或者header[N]
+
+快捷输入 `rsp tab` 即可
+
+``` org
+#+REVEAL: split
+Evaluates all the code in the opened file
+
+[[./images/lighttable-connect-evaluated-code.png]]
+
+
+```
+
+#### 定制css样式(伟大的CSS)
+
+比如有一个样式叫做jr0cket.css，对应的使用是在org文件开头的 `#+REVEAL_THEME: jr0cket`
+
+那么你得在` K:\reveal.js\css\theme` reveal.js的文件夹底下把该css放入其中才可以！
+
+好看的ppt样式！
+
+``` org
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: jr0cket
+
+```
+
+linear的效果是滑动切换！很明显， slide的方式切换不明显！！
+
+[jr0cket.css的样式][24]  !!!!
+
+
+#### bash细节
+
+有时候为了对代码营造绿色的效果一般使用
+
+``` org
+
+#+begin_src bash
+
+code....
+
+#+end_src
+```
+
+#### 背景图片
+
+
+有时候你需要在背景加上图标，比如华北电力大学，比如git图标、clojure图标等，这时候就需要添加背景图片的了
+
+``` org
+ :PROPERTIES:
+    :reveal_background: ./images/clojure-slide-background.png
+    :reveal_background_trans: slide
+ :END:
+
+```
+
 ### 58. Good job for clojure and lisp
 
 Here is the good job from [Malabarba][112] who write the two completion feature for clojure and lisp;
@@ -3467,18 +3579,36 @@ nnoremap <space>/ :Ag
 
 ```
 
+再次回顾发现，敲入`h1 tab`,`h2 tab`,`h3 tab`[类似的markdow mode]等，可以快速创建header in org extension files
+[工作逻辑:h1 tab,input header name,done].
+
+还有快速插入dot脚本，比如`graphviz tab,然后done`
+
+使用`:d tab`快速插入代码快字段
+
 easy for  life!!!
+
+
+在markdown mode很重要的是`- + tab` 插入列表
+
+
+最重要是学习方法: 去看看每个snippets文件夹下的脚本，然后写在对应的拓展文件下，敲上去试试即可!
+
+----------
 
 
 ### 95. emacs录制宏
 
-在vim中你可以使用`qa`或者`qb`等录制一个名字为a或者b的宏，并通过`@a`或者`@b`来执行 也可以通过`100@a`进行100次执行
+在vim中你可以使用`qa`或者`qb`等录制一个名字为a或者b的宏，并通过`@a`或者`@b`来执行 也可以通过`100@a`进行100次执行[<2018-05-03 22:38> 由于引入了evil-mode也可以在emacs使用该方式录制键盘宏]
 
 而在emacs中，你可以通过`C-x(` 开始录制， 通过`C-x)`结束录制，并通过`C-x e`执行录制宏，还可以通过`C-u 9 C-x e`或者`C-9 C-x e` 进行9次执行等。注意可以通过`M-x name-last-kbd-macro {Your macro name}`来持久化你的宏，然后通过`M-x {Your macro name}`进行调用。
 
 类似的重复性概念，还不如你可以`C-n`多次下移光标，但同时也可以通过`C-9 C-n`进行9行下移，对于阅读代码有帮助，当然也可以用`C-v`或者`M-v`进行正向和反向半屏阅读。    
 
 ### 96. evil-surround
+
+
+
 
 [evil-surround][205]对应[vim-surround][206]
 
@@ -3561,10 +3691,28 @@ setq-default evil-escape-key-sequence "jk")
 
 ### 98. git-timemachine
 
+使用前提： 只能在emacs-mode情况使用，evil-mode出现问题
+
+
 一个小git插件，显示一个文件的所有版本信息
 
 [git-timemachine][210]
 
+在非evil-mode情况下，可以在当前的navigation history  file使用以下命令
+
+
+| 命令 | 说明                                                                    |
+|------+-------------------------------------------------------------------------|
+| p    | Visit previous historic version                                         |
+| n    | Visit next historic version                                             |
+| w    | Copy the abbreviated hash of the current historic version               |
+| W    | Copy the full hash of the current historic version                      |
+| g    | Goto nth revision                                                       |
+| t    | Goto revision by selected commit message                                |
+| q    | Exit the time machine.                                                  |
+| b    | Run magit-blame on the currently visited revision (if magit available). |
+
+还可以使用M-x git-timemachine show nth version: 指定具体某个版本
 
 
 `M-x git-timemachine`
@@ -3886,6 +4034,7 @@ org-mode的[The spreadsheet说明][244]
 
 #### 更强大的插入行功能
 
+
 一般我们使用`C-c Enter` 表示插入一个表头
 
 `M-enter` 表示在下面插入一个空行,光标下移[<2018-05-03 05:35> 有用！]
@@ -3897,6 +4046,14 @@ org-mode的[The spreadsheet说明][244]
 `C-c Space` 清空当前表格(如果是单个单词的话，其实)
 
 `S-Enter` 将上一行的cell文本复制到下一行[<2018-05-03 04:58>还真感觉挺有用的]
+
+
+<2018-05-03 20:21> 额外辅助技巧
+
+使用大写的`V` 进入行选模式，
+
+在evil-mode模式下，一把会创建键盘宏来录制(qa)快速插入`|`竖线的宏， 比如开头，结尾的宏！！**特别有效**，然后使用@a,或者8@a执行8次
+
 
 #### 为什么使用org-table
 
@@ -3913,6 +4070,20 @@ org-mode的[The spreadsheet说明][244]
 2. c-c | ；对应命令的描述如下：
 
 表头一般是带有黑色背景，其他都灰色即可，类似于howardism的[database-example][237]
+
+
+补充，处了;N::结尾，还有;T::结尾的,表示时间相加
+
+``` org
+If you want to compute time values use the T, t, or U flag, either in Calc formulas or Elisp formulas:
+
+  |  Task 1 |   Task 2 |    Total |
+  |---------+----------+----------|
+  |    2:12 |     1:47 | 03:59:00 |
+  |    2:12 |     1:47 |    03:59 |
+  | 3:02:20 | -2:07:00 |     0.92 |
+  #+TBLFM: @2$3=$1+$2;T::@3$3=$1+$2;U::@4$3=$1+$2;t
+```
 
 ### 103. presentation mode
 
@@ -3935,6 +4106,66 @@ prefill your clock history with (a given number of) things you actually clocked.
 
 1. supports more Ivy actions[show history, and goto the clocked item]
 2. more complete title shown in history list(while org-mru-clock is more simpler with "title(parent)" mode.
+
+### 105. what is graphviz?(不错的thinking，think to get，wishful thinking)
+
+[Graphviz][250]的好处在于，你只需要关心数据结构的流程，或者连接的方式，而不需要考虑布局。这是经典的*nix的程序的工作方式，比如latex, mate等等，都是采用这种方式来工作的。既可以达到WYTIWYG（What you think is what you get），而不是微软所提倡的WYSIWYG（What you see is what you get）。
+
+graphviz提供六种绘图的方式:
+
+| 布局方式 | 说明                                              |
+|----------+---------------------------------------------------|
+| dot      | graphviz的默认布局方式，用于画有向图              |
+| neato    | spring-model(基于斥力+张力的布局)                 |
+| twopi    |                                                   |
+| circo    | 在使用过程中，感觉circo算法布局出来的图形最为合理 |
+| fdp      |                                                   |
+| Sfdp     |                                                   |
+
+
+支持tif, svg, ps, eps等矢量格式输出，以及 jpeg, gif, pdf, bmp等标量输出格式。
+
+
+#### 两种运用场所
+
+[Graphviz绘图的安装与使用][253]
+
+1. 命令行使用:
+
+
+```
+dot -Tpng sample.dot -o sample.png  
+```
+
+详细语法参考 [graphviz-doc][255]。另外，graphviz是如何在python中运用的？  特别不错的[python graphviz的学习教程][254]能够让你看到简单的使用方法。 有空可以看看，如果涉及到大量绘制图形(当然这里重点还是emacs结合graphviz进行literal programming)。
+
+`pip install graphviz `
+
+
+2. Emacs literal programming运用
+
+``` org
+
+#+BEGIN_SRC dot :file img/.png :cmdline -Kdot -Tpng :exports results :results silent
+  digraph G {
+    rankdir=LR;
+    bgcolor="#ffffff00" # RGBA (with alpha)
+    node [shape=box,
+          color="gray",    # node border color
+          fillcolor=white, # node fill color
+          style="filled,solid",
+          fontname="Verdana"]
+    edge [ penwidth=2, color=white ]
+
+    node [label=""] Base
+  }
+  #+END_SRC
+
+[[file:img/.png]]
+
+```
+
+另外graphviz也集成到很多编程语言的使用，比如[R][251],[common-lisp with graphviz][252], [python graphviz][254]等
 
 <hr/>
 <hr/>
@@ -4187,3 +4418,11 @@ prefill your clock history with (a given number of) things you actually clocked.
 [245]:https://github.com/akirak/counsel-org-clock 
 [246]:https://github.com/unhammer/org-mru-clock 
 [247]:http://mbork.pl/2018-04-28_org-mru-clock 
+[248]:http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html 
+[249]: https://github.com/jr0cket/slides/blob/drafts/css/theme/jr0cket.css
+[250]:http://www.graphviz.org/ 
+[251]:http://yifanhu.net/GALLERY/GRAPHS/index.html 
+[252]:http://emacser.com/emacs_graphviz_ds.htm 
+[253]:https://blog.csdn.net/frankax/article/details/77035397 
+[254]:http://graphviz.readthedocs.io/en/stable/ 
+[255]:http://www.graphviz.org/documentation/ 

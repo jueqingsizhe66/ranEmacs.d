@@ -1,21 +1,19 @@
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_TRANS: Concave
+#+REVEAL_THEME: Black
+#+OPTIONS: reveal_width:1200
+#+OPTIONS: reveal_height:800
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+OPTIONS: reveal_center:nil 
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t 
+#+Title: [what fucking help] 
+#+Author: Ye Zhaoliang
+#+Email: zhaoturkkey@163.com 
+
+
 * This is an org-mode tree with tags
-:PROPERTIES:
-:OMM-COLOR: GREEN
-:OMM-LEGEND: Legend entry
-:END:
-
-** Branch A 
-*** Sub-Branch 1 
-*** Sub-Branch 2 
-*** Sub-Branch 3 
-
-** Branch B
-
-
-** Branch C 
-** Branch D 
-* Here is another tree
-** Branch One* This is an org-mode tree with tags
 :PROPERTIES:
 :OMM-COLOR: GREEN
 :OMM-LEGEND: Legend entry
@@ -61,7 +59,8 @@
    [[file:hello-graphviz.png]]
    
 
-
+** formula
+   
    #+BEGIN_SRC calc :var a=2 b=9 c=64 x=5
      ((a+b)^3 +sqrt(c))/(2x+1)
    #+END_SRC
@@ -88,7 +87,7 @@
    | 6. var     | setting variables for a block (ignore with no-expand) |
    |            |                                                       |
 
-Special Output and Formatting?
+**  Special Output and Formatting?
 
 | padline |                                       |
 | post    | post processing of code block results |
@@ -112,6 +111,7 @@ Special Output and Formatting?
     return [x * x for x in range(1,20)]
 #+END_SRC
 
+** table
 
 #+NAME: expend 
 | Category | Amount |
@@ -132,3 +132,7 @@ Special Output and Formatting?
 |      | Total:   |   0.00 |
 
 
+** image from baidu
+
+
+[[./customizations/img/clock-in.png]]

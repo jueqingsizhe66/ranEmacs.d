@@ -1,12 +1,18 @@
 #+OPTIONS: num:nil toc:nil
-#+REVEAL_TRANS: Convex 
-#+REVEAL_THEME: Moon
-#+Title: Slides by ox-reveal and reveal.js
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: jr0cket
+#+OPTIONS: reveal_width:1200
+#+OPTIONS: reveal_height:800
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+OPTIONS: reveal_center:nil 
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t 
+#+Title: [slides by ox-reveal and reveal.js] 
 #+Author: Ye Zhaoliang
 #+Email: zhaoturkkey@163.com 
 
 
-#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
 
 * I will grow.
 * I will shrink.
@@ -23,10 +29,18 @@
 
 
 
-#+ATTR_REVEAL: :frag (appear)
-* I appear.
-* I appear.
-* I appear.
+#+ATTR_REVEAL: :frag ( highlight-blue )
+    * I appear.
+    * I appear.
+    * I appear.
+
+** appear procedurely      
+#+ATTR_REVEAL: :frag ( roll-in )
+- experiment with ideas quickly
+- use branching to experiment in code  
+- throw away code that is not wanted
+- go back to the great idea you had right at the start
+
 
 ** Advance
 
@@ -47,6 +61,8 @@ My notes
   ,#+END_NOTES
 #+END_SRC
 
+
+#+REVEAL: split
 In interview with Magnar Sveen, he gives some good advice in learning Emacs:
 
 1. Learn Emacs on its own. Don't try to "learn Emacs and Clojure" for instance. I would suggest learn new tools before you have to use it.
@@ -64,4 +80,5 @@ Unless Sacha Chua got you first, let me know if I can help.
 * mathJax
 
 ${n! \over k!(n-k)!} = {n \choose k}$
+
 

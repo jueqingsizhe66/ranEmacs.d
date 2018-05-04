@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Title</title>
+<meta name="author" content="(John Stevenson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///k:/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///k:/reveal.js/css/theme/White.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///k:/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Title">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Title</h1><h2 class="author">John Stevenson</h2><p class="date">Created: 2018-05-03 周四 23:52</p>
+</section>
+
+<section>
+<section id="slide-org2e26f67" data-background="./images/leiningen-slide-background.png" data-background-transition="slide">
+<h2 id="org2e26f67">Slide with background image</h2>
+<p>
+<a href="http://www.google.co.uk">hyperlink-text</a>
+</p>
+
+<ul class="fragment roll-in">
+<li>bulletpoint</li>
+<li>dont go crazy</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1aed624">
+<h3 id="org1aed624">Sub-slide - srolls vertically from slide above</h3>
+<p>
+Some source code using hightlits.js 
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-clojure"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">clojure-devs</span> <span style="color: #9f8766;">"love brackets"</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdd9c803">
+<h2 id="orgdd9c803">Slied with code</h2>
+<div class="org-src-container">
+
+<pre  class="src src-zsh">git init 
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6292665" data-background="#770000" data-background-transition="slide">
+<h2 id="org6292665">Slide with Colour - overriding the theme</h2>
+<p>
+I love red.
+</p>
+
+<p class="fragment hightlight-red">
+Hightliht text as a fragment of the slide 
+</p>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgec8477c">
+<h3 id="orgec8477c">Fragments in Reveal.js</h3>
+<p>
+Press the "Down" key on the page or the down arrow to trigger fragments
+</p>
+
+<ul class="fragment highlight-blue">
+<li>Create</li>
+<li>Fragment</li>
+<li>At Ease</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9466464">
+<h3 id="org9466464">Fragment captions</h3>
+<div class="org-src-container">
+<label class="org-src-name">The Org text source.</label>
+<pre  class="src src-org"><span style="color: #9f8766;">#+ATTR_REVEAL: :frag</span>
+   * Create
+   * Fragment
+   * At Ease
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org66b5177" data-state="alert">
+<h3 id="org66b5177">Reveal.js Can Alert</h3>
+<p>
+Change slide style to wake up the sleepy audience.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org09d200f">
+<h3 id="org09d200f">Reveal frag-idx</h3>
+<ul>
+<li>I will grow.</li>
+<li>I will shrink.</li>
+<li>I rolled in.</li>
+<li>I will fade out.</li>
+<li>I don't fragment.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+Ye Zhaoliang
+<script src="file:///k:/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///k:/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.10,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'Convex', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///k:/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///k:/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///k:/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///k:/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///k:/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
