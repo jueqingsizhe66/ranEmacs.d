@@ -4113,6 +4113,7 @@ prefill your clock history with (a given number of) things you actually clocked.
 
 graphviz提供六种绘图的方式:
 
+```
 | 布局方式 | 说明                                              |
 |----------+---------------------------------------------------|
 | dot      | graphviz的默认布局方式，用于画有向图              |
@@ -4121,6 +4122,8 @@ graphviz提供六种绘图的方式:
 | circo    | 在使用过程中，感觉circo算法布局出来的图形最为合理 |
 | fdp      |                                                   |
 | Sfdp     |                                                   |
+
+```
 
 
 支持tif, svg, ps, eps等矢量格式输出，以及 jpeg, gif, pdf, bmp等标量输出格式。

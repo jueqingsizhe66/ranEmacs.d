@@ -133,6 +133,19 @@
 
 
 ** image from baidu
+:PROPERTIES:
+:reveal_background: ./ncepublack.jpg
+:reveal_background_size: 1200px
+:reveal_background_trans: slide
+:END:
+
+
+
+
+
+
+hello world
 
 
 [[./customizations/img/clock-in.png]]
+
