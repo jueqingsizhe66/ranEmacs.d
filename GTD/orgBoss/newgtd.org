@@ -96,14 +96,14 @@ worry about missing deadline.(scheduled tasks will be informed of you)
 *** 5. but still too much. So be realistics and add priviledge to your schedule tasks, eliminate some not so important not so hurry
 *** 6. finally you track all you task (so you know what the time went by)
 *** 7. also you do some overview the process (so you do appreciate how things adds up)
-** DONE [#A] new mesh for the double-sliding mesh :@work::multiAxis:紧急重要:
+** DONE [#A] new mesh for the double-sliding mesh        :学术:@work::紧急重要:
 CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
                     - State "DONE"       from "TODO"       [2017-09-29 周五 23:40]
                     Captured 2017-09-28 13:52
-** PENDING [#B] Read papers related to yaw preparing for the thesis proposal :@work::graduation:紧急重要:
+** PENDING [#B] Read papers related to yaw preparing for the thesis proposal :学术:@work::紧急重要:
 SCHEDULED: <2017-10-06 周五 +1w>
 :PROPERTIES:
 :LAST_REPEAT: [2018-04-20 周五 00:04]
@@ -451,7 +451,7 @@ CLOSED: [2017-10-30 周一 20:04] DEADLINE: <2017-11-05 周日>
 6.仍需单独开题的同学，联系导师开题之后，自己交材料即可。
 7.其他年级资格审查表，不在我这里，需要由同组实验室同学通知去F617领取。*  Tasks
 
-** TODO Most important thing that you have to do          :graduation:紧急重要:
+** TODO Most important thing that you have to do                :学术:紧急重要:
 
 ** TODO Second most important thing that you have to do
 You can also take notes underneath each heading, like this
@@ -1032,7 +1032,7 @@ CLOSED: [2018-02-14 周三 18:27]
                     #+BEGIN_SRC sh
                       G:\JavaBookmarks\hutool>ag "public\sclass\s\w*"
                     #+END_SRC
-** TODO [#B] python matplot练习 <2018-03-01 周四 22:04>                :@NCEPU:
+** TODO [#B] python matplot练习 <2018-03-01 周四 22:04>        :@NCEPU:学术:
 SCHEDULED: <2018-03-01 周四>
                     :PROPERTIES:
                     :Effort: 1:00

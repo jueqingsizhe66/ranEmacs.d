@@ -510,9 +510,8 @@ Captured %<%Y-%m-%d %H:%M>
 
                       (:newline)
                       (:startgroup . nil)
-                      ("multiAxis" . ?t)
-                      ("graduation" . ?g)
                       ("blockchain" . ?b)
+                      ("学术" . ?u)
                       (:endgroup . nil)
 
                       (:newline)
@@ -880,6 +879,7 @@ Captured %<%Y-%m-%d %H:%M>
                             ))
 
 ;;source code syntax highlight
+
 (setq org-confirm-babel-evaluate nil
       org-src-fontify-natively t
       org-src-tab-acts-natively t)
