@@ -563,6 +563,15 @@ cal-china-x农历信息
 
 ```
 
+<2018-05-09 13:57>
+在bookmark-lists界面下注意几个常用用法：
+
+1. `d` ，进行标记to be deleted, 然后使用`x`，来执行deleted（先选中要删除，再进行真正的删除）
+2. `l`  添加文件到bookmarks 或者 `c-x r m`(来添加当前文件到bookmark lists)
+3. 
+
+不常用用法： `e`添加当前item的annotation,`A`在另外一个窗口显示说明
+
 注意，有可能第一次按下7和8没有反应，得emacs启动之后，就会有效果了
 
 农历的效果。(按下S 可以查看cursor所在的日出日落时间)
@@ -4209,6 +4218,73 @@ git config --global credential.helper store
 
 如果不是在代码注释快，敲`C-c t`,会提示`Nothing to edit`.
 
+### 108. emacs mode(伟大的question mark?)
+
+emacs是没有模块的概念，只有mode概念，常用的是
+
+1. [define-major-mode][262]
+2. [define-minor-mode][263]
+
+并且可以设置[File to Open in a Major Mode][260]
+
+
+而这里面最想说的一点是，如果你不知道当前mode有哪些快捷键，尝试摁一下 `question mark: ?`
+
+当然有人可能说
+`(info "(emacs)Choosing Modes")`
+
+Some advice from howardisms: [Advice to Code Reviewers][261]
+#### What is sensei?
+
+    Perhaps we should change the term from mentor to sensei, as one definition of that term I’ve heard is: 
+    one who is further ahead on the path; which characterizes a teacher as one who can look back along a 
+    path and say,:" 
+        Watch your step there, that’s a particularly slippery spot. If you do fall, it’s okay, 
+        because I fell too."
+    It’s a compassionate approach to teaching, which we should all adopt.     
+    
+----------
+
+
+#### Bread and Butter
+        
+     Time for a story. Every time I run the linter on my Python code, 
+     it complains bitterly about my use of     map, filter and reduce, 
+     and claims I should use a comprehension. 
+     Perhaps this may date me, 
+         but these functions are my bread and butter, as they seem so clear to me. 
+     Comprehensions, on the other hand, seem verbose and clutter intention. However, 
+     I usually rewrite them as my other colleagues agree with the linter and feel it is easier to read. 
+
+----------
+
+#### Listen to subjection ,maybe you are wrong
+
+
+    You can be wrong too. Obviously, not all the time, but you can never be too sure. 
+    Don’t take this advice as an urge to limit your comments, but in the conversation that occurs, 
+    recognize your teammates perspective is valid tool.
+
+----------
+
+#### We do not you do
+
+
+Also substitute we for you, as in:(you)
+
+    Add a comment to the complex algorithm you wrote.
+
+To something like:(we)
+
+    With such a complex algorithm, we should add a clarifying comment.
+    
+Granted, we could apply all these tips, to really begin a discussion:
+
+    With such an innovative approach to solving this problem, should we add a clarifying comment explaining it, 
+    or 
+    should we break out some of the expressions into functions that we could name to help the reader follow the logical flow?
+
+
 <hr/>
 <hr/>
 
@@ -4472,3 +4548,7 @@ git config --global credential.helper store
 [257]:https://github.com/chrisdone/elisp-guide 
 [258]:http://ul.io/nb/2018/04/30/literate-analytics-with-org-babel/ 
 [259]:http://pragmaticemacs.com/emacs/write-code-comments-in-org-mode-with-poporg/ 
+[260]:http://ergoemacs.org/emacs/emacs_auto-activate_a_major-mode.html 
+[261]:http://www.howardism.org/Technical/Other/code-reviews.html 
+[262]:https://www.gnu.org/software/emacs/manual/html_node/elisp/Major-Modes.html#Major-Modes 
+[263]:https://www.gnu.org/software/emacs/manual/html_node/elisp/Minor-Modes.html#Minor-Modes 

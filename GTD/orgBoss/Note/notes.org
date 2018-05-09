@@ -647,4 +647,9 @@ You may specify special faces for
 specific tags using the option org-tag-faces, in much the same way as you can for TODO keywords (see Faces for TODO keywords). 
 **  [#B]  %^g
                          Added: [2018-03-04 周日 22:02]
-                         
+**  [#B]  %^g
+:LOGBOOK:
+CLOCK: [2018-05-09 周三 12:01]--[2018-05-09 周三 12:02] =>  0:01
+:END:
+                         Added: [2018-05-09 周三 11:59]
+                         %q?
