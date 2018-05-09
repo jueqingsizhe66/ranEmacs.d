@@ -1350,3 +1350,8 @@ e.g. Sunday, September 17, 2000."
 ;; org-mind-map
 
 (require 'ox-org)
+
+;; write code comments in org-mode with poporg
+
+(use-package poporg
+      :bind (("C-c t" . poporg-dwim)))

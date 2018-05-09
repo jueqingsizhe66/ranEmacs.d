@@ -225,7 +225,8 @@ c-x r m : 添加
 c-x r b : 跳转
 ```
 
-### 7. org-mode
+### 7. org-mode(what is the writing style of org-mode?)
+
 [特详细的org-mode教程][13]
 
 [GTD Workflow][14]
@@ -1070,6 +1071,7 @@ seen from [jianshu][74]
 5. [Norang: org-mode Organize Your life in plain text][82]
     6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
 6. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
+7. [A Brief Introduction to Literate Analytics With org-Babel][258]
 
 a. Capture(collect what has your attention)
 ```
@@ -2795,14 +2797,18 @@ e.g. Sunday, September 17, 2000."
 
 在orgConf中 删掉关于muse planner, remember三个包，简化system 大小。
 
-重要的elisp编写技巧
+elisp编写技巧(<2018-05-08 22:39> [emacs-lisp-guide][257])
+
 
 ```
 C-M-d   Move down into a list(进入）
 C-M-u   Move up outof a list(跳出)
+
+The usual way to access the property list is to specify a name and ask what value corresponds to it.
 ```
 
 快速编写括号相关的代码。
+
 move down into a list ,the point will jump into the nearest balanced expression of parentheses ahead of the point ....
 
 Inside the newer verions of Emacs, you can use `C-M-u`
@@ -4170,6 +4176,39 @@ dot -Tpng sample.dot -o sample.png
 
 另外graphviz也集成到很多编程语言的使用，比如[R][251],[common-lisp with graphviz][252], [python graphviz][254]等
 
+### 106. 不需要密码提交codes到github
+
+1. .gitconfig 文件中添加 
+
+```
+[credential]    
+    helper = store
+```
+
+2. 或者在git bash 中执行
+
+```
+git config --global credential.helper store
+```
+
+可阅读[git凭证存储][256].
+
+### 107. Poporg注释context下使用org-mode
+
+比如当前的注释语句为;分号开头，想在后面写上一段话，执行`C-c t`
+就会弹出一个注释窗口开始编辑，编辑完`C-c t`, 就会对你刚才写的
+这段话进行注释。
+
+.orgConf.el的配置：
+
+``` org
+
+(use-package poporg
+      :bind (("C-c t" . poporg-dwim)))
+```
+
+如果不是在代码注释快，敲`C-c t`,会提示`Nothing to edit`.
+
 <hr/>
 <hr/>
 
@@ -4429,3 +4468,7 @@ dot -Tpng sample.dot -o sample.png
 [253]:https://blog.csdn.net/frankax/article/details/77035397 
 [254]:http://graphviz.readthedocs.io/en/stable/ 
 [255]:http://www.graphviz.org/documentation/ 
+[256]:https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8 
+[257]:https://github.com/chrisdone/elisp-guide 
+[258]:http://ul.io/nb/2018/04/30/literate-analytics-with-org-babel/ 
+[259]:http://pragmaticemacs.com/emacs/write-code-comments-in-org-mode-with-poporg/ 
