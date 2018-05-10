@@ -1,5 +1,5 @@
 
-﻿* 2017
+* 2017
 ** 2017-10 十月
 *** 2017-10-07 星期六
 **** testOrgmore[#B] 
@@ -17,6 +17,7 @@
  : 10
 
 
+
 ;you need to set the language for running the python source code 
 
  #+BEGIN_SRC python
@@ -26,6 +27,7 @@
 
  #+RESULTS:
  : None
+
 
 
 ;; you need to set the language for running the perl source code

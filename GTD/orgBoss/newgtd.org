@@ -1090,3 +1090,14 @@ SCHEDULED: <2018-03-01 周四>
 |  6 | 4 | 6 | 3 |
 
 ta
+
+** 伟大的awk
+
+
+#+BEGIN_SRC awk :dir M://fluentYaw30//
+
+  ls *.cas|awk -F"-"  '{print a[NR]=substr($5,0,length($5)-8);}END{for(i=1;i<=NR-1;i++) print a[i+1]-a[i];}
+                                                              '
+
+#+END_SRC
+

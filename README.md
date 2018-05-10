@@ -4284,6 +4284,26 @@ Granted, we could apply all these tips, to really begin a discussion:
     or 
     should we break out some of the expressions into functions that we could name to help the reader follow the logical flow?
 
+### 108. 解锁折叠世界
+
+知识、见识、眼界随着人的阅历、家庭背景而千差万别。真实的世界无疑是存在折叠的世界，都有各种各样的活法，所以才有说法:"参差多态才是幸福的本源"
+
+于是， 惯于无常，自是庆幸，知其无可奈何，仍安之若命。
+
+             逝者如斯夫
+
+```
+        莫   但    果    因
+        问   行    上    上
+        前   善    随    努
+        程   事    缘    力
+```
+
+
+
+![cause][264]
+
+
 
 <hr/>
 <hr/>
@@ -4552,3 +4572,4 @@ Granted, we could apply all these tips, to really begin a discussion:
 [261]:http://www.howardism.org/Technical/Other/code-reviews.html 
 [262]:https://www.gnu.org/software/emacs/manual/html_node/elisp/Major-Modes.html#Major-Modes 
 [263]:https://www.gnu.org/software/emacs/manual/html_node/elisp/Minor-Modes.html#Minor-Modes 
+[264]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/cause.png

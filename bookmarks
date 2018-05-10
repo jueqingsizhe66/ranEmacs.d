@@ -2,17 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("the-joy-of-clojure-korea"
- (filename . "e:/clojure-home/the-joy-of-clojure/")
- (front-context-string . "README.md\n  drwx")
- (rear-context-string . "092 10-16 16:11 ")
- (position . 446))
-("clojure-book-source"
- (filename . "e:/clojure-home/book-source/")
- (front-context-string . "externs.js\n  drw")
- (rear-context-string . "629 10-16 16:11 ")
- (position . 220))
-("yan"
+(("yan"
  (filename . "~/.emacs.d/GTD/phd1.org")
  (front-context-string . "                ")
  (rear-context-string . "\n\n\n*** 研究内容    ")
@@ -22,11 +12,6 @@
  (front-context-string . "力线\n升力面方法一般是在环量求解")
  (rear-context-string . "典型控制规律\n\n\n* 升力面和升")
  (position . 12415))
-("rupeng.sql"
- (filename . "h:/rupeng.sql")
- (front-context-string . "ues(null,'card_v")
- (rear-context-string . "o T_Settings val")
- (position . 380))
 ("www.site.org"
  (filename . "~/.emacs.d/GTD/orgBoss/Site/www.site.org")
  (front-context-string . "* SITES\n** www.o")
@@ -36,7 +21,8 @@
  (filename . "~/.emacs.d/README.md")
  (front-context-string . "\nclick [magit][5")
  (rear-context-string . "ng/.gitconfig *\n")
- (position . 6912))
+ (position . 6912)
+ (annotation . "\nReadme"))
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string . "\n\n;; Place downl")
@@ -48,15 +34,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/IDEA/idea.org")
- (front-context-string . "** TODO [#A] doc")
- (rear-context-string . "定能够反复的帮你完成计划的执行\n")
- (position . 7900))
-("core.clj"
- (filename . "e:/clojure-home/first-example/src/first_example/core.clj")
- (front-context-string)
- (rear-context-string . "m greeting))\n)\n\n")
- (position . 158))
+ (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+ (front-context-string . "**  [#B]  %^g\n:L")
+ (rear-context-string . "03-04 周日 22:02]\n")
+ (position . 29443))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)
