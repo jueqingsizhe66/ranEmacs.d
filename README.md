@@ -4317,9 +4317,7 @@ Granted, we could apply all these tips, to really begin a discussion:
 悠的自在，这种自在是需要立足于空广蓝天，需要一定的心灵高度。
 ```
 
-<div align="center">
 ![cause][264]
-</div>
 
 
 <hr align="center" width="50%"/>
