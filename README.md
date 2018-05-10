@@ -4320,9 +4320,9 @@ Granted, we could apply all these tips, to really begin a discussion:
 ![cause][264]
 
 
-<hr align="center" width="50%"/>
-<hr align="center" width="50%"/>
-<hr align="center" width="50%"/>
+<hr align="center" width="40%"/>
+<hr align="center" width="40%"/>
+<hr align="center" width="40%"/>
 <hr/>
 
 
