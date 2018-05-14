@@ -4335,12 +4335,153 @@ Granted, we could apply all these tips, to really begin a discussion:
 ```
 
 ```
+    ----------
+
+
          《青松》
            陈毅
     大雪压青松，轻松挺且直。
     要知松高洁，待到雪化时。
+    ----------
+
     
+    叶剑英：
+      成则为周武三千，败则为田横五百，可常可变，可生可死. 
+      
+      自古英雄多出自草莽，大丈夫何患乎文凭！【努力即可】
+      
+      攻城不怕坚，攻书莫畏难。科学有险阻，苦战能过关。
+      
+      毛借吕端评价叶帅在革命期间力挽狂澜，四两拨千斤的能力，关键时刻不糊涂，明断是非，果断抉择
+      ："诸葛一生唯谨慎，吕端大事不糊涂。"
+     ----------
+
+ 
+             周恩来送给耿彪三句话
+
+    别人要打你，无论别人怎么打你，你自己不要倒
+    别人要赶你，无论别人怎么赶你，你自己不要走
+    别人要整你，无论别人怎么整你，你自己不要死。
+    ----------
+
+    毛泽东赠送给彭德怀 :"山高路险沟深，骑兵任你纵横。谁敢横枪勒马，唯我彭大将军"
+    
+   ----------
+
+ 
 ```
+
+### 109. 伟大的awk and rename
+
+有时候写文章需要把大量的图片重命名，比如Fig.18到Fig20. 
+
+下面的代码就是根据Fig21该为Fig22, Fig20改为Fig21的过程
+
+#### Rename 例子
+
+
+```
+#+BEGIN_SRC awk :dir c://Figures
+
+ for i in `seq 21 -1 12`; do rename $i $(($i+1)) *;done
+
+#+END_SRC
+```
+
+
+#### AWK 例子
+
+
+提取每个文件的时间信息，然后做前后加减
+
+```
+#+BEGIN_SRC awk :dir M://fluentYaw30
+
+  ls *.cas|awk -F"-"  '{print a[NR]=substr($5,0,length($5)-8);}END{for(i=1;i<=NR-1;i++) print a[i+1]-a[i];}
+                                                              '
+
+#+END_SRC
+
+```
+
+### 伟大的find
+
+有时候用ls显示文件，准备删除，但是未出现一些显示颜色出现的问题，比如
+
+```
+$ ls -ls |grep '(1).jpg'|awk '{print $10|"xargs rm"}'
+rm: 无法删除''$'\033''[01;32mIMG_20180420_194438(1).jpg'$'\033''[0m': No such file or directory
+rm: 无法删除''$'\033''[01;32mIMG_20180420_194624(1).jpg'$'\033''[0m': No such file or directory
+
+```
+
+可以看出来问题在于ls显示文件时候，带上了颜色。 在这种前提下,使用下面各种方法都没有好的效果【方向错误，怎么做都没用】
+
+```
+1.   for i in `ls .*|grep '(1).jpg'`; do rm -r $i;done
+2.   ls .*|grep '(1).jpg'|xargs rm -rf
+ 
+
+```
+
+
+于是想着使用伟大的find命令,成功解决了我的需求。
+
+
+```
+find . -type f|grep '(1).jpg'|xargs rm -rf
+
+```
+
+
+一些额外有用的命令
+
+```
+----------
+
+
+f 普通文件
+l 符号连接
+d 目录
+c 字符设备
+b 块设备
+s 套接字
+p Fifo
+----------
+
+
+
+1. 找到大于100M以上的文件:
+    find . -type f -size +100M
+2. 查找当前目录或者子目录下所有.txt文件，但是跳过子目录sk
+    find . -path "./sk" -prune -o -name "*.txt" -print
+3. 搜索超过七天内被访问过的所有文件
+    find . -type f -atime +7
+    还有amin +10 超过10min
+    UNIX/Linux文件系统每个文件都有三种时间戳：
+        1. 访问时间（-atime/天，-amin/分钟）：用户最近一次访问时间。
+        2. 修改时间（-mtime/天，-mmin/分钟）：文件最后一次修改时间。
+        3. 变化时间（-ctime/天，-cmin/分钟）：文件数据元（例如权限等）最后一次修改时间。
+4. 找出比file.log修改时间更长的所有文件
+    find . -type f -newer file.log
+5. 基于正则表达式匹配文件路径
+    find . -regex ".*\(\.txt\|\.pdf\)$"
+6. 同上，但忽略大小写
+    find . -iregex ".*\(\.txt\|\.pdf\)$"
+7. !的使用
+   find   /mnt   -name t.txt ! -ftype vfat   在/mnt下查找名称为tom.txt且文件系统类型不为vfat的文件
+   find /home ! -name "*.txt"   找出/home下不是以.txt结尾的文件
+   
+----------
+
+高级命令
+
+1. find . -type f -exec ls -l {} \;   
+find logs -type f -mtime +5 -exec   -ok   rm {} \;
+find   ./   -mtime   -1   -type f   -ok   ls -l   {} \;  
+
+```
+
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
