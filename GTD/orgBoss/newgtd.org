@@ -1100,4 +1100,41 @@ ta
                                                               '
 
 #+END_SRC
+** TODO [#B] 提交双滑移初稿 <2018-05-15 周二 11:56>                   :学术:
+DEADLINE: <2018-05-18 周五> SCHEDULED: <2018-05-15 周二>
+                    :PROPERTIES:
+                    :Effort: 8:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-05-15 周二 11:56]--[2018-05-15 周二 11:57] =>  0:01
+                    :END:
+                    
+                   
+务必完成[fn:1] 
+
+LINK:info:org:Top
+#<<df>>
+
+
+
+
+
+
+
+
+sdfsdf
+
+
+
+
+
+
+
+
+
+
+
+
+[
+
 

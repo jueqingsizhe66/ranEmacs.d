@@ -1355,3 +1355,11 @@ e.g. Sunday, September 17, 2000."
 
 (use-package poporg
       :bind (("C-c t" . poporg-dwim)))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (require 'writegood-mode)                         ;;
+;; (global-set-key "\C-c n" 'writegood-grade-level)  ;;
+;;                                                   ;;
+;; (global-set-key "\C-c o" 'writegood-reading-ease) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -534,6 +534,7 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 有趣的org帮助 `LINK:info:org:Top`.(鼠标左键点击或者C-c C-o)
 
+
 为了显示clean的org文档，在.org.conf添加了
 `(setq org-startup-indented t)`
 
@@ -694,7 +695,7 @@ emacs对应的先标记
 Seen from [emacs-rocks-2 and 3][41]
 
 ```
-C-t transpose two chars
+C-t transpose two chars<2018-05-16 13:08>再次学习
 
 M-t transpose two words
 
@@ -1817,8 +1818,8 @@ F9后一页slide(后一个标题)
 <2018-05-02 02:36>  再次学习怎么使用[emacs+reveal.js做演讲][234]
 
 ``` org
-#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
-   * I will grow.
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none)
+    * I will grow.
    * I will shrink.
    * I rolled in.
    * I will fade out.
@@ -1850,7 +1851,7 @@ F9后一页slide(后一个标题)
 #+Email: zhaoturkkey@163.com 
 
 
-#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) 
 
 * I will grow.
 * I will shrink.
@@ -2042,6 +2043,8 @@ Here is the good job from [Malabarba][112] who write the two completion feature 
 或者在editing.el中添加`(speed-of-thought-mode t)`即可。
 
 clojure的定义函数，得在开启REPL模式下，才可以使用`C-c f`来调用`sotclojure-find-or-define-function`
+
+`C-c f`是一个好命令，可以查看函数定义或者新建函数<2018-05-16 12:47>
 
 `M-return`调用`sotlisp-newline-and-parentheses`
 
@@ -2957,15 +2960,15 @@ If you don't expect having to do it again,don't try to optimise it.
 ```
 #<<hello>>
 
-
+注意这边说的都是针对orgmode文件(*.org结尾的文件！！！)<2018-05-16 13:17>  下面均有效
 
 [[hello][hello内部链接]
 
 通过C-c C-o打开链接(open)
-通过C-c C-l (org-insert-link  创建修改链接[可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
+通过C-c C-l (打开保存的链接, 很强大，打开各种链接）
+通过C-c l(org-insert-link 然后可以通过C-c C-l使用 可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
 ```
 
-进一步链接file
 
 ```
 
@@ -2981,6 +2984,12 @@ file:~/xx.org::MyTarget (找到目标<<My Target>>'
 
 引用脚注  [[fn:footprint1][脚注1]]
 ```
+
+注意直接在字符串后面[C-c C-x f][269]即可
+
+想要看引用处，直接`C-c C-c`即可跳转到脚注点
+
+另外可以拓展了解[vimwiki的跳转原理][270],这也是我喜欢vimwiki的地方
 
 3. 再次提及info
 
@@ -3716,6 +3725,7 @@ setq-default evil-escape-key-sequence "jk")
 在非evil-mode情况下，可以在当前的navigation history  file使用以下命令
 
 
+``` org
 | 命令 | 说明                                                                    |
 |------+-------------------------------------------------------------------------|
 | p    | Visit previous historic version                                         |
@@ -3726,6 +3736,8 @@ setq-default evil-escape-key-sequence "jk")
 | t    | Goto revision by selected commit message                                |
 | q    | Exit the time machine.                                                  |
 | b    | Run magit-blame on the currently visited revision (if magit available). |
+
+```
 
 还可以使用M-x git-timemachine show nth version: 指定具体某个版本
 
@@ -4368,6 +4380,9 @@ Granted, we could apply all these tips, to really begin a discussion:
     
    ----------
 
+----------
+
+   邓小平："这是登山时候最疲累的时候，脚步可以慢下来，但是不能停下来。"
  
 ```
 
@@ -4404,7 +4419,15 @@ Granted, we could apply all these tips, to really begin a discussion:
 
 ```
 
-### 伟大的find
+AWK用于翼型坐标点导致，注意awk中小括号组合代表函数调用，而中括号代表数组。
+
+```
+$ cat test1|awk '{a[NR]=$1;b[NR]=$2;c[NR]=$3;} END{for(i=length(a);i>0;i--) print a[i],b[i],c[i]}'
+
+
+```
+
+### 110. 伟大的find
 
 有时候用ls显示文件，准备删除，但是未出现一些显示颜色出现的问题，比如
 
@@ -4481,6 +4504,82 @@ find logs -type f -mtime +5 -exec   -ok   rm {} \;
 find   ./   -mtime   -1   -type f   -ok   ls -l   {} \;  
 
 ```
+
+### 111. write good mode for writes
+
+
+在翻阅[planet on emacs][266],看到关于写作方面建议的好文章，
+
+于是试试[writegood Mode][267],会把夸张的词语勾出来，画个波浪线。
+
+
+``` org
+
+* Weasel words
+Weasel words--phrases or words that sound good without conveying information--obscure precision.
+
+I notice three kinds of weasel words in my students' writing: (1) salt and pepper words, (2) beholder words and (3) lazy words. 
+** Salt and pepper words
+New grad students sprinkle in salt and pepper words for seasoning. These words look and feel like technical words, but convey nothing.
+
+My favorite salt and pepper words/phrases are various, a number of, fairly, and quite. Sentences that cut these words out become stronger.
+
+
+#+BEGIN_SRC org
+    Bad:    It is quite difficult to find untainted samples.
+    Better: It is difficult to find untainted samples.
+    Bad:    We used various methods to isolate four samples.
+    Better: We isolated four samples.
+#+END_SRC
+
+** Beholder words
+Beholder words are those whose meaning is a function of the reader; for example: interestingly, surprisingly, remarkably, or clearly.
+
+Peer reviewers don't like judgments drawn for them.
+
+
+#+BEGIN_SRC org
+  Bad:    False positives were surprisingly low.
+  Better: To our surprise, false positives were low.
+  Good:   To our surprise, false positives were low (3%).
+
+#+END_SRC
+
+** Lazy words
+Students insert lazy words in order to avoid making a quantitative characterization. They give the impression that the author has not yet conducted said characterization.
+
+These words make the science feel unfirm and unfinished.
+
+The two worst offenders in this category are the words very and extremely. These two adverbs are never excusable in technical writing. Never.
+
+Other offenders include several, exceedingly, many, most, few, vast.
+
+
+#+BEGIN_SRC org
+   Bad:    There is very close match between the two semantics.
+   Better: There is a close match between the two semantics.
+
+#+END_SRC
+
+** Adverbs
+In technical writing, adverbs tend to come off as weasel words.
+
+I'd even go so far as to say that the removal of all adverbs from any technical writing would be a net positive for my newest graduate students. (That is, new graduate students weaken a sentence when they insert adverbs more frequently than they strengthen it.)
+
+
+#+BEGIN_SRC org
+   Bad:    We offer a completely different formulation of CFA.
+   Better: We offer a different formulation of CFA.
+#+END_SRC
+
+```
+
+然后可以开启`M-x writegood mode`并配合上`M-x writegood-grade-level`
+
+如果特别好，writegood-grade-level会提示得分无穷大，如果很差则分数很低。
+
+
+关于[英文写作的建议][268]
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -4753,3 +4852,8 @@ find   ./   -mtime   -1   -type f   -ok   ls -l   {} \;
 [263]:https://www.gnu.org/software/emacs/manual/html_node/elisp/Minor-Modes.html#Minor-Modes 
 [264]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/cause.png
 [265]:http://www.xuefo.net/nr/article47/474653.html 
+[266]:http://irreal.org/blog/?p=7198 
+[267]:https://github.com/bnbeckwith/writegood-mode 
+[268]:http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/ 
+[269]:https://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html 
+[270]:https://github.com/jueqingsizhe66/windowVimYe#%E8%B7%B3%E8%BD%AC%E5%8E%9F%E7%90%86 

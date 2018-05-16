@@ -1,0 +1,56 @@
+* Weasel words
+Weasel words--phrases or words that sound good without conveying information--obscure precision.
+
+I notice three kinds of weasel words in my students' writing: (1) salt and pepper words, (2) beholder words and (3) lazy words. 
+** Salt and pepper words
+New grad students sprinkle in salt and pepper words for seasoning. These words look and feel like technical words, but convey nothing.
+
+My favorite salt and pepper words/phrases are various, a number of, fairly, and quite. Sentences that cut these words out become stronger.
+
+
+#+BEGIN_SRC org
+    Bad:    It is quite difficult to find untainted samples.
+    Better: It is difficult to find untainted samples.
+    Bad:    We used various methods to isolate four samples.
+    Better: We isolated four samples.
+#+END_SRC
+
+** Beholder words
+Beholder words are those whose meaning is a function of the reader; for example: interestingly, surprisingly, remarkably, or clearly.
+
+Peer reviewers don't like judgments drawn for them.
+
+
+#+BEGIN_SRC org
+  Bad:    False positives were surprisingly low.
+  Better: To our surprise, false positives were low.
+  Good:   To our surprise, false positives were low (3%).
+
+#+END_SRC
+
+** Lazy words
+Students insert lazy words in order to avoid making a quantitative characterization. They give the impression that the author has not yet conducted said characterization.
+
+These words make the science feel unfirm and unfinished.
+
+The two worst offenders in this category are the words very and extremely. These two adverbs are never excusable in technical writing. Never.
+
+Other offenders include several, exceedingly, many, most, few, vast.
+
+
+#+BEGIN_SRC org
+   Bad:    There is very close match between the two semantics.
+   Better: There is a close match between the two semantics.
+
+#+END_SRC
+
+** Adverbs
+In technical writing, adverbs tend to come off as weasel words.
+
+I'd even go so far as to say that the removal of all adverbs from any technical writing would be a net positive for my newest graduate students. (That is, new graduate students weaken a sentence when they insert adverbs more frequently than they strengthen it.)
+
+
+#+BEGIN_SRC org
+   Bad:    We offer a completely different formulation of CFA.
+   Better: We offer a different formulation of CFA.
+#+END_SRC

@@ -1,0 +1,161 @@
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_TRANS: Linear
+#+REVEAL_THEME: jr0cket
+#+OPTIONS: reveal_width:1400
+#+OPTIONS: reveal_height:1000
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL-SLIDE-NUMBER: t
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: reveal_center:nil 
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t 
+#+Title: Citespace: reference visualization
+#+Author: Ye Zhaoliang
+#+Email: zhaoturkkey@163.com 
+
+* Why CiteSpace
+早先的引文搜索有[[http://histcite.updatestar.com/][histcite]]
+
+In order to master such a complex process of science mapping, researchers
+often need to develop a diverse set of skills and knowledge that may span
+multiple disciplines.
+
+More in depth analyses of each specialty would be more revealing by incorporating
+additional methods such as citation context analysis and studies of other aspects
+of scholarly publications
+
+#+REVEAL: split
+The underlying analytic process of science mapping serves many practical needs, 
+
+1. notably bibliometric mapping,
+2. knowledge domain visualization, and
+3. visualization of scientific literature(scientific revolutions).
+
+Debates over how various potentially conflicting[categories of knowledge] theories of scientific change may be
+utilized to reveal the underlying mechanisms of how science advances
+#+REVEAL: split
+CiteSpace provides a systematic methodology for researchers to achieve a good understanding of
+how scientific fields evolve, to recognize potentially insightful patterns from visually encoded
+signs, and to synthesize various information so as to capture  the state of the art of the domain.
+
+- domain analysis(scientometric, metric,indicators)
+- visualization(Visual analytic tools, graph, network visualization)
+
+[1] Chen C. [[https://www.researchgate.net/publication/313991204_Science_Mapping_A_Systematic_Review_of_the_Literature][Science Mapping: A Systematic Review of the Literature.]] Journal of Data and Information Science, 2017,2:1-40.
+[2] [[http://blog.sciencenet.cn/blog-496649-838067.html][陈美朝官网]]
+
+
+** 数据库
+
+#+ATTR_REVEAL: :frag (roll-in)  
+- WoS
+- CNKI
+- CSCD
+- CSSCI
+- CNKI
+- PubMed
+* CiteSpace is what
+http://blog.sciencenet.cn/blog-43950-1043931.html
+* Analysis on the WoS database
+
+下面展示三种图形分别是
+#+ATTR_REVEAL: :frag (highlight-blue)
+    - cluster picture
+    - spider picture
+    - timeline picture
+
+#+REVEAL: split
+[[./img/cluster.png]]
+#+REVEAL: split
+[[./img/spider.png]]
+#+REVEAL: split
+
+[[./img/timeline.png]]
+
+#+REVEAL: split
+你也可以觉得哪个感兴趣，直接打开即可
+
+[[./img/open.png]]
+
+* Analysis on the CNKI database
+
+[[https://mp.weixin.qq.com/mp/homepage?__biz=MzI4NTE1NjAyOA==&hid=1&sn=ae4730ec311f0db89c4fa4c353eb8262&scene=18&devicetype=android-23&version=26060637&lang=zh_CN&nettype=WIFI&ascene=7&session_us=gh_8d25ce16a8bf&pass_ticket=3h2qdCaWmt0t0S0ozZqkdK7BiTEWfCmwkRj9bo%2BWVSobexaV%2FTbJmDsuegZMduN6&wx_header=1&scene=1][Cite Space Question ]]
+
+Q13.1 哪些数据可以做引文分析？
+
+A13.1 有引文数据的包括：Web of Science, Scopus, CSCD, CSSCI. 没有的包括：CNKI, PubMed
+* Analysis connected with the Google Earth
+
+
+结合Google Earth
+[[./img/geo0.png]]
+
+
+#+REVEAL: split
+
+
+[[./img/geo.png]]
+
+
+* 如何阅读图谱
+
+
+
+** 结构：
+
+#+ATTR_REVEAL: :frag ( highlight-red)
+    - 是否能看到自然聚类（未经聚类算法而能直观判定的组合）
+    - 是否包括转折点（有紫色外圈的节点），
+    - 通过算法能得到几个聚类？每个节点大小代表它的总被引次数。大圈则总被引高。
+
+** 时间：
+  时间线显示将每一聚类按时间顺序排列，相邻聚类常常对应相关主题（聚类间共引）。
+  聚类之间的知识流向也可从时间（色彩）上看到（由冷色到暖色）。
+
+
+ #+ATTR_REVEAL: :frag (roll-in)
+     1. 每个自然聚类是否有主导颜色（出现时间相对集中），
+     2. 是否有明显的热点（节点年轮中出现红色年轮，即被引频率是否曾经或仍在急速增加）？
+     3. 通过各个年轮的色彩可判断被引时间分布。
+
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (roll-in)
+**  内容：
+
+ #+ATTR_REVEAL: :frag (roll-in)
+     1. 每个聚类的影响（被引时涉及的主题，摘要，和关键词）和
+     2. 几种不同算法所选出的最有代表性的名词短语？
+
+**  指标：
+ #+ATTR_REVEAL: :frag (roll-in)
+     1. 每个聚类是否具有足够的相似性（silhouette值是否足够大，太小则无明确主题可言），
+     2. 整个聚类是否有足够节点（太少则很可能全都出自同一篇文献的参考文献，因而缺乏普遍意义）
+
+        
+* I don't know
+
+1. 如何左对齐
+2. 如何更好地展示图片，控制页面大小
+
+
+#+BEGIN_SRC org
+#+ATTR_REVEAL: :frag 
+   - hel
+   - hef
+#+END_SRC
+
+
+
+#+BEGIN_SRC org
+    /* Ensure certain elements are never larger than the slide itself */
+    .reveal img,
+    .reveal video,
+    .reveal iframe {
+      max-width: 95%;
+      max-height: 95%; }
+
+#+END_SRC
+
+之所以导航栏不加上颜色，是因为他对于你的内容一点作用都没有，所以干脆不加颜色显示
