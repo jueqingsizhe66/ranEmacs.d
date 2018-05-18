@@ -4610,14 +4610,15 @@ I'd even go so far as to say that the removal of all adverbs from any technical 
 
 关于[英文写作的建议][268]
 
-### Writer room mode
+### 112. Writer room mode
 
 `M-x writeroom-mode` 的效果会把状态栏给关闭(disable the mode line)，而只是留下一个编辑窗口和一条线，区分编辑栏和命令栏，效果满意，所以保留。
 
 
 ``` org
 writeroom-mode is a minor mode for Emacs that implements a distraction-free writing mode similar
-to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions are not actively supported.
+to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions
+are not actively supported.
 ```
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
