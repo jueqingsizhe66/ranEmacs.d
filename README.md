@@ -1079,15 +1079,18 @@ seen from [jianshu][74]
 3. [uncle glassman][78]  
 4. [How I use Emacs and Org-mode to implement GTD][14]  very important for using org-mode in emacs!
 5. [Norang: org-mode Organize Your life in plain text][82]
-    6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
-6. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
-7. [A Brief Introduction to Literate Analytics With org-Babel][258]
+6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
+7. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
+8. [A Brief Introduction to Literate Analytics With org-Babel][258]
 
 a. Capture(collect what has your attention)
 ```
 Use an in-tray, notepad, digital list, or voice recorder to capture everything that has your attention. 
 Little, big, personal and professional—all your to-do’s, projects, things to handle or finish. 
 ```
+
+如果没有切实的目标、合理的计划和明确的重点，再多的努力也只是蛮干，浪费时间不讨好。
+
 b. Clarify(Process what it means)
 ```
 Take everything that you capture and ask: Is it actionable? If no, then trash it, incubate it, 
@@ -1099,6 +1102,22 @@ c. Organize(put it where it belongs)
 Put action reminders on the right lists. For example, create lists for the appropriate categories
 —calls to make, errands to run, emails to send, etc. 
 ```
+
+形成你自己的视觉卡片,一个人学习能力究竟达到怎样的水平，试着制作一张视觉卡片就明了了
+ 
+![vision card][271]
+
+制作视觉卡片并不是浪费时间的过程【关键词的辐射作用】
+以中点扩散，顺时针分块，以起点向四周发散，顺时针依次排开，这既是制作视觉卡片的基本原则，
+也是阅读时的最佳顺序【调研发现这种方式符合人脑自然地运作方式，可以十分有效地帮助我们在
+阅读的同时深度处理信息，为接下来的两个阶段打好基础】
+
+绘制卡片技巧: 常用的生理感官【眼耳鼻舌生意】
+
+一本书，一篇文章，一个拼图有其相同点，或者分章节组成，或者由一个一个小图片组成，
+书有时候存在脉络不清楚，得细读围观线索，而拼图则是脉络清晰,可进行宏观把控。
+
+
 d. Reflect(review frequently,weekly review, monthly review)
 ```
 Look over your lists as often as necessary to trust your choices about what to do next. Do a weekly 
@@ -1110,7 +1129,7 @@ Use your system to take appropriate actions with confidence.
 ```
 
 CCORE[C-CORE]
-Org---Interprete---Tag---Recite----apply-----
+Org---Interprete(evaluate)---Tag---Recite----apply-----
 
 原来文学编程也是可以设置变量
 
@@ -1189,6 +1208,8 @@ It can contain any number of symbols, which will be repeated."
 
 ![new gtd style][81]
 
+时间管理的最大意义并非让我们在同样的时间里学会更多的内容，而是帮助我们提高学习效率，
+从而在改善学习效果的同时有更多的休闲时间，并且心安理得的享受这些休闲时间.
 
 ### 47. 常见verb(*****)
 
@@ -1447,6 +1468,7 @@ The last variable removes the annoying “Do you want to execute” your code wh
 
 Code Evaluation?
 
+``` org
 | 属性       | 说明                                                  |
 |------------|-------------------------------------------------------|
 | 1. dir     | specify directory the code should run … Tramp?        |
@@ -1457,15 +1479,20 @@ Code Evaluation?
 | 6. var     | setting variables for a block (ignore with no-expand) |
 |            |                                                       |
 
+```
 Exporting?
 
+``` org
 |         |                                             |
 | results | either output or value and the formatting   |
 | exports | how the code and results should be exported |
 |         |                                             |
 
+```
+
 Special Output and Formatting?
 
+``` org
 | padline |                                       |
 | post    | post processing of code block results |
 | wrap    |                                       |
@@ -1473,6 +1500,8 @@ Special Output and Formatting?
 |         |                                       |
  
  ```
+
+```
  C-c s i   创建一个代码块
  C-c s e   编辑代码块
  
@@ -4581,6 +4610,14 @@ I'd even go so far as to say that the removal of all adverbs from any technical 
 
 关于[英文写作的建议][268]
 
+### Writer room mode
+
+`M-x writeroom-mode` 的效果会把状态栏给关闭(disable the mode line)，而只是留下一个编辑窗口和一条线，区分编辑栏和命令栏，效果满意，所以保留。
+
+
+``` org
+writeroom-mode is a minor mode for Emacs that implements a distraction-free writing mode similar to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions are not actively supported.
+```
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -4857,3 +4894,4 @@ I'd even go so far as to say that the removal of all adverbs from any technical 
 [268]:http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/ 
 [269]:https://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html 
 [270]:https://github.com/jueqingsizhe66/windowVimYe#%E8%B7%B3%E8%BD%AC%E5%8E%9F%E7%90%86 
+[271]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/learning.png

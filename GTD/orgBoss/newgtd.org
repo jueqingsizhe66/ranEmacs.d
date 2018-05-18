@@ -520,7 +520,7 @@ http://www.howardism.org/Technical/Emacs/spreadsheet.html
           |-------------------------------------------------+--------+------|
           | *Total time*                                    | *0:02* |      |
           |-------------------------------------------------+--------+------|
-          | \_  番茄时间(30min) <2017-10-31 周二 16:21 +1d> |        | 0:02 |
+          | \_  番茄时间(30min) <2017-10-31 周二 16:21 +1w> |        | 0:02 |
           #+END:
           
                     
@@ -816,7 +816,7 @@ CLOSED: [2018-01-09 周二 17:48] SCHEDULED: <2017-12-01 周五> DEADLINE: <2018
                     
 提前准备好
 
-** TODO [#B] Learning English with Mrs xiao xinran <2017-12-05 周二 14:11 +1d> :@home:
+** TODO [#B] Learning English with Mrs xiao xinran <2017-12-05 周二 14:11 +3d> :@home:
 SCHEDULED: <2017-12-05 周二>
                     :PROPERTIES:
                     :Effort: 1:00
@@ -1100,7 +1100,7 @@ ta
                                                               '
 
 #+END_SRC
-** TODO [#B] 提交双滑移初稿 <2018-05-15 周二 11:56>                   :学术:
+** TODO [#B] 提交双滑移初稿 <2018-05-15 周二 11:56 +1w>                  :学术:
 DEADLINE: <2018-05-18 周五> SCHEDULED: <2018-05-15 周二>
                     :PROPERTIES:
                     :Effort: 8:00
@@ -1111,30 +1111,25 @@ DEADLINE: <2018-05-18 周五> SCHEDULED: <2018-05-15 周二>
                     
                    
 务必完成[fn:1] 
-
 LINK:info:org:Top
 #<<df>>
+** TODO [#B] 查阅energy投稿信息 <2018-05-16 周三 17:08 +1w>              :学术:
+DEADLINE: <2018-05-29 周二>
+                    :PROPERTIES:
+                    :Effort: 0:30
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-05-16 周三 17:08]--[2018-05-16 周三 17:09] =>  0:01
+                    :END:
+                    
+                    
 
-
-
-
-
-
-
-
-sdfsdf
-
-
-
-
-
-
-
-
-
-
-
-
-[
-
-
+                    
+<2018-05-14 17:10> 投出去
+** TODO [#B] 关注一下华能清能院的博士后工作站 <2018-05-18 周五 15:10 +1w> :学术:
+                    :PROPERTIES:
+                    :Effort: 0:30
+                    :END:
+                    
+                    
+http://www.hnceri.com/n4/n12/index.html
