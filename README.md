@@ -4616,7 +4616,8 @@ I'd even go so far as to say that the removal of all adverbs from any technical 
 
 
 ``` org
-writeroom-mode is a minor mode for Emacs that implements a distraction-free writing mode similar to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions are not actively supported.
+writeroom-mode is a minor mode for Emacs that implements a distraction-free writing mode similar
+to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions are not actively supported.
 ```
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
