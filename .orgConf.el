@@ -22,7 +22,7 @@
 (setq org-hide-emphasis-markers t)
 
 (setq org-log-done t)
-
+(setq which-func-modes t)  ;; start the which-function-mode to let you capture the template code with c-c c c!!!
 (setq org-startup-indented t)  ;; or M-x org-indent-mode  to clean the org file 
 (setq auto-image-file-mode t)  ;;  let emacs show image
 
@@ -79,6 +79,8 @@
 (setq ido-everywhere t)
 (setq ido-max-directory-size 100000)
 (ido-mode (quote both))
+
+
 
 
 (setq ido-default-file-method 'selected-window)
@@ -222,7 +224,7 @@ Captured %<%Y-%m-%d %H:%M>
         ("i" "IDEA" entry  (file+headline "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "IDEA")  
                         "* TODO [#A] %^{What's your IDEA (Briefly)} %T \n %?" 
                         :clock-in t :clock-resume t )
-          ("c" "ClojureLearning" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")  
+          ("C" "ClojureLearning" entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Clipboard/clojureLearn.org")  
                       ;  "** %^{Head Line} %U %^g\n%c\n%?"  
                          "** %^{Tip} %U \n \n %?"
                         ;:immediate-finish t
@@ -271,9 +273,43 @@ Captured %<%Y-%m-%d %H:%M>
           "* %^{Title} \nSource: \n\n\n%?")                                                         ;;
          ("L" "Protocol Link" entry (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Inbox") ;;
           "* %? [[%:link][%:description]] \nCaptured On: %U")                                       ;;
-         
+         ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+            "* %?\n%(my/org-capture-code-snippet \"%F\")")        
          ))
 
+
+;; http://ul.io/nb/2018/04/30/better-code-snippets-with-org-capture/ 
+(defun my/org-capture-get-src-block-string (major-mode)
+  "Given a major mode symbol, return the associated org-src block
+string that will enable syntax highlighting for that language
+
+E.g. tuareg-mode will return 'ocaml', python-mode 'python', etc..."
+
+  (let ((mm (intern (replace-regexp-in-string "-mode" "" (format "%s" major-mode)))))
+    (or (car (rassoc mm org-src-lang-modes)) (format "%s" mm))))
+
+(defun my/org-capture-code-snippet (f)
+  (with-current-buffer (find-buffer-visiting f)
+    (let ((code-snippet (buffer-substring-no-properties (mark) (- (point) 1)))
+          (func-name (which-function))
+          (file-name (buffer-file-name))
+          (line-number (line-number-at-pos (region-beginning)))
+          (org-src-mode (my/org-capture-get-src-block-string major-mode)))
+      (format
+       "file:%s::%s
+In ~%s~:
+#+BEGIN_SRC %s
+%s
+#+END_SRC"
+       file-name
+       line-number
+       func-name
+       org-src-mode
+    code-snippet))))
+(defun my/org-dir-file (name)
+    "Prepend name with path to the org-directory root"
+    (concat org-directory name))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Custom agenda command definitions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (setq org-agenda-custom-commands                               ;;

@@ -34,10 +34,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B] 提交双")
- (rear-context-string . "   '\n\n#+END_SRC\n")
- (position . 41652))
+ (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+ (front-context-string . "* dfg \nfile:k:/c")
+ (rear-context-string . "hich-function)]\n")
+ (position . 98))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

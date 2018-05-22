@@ -1,0 +1,14 @@
+* df 
+%![Error: (void-function which-function)]
+* dfdf
+%![Error: (void-function which-function)]
+* comment 
+file:k:/clojure-home/clj-new-github/src/clj_new_github/core.clj::17
+In ~foo~:
+#+BEGIN_SRC clojure
+
+(comment
+  (+ 1 2 3 4)
+  (let [url "https://api.github.com/repos/rails/rails/stats/contributors"]
+    (type (http/get url))))
+#+END_SRC

@@ -12,7 +12,7 @@ and ubuntu, all valid for newer.
 [原始记录版本][86]
 
 *注意，[标题55][149]引入了flyspell问题，所以在windows得安装aspell,这个错误会在
-调用org-agenda的时候出现(本质是调用flyspell mode失败)*
+0调用org-agenda的时候出现(本质是调用flyspell mode失败)*
 
 *注意，添加 (set-language-environment "utf-8")到init.el,这样新文件才会是utf-8编码风格*
 
@@ -2568,10 +2568,10 @@ gpg --export-secret-keys >keyfile
 
 也就是为了备份必须在Kleopatra做两部工作
 
-1. 公匙备份，导出证书即可（服务器也会备份）（可被别人用于加密）
+1. 公匙备份，导出证书即可（服务器也会备份）（可被别人用于加密<2018-05-18 21:24> 的确如此！）
 2. 私匙备份，导出私匙文件
 
-进一步信息观看[baidu经验][216]
+进一步信息观看[baidu经验][216],明天你如何通过别人发布的公匙【也叫做证书】加密，然后把已加密的密文通过好友的密匙进行加密。
 
 还有打开`GPA`
 
@@ -4619,7 +4619,133 @@ I'd even go so far as to say that the removal of all adverbs from any technical 
 writeroom-mode is a minor mode for Emacs that implements a distraction-free writing mode similar
 to the famous Writeroom editor for OS X. writeroom-mode is meant for GNU Emacs 24, lower versions
 are not actively supported.
+
 ```
+
+### 113. Dashboard your life
+
+#### dashboard.el
+
+using: good for managing the recent used files and agenda.
+
+[dashboard.el][272] is a start screen for EMACS, which is similar to the [vim-startup][274]
+
+
+Note:
+     Unload the setup-dashboard.el setting in the start-up due to the heavy loading of the config for
+     the dashboard.
+
+----------
+
+#### org-dashboard.el
+
+Using: good for visualize the header1 with CATEGORY properties
+
+[org-dashbard.el][273]
+
+Take care
+
+1. Header1
+2. CATEGORY:
+
+``` org
+* Project: Better Health
+:PROPERTIES:
+:CATEGORY: health
+:END:
+
+** Milestones
+*** [66%] run 10 km/week
+**** TODO learn proper warmup
+**** DONE look for a jogging partner
+**** DONE run 10 minutes on monday
+
+* Project: Super Widget
+:PROPERTIES:
+:CATEGORY: widget
+:END:
+
+** Milestones
+*** [1/6] release 0.1
+**** DONE git import
+**** TODO create github project
+**** TODO add readme
+**** TODO publish
+```
+
+
+usage: `M-x org-dashboard-display`
+
+
+### Copy codes into code-snippets.org file
+
+
+functions for copy codes
+
+``` org
+
+;; http://ul.io/nb/2018/04/30/better-code-snippets-with-org-capture/ 
+(defun my/org-capture-get-src-block-string (major-mode)
+  "Given a major mode symbol, return the associated org-src block
+string that will enable syntax highlighting for that language
+
+E.g. tuareg-mode will return 'ocaml', python-mode 'python', etc..."
+
+  (let ((mm (intern (replace-regexp-in-string "-mode" "" (format "%s" major-mode)))))
+    (or (car (rassoc mm org-src-lang-modes)) (format "%s" mm))))
+
+
+(defun my/org-capture-code-snippet (f)
+  (with-current-buffer (find-buffer-visiting f)
+    (let ((code-snippet (buffer-substring-no-properties (mark) (- (point) 1)))
+          (func-name (which-function))
+          (file-name (buffer-file-name))
+          (line-number (line-number-at-pos (region-beginning)))
+          (org-src-mode (my/org-capture-get-src-block-string major-mode)))
+      (format
+       "file:%s::%s
+In ~%s~:
+#+BEGIN_SRC %s
+%s
+#+END_SRC"
+       file-name
+       line-number
+       func-name
+       org-src-mode
+    code-snippet))))
+    
+    
+(defun my/org-dir-file (name)
+    "Prepend name with path to the org-directory root"
+    (concat org-directory name))
+```
+
+
+Template design for org-capture
+
+``` org
+            
+("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+"* %?\n%(my/org-capture-code-snippet \"%F\")")        
+```
+
+It is very good to capture the codes with the format below:(maybe you should open the which function mode, to
+let you use the which-function.
+
+```org
+* comment 
+file:k:/clojure-home/clj-new-github/src/clj_new_github/core.clj::17
+In ~foo~:
+#+BEGIN_SRC clojure
+
+(comment
+  (+ 1 2 3 4)
+  (let [url "https://api.github.com/repos/rails/rails/stats/contributors"]
+    (type (http/get url))))
+#+END_SRC
+
+```
+
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -4897,3 +5023,6 @@ are not actively supported.
 [269]:https://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html 
 [270]:https://github.com/jueqingsizhe66/windowVimYe#%E8%B7%B3%E8%BD%AC%E5%8E%9F%E7%90%86 
 [271]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/learning.png
+[272]:https://github.com/rakanalh/emacs-dashboard 
+[273]:https://github.com/bard/org-dashboard 
+[274]:https://github.com/mhinz/vim-startify 
