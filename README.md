@@ -270,7 +270,7 @@ C-c b 扫描所有的org文件！！！！【有用！】
 
 
 注意，在标题上面或者总任务上面的尾巴添加上[%]或者[/]即可，emacs org-mode会自动进行计算任务的[总进度][87]。
-只有在任务list才能添加勾选checkbox，标题不添加。
+只有在任务list才能添加勾选checkbox，标题不添加(操作方法，写上1.然后Alt+Shift+Enter, 既可以添加checkbox, 添加done标签标示完成 或者C-c C-c <2018-05-22 23:07>)。
 
 ### 8. chez-scheme的集成(scheme-editing.el)
 
@@ -2993,7 +2993,7 @@ If you don't expect having to do it again,don't try to optimise it.
 
 [[hello][hello内部链接]
 
-通过C-c C-o打开链接(open)
+通过C-c C-o打开链接(open)<2018-05-22 23:42>再次学习
 通过C-c C-l (打开保存的链接, 很强大，打开各种链接）
 通过C-c l(org-insert-link 然后可以通过C-c C-l使用 可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
 ```
@@ -4674,13 +4674,48 @@ Take care
 ```
 
 
+配置
+
+``` org
+;; org-dashboard
+
+(setq org-dashboard-files (list 
+                           "~/.emacs.d/GTD/orgBoss/newgtd.org"
+                           "~/.emacs.d/GTD/orgBoss/hello.org"
+))
+
+;For example, to avoid displaying entries that are finished (progress = 100), not started (progress = 0), or are tagged with "archive", use the following:
+
+
+(defun my/org-dashboard-filter (entry)                     ;;
+    (and (> (plist-get entry :progress-percent) 0)         ;;
+        (< (plist-get entry :progress-percent) 100)        ;;
+        (not (member "archive" (plist-get entry :tags))))) ;;
+                                                           ;;
+(setq org-dashboard-filter 'my/org-dashboard-filter)       ;;
+
+
+```
+
 usage: `M-x org-dashboard-display`
 
+![org-dash][275]
 
-### Copy codes into code-snippets.org file
+
+org-dash的原理是通过读取标题里的任务量或者比重，通过org-dashboard-filter确认哪些不需要显示，而不关心是不是todo标签是完成还是未完成。因为有时候即使进度未完成也可能设置为任务完成【不想做了】
+
+也就是这边的org-dash会处理两种类型的信息
+
+都是基于标题的[/]或者[%]来进行可视化
+
+1. header 带todo done标签的, todo表示未完成(添加todo tag) done表示完成(添加done tag)
+2. header 带checkbox的list, checked表示已完成(C-c C-c),Alt+shift+enter添加新的unchecked box
 
 
-functions for copy codes
+### 114. Copy codes into code-snippets.org file
+
+
+####  functions for copy codes
 
 ``` org
 
@@ -4720,14 +4755,16 @@ In ~%s~:
     (concat org-directory name))
 ```
 
-
-Template design for org-capture
+####  Template design for org-capture
 
 ``` org
             
 ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
 "* %?\n%(my/org-capture-code-snippet \"%F\")")        
 ```
+
+####  Result
+
 
 It is very good to capture the codes with the format below:(maybe you should open the which function mode, to
 let you use the which-function.
@@ -5026,3 +5063,4 @@ In ~foo~:
 [272]:https://github.com/rakanalh/emacs-dashboard 
 [273]:https://github.com/bard/org-dashboard 
 [274]:https://github.com/mhinz/vim-startify 
+[275]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/org-dash.png

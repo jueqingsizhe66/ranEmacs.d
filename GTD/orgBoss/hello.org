@@ -159,3 +159,31 @@
 要讲清楚：1）什么是多轴角运动；2）它对风力机可能带来的影响，研究的意义和重要性；
 找到关键科学问题或技术问题。
 然后才是已经目标c、内容，方法、技术途径等等
+
+* test1 [1/3]
+
+1. [X] sdf
+2. [ ] sdfsd
+3. [ ] sdf
+* Project: Better Health
+:PROPERTIES:
+:CATEGORY: health
+:END:
+
+** Milestones
+*** [66%] run 10 km/week
+**** TODO learn proper warmup
+**** DONE look for a jogging partner
+**** DONE run 10 minutes on monday
+
+* Project: Super Widget
+:PROPERTIES:
+:CATEGORY: widget
+:END:
+
+** Milestones
+*** [1/6] release 0.1
+**** DONE git import
+**** TODO create github project
+**** TODO add readme
+**** TODO publish

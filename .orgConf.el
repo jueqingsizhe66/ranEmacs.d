@@ -1399,3 +1399,22 @@ e.g. Sunday, September 17, 2000."
 ;;                                                   ;;
 ;; (global-set-key "\C-c o" 'writegood-reading-ease) ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;; org-dashboard
+
+(setq org-dashboard-files (list 
+                           "~/.emacs.d/GTD/orgBoss/newgtd.org"
+                           "~/.emacs.d/GTD/orgBoss/hello.org"
+))
+
+;For example, to avoid displaying entries that are finished (progress = 100), not started (progress = 0), or are tagged with "archive", use the following:
+
+
+(defun my/org-dashboard-filter (entry)                     ;;
+    (and (>= (plist-get entry :progress-percent) 0)         ;;
+        (< (plist-get entry :progress-percent) 100)        ;;
+        (not (member "archive" (plist-get entry :tags))))) ;;
+                                                           ;;
+(setq org-dashboard-filter 'my/org-dashboard-filter)       ;;
+
