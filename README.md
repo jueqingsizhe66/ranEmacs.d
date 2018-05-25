@@ -4008,6 +4008,23 @@ org-mode的[The spreadsheet说明][244]
 #+TBLFM: @>\$2=vsum(@2..@-1);%.2f
 ```
 
+[改进方案][285]
+
+```
+   #+TBLFM: @>$3=vmean(@I..@II);::@>$2=vsum(@I..@II);
+
+```
+
+   The syntax =@I..@II= for defining the vertical range between the horizontal rulers is extremely
+    useful. One does not need to count the exact row number. Regrettably this syntax can only be
+    used on the right side of an equation (So this is forbidden: @I$2..@II$2=5).(I..II是特殊语法，只能用于右边)
+
+  - The use of =>= to indicate the last row or column(最后一行或者最后一列 倒数第二行用-1) is useful, since one does not need to use
+    explicit row and column numbers.
+  - The number format is controlled by the =%.2f= specifiers at the end of the formulas. The
+    syntax is similar to the one used in C format specifiers, e.g. %f for float.
+
+
 #### 重新计算
 
 光标停留在表格上，`C-u C-c *` 重新计算
@@ -4061,6 +4078,7 @@ org-mode的[The spreadsheet说明][244]
 ```
 
 在公式中敲击快捷键`C-c '` 会显示当前表格的所有公式  ;N结尾，没有;N是还有问题的，表达式用list的形式存储，即'()风格。
+
 ``` org
 
 # Field and Range Formulas
@@ -4107,7 +4125,8 @@ org-mode的[The spreadsheet说明][244]
 
 一般我们使用`C-c Enter` 表示插入一个表头
 
-`M-enter` 表示在下面插入一个空行,光标下移[<2018-05-03 05:35> 有用！]
+`M-enter` 表示在下面插入一个空行,光标下移[<2018-05-03 05:35> 有用！但是对于非空情况下，无法插入<2018-05-25 19:00>]
+有一种妥协办法，通过`C-c i`插入一行 ，然后输入|就插入了一行了
 
 `M-S 上下左右箭头`  分表代表增加减小行  增加和减小列
 
@@ -4142,7 +4161,7 @@ org-mode的[The spreadsheet说明][244]
 表头一般是带有黑色背景，其他都灰色即可，类似于howardism的[database-example][237]
 
 
-补充，处了;N::结尾，还有;T::结尾的,表示时间相加
+补充，处了;N::结尾，还有;T::结尾的,表示时间相加(还有比如list表达式使用;L)
 
 ``` org
 If you want to compute time values use the T, t, or U flag, either in Calc formulas or Elisp formulas:
@@ -4154,6 +4173,58 @@ If you want to compute time values use the T, t, or U flag, either in Calc formu
   | 3:02:20 | -2:07:00 |     0.92 |
   #+TBLFM: @2$3=$1+$2;T::@3$3=$1+$2;U::@4$3=$1+$2;t
 ```
+
+
+``` org
+    | expression                | lisp type |
+    |---------------------------+-----------|
+    | 'mapconcat                | symbol    |
+    | #'mapconcat               | symbol    |
+    | "text"                    | string    |
+    | (concat "hello" " world") | string    |
+    | 1                         | integer   |
+    | (+ 3 4)                   | integer   |
+    | ?a                        | integer   |
+    | 1.0                       | float     |
+    | '(1 2 3)                  | cons      |
+    | [1 2 3 4]                 | vector    |
+    | nil                       | symbol    |
+    #+TBLFM: @2$2..@>$2='(type-of $1);L
+```
+
+#### 命名字段
+
+`!` 放在表头的下一行，表示对当前head的 缩写,相当于定义变量。 如果想要简略计算，需要通过*(表示加入计算)和^(表示不加入计算)来控制哪一行需要计算，这样
+可以在计算公式省略行的书写
+
+```org
+** 较复杂公式
+  |   | Name  | number | cost per item |      sum | incl VAT |
+  | ! | name  |    num |       peritem |      sum |          |
+  |---+-------+--------+---------------+----------+----------|
+  |   | name1 |      3 |       1500.00 |    4500. |  4860.00 |
+  |   | name2 |      9 |       4000.00 |   36000. | 38880.00 |
+  |   | name3 |      4 |       2800.00 |   11200. | 12096.00 |
+  |---+-------+--------+---------------+----------+----------|
+  |   | Total |        |               | 51700.00 | 55836.00 |
+  #+TBLFM: @>$5..@>$>=vsum(@I..@II);%.2f::@3$5..@5$5=$num * $peritem::@3$6..@5$6=$sum*1.08;%.2f
+  
+  
+ ** 较简略公式 
+  |   | Name    | number | cost per item |      sum | incl VAT |
+  | ! | name    |    num |       peritem |      sum |          |
+  |---+---------+--------+---------------+----------+----------|
+  | * | name1   |      3 |       1500.00 |    4500. |  4860.00 |
+  | ^ | varname |        |               |          |          |
+  | * | name2   |      9 |       4000.00 |   36000. | 38880.00 |
+  | * | name3   |      4 |       2800.00 |   11200. | 12096.00 |
+  |---+---------+--------+---------------+----------+----------|
+  |   | Total   |        |               | 51700.00 | 55836.00 |
+  #+TBLFM: @>$5..@>$>=vsum(@I..@II);%.2f::$5=$num * $peritem::$6=$sum*1.08;%.2f
+
+```
+
+![table][286]
 
 ### 103. presentation mode
 
@@ -5508,3 +5579,5 @@ fsolve(x*2+x=4,x)
 [282]:https://github.com/jueqingsizhe66/ranEmacs.d#102-orgmode-%E8%A1%A8%E6%A0%BC%E8%AF%B4%E6%98%8E 
 [283]:https://github.com/dfeich/org-babel-examples/blob/master/library-of-babel/dfeich-lob.org 
 [284]:https://github.com/dfeich/org-babel-examples/blob/master/calc/calc.org 
+[285]: https://raw.githubusercontent.com/dfeich/org-babel-examples/master/tables/tables.org
+[286]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/tablestar.png
