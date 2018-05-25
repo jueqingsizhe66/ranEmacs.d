@@ -928,6 +928,7 @@ In ~%s~:
    (sh . t)
    (python . t)
    (R . t)
+   (calc . t)
    (ruby . t)
    (ditaa . t)
    (dot . t)

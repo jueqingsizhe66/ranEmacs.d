@@ -1136,3 +1136,48 @@ DEADLINE: <2018-05-29 周二>
 http://www.hnceri.com/n4/n12/index.html
 
 
+
+
+
+#+NAME: lsttest
+ - item: 星期五(address:华电)
+   - item: 工作(method:computer,soft:cfx-matlab)
+   - item: 开车(carry:驾驶证)
+   - item: 技工(carry:身份证)
+ - item:  星期六(address: 丰台, weather:cloud)
+   - item:  吃饭(address: 金百万, person:father-mother)
+   - item: 休息(address: 1104) 
+   - item: 游玩(address:公园)
+   - item: 爬山(address:八达岭, traffic:car)
+   - item: 工作(soft:teamview)
+ - item: 星期一
+   - category (carry: umbrella)
+   - item:  颐和园(traffic: subway)
+   - item: 食物(food:bought)
+   - item: 水(carry:bag)
+   - item: 工作(soft:teamview)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+  (org-listcruncher-to-table lname)
+  #+END_SRC
+
+  #+RESULTS: src-example1
+  | description | method   | soft       | address | carry  | person        | weather | traffic | food   |
+  |-------------+----------+------------+---------+--------+---------------+---------+---------+--------|
+  | 工作        | computer | cfx-matlab | 华电    |        |               |         |         |        |
+  | 开车        |          |            | 华电    | 驾驶证 |               |         |         |        |
+  | 技工        |          |            | 华电    | 身份证 |               |         |         |        |
+  | 星期五      | computer | cfx-matlab | 华电    | 身份证 |               |         |         |        |
+  | 吃饭        |          |            | 金百万  |        | father-mother | cloud   |         |        |
+  | 休息        |          |            | 1104    |        |               | cloud   |         |        |
+  | 游玩        |          |            | 公园    |        |               | cloud   |         |        |
+  | 爬山        |          |            | 八达岭  |        |               | cloud   | car     |        |
+  | 工作        |          | teamview   | 丰台    |        |               | cloud   |         |        |
+  | 星期六      |          | teamview   | 八达岭  |        | father-mother | cloud   | car     |        |
+  | 颐和园      |          |            |         |        |               |         | subway  |        |
+  | 食物        |          |            |         |        |               |         |         | bought |
+  | 水          |          |            |         | bag    |               |         |         |        |
+  | 工作        |          | teamview   |         |        |               |         |         |        |
+  | 星期一      |          | teamview   |         | bag    |               |         | subway  | bought |
+

@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("yan"
+(("reproductive-research-and-software-development-methods-for-management-tasks.org"
+ (filename . "~/.emacs.d/GTD/orgBoss/reproductive-research-and-software-development-methods-for-management-tasks.org")
+ (front-context-string . "data science we ")
+ (rear-context-string . "resentation. In ")
+ (position . 3490))
+("yan"
  (filename . "~/.emacs.d/GTD/phd1.org")
  (front-context-string . "                ")
  (rear-context-string . "\n\n\n*** 研究内容    ")
@@ -35,9 +40,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
- (front-context-string . "* dfg \nfile:k:/c")
- (rear-context-string . "hich-function)]\n")
- (position . 98))
+ (front-context-string . "* dfeich-lob的函数对")
+ (rear-context-string . "1)   \n#+END_SRC\n")
+ (position . 942))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

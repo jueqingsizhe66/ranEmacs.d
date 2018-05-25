@@ -129,7 +129,7 @@
       ("recurrence" "5"))))
    #+end_example
 
-
+   
 
 * Tests integrating with orgbabelhelper                            :noexport:
 

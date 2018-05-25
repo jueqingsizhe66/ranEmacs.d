@@ -1,13 +1,13 @@
 # -*- mode: snippet -*-
 # name: list-cruncher
-# key: lstcrun
+# key: lstcc
 # --
 #+NAME: lsttest
-- item: $0
+ - item: $0
     - $1 
     - $2 
     - $3 
-- item: $4 
+ - item: $4 
     - category (recurrence: 5)
     - item: $5 a category item C (kCHF: 30)
 

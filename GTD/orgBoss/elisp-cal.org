@@ -1,0 +1,362 @@
+#+TITLE: calc examples
+# #+DATE: <2013-08-09 Fri>
+#+AUTHOR: Derek Feichtinger
+#+EMAIL: derek.feichtinger@psi.ch
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not LOGBOOK) date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil stat:t tags:t
+#+OPTIONS: tasks:t tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 24.3.1 (Org mode 8.0.7)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+# By default I do not want that source code blocks are evaluated on export. Usually
+# I want to evaluate them interactively and retain the original results.
+#+PROPERTY: header-args :eval never-export
+
+* Version information
+  #+BEGIN_SRC emacs-lisp :results output :exports both
+    (princ (concat (format "Emacs version: %s\n" (emacs-version))
+                   (format "org version: %s\n" (org-version))))
+    
+  #+END_SRC
+
+  #+RESULTS:
+  : Emacs version: GNU Emacs 25.3.1 (x86_64-w64-mingw32)
+  :  of 2017-09-18
+  : org version: 9.1
+
+* General
+  - refer to the [[info:calc#Top][Calc info pages]]
+  - Note that, unlike in usual computer notation, multiplication binds
+    more strongly than division: `a*b/c*d' is equivalent to
+    `(a*b)/(c*d)'
+  - [[https://github.com/SueDNymme/emacs-calc-qref][Nice reference sheet]] on calc maintained by Sue D. Nymme
+   
+* babel calc
+
+  Not too useful, yet. Embedded calc certainly is better for
+  inlining math in documents. Using Elisp to directly interacting with
+  calc also is more powerful.
+
+  #+BEGIN_SRC calc
+24
+4
+'/
+  #+END_SRC
+
+  #+RESULTS:
+  : 6
+
+
+  #+BEGIN_SRC emacs-lisp
+
+    (integerp 1.)                           ; => t
+    (integerp 1.0)                          ; => nil
+    (floatp 1.)                             ; => nil
+    (floatp -0.0e+NaN)                      ; => t
+    (numberp 1)                             ; => t
+    (print (expt 2 48))
+#+END_SRC
+
+#+RESULTS:
+: 281474976710656
+
+
+      - solving an equation
+        ,#+BEGIN_SRC calc :exports both
+    fsolve(x*3+x=4,x)
+#+END_SRC
+
+    #+RESULTS:
+    : x = 1
+
+  
+  - solving a linear system of equations
+    #+BEGIN_SRC calc
+  fsolve([x + y = a, x - y = b],[x,y])
+    #+END_SRC
+
+    #+RESULTS:
+    : [x = a + (b - a) / 2, y = (a - b) / 2]
+    
+
+* 功率计算
+
+#+NAME: lsttest
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:0,扭矩(N):780.4395,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:5,扭矩(N):772.4518775,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:10,扭矩(N):751.9982623,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:15,扭矩(N):717.1466236,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:20,扭矩(N):664.4137199,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:25,扭矩(N):613.0588342,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:30,扭矩(N):548.0095763,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:45,扭矩(N):321.5275501,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:60,扭矩(N):100.0106446,功率(kw):0)
+ - item: NREL5MW风力机 (转速(rpm):11.4,风速(m/s):12.1,扭矩(N):4329000,功率(kw):0)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+  (org-listcruncher-to-table lname)
+  #+END_SRC
+
+  #+RESULTS: src-example1
+  | description   | 转速(rpm) | 风速(m/s) | 偏航角 |     扭矩(N) |   功率(kw) |
+  |---------------+-----------+-----------+--------+-------------+------------|
+  | PhaseVI风力机 |      71.9 |         7 |      0 |    780.4395 |  5.8762024 |
+  | PhaseVI风力机 |      71.9 |         7 |      5 | 772.4518775 |  5.8160607 |
+  | PhaseVI风力机 |      71.9 |         7 |     10 | 751.9982623 |  5.6620583 |
+  | PhaseVI风力机 |      71.9 |         7 |     15 | 717.1466236 |  5.3996481 |
+  | PhaseVI风力机 |      71.9 |         7 |     20 | 664.4137199 |  5.0026036 |
+  | PhaseVI风力机 |      71.9 |         7 |     25 | 613.0588342 |  4.6159347 |
+  | PhaseVI风力机 |      71.9 |         7 |     30 | 548.0095763 |  4.1261560 |
+  | PhaseVI风力机 |      71.9 |         7 |     45 | 321.5275501 |  2.4208935 |
+  | PhaseVI风力机 |      71.9 |         7 |     60 | 100.0106446 | 0.75301517 |
+  | NREL5MW风力机 |      11.4 |      12.1 |        |     4329000 |  5167.9827 |
+  #+TBLFM: @2$6..@>$6=$5*$2*2*3.1415926/60/1000
+
+
+* calc usage in tables
+** Unit conversions
+   - from http://article.gmane.org/gmane.emacs.orgmode/93489
+
+   Displaying all calc units in a buffer can be obtained by executing
+   #+BEGIN_SRC emacs-lisp :exports source
+     (calc-view-units-table 1)
+   #+END_SRC
+
+   Calc preserves units and variables in table operations.
+   
+   | distance | time   | speed       |
+   |----------+--------+-------------|
+   | 3 km     | 2.5 hr | 1.2 km / hr |
+   #+TBLFM:  @2$3=$1/$2
+
+
+   | speed        | simplified speed |
+   |--------------+------------------|
+   | 40km / 2.5hr | 16. km / hr      |
+   #+TBLFM:  @2$2=usimplify($1)
+
+   We can also decide to use calc via its elisp api.  To understand
+   the following lisp formula that involves calc internal functions
+   q.v.  the [[Calc from lisp]] section.
+   
+   | km    |      ft |
+   |-------+---------|
+   | 2.5km | 8202.10 |
+   #+TBLFM: $2='(calc-eval (math-convert-units (calc-eval $1 'raw) (calc-eval "ft" 'raw))); %.2f
+   
+   Defining a new calc function for unit conversion with defmath
+   #+BEGIN_SRC emacs-lisp
+   (defmath uconv (expr target-units &optional pure)
+     (math-convert-units expr target-units pure))
+   #+END_SRC
+
+   #+RESULTS:
+   : calcFunc-uconv
+
+   | km     | ft           |
+   |--------+--------------|
+   | 2.5 km | 8202.0997 ft |
+   #+TBLFM: $2=uconv($1, ft)
+
+   Using the units from the table header:
+
+   |  km |        ft |
+   |-----+-----------|
+   | 2.5 | 8202.0997 |
+   #+TBLFM: $2 = uconv($1 * @<$1, @<$2, t)
+
+   The same without a user's defmath:
+
+   |  km |        ft |
+   |-----+-----------|
+   | 2.5 | 8202.0997 |
+   #+TBLFM: $2 = usimplify($1 * @<$1 / @<$2)
+
+   | Unit | Definition |
+   |------+------------|
+   | km   | #ERROR     |
+   #+TBLFM: @2$2='(calc-get-unit-definition $1)
+* Calc from lisp
+  - [[info:calc#Calling%20Calc%20from%20Your%20Programs][Emacs Info Manual: Calling Calc from your programs]]
+  - nice blog post on [[http://nullprogram.com/blog/2015/10/30/][RSA cryptography using emacs Calc]] by Chris
+    Wellons on his [[http://nullprogram.com/][nullprogram]] blog. Contains examples on =calc-eval=
+    usage.
+
+** basic use of calc-eval
+   The variables in formulas are replaced by the additional arguments. Arguments can be given as string or number.
+   #+BEGIN_SRC emacs-lisp :results output
+     (print (calc-eval "2^$1 - 1" nil 128))
+     (print (calc-eval "$1 < $2" 'pred "4000" "5000"))
+     (print (calc-eval "nextprime($1)" nil "100000000000000000"))
+
+     ;; radix can be chosen by separating radix by # from number
+     (print (calc-eval "16#deadbeef"))
+     (print (calc-eval "2#1111"))
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+
+   "340282366920938463463374607431768211455"
+
+   t
+
+   "100000000000000003"
+
+   "3735928559"
+
+   "15"
+#+end_example
+
+   The second argument serves as a separator if the input string parses to a list of expressions. By default the list
+   is printed comma-separated.
+   #+BEGIN_SRC emacs-lisp :results output
+     (print (calc-eval "10+5,7*3,5/2"))
+     (print (calc-eval "10+5,7*3,5/2" ";"))
+     (print (calc-eval "10+5,7*3,5/2" "___"))
+   #+END_SRC
+
+   #+RESULTS:
+   : 
+   : "15, 21, 2.5"
+   : 
+   : "15;21;2.5"
+   : 
+   : "15___21___2.5"
+
+ 
+** Stack operations: push, pop and top
+
+   - =push= pushes the element onto the stack
+   - =pop= deletes as many elements from the stack as the preceding integer argument indicates
+     - =0 pop= is convenient for finding out the size of the stack
+   - =top= retrieves the value at the indicated position of the stack
+   #+BEGIN_SRC emacs-lisp :results output :exports both
+     (princ (format "Size of the stack: %s\n" (calc-eval 0 'pop)))
+     (calc-eval "10 ft" 'push)
+     (calc-eval "20 ft" 'push)
+     (calc-eval "30 ft" 'push)
+     (princ (format "After 3*push: Size of the stack: %s (top element: %s)\n"
+                    (calc-eval 0 'pop)
+                    (calc-eval 1 'top)))
+     (princ (format "element on second level of stack: %s\n" (calc-eval 2 'top)))
+     (calc-eval 2 'pop)
+     (princ (format "After 3*push: Size of the stack: %s (top element: %s)\n"
+                    (calc-eval 0 'pop)
+                    (calc-eval 1 'top)))
+     (calc-eval 1 'pop)
+   #+END_SRC
+
+   #+RESULTS:
+   : Size of the stack: 5
+   : After 3*push: Size of the stack: 8 (top element: 30 ft)
+   : element on second level of stack: 20 ft
+   : After 3*push: Size of the stack: 6 (top element: 10 ft)
+
+** executing functions on the stack
+   #+BEGIN_SRC emacs-lisp :results output :exports both
+     (calc-eval "10 ft" 'push)
+     (calc-base-units)
+     ;; retrieve the value from the stack as a string. Note that it still stays on the stack!
+     (print (calc-eval 1 'top))
+     ;; clean the value from the stack
+     (calc-eval 1 'pop)
+   #+END_SRC
+
+   #+RESULTS:
+   : 
+   : "3.048 m"
+
+
+   It is also possible to execute Calc keyboard macros, i.e. the string is interpreted as
+   interactive keyboard strokes in calc mode.
+   #+BEGIN_SRC emacs-lisp :results output :exports both
+     (calc-eval "10 ft" 'push)
+     ;; calc keys for base unit conversion
+     (calc-eval "ub" 'macro)
+     (print (calc-eval 1 'top))
+     ;; pop one item from stack
+     (calc-eval "\C-d" 'macro)
+   #+END_SRC
+
+   #+RESULTS:
+   : 
+   : "3.048 m"
+  
+** raw calc objects as input to functions
+
+   calc internal functions deal with /raw/ calc objects. These can also be obtained through =calc-eval= by
+   passing the =raw= as the second argument. 
+   #+BEGIN_SRC emacs-lisp
+     (calc-eval (math-convert-units (calc-eval "10 m" 'raw)
+                                    (calc-eval "ft" 'raw)))
+   #+END_SRC
+
+   #+RESULTS:
+   : 32.8083989501 ft
+
+* Some sample functions that can be used in formulas
+  - [[info:calc#Formulas]]
+  - factorial: $6! => 720 $   also fact(6) can be used in writing
+  - find: $ find([5, 6, 7, 8], 6) => 2 $
+  - power: $pow(2, 3) => 8 $   $2^3 => 8 $
+  - modulo: $mod(10, 3) => 1$  $10 % 3 => 1 $
+  - binomial coefficient: $choose(3, 2) => 3$
+  - random numbers: $random(10) => 7$
+  - binomial distribution: the result (`utpb(x,n,p)') is the
+    probability that an event will occur X or more times out of N
+    trials, if its probability of occurring in any given trial is P:
+    $utpb(2, 6, 1/6) => 0.263224451304$
+  - gaussian distribution with mean m and stdev s. Probability that a normal
+    distributed random variable will exceed x: uttn(x,m,s):
+    $utpn(0.2b, 0, 0.5) => 0.34457825839$
+    - http://www-zeuthen.desy.de/~kolanosk/smd_ss02/skripte/
+  - prime factorisation $ prfac(9370) => [2, 5, 937] $
+
+** Time calculations
+   q.v. [[info:calc#Date%20Arithmetic][info:calc#Date Arithmetic]]
+   
+  - $now(0) => <11:03:18pm Sun Aug 11, 2013>$
+  - $now() => <10:48:31pm Wed Jun 28, 2017> $
+  - Using calc HMS forms
+    - $ 11@ 41' 15.561" - 11@ 40' 58.096" => 0@ 0' 17.465" $
+  - The date function with a date form as argument returns a number of days since Jan 1, 1 AD.
+    The date function with an INT argument yields back a date form.
+    - $date(<Sun Aug 11, 2013>) => 735091 $
+    - $date(735091) => <Sun Aug 11, 2013> $
+    - $date(<10:00am Sun Aug 11, 2013>) => 735091.416667 $
+    - $date(<Sun Aug 11, 2013>) - date(<Thu Aug 1, 2013>) => 10 $
+    - $<Sun Aug 11, 2013> - <Thu Aug 1, 2013> => 10  $
+    - $date(<10:00am Sun Aug 11, 2013>) - date(<9:00am Thu Aug 1, 2013>) => 10.041667 $
+  - The date function with a comma separated list builds a date or a date/time form    
+    - $date(2017, 6, 26) => <Mon Jun 26, 2017> $
+    - $date(2017, 6, 26, 11@ 41' 15.561") => <11:41:16am Mon Jun 26, 2017> $
+    - $date(2017, 6, 26, 11, 41, 15) => <11:41:15am Mon Jun 26, 2017> $
+    - Not quite clear whether the angular bracket format is any good for more exact calculations
+      - $ <11:03:18pm Sun Aug 11, 2013> - <11:03:18pm Sun Aug 11, 2013> => 0. $
+      - $ <11:03:18pm Sun Aug 11, 2013> - <11:02:18pm Sun Aug 11, 2013> => 6.94e-4 $
+      - $ <11:03:18pm Sun Aug 11, 2013> - <11:03:17pm Sun Aug 11, 2013> => 1.2e-5 $
+      - $ <11:03:18pm Sun Aug 11, 2013> - <6:03:18pm Sun Aug 11, 2013> => 0.208333 $
+  - Unix time
+    - $unixtime(<9:00am Wed Jun 28, 2017>) => 1498640400 $
+    - $unixtime(1498640400) => <9:00am Wed Jun 28, 2017>  $
+    - $unixtime(now(0)) => 1376262280$
+  - Julian date
+    - $julian(date(2017, 6, 26)) => 2457929 $
+    - $julian(2457929) => <Mon Jun 26, 2017> $
+  - Using a calc variable 
+    - $ testdate := <11:41:15am Mon Jun 26, 2017> $
+    - $ year(testdate) => 2017 $
+
+      $ date(date(<Fri Apr 16, 2010>) - 10) => <Tue Apr 6, 2010>    $
+      
+* COMMENT babel settings
+Local variables:
+org-confirm-babel-evaluate: nil
+End:

@@ -4996,6 +4996,227 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
 
 ```
 
+#### lobPostAlignTables的用法(结合python)
+
+有些时候可能需要对结果进行进行重新格式化，并使用中间语言进行后处理，于是可以用[lobPostAlignTables][283]进行美化。
+
+####  函数定义
+
+ 定义lobPostAlignTables在org文档内,
+
+``` org
+   #+NAME: lobPostAlignTables
+   #+header: :var text="|5|22222|\n|0||\n|12|45|\n|---\n|||\n#+TBLFM:@>$1=vsum(@1..@-1)\n\n|1|22222|\n|0||\n|12|45|\n"
+   #+BEGIN_SRC emacs-lisp :results value :exports both
+     (with-temp-buffer
+       (erase-buffer)
+       (cl-assert text nil "PostAlignTables received nil instead of text ")
+       (insert text)
+       (beginning-of-buffer)
+       (org-mode)
+       (while
+           (search-forward-regexp org-table-any-line-regexp nil t)
+         (org-table-align)
+         (org-table-recalculate 'iterate)
+         (goto-char (org-table-end)))
+       (buffer-string))
+   #+END_SRC
+
+   #+RESULTS: lobPostAlignTables
+   #+begin_example
+   |  5 | 22222 |
+   |  0 |       |
+   | 12 |    45 |
+   |----+-------|
+   | 17 |       |
+   ,#+TBLFM:@>$1=vsum(@1..@-1)
+
+   |  1 | 22222 |
+   |  0 |       |
+   | 12 |    45 |
+   #+end_example
+
+
+```
+
+#### 使用lobPostAlignTables
+
+在代码段头部增加一个:post字段
+
+``` org
+    #+HEADER: :var tbl=srcTable
+   #+BEGIN_SRC python :results output raw drawer :colnames no :post lobPostAlignTables(*this*) :exports both
+     import orgbabelhelper as obh
+     import pandas as pd
+
+     df = obh.orgtable_to_dataframe(tbl, index="descr")
+     df["Terces"] = pd.to_numeric(df["Terces"])
+     dfgrp = df.groupby(["service", "account"], as_index=False).sum()
+     dfgrp = dfgrp[["service", "account", "Terces"]]
+     print(obh.dataframe_to_orgtable(dfgrp, index=False, caption="Service costs and funding",
+				     name="tblGrouped"))
+   #+END_SRC 
+
+   #+RESULTS:
+   :RESULTS:
+   #+CAPTION: Service costs and funding
+   #+NAME: tblGrouped
+   | service       | account       | Terces |
+   |---------------+---------------+--------|
+   | SvcRestaurant | Captain Bount |     60 |
+   | SvcRestaurant | Soldinck      |    186 |
+   | SvcWorminger  | Drofo         |     30 |
+   | SvcWorminger  | Mercantides   |    430 |
+
+   :END:
+
+
+```
+
+
+#### 功率计算
+
+#####  方式1
+
+``` org
+#+NAME: lsttest
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:0,扭矩(N):780.4395,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:5,扭矩(N):772.4518775,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:10,扭矩(N):751.9982623,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:15,扭矩(N):717.1466236,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:20,扭矩(N):664.4137199,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:25,扭矩(N):613.0588342,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:30,扭矩(N):548.0095763,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:45,扭矩(N):321.5275501,功率(kw):0)
+ - item: PhaseVI风力机(转速(rpm):71.9,风速(m/s):7,偏航角:60,扭矩(N):100.0106446,功率(kw):0)
+ - item: NREL5MW风力机 (转速(rpm):11.4,风速(m/s):12.1,扭矩(N):4329000,功率(kw):0)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+  (org-listcruncher-to-table lname)
+  #+END_SRC
+
+  #+RESULTS: src-example1
+  | description   | 偏航角 |     扭矩(N) | 功率(kw) | 转速(rpm) | 风速(m/s) |
+  |---------------+--------+-------------+----------+-----------+-----------|
+  | case1         |      0 |    780.4395 |        0 |      71.9 |         7 |
+  | case2         |      5 | 772.4518775 |        0 |      71.9 |         7 |
+  | case3         |     10 | 751.9982623 |        0 |      71.9 |         7 |
+  | case4         |     15 | 717.1466236 |        0 |      71.9 |         7 |
+  | case5         |     20 | 664.4137199 |        0 |      71.9 |         7 |
+  | case6         |     25 | 613.0588342 |        0 |      71.9 |         7 |
+  | case7         |     30 | 548.0095763 |        0 |      71.9 |         7 |
+  | case8         |     45 | 321.5275501 |        0 |      71.9 |         7 |
+  | case9         |     60 | 100.0106446 |        0 |      71.9 |         7 |
+  | PhaseVI风力机 |     60 | 100.0106446 |        0 |      71.9 |         7 |
+  | NREL5MW风力机 |        |     4329000 |        0 |      11.4 |      12.1 |
+  #+TBLFM: @2$6..@>$6=$5*$2*2*3.1415926/60/1000
+
+```
+
+##### 方式2 
+
+
+``` org
+
+#+NAME: lsttest2
+ - item: 阶段1(转速(rpm):71.9,风速(m/s):7,风力机:Nrel PhaseVI)
+   - item: case1 (偏航角:0,扭矩(N):780.4395,功率(kw):0)
+   - item: case2 (偏航角:5,扭矩(N):772.4518775,功率(kw):0)
+   - item: case3 (偏航角:10,扭矩(N):751.9982623,功率(kw):0)
+   - item: case4 (偏航角:15,扭矩(N):717.1466236,功率(kw):0)
+   - item: case5 (偏航角:20,扭矩(N):664.4137199,功率(kw):0)
+   - item: case6 (偏航角:25,扭矩(N):613.0588342,功率(kw):0)
+   - item: case7 (偏航角:30,扭矩(N):548.0095763,功率(kw):0)
+   - item: case8 (偏航角:45,扭矩(N):321.5275501,功率(kw):0)
+   - item: case9 (偏航角:60,扭矩(N):100.0106446,功率(kw):0)
+ - item: 阶段2 (转速(rpm):11.4,风速(m/s):12.1,扭矩(N):4329000,功率(kw):0,风力机:NREL 5MW)
+
+#+NAME: src-example2
+#+BEGIN_SRC elisp :results value :var lname="lsttest2" :exports both
+  (org-listcruncher-to-table lname)
+  #+END_SRC
+
+  #+RESULTS: src-example2
+  | description | 偏航角 |     扭矩(N) |   功率(kw) | 转速(rpm) | 风速(m/s) | 风力机       |
+  |-------------+--------+-------------+------------+-----------+-----------+--------------|
+  | case1       |      0 |    780.4395 |  5.8762024 |      71.9 |         7 | Nrel PhaseVI |
+  | case2       |      5 | 772.4518775 |  5.8160607 |      71.9 |         7 | Nrel PhaseVI |
+  | case3       |     10 | 751.9982623 |  5.6620583 |      71.9 |         7 | Nrel PhaseVI |
+  | case4       |     15 | 717.1466236 |  5.3996481 |      71.9 |         7 | Nrel PhaseVI |
+  | case5       |     20 | 664.4137199 |  5.0026036 |      71.9 |         7 | Nrel PhaseVI |
+  | case6       |     25 | 613.0588342 |  4.6159347 |      71.9 |         7 | Nrel PhaseVI |
+  | case7       |     30 | 548.0095763 |  4.1261560 |      71.9 |         7 | Nrel PhaseVI |
+  | case8       |     45 | 321.5275501 |  2.4208935 |      71.9 |         7 | Nrel PhaseVI |
+  | case9       |     60 | 100.0106446 | 0.75301517 |      71.9 |         7 | Nrel PhaseVI |
+  | 阶段1       |     60 | 100.0106446 | 0.75301517 |      71.9 |         7 | Nrel PhaseVI |
+  | 阶段2       |        |     4329000 |  5167.9827 |      11.4 |      12.1 | NREL 5MW     |
+  #+TBLFM: @2$4..@>$4=$5*$3*2*3.1415926/60/1000
+
+```
+
+### 117. 有趣的org-babel calc
+
+首先得在.orgconf.el中加载calc语言
+
+``` org
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (calc . t)
+   (ruby . t)
+   (ditaa . t)
+   (dot . t)
+   (octave . t)
+   (sqlite . t)
+   (perl . t)
+   (C . t)
+   ))
+
+
+
+```
+
+然后才能正常使用calc代码块,把下面代码保存为org文件，`C-c C-c`(twice ctrl c)其乐无穷。
+
+``` org
+  #+BEGIN_SRC calc
+24
+4
+'/
+  #+END_SRC
+
+  #+RESULTS:
+  : 6
+
+
+  - solving an equation
+    #+BEGIN_SRC calc :exports both
+fsolve(x*2+x=4,x)
+#+END_SRC
+
+    #+RESULTS:
+    : x = 1.33333333333
+
+  
+  - solving a linear system of equations（一元二次方程）
+    #+BEGIN_SRC calc
+  fsolve([x + y = a, x - y = b],[x,y])
+    #+END_SRC
+
+    #+RESULTS:
+    : [x = a + (b - a) / 2, y = (a - b) / 2]
+
+
+```
+
+
+更进一步参考[dfeich calc.org][284]
+
+
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -5285,3 +5506,5 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
 [280]:https://dfeich.github.io/www/org-mode/emacs/reproducible-research/2018/05/20/reproducible-research-for-management.html 
 [281]:http://org-babel.readthedocs.io/en/latest/ 
 [282]:https://github.com/jueqingsizhe66/ranEmacs.d#102-orgmode-%E8%A1%A8%E6%A0%BC%E8%AF%B4%E6%98%8E 
+[283]:https://github.com/dfeich/org-babel-examples/blob/master/library-of-babel/dfeich-lob.org 
+[284]:https://github.com/dfeich/org-babel-examples/blob/master/calc/calc.org 
