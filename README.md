@@ -4060,13 +4060,27 @@ org-mode的[The spreadsheet说明][244]
 #+TBLFM: @5$2='(+ @2$2..@4$2);N::@5$3='(+ @2$3..@4$3);N::$4='(format "%0.2f" (* (/ (* (- $2 $3) 1.0) $2) 100));N 
 ```
 
+在公式中敲击快捷键`C-c '` 会显示当前表格的所有公式  ;N结尾，没有;N是还有问题的，表达式用list的形式存储，即'()风格。
+``` org
+
+# Field and Range Formulas
+@4$5 = '(/ $4 $3);N
+@5$5 = '(/ $4 $3);N
+@6$5 = '(/ $4 $3);N
+@7$5 = '(/ $4 $3);N
+@8$2 = '(+ @4$2..@-1$2);N
+@8$3 = '(+ @4$3..@-1$3);N
+@8$4 = '(+ @4$4..@-1$4);N
+@8$5 = '(/ $4 $3);N
+```
+
 [表格内容对齐][232]
 
 
 
 #### 回到开始
 
-有时候你并不能知道具体当前行是第几行第几列，那就`C-c }`就会toggle row index和col_index[<2018-05-02 06:47>]
+有时候你并不能知道具体当前行是第几行第几列，那就`C-c }`就会toggle row index和col_index[<2018-05-02 06:47>] <2018-05-25 11:32>
 
 当然你也可以使用`C-c ?` 显示当前cell的信息
 
@@ -4099,14 +4113,14 @@ org-mode的[The spreadsheet说明][244]
 
 `Tab` 表示调到下一字段， 相反为`S-Tab`
 
-`C-c Space` 清空当前表格(如果是单个单词的话，其实)
+`C-c Space` 清空当前表格(如果是单个单词的话，其实) (先复制到下一行，然后清空当前行 S-ENter  ,C-c Space)
 
 `S-Enter` 将上一行的cell文本复制到下一行[<2018-05-03 04:58>还真感觉挺有用的]
 
 
 <2018-05-03 20:21> 额外辅助技巧
 
-使用大写的`V` 进入行选模式，
+使用大写的`V` 进入行选模式，[可用于演示时候使用，或者录屏时候]
 
 在evil-mode模式下，一把会创建键盘宏来录制(qa)快速插入`|`竖线的宏， 比如开头，结尾的宏！！**特别有效**，然后使用@a,或者8@a执行8次
 
@@ -4955,6 +4969,9 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
 
 ```
 
+有意思的是，可以直接对表格`C-c '` 进行公式编辑， 按照[102.org-mode表格说明][282]
+当定位到某个表格cell，该区域自动高亮。
+
 ####  配置snippet
 
 ``` org
@@ -5267,3 +5284,4 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
 [279]:http://orgmode.org/manual/Library-of-Babel.html 
 [280]:https://dfeich.github.io/www/org-mode/emacs/reproducible-research/2018/05/20/reproducible-research-for-management.html 
 [281]:http://org-babel.readthedocs.io/en/latest/ 
+[282]:https://github.com/jueqingsizhe66/ranEmacs.d#102-orgmode-%E8%A1%A8%E6%A0%BC%E8%AF%B4%E6%98%8E 
