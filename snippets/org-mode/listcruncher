@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: list-cruncher
+# key: lstcrun
+# --
+#+NAME: lsttest
+- item: $0
+    - $1 
+    - $2 
+    - $3 
+- item: $4 
+    - category (recurrence: 5)
+    - item: $5 a category item C (kCHF: 30)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+(org-listcruncher-to-table lname)
+#+END_SRC
+

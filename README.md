@@ -2073,7 +2073,7 @@ Here is the good job from [Malabarba][112] who write the two completion feature 
 
 clojure的定义函数，得在开启REPL模式下，才可以使用`C-c f`来调用`sotclojure-find-or-define-function`
 
-`C-c f`是一个好命令，可以查看函数定义或者新建函数<2018-05-16 12:47>
+`C-c f`是一个好命令，可以查看函数定义或者新建函数<2018-05-16 12:47> <2018-05-23 14:24>
 
 `M-return`调用`sotlisp-newline-and-parentheses`
 
@@ -4783,6 +4783,203 @@ In ~foo~:
 
 ```
 
+### 115. Page break lines
+
+[page break line][276]
+
+how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word文档就是分页符了
+
+[emacs line ending][277]
+
+
+### 116.  org-listcruncher
+
+
+  [org-listcruncher][278] provides a way to convert org-mode lists into
+  a table structure following specific semantics.
+  
+  关于文学编程参考：
+  
+  1. [howardism literate-devops][76]
+  2. [library-of-Babel][279]
+  3. [Reproducible Research and Software Development Methods for Management tasks][280]
+  4. [Org-babel-reference card][281]
+  
+  目的：
+  1. Tasks under automation and integration(still a long way to go<2018-05-25 11:11>)
+  2. concept(motivation and explanation), data, code into one file.
+  
+#### 测试源数据
+
+
+``` org
+   #+NAME: lsttest
+   - item: First item (kCHF: 15, recurrence: 1, until: 2020)
+     - modification of the first item (kCHF: 20)
+     - another modification of the first item (other: 500)
+       - modification of the modification (other: 299)
+   - item: second item (kCHF: 50, recurrence: 4)
+   - category (recurrence: 5)
+     - item: a category item A (kCHF: 10)
+     - item: a category item B (kCHF: 20)
+     - item: a category item C (kCHF: 30)
+       - a modification to category item C (kCHF: 25, recurrence: 3)
+```
+----------
+
+#### 解析规则
+   The rules for writing such a planning list are
+   1. Each line contains a tag defining wheter the line will become a table row. For this
+      example I defined this as the string "item:". Rows without such a tag just serve as
+      metadata.
+   2. A string following the output tag "item:" is taken as the description of the table row.
+   3. Each line can contain any number of key/value pairs in parentheses in the form
+       =(key1: val1, key2: val2, ...)=
+   4. Lines of lower hierarchical order in the list inherit their default settings for key/values
+      from the upper items.
+   5. The key value of a higher order item can be overwritten by a new new value for the same key
+      in a lower order line.(类似于todo tag的继承关系)
+----------
+也就是说把相同部分放在上层，下层主要注明不同的地方即可！金字塔思路！
+
+原理示意：
+
+上面的解析过程结果如下, 通过`org-listcruncher--parselist`函数把字符串进行解析
+
+``` org
+   #+BEGIN_SRC elisp :results output :var lname="lsttest"
+     (pp (org-listcruncher--parselist (save-excursion
+				       (goto-char (point-min))
+				       (unless (search-forward-regexp (concat  "^ *#\\\+NAME: .*" lname) nil t)
+					 (error "No list of this name found: %s" lname))
+				       (forward-line 1)
+				       (org-list-to-lisp))
+				     nil
+				     nil))
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+   ((("kCHF" "25")
+     ("recurrence" "3")
+     ("kCHF" "30")
+     ("kCHF" "20")
+     ("kCHF" "10")
+     ("recurrence" "5")
+     ("kCHF" "50")
+     ("recurrence" "4")
+     ("other" "299")
+     ("other" "500")
+     ("kCHF" "20")
+     ("kCHF" "15")
+     ("recurrence" "1")
+     ("until" "2020"))
+    ((("description" "First item ")
+      ("other" "299")
+      ("other" "500")
+      ("kCHF" "20")
+      ("kCHF" "15")
+      ("recurrence" "1")
+      ("until" "2020"))
+     (("description" "a category item A ")
+      ("kCHF" "10")
+      ("recurrence" "5")
+      ("kCHF" "50")
+      ("recurrence" "4"))
+     (("description" "a category item B ")
+      ("kCHF" "20")
+      ("recurrence" "5")
+      ("kCHF" "50")
+      ("recurrence" "4"))
+     (("description" "a category item C ")
+      ("kCHF" "25")
+      ("recurrence" "3")
+      ("kCHF" "30")
+      ("recurrence" "5")
+      ("kCHF" "50")
+      ("recurrence" "4"))
+     (("description" "second item ")
+      ("kCHF" "25")
+      ("recurrence" "3")
+      ("kCHF" "30")
+      ("kCHF" "20")
+      ("kCHF" "10")
+      ("recurrence" "5")
+      ("kCHF" "50")
+      ("recurrence" "4"))))
+   #+end_example
+
+
+```
+
+
+#### 例子
+
+
+   Now we can use org-listcruncher to convert this list into a table   
+``` org
+   #+NAME: src-example1
+   #+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+     (org-listcruncher-to-table lname)
+   #+END_SRC
+
+   #+RESULTS: src-example1
+   | description       | other | kCHF | recurrence | until |
+   |-------------------+-------+------+------------+-------|
+   | First item        |   299 |   20 |          1 |  2020 |
+   | second item       |       |   50 |          4 |       |
+   | a category item A |       |   10 |          5 |       |
+   | a category item B |       |   20 |          5 |       |
+   | a category item C |       |   25 |          3 |       |
+
+```
+----------
+
+
+   We can also provide an additional argument to affect the order in which the table is rendered.
+``` org
+   #+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+     (org-listcruncher-to-table lname '("description" "kCHF" "recurrence"))
+   #+END_SRC
+
+
+``` org
+   #+RESULTS:
+   | description       | kCHF | recurrence | other | until |
+   |-------------------+------+------------+-------+-------|
+   | First item        |   20 |          1 |   299 |  2020 |
+   | second item       |   50 |          4 |       |       |
+   | a category item A |   10 |          5 |       |       |
+   | a category item B |   20 |          5 |       |       |
+   | a category item C |   25 |          3 |       |       |
+
+```
+
+####  配置snippet
+
+``` org
+
+# -*- mode: snippet -*-
+# name: list-cruncher
+# key: lstcc
+# --
+#+NAME: lsttest
+- item: $0
+    - $1 
+    - $2 
+    - $3 
+- item: $4 
+    - category (recurrence: 5)
+    - item: $5 a category item C (kCHF: 30)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+(org-listcruncher-to-table lname)
+#+END_SRC
+
+```
+
+
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -5064,3 +5261,9 @@ In ~foo~:
 [273]:https://github.com/bard/org-dashboard 
 [274]:https://github.com/mhinz/vim-startify 
 [275]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/org-dash.png
+[276]:https://github.com/purcell/page-break-lines 
+[277]:http://ergoemacs.org/emacs/emacs_line_ending_char.html 
+[278]:https://github.com/dfeich/org-listcruncher 
+[279]:http://orgmode.org/manual/Library-of-Babel.html 
+[280]:https://dfeich.github.io/www/org-mode/emacs/reproducible-research/2018/05/20/reproducible-research-for-management.html 
+[281]:http://org-babel.readthedocs.io/en/latest/ 

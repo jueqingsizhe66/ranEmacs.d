@@ -1418,3 +1418,8 @@ e.g. Sunday, September 17, 2000."
                                                            ;;
 (setq org-dashboard-filter 'my/org-dashboard-filter)       ;;
 
+
+
+(setq global-page-break-lines-mode t)
+
+(require 'org-listcruncher)

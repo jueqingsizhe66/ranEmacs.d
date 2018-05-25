@@ -1,0 +1,261 @@
+#+TITLE: Library of Babel
+#+DATE: <2017-12-29 Fri>
+#+AUTHOR: Derek Feichtinger
+#+EMAIL: derek.feichtinger@psi.ch
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.2.1 (Org mode 9.1.2)
+
+* Introduction
+  I define all source block names with a prefix "lob", so that it will be easy to use expansion/completion
+  for these functions.
+
+* Table related functions
+** PostAlignTables - Align and calculate multiple tables of an output block
+   
+   #+NAME: lobPostAlignTables
+   #+header: :var text="|5|22222|\n|0||\n|12|45|\n|---\n|||\n#+TBLFM:@>$1=vsum(@1..@-1)\n\n|1|22222|\n|0||\n|12|45|\n"
+   #+BEGIN_SRC emacs-lisp :results value :exports both
+     (with-temp-buffer
+       (erase-buffer)
+       (cl-assert text nil "PostAlignTables received nil instead of text ")
+       (insert text)
+       (beginning-of-buffer)
+       (org-mode)
+       (while
+           (search-forward-regexp org-table-any-line-regexp nil t)
+         (org-table-align)
+         (org-table-recalculate 'iterate)
+         (goto-char (org-table-end)))
+       (buffer-string))
+   #+END_SRC
+
+*** Test
+
+    #+BEGIN_SRC emacs-lisp :results output drawer :post lobPostAlignTables(*this*) :exports both
+      (princ
+       (concat
+        "#+CAPTION: Test1\n"
+        "|A|B|C|\n"
+        "|---\n"
+        "|1|20|300|\n"
+        "|200|30|4|\n"
+        "|---\n"
+        "||||\n"
+        "#+TBLFM: @>$1..@>$3=vsum(@I..@II)\n"
+        "\n#+CAPTION: Test2\n"
+        "|A|B|C|\n"
+        "|---\n"
+        "|1|20|300|\n"
+        "|200|30|4|\n"
+        ))
+    #+END_SRC
+
+    #+RESULTS:
+    :RESULTS:
+    #+CAPTION: Test1
+    |   A |  B |   C |
+    |-----+----+-----|
+    |   1 | 20 | 300 |
+    | 200 | 30 |   4 |
+    |-----+----+-----|
+    | 201 | 50 | 304 |
+    #+TBLFM: @>$1..@>$3=vsum(@I..@II)
+
+    #+CAPTION: Test2
+    |   A |  B |   C |
+    |-----+----+-----|
+    |   1 | 20 | 300 |
+    | 200 | 30 |   4 |
+    :END:
+      
+** InsertTableFromFile
+
+    #+NAME: lobInsertTableFromFile
+    #+HEADER: :var tname="test-table1" fname="/tmp/insert-file-test.org" newcaption="" newattr="" newname=""
+    #+BEGIN_SRC elisp :results output drawer
+      (let* ((klist (cl-remove-if (lambda (x) (equal (cadr x) ""))
+				  `(("ATTR_LATEX" ,newattr) ("CAPTION" ,newcaption) ("NAME" ,newname))))
+	     (tbl
+	      (with-temp-buffer
+		(org-mode)
+		(insert-file-contents fname)
+		(goto-char (point-min))
+		(unless (re-search-forward
+			 (concat "^[ \t]*#\\+\\(tbl\\)?name:[ \t]*"
+				 (regexp-quote tname) "[ \t]*$")
+			 nil t)
+		  (user-error "Can't find table named %s in file" tname fname))
+		(forward-line 0)
+		(let ((tstart (match-beginning 0))
+		      tend)
+		  (while (looking-at "^[ \t]*#\\+\\([^:]+\\): *\\(.*\\)")
+		    (add-to-list 'klist `(,(upcase (match-string 1)) ,(match-string 2)))
+		    (delete-region (point) (line-end-position))
+		    (kill-line))
+		  (unless (looking-at org-table-line-regexp)
+		    (looking-at "^.*$")
+		    (user-error "no table at location of %s, Looking-at: '%s'" tname (match-string 0)))
+		  (goto-char (org-table-end))
+		  (while (looking-at-p "^[ \t]*#\\+TBLFM:")
+		    (forward-line 1))
+		  (buffer-substring tstart (point))))))
+	(setq klist (nreverse klist)) ;; reverse for giving priority to new user settings
+	(dolist (elem '("NAME" "CAPTION" "ATTR_LATEX"))
+	  (when (assoc elem klist)
+	    (princ (format "#+%s: %s\n" elem (cadr (assoc elem klist))))))
+	(princ tbl))
+    #+END_SRC
+
+*** Test setup boilerplate
+
+    Creating a file for testing
+    #+BEGIN_SRC elisp
+      (with-temp-file "/tmp/insert-file-test.org"
+	(goto-char (point-max))
+	(insert "some text at the start
+      ,#+NAME: test-table1
+      | a | b | c |
+      |---+---+---|
+      | 1 | 2 | 3 |
+      | 2 | 4 | 6 |
+      |---+---+---|
+      |   |   | 9 |
+      ,#+TBLFM: @>$>=vsum(@I..@II)
+      some text at the end
+
+      ,#+NAME: notable
+      ,#+BEGIN_EXAMPLE
+      Some Example
+      ,#+END_EXAMPLE
+
+      some other text at the start
+      ,#+NAME: test-table2
+      ,#+caption: original caption of test-table2
+      ,#+ATTR_LATEX: :font \\footnotesize :placement [H]
+      | a |  b |  c |
+      |---+----+----|
+      | 1 | 20 | 10 |
+      | 2 | 40 | 20 |
+      |---+----+----|
+      |   |    | 30 |
+      ,#+TBLFM: @>$>=vsum(@I..@II)
+      some other text at the end"))
+
+     #+END_SRC
+
+     #+RESULTS:
+
+     
+*** Test
+
+    #+CALL: lobInsertTableFromFile(tname="test-table2", fname="/tmp/insert-file-test.org")
+
+    #+RESULTS:
+    :RESULTS:
+    #+NAME: test-table2
+    #+CAPTION: original caption of test-table2
+    #+ATTR_LATEX: :font \footnotesize :placement [H]
+    | a |  b |  c |
+    |---+----+----|
+    | 1 | 20 | 10 |
+    | 2 | 40 | 20 |
+    |---+----+----|
+    |   |    | 30 |
+    #+TBLFM: @>$>=vsum(@I..@II)
+    :END:
+
+
+    #+CALL: lobInsertTableFromFile(tname="test-table2", fname="/tmp/insert-file-test.org", newcaption="new caption", newname="newname")
+
+    #+RESULTS:
+    :RESULTS:
+    #+NAME: newname
+    #+CAPTION: new caption
+    #+ATTR_LATEX: :font \footnotesize :placement [H]
+    | a |  b |  c |
+    |---+----+----|
+    | 1 | 20 | 10 |
+    | 2 | 40 | 20 |
+    |---+----+----|
+    |   |    | 30 |
+    #+TBLFM: @>$>=vsum(@I..@II)
+    :END:
+
+    
+** TableFilter
+
+    #+NAME: lobTableFilter
+    #+HEADER: :var tbl=tblFiltertest col=0 vals="Peter Paul"
+    #+BEGIN_SRC elisp :results value  :colnames y
+      (let ((lst (split-string vals)))
+	(concatenate 'list  (loop for row in tbl
+				  if (member (nth col row) lst)
+				  collect row into newtbl
+				  ;; else do (princ (format "%s: %s\n" (nth col row) lst))
+				  finally return newtbl)))
+   #+END_SRC
+
+*** Test
+
+    #+NAME: tblFiltertest
+    | Name  | A |  B |
+    |-------+---+----|
+    | Peter | 1 | 10 |
+    | Paul  | 2 | 20 |
+    | Mary  | 3 | 30 |
+    | Peter | 4 | 40 |
+    | Mary  | 5 | 50 |
+    | Peter | 6 | 60 |
+
+    #+CALL: lobTableFilter(tbl=tblFiltertest, col=0, vals="Peter Paul")
+
+    #+RESULTS:
+    | Name  | A |  B |
+    |-------+---+----|
+    | Peter | 1 | 10 |
+    | Paul  | 2 | 20 |
+    | Peter | 4 | 40 |
+    | Peter | 6 | 60 |
+
+** GroupTable
+
+    #+NAME: lobGroupTable
+    #+HEADER: :var tbl=tblFiltertest grp="Name" op="sum" rescols="B" 
+    #+BEGIN_SRC python :results output verbatim drawer :colnames no
+      import pandas as pd
+      import numpy as np
+      import orgbabelhelper as obh
+      import sys
+      import re
+
+      df = obh.orgtable_to_dataframe(tbl)
+      #print re.split(r",\s*", rescols) + [grp]
+      df = df[re.split(r",\s*", rescols) + [grp]]
+      assert grp in df.columns, "Error: group column %s not in table columns %s" % (grp, ",".join(df.columns))
+
+      if op == "sum":
+          res = df.groupby(grp).sum()
+      else:
+          error("operation %s not implemented" % op)
+          sys.exit(1)
+
+      print obh.dataframe_to_orgtable(res)
+
+    #+END_SRC
+
+    
+*** Test
+
+    #+CALL: lobGroupTable(tbl=tblFiltertest, grp="Name", op="sum", rescols="B")
+
+    #+RESULTS:
+    :RESULTS:
+    | Name  |   B |
+    |-------+-----|
+    | Mary  |  80 |
+    | Paul  |  20 |
+    | Peter | 110 |
+
+    :END:
