@@ -831,11 +831,12 @@ SCHEDULED: <2017-12-05 周二>
                     :LOGBOOK:
                     CLOCK: [2017-12-05 周二 14:13]--[2017-12-05 周二 14:13] =>  0:00
                     :END:
-** TODO [#A] 流场可视化专利申请 <2017-12-06 周三 14:53>                 :@work:
-SCHEDULED: <2017-12-06 周三>
+** DONE [#A] 流场可视化专利申请 <2017-12-06 周三 14:53>                 :@work:
+CLOSED: [2018-05-29 周二 16:05] SCHEDULED: <2017-12-06 周三>
                     :PROPERTIES:
                     :Effort: 2:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-05-29 周二 16:05]
                     :LOGBOOK:
                     CLOCK: [2017-12-06 周三 14:53]--[2017-12-06 周三 14:54] =>  0:01
                     :END:
@@ -851,7 +852,7 @@ DEADLINE: <2018-08-10 周五>
                     CLOCK: [2017-12-09 周六 22:03]--[2017-12-09 周六 22:08] =>  0:05
                     CLOCK: [2017-12-07 周四 01:11]--[2017-12-08 周五 08:46] => 31:35
                     :END:
-
+                    
 [[https://www.baidu.com][hello]]                    
                     
 
@@ -1180,4 +1181,3 @@ http://www.hnceri.com/n4/n12/index.html
   | 水          |          |            |         | bag    |               |         |         |        |
   | 工作        |          | teamview   |         |        |               |         |         |        |
   | 星期一      |          | teamview   |         | bag    |               |         | subway  | bought |
-

@@ -39,10 +39,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
- (front-context-string . "* dfeich-lob的函数对")
- (rear-context-string . "1)   \n#+END_SRC\n")
- (position . 942))
+ (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
+ (front-context-string . "** TODO [#B] 市政交")
+ (rear-context-string . "way  | bought |\n")
+ (position . 45181))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

@@ -321,4 +321,18 @@
    
 
 
+#+NAME: lsttest
+ - 花销
+    - item: 叶昭良(10)
+    -  
+    -  
+ - item:  
+    - category (recurrence: 5)
+    - item:  a category item C (kCHF: 30)
+
+#+NAME: src-example1
+#+BEGIN_SRC elisp :results value :var lname="lsttest" :exports both
+  (org-listcruncher-to-table lname)
+  #+END_SRC
+
   

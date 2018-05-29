@@ -5288,6 +5288,29 @@ fsolve(x*2+x=4,x)
 更进一步参考[dfeich calc.org][284]
 
 
+#### 如何把自定义的babel系列函数放入org-babel加载库中?
+
+With the help of [The Library of Babel][288], we don't have to include [the code block][287] get-named-text into every Org file. 
+I put the block into an Org file under my .emacs.d directory, $HOME/.emacs.d/custimazations/org-babel-lib.org. 
+Then put this line into my .orgConf.el:
+
+
+``` org
+(org-babel-lob-ingest (expand-file-name "~/.emacs.d/custimizations/org-babel-lib.org"))
+```
+
+This makes the code block get-named-text a predefined and callable code block that can be seen and called in any Org file.
+
+### 118. org-sidebar
+
+类似于[org-listcrunch][278], [org-sidebar][289]也处于刚刚起步阶段，所以可能还有bug，但效果还不错，于是把它添加进来。
+
+`M-x package-install dash-functional`也得安装。
+
+对我没用，所以从init.el剔除掉！
+
+
+
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -5579,5 +5602,8 @@ fsolve(x*2+x=4,x)
 [282]:https://github.com/jueqingsizhe66/ranEmacs.d#102-orgmode-%E8%A1%A8%E6%A0%BC%E8%AF%B4%E6%98%8E 
 [283]:https://github.com/dfeich/org-babel-examples/blob/master/library-of-babel/dfeich-lob.org 
 [284]:https://github.com/dfeich/org-babel-examples/blob/master/calc/calc.org 
-[285]: https://raw.githubusercontent.com/dfeich/org-babel-examples/master/tables/tables.org
+[285]:https://raw.githubusercontent.com/dfeich/org-babel-examples/master/tables/tables.org
 [286]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/tablestar.png
+[287]:http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
+[288]:https://orgmode.org/worg/org-contrib/babel/library-of-babel.html
+[289]: https://github.com/alphapapa/org-sidebar
