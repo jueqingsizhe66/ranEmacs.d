@@ -5362,7 +5362,6 @@ void put(Elephant elephant, Fridge fridge) {
 ```
 
 真正[优雅可读的代码(王垠)][290]，是几乎不需要注释的。如果你发现需要写很多注释，那么你的代码肯定是含混晦涩，逻辑不清晰的。
-·
 以下小标题均源自[王垠][290]
 
 #### 伟大的线性思考方式
@@ -5759,3 +5758,4 @@ if (...) {
 [289]: https://github.com/alphapapa/org-sidebar
 [290]: http://www.yinwang.org/blog-cn/2015/11/21/programming-philosophy
 [291]: https://www.jianshu.com/p/87a3c5002bde
+[292]: http://www.yinwang.org/blog-cn/2018/04/13/csbook-chapter1
