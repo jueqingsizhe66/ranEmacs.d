@@ -336,3 +336,25 @@
   #+END_SRC
 
   
+
+
+
+  #+BEGIN_SRC python
+    import numpy
+    from krypy.linsys import LinearSystem, Gmres
+
+    # create linear system and solve
+    linear_system = LinearSystem(A=numpy.diag([1e-3]+range(2, 101)),
+                                 b=numpy.ones((100, 1)))
+    sol = Gmres(linear_system)
+
+    # plot residuals
+    from matplotlib import pyplot
+    pyplot.semilogy(sol.resnorms)
+    pyplot.show()
+  #+END_SRC
+
+  #+RESULTS:
+  : None
+
+  

@@ -1,7 +1,7 @@
 # 主要目的：clojure learning
 次要目的: emacs learning(org-mode)
 
-能为他人创造点价值，那是最好的feedback
+能为他人创造点价值，那是最好的feedback([故事编程story programming][300])
 
 Okay , it comes from flyingmchine,
 I have test in the two systems windows10
@@ -4479,7 +4479,9 @@ Granted, we could apply all these tips, to really begin a discussion:
       攻城不怕坚，攻书莫畏难。科学有险阻，苦战能过关。
       
       毛借吕端评价叶帅在革命期间力挽狂澜，四两拨千斤的能力，关键时刻不糊涂，明断是非，果断抉择
-      ："诸葛一生唯谨慎，吕端大事不糊涂。"
+      ："诸葛一生唯谨慎，吕端大事不糊涂。"(三分天下诸葛亮，一统江山刘伯温）
+      
+      跳出三维的世界，感受历史、现在和未来的时空维度，历史总是惊人的相似，昨日发生的事情，今日又将重现。
      ----------
 
  
@@ -4500,7 +4502,16 @@ Granted, we could apply all these tips, to really begin a discussion:
  
 ```
 
-### 109. 伟大的awk and rename
+[刘伯温][304]
+
+[生产力？][305]
+
+生产力就三个字，叫我愿意。我愿意，我的生产力就高；我不愿意，我的生产力就低。当你愿意做的时候，你不会计较太多，多少钱都没关系，辛苦点怕什么，我有事情做就已经很享受了嘛！可是当你不愿意的时候，你就会找一千个、一万个理由去推脱，这是肯定的。所以人要记住，不要靠别人来激励你，而是要靠自己来激励自己，这才是高明的人。求人不如求己。
+
+### 109. 伟大的awk and rename(story programming)
+
+<2018-06-02 17:03> 我很喜欢awk编程语言,开头，中间，结尾的故事编程方法。
+
 
 有时候写文章需要把大量的图片重命名，比如Fig.18到Fig20. 
 
@@ -4515,7 +4526,37 @@ Granted, we could apply all these tips, to really begin a discussion:
  for i in `seq 21 -1 12`; do rename $i $(($i+1)) *;done
 
 #+END_SRC
+
+
+# awk star definition
+
+ cat filename.csv|awk -F, 'BEGIN{prefix="sphere12-14-15-1-";postfix=".dat"}{output=prefix""substr($1,0,length($1)-1)""postfix;input=$2""postfix;cmd="rename "input" "output" "input;system(cmd)}'
+ 
+ # -1 because the space
+ 
+ # -4 because tab spend 4 space
+ ls *.dat|awk -F"-" 'BEGIN{T=0.834493; dt=T/72.0; i=1; ta=10.0139; }{a=substr($5,0,length($5)-4); ct=ta+dt*(i-1);print
+ a,",",(ct/T-int(ct/T))*360,",",ct; i++;}'
+
+
+# awk reverse sort number
+cat filename.csv|awk -F, '{print $2|"sort -rn"}'
+
+# sort -k2 -n 可以针对数字的第二个默认delimeter[默认是空格]划分的字段进行排序【且是整行进行】, -t指定分割符
+# 特别强大的是-n改变为 -g就可以比较自然计数比如 1.0E0  1.0E1  1.01E0 如果用-n比较则1.0E1会排在1.01E0之前
+# 而如果改为-g则会按照数值的真正大小进行比较
+
+
+
+
+# seq reverse show numbers
+seq 216 -1 1
 ```
+
+rename语法
+
+`rename 要匹配的表达式 新的表达式 文件名`,如果文件名为星号，代表当前文件夹下
+的所有文件。
 
 
 #### AWK 例子
@@ -4539,6 +4580,38 @@ AWK用于翼型坐标点导致，注意awk中小括号组合代表函数调用�
 $ cat test1|awk '{a[NR]=$1;b[NR]=$2;c[NR]=$3;} END{for(i=length(a);i>0;i--) print a[i],b[i],c[i]}'
 
 
+```
+
+[awk基础排序][301]
+END中 asort对数组a的值进行排序，把排序后的下标存入新生成的数组b中，丢弃数组a下标值(asort之后丢弃原先数组)，再把数组a的长度赋值给变量slen(而asorti不会丢弃原先数组)
+
+[awk多字段排序][302]
+
+[sort 多字段排序][303] 
+`sort -k 2 -k 3` 先按第二个域排列，第二个域相同再按照第三个域排列
+
+运用1：
+
+``` awk
+yzl@DESKTOP-MVNHR6D /cygdrive/c/Users/yzl/Desktop/fangqiang
+$ cat export1wan2.csv|awk '{if(NR>6){print $0}}'|sort -g -t, -k 3 -k 4 >hello3.csv
+
+```
+
+进一步运用(同时进行排列)
+``` awk
+
+cat export1wan2.csv|awk '{if(NR>6){print $0}}'|sort -g -t, -k 3 -k 4| awk -F, 'BEGIN{xNum=100;yNum=100;count=1;}{a[count]=$1;b[count]=$2;count=count+1} END{for(i=1;i<=xNum;i++){for(j=1;j<=yNum;j++){printf("%f",a[j+(i-1)*xNum]); };print "" }}'
+```
+
+``` awk
+# 此时$1"|"$4变成了一个字段名，这是比较特别的地方
+awk '{a[$1"|"$4]=$0;b[$1];c[$4]}END{
+	for(i=1;i<=asorti(b,bb);i++)
+		for(j=asorti(c,cc);j>=1;j--)
+			if(bb[i]"|"cc[j] in a)
+				print a[bb[i]"|"cc[j]]
+	}' file
 ```
 
 ### 110. 伟大的find
@@ -4841,6 +4914,10 @@ In ~%s~:
 ```
 
 ####  Template design for org-capture
+
+vim中使用书签进行[临时代码收藏][299] 大写字母可以是跨文件调用，小写字母
+只能是当前文件夹的存储。
+
 
 ``` org
             
@@ -5369,7 +5446,7 @@ void put(Elephant elephant, Fridge fridge) {
 如果你看透了局部变量的本质——它们就是电路里的导线，那你就能更好的理解近距离的好处。变量定义离用的地方越近，导线的长度就越短。
 你不需要摸着一根导线，绕来绕去找很远，就能发现接收它的端口，这样的电路就更容易理解。(想想看,||是不是代表并列逻辑，&代表汇合逻辑，交汇点)
 
-上面的||和||写成笨一点的办法，就会清晰很多(大部分程序员的工作是处理程序的传递和分发)：
+上面的||和&写成笨一点的办法，就会清晰很多(大部分程序员的工作是处理程序的传递和分发)：
 
 ``` java
 //bad
@@ -5460,6 +5537,83 @@ if (...) {
 ```
 注意到了吗？在我的代码里面，if语句几乎总是有两个分支。它们有可能嵌套，有多层的缩进，
 而且else分支里面有可能出现少量重复的代码。然而这样的结构，逻辑却非常严密和清晰。
+
+
+### 120. Emacs eww(web browser) for windows10？
+
+
+[emacs-notes][293] from [sachac][294]
+
+
+####  Structure templates:
+
+``` org
+(setq org-structure-template-alist
+      '(("s" "#+begin_src ?\n\n#+end_src" "<src lang=\"?\">\n\n</src>")
+        ("e" "#+begin_example\n?\n#+end_example" "<example>\n?\n</example>")
+        ("q" "#+begin_quote\n?\n#+end_quote" "<quote>\n?\n</quote>")
+        ("v" "#+BEGIN_VERSE\n?\n#+END_VERSE" "<verse>\n?\n</verse>")
+        ("c" "#+BEGIN_COMMENT\n?\n#+END_COMMENT")
+        ("p" "#+BEGIN_PRACTICE\n?\n#+END_PRACTICE")
+        ("l" "#+begin_src emacs-lisp\n?\n#+end_src" "<src lang=\"emacs-lisp\">\n?\n</src>")
+        ("L" "#+latex: " "<literal style=\"latex\">?</literal>")
+        ("h" "#+begin_html\n?\n#+end_html" "<literal style=\"html\">\n?\n</literal>")
+        ("H" "#+html: " "<literal style=\"html\">?</literal>")
+        ("a" "#+begin_ascii\n?\n#+end_ascii")
+        ("A" "#+ascii: ")
+        ("i" "#+index: ?" "#+index: ?")
+        ("I" "#+include %file ?" "<include file=%file markup=\"?\">")))
+
+```
+
+留着慢慢解决
+
+
+### 121. krypy python demo
+
+
+[krypy for python][295]
+
+还有不错的matlab好玩的[Krylov.m][296]+ [linear-operator toolbox for matlab][297]
+
+[Randomized Block Krylov Methods for Stronger and Faster Approximate Singular Value Decomposition][298]
+
+
+``` org
+
+pip install krypy
+```
+
+
+
+test code:
+
+``` python
+  #+BEGIN_SRC python
+    import numpy
+    from krypy.linsys import LinearSystem, Gmres
+
+    # create linear system and solve
+    linear_system = LinearSystem(A=numpy.diag([1e-3]+range(2, 101)),
+                                 b=numpy.ones((100, 1)))
+    sol = Gmres(linear_system)
+
+    # plot residuals
+    from matplotlib import pyplot
+    pyplot.semilogy(sol.resnorms)
+    pyplot.show()
+  #+END_SRC
+
+  #+RESULTS:
+  : None
+
+  
+
+```
+
+
+
+
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -5759,3 +5913,16 @@ if (...) {
 [290]: http://www.yinwang.org/blog-cn/2015/11/21/programming-philosophy
 [291]: https://www.jianshu.com/p/87a3c5002bde
 [292]: http://www.yinwang.org/blog-cn/2018/04/13/csbook-chapter1
+[293]: https://github.com/sachac/emacs-notes
+[294]: https://github.com/sachac
+[295]: https://krypy.readthedocs.io/en/latest/
+[296]: https://github.com/optimizers/Krylov.m
+[297]: https://github.com/mpf/spot/
+[298]: https://papers.nips.cc/paper/5735-randomized-block-krylov-methods-for-stronger-and-faster-approximate-singular-value-decomposition
+[299]: https://github.com/yangyangwithgnu/use_vim_as_ide#45-%E4%BB%A3%E7%A0%81%E6%94%B6%E8%97%8F
+[300]: https://github.com/jueqingsizhe66/ranEmacs.d#109-%E4%BC%9F%E5%A4%A7%E7%9A%84awk-and-rename
+[301]: http://blog.chinaunix.net/uid-21374062-id-3189744.html
+[302]: http://blog.chinaunix.net/uid-10540984-id-3421486.html
+[303]: https://segmentfault.com/a/1190000005713784
+[304]: http://blog.sina.com.cn/s/blog_e08d52f50102wkou.html
+[305]: http://blog.sina.com.cn/s/blog_e08d52f50102wkhn.html

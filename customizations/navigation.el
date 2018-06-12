@@ -121,3 +121,40 @@
 ;;for window-numbering
 (setq window-numbering-assign-func
       (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+
+
+
+;; http://manuel-uberti.github.io//emacs/2018/05/25/display-version/
+;; only works on ubuntu system(with gnome-shell)
+(defun mu--os-version ()
+  "Call `lsb_release' to retrieve OS version."
+  (replace-regexp-in-string
+   "Description:\\|[\t\n\r]+" ""
+   (with-temp-buffer
+     (and (eq 0
+              (call-process "lsb_release" nil '(t nil) nil "-d"))
+          (buffer-string)))))
+
+(defun mu--gnome-version ()
+  "Call `gnome-shell' to retrieve GNOME version."
+  (with-temp-buffer
+    (and (eq 0
+             (call-process "gnome-shell" nil '(t nil) nil "--version"))
+         (buffer-string))))
+
+;;;###autoload
+(defun mu-display-version ()
+  "Display Emacs version and system details in a temporary buffer."
+  (interactive)
+  (let ((buffer-name "*version*"))
+    (with-help-window buffer-name
+      (with-current-buffer buffer-name
+        (insert (emacs-version) "\n")
+        (insert "\nRepository revision: " emacs-repository-version "\n")
+        (when (and system-configuration-options
+                   (not (equal system-configuration-options "")))
+          (insert "\nConfigured using:\n"
+                  system-configuration-options))
+        (insert "\n\nOperating system: " (mu--os-version) "\n")
+        (insert "Window system: " (getenv "XDG_SESSION_TYPE") "\n")
+        (insert "Desktop environment: " (mu--gnome-version))))))
