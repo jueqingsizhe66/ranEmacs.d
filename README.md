@@ -5612,6 +5612,117 @@ test code:
 ```
 
 
+### 122. Ledger mode for balence bugdets(伟大的等价原则 收支平衡)
+
+[ledger-mode][307] , a command tool for managing personal economic.
+
+go to [ledger-website][308], and download the software for your operating system, put executable `ledger` in your path, 
+so command window can execute the `ledger`. 从此开始记账。
+
+投资和收益，从经济的角度管理好你的生活。
+
+#### 1.Config:
+
+```
+(require 'ledger-mode)
+(autoload 'ledger-mode "ledger-mode" "A major mode for Ledger" t)
+(add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
+
+(defun ledger-accounts ()
+    (mapcar 'list '(Construction-Bank MudanCard HuaBei Alipay Weixin Tourists Houselive Salary Fruits Eating Amusement Learning Sports)))
+
+(defun ledger-add-entry (title in amount out)
+  (interactive
+   (let ((accounts (ledger-accounts)))
+     (list (read-string "Entry: " (format-time-string "%Y-%m-%d " (current-time)))
+           (let ((completion-regexp-list "Assets:"))
+             (concat completion-regexp-list  (completing-read "What did you pay for? "  accounts)))
+           (read-string "How much did you pay? " "RMB ")
+           (let ((completion-regexp-list "Liabilities:"))
+             (concat completion-regexp-list  (completing-read "Where did the money come from? " accounts))))))
+  (insert title)
+  (newline)
+  (indent-to 4)
+  (insert in "  " amount)
+  (newline)
+  (indent-to 4)
+  (insert out))
+
+```
+
+#### 2. 添加账目
+
+
+然后你可以使用`M-x ledger-add-entry` 先添加时间+标题，然后是你支付给哪个项目，接着是多少钱，然后是你的花销账户
+
+
+于是可以得到如下信息，保存为test.ledger
+
+```
+
+
+2018-06-13 Travaling from Bj to 蓬莱
+    Assets:Tourists  RMB 1800
+    Liabilities:Construction-Bank
+2018-06-13 Prepare food
+    Assets:eating  RMB 300
+    Liabilities:Construction-Bank
+    
+
+2018-06-13 purchase fruit
+    Assets:fruits  RMB 150
+    Liabilities:Construction-Bank
+```
+
+其中Assets其实代表你的花销，花费了所以是你的资产
+而Liabilities一般代表你的所有收入来源。
+
+#### 3. 解析账目
+
+
+最后通过ledger(ledger布置于path路径下)解析一下即可
+
+```
+C:\Users\yzl\AppData\Roaming\.emacs.d>ledger -f test.ledger register Tour
+18-Jun-13 Travaling from Bj to 蓬莱       Assets:Tourists                                RMB 1800           RMB 1800
+
+C:\Users\yzl\AppData\Roaming\.emacs.d>ledger -f test.ledger balence
+Error: Unrecognized command 'balence'
+
+C:\Users\yzl\AppData\Roaming\.emacs.d>ledger -f test.ledger balance
+            RMB 1800  Assets:Tourists
+           RMB -1800  Liabilities:Construction-Bank
+--------------------
+                   0
+
+C:\Users\yzl\AppData\Roaming\.emacs.d>ledger -f test.ledger balance
+            RMB 2250  Assets
+            RMB 1800    Tourists
+             RMB 300    eating
+             RMB 150    fruits
+           RMB -2250  Liabilities:Construction-Bank
+--------------------
+                   0
+                   
+                   
+ C:\Users\yzl\AppData\Roaming\.emacs.d>ledger -f test.ledger balance ^Assets ^Liabilities
+            RMB 2250  Assets
+            RMB 1800    Tourists
+             RMB 300    eating
+             RMB 150    fruits
+           RMB -2250  Liabilities:Construction-Bank
+--------------------
+                   0                  
+```
+![ledger][309]
+
+```
+Type ‘C-c TAB’.  Ledger-mode will search for a Payee that has
+the same beginning and copy the rest of the transaction to you new
+entry.
+```
+
+[Introduction for ledger][306],现在用的Assets,  Liabilities源自于该网站。
 
 
 
@@ -5926,3 +6037,7 @@ test code:
 [303]: https://segmentfault.com/a/1190000005713784
 [304]: http://blog.sina.com.cn/s/blog_e08d52f50102wkou.html
 [305]: http://blog.sina.com.cn/s/blog_e08d52f50102wkhn.html
+[306]: https://www.ledger-cli.org/3.0/doc/ledger3.html#Introduction-to-Ledger
+[307]: https://github.com/ledger/ledger-mode
+[308]: https://www.ledger-cli.org/download.html
+[309]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ledger.png
