@@ -19,7 +19,7 @@ and ubuntu, all valid for newer.
 *注意，在[标题66][150]我引入了org-crypt，所以安装了gnupg-win-3.0,得按照说明在你的电脑上安装，才可以具备加密功能(如果不加密不影响使用)*
 
 ``` org
-慎重加密！防止丢失！
+慎重加密！防止丢失
 ```
 
 C-c [a-z] and F5~F9是专门预留给用户自定义快捷键的，所有的major和minor都应该遵守这一规范。
@@ -3481,6 +3481,7 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 `C-c p p ` 切换项目
 
 `C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中（支持中文，稍微等一小会），并安装了`M-x package-install ag`文件。
+<2018-06-14 15:57> 确认支持中文,捡到宝的感觉,难道是更新的缘故!
 
 `C-c k`也可以搜索但是不支持中文
 得经常看看[Counsel-projectile文档][191]
