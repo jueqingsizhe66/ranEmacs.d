@@ -5724,6 +5724,16 @@ entry.
 
 [Introduction for ledger][306],现在用的Assets,  Liabilities源自于该网站。
 
+### 123.显示buffer和右键菜单
+
+
+Ctrl+鼠标左键:显示buffer区域
+
+![buffer][310]
+
+Ctrl+鼠标右键:显示右键菜单项
+
+![right][311]
 
 
 <hr align="center" width="40%"/>
@@ -6041,3 +6051,5 @@ entry.
 [307]: https://github.com/ledger/ledger-mode
 [308]: https://www.ledger-cli.org/download.html
 [309]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ledger.png
+[310]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/buffer.png
+[311]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/right.png

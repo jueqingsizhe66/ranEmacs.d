@@ -1,0 +1,94 @@
+This is installation.info, produced by makeinfo version 6.1 from
+installation.texi.
+
+1 Packaged ESS
+--------------
+
+You may install ESS from Emacs by using 'M-x package-install' if you add
+the third-party package archive MELPA to 'package-archives'.
+Instructions on how to do so are found on MELPA's website
+(https://melpa.org/).  MELPA also hosts MELPA-stable with stable ESS
+builds.  You may choose between MELPA with the latest and greatest
+features (and bugs) or MELPA-stable, which may lag a bit behind but
+should be more stable.
+
+   Alternatively, many GNU/Linux distributions package and distribute
+ESS, check with your distribution to see if this is the case.  You may
+need to add the above require statement to your configuration file in
+order to activate ESS.
+
+   You will need to add
+
+     (require 'ess-site)
+
+to your Emacs configuration file in order to activate ESS. Advanced
+users may activate only a particular language by loading '(require
+'ess-r-mode)' instead.
+
+   Users of the nonfree operating systems macOS and Windows may be
+interested in downloading the Emacs binary by Vincent Goulet:
+  1. macOS Emacs Modified for macOS
+     (https://vigou3.github.io/emacs-modified-macos/)
+  2. Windows Emacs Modified for Windows
+     (https://vigou3.github.io/emacs-modified-windows/).
+
+2 From source
+-------------
+
+Users who wish to install ESS from the source code may follow these
+instructions:
+
+  1. Obtain the ESS source files.
+
+     *Note (ESS)Latest Version::
+
+     We will refer to the location of the ESS source files as
+     '/path/to/ESS/' hereafter.
+
+  2. Optionally, compile elisp files and build the documentation:
+          cd /path/to/ESS/
+          make
+     Without this step, info, pdf and html documentation and reference
+     card will not be available.  Uncompiled ESS will also run slower.
+
+  3. Optionally, install site-wide:
+
+     You may make ESS available to all users of a machine by installing
+     it site-wide.  To do so, run 'make install'.  You might need
+     administrative privileges:
+
+          make install
+
+     The files are installed into '/usr/share/emacs' directory.  For
+     this step to run correctly on macOS, you will need to adjust the
+     'PREFIX' path in 'Makeconf'.  The necessary code and instructions
+     are commented in that file.
+
+  4. Initialize ESS
+
+     If you have performed the 'make install' step from above, add:
+
+          (require 'ess-site)
+
+     to your Emacs configuration file.  Otherwise, you should add
+     '/path/to/ESS/lisp/' to your Emacs load path and then load ESS with
+     the following lines in your Emacs configuration file:
+
+          (add-to-list 'load-path "/path/to/ESS/lisp/")
+          (require 'ess-site)
+
+     ess-site.el loads all ESS languages.  If you only want to load
+     support for R, you may use
+
+          (require 'ess-r-mode)
+
+     instead of ess-site.  Note that support for loading only part of
+     ESS is recommended only for experienced Emacs users.
+
+  5. Check installation Restart your Emacs and check that ESS was loaded
+     from a correct location with 'M-x ess-version'.
+
+
+Tag Table:
+
+End Tag Table

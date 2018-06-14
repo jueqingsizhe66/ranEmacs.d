@@ -1,0 +1,21 @@
+This is getting.info, produced by makeinfo version 6.1 from
+getting.texi.
+
+1 Source code
+-------------
+
+You may download the latest ESS release source code from the ESS web
+page (http://ess.r-project.org) or StatLib
+(http://lib.stat.cmu.edu/general/ESS/)
+
+2 Git for ESS development
+-------------------------
+
+Developers and experimentation on ESS mainly happens through git.  ESS
+is currently hosted on Github: <https://github.com/emacs-ess/ESS>.
+
+
+
+Tag Table:
+
+End Tag Table

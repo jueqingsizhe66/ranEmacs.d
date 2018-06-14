@@ -1423,7 +1423,7 @@
 	   [(0 0 1)
 	    nil "get stuff from pinboard" single])
  (picpocket .
-	    [(38)
+	    [(39)
 	     ((emacs
 	       (24 4)))
 	     "Image viewer" single])
@@ -1451,7 +1451,7 @@
      [(0 12)
       nil "Emacs Lisp interface to the PostgreSQL RDBMS" single])
  (perspective .
-	      [(1 12)
+	      [(2 1)
 	       ((cl-lib
 		 (0 5)))
 	       "switch between named \"perspectives\" of the editor" single])
@@ -3696,7 +3696,7 @@
 	      [(1 15)
 	       nil "Faster emacs startup through byte-compiling." single])
  (elfeed-web .
-	     [(2 3 0)
+	     [(3 0 0)
 	      ((simple-httpd
 		(1 4 3))
 	       (elfeed
@@ -3705,7 +3705,7 @@
 		(24 1)))
 	      "web interface to Elfeed" tar])
  (elfeed .
-	 [(2 3 0)
+	 [(3 0 0)
 	  ((emacs
 	    (24 3)))
 	  "an Emacs Atom/RSS feed reader" tar])
