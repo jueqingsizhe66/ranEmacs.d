@@ -4157,7 +4157,7 @@ org-mode的[The spreadsheet说明][244]
 
 [excel表格内容直接用于org-mode][231]，其实有命令。操作如下： 
 1. 选中所有行； (黏贴的数据)
-2. c-c | ；对应命令的描述如下：
+2. `c-c |` 对应命令的描述如下.(<2018-06-19 23:51> 特别有用，直接黏贴过来表格数据，摁下命令，配合上`C-c Enter`创建表头
 
 表头一般是带有黑色背景，其他都灰色即可，类似于howardism的[database-example][237]
 
@@ -5725,6 +5725,79 @@ entry.
 
 [Introduction for ledger][306],现在用的Assets,  Liabilities源自于该网站。
 
+  Assets are money that you have(拥有), and Liabilities are money that you owe(欠).
+  “Liabilities” is just a more inclusive name for Debts.
+  
+At the highest level you have five sorts of accounts(最高级别的分层):
+
+Expenses: where money goes,
+Assets: where money sits,
+Income: where money comes from,
+Liabilities: money you owe,
+Equity: the real value of your property.
+
+
+  
+```
+
+          When you earn money, the money has to come from somewhere. Let’s call that somewhere “society”. 
+    In order for society to give you an income, you must take money away (withdraw) from society 
+    in order to put it into (make a payment to) your bank. When you then spend that money, it leaves 
+    your bank account (a withdrawal) and goes back to society (a payment). This is why Income will 
+    appear negative—it reflects the money you have drawn from society—and why Expenses will be positive—
+    it is the amount you’ve given back. These additions and subtractions will always cancel each other out
+    in the end, because you don’t have the ability to create new money: it must always come from somewhere,
+    and in the end must always leave. This is the beginning of economy, after which the explanation gets 
+    terribly difficult.
+```
+
+涡无法自发产生和消亡，正如钱无法自发产生和消亡,它总是从哪里产生，又消失到另外一个地方(This is the rule of economy). 
+
+```
+
+        Based on that explanation, here’s another way to look at your balance report: every negative figure means
+    that that account or person or place has less money now than when you started your ledger; and every positive
+    figure means that that account or person or place has more money now than when you started your ledger. 
+```
+
+也就是说，当你某个账户为正时候，表示该账户有更多的钱，比你第一次使用ledger的时候，反之亦然。你不可能总是借账(negative),
+borrow money from others .你还需要还账(given back),来保证守恒关系，经济规律本身就是一种守恒关系(经济规律的涡运动,
+你是不是能够成为那个启动涡?!)
+    Equity is like the value of something. 
+    If you own a car worth $5000, then you have $5000 in equity in that car. In order to turn that car (a commodity)
+into a cash flow, or a credit to your bank account, you will have to debit the equity by selling it.
+
+    
+    ```
+    
+When you start a ledger, you are probably already worth something. Your net worth is your current equity. 
+By transferring the money in the ledger from your equity to your bank accounts, you are crediting the ledger 
+account based on your prior equity. That is why, when you look at the balance report, you will see a large 
+negative number for Equity that never changes: Because that is what you were worth (what you debited from 
+yourself in order to start the ledger) before the money started moving around. If the total positive value
+of your assets is greater than the absolute value of your starting equity, it means you are making money.
+
+Clear as mud? Keep thinking about it. Until you figure it out, put not Equity(表示不包含起始的钱数 the starting point for ledger
+)
+at the  end of your balance command, to remove the confusing figure from the total.
+    ```
+    
+Salary就是你的equlity源泉，不断的增长，代表你在不断挣钱。
+
+
+    
+```
+ ledger -f test.ledger bal not Salary
+
+```
+![ledger2][313]
+#### ledger黑色命令
+
+
+`ledger -f test.ledger cleared -b 2018 -e 2019 `  从2018开始的 2019截止的
+`ledger -f test.ledger cleared -b 2018 -e 2019 print >ledger-old.dat`  从2018开始的 2019截止的打印备份到ledger-old.dat
+
+一般cleared可以用bal和reg 后面跟的可以是选项，比如`-b` `-e` `not` `^e`什么开头的正则表达式等
 ### 123.显示buffer和右键菜单
 
 
@@ -5739,10 +5812,18 @@ Ctrl+鼠标右键:显示右键菜单项
 ### 124. emacs26.1的two bugs
 
 
-clj-refractor.el版本不通过
+clj-refractor.el版本不通过. org-babel的sh语言从ob-sh切换到ob-shell方式
 
 界面鼠标下移不断地把文字往右推
 
+
+### 125. emacs 中debug elisp
+
+[debug elisp code in emacs][312]
+
+```
+报错了，使用d进入，然后不断d，直到结束，可以看到执行的list 表达式, q退出
+```
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>
@@ -6061,3 +6142,5 @@ clj-refractor.el版本不通过
 [309]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ledger.png
 [310]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/buffer.png
 [311]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/right.png
+[312]: https://www.jianshu.com/p/f509c9a9cac0
+[313]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ledger2.png

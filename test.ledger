@@ -1,32 +1,51 @@
 2018-06-13 去蓬莱旅游
-    Assets:Tourists  RMB 1800
-    Liabilities:建行7889
+    Expenses:Tourists  RMB 1800
+    Assets:Savings:建行7889
 
 2018-06-14 奶茶
-    Assets:Eating  RMB 6
-    Liabilities:支付宝
+    Expenses:Food  RMB 6
+    Assets:支付宝alipay
 
 2018-06-14 花甲盖饭
-    Assets:Eating  RMB 15
-    Liabilities:支付宝
+    Expenses:Food  RMB 15
+    Assets:支付宝alipay
     
 2018-06-14 饭卡充钱
-    Assets:Eating  RMB 170
-    Liabilities:建行7889
+    Expenses:Food  RMB 170
+    Assets:Savings:建行7889
 
 2018-06-17 妈祖岛吃鱿鱼
-    Assets:Eating  RMB 115
-    Liabilities:huabei
+    Expenses:Food  RMB 115
+    Liabilities:花呗huabei
     
 2018-06-18 海鲜烧烤
-    Assets:Eating  RMB 249
-    Liabilities:花呗
+    Expenses:Food  RMB 249
+    Liabilities:花呗huabei
     
 2018-06-19 两根小香肠 王庆坨服务区
-    Assets:Eating  RMB 10
-    Liabilities:花呗
+    Expenses:Food  RMB 10
+    Liabilities:花呗huabei
 
 2018-06-19 匹夫烧烤
-    Assets:Eating  RMB 83
-    Liabilities:花呗
+    Expenses:Food  RMB 83
+    Liabilities:花呗huabei
 
+2018-06-19 火车票报销收入
+    Assets:Savings:建行7998  RMB 2160
+    Income:SalaryNcepu
+
+2018-06-19 劳务费
+    Assets:Savings:建行7889  RMB 800
+    Income:SalaryKang
+
+2018-06-19 股市余钱
+    Assets:Stokes  RMB 1366.1
+    Income:SalaryNcepu 
+    
+2018-06-19 端午前结余钱
+    Assets:Savings:建行7889  RMB 1872.82
+    Income:SalaryNcepu
+    
+2018-06-19 买荔枝
+    Expenses:Fruits  RMB 12.5
+    Assets:Savings:支付宝Alipay

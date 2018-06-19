@@ -5,3 +5,22 @@ gem list
 ledger
 ledger -f test.ledger bal
 which ledger
+ledger -f test.ledger bal
+ledger -f test.ledger reg
+ledger -f test.ledger bal 花呗
+ledger -f test.ledger reg 花呗
+ledger -f test.ledger reg 
+ledger -f test.ledger cleared
+ledger -f test.ledger bal
+ledger -h
+ledger --help
+ledger -f test.ledger cleared
+ledger -f test.ledger bal 建行
+ledger -f test.ledger bal 建行 Salary
+ledger -f test.ledger bal
+ledger -f test.ledger bal
+ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal not Salary

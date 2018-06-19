@@ -10,18 +10,27 @@
 
 ;;(setq  ledger-binary-path "c\\Users\\yzl\\Desktop\\ledger_3.1.1_win_bin\\ledger.exe")
 
-(defun ledger-accounts ()
-    (mapcar 'list '(Eating Salary Fruits 建行7889  建行1593 牡丹卡 花呗 支付宝 微信 Tourists Houselive  Amusement Learning Sports Car Train Aircraft Phone Stokes)))
+
+;; Expenses: where money goes,     ;;
+;; Assets: where money sits,       ;;
+;; Income: where money comes from, ;;
+;; Liabilities: money you owe,     ;;
+;; Equity: the real value of your property. ;;
 
 (defun ledger-add-entry (title in amount out)
   (interactive
-   (let ((accounts (ledger-accounts)))
+   (let ((accounts '(Expenses:Fruits Expenses:Tourists Expenses:House-living Expenses:Amusement 
+                     Expenses:Utilities:Train Expenses:Utilities:Aircraft Expenses:Utilities:Phone Expenses:Food 
+                     Assets:Savings:建行7889  Assets:Savings:建行1593 Assets:Savings:支付宝Alipay 
+                     Assets:Savings:微信Weixin Assets:Learning:Book Assets:Learning:Videos 
+                     Assets:Learning:Software Assets:Sports Assets:Stokes Assets:现金Cash 
+                     Income:SalaryKang Income:SalaryWang Income:SalaryNcepu Income:Donation Income:Business 
+                     Liabilities:CreditCard:牡丹卡Mudan Liabilities:花呗Huabei Liabilities:Car-load Liabilities:house-load 
+                     Equity:Wife)))
      (list (read-string "Entry: " (format-time-string "%Y-%m-%d " (current-time)))
-           (let ((completion-regexp-list "Assets:"))
-             (concat completion-regexp-list  (completing-read "What did you pay for? "  accounts)))
+           (completing-read "What did you pay for? "  accounts)
            (read-string "How much did you pay? " "RMB ")
-           (let ((completion-regexp-list "Liabilities:"))
-             (concat completion-regexp-list  (completing-read "Where did the money come from? " accounts))))))
+           (completing-read "Where did the money come from? " accounts))))
   (insert title)
   (newline)
   (indent-to 4)
