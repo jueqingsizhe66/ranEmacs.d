@@ -922,6 +922,8 @@ In ~%s~:
 
 
 ;;you need to set the language for running the souce code block
+
+;;(sh . t)  new 26.1 change sh to shell
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(

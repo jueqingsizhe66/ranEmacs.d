@@ -8,7 +8,7 @@
 (autoload 'ledger-mode "ledger-mode" "A major mode for Ledger" t)
 (add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
 
-(setq  ledger-binary-path "c\\Users\\yzl\\Desktop\\ledger_3.1.1_win_bin\\ledger.exe")
+;;(setq  ledger-binary-path "c\\Users\\yzl\\Desktop\\ledger_3.1.1_win_bin\\ledger.exe")
 
 (defun ledger-accounts ()
     (mapcar 'list '(Eating Salary Fruits 建行7889  建行1593 牡丹卡 花呗 支付宝 微信 Tourists Houselive  Amusement Learning Sports Car Train Aircraft Phone Stokes)))

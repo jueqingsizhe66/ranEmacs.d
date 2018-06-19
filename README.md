@@ -5736,6 +5736,13 @@ Ctrl+鼠标右键:显示右键菜单项
 
 ![right][311]
 
+### 124. emacs26.1的two bugs
+
+
+clj-refractor.el版本不通过
+
+界面鼠标下移不断地把文字往右推
+
 
 <hr align="center" width="40%"/>
 <hr align="center" width="40%"/>

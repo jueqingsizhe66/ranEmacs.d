@@ -1,0 +1,205 @@
+This is news.info, produced by makeinfo version 6.1 from news.texi.
+
+Changes and New Features in development version:
+
+   * ESS[R]: Fontification of roxygen '@param' keywords now supports
+     comma-separated parameters.
+
+   * ESS[R]: Function-like keywords such as 'if ()' or 'stop()' are no
+     longer fontified as keyword if not followed by an opening
+     parenthesis.  The same holds for search path modifiers like
+     'library()' or 'require()'.  This feature is only available in
+     Emacs >= 25.
+
+   * ESS[R]: We have improved fontification of keywords so they better
+     reflect the semantics of the R language.  'ess-R-keywords' now only
+     contains words reserved by the R parser.
+     'ess-R-control-flow-keywords' contains words of base functions that
+     cause non-contiguous control flow, such as 'return()' and 'stop()'.
+     It includes the following variables that were previously not
+     fontified: 'on.exit()', 'tryCatch()', 'withRestarts()',
+     'invokeRestart()', 'recover()' and 'browser()'
+
+     Finally, 'ess-R-signal-keywords' contains functions part of the
+     condition system that only potentially impact control flow:
+     'message()', 'warning()' (moved from 'ess-R-keywords'),
+     'signalCondition()' and 'withCallingHandlers()'.  These keywords
+     inherit from 'ess-modifiers-face' (the face used for 'library()'
+     etc).
+
+   * ESS modes now inherit from 'prog-mode'.
+
+   * ESS[R]: The package development minor mode now only activates
+     within editing buffers by default, i.e.  ones that inherit from
+     'prog-mode' or 'text-mode'.  If you want to restore the old
+     behaviour and activate the package mode in all buffers (that have a
+     'default-directory' that is part of a package path), set
+     'ess-r-package-auto-activate' to 't'.
+
+   * ESS now provides support for flymake in R buffers for Emacs 26 and
+     newer.  Users need to install the 'lintr' package (available on
+     CRAN) to use it.  Customizable options include 'ess-use-flymake',
+     'ess-r-flymake-linters', and 'ess-r-flymake-lintr-cache'.
+
+   * Improved customization for faces.  ESS now provides custom faces
+     for (nearly) all faces used and places face customization options
+     into their own group.  Users can customize these options using 'M-x
+     customize-group RET ess-faces'.
+
+   * ESS[R]: Gained support for xref in Emacs 25+.  *Note (emacs)Xref::
+
+   * ESS[R]: Changing the working directory is now always reflected in
+     the process buffer.
+
+   * ESS[R]: The startup screen has been cleaned up and displays the
+     startup directory with an explicit 'setwd()'.
+
+   * ESS now displays the language dialect in the mode-line So, for
+     example, R buffers will now show ESS[R] rather than ESS[S].
+
+   * The ESS manual has been updated and revised.
+
+   * ESS[R]: 'Makevars' files are now automatically opened with
+     'makefile-mode'.
+
+   * New varaible 'ess-write-to-dribble'.  This allows users to disable
+     the dribble ('*ESS*') buffer if they wish.
+
+   * ESS now respects Emacs conventions for keybindings.  This means
+     that The 'C-c [letter]' bindings have been removed.  This affects
+     'C-c h', which was bound to 'ess-eval-line-and-step-invisibly' in
+     'sas-mode-local-map'; 'C-c f', which was bound to
+     'ess-insert-function-outline' in 'ess-add-MM-keys'; and 'C-c h',
+     which was bound to 'ess-handy-commands' in 'Rd-mode-map',
+     'ess-noweb-minor-mode-map', and 'ess-help-mode-map'
+
+   * prettify-symbols-mode no longer breaks indentation This is
+     accomplished by having the pretty symbols occupy the same number of
+     characters as their non-pretty cousins.  You may customize the new
+     variable 'ess-r-prettify-symbols' to control this behavior.
+
+   * Variable 'ess-s-versions-list' is obsolete and ignored.  Use
+     'ess-s-versions' instead.  You may pass arguments by starting the
+     inferior process with the universal argument.
+
+   * All of the '*-program-name' variables have been renamed to
+     '*-program'.  Users who previously customized e.g.
+     'inferior-ess-R-program-name' will need to update their
+     customization to 'inferior-ess-R-program'.  These variables are
+     treated as risky variables.
+
+   * Customization of ess-smart-S-assign-key has been reworked.  Use
+     '(setq ess-smart-S-assign-key nil)' to disable smart assignment at
+     any time instead of '(ess-toggle-underscore nil)'.  To use another
+     key, you should set the value of 'ess-smart-S-assign-key' before
+     ESS is loaded.  The following functions have been made obsolete.
+     You should customize ess-smart-S-assign-key instead:
+     ess-toggle-S-assign, ess-toggle-S-assign-key,
+     ess-unset-smart-S-assign-key, ess-activate-smart-S-assign-key,
+     ess-disable-smart-S-assign
+
+   Changes and New Features in 17.11:
+
+   * The ESS initialisation process has been streamlined.  You can now
+     load the R and Stata modes independently from the rest of ESS. Just
+     put '(require 'ess-r-mode)' or '(require 'ess-stata-mode)' in your
+     init file.  This is for experienced Emacs users as this requires
+     setting up autoloads for '.R' files manually.  We will keep
+     maintaining 'ess-site' for easy loading of all ESS features.
+
+   * Reloading and quitting the process is now more robust.  If no
+     process is attached, ESS now switches automatically to one
+     (prompting you for selection if there are several running).
+     Reloading and quitting will now work during a debug session or when
+     R is prompting for input (for instance after a crash).  Finally,
+     the window configuration is saved and restored after reloading to
+     prevent the buffer of the new process from capturing the cursor.
+
+   * ESS[R]: New command 'ess-r-package-use-dir'.  It sets the working
+     directory of the current process to the current package directory.
+
+   * ESS[R] Lookup for references in inferior buffers has been improved.
+     New variable 'ess-r-package-source-roots' contains package
+     sub-directories which are searched recursively during the file
+     lookup point.  Directories in 'ess-tracebug-search-path' are now
+     also searched recursively.
+
+   * ESS[R] Namespaced evaluation is now automatically enabled only in
+     the 'R/' directory.  This way ESS will not attempt to update
+     function definitions from a package if you are working from e.g.  a
+     test file.
+
+   Changes and New Features in 16.10:
+
+   * ESS[R]: Syntax highlighting is now more consistent.  Backquoted
+     names are not fontified as strings (since they really are
+     identifiers).  Furthermore they are now correctly recognised when
+     they are function definitions or function calls.
+   * ESS[R]: Backquoted names and '%op%' operators are recognised as
+     sexp.  This is useful for code navigation, e.g.  with 'C-M-f' and
+     'C-M-b'.
+   * ESS[R]: Integration of outline mode with roxygen examples fields.
+     You can use outline mode's code folding commands to fold the
+     examples field.  This is especially nice to use with well
+     documented packages with long examples set.  Set
+     'ess-roxy-fold-examples' to non-nil to automatically fold the
+     examples field when you open a buffer.
+   * ESS[R]: New experimental feature: syntax highlighting in roxygen
+     examples fields.  This is turned off by default.  Set
+     'ess-roxy-fontify-examples' to non-nil to try it out.
+   * ESS[R]: New package development command 'ess-r-devtools-ask' bound
+     to 'C-c C-w C-a'.  It asks with completion for any devtools command
+     that takes 'pkg' as argument.
+   * ESS[R]: New command 'C-c C-e C-r' to reload the inferior process.
+     Currently only implemented for R. The R method runs
+     'inferior-ess-r-reload-hook' on reloading.
+   * ESS[R]: 'ess-r-package-mode' is now activated in non-file buffers
+     as well.
+
+   Bug fixes in 16.10:
+   * ESS[R]: Fix broken (un)flagging for debugging inside packages
+   * ESS[R]: Fixes (and improvements) in Package development
+   * ESS[R]: Completion no longer produces '...=' inside 'list( )'.
+   * ESS[R]: Better debugging and tracing in packages.
+   * ESS[R]: Better detection of symbols at point.
+   * ESS[R]: No more spurious warnings on deletion of temporary files.
+   * ESS[julia]: help and completion work (better)
+   * ESS[julia]: available via 'ess-remote'
+
+   Changes and New Features in 16.04:
+
+   * ESS[R]: 'developer' functionality has been refactored.  The new
+     user interface consists of a single command
+     'ess-r-set-evaluation-env' bound by default to 'C-c C-t C-s'.  Once
+     an evaluation environment has been set with, all subsequent ESS
+     evaluation will source the code into that environment.  By default,
+     for file within R packages the evaluation environment is set to the
+     package environment.  Set 'ess-r-package-auto-set-evaluation-env'
+     to 'nil' to disable this.
+   * ESS[R]: New 'ess-r-package-mode' This development mode provides
+     features to make package development easier.  Currently, most of
+     the commands are based on the 'devtools' packages and are
+     accessible with 'C-c C-w' prefix.  See the documentation of
+     'ess-r-package-mode' function for all available commands.  With
+     'C-u' prefix each command asks for extra arguments to the
+     underlying devtools function.  This mode is automatically enabled
+     in all files within R packages and is indicated with '[pkg:NAME]'
+     in the mode-line.
+   * ESS[R]: Help lookup has been improved.  It is now possible to get
+     help for namespaced objects such as pkg::foobar.  Furthermore, ESS
+     recognizes more reliably when you change 'options('html_type')'.
+   * ESS[R]: New specialized breakpoints for debugging magrittr pipes
+   * ESS: ESS now implements a simple message passing interface to
+     communicate between ESS and inferior process.
+
+   Bug fixes in 16.04:
+   * ESS[R]: Roxygen blocks with backtics are now correctly filled
+   * ESS[R]: Don't skip breakpoints in magrittr's 'debug_pipe'
+   * ESS[R]: Error highlighting now understands 'testthat' type errors
+   * ESS[Julia]: Added getwd and setwd generic commands
+
+
+
+Tag Table:
+
+End Tag Table
