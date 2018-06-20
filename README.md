@@ -1334,6 +1334,9 @@ Org mode is for
 3. planning projects, and 
 4. authoring documents with a fast and effective plain-text system.”
 ```
+
+通过`M-x org-todo-list` 显示所有agenda底下监控的todo标签
+
 ### 51. custome code block
 
 when you need to memorize the source code in the .org file, one way you can use
@@ -4249,6 +4252,14 @@ prefill your clock history with (a given number of) things you actually clocked.
 1. supports more Ivy actions[show history, and goto the clocked item]
 2. more complete title shown in history list(while org-mru-clock is more simpler with "title(parent)" mode.
 
+`M-x counsel-org-clock-content` 显示所有最近newgtd.org: Tasks > TODO [#B] 查阅energy投稿信息 <2018-05-16 周三 17:08 +1w> :学术:标记过clock的标题
+
+有一种工作风格（较为简单）： 如果你之前截止了某一段clock时间，然后想重新开始，直接`M-x org-mru-clock-in` 会跳出一个prompt框，直接选择其中一个即可。(80%时间是clock-in 并goto的风格)
+
+而如果是`M-x counsel-org-clock-content`(功能比较强大，较为复杂)只是跳转而已,如果需要设置clock，还得用`M-o`(该命令调用了 `counsel-org-clock-default-action`),然后选择`I`,表示Clock-in。(20%时间可能会使用q设置标签 p设置属性等，有替换方法比如 C-c C-q  C-c, )
+
+
+
 ### 105. what is graphviz?(不错的thinking，think to get，wishful thinking)
 
 [Graphviz][250]的好处在于，你只需要关心数据结构的流程，或者连接的方式，而不需要考虑布局。这是经典的*nix的程序的工作方式，比如latex, mate等等，都是采用这种方式来工作的。既可以达到WYTIWYG（What you think is what you get），而不是微软所提倡的WYSIWYG（What you see is what you get）。
@@ -4800,6 +4811,9 @@ Note:
 
 Using: good for visualize the header1 with CATEGORY properties
 
+   org-dashboard的项目给你一个idea，每个工作都是你自己的项目，项目分为很多子项目，并且通过checkbox来控制进度，统一通过
+org-dashboard来监控进度<2018-06-20 11:44>。
+   org-dashboard回去查找最大标题下的:CATEGORY:属性，如果没有设置，默认使用标题来表示。
 [org-dashbard.el][273]
 
 Take care
@@ -5752,6 +5766,8 @@ Equity: the real value of your property.
 ```
 
 涡无法自发产生和消亡，正如钱无法自发产生和消亡,它总是从哪里产生，又消失到另外一个地方(This is the rule of economy). 
+既然是市场，就应该有涨有跌。
+
 
 ```
 

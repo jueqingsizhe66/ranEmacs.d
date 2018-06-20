@@ -9,21 +9,6 @@
 ** methodology
 ** results and analysis
 **  conclusion [%]
-*** 学习 [#B] [ ] hel                                  :CANCELLED:紧急重要:
-- State "学习"       from "工作"       [2017-09-18 周一 14:30]
-- State "工作"       from "BUG"        [2017-09-18 周一 14:14]
-- State "BUG"        from "KNOWNCAUSE" [2017-09-18 周一 14:13]
-- State "KNOWNCAUSE" from "FIXED"      [2017-09-18 周一 14:13]
-- State "FIXED"      from "PENDING"    [2017-09-18 周一 14:13]
-- State "PENDING"    from "TODO"       [2017-09-18 周一 14:13]
-- State "TODO"       from "DONE"       [2017-09-18 周一 14:13]
-- State "DONE"       from "ABORT"      [2017-09-18 周一 14:13]
-- State "ABORT"      from "DONE"       [2017-09-18 周一 14:13]
-- State "DONE"       from "ABORT"      [2017-09-18 周一 14:13]
-
-
-
-[[tag1]]
 ** tomato time
 番茄时间的本质，是充当时间度量。
 用来表示今天一天的工作，用了几个番茄时间，明天能否多工作一个番茄时间来减少无意义的消磨。

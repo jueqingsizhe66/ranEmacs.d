@@ -1426,3 +1426,6 @@ e.g. Sunday, September 17, 2000."
 (setq global-page-break-lines-mode t)
 
 (require 'org-listcruncher)
+
+;(setq org-mru-clock-how-many 100)
+(setq org-mru-clock-completing-read #'ivy-completing-read)

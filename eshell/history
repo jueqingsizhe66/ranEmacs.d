@@ -24,3 +24,5 @@ ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal not Salary
+ledger -f test.ledger bal

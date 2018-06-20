@@ -44,21 +44,6 @@ CLOSED: [2017-12-11 周一 19:56]
 - State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
    - 
 Added: [2015-05-03 Sun 19:17]
-** DOING TestTodo                                                      :@Test:
-- State "DOING"      from "TODO"         [2017-10-08 周日 03:19]
-*** CANCELED [#A] little [100%]                                           :funnny:
-CLOSED: [2017-10-08 周日 03:18]
-- State "CANCELED"   from "DOING"         [2017-10-08 周日 03:18]
-- State "DOING"      from "DONE"          [2017-10-08 周日 03:18]
-- State "DONE"       from "TODO"         [2017-10-08 周日 03:18]
-- State "TODO"       from "DONE"       [2017-09-27 周三 16:51]
-- State "DONE"       from "TODO"       [2017-09-27 周三 16:51]
- - [X] first
- - [X] second
- - [X] last
- - :q
-
-Added: [2015-05-03 Sun 21:38]
 ** DONE TODOS setting CFD calculation                                :@work:
 CLOSED: [2017-09-29 周五 23:41] SCHEDULED: <2017-09-13 周三>
  
@@ -66,7 +51,7 @@ CLOSED: [2017-09-29 周五 23:41] SCHEDULED: <2017-09-13 周三>
  Added: [2017-09-13 周三 01:22]
 *dfdf* 
  /slash/
-** TODOS read the elisp code                                         :@F708:
+** TODOS  read the elisp code                                        :@F708:
 
 Jumping to code
 
@@ -267,10 +252,12 @@ CLOSED: [2017-10-21 周六 00:51] DEADLINE: <2017-10-19 周四>
                     :LOGBOOK:
                     CLOCK: [2017-10-18 周三 14:39]--[2017-10-18 周三 14:40] =>  0:01
                     :END:
-** TODO [#B] 中科院赵明多轴角运动 <2017-10-18 周三 20:48>            :@work:
+** CANCELED [#B] 中科院赵明多轴角运动 <2017-10-18 周三 20:48>               :@work:
+CLOSED: [2018-06-20 周三 11:07]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "CANCELED"   from "TODO"          [2018-06-20 周三 11:07]
                     :LOGBOOK:
                     CLOCK: [2017-10-18 周三 20:49]--[2017-10-18 周三 20:49] =>  0:00
                     :END:
@@ -927,10 +914,12 @@ CLOSED: [2017-12-11 周一 19:54]
                     :LOGBOOK:
                     CLOCK: [2017-12-08 周五 08:46]--[2017-12-09 周六 22:03] => 37:17
                     :END:
-** TODO [#B] attengding xilei wedding <2018-01-01 周一 16:59>   :不紧急重要:
+** DONE [#B] attengding xilei wedding <2018-01-01 周一 16:59>      :不紧急重要:
+CLOSED: [2018-06-20 周三 11:06]
                     :PROPERTIES:
                     :Effort: 12:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-06-20 周三 11:06]
                     :LOGBOOK:
                     CLOCK: [2018-01-01 周一 16:59]--[2018-01-01 周一 17:00] =>  0:01
                     :END:
@@ -980,10 +969,12 @@ take care!
 http://www.rupeng.com/Activities/59.shtml
 
 20:00--23:00
-** TODO [#B] java rupeng Improve <2018-01-30 周二 15:20>             :@F708:
+** DONE Todo [#B] java rupeng Improve <2018-01-30 周二 15:20>      :java:@F708:
+CLOSED: [2018-06-20 周三 11:06]
                     :PROPERTIES:
                     :Effort: 6:00
                     :END:
+                    - State "DONE"       from              [2018-06-20 周三 11:06]
                     :LOGBOOK:
                     CLOCK: [2018-01-30 周二 15:21]--[2018-01-30 周二 15:21] =>  0:00
                     :END:
@@ -1006,11 +997,11 @@ CLOSED: [2018-04-09 周一 20:28] DEADLINE: <2018-02-14 周三> SCHEDULED: <2018
                     :END:
                     - State "DONE"       from "TODO"          [2018-04-09 周一 20:28]
                     :LOGBOOK:
+                    CLOCK: [2018-06-20 周三 11:05]--[2018-06-20 周三 11:05] =>  0:00
                     CLOCK: [2018-02-04 周日 11:43]--[2018-02-04 周日 11:44] =>  0:01
                     :END:
                     
                     
-so
 
 
 ** DONE [#B] Capture the Class name in project folder <2018-02-14 周三 12:11> :@Home:
@@ -1033,11 +1024,12 @@ CLOSED: [2018-02-14 周三 18:27]
                     #+BEGIN_SRC sh
                       G:\JavaBookmarks\hutool>ag "public\sclass\s\w*"
                     #+END_SRC
-** TODO [#B] python matplot练习 <2018-03-01 周四 22:04>        :@NCEPU:学术:
-SCHEDULED: <2018-03-01 周四>
+** CANCELED [#B] python matplot练习 <2018-03-01 周四 22:04>           :@NCEPU:学术:
+CLOSED: [2018-06-20 周三 11:13] SCHEDULED: <2018-03-01 周四>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "CANCELED"   from "TODO"          [2018-06-20 周三 11:13]
                     :LOGBOOK:
                     CLOCK: [2018-03-01 周四 22:05]--[2018-03-01 周四 22:05] =>  0:00
                     :END:
@@ -1120,6 +1112,7 @@ DEADLINE: <2018-05-29 周二>
                     :Effort: 0:30
                     :END:
                     :LOGBOOK:
+                    CLOCK: [2018-06-20 周三 11:28]--[2018-06-20 周三 11:48] =>  0:20
                     CLOCK: [2018-05-16 周三 17:08]--[2018-05-16 周三 17:09] =>  0:01
                     :END:
                     
@@ -1187,7 +1180,7 @@ SCHEDULED: <2018-06-15 周五>
                     :Effort: 16:00
                     :END:
                     :LOGBOOK:
-                    CLOCK: [2018-06-12 周二 20:53]
+                    CLOCK: [2018-06-12 周二 20:53]--[2018-06-20 周三 11:02] => 182:09
                     :END:
                     
                     
@@ -1204,6 +1197,22 @@ B计划
 2：00左右入住东营休息
 5:00起来，出发早，早餐自理
 7:30左右到蓬莱码头，购票等船上岛
+** TODO [#A] 写完英文初稿 <2018-06-20 周三 10:54>    [0%]                :学术:
+DEADLINE: <2018-06-24 周日>
+                    :PROPERTIES:
+                    :Effort: 4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-06-20 周三 11:49]--[2018-06-20 周三 11:51] =>  0:02
+                    CLOCK: [2018-06-20 周三 10:55]--[2018-06-20 周三 10:58] =>  0:03
+                    :END:
+                    
+1. [ ] 方法部分
 
+2. [ ] 结果处理部分
 
+3. [ ] 结论部分
 
+4. [ ] 引言部分
+
+5. [ ] 摘要部分

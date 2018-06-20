@@ -31,7 +31,7 @@
     Liabilities:花呗huabei
 
 2018-06-19 火车票报销收入
-    Assets:Savings:建行7998  RMB 2160
+    Assets:Savings:建行7889  RMB 2160
     Income:SalaryNcepu
 
 2018-06-19 劳务费
@@ -49,3 +49,17 @@
 2018-06-19 买荔枝
     Expenses:Fruits  RMB 12.5
     Assets:Savings:支付宝Alipay
+2018-06-20 转账
+    Assets:Savings:建行1593  RMB 1700
+    Assets:Savings:建行7889
+
+2018-06-20 存入股市
+    Assets:Stokes  RMB 1700
+    Assets:Savings:建行1593
+
+2018-06-20 劳务费
+    Assets:Savings:支付宝Alipay  RMB 200
+    Income:SalaryKang
+2018-06-20 购买cfhj股票
+    Assets:Stokes  RMB 1476
+    Assets:Savings:建行1593

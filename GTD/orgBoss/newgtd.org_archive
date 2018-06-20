@@ -22,3 +22,31 @@ That's your gtd
 |-------------------+----------+-------|
 |                   | Total:   | 101.2 |
 #+TBLFM: @>$3=vsum(@2..@-1)   
+
+* DONE [#B] Capture the Class name in project folder <2018-02-14 周三 12:11> :@Home:
+CLOSED: [2018-02-14 周三 18:27]
+:PROPERTIES:
+:ARCHIVE_TIME: 2018-06-20 周三 11:23
+:ARCHIVE_FILE: ~/.emacs.d/GTD/orgBoss/newgtd.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: newgtd
+:ARCHIVE_TODO: DONE
+:END:
+- State "DONE"       from "TODO"          [2018-02-14 周三 18:27]
+                    :PROPERTIES:
+:
+
+                    :Effort: 1:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-02-14 周三 17:48]--[2018-02-14 周三 17:48] =>  0:00
+                    CLOCK: [2018-02-14 周三 12:29]--[2018-02-14 周三 17:48] =>  5:19
+                    CLOCK: [2018-02-14 周三 12:12]--[2018-02-14 周三 12:28] =>  0:16
+                    :END:
+                    
+           ag支持正则表达式https://segmentfault.com/a/1190000011328038
+
+
+                    #+BEGIN_SRC sh
+                      G:\JavaBookmarks\hutool>ag "public\sclass\s\w*"
+                    #+END_SRC
