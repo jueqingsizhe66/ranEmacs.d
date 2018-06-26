@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("reproductive-research-and-software-development-methods-for-management-tasks.org"
+(("test.ledger"
+ (filename . "~/.emacs.d/test.ledger")
+ (front-context-string . "2018-06-18 海鲜烧烤\n")
+ (rear-context-string . "lities:花呗huabei\n")
+ (position . 346))
+("reproductive-research-and-software-development-methods-for-management-tasks.org"
  (filename . "~/.emacs.d/GTD/orgBoss/reproductive-research-and-software-development-methods-for-management-tasks.org")
  (front-context-string . "data science we ")
  (rear-context-string . "resentation. In ")
@@ -40,9 +45,9 @@
  (position . 499))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B] 市政交")
- (rear-context-string . "way  | bought |\n")
- (position . 45181))
+ (front-context-string . ";; http://ul.io/")
+ (rear-context-string . "，可以从定性角度先进性观察)\n\n")
+ (position . 49774))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

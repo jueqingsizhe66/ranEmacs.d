@@ -277,6 +277,27 @@ Captured %<%Y-%m-%d %H:%M>
             "* %?\n%(my/org-capture-code-snippet \"%F\")")        
          ))
 
+;;; http://www.howardism.org/Technical/Emacs/capturing-content.html
+;;; copy item to the clock capture item
+;;; 这种方式会弹出一个buffer框，等待你`C-c C-c` 才会输入到destination clock file
+;;; 这种方式可以在你需要修改的前提下
+(add-to-list 'org-capture-templates
+             `("B" "Item to Current Clocked Task" item
+               (clock)
+               "%i%?" :empty-lines 1))
+;; 立即输入到对应的destination clock file head  :immediate-finish t的作用
+(add-to-list 'org-capture-templates
+             `("E" "Contents to Current Clocked Task" plain
+               (clock)
+               "%i" :immediate-finish t :empty-lines 1))
+
+;;; 有时候甚至你还需要偷懒 ，不想敲入`C-c c B or E` 于是你使用
+(defun region-to-clocked-task (start end)
+  "Copies the selected text to the currently clocked in org-mode task."
+  (interactive "r")
+  (org-capture-string (buffer-substring-no-properties start end) "E"))  ;;; take care it will call the org-capture-template E
+
+(global-set-key (kbd "<f9>") 'region-to-clocked-task)
 
 ;; http://ul.io/nb/2018/04/30/better-code-snippets-with-org-capture/ 
 (defun my/org-capture-get-src-block-string (major-mode)
@@ -1390,7 +1411,6 @@ e.g. Sunday, September 17, 2000."
 
 (require 'ox-org)
 
-;; write code comments in org-mode with poporg
 
 (use-package poporg
       :bind (("C-c t" . poporg-dwim)))

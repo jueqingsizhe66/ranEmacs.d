@@ -103,6 +103,20 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 
+(global-set-key (kbd "M-o") 'ace-window)
+(defvar aw-dispatch-alist
+  '((?x aw-delete-window "Delete Window")
+	(?m aw-swap-window "Swap Windows")
+	(?M aw-move-window "Move Window")
+	(?j aw-switch-buffer-in-window "Select Buffer")
+	(?n aw-flip-window)
+	(?u aw-switch-buffer-other-window "Switch Buffer Other Window")
+	(?c aw-split-window-fair "Split Fair Window")
+	(?v aw-split-window-vert "Split Vert Window")
+	(?b aw-split-window-horz "Split Horz Window")
+	(?o delete-other-windows "Delete Other Windows")
+	(?? aw-show-dispatch-help))
+  "List of actions for `aw-dispatch-default'.")
 
 ;; for firefox
 (setq browse-url-firefox-program
@@ -158,3 +172,14 @@
         (insert "\n\nOperating system: " (mu--os-version) "\n")
         (insert "Window system: " (getenv "XDG_SESSION_TYPE") "\n")
         (insert "Desktop environment: " (mu--gnome-version))))))
+
+
+;;; moody
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package moody                                ;;
+;;   :config                                         ;;
+;;   (setq x-underline-at-descent-line t)            ;;
+;;   (moody-replace-mode-line-buffer-identification) ;;
+;;   (moody-replace-vc-mode))                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

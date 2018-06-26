@@ -26,3 +26,19 @@ ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal not Salary
 ledger -f test.ledger bal
+ledger -f test.ledger bal
+ledger -f test.ledger bal 建行
+ledger -f test.ledger bal 7889
+ledger -f test.ledger bal 7889
+ledger -f test.ledger bal 建行
+ledger -f test.ledger bal Savings
+ledger -f test.ledger bal Savings
+ledger -f test.ledger bal Savings
+ledger -f test.ledger bal Utilities
+ledger -f test.ledger bal stokes
+ledger -f test.ledger bal 
+ledger -f test.ledger bal 
+ledger -f test.ledger bal 
+ledger -f test.ledger bal 
+ledger -f test.ledger reg savings
+ledger -f test.ledger bal savings

@@ -486,6 +486,13 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 [ivy][27]是一个类似[emacs helm][28]的东西，可以方便查找buffer和file，
 
+快速显示当前文件中包含函数的方法，`C-s (defun`等,思路都是类似的，只不过好点的可能就是把函数名也提取出来。
+[Ivy][27], a generic completion mechanism for Emacs.
+[ Counsel ][316], a collection of Ivy-enhanced versions of common Emacs commands.i
+[ Swiper ][317], an Ivy-enhanced alternative to isearch.
+
+
+
 ```
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -507,6 +514,7 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 ```
+
 
 *注意可以继续使用C-s搜索上一次内容，如果你执行C-s C-w那么就会搜索当前光标下的单词，如果C-r则是反向执行*
 
@@ -3651,6 +3659,12 @@ easy for  life!!!
 
 最重要是学习方法: 去看看每个snippets文件夹下的脚本，然后写在对应的拓展文件下，敲上去试试即可!
 
+
+为此，还使用了[ivy-yasnippet][318],针对一定的mode来产生对应的snippets，很方便啊！<2018-06-24 21:06>
+
+为了好玩，也安装了[Counsel-world-clock][319], 但是觉得不太好用！
+
+
 ----------
 
 
@@ -4355,6 +4369,8 @@ git config --global credential.helper store
 ```
 
 如果不是在代码注释快，敲`C-c t`,会提示`Nothing to edit`.
+
+想起她来了!<2018-06-26 20:27>
 
 ### 108. emacs mode(伟大的question mark?)
 
@@ -5807,6 +5823,7 @@ Salary就是你的equlity源泉，不断的增长，代表你在不断挣钱。
 
 ```
 ![ledger2][313]
+
 #### ledger黑色命令
 
 
@@ -5841,10 +5858,205 @@ clj-refractor.el版本不通过. org-babel的sh语言从ob-sh切换到ob-shell�
 报错了，使用d进入，然后不断d，直到结束，可以看到执行的list 表达式, q退出
 ```
 
-<hr align="center" width="40%"/>
-<hr align="center" width="40%"/>
-<hr align="center" width="40%"/>
-<hr/>
+### 126. ace-window
+
+原来我的emacs系统中已经安装了[ace-windwos][314]
+
+他的好处类似于[ace-jump-mode][315], 可以在多窗口中出现可以跳转到的[a-z] [0-9] [A-Z]
+
+``` elisp
+
+"C-c SPC" ==> ace-jump-word-mode
+
+enter first character of a word, select the highlighted key to move to it.
+
+"C-u C-c SPC" ==> ace-jump-char-mode
+
+enter a character for query, select the highlighted key to move to it.
+
+"C-u C-u C-c SPC" ==> ace-jump-line-mode
+
+each non-empty line will be marked, select the highlighted key to move to it.
+
+```
+
+
+当只有两个frames时候，`M-x ace-window`默认和`C-x o`的命令一致
+
+默认的ace-window相关命令
+
+You can also start by calling ace-window and then decide to switch the action to delete or swap etc. By default the bindings are:
+也就是，默认是j,对应的select buffer. 而摁下去`M-x ace-window`之后，会显示处窗口标号，还可以选择是否删除的命令,比如x,然后选择对应的frame 号。
+
+
+    x - delete window
+    m - swap windows
+    M - move window
+    j - select buffer
+    n - select the previous window
+    u - select buffer in the other window
+    c - split window fairly, either vertically or horizontally
+    v - split window vertically
+    b - split window horizontally
+    o - maximize current window
+    ? - show these command bindings
+
+```
+(global-set-key (kbd "M-o") 'ace-window)
+```
+默认设置`M-O` 为窗口交换快捷键
+<2018-06-26 20:28> 今天有使用它了
+
+
+还有一些有趣的命令
+```
+　上一章我们看到有些命令加了C-x 4这个前缀，这一类命令都是用来操作多窗口的。
+
+　　C-x 4 b bufname (switch-to-buffer-other-window) 在另一个窗口打开缓冲。
+　　C-x 4 C-o bufname (display-buffer) 在另一个窗口打开缓冲，但不选中那个窗口。
+　　C-x 4 f filename (find-file-other-window) 在另一个窗口打开文件。
+　　C-x 4 d directory (dired-other-window) 在另一个窗口打开文件夹。
+　　C-x 4 m (mail-other-window) 在另一个窗口写邮件。
+　　C-x 4 r filename (find-file-read-only-other-window) 在另一个窗口以只读方式打开文件。
+
+C-x 0 (delete-window) 来关闭当前窗口
+C-x 1 (delete-other-windows) 关闭其它所有窗口
+如果想连窗口打开的缓冲一并关掉使用C-x 4 0 (kill-buffer-and-window)。
+
+C-x + 所有窗口等宽  C-x ^提高当前光标所在窗口
+```
+
+现在`C-x 4 b` 成为我比较经常用的。
+
+
+### 127. helpful 系统
+
+[helpful][320] 更好的显示帮助信息，并且相当全面。
+
+### 128. 很有趣的suggest.el
+
+通过打开特定的suggest窗口`M-x suggest`，然后
+输入
+1. Input信息
+
+2. Output信息
+
+3. 在suggestion 中敲`C-c C-c`,获得你要的结果
+
+一些测试对
+
+a. string
+``` org
+;; Inputs (one per line):
+"foo bar"
+
+;; Desired output:
+"Foo Bar"
+
+;; Suggestions:
+
+```
+b. list
+``` org
+;; Inputs (one per line):
+(list 'a 'b 'c 'd)
+'c
+
+;; Desired output:
+2
+
+;; Suggestions:
+```
+c. file
+``` org
+;; Inputs (one per line):
+"/foo/bar/baz.txt"
+
+;; Desired output:
+"baz.txt"
+
+;; Suggestions:
+```
+d. list also
+``` org
+;; Inputs (one per line):
+'(1 2 3 4 5)
+
+;; Desired output:
+15
+
+;; Suggestions:
+```
+
+e. list3
+``` org
+;; Inputs (one per line):
+'(a b c)
+
+;; Desired output:
+'c
+
+;; Suggestions:
+```
+
+f. list4
+``` org
+;; Inputs (one per line):
+'(a b c d)
+
+;; Desired output:
+'a
+
+;; Suggestions:
+```
+
+### 129. clock your work, clock your life
+
+Life need to reduce, to increase the importance of your life.(minus may be harder than plus)
+
+[Abrams][322] do the post about the [capturing data][321] from Reading code, shell, web browser etc into your clocking file header
+without changing buffer into the clock title(select, copy, change buffer, move cursor, paste,  而是 <C-f9> immediate paste the
+data into it)
+
+
+``` org
+;;; http://www.howardism.org/Technical/Emacs/capturing-content.html
+;;; copy item to the clock capture item
+;;; 这种方式会弹出一个buffer框，等待你`C-c C-c` 才会输入到destination clock file
+;;; 这种方式可以在你需要修改的前提下
+(add-to-list 'org-capture-templates
+             `("B" "Item to Current Clocked Task" item
+               (clock)
+               "%i%?" :empty-lines 1))
+;; 立即输入到对应的destination clock file head  :immediate-finish t的作用
+(add-to-list 'org-capture-templates
+             `("E" "Contents to Current Clocked Task" plain
+               (clock)
+               "%i" :immediate-finish t :empty-lines 1))
+
+;;; 有时候甚至你还需要偷懒 ，不想敲入`C-c c B or E` 于是你使用
+(defun region-to-clocked-task (start end)
+  "Copies the selected text to the currently clocked in org-mode task."
+  (interactive "r")
+  (org-capture-string (buffer-substring-no-properties start end) "E")); 注意这边是调用capture-template的E模板，不需要输入内容
+  
+  ;; 其实本质上org-capture使用org-capture-string 函数通过第三个参数指定模板！ 比如T  比如c等等
+
+(global-set-key (kbd "C-<F9>") 'region-to-clocked-task)
+
+
+
+```
+
+很方便，由此进入了clock one task, do it -----investigate something, compare something, record something into your engineering notebook
+(*.org) (M-x region-to-clocked-task)(绑定到f9,注意(kbd "<f9>") 而不是F9否则无效, finish something----clock out the current task, then clock another task!!
+
+至于org-tree-slide的f9只是在激活tree-slide模式才生效
+
+----------
+
+----------
+
 
 
 
@@ -6160,3 +6372,12 @@ clj-refractor.el版本不通过. org-babel的sh语言从ob-sh切换到ob-shell�
 [311]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/right.png
 [312]: https://www.jianshu.com/p/f509c9a9cac0
 [313]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/ledger2.png
+[314]: https://github.com/abo-abo/ace-window
+[315]: https://github.com/winterTTr/ace-jump-mode
+[316]: https://github.com/ericdanan/counsel-projectile
+[317]: https://github.com/abo-abo/swiper
+[318]: https://github.com/mkcms/ivy-yasnippet
+[319]: https://github.com/kchenphy/counsel-world-clock
+[320]: https://github.com/Wilfred/helpful
+[321]: http://www.howardism.org/Technical/Emacs/capturing-content.html
+[322]: http://irreal.org/blog/?p=7298
