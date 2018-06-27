@@ -5200,24 +5200,7 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
        (while
            (search-forward-regexp org-table-any-line-regexp nil t)
          (org-table-align)
-         (org-table-recalculate 'iterate)
-         (goto-char (org-table-end)))
-       (buffer-string))
-   #+END_SRC
-
-   #+RESULTS: lobPostAlignTables
-   #+begin_example
-   |  5 | 22222 |
-   |  0 |       |
-   | 12 |    45 |
-   |----+-------|
-   | 17 |       |
-   ,#+TBLFM:@>$1=vsum(@1..@-1)
-
-   |  1 | 22222 |
-   |  0 |       |
-   | 12 |    45 |
-   #+end_example
+         (org-table-recalculate 'iterate) (goto-char (org-table-end))) (buffer-string)) #+END_SRC #+RESULTS: lobPostAlignTables #+begin_example |  5 | 22222 | |  0 |       | | 12 |    45 | |----+-------| | 17 |       | ,#+TBLFM:@>$1=vsum(@1..@-1) |  1 | 22222 | |  0 |       | | 12 |    45 | #+end_example
 
 
 ```
@@ -6088,7 +6071,7 @@ data into it)
 4. 当前子Heading(c   大写C去除子Heading)   map图当前heading下方显示
 5. 不属与当前heading范畴的其他heading([Friend or jump heading][324] ) map图当前heading平行显示
 
-
+``` org
 
 | Key        | Command                            | Description                                                |
 |------------+------------------------------------+------------------------------------------------------------|
@@ -6118,6 +6101,8 @@ data into it)
 | v          | org-brain-visualize                | Choose and visualize a different entry                     |
 | r          | org-brain-visualize-random         | Visualize one of your entries at random.                   |
 | R          | org-brain-visualize-wander         | Visualize at random, in a set interval. R again to cancel. |
+
+```
 
 ####   going up to broader topics or drilling down into more specifics
 

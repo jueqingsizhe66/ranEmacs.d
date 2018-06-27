@@ -49,3 +49,17 @@ In ~PostAlignTables - Align and calculate multiple tables of an ~:
 #+END_SRC
 * 
 %![Error: (void-function which-function)]
+* 代码标注 
+file:c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/newgtd.org::1085
+In ~提交双滑移初稿 <2018-05-15 周二 11:56 +1w>~:
+#+BEGIN_SRC org
+** 伟大的awk
+
+
+#+BEGIN_SRC awk :dir M://fluentYaw30//
+
+  ls *.cas|awk -F"-"  '{print a[NR]=substr($5,0,length($5)-8);}END{for(i=1;i<=NR-1;i++) print a[i+1]-a[i];}
+                                                              '
+
+#+END_SRC
+#+END_SRC

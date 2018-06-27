@@ -51,8 +51,10 @@ CLOSED: [2017-09-29 周五 23:41] SCHEDULED: <2017-09-13 周三>
  Added: [2017-09-13 周三 01:22]
 *dfdf* 
  /slash/
-** TODOS  read the elisp code                                        :@F708:
+** CANCELED TODOS  read the elisp code                                      :@F708:
+CLOSED: [2018-06-27 周三 15:35]
 
+- State "CANCELED"   from              [2018-06-27 周三 15:35]
 Jumping to code
 
 (define-key emacs-lisp-mode-map (kbd "C-c .") 'find-function-at-point)
@@ -67,10 +69,11 @@ CLOSED: [2017-12-11 周一 19:56]
 :END:
 - State "DONE"       from "TODO"          [2017-12-11 周一 19:56]
 Captured 2017-09-27 22:52
-** TODO GetThingsDone
+** 学习 GetThingsDone
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "学习"       from "TODO"          [2018-06-27 周三 15:35]
                     Captured 2017-09-28 11:21
 *** 1. you capture the ideas or todos(capture--refile--consider,organize---review---do)
 *** 2. you capture your todos with time, so you have time pocket(momentum); However
@@ -88,14 +91,12 @@ CLOSED: [2017-09-29 周五 23:40] SCHEDULED: <2017-09-28 周四>
                     :END:
                     - State "DONE"       from "TODO"       [2017-09-29 周五 23:40]
                     Captured 2017-09-28 13:52
-** PENDING [#B] Read papers related to yaw preparing for the thesis proposal :学术:@work::紧急重要:
-SCHEDULED: <2017-10-06 周五 +1w>
+** DONE [#B] Read papers related to yaw preparing for the thesis proposal :学术:@work::紧急重要:
+SCHEDULED: <2017-10-13 周五 +1w>
 :PROPERTIES:
-:LAST_REPEAT: [2018-04-20 周五 00:04]
+:LAST_REPEAT: [2018-06-27 周三 15:06]
 :END:
 
-- State "DONE"       from "TODO"          [2018-04-20 周五 00:04]
-- State "TODO"       from "TODO"          [2017-10-08 周日 02:33]
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
@@ -217,9 +218,11 @@ CLOSED: [2017-10-26 周四 10:30] DEADLINE: <2017-10-21 周六>
                     :END:
                     - State "DONE"       from "TODO"          [2017-10-26 周四 10:30]
                     Captured 2017-10-13 21:20
-** TODO [#B] turbsim reading   [2017-10-15 周日 00:58-02:08]
+** CANCELED [#B] turbsim reading   [2017-10-15 周日 00:58-02:08]
+CLOSED: [2018-06-27 周三 15:36]
 :PROPERTIES:
 :END:
+- State "CANCELED"   from "TODO"          [2018-06-27 周三 15:36]
                                                          :@work:
                     :PROPERTIES:
                     :Effort: 4:00
@@ -232,10 +235,11 @@ CLOSED: [2017-10-26 周四 10:30] DEADLINE: <2017-10-21 周六>
                     Captured 2017-10-15 00:29
                     
 刘文为主
-** TODO [#B] 干好一件事 <2017-10-16 周一 23:48>                      :@work:
+** 学习 [#B] 干好一件事 <2017-10-16 周一 23:48>                      :@work:
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
+                    - State "学习"       from "TODO"          [2018-06-27 周三 15:36]
                     :LOGBOOK:
                     CLOCK: [2017-10-16 周一 23:48]--[2017-10-16 周一 23:49] =>  0:01
                     :END:
@@ -313,11 +317,12 @@ CLOSED: [2017-12-11 周一 19:57] SCHEDULED: <2017-10-26 周四>
 23. [ ] 
 24. [ ] 
 
-** TODO [#B] Somethings need to be done by yourself <2017-10-21 周六 21:12> :@work:
+** 学习 [#B] Somethings need to be done by yourself <2017-10-21 周六 21:12> :@work:
 DEADLINE: <2019-10-21 周一>
                     :PROPERTIES:
                     :Effort: 1:00
                     :END:
+                    - State "学习"       from "TODO"          [2018-06-27 周三 15:36]
                     :LOGBOOK:
                     CLOCK: [2017-10-21 周六 21:13]--[2017-10-21 周六 21:14] =>  0:01
                     :END:
@@ -438,9 +443,11 @@ CLOSED: [2017-10-30 周一 20:04] DEADLINE: <2017-11-05 周日>
 6.仍需单独开题的同学，联系导师开题之后，自己交材料即可。
 7.其他年级资格审查表，不在我这里，需要由同组实验室同学通知去F617领取。*  Tasks
 
-** TODO Most important thing that you have to do                :学术:紧急重要:
+** 学习 Most important thing that you have to do             :学术:紧急重要:
 
-** TODO Second most important thing that you have to do
+- State "学习"       from "TODO"          [2018-06-27 周三 15:36]
+** 学习 Second most important thing that you have to do
+- State "学习"       from "TODO"          [2018-06-27 周三 15:37]
 You can also take notes underneath each heading, like this
 ** DONE 花销(expense)
 CLOSED: [2017-12-11 周一 19:56]
@@ -599,14 +606,6 @@ CLOSED: [2017-12-22 周五 10:39]
                     
 http://help.spaceclaim.com/2017.0.0/zh-Hans/
 花点时间思考
-** TODO [#A] 实验(本科生创新实验) <2017-11-09 周四 17:53>               :@work:
-SCHEDULED: <2017-11-14 周二>
-                    :PROPERTIES:
-                    :Effort: 1:00
-                    :END:
-                    - State "TODO"       from "TODO"          [2017-12-22 周五 10:39]
-                    - State "TODO"       from "DONE"          [2017-12-22 周五 10:38]
-                    - State "DONE"       from "TODO"          [2017-12-22 周五 10:38]
 ** DONE [#B] 机舱偏航绘制 <2017-11-15 周三 10:44>                       :@work:
 CLOSED: [2017-12-11 周一 19:56]
                     :PROPERTIES:
@@ -803,7 +802,7 @@ CLOSED: [2018-01-09 周二 17:48] SCHEDULED: <2017-12-01 周五> DEADLINE: <2018
                     
 提前准备好
 
-** TODO [#B] Learning English with Mrs xiao xinran <2017-12-05 周二 14:11 +3d> :@home:
+** TODO [#B] Learning English with Mrs xiao xinran <2017-12-05 周二 14:11 +1m> :@home:
 SCHEDULED: <2017-12-05 周二>
                     :PROPERTIES:
                     :Effort: 1:00
@@ -1084,33 +1083,25 @@ CLOSED: [2018-06-20 周三 11:13] SCHEDULED: <2018-03-01 周四>
 
 ta
 
-** 伟大的awk
+** DONE 伟大的awk
+CLOSED: [2018-06-27 周三 15:33]
 
 
+- State "DONE"       from              [2018-06-27 周三 15:33]
 #+BEGIN_SRC awk :dir M://fluentYaw30//
 
   ls *.cas|awk -F"-"  '{print a[NR]=substr($5,0,length($5)-8);}END{for(i=1;i<=NR-1;i++) print a[i+1]-a[i];}
                                                               '
 
 #+END_SRC
-** TODO [#B] 提交双滑移初稿 <2018-05-15 周二 11:56 +1w>                  :学术:
-DEADLINE: <2018-05-18 周五> SCHEDULED: <2018-05-15 周二>
-                    :PROPERTIES:
-                    :Effort: 8:00
-                    :END:
-                    :LOGBOOK:
-                    CLOCK: [2018-05-15 周二 11:56]--[2018-05-15 周二 11:57] =>  0:01
-                    :END:
-                    
-                   
-务必完成[fn:1] 
-LINK:info:org:Top
-#<<df>>
-** TODO [#B] 查阅energy投稿信息 <2018-05-16 周三 17:08 +1w>              :学术:
-DEADLINE: <2018-05-29 周二>
+** DONE [#B] 查阅energy投稿信息 <2018-05-23 周三 17:08>                  :学术:
+CLOSED: [2018-06-27 周三 15:24] DEADLINE: <2018-05-29 周二>
                     :PROPERTIES:
                     :Effort: 0:30
+                    :LAST_REPEAT: [2018-06-27 周三 15:24]
                     :END:
+                    - State "DONE"       from "PENDING"    [2018-06-27 周三 15:24]
+                    - State "DONE"       from "TODO"          [2018-06-27 周三 15:24]
                     :LOGBOOK:
                     CLOCK: [2018-06-20 周三 11:28]--[2018-06-20 周三 11:48] =>  0:20
                     CLOCK: [2018-05-16 周三 17:08]--[2018-05-16 周三 17:09] =>  0:01
@@ -1118,9 +1109,11 @@ DEADLINE: <2018-05-29 周二>
                     
                     <2018-05-23 00:14> 已经处于under review状态【稿件处于审阅当中，直接分配到指定的审稿人】
                     
+                    
 
                     
 <2018-05-14 17:10> 投出去
+<2018-06-21 15:24> sorry be rejected
 ** TODO [#B] 关注一下华能清能院的博士后工作站 <2018-05-18 周五 15:10 +1w> :学术:
                     :PROPERTIES:
                     :Effort: 0:30
@@ -1174,11 +1167,12 @@ http://www.hnceri.com/n4/n12/index.html
   | 水          |          |            |         | bag    |               |         |         |        |
   | 工作        |          | teamview   |         |        |               |         |         |        |
   | 星期一      |          | teamview   |         | bag    |               |         | subway  | bought |
-** TODO [#B] Tourist <2018-06-12 周二 20:53>                          :芝麻:
-SCHEDULED: <2018-06-15 周五>
+** DONE [#B] Tourist <2018-06-12 周二 20:53>                             :芝麻:
+CLOSED: [2018-06-27 周三 15:07] SCHEDULED: <2018-06-15 周五>
                     :PROPERTIES:
                     :Effort: 16:00
                     :END:
+                    - State "DONE"       from "TODO"          [2018-06-27 周三 15:07]
                     :LOGBOOK:
                     CLOCK: [2018-06-12 周二 20:53]--[2018-06-20 周三 11:02] => 182:09
                     :END:
@@ -1197,45 +1191,33 @@ B计划
 2：00左右入住东营休息
 5:00起来，出发早，早餐自理
 7:30左右到蓬莱码头，购票等船上岛
-** TODO [#A] 写完英文初稿 <2018-06-20 周三 10:54>    [0%]             :学术:
-DEADLINE: <2018-06-24 周日>
+
+** TODO [#A] DU300丝线实验(本科生创新实验) <2017-11-09 周四 17:53>      :@work:
+SCHEDULED: <2017-11-14 周二>
                     :PROPERTIES:
-                    :Effort:   4:00
+                    :Effort: 1:00
+                    :END:
+                    - State "TODO"       from "TODO"          [2017-12-22 周五 10:39]
+                    - State "TODO"       from "DONE"          [2017-12-22 周五 10:38]
+                    - State "DONE"       from "TODO"          [2017-12-22 周五 10:38]
+                      LIC算法改进
+** TODO [#A] 基于多轴角运动的气动特性和流场分析大论文 <2018-06-25 周一 16:19>[0/4] :学术:
+DEADLINE: <2019-04-15 周一>
+                    :PROPERTIES:
+                    :Effort: 16:00
                     :END:
                     :LOGBOOK:
-                    CLOCK: [2018-06-23 周六 22:53]--[2018-06-24 周日 01:02] =>  2:09
-                    CLOCK: [2018-06-23 周六 14:33]--[2018-06-23 周六 22:53] =>  8:20
-                    CLOCK: [2018-06-20 周三 11:49]--[2018-06-20 周三 11:51] =>  0:02
-                    CLOCK: [2018-06-20 周三 10:55]--[2018-06-20 周三 10:58] =>  0:03
+                    CLOCK: [2018-06-25 周一 16:19]--[2018-06-26 周二 12:02] => 19:43
                     :END:
                     
-                    Good writing starts with a plan(I need to finish it)
+                    
+1. [ ] 绪论
+2. [ ] 第二章 方法介绍
+3. [ ] 第三章 NREL PhaseVI 小风力机
+4. [ ] 第四章 NREL 5MW 大风力机的
+5. [ ] 第五章 结论
 
-1. [ ] 方法部分
-
-2. [ ] 结果处理部分
-
-3. [ ] 结论部分
-
-4. [ ] 引言部分
-
-   1. [ ] 看过的有用文章 
-    
-
- 
-5. [ ] 摘要部分
-
-Experimental process    Section of Paper
-What did I do in a nutshell?    Abstract
-What is the problem?    Introduction
-How did I solve the problem?    Materials and Methods
-What did I find out?    Results
-What does it mean?  Discussion
-Who helped me out?  Acknowledgments (optional)
-Whose work did I refer to? Literature Cited
-Extra Information   Appendices (optional)
-
-** TODO [#B] 修改静态偏航工况的文章，再投稿 <2018-06-23 周六 11:47>   :学术:
+*** TODO [#A] 修改静态偏航工况的文章，再投稿 <2018-06-23 周六 11:47>  [/] :学术:
 SCHEDULED: <2018-07-01 周日>
                     :PROPERTIES:
                     :Effort: 4:00
@@ -1246,7 +1228,8 @@ SCHEDULED: <2018-07-01 周日>
                     
                     
                     务必完成关系到你的毕业
-** TODO [#A] CFX静态偏航补充计算 <2018-06-25 周一 08:30>      [0%]       :学术:
+
+**** TODO [#A] CFX静态偏航补充计算 <2018-06-25 周一 08:30>      [0%]   :学术:
 DEADLINE: <2018-07-01 周日>
                     :PROPERTIES:
                     :Effort: 4:00
@@ -1271,7 +1254,49 @@ DEADLINE: <2018-07-01 周日>
    1. [X] 绘制网格(采用原先的inlet计算有问题
    2. [X] 设置计算(定常+非定常(5deg 72*2))
    3. [ ] 处理结果
-** TODO [#A] Fluent双滑移的验证case[0%] <2018-06-25 周一 08:36>          :学术:
+
+*** TODO [#A] 双滑移英文初稿 <2018-06-20 周三 10:54>    [0/2]           :学术:
+DEADLINE: <2018-06-24 周日>
+                    :PROPERTIES:
+                    :Effort:   4:00
+                    :END:
+                    :LOGBOOK:
+                    CLOCK: [2018-06-23 周六 22:53]--[2018-06-24 周日 01:02] =>  2:09
+                    CLOCK: [2018-06-23 周六 14:33]--[2018-06-23 周六 22:53] =>  8:20
+                    CLOCK: [2018-06-20 周三 11:49]--[2018-06-20 周三 11:51] =>  0:02
+                    CLOCK: [2018-06-20 周三 10:55]--[2018-06-20 周三 10:58] =>  0:03
+                    :END:
+                    
+                    Good writing starts with a plan(I need to finish it)
+
+1. [ ] 方法部分
+
+2. [ ] 结果处理部分
+
+3. [ ] 结论部分
+
+4. [ ] 引言部分
+
+   1. [ ] 看过的有用文章 
+    
+ 
+5. [ ] 摘要部分
+
+| Experimental process         | Section of Paper           |
+|------------------------------+----------------------------|
+| What did I do in a nutshell? | Abstract                   |
+| What is the problem?         | Introduction               |
+| How did I solve the problem? | Materials and Methods      |
+| What did I find out?         | Results                    |
+| What does it mean?           | Discussion                 |
+| Who helped me out?           | Acknowledgments (optional) |
+| Whose work did I refer to?   | Literature Cited           |
+| Extra Information            | Appendices (optional)      |
+|                              |                            |
+
+
+   
+**** TODO [#A] Fluent双滑移的验证case <2018-06-25 周一 08:36>     [0%] :学术:
 DEADLINE: <2018-07-14 周六>
                     :PROPERTIES:
                     :Effort: 14:00
@@ -1283,23 +1308,31 @@ DEADLINE: <2018-07-14 周六>
                     CLOCK: [2018-06-25 周一 08:36]--[2018-06-25 周一 08:37] =>  0:01
                     :END:
                     
-  1. [-] 不同网格的验证，选择一种湍流模型
+Numeca激活完毕
+  1. [-] 不同网格的验证，选择一种湍流模型(无论Fluent还是CFX定常计算的结果流场不对)
      1. [X] k-omega SST(2)
      2. [X] k-kl SST(3)
-     3. [X] transition SST
-     4. [ ] T-SST
+     3. [X] transition SST(4)
   2. [-] 选择完网格之后，再进行湍流模型的验证
      1. [ ] 250w
      2. [X] 370w
      3. [ ] 490w
-  3. [ ] 验证完湍流模型之后，为了表示非定常时间步选择的合理性，再考虑使用不同时间步                  
-** TODO [#A] 双滑移的数据处理[0%] <2018-06-25 周一 08:38>                :学术:
+  3. [ ] 验证完湍流模型之后，为了表示非定常时间步选择的合理性，再考虑使用不同时间步
+     1. [ ] 1deg
+     2. [ ] 2.5deg
+     3. [ ] 5deg
+
+**** TODO [#A] 双滑移的数据处理 <2018-06-25 周一 08:38>        [0%]    :学术:
 DEADLINE: <2018-07-03 周二>
                     :PROPERTIES:
-                    :Effort: 2:00
+                    :Effort: 4:00
                     :END:
                     :LOGBOOK:
-                    CLOCK: [2018-06-26 周二 21:28]
+                    CLOCK: [2018-06-28 周四 20:10]--[2018-06-28 周四 20:21] =>  0:11
+                    CLOCK: [2018-06-28 周四 10:11]--[2018-06-28 周四 14:32] =>  4:21
+                    CLOCK: [2018-06-27 周三 20:52]--[2018-06-27 周三 23:32] =>  2:40
+                    CLOCK: [2018-06-27 周三 15:40]--[2018-06-27 周三 20:52] =>  5:12
+                    CLOCK: [2018-06-27 周三 15:22]--[2018-06-27 周三 15:38] =>  0:16
                     CLOCK: [2018-06-26 周二 21:23]--[2018-06-26 周二 21:27] =>  0:04
                     CLOCK: [2018-06-26 周二 12:02]--[2018-06-26 周二 13:15] =>  1:13
                     CLOCK: [2018-06-25 周一 16:05]--[2018-06-25 周一 16:19] =>  0:14
@@ -1318,7 +1351,7 @@ DEADLINE: <2018-07-03 周二>
 5. [ ] 静态和动态截面云图对比(如果分析出来 气动性能有差别，可以从定性角度先进性观察)
 
 
-** TODO [#A] NREL 5MW fluent静态和动态偏航计算 <2018-06-25 周一 08:42>   :学术:
+*** TODO [#A] NREL 5MW fluent静态和动态偏航计算 <2018-06-25 周一 08:42>[/] :学术:
 DEADLINE: <2018-08-01 周三>
                     :PROPERTIES:
                     :Effort: 16:00
@@ -1326,7 +1359,15 @@ DEADLINE: <2018-08-01 周三>
                     :LOGBOOK:
                     CLOCK: [2018-06-25 周一 08:43]--[2018-06-25 周一 08:53] =>  0:10
                     :END:
-                    
+****  NREL5MW网格绘制
+***** 风轮部分(Numeca)
+:LOGBOOK:
+CLOCK: [2018-06-28 周四 20:21]
+:END:
+***** 偏航部分(圆柱)
+***** 偏摆部分(圆球)
+***** 外场部分(矩形域)
+****  静态计算部分      [%]             
 1. [ ] 静态工况下的网格验证(定常)
    1. [ ] 250w
    2. [ ] 377w
@@ -1348,6 +1389,7 @@ DEADLINE: <2018-08-01 周三>
    6. [ ] 25°
    7. [ ] 30°
    8. [ ] -30°(所以边界条件得设置好)
+****  动态计算部分 [%]
 5. [ ] 偏航过程的计算
    1. [ ] 动态偏航
    2. [ ] 动态偏摆
@@ -1365,21 +1407,28 @@ DEADLINE: <2018-08-01 周三>
    1. [ ] 几何数据
    2. [ ] 模拟数据
    3. [ ] 计算结果
+****  其他计算 [%]
 10. [ ] Free vortex method and BEM (不同偏航角下)
     1. [ ] Free vortex method
     2. [ ] BEM
-** TODO [#B] 基于多轴角运动的气动特性和流场分析大论文 <2018-06-25 周一 16:19> :学术:
-DEADLINE: <2019-04-15 周一>
+**** NREL 5MW偏航+变桨实验 [/]
+***** 偏航实验 [%]
+
+***** 变桨实验 [%]
+
+***** PIV实验[%]
+
+*** TODO [#A] 工程热物理初稿 <2018-06-27 周三 15:38>        [60%]       :学术:
+DEADLINE: <2018-07-04 周三>
                     :PROPERTIES:
-                    :Effort: 16:00
+                    :Effort: 10:00
                     :END:
                     :LOGBOOK:
-                    CLOCK: [2018-06-25 周一 16:19]--[2018-06-26 周二 12:02] => 19:43
+                    CLOCK: [2018-06-27 周三 15:38]--[2018-06-27 周三 15:40] =>  0:02
                     :END:
                     
-                    
-1. [ ] 绪论
-2. [ ] 第二章 方法介绍
-3. [ ] 第三章 NREL PhaseVI 小风力机
-4. [ ] 第四章 NREL 5MW 大风力机的
-5. [ ] 第五章 结论
+1. [X] 引言
+2. [X] 方法
+3. [ ] 结果和分析
+4. [ ] 结论
+5. [X] 摘要
