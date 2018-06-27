@@ -44,10 +44,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . ";; http://ul.io/")
- (rear-context-string . "，可以从定性角度先进性观察)\n\n")
- (position . 49774))
+ (filename . "~/.emacs.d/GTD/org_Brain/da.org")
+ (front-context-string . "* \nsdgsdf\n\n* fsd")
+ (rear-context-string)
+ (position . 9))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

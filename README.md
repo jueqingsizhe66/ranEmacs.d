@@ -801,6 +801,8 @@ add the `zencoding-mode` @setup-html-mode.el.
 看了Sachac的[baby-steps-org-todo][49],我明白了relate(关系到底是什么),也就是todo大致应该group into project,
 all the subtitle should be connected or related to the project, that's todo!
 
+[Stein org-mode workflow][327]
+
 ```
 * Project ABC
 ** TODO A task related to Project ABC(The first most important thing)
@@ -1082,7 +1084,7 @@ seen from [jianshu][74]
 
 ### 44. literal programming and gtd
 
-1. [literal programming][76]
+1. [literal programming Howard Abrams][76]
 2. [how-to-use-Org-Babal-for-R][77]
 3. [uncle glassman][78]  
 4. [How I use Emacs and Org-mode to implement GTD][14]  very important for using org-mode in emacs!
@@ -1090,6 +1092,7 @@ seen from [jianshu][74]
 6. [Remember Mode Tutorial][85] 早先使用remember mode,现在基本上替换为org capture即可
 7. [Your Mind is for having ideas, not holding them---David Allen][83]  Use org-mode to hold it
 8. [A Brief Introduction to Literate Analytics With org-Babel][258]
+9. [Liiterate programming with org-more--Fregory J Stein][326]
 
 a. Capture(collect what has your attention)
 ```
@@ -3007,6 +3010,7 @@ If you don't expect having to do it again,don't try to optimise it.
 通过C-c C-o打开链接(open)<2018-05-22 23:42>再次学习
 通过C-c C-l (打开保存的链接, 很强大，打开各种链接）
 通过C-c l(org-insert-link 然后可以通过C-c C-l使用 可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
+  <2018-06-27 09:49> 一直想着实现vimwiki click <CR> to create file links
 ```
 
 
@@ -5409,6 +5413,27 @@ Then put this line into my .orgConf.el:
 
 This makes the code block get-named-text a predefined and callable code block that can be seen and called in any Org file.
 
+####  Ob-async异步执行
+
+保证代码执行过程继续使用emacs
+
+Code execution in Emacs is synchronous by default, meaning that you will be locked out of editing while the code is being run.
+    Fortunately, the fantastic ob-async package allows for asynchronous code execution with the :async arg,
+meaning that you can still use Emacs while the code snippet is run in the backgroundThere are some small 
+things you give up by using the ob-async package.
+    In particular, the :session functionality is absent in general, which otherwise allows variables and function definitions to persist across blocks of code. . Once the package is installed, simply include :async t to the source code block and run it again:
+
+``` org
+#+BEGIN_SRC bash :dir /user@127.0.0.1: :async t
+  pwd
+  echo $USER
+  hostname -I
+#+END_SRC
+
+#+RESULTS:
+: 0ddf0124c8fcb26d53fdba83dc4773f6
+```
+
 ### 118. org-sidebar
 
 类似于[org-listcrunch][278], [org-sidebar][289]也处于刚刚起步阶段，所以可能还有bug，但效果还不错，于是把它添加进来。
@@ -6053,6 +6078,94 @@ data into it)
 
 至于org-tree-slide的f9只是在激活tree-slide模式才生效
 
+### 130. Visualize your wiki into your brain
+
+[org-brain][323] 金字塔原理的一个实现, 类似于[org-wiki][324], [vimwiki][325]的wiki系统，主要体现的思想是parent-children.
+
+1. 当前heading(每一个heading都可以进行v，`M-x org-brain-visualize entry-your-select`, 也叫作active Thought(当前思考的内容)
+2. 当前Heading的同级Heading(brother and sister..) ; map图的右边显示active thought(或者当前heading)的siblings图
+3. 当前父Heading(p   大写P去除父heading）  map图当前heading上方显示
+4. 当前子Heading(c   大写C去除子Heading)   map图当前heading下方显示
+5. 不属与当前heading范畴的其他heading([Friend or jump heading][324] ) map图当前heading平行显示
+
+
+
+| Key        | Command                            | Description                                                |
+|------------+------------------------------------+------------------------------------------------------------|
+| m          | org-brain-visualize-mind-map       | Toggle between normal and mind-map visualization.          |
+| j or TAB   | forward-button                     | Goto next link                                             |
+| k or S-TAB | backward-button                    | Goto previous link                                         |
+|------------+------------------------------------+------------------------------------------------------------|
+| b          | org-brain-visualize-back           | Like the back button in a web browser.                     |
+| h or *     | org-brain-new-child                | Add a new child headline to entry                          |
+| c          | org-brain-add-child                | Add an existing entry, or a new file, as a child           |
+| C          | org-brain-remove-child             | Remove one the entry’s child relations                     |
+| p          | org-brain-add-parent               | Add an existing entry, or a new file, as a parent          |
+| P          | org-brain-remove-parent            | Remove one of the entry’s parent relations                 |
+| f          | org-brain-add-friendship           | Add an existing entry, or a new file, as a friend          |
+| F          | org-brain-remove-friendship        | Remove one of the entry’s friend relations                 |
+|------------+------------------------------------+------------------------------------------------------------|
+| n          | org-brain-pin                      | Toggle if the entry is pinned or not                       |
+| t          | org-brain-set-title                | Change the title of the entry.                             |
+| T          | org-brain-set-tags                 | Change the tags of the entry.                              |
+| d          | org-brain-delete-entry             | Choose an entry to delete.                                 |
+| l          | org-brain-visualize-add-resource   | Add a new resource link in entry                           |
+| C-y        | org-brain-visualize-paste-resource | Add a new resource link from clipboard                     |
+| a          | org-brain-visualize-attach         | Run org-attach on entry (headline entries only)            |
+| A          | org-brain-archive                  | Archive the entry (headline entries only)                  |
+| o          | org-brain-goto-current             | Open current entry for editing                             |
+| O          | org-brain-goto                     | Choose and edit one of your org-brain entries              |
+| v          | org-brain-visualize                | Choose and visualize a different entry                     |
+| r          | org-brain-visualize-random         | Visualize one of your entries at random.                   |
+| R          | org-brain-visualize-wander         | Visualize at random, in a set interval. R again to cancel. |
+
+####   going up to broader topics or drilling down into more specifics
+
+Remember there are no hard and fast rules here. It’s your Brain. 
+However, there are some basic information architecture principles that should be followed 
+when organizing information sets. 
+1. Things that are a part of a group should all be together below as Child Thoughts. 
+2. Things that define a group should be above as Parent Thoughts. 
+3. Things that are related but not part of the main group should be linked on the left as Jump Thoughts.
+
+For instance, say you are building a Brain of your hobbies. “Hobbies” is the Parent Thought because it defines the group. 
+Your actual hobbies, being subcategories of this concept, would then be displayed below as Child Thoughts.
+
+You can continue to build a basic hierarchy of information with the Parent and Child relationships in TheBrain.  
+For instance, one of your hobbies might be camping. Now you can drag and drop your favorite Web sites on camping gear, camp sites, national parks etc.
+
+
+#### 配置
+
+``` elisp
+(use-package org-brain :ensure t
+  :init
+  (setq org-brain-path "~/.emacs.d/gtd/org_Brain")
+  ;; For Evil users
+  (with-eval-after-load 'evil
+    (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
+  :config
+  (setq org-id-track-globally t)
+  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
+  (push '("b" "Brain" plain (function org-brain-goto-end)
+          "* %i%?" :empty-lines 1)
+        org-capture-templates)
+  (setq org-brain-visualize-default-choices 'all)
+  (setq org-brain-title-max-length 12))
+
+```
+
+遍历所有org-brain-path目录下的所有文件，以及文件内的heading，当做你的org-heading的Entry.
+可以说很方便！
+
+You can edit org-brain entries directly from org-mode.
+You can use the default org-mode outline structure to define parent/children relationships,
+but keep in mind that only entries with an ID property will be considered as entries to org-brain;
+use `M-x org-id-get-create` to create an ID property to the current org-mode headline.
+Another alternative is to use `M-x org-brain-refile` which will create the ids for you.
+
+Think up, think down! Think others! All depends on you! Just free yourself
+
 ----------
 
 ----------
@@ -6381,3 +6494,8 @@ data into it)
 [320]: https://github.com/Wilfred/helpful
 [321]: http://www.howardism.org/Technical/Emacs/capturing-content.html
 [322]: http://irreal.org/blog/?p=7298
+[323]: https://github.com/Kungsgeten/org-brain
+[324]: https://github.com/caiorss/org-wiki
+[325]: https://github.com/vimwiki/vimwiki
+[326]: http://cachestocaches.com/2018/6/org-literate-programming/
+[327]: http://cachestocaches.com/2016/9/my-workflow-org-agenda/

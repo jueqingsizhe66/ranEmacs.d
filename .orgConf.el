@@ -1449,3 +1449,43 @@ e.g. Sunday, September 17, 2000."
 
 ;(setq org-mru-clock-how-many 100)
 (setq org-mru-clock-completing-read #'ivy-completing-read)
+
+
+;;; org-brain
+
+(use-package org-brain :ensure t
+  :init
+  (setq org-brain-path "~/.emacs.d/gtd/org_Brain")
+  ;; For Evil users
+  (with-eval-after-load 'evil
+    (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
+  :config
+  (setq org-id-track-globally t)
+  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
+  (push '("b" "Brain" plain (function org-brain-goto-end)
+          "* %i%?" :empty-lines 1)
+        org-capture-templates)
+  (setq org-brain-visualize-default-choices 'all)
+  (setq org-brain-title-max-length 12))
+
+;;; org-wiki
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (let ((url "https://raw.githubusercontent.com/caiorss/org-wiki/master/org-wiki.el"))      ;;
+;;       (with-current-buffer (url-retrieve-synchronously url)                               ;;
+;;     (goto-char (point-min))                                                               ;;
+;;     (re-search-forward "^$")                                                              ;;
+;;     (delete-region (point) (point-min))                                                   ;;
+;;     (kill-whole-line)                                                                     ;;
+;;     (package-install-from-buffer)))                                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (require 'org-wiki)                                                ;;
+;; ;; (setq org-wiki-location "e:/projects/org-wiki-test.emacs")      ;;
+;;                                                                    ;;
+;; (setq org-wiki-location-list                                       ;;
+;;       '(                                                           ;;
+;;         "~/.emacs.d/GTD/orgwiki"    ;; First wiki is the default.  ;;
+;;         ))                                                         ;;
+;; (setq org-wiki-server-port "8085") ;; 8000 - default value         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

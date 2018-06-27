@@ -22,6 +22,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/org_Brain/" (23346 63628 0 0) "nil.org" "hi.org" "father.org" "da.org" "../" "./")
+
  ("c:/Users/yzl/AppData/Roaming/.emacs.d/" (23343 45557 0 0) "url/" "themes/" "testMind3.org" "testMind3.html" "testLisp.lisp" "test.ledger" "test.el" "srecode-map.el" "snippets/" "slidetemplate.org" "slidetemplate.html" "server/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "ncepublack.jpg" "ncepu.jpg" "init.el" "ido.last" "hello-graphviz.png" "GTD/" "eshell/" "emms/" "elpa/" "elisp-tutor.el" "diary" "customizations/" "custom.el" "cider-history" "CalendarDairy/" "bookmarks" "backups/" "auto-save-list/" "ag.exe" "abbrev_defs" ".smex-items" ".session" ".recentf" ".python-environments/" ".orgConf.el" ".org-id-locations" ".mc-lists.el" ".gitmodules" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/" (23336 31009 0 0) "writingtest.org" "thesis-proposal.org" "testXmind2.org" "testXmind.org" "testSlide.org_archive" "testSlide.org" "testSlide.html" "testMind3.org" "test.org" "staticYaw.org.gpg" "staticYaw.org" "spacemacs.jpg" "science.org" "reveal.js/" "presentation.org" "phd1.org.pgp" "phd1.org" "package/" "orgTemplate/" "orgBoss/" "myPlan/" "index.org" "hello.org.gpg" "hello.org" "email.org" "dynamicyaw.org" "Dissertation.org" "clojureBackup.org" "bakupJournal/" ".notes.org" "../" "./")
