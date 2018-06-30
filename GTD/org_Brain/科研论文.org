@@ -1,0 +1,12 @@
+#+BRAIN_FRIENDS: 调研
+
+#+BRAIN_PARENTS: 一个idea
+
+#+BRAIN_CHILDREN: 背景 introduction 方法 结果 参考文献 Appendence
+
+:RESOURCES:
+:END:
+
+
+
+* Active idea

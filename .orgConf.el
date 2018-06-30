@@ -1460,6 +1460,7 @@ e.g. Sunday, September 17, 2000."
   (with-eval-after-load 'evil
     (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
   :config
+  (setq org-brain-file-entries-use-title nil)
   (setq org-id-track-globally t)
   (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
   (push '("b" "Brain" plain (function org-brain-goto-end)
@@ -1468,6 +1469,30 @@ e.g. Sunday, September 17, 2000."
   (setq org-brain-visualize-default-choices 'all)
   (setq org-brain-title-max-length 12))
 
+;; ascii-art-to-unicode is useful if you want org-brain-visualize-mode to look a bit nicer. After installing, add the following to your init-file:
+;; http://www.gnuvola.org/software/aa2u/
+
+(defun aa2u-buffer ()                                    ;;
+  (aa2u (point-min) (point-max)))                        ;;
+                                                         ;;
+(add-hook 'org-brain-after-visualize-hook #'aa2u-buffer) ;;
+
+
+;; Here’s a command which uses org-cliplink to add a link from the clipboard as an org-brain resource. It guesses the description from the URL title. Here I’ve bound it to L in org-brain-visualize.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defun org-brain-cliplink-resource ()                                             ;;
+;;   "Add a URL from the clipboard as an org-brain resource.                         ;;
+;; Suggest the URL title as a description for resource."                             ;;
+;;   (interactive)                                                                   ;;
+;;   (let ((url (org-cliplink-clipboard-content)))                                   ;;
+;;     (org-brain-add-resource                                                       ;;
+;;      url                                                                          ;;
+;;      (org-cliplink-retrieve-title-synchronously url)                              ;;
+;;      t)))                                                                         ;;
+;;                                                                                   ;;
+;; (define-key org-brain-visualize-mode-map (kbd "L") #'org-brain-cliplink-resource) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; org-wiki
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (let ((url "https://raw.githubusercontent.com/caiorss/org-wiki/master/org-wiki.el"))      ;;

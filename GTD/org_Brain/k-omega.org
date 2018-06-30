@@ -1,0 +1,4 @@
+#+BRAIN_CHILDREN: SST T-SST
+
+#+BRAIN_PARENTS: 湍流模型
+

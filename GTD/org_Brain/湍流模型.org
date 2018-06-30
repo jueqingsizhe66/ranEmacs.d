@@ -1,0 +1,4 @@
+#+BRAIN_CHILDREN: k-omega SA K-e ReynoldStress
+
+#+BRAIN_PARENTS: 方法
+

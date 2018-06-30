@@ -1,0 +1,23 @@
+#+BRAIN_PARENTS: 科研论文
+
+:RESOURCES:
+- [[org][helo]]
+:END:
+#+BRAIN_CHILDREN: f309bc47-b6a1-457e-91f4-d7532df13137 湍流模型 网格无关性 URANS时间步无关性
+
+
+
+* 横向节点
+:PROPERTIES:
+:ID:       fcd4e90c-a7ca-4bcd-a262-c2f2479799dc
+:END:
+* CFX
+:PROPERTIES:
+:ID:       d5ec7b96-6457-41b7-99ee-da862427170b
+:END:
+
+* FLUENT
+:PROPERTIES:
+:ID:       f309bc47-b6a1-457e-91f4-d7532df13137
+:BRAIN_PARENTS: 方法
+:END:

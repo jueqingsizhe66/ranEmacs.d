@@ -1,0 +1,49 @@
+#+BRAIN_PARENTS: 科研论文
+
+
+* 中尺度
+:PROPERTIES:
+:ID:       5e50693e-352f-4b69-a406-124efaf0b3a2
+:END:
+
+** 风场模拟
+:PROPERTIES:
+:ID:       9ce98d14-4e17-4d35-9e0c-4486fa64e642
+:END:
+
+*** Openfoam
+:PROPERTIES:
+:ID:       037f9175-6fa6-4f6c-a61d-f1fe1296d56d
+:END:
+** 风资源
+:PROPERTIES:
+:ID:       d716c932-5359-41df-9805-c7603e87e74f
+:END:
+** 可研报告
+:PROPERTIES:
+:ID:       f6db4bb3-e84c-4a6d-bbb8-ebbc83f318fe
+:END:
+* lidar
+:PROPERTIES:
+:ID:       fd652cf7-3106-4815-a916-34983561c290
+:END:
+* 闪电
+:PROPERTIES:
+:ID:       fdbacd74-979f-4324-a5f9-f8180ce5319f
+:END:
+* 噪声
+:PROPERTIES:
+:ID:       dc6d07e9-cca9-4dea-b5d8-88ea6c64dfe8
+:END:
+* 气弹
+:PROPERTIES:
+:ID:       99fd01f9-76a5-4878-a06a-f4b09e801a03
+:END:
+* 尾迹
+:PROPERTIES:
+:ID:       6b8a5e03-ef76-41c1-990f-a2598a5e3033
+:END:
+* 气动
+:PROPERTIES:
+:ID:       49820ca3-c343-4c50-a890-6d2ba964f5f5
+:END:

@@ -1,0 +1,47 @@
+#+BRAIN_PARENTS: 科研论文
+
+:RESOURCES:
+:END:
+
+* 细节
+:PROPERTIES:
+:ID:       39f32d5b-4360-435c-9f1d-ca7f9f8a76a0
+:END:
+
+** 风轮前后的诱导因子分布
+:PROPERTIES:
+:ID:       e6861a30-7ee5-49a4-b2a7-009dc0d49aed
+:END:
+** 风轮远尾迹流场
+:PROPERTIES:
+:ID:       8d2b960d-04c0-4680-a061-456bdd2dc4dc
+:END:
+** 风轮近尾迹流场
+:PROPERTIES:
+:ID:       0d605e9e-129f-4c35-a038-2cb7985d9404
+:END:
+** 翼型截面流场分布
+:PROPERTIES:
+:ID:       f5af2209-14b6-42d3-83bc-93f21f537bf4
+:END:
+** 翼型截面Cp分布，Cn Ct等
+:PROPERTIES:
+:ID:       aae205d7-f603-427b-bd60-8ec44040165d
+:END:
+* 总体性能分布
+:PROPERTIES:
+:ID:       61dea709-6001-4843-a01c-963f32bcfdb7
+:END:
+
+** 叶片表面极限流线
+:PROPERTIES:
+:ID:       880e2e3c-bf80-4fb4-a6e6-046eb7498756
+:END:
+** 发电量
+:PROPERTIES:
+:ID:       bf220dfe-0fa6-470b-8f10-6ed12ad84f22
+:END:
+** 功率和扭矩分布
+:PROPERTIES:
+:ID:       7766fea8-7006-4631-b976-7c0e6c5b8349
+:END:

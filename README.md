@@ -540,7 +540,8 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 在查看org-agenda 的时候可以使用`v`来选择你要看的日、月、年视图等
 
-有趣的org帮助 `LINK:info:org:Top`.(鼠标左键点击或者C-c C-o)
+有趣的org帮助 `LINK:info:org:Top`.(鼠标左键点击或者C-c C-o) 
+在该模式可以学到很多有趣的knowledge,比如你可以使用`g`进行跳转, 其实就是emacs强大的info系统，`C-h i`或者`F1 i`
 
 
 为了显示clean的org文档，在.org.conf添加了
@@ -4985,6 +4986,7 @@ In ~foo~:
 [page break line][276]
 
 how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word文档就是分页符了
+<2018-06-30 15:10> 在Emacs帮助文档经常出现！
 
 [emacs line ending][277]
 
@@ -6104,6 +6106,10 @@ data into it)
 
 ```
 
+`h` or `*`是指在当前active idea文件下产生一个headline，而`c`会产生一个新文件，并让其成为当前文件的下级文件
+
+也就是说你得思考下一个你要添加的entry是否足够充当*文件级别*还是只是一个*headline*级别即可
+
 ####   going up to broader topics or drilling down into more specifics
 
 Remember there are no hard and fast rules here. It’s your Brain. 
@@ -6140,6 +6146,17 @@ For instance, one of your hobbies might be camping. Now you can drag and drop yo
 
 ```
 
+[ascii-art-to-unicode][328] is useful if you want org-brain-visualize-mode to look a bit nicer. After installing, add the following to your init-file:
+
+``` org
+(defun aa2u-buffer ()
+  (aa2u (point-min) (point-max)))
+
+(add-hook 'org-brain-after-visualize-hook #'aa2u-buffer)
+
+
+``` 
+
 遍历所有org-brain-path目录下的所有文件，以及文件内的heading，当做你的org-heading的Entry.
 可以说很方便！
 
@@ -6150,6 +6167,37 @@ use `M-x org-id-get-create` to create an ID property to the current org-mode hea
 Another alternative is to use `M-x org-brain-refile` which will create the ids for you.
 
 Think up, think down! Think others! All depends on you! Just free yourself
+
+#### good workflow
+
+org-brain只是针对当前entry的前后关系的展示（an visualization for current entry）
+
+1. 打开一个idea的文件，然后`org-brain-visualization`,紧接着你就可以不断的`c` and `p` 甚至`f`(注意active idea一般指的是字体颜色为白色，有链接的entry都不是当前的entry!)
+2. 当然现在的方式是你可以使用`C-c c` 选择`b`,然后可以针对某个具有id的entry添加内容(但不带id，也就是无法成为entry),
+   为了可以成为id `M-x org-id`即可!
+3. 当你在org-brain窗口下，你可以使用`v`跳转到你要的entry下，并进行相应的编辑(也就是变成白色字体),最简单的方式是摁下`<Cr>`键即可，
+   一般只会显示两层关系(更多关系得不断点进去才会显示出来)！
+
+其实org-brain的工作流程和emacs强大的info系统有点类似(`C-h i ` or `F1 h` or `LINK:info`), in the info system, you can use `LINK:info:org`
+to find the help files for the org-mode.(刚才提到的org-brain的`V`类似于info系统的`g` 都可以用来快速定位entry的作用)
+
+####  ascill to unicode make org-brain better visualization
+
+[ ascii-art-to-unicode ][329] 快速转换把字符组成图变成线图形式，配合上vim的[ DrawIt ][330]会挺不错的.
+
+然后在配合上[sketch.vim][331]的sketch功能，这个功能将会更加完美
+
+
+```
++--------------+                               
+| hello world  |                               
++--------------+                               
+
+```
+
+`M-x aa2u`之后，会直接把横线连城直线, 进一步可以学习[sketch的用法][332]
+
+
 
 ----------
 
@@ -6484,3 +6532,8 @@ Think up, think down! Think others! All depends on you! Just free yourself
 [325]: https://github.com/vimwiki/vimwiki
 [326]: http://cachestocaches.com/2018/6/org-literate-programming/
 [327]: http://cachestocaches.com/2016/9/my-workflow-org-agenda/
+[328]: http://www.gnuvola.org/software/aa2u/
+[329]: https://github.com/emacsmirror/ascii-art-to-unicode/blob/master/ascii-art-to-unicode.el
+[330]: https://github.com/vim-scripts/DrawIt
+[331]: https://github.com/vim-scripts/sketch.vim/blob/master/sketch.tut
+[332]: https://github.com/jueqingsizhe66/windowVimYe#26-sketch-and-drawit
