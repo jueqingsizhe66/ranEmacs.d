@@ -2,11 +2,329 @@
 
 #+BRAIN_PARENTS: 一个idea
 
-#+BRAIN_CHILDREN: 背景 introduction 方法 结果 参考文献 Appendence
+#+BRAIN_CHILDREN: 背景 方法 结果 参考文献 Appendence
 
 :RESOURCES:
 :END:
 
+
+
+* CiteSpace
+:PROPERTIES:
+:ID:       1c80bb86-4420-44d8-8eb7-00d1f4a5fea3
+:END:
+
+** c基本用途
+:PROPERTIES:
+:ID:       aa072e12-f218-4e34-8872-d03421a1cfae
+:END:
+:RESOURCES:
+:END:
+
+*** 核心文献( 重点科技论文分析)
+:PROPERTIES:
+:ID:       743b61b9-5fa7-4845-aaca-d42b444f1c86
+:END:
+
+重点科技论文分析
+
+1. 共现词频(term or keyword) 或共引文献(cited reference)
+2. Noun term type
+
+获得关键文献
+
+某某方面近10年10篇高词频或高引频问
+
+下
+*** 研究结构构成
+:PROPERTIES:
+:ID:       1bc68fd9-07da-47a8-b287-2e8f29f31dc7
+:END:
+
+1. Node Type: Term+keyword+category+citedReference 
+2. Term Type: Noun Phrase
+
+揭示研究结构构成
+
+根据研究聚类分析，从1000-2000年，某某资助项目主要分布于几十多个方面。
+*** 研究领域
+:PROPERTIES:
+:ID:       cfad0ff9-42bb-4499-a1c1-9cae56125868
+:END:
+
+
+1. Node Type 用分类(category)揭示 研究领域分布
+2. Term Type 选择None
+   
+根据学术专业词聚类，析出若干节点，表征研究领域、结构
+
+结论： 什么研究主要涉及十几个领域，其中重点领域为：。。。。
+*** 学科进展、发展态势分析
+:PROPERTIES:
+:ID:       0d2cedcb-2958-46d5-8d0c-5a8b3a401c13
+:END:
+1. 术语词组(noun phraces）
+2. 共引(现)词频(category、term、keyword 或Cited reference)
+
+构建分析网， 根据点群颜色、构成、高词频文献，分析得出研究进展，发展态势。
+
+研究进展: 从1977-1999年，什么进展， 从1999-2003 研究。。。
+发展态势: TImeline图  TimeZone图。用时区图(timeline,timezone)显示学科进展、发展态势， 分成几个阶段，第一阶段。。。
+
+*** 研究学科转折关键点分析
+:PROPERTIES:
+:ID:       6aeb6773-6db7-4913-80bd-e897dfb7f556
+:END:
+1. 术语词组(noun phrase）
+2. 共引(现)词频(category、term、keyword 或Cited reference)
+
+   图谱分析： 按中性度大于0.1(By Centrality), 分析出5个紫色节点，表征5个关键/转折 研究前沿
+
+*** 科技竞争力分析
+:PROPERTIES:
+:ID:       c5300639-0aa3-4015-a6cd-f27f8577b4ba
+:BRAIN_CHILDREN: b7c54b1d-7cd3-4251-a918-0f46a56d61eb
+:END:
+*** 国家分析
+:PROPERTIES:
+:ID:       b7c54b1d-7cd3-4251-a918-0f46a56d61eb
+:BRAIN_PARENTS: c5300639-0aa3-4015-a6cd-f27f8577b4ba
+:END:
+1. 术语noun phrase
+2. 共引(现)词频(Country)
+
+   获得研究国家、竞争国以及学科间关系
+研究分析得出：。。 美国、英国分别涉及2个前沿领域
+
+
+**** 研究机构分析
+:PROPERTIES:
+:ID:       7ae9db8e-2a1c-4653-b768-d8f59f64c1dd
+:END:
+1. 术语noun phrase
+2. 共引(现)词频(institution)
+
+中科院为高发文机构
+
+分析结论： 在前沿主题分布中，中科院机构侧重于。。研究，与澳大利亚的国家研究院等主题研究非常接近
+***** 研究水平分析
+:PROPERTIES:
+:ID:       022b7e7e-afab-4282-8d37-c3cec928f440
+:END:
+1. phrase(None)
+2. 年限设置
+3. 共引(现)词频( cited author)
+
+从分析网图谱1-2分析出近10呢喃 相关研究，无论第一人或第一时间或首创方法等方面，都没有这位引进人员
+
+***** 学术个人分析
+:PROPERTIES:
+:ID:       28e244c1-9bfa-45b2-a469-5a0e66f2bf0a
+:END:
+1. 术语noun phrase
+2. 共引(现)词频(author, cited author)
+   获得领军人员、合著者、竞争过对手以及合作关系
+
+   什么研究主研人员均是国外科研人员
+
+*** 核心期刊分析
+:PROPERTIES:
+:ID:       6e7e6845-fdba-40ef-8ee2-3b3f5073a2e6
+:END:
+
+1. None Term Type
+2. Cited Jounal共引期刊分析
+
+获得核心学科资源
+
+分析得出， 某某方面有6种高中性度文献资源
+*** 问题新兴前沿分析
+:PROPERTIES:
+:ID:       741c8465-e237-4066-9bca-d7971c6c3ce1
+:END:
+1. 突现词组(burst terms）
+2. 共引(现)词频(category、term、keyword 或Cited reference)
+
+从DCA混合分析网络揭示新兴前沿。
+按突现率(By burst)3.09指标，析出一个红色方节点，表征一个新型前沿。
+
+获得几个聚类，通过术语词组命名该前沿方向
+
+*** 问题前沿分析
+:PROPERTIES:
+:ID:       79aae561-1178-42d4-a726-740ef09cf55f
+:END:
+
+Research front: 一组突现的动态概念和潜在的研究问题
+1. 术语词组(noun phraces）
+2. 共引(现)词频(category、term、keyword 或Cited reference)
+
+进而分析研究前沿。
+
+获得几个聚类，通过术语词组命名该前沿方向
+** c颜色
+:PROPERTIES:
+:ID:       55f451b1-5fdc-4fa7-b416-bfde69599fc0
+:END:
+*** 紫色方圈节点
+:PROPERTIES:
+:ID:       b14709f2-f680-432b-a649-90a248fa1c17
+:END:
+转折点，最短路径处, 也叫做关键点
+https://wenku.baidu.com/view/3e71779fa45177232e60a255.html?pn=NaN
+Between centrality(中间中心性)
+** c基本概念
+:PROPERTIES:
+:ID:       1fe28922-fe79-42c4-955e-97eb7a48d765
+:END:
+*** 搜索
+:PROPERTIES:
+:ID:       ae10cd41-877b-4841-b2e4-1ce268a3ab34
+:END:
+
+term1 and term2 and term3 ...
+*** 常用缩写
+:PROPERTIES:
+:ID:       40b36ca6-f57f-40f5-9d3c-cab812416257
+:END:
+
+1. ACA (Author Co-Citation Analysis)
+2. DCA(Document Co-Citation Analysis)
+3. JCA(Journal Co-Citation Analysis)
+4. Co-Authors
+5. Co-terms(Burst
+*** 图谱节点标签
+:PROPERTIES:
+:ID:       0aee9299-908c-45c9-819e-648d0df57951
+:END:
+
+1. Term labelling: 方节点数、大小、标识词字体大小调谐
+2. Article labeling---圆节点数、大小、标识词字体大小调谐
+3. Cluster labeling-- 聚类标识词大小调谐
+*** 阈值调节
+:PROPERTIES:
+:ID:       f86583a1-b230-44c9-8aad-2f4ee8e05892
+:END:
+
+C: 被引频次
+CC: 共被引频次
+CCV: 共被引率(经验值:15,影响图中连线数量)
+*** 引文年环
+:PROPERTIES:
+:ID:       4c77ee64-3354-44bf-b877-993afd071e4b
+:END:
+
+引文越多，年环越大，引文颜色代表引文的年份
+*** 节点类型
+:PROPERTIES:
+:ID:       a6f942b5-96fb-4e31-a3b9-931f2a88e6f5
+:END:
+
+1. 发文节点类型
+   1. Author
+   2. Institution
+   3. Country
+   4. Term
+   5. Keyword
+   6. Source
+2. 引文节点类型
+   1. Category
+   2. Cited References(共引分析)
+   3. Cited author
+   4. Cited Journal
+   5. Paper
+   6. Granted
+*** 词类型
+:PROPERTIES:
+:ID:       0485b170-7927-455f-bf5c-a2ca0c9ecea1
+:END:
+
+
+**** 术语词组
+:PROPERTIES:
+:ID:       19793f2b-a376-4c3a-814f-338f34aa176f
+:END:
+
+名词词组：从引文文献(参考文献)题名或摘要中抽取
+**** none
+:PROPERTIES:
+:ID:       9c8080aa-3fbd-45f1-834c-50c1c1dd8137
+:END:
+**** 突现词(burst)
+:PROPERTIES:
+:ID:       b87796f1-0d2f-42e2-b8aa-d63e3dece13e
+:END:
+
+从Title,Abstract, Descriptors,Identifiors中提取突变词(burst terms),以识别学科新趋势、
+新方向、新领域、新主题
+* 境界
+:PROPERTIES:
+:ID:       0b832009-7b30-4458-8a58-29b9e4243369
+:END:
+    Writing a critique paper involves giving a response to a book, movie, work of art, etc.
+ But writing a critique is more than just saying that the text is "great" or "unsatisfactory".
+ These are responses, but they don't eliminate the subject for everyone. 
+    Therefore, in your critique papers, you have to explain how you arrived at your conclusions.
+ Let’s find it out on the example of writing a critical book review.
+ 
+    Writing a critique paper starts with a summary. Whether it is positive or negative, it should be, 
+first of all, fair. It means that by stating an argument in writing a book critique you have to back
+ it up with facts, references to the text, and your opinions. Writing critical book reviews also helps
+ you to go over your ideas and beliefs, and even change them.
+ 
+    You start writing a book critique from the beginning – the introduction.
+ In this part of your critique research paper, you get your readers acquainted with the author, his biography, 
+the book, which you are evaluating, and the circumstances, under which it has been written. At this point, 
+stating your main idea will be of great help for writing the critique, because you will put your thoughts together,
+ and make them go in the right direction.
+
+    Your critique paper writing must have a conclusion. In this part, don’t make new points.
+ Remind your readers about the strong and weak parts of the book. When writing a critical book review,
+ say whether the author achieved his goal and whether he was clear enough. Beware of simply responding
+ mechanically to the discussion questions or your critique papers can degenerate into a series of short,
+ disjointed responses. If you are writing a critique, it should be expressed as a consistent point of view.
+
+ How well for your writing ?
+
+* Sentence length
+:PROPERTIES:
+:ID:       3ebffb7f-821e-475d-ae6e-ea816b2caa2a
+:END:
+
+Write with clarity, objectivity, accuracy and brevity, presenting your scientific research in a way that is logical and understandable.
+1. clarity
+2. Objectivity
+3. accurary
+4. brevity
+5. logical
+6. understandable
+
+Nowadays, the average length of sentences in scientific writing is about 12 to 17 words.
+Again, look at the journal's Guide for Authors, but an ideal length for a manuscript is 25 to 40 pages, double spaced, including essential data only. Here are some general guidelines:
+
+Title: Short and informative
+Abstract: 1 paragraph (<250 words)
+Introduction: 1.5-2 pages
+Methods: 2-3 pages
+Results: 6-8 pages
+Discussion: 4-6 pages
+Conclusion: 1 paragraph
+Figures: 6-8 (one per page)
+Tables: 1-3 (one per page)
+References: 20-50 papers (2-4 pages)
+
+
+* FourSteps
+:PROPERTIES:
+:ID:       cf41d399-aa6c-4028-9dad-af7e29fafc7c
+:END:
+Four steps to preparing your first draft
+Here is the process I use:
+
+1. Think about the topic you want to present, for some days or weeks.
+2. Make figures and tables.
+3. Then write as quickly as possible, as if thinking out loud. Get everything down, ignoring spelling, grammar, style and troublesome words.
+4. Correct and rewrite only when the whole text is on paper.
 
 
 * Active idea

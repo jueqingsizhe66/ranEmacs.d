@@ -6063,7 +6063,29 @@ data into it)
 
 至于org-tree-slide的f9只是在激活tree-slide模式才生效
 
-### 130. Visualize your wiki into your brain
+马克吐温说
+```
+    The secret of getting ahead is getting started. The secret of getting started is breaking your complex overhelming tasks 
+    into small nageable tasks, and then start on the first one
+```
+
+马克吐温又说
+
+```
+    The secret of getting ahead is getting started. The secret of getting started is breaking your complex overhelming tasks 
+    into small nageable tasks, and then start on the first one. The secret of getting started the first one  is just clocking
+    on it!
+```
+----------
+
+
+                                                   Go ahead, the young!
+
+----------
+
+
+
+### 130. Vinsualize your wiki into your brain
 
 [org-brain][323] 金字塔原理的一个实现, 类似于[org-wiki][324], [vimwiki][325]的wiki系统，主要体现的思想是parent-children.
 
@@ -6072,6 +6094,9 @@ data into it)
 3. 当前父Heading(p   大写P去除父heading）  map图当前heading上方显示
 4. 当前子Heading(c   大写C去除子Heading)   map图当前heading下方显示
 5. 不属与当前heading范畴的其他heading([Friend or jump heading][324] ) map图当前heading平行显示
+
+
+org-brain最重要的是他的org-id(虽然也可以使用org file形式来进行，但是速度慢)
 
 ``` org
 

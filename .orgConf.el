@@ -1161,7 +1161,7 @@ Use a prefix arg to get regular RET. "                                          
 (define-key org-mode-map (kbd "RET")  #'ha/org-return)                           ;;
 
 
-(setq flyspell-issue-welcome-flag nil) ;; fix flyspell problem
+(setq flyspell-issue-welcome-flag t) ;; fix flyspell problem
 
 (custom-set-variables
     '(ispell-dictionary "british")

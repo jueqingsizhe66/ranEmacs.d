@@ -1,6 +1,322 @@
 #+BRAIN_PARENTS: 科研论文
 
 
+* Be critical
+:PROPERTIES:
+:ID:       0c6de2f3-3388-4ff9-99e8-0f541ff86125
+:END:
+:RESOURCES:
+:END:
+
+** understand the topic from different perspectives
+:PROPERTIES:
+:ID:       df167cb1-8ed7-4270-b546-1737f6e26dcf
+:END:
+
+*** read the related texts
+:PROPERTIES:
+:ID:       9ea4d76d-e72e-47c6-9a48-c4ebb0aeed70
+:END:
+
+    The point of making up the story is now to concentrate on how all your bits fit together;
+ what you want to end up saying, how your work supports that conclusion, how the literature 
+relates to the argument you are now putting forward. It doesn't have to be a true story of 
+why you did that: but a self-critical and measured account of what you know think can be said about it.
+    
+1. how all your bits fit together; 
+2. what you want to end up saying, 
+3. how your work supports that conclusion, 
+4. how the literature relates to the argument you are now putting forward.
+
+
+**** framework
+:PROPERTIES:
+:ID:       ad6c8a91-bfa5-4612-8f05-294820e01e9e
+:END:
+**** approaches
+:PROPERTIES:
+:ID:       28dca5c9-b7f1-408a-80dc-c0d973f2379b
+:END:
+**** theories
+:PROPERTIES:
+:ID:       82cb2e87-02e7-4d76-b488-2c520ea8f04d
+:END:
+** present your evaluation and judgement of the text
+:PROPERTIES:
+:ID:       5b58677b-4fc8-431d-a5c9-203a7a7ca77f
+:END:
+*** Analysis
+:PROPERTIES:
+:ID:       0666a863-95e7-49f3-b63c-619dd1a08839
+:END:
+Analysing requires separating the content and concepts of a text into their main components
+and then understanding how these interrelate, connect and possible influence each other
+**** influence
+:PROPERTIES:
+:ID:       cff9d8b5-a138-4cc4-ba94-98eea2303032
+:END:
+**** connect
+:PROPERTIES:
+:ID:       42917213-2caa-411c-8c65-6fb8564a1c35
+:END:
+**** interrelate
+:PROPERTIES:
+:ID:       6290b53c-7bd3-4afd-8492-5242a60167da
+:END:
+*** Structure:why it is structured the way it is
+:PROPERTIES:
+:ID:       bb36eea5-df92-4327-b0d8-5d93aa12a201
+:END:
+ 
+Planning and expressing the structure
+There are really four stages here: 
+1. collecting material for the essay,
+2. deciding what your main message and argument really are,
+3. deciding what structure to adopt in order to communicate that, and
+4. indicating your structure to the reader. 
+
+a. The first is the result of the issues and activities discussed above (e.g. selecting, reading, and thinking),
+b. the middle two are about "planning" your writing and perhaps writing an essay plan,
+c. the last about making sure your plan is clear to the reader. 
+
+{{{
+Writing is for yourself, while rewriting is for your reader
+}}}
+*** the intended audience
+:PROPERTIES:
+:ID:       1289f198-1543-4dc3-bc12-aec6363e7648
+:END:
+*** purpose of text
+:PROPERTIES:
+:ID:       8ef83cf5-6b5a-4469-8c11-f79b22d66440
+:END:
+
+    Generally, the purpose of a review is 
+1. to analyze critically a segment of a published body of knowledge through summary,
+2. classification, and
+3. comparison of prior research studies, reviews of literature, and theoretical articles.
+
+****  Value
+1. Deciding what your argument is?(60s filter method)
+
+    Thus you will probably at this point have a collection of points and facts you think of some value:
+ the raw material for the essay; not a plan, but the elements to fit into the plan.
+ Some students will now realise they have too much material to fit within the size limit.
+ They must decide what is important to include, and what to leave out.
+ The way to do that selection is to do what everyone must do anyway:
+       decide what the overall point or conclusion is, what are the points 
+or evidence that most directly and strongly support those conclusions,and so on.
+When you know what the main point or points are, then you can decide what is most important for supporting those conclusions. 
+If this is proving difficult for you, one technique I find useful in my own writing is to put away my notes,
+and try to speak a 60 second version. For example grab a friend, preferably one who doesn't know about your 
+topic and isn't all that interested, and tell them what your essay is going to say. You automatically make it 
+brief to keep their attention, and mention only the most important things without the details. When you hear 
+yourself give the summary, that tells you what for you is the most important point; and hence how to organise your essay.
+ E.g.
+    "My CR is about autism, and the main feature of this field is all the different theories that don't really fit together,
+    yet all of them seem to have some support." If you hear yourself say that, then you probably want an essay with one section
+    for each of the major different theories, and a concluding discussion pointing out how they conflict. Or you might have 
+    found yourself saying "My CR is on autism, and although there are various theories, I'm just concentrating on the claim 
+    that it comes from a specific neurophysiological deficit. There's a few papers on this, and I'm going to focus on how strong
+    the evidence they present really is. There are really two classes of problem here: firstly the evidence for the deficit is
+    scanty and might be questioned at least until more studies are done, and secondly it is hard to see how all the symptoms and
+    consequences can really be the effect of a single deficit when they vary so much from case to case." 
+
+Here the essay might take each of a few selected papers in turn, and apply the basic criticisms repeatedly to each. 
+
+**** Body
+:PROPERTIES:
+:ID:       392e8092-4a85-4f72-8314-2c7565f43a8c
+:END:
+
+1. Group research studies and other types of literature 
+    (reviews, theoretical articles, case studies, etc.) according to common denominators 
+    such as qualitative versus quantitative approaches, conclusions of authors, specific 
+    purpose or objective, chronology, etc. 
+2. Summarize individual studies or articles with as much or as little detail as each merits
+    according to its comparative importance in the literature, remembering that space (length) 
+    denotes significance. 
+3. Provide the reader with strong "umbrella" sentences at beginnings of paragraphs, "signposts" 
+    throughout, and brief "so what" summary sentences at intermediate points in the review to
+    aid in understanding comparisons and analyses. 
+
+    So What????? 有什么用处?
+
+**** Introduction
+:PROPERTIES:
+:ID:       ffb20933-9c63-4f12-8e9a-9351b5f078d4
+:END:
+1. Briefly expain the topic of the text.
+2. Present the aim of the text and summarise the main finding or key argument.
+3. Conclude the introduction with a brief statement of your evaluation of the text
+
+In the introduction, you should:
+
+1. define or identify the general topic, issue, or area of concern,
+   thus providing an appropriate context for reviewing the literature. 
+2. Point out overall trends in what has been published about the topic;
+   or conflicts in theory, methodology, evidence, and conclusions; 
+   or gaps in research and scholarship;
+   or a single problem
+   or new perspective of immediate interest. 
+3. Establish the writer's reason (point of view) for reviewing the literature;
+   explain the criteria to be used in analyzing and comparing literature and
+   the organization of the review (sequence); and, when necessary,
+   state why certain literature is or is not included (scope). 
+
+
+**** Summary
+:PROPERTIES:
+:ID:       2d578b3d-d5b2-4abb-9c53-5c1fb7d9d9d7
+:END:
+1. present a summary of the key points along with a limited number of example.
+2. briefly explain the purpose/intentions throughout the text
+3. briefly describe how the text is organised.
+4. The summary should only make up about a third of the critical review
+
+    Summarising and paraphrasing are essential skills for academic writing and in particular, 
+the critical review. 
+***** Summarise
+:PROPERTIES:
+:ID:       3dfbcdac-54f8-4b96-970b-e3ac98b9c83a
+:END:
+    To summarise means to reduce a text to its main points and its most important ideas.
+ The length of your summary for a critical review should only be about one quarter to one third (1/3)
+of the whole critical review. The best way to summarise is to:
+
+1. Scan the text.
+    Look for information that can be deduced from the introduction, conclusion and the title
+    and headings. What do these tell you about the main points of the article? 
+2. Locate the topic sentences and highlight the main points as you read. 
+3. Reread the text and make separate notes of the main points. 
+  Examples and evidence do not need to be included at this stage. Usually they are used selectively in your critique.
+***** Paraphrasing 
+:PROPERTIES:
+:ID:       2e27370d-0692-43ce-a1ca-c9b7c92c6fac
+:END:
+    Paraphrasing means putting it into your own words. 
+Paraphrasing offers an alternative to using direct quotations in your summary (and the critique) 
+and can be an efficient way to integrate your summary notes.  The best way to paraphrase is to:
+
+1. Review your summary notes 
+2. Rewrite them in your own words and in complete sentences 
+3. Use reporting verbs and phrases (eg; The author describes…, Smith argues that …). 
+4. If you include unique or specialist phrases from the text, use quotation marks.
+
+
+
+
+**** Conclusions
+:PROPERTIES:
+:ID:       3f4111ec-6453-4b54-a314-77b2b089ab6f
+:END:
+ 1. This is usually a very short paragraph.
+ 2. Restate your overall opinion of the text. 
+ 3. Briefly present recommendations. 
+ 4.If necessary some further qualification or explanation of your judgement can be included.
+ This can help your critique sound fair and reasonable. 
+    
+
+1. Summarize major contributions of significant studies and articles to the body of knowledge 
+    under review, maintaining the focus established in the introduction. 
+2. Evaluate the current "state of the art" for the body of knowledge reviewed, pointing out major 
+    methodological flaws or gaps in research, inconsistencies in theory and findings, and areas or
+    issues pertinent to future study. 
+3. Conclude by providing some insight into the relationship between the central topic of the literature
+    review and a larger area of study such as a discipline, a scientific endeavor, or a profession. 
+
+
+
+*** content of text
+:PROPERTIES:
+:ID:       383a7ff4-fcf1-44da-a57e-6a4582b27d5e
+:END:
+** question the information and opionions in the text
+:PROPERTIES:
+:ID:       f44d336e-7952-401c-97b6-6f1686d3cbf8
+:END:
+*** science?
+:PROPERTIES:
+:ID:       4a81b658-a9fc-4277-9a42-ce9908aa0a0e
+:END:
+
+What is science ?
+
+    More generally, what you are doing in constructing your argument is demonstrating "critical thought" 
+(which is often stated as a requirement in the paperwork for PhD exams). It is true that a defining 
+characteristic of science is that things are published ("facts") which others then interpret in different 
+ways from the original author. This is crucial to the way work cumulates (builds on what went before):
+ things do not depend on what the first observer thought. And certainly one valuable thing you do in your 
+thesis is report facts or observations, or what you did. 
+    However a PhD that only reported facts, what was done, measurements taken, would be unlikely to pass.
+ You are expected to discuss what may and may not reasonably be concluded from your work, and the arguments
+ for and against your conclusions. Although what you present is in effect in the form of an argument,
+ you will not mainly be judged on whether or not you persuade others (as you might be in marketing, and politics).
+ But you are expected to help others decide how much to believe your conclusions by providing them with your 
+considered judgement and the important issues and evidence for and against. In discussing not only evidence for, 
+but evidence against, alternative theories, and obvious objections, you are helping the reader form their own judgement,
+ and simultaneously showing you have a good and thoughtful grasp of the issues involved in your work.
+ Even if some people don't value your conclusions, they will value this discussion.
+ 
+In a word:
+    Science can be questioned and skeptical based on the same facts and different interpretation.
+1.    report your facts
+2.    report your observations
+3.    report what you did(what's your argument)
+
+*** critique(question the value of the text)                         :学术:
+:PROPERTIES:
+:ID:       d6a2ab3f-b6da-46e1-b2bf-7d4d5a5e2b9e
+:END:
+
+    Value means why you are going to do the first task.(Value first, layout second, content later, decorate finally) VfLsClDf
+    
+    Value why?(背景 和 main idea or main argument---Your argument)
+    layout How?(it is a structure)
+    content what?
+    decorate grammer,style,spell etc.
+    
+    You won't know what your argument is untill you have finished the research.
+
+Write things up for yourself, and separately(later) for others(real beneficiaary of your writing is you)
+--------------in a word: first write for yourself, then later rewrite for the reader.
+
+    When writing for yourself, you don't have to explain background or motivation, just focus on the facts and
+above all on the argument. When that is straight you can later go back and put in what it needs to make sense
+to an outsider.(In many ways, all the "glue" and structure is helping the reader to those things.(也就是说原型是
+无结构可研，真正内在的东西无形，而之所以化为有形的结构和框架只是为了帮助读者, 所以writing也可以变成painting或者其他任何方式
+存在的表达，比如雕刻，比如音乐，比如舞蹈等)
+
+Glue sentence 要注意区分过滤出来！！！(但是其实最重要的是你在心中已经勾勒出了你的writing,你的argument)
+{{{
+    The main techniques for helping the reader decide if they have arrived at the right place are titles,
+ and "glue" sentences at the start and/or the end of every bit. For example "This chapter described my second and third experiments,
+ concluded X and Y, and discussed the degree to which these conclusions can be relied on.
+ X is used in the next chapter to motivate the fourth study, and Y is important in the overall conclusions in chapter 9."
+
+
+}}}
+
+    The critique should be a balanced discussion and evaluation of the strengths, weakness and notable features of the text. 
+Remember to base your discussion on specific criteria. 
+Good reviews also include other sources to support your evaluation (remember to reference). 
+    
+    You can choose how to sequence your critique. Here are some examples to get you started:
+Most important to least important conclusions you make about the text. 
+  
+1. If your critique is more positive than negative, then present the negative points first and the positive last. 
+2. If your critique is more negative than positive, then present the positive points first and the negative last. 
+3.If there are both strengths and weakness for each criterion you use, you need to decide overall what your judgement is.
+
+    For example, you may want to comment on a key idea in the text and have both positive and negative comments.
+ You could begin by stating what is good about the idea and then concede and explain how it is limited in some way.
+ While this example shows a mixed evaluation, overall you are probably being more negative than positive. 
+
+    You can also include recommendations for how the text can be improved in terms of ideas, research approach;
+ theories or frameworks used can also be included in the critique section. 
+
+
+
 * 中尺度
 :PROPERTIES:
 :ID:       5e50693e-352f-4b69-a406-124efaf0b3a2
