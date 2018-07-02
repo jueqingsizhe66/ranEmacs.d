@@ -2,7 +2,7 @@
 
 #+BRAIN_PARENTS: 一个idea
 
-#+BRAIN_CHILDREN: 背景 方法 结果 参考文献 Appendence
+#+BRAIN_CHILDREN: 背景 方法 结果 参考文献 Appendence 0c6de2f3-3388-4ff9-99e8-0f541ff86125
 
 :RESOURCES:
 :END:
@@ -313,6 +313,8 @@ Figures: 6-8 (one per page)
 Tables: 1-3 (one per page)
 References: 20-50 papers (2-4 pages)
 
+
+60s to tell your fellow students or college an interesting story
 
 * FourSteps
 :PROPERTIES:

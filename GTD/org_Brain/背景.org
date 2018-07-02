@@ -4,6 +4,7 @@
 * Be critical
 :PROPERTIES:
 :ID:       0c6de2f3-3388-4ff9-99e8-0f541ff86125
+:BRAIN_PARENTS: 科研论文
 :END:
 :RESOURCES:
 :END:
@@ -246,22 +247,23 @@ What is science ?
 (which is often stated as a requirement in the paperwork for PhD exams). It is true that a defining 
 characteristic of science is that things are published ("facts") which others then interpret in different 
 ways from the original author. This is crucial to the way work cumulates (builds on what went before):
- things do not depend on what the first observer thought. And certainly one valuable thing you do in your 
+things do not depend on what the first observer thought. And certainly one valuable thing you do in your 
 thesis is report facts or observations, or what you did. 
     However a PhD that only reported facts, what was done, measurements taken, would be unlikely to pass.
- You are expected to discuss what may and may not reasonably be concluded from your work, and the arguments
- for and against your conclusions. Although what you present is in effect in the form of an argument,
- you will not mainly be judged on whether or not you persuade others (as you might be in marketing, and politics).
- But you are expected to help others decide how much to believe your conclusions by providing them with your 
+You are expected to discuss what may and may not reasonably be concluded from your work, and the arguments
+for and against your conclusions. Although what you present is in effect in the form of an argument,
+you will not mainly be judged on whether or not you persuade others (as you might be in marketing, and politics).
+But you are expected to help others decide how much to believe your conclusions by providing them with your 
 considered judgement and the important issues and evidence for and against. In discussing not only evidence for, 
 but evidence against, alternative theories, and obvious objections, you are helping the reader form their own judgement,
- and simultaneously showing you have a good and thoughtful grasp of the issues involved in your work.
+and simultaneously showing you have a good and thoughtful grasp of the issues involved in your work.
  Even if some people don't value your conclusions, they will value this discussion.
  
 In a word:
     Science can be questioned and skeptical based on the same facts and different interpretation.
+
 1.    report your facts
-2.    report your observations
+2.    report your observations(observations talent)
 3.    report what you did(what's your argument)
 
 *** critique(question the value of the text)                         :学术:
@@ -274,7 +276,7 @@ In a word:
     Value why?(背景 和 main idea or main argument---Your argument)
     layout How?(it is a structure)
     content what?
-    decorate grammer,style,spell etc.
+    decorate grammer,style,spell,pageNum,lineNum etc.
     
     You won't know what your argument is untill you have finished the research.
 
@@ -288,14 +290,14 @@ to an outsider.(In many ways, all the "glue" and structure is helping the reader
 存在的表达，比如雕刻，比如音乐，比如舞蹈等)
 
 Glue sentence 要注意区分过滤出来！！！(但是其实最重要的是你在心中已经勾勒出了你的writing,你的argument)
-{{{
+```
     The main techniques for helping the reader decide if they have arrived at the right place are titles,
  and "glue" sentences at the start and/or the end of every bit. For example "This chapter described my second and third experiments,
  concluded X and Y, and discussed the degree to which these conclusions can be relied on.
  X is used in the next chapter to motivate the fourth study, and Y is important in the overall conclusions in chapter 9."
 
 
-}}}
+```
 
     The critique should be a balanced discussion and evaluation of the strengths, weakness and notable features of the text. 
 Remember to base your discussion on specific criteria. 
