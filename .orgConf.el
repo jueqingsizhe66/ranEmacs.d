@@ -1514,3 +1514,26 @@ e.g. Sunday, September 17, 2000."
 ;;         ))                                                         ;;
 ;; (setq org-wiki-server-port "8085") ;; 8000 - default value         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; org-ref                                                                                  ;;
+;;                                                                                             ;;
+;;                                                                                             ;;
+;; ;; see org-ref for use of these variables                                                   ;;
+;; (setq org-ref-bibliography-notes "~/.emacs.d/GTD/org-ref/bibliography/notes.org"            ;;
+;;       org-ref-default-bibliography '("~/.emacs.d/GTD/org-ref//bibliography/references.bib") ;;
+;;       org-ref-pdf-directory "~/.emacs.d/GTD/org-ref/bibliography/bibtex-pdfs/")             ;;
+;;                                                                                             ;;
+;;                                                                                             ;;
+;; (setq bibtex-completion-bibliography "~/.emacs.d/GTD/org-ref//bibliography/references.bib"  ;;
+;;       bibtex-completion-library-path "~/.emacs.d/GTD/org-ref/bibliography/bibtex-pdfs/"     ;;
+;;       bibtex-completion-notes-path "~/.emacs.d/GTD/org-ref/bibliography/helm-bibtex-notes") ;;
+;;                                                                                             ;;
+;; ;; open pdf with system pdf viewer (works on mac)                                           ;;
+;; (setq bibtex-completion-pdf-open-function                                                   ;;
+;;   (lambda (fpath)                                                                                ;;
+;;     (start-process "open" "*open*" "open" fpath)))                                          ;;
+;;                                                                                             ;;
+;; ;; alternative                                                                              ;;
+;; ;; (setq bibtex-completion-pdf-open-function 'org-open-file)                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

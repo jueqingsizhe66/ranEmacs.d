@@ -285,6 +285,93 @@ stating your main idea will be of great help for writing the critique, because y
  disjointed responses. If you are writing a critique, it should be expressed as a consistent point of view.
 
  How well for your writing ?
+** love or be fond of
+:PROPERTIES:
+:ID:       2abab412-6670-43a2-b04f-34442b30de11
+:END:
+** notice
+:PROPERTIES:
+:ID:       09ef0dfd-e029-415d-a3b1-98275d95fb47
+:BRAIN_CHILDREN: 7d8328e1-b93e-45fb-a000-441ea7ca79c6 Appendence
+:END:
+
+之所以把这个也当作一个境界, 是因为想要提醒你自己，
+
+你的弱点是什么？
+你的言论的弱点是什么？
+你的论文的弱点事什么？
+
+[[brain-child:7d8328e1-b93e-45fb-a000-441ea7ca79c6][Weakness]]
+** nervous
+:PROPERTIES:
+:ID:       4b316631-0a8f-48f9-a584-2eb26f0c1bc2
+:END:
+** Irritation or angry
+:PROPERTIES:
+:ID:       230518bb-cb23-4277-95eb-612a8249585a
+:END:
+** frustration
+:PROPERTIES:
+:ID:       8740ed66-945b-410c-b79f-9348d397f9aa
+:END:
+
+People are frustrated with everyday things. 
+    From the ever-increasing complexity of the automobile dashboard, to the increasing automation
+in the home with its internal networks, complex music, video, and game systems for entertainment 
+and communication, and the increasing automation in the kitchen, everyday life sometimes seems 
+like a never-ending fight against confusion, continued errors, frustration, and a continual cycle
+of updating and maintaining our belongings.
+
+    New technologies, new applications, and new methods of interaction
+are continually arising and evolving. New industries spring up. Each new
+ development seems to repeat the mistakes of the earlier ones; each new 
+field requires time before it, too, adopts the principles of good design.
+ And each new invention of technology or interaction technique requires experimentation
+and study before the principles of good design can be fully integrated into practice.
+ So, yes, things are getting better, but as a result, the challenges are ever present.
+ 
+Human-Centered interface(human-centered design: HCD)
+** persistence
+:PROPERTIES:
+:ID:       f1903672-2ed1-4d75-b116-835c77993c56
+:END:
+
+我认为他是做任何事情最重要的事情，有着一个目标，坚持下去做，不畏艰难
+
+无惧无畏
+
+practice makes you perfect
+** patience
+:PROPERTIES:
+:ID:       a3500e70-829f-46a5-b410-9c2d3ebe12a1
+:END:
+** Confidence
+:PROPERTIES:
+:ID:       3eaa66fd-6b73-4e23-bf44-8497643678b9
+:END:
+** Interesting
+:PROPERTIES:
+:ID:       f5f29a86-75ab-4142-a78d-b17aa635cea3
+:END:
+** sleepy
+:PROPERTIES:
+:ID:       d6a669eb-1be9-4621-942b-318951e5966c
+:END:
+** Get Result
+:PROPERTIES:
+:ID:       eaaa1d31-1f2b-4e58-92e2-06334303fc01
+:END:
+
+1. excited
+2. happy
+** Sad
+:PROPERTIES:
+:ID:       1460a5d2-31cb-4d77-b6da-e9a2a04e6fbf
+:END:
+** Boring
+:PROPERTIES:
+:ID:       cefea2cd-0fe6-4f77-9be9-840353ef9749
+:END:
 
 * Sentence length
 :PROPERTIES:

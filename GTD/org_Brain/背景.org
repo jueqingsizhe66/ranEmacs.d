@@ -1,6 +1,23 @@
 #+BRAIN_PARENTS: 科研论文
 
 
+* Information Source
+:PROPERTIES:
+:ID:       2c5202d1-5d63-4f1a-910a-332784694e15
+:END:
+
+** Discoverability
+:PROPERTIES:
+:ID:       8ee4f990-e46f-4d12-90c2-2636c6cc2ddb
+:END:
+
+Five fundamental psychological concepts for discoverability:(from the book <The Design of Everyday Things>)
+
+1. affordances
+2. signifiers
+3. constraints
+4. mappings
+5. feedback
 * Be critical
 :PROPERTIES:
 :ID:       0c6de2f3-3388-4ff9-99e8-0f541ff86125
@@ -46,6 +63,71 @@ why you did that: but a self-critical and measured account of what you know thin
 :PROPERTIES:
 :ID:       5b58677b-4fc8-431d-a5c9-203a7a7ca77f
 :END:
+*** Set Goals?
+:PROPERTIES:
+:ID:       8d842945-8257-4dd1-90a6-f09c2ce04f8e
+:END:
+
+What is a goal?
+
+Goal is a start of a plan, plan something to be perform and then perceive.
+
+Goal is like an application, an package , an tree, an house, an set etc.
+
+"""
+    For each goal, one has to ask, “Why is that the goal?”
+Why was I reading? I was trying to prepare a meal using a new
+recipe, so I needed to reread it before I started. Reading was thus
+a subgoal. But cooking was itself a subgoal. 
+I was cooking in order to eat, which had the goal of satisfying my hunger.
+So the hierarchy of goals is roughly: satisfy hunger; eat; cook; read cookbook;
+get more light. This is called a root cause analysis: asking
+“Why?” until the ultimate, fundamental cause of the activity is
+reached.
+
+
+Goal driven behavior(GHB)
+"""
+**** Bridge of Evaluation
+:PROPERTIES:
+:ID:       fa49732e-b505-4b69-8227-11b3a4432e55
+:END:
+***** 6Compare
+:PROPERTIES:
+:ID:       e5151600-e698-41b9-bf4e-4db60ebfc2bf
+:END:
+Compare the outcome with the goal!!!! This is very important!
+***** 4Perceive
+:PROPERTIES:
+:ID:       40f472f1-9bad-4153-b22d-8ad7fd374f1e
+:END:
+
+The state of the world by your investigation and watch
+***** 5Interpret
+:PROPERTIES:
+:ID:       5699fce7-7282-49e1-9845-c9487e379f60
+:END:
+Intercept your perception , using your knowledge
+**** Bridge of Execution
+:PROPERTIES:
+:ID:       a370a0c1-5aae-4821-b375-f153a268bd31
+:END:
+***** 3Perform
+:PROPERTIES:
+:ID:       11b0d241-f98d-4504-a560-df99a2163d92
+:END:
+Perform the action sequence
+***** 2Specify
+:PROPERTIES:
+:ID:       4d367759-1580-4d94-8309-0e77e320ffa4
+:END:
+Specify an action sequence(First to do what, how well? Standard, Second to do^-^)
+***** 1Plan
+:PROPERTIES:
+:ID:       4aa2fb26-ab22-4c5a-b39d-a58878401456
+:END:
+
+Plan the action
 *** Analysis
 :PROPERTIES:
 :ID:       0666a863-95e7-49f3-b63c-619dd1a08839
@@ -236,6 +318,19 @@ and can be an efficient way to integrate your summary notes.  The best way to pa
 :PROPERTIES:
 :ID:       f44d336e-7952-401c-97b6-6f1686d3cbf8
 :END:
+*** Weakness?
+:PROPERTIES:
+:ID:       7d8328e1-b93e-45fb-a000-441ea7ca79c6
+:END:
+
+What is your weakness point in your argument?(Strongness) Add it!
+
+reReason(重新推理)
+
+Value- Verify--Valid
+
+Add some evidences to your weakness! Three evidences are enough
+
 *** science?
 :PROPERTIES:
 :ID:       4a81b658-a9fc-4277-9a42-ce9908aa0a0e

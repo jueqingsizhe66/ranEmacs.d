@@ -128,3 +128,11 @@
 2018-06-30 水果
     Expenses:Fruits  RMB 29
     Assets:Savings:支付宝Alipay
+
+2018-07-03 股票转入
+    Assets:Stokes  RMB 1419
+    Assets:Savings:建行1593
+    
+2018-07-03 内部转账
+    Assets:Savings:建行1593  RMB 1350
+    Assets:Savings:建行7889

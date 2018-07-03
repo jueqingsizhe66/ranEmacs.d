@@ -29,7 +29,8 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes/spacemacs-theme")
 ;(load-theme 'tomorrow-night-bright t)
-(load-theme 'spacemacs-dark t)
+;(load-theme 'spacemacs-dark t)
+(load-theme 'srcery t)
   (setq spacemacs-theme-org-agenda-height nil)
   (setq spacemacs-theme-org-height nil)
 ;; set sizes here to stop spacemacs theme resizing these
