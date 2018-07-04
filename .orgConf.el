@@ -986,6 +986,8 @@ In ~%s~:
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'geiser-repl-mode))
 
+(setq geiser-repl-history-filename "~/.emacs.d/geiser-history")
+
 ;;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org           ;;
 (font-lock-add-keywords            ; A bit silly but my headers are now          ;;
    'org-mode `(("^\\*+ \\(TODO\\) "  ; shorter, and that is nice canceled        ;;

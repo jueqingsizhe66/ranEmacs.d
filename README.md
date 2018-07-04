@@ -6264,6 +6264,8 @@ M-x package-install ac-geiser
 ![racket][334]
 
 
+
+
 #### 使用chez scheme 
 
 
@@ -6292,6 +6294,12 @@ Original value was
 
 chez的执行`C-c C-c`编译org-babel源码快速度稍快于racket
 
+
+rackekt还有一点比chez方便的地方，就是加载文件还比较方便
+
+`,enter "hello.rkt"`
+
+![raket2][339]
 
 
 ----------
@@ -6638,3 +6646,4 @@ chez的执行`C-c C-c`编译org-babel源码快速度稍快于racket
 [336]: http://www.nongnu.org/geiser/
 [337]: https://github.com/clojure-emacs/cider
 [338]: https://github.com/xiaohanyu/ac-geiser
+[339]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/racket2.png
