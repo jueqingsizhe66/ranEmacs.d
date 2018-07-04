@@ -4,8 +4,9 @@
 ;;;;;;;;;;;;
 
 (require 'cmuscheme)
-(setq scheme-program-name "G:\\ChezScheme\\a6nt\\bin\\a6nt\\scheme")         ;; 如果用 Petite 就改成 "petite"
+(setq scheme-program-name "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme")         ;; 如果用 Petite 就改成 "petite"
 
+;(setq scheme-program-name "c:\\Program Files\\Racket\\Racket.exe")
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme "cmuscheme" "Switch to interactive Scheme buffer." t)
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
@@ -56,3 +57,6 @@
     (paredit-mode 1)
     (define-key scheme-mode-map (kbd "<f5>") 'scheme-send-last-sexp-split-window)
     (define-key scheme-mode-map (kbd "<f7>") 'scheme-send-definition-split-window)))
+
+
+(add-hook 'scribble-mode-hook #'geiser-mode)

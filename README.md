@@ -6301,6 +6301,26 @@ rackekt还有一点比chez方便的地方，就是加载文件还比较方便
 
 ![raket2][339]
 
+[Choosing-a-Scheme-Implementation][340]
+
+
+### 132. 添加scribble-mode,用racket写大论文
+
+`M-x package-install scribble-mode`
+
+在scheme-editing.el中添加geiser和paredit支持
+
+```
+
+(add-hook 'scribble-mode-hook #'geiser-mode)
+
+(add-hook 'scribble-mode-hook     #'enable-paredit-mode)
+```
+
+![sribble-test][342]
+
+[scribble-manual][341]
+
 
 ----------
 
@@ -6647,3 +6667,6 @@ rackekt还有一点比chez方便的地方，就是加载文件还比较方便
 [337]: https://github.com/clojure-emacs/cider
 [338]: https://github.com/xiaohanyu/ac-geiser
 [339]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/racket2.png
+[340]: http://www.nongnu.org/geiser/geiser_3.html#Choosing-a-Scheme-implementation
+[341]: http://docs.racket-lang.org/scribble/getting-started.html
+[342]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/scribble.png

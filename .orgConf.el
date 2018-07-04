@@ -964,8 +964,8 @@ In ~%s~:
 
 ;(setq scheme-program-name "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
 (setq scheme-program-name "c:\\Program Files\\Racket\\Racket.exe")
-;(setq geiser-active-implementations '(racket))
-(setq geiser-active-implementations '(chez))
+(setq geiser-active-implementations '(racket))
+;(setq geiser-active-implementations '(chez))
 
 (setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
 ;(setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\scheme")
