@@ -6348,6 +6348,55 @@ The equivalent variables for Racket are `geiser-racket-collects` and `geiser-rac
 
 [scribble-manual][341]
 
+### Origami 代码折叠
+
+
+[ origami ][344]不错的代码折叠工具，可惜不支持scheme(有空看看[ origami-parser ][345])，
+
+1. Perl
+2. Java
+3. Clojure
+4. Python
+5. elisp
+6. C
+7. C++
+8. Go
+9. Javascript
+10. PHP
+
+
+`M-x origami-toggle-all-nodes` 在程序文档挺有用的
+
+`M-x origami-open-node` 打开节点
+
+`M-x origami-open-node` 关闭节点
+
+`M-x origami-forward-node` 节点向后
+`M-x origami-next-node` 节点向前
+
+`M-x origami-previous-node` 关闭节点
+
+
+其他部分先用alexmurray的[ evil-vimish-fold ][346], 一方面需要安装[ evil ][211],另外自动安装了[vimish-fold][347]
+
+Adds standard vim keybindings of `zf` and `zd` to create and delete folds (via vimish-fold) respectively.
+Also hooks into evil so the usual vim keybindings for fold toggling (`za`), opening (`zo`), closing (`zc`) 
+etc all work as expected with vimish-fold.
+
+1. 创建 `zf`
+2. 删除 `zd`
+3. 打开 `zo`
+4. 关闭 `zc`
+5. toggle `za`
+6. 调到上一节点 `zk`
+7. 调到下一节点 `zj`
+
+Finally, also supports navigation between folds using zj and zk.
+
+
+最重要是，vimish-fold的fold是显示的，挺好看的一栏,perfect work！
+
+![vimish-fold][348]
 
 ----------
 
@@ -6698,3 +6747,8 @@ The equivalent variables for Racket are `geiser-racket-collects` and `geiser-rac
 [341]: http://docs.racket-lang.org/scribble/getting-started.html
 [342]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/scribble.png
 [343]: http://www.nongnu.org/geiser/geiser_3.html#index-scheme-init-file
+[344]: https://github.com/gregsexton/origami.el
+[345]: https://github.com/gregsexton/origami.el/blob/master/origami-parsers.el
+[346]: https://github.com/alexmurray/evil-vimish-fold 
+[347]: https://github.com/mrkkrp/vimish-fold
+[348]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/vimish-fold.png

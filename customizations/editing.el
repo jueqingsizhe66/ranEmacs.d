@@ -214,3 +214,13 @@
 (setq-default evil-escape-delay 0.2)
 
 (global-set-key (kbd "C-c C-g") 'evil-escape)
+
+
+
+;;fold-this
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (global-set-key (kbd "C-c C-f") 'fold-this-all)        ;;
+;; (global-set-key (kbd "C-c ;") 'fold-this)              ;;
+;; (global-set-key (kbd "C-c M-f") 'fold-this-unfold-all) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

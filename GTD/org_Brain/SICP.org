@@ -465,10 +465,10 @@
           (+ (term a)
               (sum term (next a) next b))))
 
-
+; racket状态下 初始文件有效
 ;    (define (inc n) (+ n 1))
 
-    (define (cube x) (* x x x))
+;    (define (cube x) (* x x x))
 
     (define (sum-cubes a b)
       (sum cube a inc b))
@@ -477,146 +477,65 @@
 #+END_SRC
 
 #+RESULTS:
+: 3025
 
 
-test2
+***** test2
 
 
 geiser-racket-init-file
 
 #+NAME: Integral
 #+BEGIN_SRC scheme 
-    (define (sum term a next b)
-      (if (> a b)
-          0
-          (+ (term a)
-             (sum term (next a) next b))))
+      (define (sum term a next b)
+        (if (> a b)
+            0
+            (+ (term a)
+               (sum term (next a) next b))))
 
-    (define (pi-sum a b)
-      (sum (lambda (x) (/ 1.0 (* x (+ x 2))))
-           a
-           (lambda (x) (+ x 4))
-           b))
-
-
-
-    (define (integral f a b dx)
-      (* (sum f
-              (+ a (/ dx 2.0))
-              (lambda (x) (+ x dx))
-              b)
-         dx))
-
-  (define (square x) (* x x))
+      (define (pi-sum a b)
+        (sum (lambda (x) (/ 1.0 (* x (+ x 2))))
+             a
+             (lambda (x) (+ x 4))
+             b))
 
 
-;  ((lambda (x y z) (+ x y (square z))) 1 2 3)
 
-    (define (f x y)
-      (define a (+ 1 (* x y)))
-      (define b (- 1 y))
-      (+ (* x (square a))
-         (* y b)
-         (* a b)))
+      (define (integral f a b dx)
+        (* (sum f
+                (+ a (/ dx 2.0))
+                (lambda (x) (+ x dx))
+                b)
+           dx))
 
-    (f 5 6)
+    (define (square x) (* x x))
+
+
+  ;  ((lambda (x y z) (+ x y (square z))) 1 2 3)
+
+      (define (f x y)
+        (define a (+ 1 (* x y)))
+        (define b (- 1 y))
+        (+ (* x (square a))
+           (* y b)
+           (* a b)))
+
+      (f 5 6)
 
 #+END_SRC
 
 #+RESULTS: Integral
 : 4620
 
-**** 1.3.1 Procedures as Arguments
-:PROPERTIES:
-:ID:       5f0463de-56a7-46f9-8207-3dfd61f51675
-:END:
-****  1.3.3  Procedures as General Methods
-:PROPERTIES:
-:ID:       b9e40d18-2fb9-48a4-a942-b56ad90ca84d
-:END:
-****  1.3.4  Procedures as Returned Values
-*** 1.2 Procedures and the Processes They Generate
-:PROPERTIES:
-:ID:       18810c69-36dc-42da-bcf2-f41ca92469ed
-:END:
-**** 1.2.6 Example: Testing for Primality
-:PROPERTIES:
-:ID:       991eb1f4-0946-4f5c-a14f-396a0f98cd65
-:END:
-**** 1.2.5 Greatest Common Divisors
-:PROPERTIES:
-:ID:       dde92d2f-65c1-4f7a-97f8-7acb930e932d
-:END:
-**** 1.2.4 Exponentiation
-:PROPERTIES:
-:ID:       87a2f6bd-75ee-4900-9e62-00f9a962bc38
-:END:
-**** 1.2.1 Linear Recursio and Iteration
-:PROPERTIES:
-:ID:       71f80f1c-de9e-454d-bdc3-7f2b922b1cff
-:END:
-**** 1.2.2 Tree Recursion
-:PROPERTIES:
-:ID:       e6b1a97e-6e6a-4076-85f4-60369ff977d3
-:END:
-**** 1.2.3 Orders of Growth
-:PROPERTIES:
-:ID:       1b76eec0-4a0f-49bc-af9f-cf75d55af604
-:END:
-*** 1.1 The Elements of Programming
-:PROPERTIES:
-:ID:       97d6cec0-3af0-4b4d-a9be-29766d7207c0
-:END:
-**** 1.18 Procedures as Black-Box Abstraction
-:PROPERTIES:
-:ID:       71438244-7813-4096-a0ca-49878dce2f3c
-:END:
-**** 1.1.7 Example:Square Roots by Newton's Method
-:PROPERTIES:
-:ID:       cd16c5ee-c867-4abe-9cec-71c3e8d603c6
-:END:
-**** 1.1.6 Conditional Expression and Predicates
-:PROPERTIES:
-:ID:       c18f1c31-bcb4-4885-b1c3-1bfa64b6dd11
-:END:
-**** 1.1.5 The Substitution Model for Procedure Application
-:PROPERTIES:
-:ID:       17b631f7-4a2a-4168-9e17-1238d3ede7cb
-:END:
-**** 1.1.4 Compound Procedures
-:PROPERTIES:
-:ID:       a8f67eb9-fcba-4b31-9d1f-0a6df2645863
-:END:
-**** 1.1.3 Evaluating Combinations
-:PROPERTIES:
-:ID:       13c9e3df-e7b7-4b57-8530-fdfe530c72e0
-:END:
-**** 1.1.2 Naming and the Environment
-:PROPERTIES:
-:ID:       8bbfa7e8-cf0e-4df4-b501-8435f4e62d25
-:END:
-**** 1.1.2 Naming and the Environment
-:PROPERTIES:
-:ID:       8bbfa7e8-cf0e-4df4-b501-8435f4e62d25
-:END:
 
+***** factorial test
 
+#+NAME: factorial
 #+BEGIN_SRC scheme
-  (define pi 3.14159)
-  (define radius 10)
-  (* pi (* radius radius))
-  314.159
-  (define circumference (* 2 pi radius))
-  circumference
-  62.8318
+  (factorial 4)
 #+END_SRC
 
-#+RESULTS:
-: 62.8318
+#+RESULTS: factorial
+: 24
 
 
-
-**** 1.1.1 Expressions
-:PROPERTIES:
-:ID:       90e31224-7da9-40ee-8c0d-d5c1fe8b518e
-:END:
