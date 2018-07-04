@@ -6326,7 +6326,9 @@ The equivalent variables for Racket are `geiser-racket-collects` and `geiser-rac
 (setq geiser-racket-init-file "~/.emacs.d/GTD/scheme/sicp-init.rkt")  
 ```
 
-这样每次添加完之后直接`C-c C-c` 那么不用重启Emacs也可以在org babel的代码块使用了！很方便！
+这样每次添加完之后直接`C-c C-c` 那么不用重启Emacs也可以在org babel的代码块使用了！很方便！(但是chez没有该功能，设置无效，guile也许可以).
+
+
 
 
 ### 132. 添加scribble-mode,用racket写大论文
