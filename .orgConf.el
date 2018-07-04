@@ -959,10 +959,32 @@ In ~%s~:
    (sqlite . t)
    (perl . t)
    (C . t)
+   (scheme . t)
    ))
 
+;(setq scheme-program-name "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
+(setq scheme-program-name "c:\\Program Files\\Racket\\Racket.exe")
+;(setq geiser-active-implementations '(racket))
+(setq geiser-active-implementations '(chez))
 
+(setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
+;(setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\scheme")
+(setq geiser-racket-binary "c:\\Program Files\\Racket\\Racket.exe")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 1. geiser-guile-binary   ;;
+;; 2. geiser-racket-binary  ;;
+;; 3. geiser-chicken-binary ;;
+;; 4. geiser-mit-binary     ;;
+;; 5. geiser-chibi-binary   ;;
+;; 6. geiser-chez-binary    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;ac-geiser
+(require 'ac-geiser)
+(add-hook 'geiser-mode-hook 'ac-geiser-setup)
+(add-hook 'geiser-repl-mode-hook 'ac-geiser-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'geiser-repl-mode))
 
 ;;;https://github.com/howardabrams/dot-files/blob/master/emacs-org.org           ;;
 (font-lock-add-keywords            ; A bit silly but my headers are now          ;;

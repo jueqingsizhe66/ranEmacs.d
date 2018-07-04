@@ -6225,6 +6225,73 @@ to find the help files for the org-mode.(刚才提到的org-brain的`V`类似于
 
 `M-x aa2u`之后，会直接把横线连城直线, 进一步可以学习[sketch的用法][332]
 
+### 131. 重复命令
+
+
+重复文件内的输入很简单，比如
+
+`qa`,然后开始记录键盘宏，比如当前行`M-x org-id-copy`,接着向下移动几行，然后`q`,终止录入键盘信息
+
+想要调用也很简单`@a`即可
+
+`qa`, `tab`,向下移动`j`,`q`停止，关掉所有打开的
+
+
+### 132. geiser: connect to scheme
+
+[geiser][336] is similar [cider][337], while cider connect emacs to clojure, geiser connect emacs to scheme(racket,chez,guile,Mit/GNU scheme,chicken etc)
+
+
+```
+M-x package-install geiser
+M-x package-install ac-geiser
+
+```
+
+安装[ac-geiser][338]这样可以在Scheme Repl快速补全，总比没有不全的cmd好点.
+
+[see the installlatin of geiser][333]
+
+#### 使用racket
+
+已安装了racket.
+
+``` scheme
+(setq geiser-active-implementations '(racket))
+(setq geiser-racket-binary "c:\\Program Files\\Racket\\Racket.exe")
+```
+
+![racket][334]
+
+
+#### 使用chez scheme 
+
+
+``` scheme
+
+(setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
+(setq geiser-active-implementations '(chez))
+```
+
+![chez][335]
+
+
+#### 小结 所有implementations
+
+``` org
+geiser-active-implementations is a variable defined in ‘geiser-impl.el’.
+
+Its value is (chez)
+Original value was 
+
+(guile racket chicken chez mit chibi)
+
+
+```
+
+
+chez的执行`C-c C-c`编译org-babel源码快速度稍快于racket
+
 
 
 ----------
@@ -6565,3 +6632,9 @@ to find the help files for the org-mode.(刚才提到的org-brain的`V`类似于
 [330]: https://github.com/vim-scripts/DrawIt
 [331]: https://github.com/vim-scripts/sketch.vim/blob/master/sketch.tut
 [332]: https://github.com/jueqingsizhe66/windowVimYe#26-sketch-and-drawit
+[333]:http://www.nongnu.org/geiser/geiser_2.html#Installation 
+[334]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/racket.png
+[335]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/chez.png
+[336]: http://www.nongnu.org/geiser/
+[337]: https://github.com/clojure-emacs/cider
+[338]: https://github.com/xiaohanyu/ac-geiser
