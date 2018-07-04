@@ -456,6 +456,76 @@
 :PROPERTIES:
 :ID:       ad97756a-d9f1-4272-b953-7d517feb4234
 :END:
+
+
+#+BEGIN_SRC scheme
+  (define (sum term a next b)
+      (if (> a b)
+          0
+          (+ (term a)
+              (sum term (next a) next b))))
+
+
+;    (define (inc n) (+ n 1))
+
+    (define (cube x) (* x x x))
+
+    (define (sum-cubes a b)
+      (sum cube a inc b))
+
+    (sum-cubes 1 10)
+#+END_SRC
+
+#+RESULTS:
+
+
+test2
+
+
+geiser-racket-init-file
+
+#+NAME: Integral
+#+BEGIN_SRC scheme 
+    (define (sum term a next b)
+      (if (> a b)
+          0
+          (+ (term a)
+             (sum term (next a) next b))))
+
+    (define (pi-sum a b)
+      (sum (lambda (x) (/ 1.0 (* x (+ x 2))))
+           a
+           (lambda (x) (+ x 4))
+           b))
+
+
+
+    (define (integral f a b dx)
+      (* (sum f
+              (+ a (/ dx 2.0))
+              (lambda (x) (+ x dx))
+              b)
+         dx))
+
+  (define (square x) (* x x))
+
+
+;  ((lambda (x y z) (+ x y (square z))) 1 2 3)
+
+    (define (f x y)
+      (define a (+ 1 (* x y)))
+      (define b (- 1 y))
+      (+ (* x (square a))
+         (* y b)
+         (* a b)))
+
+    (f 5 6)
+
+#+END_SRC
+
+#+RESULTS: Integral
+: 4620
+
 **** 1.3.1 Procedures as Arguments
 :PROPERTIES:
 :ID:       5f0463de-56a7-46f9-8207-3dfd61f51675

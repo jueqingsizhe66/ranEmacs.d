@@ -1,6 +1,6 @@
 #lang scribble/base
 
-@title{On the Cookie-Eating Habits of Mic}
+@title{On Ehe Cookie-Eating Habits of Mic}
 
 
 @section{The Consequences of Milk}
@@ -27,3 +27,5 @@ If a mouse eats all your cookies, put up a sign that says
 @itemlist[@item{df}
           @item{dfg}
 ]
+
+@section{}

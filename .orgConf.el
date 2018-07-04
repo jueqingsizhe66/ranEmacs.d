@@ -962,15 +962,16 @@ In ~%s~:
    (scheme . t)
    ))
 
-;(setq scheme-program-name "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
-(setq scheme-program-name "c:\\Program Files\\Racket\\Racket.exe")
-(setq geiser-active-implementations '(racket))
-;(setq geiser-active-implementations '(chez))
+
+;(setq geiser-active-implementations '(racket))
+(setq geiser-active-implementations '(chez))
 
 (setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\a6nt\\scheme.exe")
 ;(setq geiser-chez-binary "K:\\DanFriedMan\\ChezScheme\\a6nt\\bin\\scheme")
 (setq geiser-racket-binary "c:\\Program Files\\Racket\\Racket.exe")
 
+(setq geiser-racket-init-file "~/.emacs.d/GTD/scheme/sicp-init.rkt")  
+(setq geiser-chez-init-file "~/.emacs.d/GTD/scheme/sicp-init.rkt")  
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 1. geiser-guile-binary   ;;
 ;; 2. geiser-racket-binary  ;;

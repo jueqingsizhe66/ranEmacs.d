@@ -99,11 +99,11 @@
     Assets:Savings:支付宝Alipay
     
 2018-06-24 购买wife夏季衣服1
-    Expenses:House-living  RMB 533
+    Equity:Wife  RMB 533
     Liabilities:花呗Huabei
 
 2018-06-24 商品购买2017款夏季衣服2
-    Expenses:House-living  RMB 360
+    Equity:Wife  RMB 360
     Liabilities:花呗Huabei
 
 2018-06-24 拼单收款
@@ -136,3 +136,12 @@
 2018-07-03 内部转账
     Assets:Savings:建行1593  RMB 1350
     Assets:Savings:建行7889
+
+2018-07-04 西安臊子面
+    Expenses:Food  RMB 16
+    Assets:Savings:支付宝Alipay
+
+
+2018-07-04 xinran 面膜
+    Equity:Wife  RMB 675
+    Assets:Savings:支付宝Alipay

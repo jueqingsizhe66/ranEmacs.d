@@ -42,3 +42,5 @@ ledger -f test.ledger bal
 ledger -f test.ledger bal 
 ledger -f test.ledger reg savings
 ledger -f test.ledger bal savings
+scribble gstd.scrbl 
+scribble gstd.scrbl 

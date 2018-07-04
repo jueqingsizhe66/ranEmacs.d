@@ -12,6 +12,7 @@
 (setq auto-mode-alist (cons '("\\.ss" . scheme-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rkt" . scheme-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.scm" . scheme-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.srcbl" . scheme-mode) auto-mode-alist))
 ;; bypass the interactive question and start the default interpreter
 (defun scheme-proc ()
   "Return the current Scheme process, starting one if necessary."
@@ -60,3 +61,5 @@
 
 
 (add-hook 'scribble-mode-hook #'geiser-mode)
+
+(add-hook 'scribble-mode-hook     #'enable-paredit-mode)

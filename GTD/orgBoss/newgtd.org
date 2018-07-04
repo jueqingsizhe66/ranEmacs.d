@@ -1256,7 +1256,7 @@ DEADLINE: <2018-07-01 周日>
    3. [ ] 处理结果
 
 *** TODO [#A] 双滑移英文初稿 <2018-06-20 周三 10:54>    [0/2]           :学术:
-DEADLINE: <2018-06-24 周日>
+DEADLINE: <2018-07-08 周日>
                     :PROPERTIES:
                     :Effort:   4:00
                     :END:
@@ -1269,6 +1269,7 @@ DEADLINE: <2018-06-24 周日>
                     
                     Good writing starts with a plan(I need to finish it)
 
+                    必须完成
 1. [ ] 方法部分
 
 2. [ ] 结果处理部分

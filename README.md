@@ -6304,6 +6304,31 @@ rackekt还有一点比chez方便的地方，就是加载文件还比较方便
 [Choosing-a-Scheme-Implementation][340]
 
 
+#### 重用性问题
+
+在[howardism literate-devops][76]也提到了重用性问题，但只是说可以把通过另外处理的数据输出给一个函数，而我需要的是一个代码段在多个函数快里面重用，
+于是我想这可以用geiser提供的初始加载文件即可！
+
+[scheme-init-file][343]
+
+    You can also specify a couple more `initialisation `parameters.
+For Guile, `geiser-guile-load-path` is a list of paths to add to its load path (and its compiled load path) when it’s started,
+while `geiser-guile-init-file` is the path to an initialisation file to be loaded on start-up.
+The equivalent variables for Racket are `geiser-racket-collects` and `geiser-racket-init-file`.
+
+
+`geiser-racket-collects` 可以指定额外库路经
+`geiser-racket-init-file` 可以指定初始化文件(一些基本函数)
+
+在orgConf.el设置如下:
+
+```
+(setq geiser-racket-init-file "~/.emacs.d/GTD/scheme/sicp-init.rkt")  
+```
+
+这样每次添加完之后直接`C-c C-c` 那么不用重启Emacs也可以在org babel的代码块使用了！很方便！
+
+
 ### 132. 添加scribble-mode,用racket写大论文
 
 `M-x package-install scribble-mode`
@@ -6670,3 +6695,4 @@ rackekt还有一点比chez方便的地方，就是加载文件还比较方便
 [340]: http://www.nongnu.org/geiser/geiser_3.html#Choosing-a-Scheme-implementation
 [341]: http://docs.racket-lang.org/scribble/getting-started.html
 [342]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/scribble.png
+[343]: http://www.nongnu.org/geiser/geiser_3.html#index-scheme-init-file
