@@ -1,0 +1,786 @@
+** 0° Yaw Angle
+
+
+*** 1. Backup test
+
+
+#+RESULTS: TEST Backup
+
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0\\"
+  pwd
+  ls sphere*.cas|awk -F"-" 'BEGIN{i=1}{print substr($5,0,length($5)-4),",",i; i=i+1}'
+#+END_SRC
+
+#+RESULTS:
+| 11.682901 |   1 |
+| 11.700288 |   2 |
+| 11.711878 |   3 |
+| 11.723468 |   4 |
+| 11.735058 |   5 |
+| 11.746648 |   6 |
+| 11.758239 |   7 |
+| 11.769829 |   8 |
+| 11.781419 |   9 |
+| 11.793009 |  10 |
+| 11.804599 |  11 |
+| 11.816189 |  12 |
+|  11.82778 |  13 |
+|  11.83937 |  14 |
+|  11.85096 |  15 |
+|  11.86255 |  16 |
+|  11.87414 |  17 |
+| 11.885731 |  18 |
+| 11.897321 |  19 |
+| 11.908911 |  20 |
+| 11.920501 |  21 |
+| 11.932091 |  22 |
+| 11.943681 |  23 |
+| 11.955272 |  24 |
+| 11.966862 |  25 |
+| 11.978452 |  26 |
+| 11.990042 |  27 |
+| 12.001632 |  28 |
+| 12.013223 |  29 |
+| 12.024813 |  30 |
+| 12.036403 |  31 |
+| 12.047993 |  32 |
+| 12.059583 |  33 |
+| 12.071174 |  34 |
+| 12.082764 |  35 |
+| 12.094354 |  36 |
+| 12.105944 |  37 |
+| 12.117534 |  38 |
+| 12.129124 |  39 |
+| 12.140715 |  40 |
+| 12.152305 |  41 |
+| 12.163895 |  42 |
+| 12.175485 |  43 |
+| 12.187075 |  44 |
+| 12.198666 |  45 |
+| 12.210256 |  46 |
+| 12.221846 |  47 |
+| 12.233436 |  48 |
+| 12.245026 |  49 |
+| 12.256617 |  50 |
+| 12.268207 |  51 |
+| 12.279797 |  52 |
+| 12.291387 |  53 |
+| 12.302977 |  54 |
+| 12.314567 |  55 |
+| 12.326158 |  56 |
+| 12.337748 |  57 |
+| 12.349338 |  58 |
+| 12.360928 |  59 |
+| 12.372518 |  60 |
+| 12.384109 |  61 |
+| 12.395699 |  62 |
+| 12.407289 |  63 |
+| 12.418879 |  64 |
+| 12.430469 |  65 |
+| 12.442059 |  66 |
+|  12.45365 |  67 |
+|  12.46524 |  68 |
+|  12.47683 |  69 |
+|  12.48842 |  70 |
+|  12.50001 |  71 |
+|   12.5116 |  72 |
+|  12.52319 |  73 |
+| 12.534781 |  74 |
+| 12.546371 |  75 |
+| 12.557961 |  76 |
+| 12.569551 |  77 |
+| 12.581141 |  78 |
+| 12.592731 |  79 |
+| 12.604321 |  80 |
+| 12.615911 |  81 |
+| 12.627501 |  82 |
+| 12.639092 |  83 |
+| 12.650682 |  84 |
+| 12.662272 |  85 |
+| 12.673862 |  86 |
+| 12.685452 |  87 |
+| 12.697042 |  88 |
+| 12.708633 |  89 |
+| 12.720223 |  90 |
+| 12.731813 |  91 |
+| 12.743403 |  92 |
+| 12.754993 |  93 |
+| 12.766584 |  94 |
+| 12.778174 |  95 |
+| 12.789764 |  96 |
+| 12.801354 |  97 |
+| 12.812944 |  98 |
+| 12.824535 |  99 |
+| 12.836125 | 100 |
+| 12.847715 | 101 |
+| 12.859305 | 102 |
+| 12.870895 | 103 |
+| 12.882486 | 104 |
+| 12.894076 | 105 |
+| 12.905666 | 106 |
+| 12.917256 | 107 |
+| 12.928846 | 108 |
+| 12.940437 | 109 |
+| 12.952027 | 110 |
+| 12.963617 | 111 |
+| 12.975207 | 112 |
+| 12.986797 | 113 |
+| 12.998387 | 114 |
+| 13.009977 | 115 |
+| 13.021568 | 116 |
+| 13.033158 | 117 |
+| 13.044748 | 118 |
+| 13.056338 | 119 |
+| 13.067928 | 120 |
+| 13.079519 | 121 |
+| 13.091109 | 122 |
+| 13.102699 | 123 |
+| 13.114289 | 124 |
+| 13.125879 | 125 |
+|  13.13747 | 126 |
+|  13.14906 | 127 |
+|  13.16065 | 128 |
+|  13.17224 | 129 |
+|  13.18383 | 130 |
+| 13.195421 | 131 |
+| 13.207011 | 132 |
+| 13.218601 | 133 |
+| 13.230191 | 134 |
+| 13.241781 | 135 |
+| 13.253372 | 136 |
+| 13.264962 | 137 |
+| 13.276552 | 138 |
+| 13.288142 | 139 |
+| 13.299732 | 140 |
+| 13.311322 | 141 |
+| 13.322913 | 142 |
+| 13.334503 | 143 |
+| 13.346093 | 144 |
+| 13.357683 | 145 |
+| 13.369273 | 146 |
+| 13.380863 | 147 |
+| 13.392454 | 148 |
+| 13.404044 | 149 |
+| 13.415634 | 150 |
+| 13.427224 | 151 |
+| 13.438815 | 152 |
+| 13.450405 | 153 |
+| 13.461995 | 154 |
+| 13.473585 | 155 |
+| 13.485175 | 156 |
+| 13.496766 | 157 |
+| 13.508356 | 158 |
+| 13.519946 | 159 |
+| 13.531536 | 160 |
+| 13.543126 | 161 |
+| 13.554716 | 162 |
+| 13.566307 | 163 |
+| 13.577897 | 164 |
+| 13.589487 | 165 |
+| 13.601077 | 166 |
+| 13.612667 | 167 |
+| 13.624258 | 168 |
+| 13.635848 | 169 |
+| 13.647438 | 170 |
+| 13.659028 | 171 |
+| 13.670618 | 172 |
+| 13.682208 | 173 |
+| 13.693799 | 174 |
+| 13.705389 | 175 |
+| 13.716979 | 176 |
+| 13.728569 | 177 |
+| 13.740159 | 178 |
+|  13.75175 | 179 |
+|  13.76334 | 180 |
+|  13.77493 | 181 |
+|  13.78652 | 182 |
+|  13.79811 | 183 |
+| 13.809701 | 184 |
+| 13.821291 | 185 |
+| 13.832881 | 186 |
+| 13.844471 | 187 |
+| 13.856061 | 188 |
+| 13.867651 | 189 |
+| 13.879242 | 190 |
+| 13.890832 | 191 |
+| 13.902422 | 192 |
+| 13.914012 | 193 |
+| 13.925602 | 194 |
+| 13.937193 | 195 |
+| 13.948783 | 196 |
+| 13.960373 | 197 |
+| 13.971963 | 198 |
+| 13.983553 | 199 |
+| 13.995144 | 200 |
+| 14.006734 | 201 |
+| 14.018324 | 202 |
+| 14.029914 | 203 |
+| 14.041504 | 204 |
+| 14.053094 | 205 |
+| 14.064685 | 206 |
+| 14.076275 | 207 |
+| 14.087865 | 208 |
+| 14.099455 | 209 |
+| 14.111045 | 210 |
+| 14.122636 | 211 |
+| 14.134226 | 212 |
+| 14.145816 | 213 |
+| 14.168996 | 214 |
+| 14.180586 | 215 |
+| 14.192177 | 216 |
+
+
+***  1.1 Backup
+
+#+NAME: Backup
+#+BEGIN_SRC bash :result value :dir M:\\FLUENTYAW15\\
+      pwd
+  #  ls *.cas|awk -F"-" '{print $5}'
+#  ls sphere*.cas|awk -F"-" 'BEGIN{i=1}{print substr($5,0,length($5)-8),",",i; i=i+1}'
+# 
+ls sphere*.cas|awk -F"-" 'BEGIN{i=1;prefix="sphere12-14-15-1.csv";}{print substr($5,0,length($5)-4),",",i >prefix; i=i+1}' 
+
+#+END_SRC
+
+#+RESULTS: Backup
+
+*** 2. Rename test
+
+****  cas
+
+
+#+NAME: TEST  rename cas file to 1,2,3
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0"
+   ls *.cas|awk -F"-" 'BEGIN{i=1;prefix="sphere12-14-15-1-";postfix=".cas"}
+     {originalFile=prefix""substr($5,0,length($5)-4);cmd="rename "originalFile" "sprintf("%03d",i)" "originalFile""postfix;i=i+1;print(cmd);}'
+
+#+END_SRC
+
+****  data
+一定要重视测试，现在测试明眼一看就有问题！！！！！！
+
+
+#+NAME: TEST  rename dat file to 1,2,3
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0"
+   ls *.dat|awk -F"-" 'BEGIN{i=1;prefix="sphere12-14-15-1-";postfix=".dat"}
+     {originalFile=prefix""substr($5,0,length($5)-4);cmd="rename "originalFile" "i" "originalFile""postfix;i=i+1;print(cmd);}'
+
+#+END_SRC
+
+#+RESULTS: TEST  rename dat file to 1,2,3
+| rename | sphere12-14-15-1-          |   1 | sphere12-14-15-1-.dat          |
+| rename | sphere12-14-15-1-11.682901 |   2 | sphere12-14-15-1-11.682901.dat |
+| rename | sphere12-14-15-1-11.700288 |   3 | sphere12-14-15-1-11.700288.dat |
+| rename | sphere12-14-15-1-11.711878 |   4 | sphere12-14-15-1-11.711878.dat |
+| rename | sphere12-14-15-1-11.723468 |   5 | sphere12-14-15-1-11.723468.dat |
+| rename | sphere12-14-15-1-11.735058 |   6 | sphere12-14-15-1-11.735058.dat |
+| rename | sphere12-14-15-1-11.746648 |   7 | sphere12-14-15-1-11.746648.dat |
+| rename | sphere12-14-15-1-11.758239 |   8 | sphere12-14-15-1-11.758239.dat |
+| rename | sphere12-14-15-1-11.769829 |   9 | sphere12-14-15-1-11.769829.dat |
+| rename | sphere12-14-15-1-11.781419 |  10 | sphere12-14-15-1-11.781419.dat |
+| rename | sphere12-14-15-1-11.793009 |  11 | sphere12-14-15-1-11.793009.dat |
+| rename | sphere12-14-15-1-11.804599 |  12 | sphere12-14-15-1-11.804599.dat |
+| rename | sphere12-14-15-1-11.816189 |  13 | sphere12-14-15-1-11.816189.dat |
+| rename | sphere12-14-15-1-11.827780 |  14 | sphere12-14-15-1-11.827780.dat |
+| rename | sphere12-14-15-1-11.839370 |  15 | sphere12-14-15-1-11.839370.dat |
+| rename | sphere12-14-15-1-11.850960 |  16 | sphere12-14-15-1-11.850960.dat |
+| rename | sphere12-14-15-1-11.862550 |  17 | sphere12-14-15-1-11.862550.dat |
+| rename | sphere12-14-15-1-11.874140 |  18 | sphere12-14-15-1-11.874140.dat |
+| rename | sphere12-14-15-1-11.885731 |  19 | sphere12-14-15-1-11.885731.dat |
+| rename | sphere12-14-15-1-11.897321 |  20 | sphere12-14-15-1-11.897321.dat |
+| rename | sphere12-14-15-1-11.908911 |  21 | sphere12-14-15-1-11.908911.dat |
+| rename | sphere12-14-15-1-11.920501 |  22 | sphere12-14-15-1-11.920501.dat |
+| rename | sphere12-14-15-1-11.932091 |  23 | sphere12-14-15-1-11.932091.dat |
+| rename | sphere12-14-15-1-11.943681 |  24 | sphere12-14-15-1-11.943681.dat |
+| rename | sphere12-14-15-1-11.955272 |  25 | sphere12-14-15-1-11.955272.dat |
+| rename | sphere12-14-15-1-11.966862 |  26 | sphere12-14-15-1-11.966862.dat |
+| rename | sphere12-14-15-1-11.978452 |  27 | sphere12-14-15-1-11.978452.dat |
+| rename | sphere12-14-15-1-11.990042 |  28 | sphere12-14-15-1-11.990042.dat |
+| rename | sphere12-14-15-1-12.001632 |  29 | sphere12-14-15-1-12.001632.dat |
+| rename | sphere12-14-15-1-12.013223 |  30 | sphere12-14-15-1-12.013223.dat |
+| rename | sphere12-14-15-1-12.024813 |  31 | sphere12-14-15-1-12.024813.dat |
+| rename | sphere12-14-15-1-12.036403 |  32 | sphere12-14-15-1-12.036403.dat |
+| rename | sphere12-14-15-1-12.047993 |  33 | sphere12-14-15-1-12.047993.dat |
+| rename | sphere12-14-15-1-12.059583 |  34 | sphere12-14-15-1-12.059583.dat |
+| rename | sphere12-14-15-1-12.071174 |  35 | sphere12-14-15-1-12.071174.dat |
+| rename | sphere12-14-15-1-12.082764 |  36 | sphere12-14-15-1-12.082764.dat |
+| rename | sphere12-14-15-1-12.094354 |  37 | sphere12-14-15-1-12.094354.dat |
+| rename | sphere12-14-15-1-12.105944 |  38 | sphere12-14-15-1-12.105944.dat |
+| rename | sphere12-14-15-1-12.117534 |  39 | sphere12-14-15-1-12.117534.dat |
+| rename | sphere12-14-15-1-12.129124 |  40 | sphere12-14-15-1-12.129124.dat |
+| rename | sphere12-14-15-1-12.140715 |  41 | sphere12-14-15-1-12.140715.dat |
+| rename | sphere12-14-15-1-12.152305 |  42 | sphere12-14-15-1-12.152305.dat |
+| rename | sphere12-14-15-1-12.163895 |  43 | sphere12-14-15-1-12.163895.dat |
+| rename | sphere12-14-15-1-12.175485 |  44 | sphere12-14-15-1-12.175485.dat |
+| rename | sphere12-14-15-1-12.187075 |  45 | sphere12-14-15-1-12.187075.dat |
+| rename | sphere12-14-15-1-12.198666 |  46 | sphere12-14-15-1-12.198666.dat |
+| rename | sphere12-14-15-1-12.210256 |  47 | sphere12-14-15-1-12.210256.dat |
+| rename | sphere12-14-15-1-12.221846 |  48 | sphere12-14-15-1-12.221846.dat |
+| rename | sphere12-14-15-1-12.233436 |  49 | sphere12-14-15-1-12.233436.dat |
+| rename | sphere12-14-15-1-12.245026 |  50 | sphere12-14-15-1-12.245026.dat |
+| rename | sphere12-14-15-1-12.256617 |  51 | sphere12-14-15-1-12.256617.dat |
+| rename | sphere12-14-15-1-12.268207 |  52 | sphere12-14-15-1-12.268207.dat |
+| rename | sphere12-14-15-1-12.279797 |  53 | sphere12-14-15-1-12.279797.dat |
+| rename | sphere12-14-15-1-12.291387 |  54 | sphere12-14-15-1-12.291387.dat |
+| rename | sphere12-14-15-1-12.302977 |  55 | sphere12-14-15-1-12.302977.dat |
+| rename | sphere12-14-15-1-12.314567 |  56 | sphere12-14-15-1-12.314567.dat |
+| rename | sphere12-14-15-1-12.326158 |  57 | sphere12-14-15-1-12.326158.dat |
+| rename | sphere12-14-15-1-12.337748 |  58 | sphere12-14-15-1-12.337748.dat |
+| rename | sphere12-14-15-1-12.349338 |  59 | sphere12-14-15-1-12.349338.dat |
+| rename | sphere12-14-15-1-12.360928 |  60 | sphere12-14-15-1-12.360928.dat |
+| rename | sphere12-14-15-1-12.372518 |  61 | sphere12-14-15-1-12.372518.dat |
+| rename | sphere12-14-15-1-12.384109 |  62 | sphere12-14-15-1-12.384109.dat |
+| rename | sphere12-14-15-1-12.395699 |  63 | sphere12-14-15-1-12.395699.dat |
+| rename | sphere12-14-15-1-12.407289 |  64 | sphere12-14-15-1-12.407289.dat |
+| rename | sphere12-14-15-1-12.418879 |  65 | sphere12-14-15-1-12.418879.dat |
+| rename | sphere12-14-15-1-12.430469 |  66 | sphere12-14-15-1-12.430469.dat |
+| rename | sphere12-14-15-1-12.442059 |  67 | sphere12-14-15-1-12.442059.dat |
+| rename | sphere12-14-15-1-12.453650 |  68 | sphere12-14-15-1-12.453650.dat |
+| rename | sphere12-14-15-1-12.465240 |  69 | sphere12-14-15-1-12.465240.dat |
+| rename | sphere12-14-15-1-12.476830 |  70 | sphere12-14-15-1-12.476830.dat |
+| rename | sphere12-14-15-1-12.488420 |  71 | sphere12-14-15-1-12.488420.dat |
+| rename | sphere12-14-15-1-12.500010 |  72 | sphere12-14-15-1-12.500010.dat |
+| rename | sphere12-14-15-1-12.511600 |  73 | sphere12-14-15-1-12.511600.dat |
+| rename | sphere12-14-15-1-12.523190 |  74 | sphere12-14-15-1-12.523190.dat |
+| rename | sphere12-14-15-1-12.534781 |  75 | sphere12-14-15-1-12.534781.dat |
+| rename | sphere12-14-15-1-12.546371 |  76 | sphere12-14-15-1-12.546371.dat |
+| rename | sphere12-14-15-1-12.557961 |  77 | sphere12-14-15-1-12.557961.dat |
+| rename | sphere12-14-15-1-12.569551 |  78 | sphere12-14-15-1-12.569551.dat |
+| rename | sphere12-14-15-1-12.581141 |  79 | sphere12-14-15-1-12.581141.dat |
+| rename | sphere12-14-15-1-12.592731 |  80 | sphere12-14-15-1-12.592731.dat |
+| rename | sphere12-14-15-1-12.604321 |  81 | sphere12-14-15-1-12.604321.dat |
+| rename | sphere12-14-15-1-12.615911 |  82 | sphere12-14-15-1-12.615911.dat |
+| rename | sphere12-14-15-1-12.627501 |  83 | sphere12-14-15-1-12.627501.dat |
+| rename | sphere12-14-15-1-12.639092 |  84 | sphere12-14-15-1-12.639092.dat |
+| rename | sphere12-14-15-1-12.650682 |  85 | sphere12-14-15-1-12.650682.dat |
+| rename | sphere12-14-15-1-12.662272 |  86 | sphere12-14-15-1-12.662272.dat |
+| rename | sphere12-14-15-1-12.673862 |  87 | sphere12-14-15-1-12.673862.dat |
+| rename | sphere12-14-15-1-12.685452 |  88 | sphere12-14-15-1-12.685452.dat |
+| rename | sphere12-14-15-1-12.697042 |  89 | sphere12-14-15-1-12.697042.dat |
+| rename | sphere12-14-15-1-12.708633 |  90 | sphere12-14-15-1-12.708633.dat |
+| rename | sphere12-14-15-1-12.720223 |  91 | sphere12-14-15-1-12.720223.dat |
+| rename | sphere12-14-15-1-12.731813 |  92 | sphere12-14-15-1-12.731813.dat |
+| rename | sphere12-14-15-1-12.743403 |  93 | sphere12-14-15-1-12.743403.dat |
+| rename | sphere12-14-15-1-12.754993 |  94 | sphere12-14-15-1-12.754993.dat |
+| rename | sphere12-14-15-1-12.766584 |  95 | sphere12-14-15-1-12.766584.dat |
+| rename | sphere12-14-15-1-12.778174 |  96 | sphere12-14-15-1-12.778174.dat |
+| rename | sphere12-14-15-1-12.789764 |  97 | sphere12-14-15-1-12.789764.dat |
+| rename | sphere12-14-15-1-12.801354 |  98 | sphere12-14-15-1-12.801354.dat |
+| rename | sphere12-14-15-1-12.812944 |  99 | sphere12-14-15-1-12.812944.dat |
+| rename | sphere12-14-15-1-12.824535 | 100 | sphere12-14-15-1-12.824535.dat |
+| rename | sphere12-14-15-1-12.836125 | 101 | sphere12-14-15-1-12.836125.dat |
+| rename | sphere12-14-15-1-12.847715 | 102 | sphere12-14-15-1-12.847715.dat |
+| rename | sphere12-14-15-1-12.859305 | 103 | sphere12-14-15-1-12.859305.dat |
+| rename | sphere12-14-15-1-12.870895 | 104 | sphere12-14-15-1-12.870895.dat |
+| rename | sphere12-14-15-1-12.882486 | 105 | sphere12-14-15-1-12.882486.dat |
+| rename | sphere12-14-15-1-12.894076 | 106 | sphere12-14-15-1-12.894076.dat |
+| rename | sphere12-14-15-1-12.905666 | 107 | sphere12-14-15-1-12.905666.dat |
+| rename | sphere12-14-15-1-12.917256 | 108 | sphere12-14-15-1-12.917256.dat |
+| rename | sphere12-14-15-1-12.928846 | 109 | sphere12-14-15-1-12.928846.dat |
+| rename | sphere12-14-15-1-12.940437 | 110 | sphere12-14-15-1-12.940437.dat |
+| rename | sphere12-14-15-1-12.952027 | 111 | sphere12-14-15-1-12.952027.dat |
+| rename | sphere12-14-15-1-12.963617 | 112 | sphere12-14-15-1-12.963617.dat |
+| rename | sphere12-14-15-1-12.975207 | 113 | sphere12-14-15-1-12.975207.dat |
+| rename | sphere12-14-15-1-12.986797 | 114 | sphere12-14-15-1-12.986797.dat |
+| rename | sphere12-14-15-1-12.998387 | 115 | sphere12-14-15-1-12.998387.dat |
+| rename | sphere12-14-15-1-13.009977 | 116 | sphere12-14-15-1-13.009977.dat |
+| rename | sphere12-14-15-1-13.021568 | 117 | sphere12-14-15-1-13.021568.dat |
+| rename | sphere12-14-15-1-13.033158 | 118 | sphere12-14-15-1-13.033158.dat |
+| rename | sphere12-14-15-1-13.044748 | 119 | sphere12-14-15-1-13.044748.dat |
+| rename | sphere12-14-15-1-13.056338 | 120 | sphere12-14-15-1-13.056338.dat |
+| rename | sphere12-14-15-1-13.067928 | 121 | sphere12-14-15-1-13.067928.dat |
+| rename | sphere12-14-15-1-13.079519 | 122 | sphere12-14-15-1-13.079519.dat |
+| rename | sphere12-14-15-1-13.091109 | 123 | sphere12-14-15-1-13.091109.dat |
+| rename | sphere12-14-15-1-13.102699 | 124 | sphere12-14-15-1-13.102699.dat |
+| rename | sphere12-14-15-1-13.114289 | 125 | sphere12-14-15-1-13.114289.dat |
+| rename | sphere12-14-15-1-13.125879 | 126 | sphere12-14-15-1-13.125879.dat |
+| rename | sphere12-14-15-1-13.137470 | 127 | sphere12-14-15-1-13.137470.dat |
+| rename | sphere12-14-15-1-13.149060 | 128 | sphere12-14-15-1-13.149060.dat |
+| rename | sphere12-14-15-1-13.160650 | 129 | sphere12-14-15-1-13.160650.dat |
+| rename | sphere12-14-15-1-13.172240 | 130 | sphere12-14-15-1-13.172240.dat |
+| rename | sphere12-14-15-1-13.183830 | 131 | sphere12-14-15-1-13.183830.dat |
+| rename | sphere12-14-15-1-13.195421 | 132 | sphere12-14-15-1-13.195421.dat |
+| rename | sphere12-14-15-1-13.207011 | 133 | sphere12-14-15-1-13.207011.dat |
+| rename | sphere12-14-15-1-13.218601 | 134 | sphere12-14-15-1-13.218601.dat |
+| rename | sphere12-14-15-1-13.230191 | 135 | sphere12-14-15-1-13.230191.dat |
+| rename | sphere12-14-15-1-13.241781 | 136 | sphere12-14-15-1-13.241781.dat |
+| rename | sphere12-14-15-1-13.253372 | 137 | sphere12-14-15-1-13.253372.dat |
+| rename | sphere12-14-15-1-13.264962 | 138 | sphere12-14-15-1-13.264962.dat |
+| rename | sphere12-14-15-1-13.276552 | 139 | sphere12-14-15-1-13.276552.dat |
+| rename | sphere12-14-15-1-13.288142 | 140 | sphere12-14-15-1-13.288142.dat |
+| rename | sphere12-14-15-1-13.299732 | 141 | sphere12-14-15-1-13.299732.dat |
+| rename | sphere12-14-15-1-13.311322 | 142 | sphere12-14-15-1-13.311322.dat |
+| rename | sphere12-14-15-1-13.322913 | 143 | sphere12-14-15-1-13.322913.dat |
+| rename | sphere12-14-15-1-13.334503 | 144 | sphere12-14-15-1-13.334503.dat |
+| rename | sphere12-14-15-1-13.346093 | 145 | sphere12-14-15-1-13.346093.dat |
+| rename | sphere12-14-15-1-13.357683 | 146 | sphere12-14-15-1-13.357683.dat |
+| rename | sphere12-14-15-1-13.369273 | 147 | sphere12-14-15-1-13.369273.dat |
+| rename | sphere12-14-15-1-13.380863 | 148 | sphere12-14-15-1-13.380863.dat |
+| rename | sphere12-14-15-1-13.392454 | 149 | sphere12-14-15-1-13.392454.dat |
+| rename | sphere12-14-15-1-13.404044 | 150 | sphere12-14-15-1-13.404044.dat |
+| rename | sphere12-14-15-1-13.415634 | 151 | sphere12-14-15-1-13.415634.dat |
+| rename | sphere12-14-15-1-13.427224 | 152 | sphere12-14-15-1-13.427224.dat |
+| rename | sphere12-14-15-1-13.438815 | 153 | sphere12-14-15-1-13.438815.dat |
+| rename | sphere12-14-15-1-13.450405 | 154 | sphere12-14-15-1-13.450405.dat |
+| rename | sphere12-14-15-1-13.461995 | 155 | sphere12-14-15-1-13.461995.dat |
+| rename | sphere12-14-15-1-13.473585 | 156 | sphere12-14-15-1-13.473585.dat |
+| rename | sphere12-14-15-1-13.485175 | 157 | sphere12-14-15-1-13.485175.dat |
+| rename | sphere12-14-15-1-13.496766 | 158 | sphere12-14-15-1-13.496766.dat |
+| rename | sphere12-14-15-1-13.508356 | 159 | sphere12-14-15-1-13.508356.dat |
+| rename | sphere12-14-15-1-13.519946 | 160 | sphere12-14-15-1-13.519946.dat |
+| rename | sphere12-14-15-1-13.531536 | 161 | sphere12-14-15-1-13.531536.dat |
+| rename | sphere12-14-15-1-13.543126 | 162 | sphere12-14-15-1-13.543126.dat |
+| rename | sphere12-14-15-1-13.554716 | 163 | sphere12-14-15-1-13.554716.dat |
+| rename | sphere12-14-15-1-13.566307 | 164 | sphere12-14-15-1-13.566307.dat |
+| rename | sphere12-14-15-1-13.577897 | 165 | sphere12-14-15-1-13.577897.dat |
+| rename | sphere12-14-15-1-13.589487 | 166 | sphere12-14-15-1-13.589487.dat |
+| rename | sphere12-14-15-1-13.601077 | 167 | sphere12-14-15-1-13.601077.dat |
+| rename | sphere12-14-15-1-13.612667 | 168 | sphere12-14-15-1-13.612667.dat |
+| rename | sphere12-14-15-1-13.624258 | 169 | sphere12-14-15-1-13.624258.dat |
+| rename | sphere12-14-15-1-13.635848 | 170 | sphere12-14-15-1-13.635848.dat |
+| rename | sphere12-14-15-1-13.647438 | 171 | sphere12-14-15-1-13.647438.dat |
+| rename | sphere12-14-15-1-13.659028 | 172 | sphere12-14-15-1-13.659028.dat |
+| rename | sphere12-14-15-1-13.670618 | 173 | sphere12-14-15-1-13.670618.dat |
+| rename | sphere12-14-15-1-13.682208 | 174 | sphere12-14-15-1-13.682208.dat |
+| rename | sphere12-14-15-1-13.693799 | 175 | sphere12-14-15-1-13.693799.dat |
+| rename | sphere12-14-15-1-13.705389 | 176 | sphere12-14-15-1-13.705389.dat |
+| rename | sphere12-14-15-1-13.716979 | 177 | sphere12-14-15-1-13.716979.dat |
+| rename | sphere12-14-15-1-13.728569 | 178 | sphere12-14-15-1-13.728569.dat |
+| rename | sphere12-14-15-1-13.740159 | 179 | sphere12-14-15-1-13.740159.dat |
+| rename | sphere12-14-15-1-13.751750 | 180 | sphere12-14-15-1-13.751750.dat |
+| rename | sphere12-14-15-1-13.763340 | 181 | sphere12-14-15-1-13.763340.dat |
+| rename | sphere12-14-15-1-13.774930 | 182 | sphere12-14-15-1-13.774930.dat |
+| rename | sphere12-14-15-1-13.786520 | 183 | sphere12-14-15-1-13.786520.dat |
+| rename | sphere12-14-15-1-13.798110 | 184 | sphere12-14-15-1-13.798110.dat |
+| rename | sphere12-14-15-1-13.809701 | 185 | sphere12-14-15-1-13.809701.dat |
+| rename | sphere12-14-15-1-13.821291 | 186 | sphere12-14-15-1-13.821291.dat |
+| rename | sphere12-14-15-1-13.832881 | 187 | sphere12-14-15-1-13.832881.dat |
+| rename | sphere12-14-15-1-13.844471 | 188 | sphere12-14-15-1-13.844471.dat |
+| rename | sphere12-14-15-1-13.856061 | 189 | sphere12-14-15-1-13.856061.dat |
+| rename | sphere12-14-15-1-13.867651 | 190 | sphere12-14-15-1-13.867651.dat |
+| rename | sphere12-14-15-1-13.879242 | 191 | sphere12-14-15-1-13.879242.dat |
+| rename | sphere12-14-15-1-13.890832 | 192 | sphere12-14-15-1-13.890832.dat |
+| rename | sphere12-14-15-1-13.902422 | 193 | sphere12-14-15-1-13.902422.dat |
+| rename | sphere12-14-15-1-13.914012 | 194 | sphere12-14-15-1-13.914012.dat |
+| rename | sphere12-14-15-1-13.925602 | 195 | sphere12-14-15-1-13.925602.dat |
+| rename | sphere12-14-15-1-13.937193 | 196 | sphere12-14-15-1-13.937193.dat |
+| rename | sphere12-14-15-1-13.948783 | 197 | sphere12-14-15-1-13.948783.dat |
+| rename | sphere12-14-15-1-13.960373 | 198 | sphere12-14-15-1-13.960373.dat |
+| rename | sphere12-14-15-1-13.971963 | 199 | sphere12-14-15-1-13.971963.dat |
+| rename | sphere12-14-15-1-13.983553 | 200 | sphere12-14-15-1-13.983553.dat |
+| rename | sphere12-14-15-1-13.995144 | 201 | sphere12-14-15-1-13.995144.dat |
+| rename | sphere12-14-15-1-14.006734 | 202 | sphere12-14-15-1-14.006734.dat |
+| rename | sphere12-14-15-1-14.018324 | 203 | sphere12-14-15-1-14.018324.dat |
+| rename | sphere12-14-15-1-14.029914 | 204 | sphere12-14-15-1-14.029914.dat |
+| rename | sphere12-14-15-1-14.041504 | 205 | sphere12-14-15-1-14.041504.dat |
+| rename | sphere12-14-15-1-14.053094 | 206 | sphere12-14-15-1-14.053094.dat |
+| rename | sphere12-14-15-1-14.064685 | 207 | sphere12-14-15-1-14.064685.dat |
+| rename | sphere12-14-15-1-14.076275 | 208 | sphere12-14-15-1-14.076275.dat |
+| rename | sphere12-14-15-1-14.087865 | 209 | sphere12-14-15-1-14.087865.dat |
+| rename | sphere12-14-15-1-14.099455 | 210 | sphere12-14-15-1-14.099455.dat |
+| rename | sphere12-14-15-1-14.111045 | 211 | sphere12-14-15-1-14.111045.dat |
+| rename | sphere12-14-15-1-14.122636 | 212 | sphere12-14-15-1-14.122636.dat |
+| rename | sphere12-14-15-1-14.134226 | 213 | sphere12-14-15-1-14.134226.dat |
+| rename | sphere12-14-15-1-14.145816 | 214 | sphere12-14-15-1-14.145816.dat |
+| rename | sphere12-14-15-1-14.168996 | 215 | sphere12-14-15-1-14.168996.dat |
+| rename | sphere12-14-15-1-14.180586 | 216 | sphere12-14-15-1-14.180586.dat |
+| rename | sphere12-14-15-1-14.192177 | 217 | sphere12-14-15-1-14.192177.dat |
+
+
+rename第二列是要替换的表达式  第三列是要替换的形式(缩列形式)  第四列是文件名
+
+#+RESULTS: TEST rename file to 1,2,3
+
+*** 2.1 Rename 
+
+****  cas
+
+
+#+NAME:  rename cas file to 1,2,3
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0"
+   ls *.cas|awk -F"-" 'BEGIN{i=1;prefix="sphere12-14-15-1-";postfix=".cas"}
+     {originalFile=prefix""substr($5,0,length($5)-4);cmd="rename "originalFile" "i" "originalFile""postfix;i=i+1;system(cmd);}'
+
+#+END_SRC
+
+#+RESULTS: rename cas file to 1,2,3
+
+****  dat
+
+
+#+NAME:  rename dat file to 1,2,3
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0"
+   ls *.dat|awk -F"-" 'BEGIN{i=1;prefix="sphere12-14-15-1-";postfix=".dat"}
+     {originalFile=prefix""substr($5,0,length($5)-4);cmd="rename "originalFile" "i" "originalFile""postfix;i=i+1;system(cmd);}'
+
+#+END_SRC
+
+#+RESULTS: rename dat file to 1,2,3
+
+
+开始进行tecplot处理
+
+****  tecplot
+
+需要把tecplot路径放到path中! 事先录制好脚本，安排好文件名字！
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0"
+  tec360.exe fluent17.mcr
+#+END_SRC
+
+#+RESULTS:
+
+
+***  3. Recovery Tests
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0\\"
+  cat sphere*.csv|awk -F, 'BEGIN{prefix="sphere12-14-15-1-";postfix=".cas"}
+{output=prefix""substr($1,0,length($1)-1)""postfix;input=sprintf("%03d",$2)""postfix;cmd="rename "input" "output" "input;print cmd;}'
+
+#+END_SRC
+
+#+RESULTS:
+| rename | 001.cas | sphere12-14-15-1-11.682901.cas | 001.cas |
+| rename | 002.cas | sphere12-14-15-1-11.700288.cas | 002.cas |
+| rename | 003.cas | sphere12-14-15-1-11.711878.cas | 003.cas |
+| rename | 004.cas | sphere12-14-15-1-11.723468.cas | 004.cas |
+| rename | 005.cas | sphere12-14-15-1-11.735058.cas | 005.cas |
+| rename | 006.cas | sphere12-14-15-1-11.746648.cas | 006.cas |
+| rename | 007.cas | sphere12-14-15-1-11.758239.cas | 007.cas |
+| rename | 008.cas | sphere12-14-15-1-11.769829.cas | 008.cas |
+| rename | 009.cas | sphere12-14-15-1-11.781419.cas | 009.cas |
+| rename | 010.cas | sphere12-14-15-1-11.793009.cas | 010.cas |
+| rename | 011.cas | sphere12-14-15-1-11.804599.cas | 011.cas |
+| rename | 012.cas | sphere12-14-15-1-11.816189.cas | 012.cas |
+| rename | 013.cas | sphere12-14-15-1-11.827780.cas | 013.cas |
+| rename | 014.cas | sphere12-14-15-1-11.839370.cas | 014.cas |
+| rename | 015.cas | sphere12-14-15-1-11.850960.cas | 015.cas |
+| rename | 016.cas | sphere12-14-15-1-11.862550.cas | 016.cas |
+| rename | 017.cas | sphere12-14-15-1-11.874140.cas | 017.cas |
+| rename | 018.cas | sphere12-14-15-1-11.885731.cas | 018.cas |
+| rename | 019.cas | sphere12-14-15-1-11.897321.cas | 019.cas |
+| rename | 020.cas | sphere12-14-15-1-11.908911.cas | 020.cas |
+| rename | 021.cas | sphere12-14-15-1-11.920501.cas | 021.cas |
+| rename | 022.cas | sphere12-14-15-1-11.932091.cas | 022.cas |
+| rename | 023.cas | sphere12-14-15-1-11.943681.cas | 023.cas |
+| rename | 024.cas | sphere12-14-15-1-11.955272.cas | 024.cas |
+| rename | 025.cas | sphere12-14-15-1-11.966862.cas | 025.cas |
+| rename | 026.cas | sphere12-14-15-1-11.978452.cas | 026.cas |
+| rename | 027.cas | sphere12-14-15-1-11.990042.cas | 027.cas |
+| rename | 028.cas | sphere12-14-15-1-12.001632.cas | 028.cas |
+| rename | 029.cas | sphere12-14-15-1-12.013223.cas | 029.cas |
+| rename | 030.cas | sphere12-14-15-1-12.024813.cas | 030.cas |
+| rename | 031.cas | sphere12-14-15-1-12.036403.cas | 031.cas |
+| rename | 032.cas | sphere12-14-15-1-12.047993.cas | 032.cas |
+| rename | 033.cas | sphere12-14-15-1-12.059583.cas | 033.cas |
+| rename | 034.cas | sphere12-14-15-1-12.071174.cas | 034.cas |
+| rename | 035.cas | sphere12-14-15-1-12.082764.cas | 035.cas |
+| rename | 036.cas | sphere12-14-15-1-12.094354.cas | 036.cas |
+| rename | 037.cas | sphere12-14-15-1-12.105944.cas | 037.cas |
+| rename | 038.cas | sphere12-14-15-1-12.117534.cas | 038.cas |
+| rename | 039.cas | sphere12-14-15-1-12.129124.cas | 039.cas |
+| rename | 040.cas | sphere12-14-15-1-12.140715.cas | 040.cas |
+| rename | 041.cas | sphere12-14-15-1-12.152305.cas | 041.cas |
+| rename | 042.cas | sphere12-14-15-1-12.163895.cas | 042.cas |
+| rename | 043.cas | sphere12-14-15-1-12.175485.cas | 043.cas |
+| rename | 044.cas | sphere12-14-15-1-12.187075.cas | 044.cas |
+| rename | 045.cas | sphere12-14-15-1-12.198666.cas | 045.cas |
+| rename | 046.cas | sphere12-14-15-1-12.210256.cas | 046.cas |
+| rename | 047.cas | sphere12-14-15-1-12.221846.cas | 047.cas |
+| rename | 048.cas | sphere12-14-15-1-12.233436.cas | 048.cas |
+| rename | 049.cas | sphere12-14-15-1-12.245026.cas | 049.cas |
+| rename | 050.cas | sphere12-14-15-1-12.256617.cas | 050.cas |
+| rename | 051.cas | sphere12-14-15-1-12.268207.cas | 051.cas |
+| rename | 052.cas | sphere12-14-15-1-12.279797.cas | 052.cas |
+| rename | 053.cas | sphere12-14-15-1-12.291387.cas | 053.cas |
+| rename | 054.cas | sphere12-14-15-1-12.302977.cas | 054.cas |
+| rename | 055.cas | sphere12-14-15-1-12.314567.cas | 055.cas |
+| rename | 056.cas | sphere12-14-15-1-12.326158.cas | 056.cas |
+| rename | 057.cas | sphere12-14-15-1-12.337748.cas | 057.cas |
+| rename | 058.cas | sphere12-14-15-1-12.349338.cas | 058.cas |
+| rename | 059.cas | sphere12-14-15-1-12.360928.cas | 059.cas |
+| rename | 060.cas | sphere12-14-15-1-12.372518.cas | 060.cas |
+| rename | 061.cas | sphere12-14-15-1-12.384109.cas | 061.cas |
+| rename | 062.cas | sphere12-14-15-1-12.395699.cas | 062.cas |
+| rename | 063.cas | sphere12-14-15-1-12.407289.cas | 063.cas |
+| rename | 064.cas | sphere12-14-15-1-12.418879.cas | 064.cas |
+| rename | 065.cas | sphere12-14-15-1-12.430469.cas | 065.cas |
+| rename | 066.cas | sphere12-14-15-1-12.442059.cas | 066.cas |
+| rename | 067.cas | sphere12-14-15-1-12.453650.cas | 067.cas |
+| rename | 068.cas | sphere12-14-15-1-12.465240.cas | 068.cas |
+| rename | 069.cas | sphere12-14-15-1-12.476830.cas | 069.cas |
+| rename | 070.cas | sphere12-14-15-1-12.488420.cas | 070.cas |
+| rename | 071.cas | sphere12-14-15-1-12.500010.cas | 071.cas |
+| rename | 072.cas | sphere12-14-15-1-12.511600.cas | 072.cas |
+| rename | 073.cas | sphere12-14-15-1-12.523190.cas | 073.cas |
+| rename | 074.cas | sphere12-14-15-1-12.534781.cas | 074.cas |
+| rename | 075.cas | sphere12-14-15-1-12.546371.cas | 075.cas |
+| rename | 076.cas | sphere12-14-15-1-12.557961.cas | 076.cas |
+| rename | 077.cas | sphere12-14-15-1-12.569551.cas | 077.cas |
+| rename | 078.cas | sphere12-14-15-1-12.581141.cas | 078.cas |
+| rename | 079.cas | sphere12-14-15-1-12.592731.cas | 079.cas |
+| rename | 080.cas | sphere12-14-15-1-12.604321.cas | 080.cas |
+| rename | 081.cas | sphere12-14-15-1-12.615911.cas | 081.cas |
+| rename | 082.cas | sphere12-14-15-1-12.627501.cas | 082.cas |
+| rename | 083.cas | sphere12-14-15-1-12.639092.cas | 083.cas |
+| rename | 084.cas | sphere12-14-15-1-12.650682.cas | 084.cas |
+| rename | 085.cas | sphere12-14-15-1-12.662272.cas | 085.cas |
+| rename | 086.cas | sphere12-14-15-1-12.673862.cas | 086.cas |
+| rename | 087.cas | sphere12-14-15-1-12.685452.cas | 087.cas |
+| rename | 088.cas | sphere12-14-15-1-12.697042.cas | 088.cas |
+| rename | 089.cas | sphere12-14-15-1-12.708633.cas | 089.cas |
+| rename | 090.cas | sphere12-14-15-1-12.720223.cas | 090.cas |
+| rename | 091.cas | sphere12-14-15-1-12.731813.cas | 091.cas |
+| rename | 092.cas | sphere12-14-15-1-12.743403.cas | 092.cas |
+| rename | 093.cas | sphere12-14-15-1-12.754993.cas | 093.cas |
+| rename | 094.cas | sphere12-14-15-1-12.766584.cas | 094.cas |
+| rename | 095.cas | sphere12-14-15-1-12.778174.cas | 095.cas |
+| rename | 096.cas | sphere12-14-15-1-12.789764.cas | 096.cas |
+| rename | 097.cas | sphere12-14-15-1-12.801354.cas | 097.cas |
+| rename | 098.cas | sphere12-14-15-1-12.812944.cas | 098.cas |
+| rename | 099.cas | sphere12-14-15-1-12.824535.cas | 099.cas |
+| rename | 100.cas | sphere12-14-15-1-12.836125.cas | 100.cas |
+| rename | 101.cas | sphere12-14-15-1-12.847715.cas | 101.cas |
+| rename | 102.cas | sphere12-14-15-1-12.859305.cas | 102.cas |
+| rename | 103.cas | sphere12-14-15-1-12.870895.cas | 103.cas |
+| rename | 104.cas | sphere12-14-15-1-12.882486.cas | 104.cas |
+| rename | 105.cas | sphere12-14-15-1-12.894076.cas | 105.cas |
+| rename | 106.cas | sphere12-14-15-1-12.905666.cas | 106.cas |
+| rename | 107.cas | sphere12-14-15-1-12.917256.cas | 107.cas |
+| rename | 108.cas | sphere12-14-15-1-12.928846.cas | 108.cas |
+| rename | 109.cas | sphere12-14-15-1-12.940437.cas | 109.cas |
+| rename | 110.cas | sphere12-14-15-1-12.952027.cas | 110.cas |
+| rename | 111.cas | sphere12-14-15-1-12.963617.cas | 111.cas |
+| rename | 112.cas | sphere12-14-15-1-12.975207.cas | 112.cas |
+| rename | 113.cas | sphere12-14-15-1-12.986797.cas | 113.cas |
+| rename | 114.cas | sphere12-14-15-1-12.998387.cas | 114.cas |
+| rename | 115.cas | sphere12-14-15-1-13.009977.cas | 115.cas |
+| rename | 116.cas | sphere12-14-15-1-13.021568.cas | 116.cas |
+| rename | 117.cas | sphere12-14-15-1-13.033158.cas | 117.cas |
+| rename | 118.cas | sphere12-14-15-1-13.044748.cas | 118.cas |
+| rename | 119.cas | sphere12-14-15-1-13.056338.cas | 119.cas |
+| rename | 120.cas | sphere12-14-15-1-13.067928.cas | 120.cas |
+| rename | 121.cas | sphere12-14-15-1-13.079519.cas | 121.cas |
+| rename | 122.cas | sphere12-14-15-1-13.091109.cas | 122.cas |
+| rename | 123.cas | sphere12-14-15-1-13.102699.cas | 123.cas |
+| rename | 124.cas | sphere12-14-15-1-13.114289.cas | 124.cas |
+| rename | 125.cas | sphere12-14-15-1-13.125879.cas | 125.cas |
+| rename | 126.cas | sphere12-14-15-1-13.137470.cas | 126.cas |
+| rename | 127.cas | sphere12-14-15-1-13.149060.cas | 127.cas |
+| rename | 128.cas | sphere12-14-15-1-13.160650.cas | 128.cas |
+| rename | 129.cas | sphere12-14-15-1-13.172240.cas | 129.cas |
+| rename | 130.cas | sphere12-14-15-1-13.183830.cas | 130.cas |
+| rename | 131.cas | sphere12-14-15-1-13.195421.cas | 131.cas |
+| rename | 132.cas | sphere12-14-15-1-13.207011.cas | 132.cas |
+| rename | 133.cas | sphere12-14-15-1-13.218601.cas | 133.cas |
+| rename | 134.cas | sphere12-14-15-1-13.230191.cas | 134.cas |
+| rename | 135.cas | sphere12-14-15-1-13.241781.cas | 135.cas |
+| rename | 136.cas | sphere12-14-15-1-13.253372.cas | 136.cas |
+| rename | 137.cas | sphere12-14-15-1-13.264962.cas | 137.cas |
+| rename | 138.cas | sphere12-14-15-1-13.276552.cas | 138.cas |
+| rename | 139.cas | sphere12-14-15-1-13.288142.cas | 139.cas |
+| rename | 140.cas | sphere12-14-15-1-13.299732.cas | 140.cas |
+| rename | 141.cas | sphere12-14-15-1-13.311322.cas | 141.cas |
+| rename | 142.cas | sphere12-14-15-1-13.322913.cas | 142.cas |
+| rename | 143.cas | sphere12-14-15-1-13.334503.cas | 143.cas |
+| rename | 144.cas | sphere12-14-15-1-13.346093.cas | 144.cas |
+| rename | 145.cas | sphere12-14-15-1-13.357683.cas | 145.cas |
+| rename | 146.cas | sphere12-14-15-1-13.369273.cas | 146.cas |
+| rename | 147.cas | sphere12-14-15-1-13.380863.cas | 147.cas |
+| rename | 148.cas | sphere12-14-15-1-13.392454.cas | 148.cas |
+| rename | 149.cas | sphere12-14-15-1-13.404044.cas | 149.cas |
+| rename | 150.cas | sphere12-14-15-1-13.415634.cas | 150.cas |
+| rename | 151.cas | sphere12-14-15-1-13.427224.cas | 151.cas |
+| rename | 152.cas | sphere12-14-15-1-13.438815.cas | 152.cas |
+| rename | 153.cas | sphere12-14-15-1-13.450405.cas | 153.cas |
+| rename | 154.cas | sphere12-14-15-1-13.461995.cas | 154.cas |
+| rename | 155.cas | sphere12-14-15-1-13.473585.cas | 155.cas |
+| rename | 156.cas | sphere12-14-15-1-13.485175.cas | 156.cas |
+| rename | 157.cas | sphere12-14-15-1-13.496766.cas | 157.cas |
+| rename | 158.cas | sphere12-14-15-1-13.508356.cas | 158.cas |
+| rename | 159.cas | sphere12-14-15-1-13.519946.cas | 159.cas |
+| rename | 160.cas | sphere12-14-15-1-13.531536.cas | 160.cas |
+| rename | 161.cas | sphere12-14-15-1-13.543126.cas | 161.cas |
+| rename | 162.cas | sphere12-14-15-1-13.554716.cas | 162.cas |
+| rename | 163.cas | sphere12-14-15-1-13.566307.cas | 163.cas |
+| rename | 164.cas | sphere12-14-15-1-13.577897.cas | 164.cas |
+| rename | 165.cas | sphere12-14-15-1-13.589487.cas | 165.cas |
+| rename | 166.cas | sphere12-14-15-1-13.601077.cas | 166.cas |
+| rename | 167.cas | sphere12-14-15-1-13.612667.cas | 167.cas |
+| rename | 168.cas | sphere12-14-15-1-13.624258.cas | 168.cas |
+| rename | 169.cas | sphere12-14-15-1-13.635848.cas | 169.cas |
+| rename | 170.cas | sphere12-14-15-1-13.647438.cas | 170.cas |
+| rename | 171.cas | sphere12-14-15-1-13.659028.cas | 171.cas |
+| rename | 172.cas | sphere12-14-15-1-13.670618.cas | 172.cas |
+| rename | 173.cas | sphere12-14-15-1-13.682208.cas | 173.cas |
+| rename | 174.cas | sphere12-14-15-1-13.693799.cas | 174.cas |
+| rename | 175.cas | sphere12-14-15-1-13.705389.cas | 175.cas |
+| rename | 176.cas | sphere12-14-15-1-13.716979.cas | 176.cas |
+| rename | 177.cas | sphere12-14-15-1-13.728569.cas | 177.cas |
+| rename | 178.cas | sphere12-14-15-1-13.740159.cas | 178.cas |
+| rename | 179.cas | sphere12-14-15-1-13.751750.cas | 179.cas |
+| rename | 180.cas | sphere12-14-15-1-13.763340.cas | 180.cas |
+| rename | 181.cas | sphere12-14-15-1-13.774930.cas | 181.cas |
+| rename | 182.cas | sphere12-14-15-1-13.786520.cas | 182.cas |
+| rename | 183.cas | sphere12-14-15-1-13.798110.cas | 183.cas |
+| rename | 184.cas | sphere12-14-15-1-13.809701.cas | 184.cas |
+| rename | 185.cas | sphere12-14-15-1-13.821291.cas | 185.cas |
+| rename | 186.cas | sphere12-14-15-1-13.832881.cas | 186.cas |
+| rename | 187.cas | sphere12-14-15-1-13.844471.cas | 187.cas |
+| rename | 188.cas | sphere12-14-15-1-13.856061.cas | 188.cas |
+| rename | 189.cas | sphere12-14-15-1-13.867651.cas | 189.cas |
+| rename | 190.cas | sphere12-14-15-1-13.879242.cas | 190.cas |
+| rename | 191.cas | sphere12-14-15-1-13.890832.cas | 191.cas |
+| rename | 192.cas | sphere12-14-15-1-13.902422.cas | 192.cas |
+| rename | 193.cas | sphere12-14-15-1-13.914012.cas | 193.cas |
+| rename | 194.cas | sphere12-14-15-1-13.925602.cas | 194.cas |
+| rename | 195.cas | sphere12-14-15-1-13.937193.cas | 195.cas |
+| rename | 196.cas | sphere12-14-15-1-13.948783.cas | 196.cas |
+| rename | 197.cas | sphere12-14-15-1-13.960373.cas | 197.cas |
+| rename | 198.cas | sphere12-14-15-1-13.971963.cas | 198.cas |
+| rename | 199.cas | sphere12-14-15-1-13.983553.cas | 199.cas |
+| rename | 200.cas | sphere12-14-15-1-13.995144.cas | 200.cas |
+| rename | 201.cas | sphere12-14-15-1-14.006734.cas | 201.cas |
+| rename | 202.cas | sphere12-14-15-1-14.018324.cas | 202.cas |
+| rename | 203.cas | sphere12-14-15-1-14.029914.cas | 203.cas |
+| rename | 204.cas | sphere12-14-15-1-14.041504.cas | 204.cas |
+| rename | 205.cas | sphere12-14-15-1-14.053094.cas | 205.cas |
+| rename | 206.cas | sphere12-14-15-1-14.064685.cas | 206.cas |
+| rename | 207.cas | sphere12-14-15-1-14.076275.cas | 207.cas |
+| rename | 208.cas | sphere12-14-15-1-14.087865.cas | 208.cas |
+| rename | 209.cas | sphere12-14-15-1-14.099455.cas | 209.cas |
+| rename | 210.cas | sphere12-14-15-1-14.111045.cas | 210.cas |
+| rename | 211.cas | sphere12-14-15-1-14.122636.cas | 211.cas |
+| rename | 212.cas | sphere12-14-15-1-14.134226.cas | 212.cas |
+| rename | 213.cas | sphere12-14-15-1-14.145816.cas | 213.cas |
+| rename | 214.cas | sphere12-14-15-1-14.168996.cas | 214.cas |
+| rename | 215.cas | sphere12-14-15-1-14.180586.cas | 215.cas |
+| rename | 216.cas | sphere12-14-15-1-14.192177.cas | 216.cas |
+
+*** 3.1 Recovery
+
+
+****  cas
+
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0\\\\"
+  cat sphere*.csv|awk -F, 'BEGIN{prefix="sphere12-14-15-1-";postfix=".cas"}
+{output=prefix""substr($1,0,length($1)-1)""postfix;input=sprintf("%03d",$2)""postfix;cmd="rename "input" "output" "input;system(cmd);}'
+
+#+END_SRC
+
+#+RESULTS:
+
+****  dat
+
+
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0\\\\"
+  cat sphere*.csv|awk -F, 'BEGIN{prefix="sphere12-14-15-1-";postfix=".dat"}
+{output=prefix""substr($1,0,length($1)-1)""postfix;input=sprintf("%03d",$2)""postfix;cmd="rename "input" "output" "input;system(cmd);}'
+
+#+END_SRC
+
+#+RESULTS:
+

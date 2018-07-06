@@ -6348,7 +6348,7 @@ The equivalent variables for Racket are `geiser-racket-collects` and `geiser-rac
 
 [scribble-manual][341]
 
-### Origami 代码折叠
+### 133. Origami 代码折叠
 
 
 [ origami ][344]不错的代码折叠工具，可惜不支持scheme(有空看看[ origami-parser ][345])，
@@ -6397,6 +6397,19 @@ Finally, also supports navigation between folds using zj and zk.
 最重要是，vimish-fold的fold是显示的，挺好看的一栏,perfect work！
 
 ![vimish-fold][348]
+
+### 134. Pandoc transform org files to docx
+
+[ pandoc ][349]文件转换利器，支持各种编写格式文件(常用的markdown,wiki,org,docx etc）
+
+
+转化为docx注意加上`-o`选项,如下，指定格式为org文件，目标格式为docx
+
+
+```
+pandoc -f org -t docx writing.org -o writing.docx
+```
+
 
 ----------
 
@@ -6752,3 +6765,4 @@ Finally, also supports navigation between folds using zj and zk.
 [346]: https://github.com/alexmurray/evil-vimish-fold 
 [347]: https://github.com/mrkkrp/vimish-fold
 [348]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/vimish-fold.png
+[349]: https://github.com/jgm/pandoc/blob/master/INSTALL.md

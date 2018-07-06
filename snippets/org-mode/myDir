@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: directory for heading
+# key: :d
+# --
+:dir ${1:"M:\\\fluentYaw"}

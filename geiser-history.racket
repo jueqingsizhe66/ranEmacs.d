@@ -1,2 +1,10 @@
+(inc 3)
+}{
+(square 3)
+}{
+(sqrt 3)
+}{
+(abs 3)
+}{
 (factorial 3)
 }{
