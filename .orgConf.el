@@ -1562,3 +1562,7 @@ e.g. Sunday, September 17, 2000."
 ;; ;; alternative                                                                              ;;
 ;; ;; (setq bibtex-completion-pdf-open-function 'org-open-file)                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;; ace-link in your info-mode any other mode to create link in the text
+(ace-link-setup-default)

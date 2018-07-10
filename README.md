@@ -4127,7 +4127,7 @@ org-mode的[The spreadsheet说明][244]
 
 当然你也可以使用`C-c ?` 显示当前cell的信息
 
-
+<2018-07-09 22:25>通过`显示`查到
 ####  新的编辑公式方法
 
 1. 在当前表格中，直接`:=vmean(元素段信息)`
@@ -5157,6 +5157,7 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
 ```
 
 有意思的是，可以直接对表格`C-c '` 进行公式编辑， 按照[102.org-mode表格说明][282]
+<2018-07-09 22:15> 重新学了一遍!
 当定位到某个表格cell，该区域自动高亮。
 
 ####  配置snippet
@@ -6237,7 +6238,7 @@ to find the help files for the org-mode.(刚才提到的org-brain的`V`类似于
 `qa`, `tab`,向下移动`j`,`q`停止，关掉所有打开的
 
 
-### 132. geiser: connect to scheme
+### 132. geiser: connect to scheme(伟大的Gei sir)
 
 [geiser][336] is similar [cider][337], while cider connect emacs to clojure, geiser connect emacs to scheme(racket,chez,guile,Mit/GNU scheme,chicken etc)
 
@@ -6396,20 +6397,48 @@ Finally, also supports navigation between folds using zj and zk.
 
 最重要是，vimish-fold的fold是显示的，挺好看的一栏,perfect work！
 
+快捷键定义
+```
+
+(evil-vimish-fold-mode 1)
+(global-origami-mode 1)
+
+
+(global-set-key (kbd "C-c C-o") 'origami-toggle-node)
+(global-set-key (kbd "C-c C-p") 'origami-toggle-all-nodes)  ;; o和p彼此靠近，所以选择C-p
+
+```
+
 ![vimish-fold][348]
 
 ### 134. Pandoc transform org files to docx
 
-[ pandoc ][349]文件转换利器，支持各种编写格式文件(常用的markdown,wiki,org,docx etc）
+[ pandoc ][349]文件转换利器(A universal document converter)，支持各种编写格式文件(常用的markdown,wiki,org,docx etc）
 
 
 转化为docx注意加上`-o`选项,如下，指定格式为org文件，目标格式为docx
 
+1. org to word
 
-```
+``` org
 pandoc -f org -t docx writing.org -o writing.docx
 ```
 
+2. vimwiki to word
+
+``` org
+pandoc -f vimwiki -t docx diary.wiki -o diary.docx
+```
+
+### 135. Ace-link
+
+
+[Ace-link][350]  makes `info-mode`,`eww-mode`,`help-mode`,`woman-mode` text into symbol link.
+
+``` org
+;; ace-link in your info-mode any other mode to create link in the text
+(ace-link-setup-default)
+```
 
 ----------
 
@@ -6766,3 +6795,4 @@ pandoc -f org -t docx writing.org -o writing.docx
 [347]: https://github.com/mrkkrp/vimish-fold
 [348]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/vimish-fold.png
 [349]: https://github.com/jgm/pandoc/blob/master/INSTALL.md
+[350]: https://github.com/abo-abo/ace-link

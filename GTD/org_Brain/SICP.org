@@ -1,3 +1,5 @@
+https://github.com/gregsexton/SICP-Clojure
+http://mitpress.mit.edu/sites/default/files/sicp/index.html
 * Advanced
 :PROPERTIES:
 :ID:       f61a7032-556f-4ec6-8bc7-03bd01ff3926

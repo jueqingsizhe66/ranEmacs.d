@@ -224,3 +224,9 @@
 ;; (global-set-key (kbd "C-c M-f") 'fold-this-unfold-all) ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(evil-vimish-fold-mode 1)
+(global-origami-mode 1)
+
+
+(global-set-key (kbd "C-c C-o") 'origami-toggle-node)
+(global-set-key (kbd "C-c C-p") 'origami-toggle-all-nodes)

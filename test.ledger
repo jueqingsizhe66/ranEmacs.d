@@ -153,3 +153,11 @@
 2018-07-06 phone charge
     Expenses:Utilities:Phone  RMB 100
     Liabilities:花呗Huabei
+    
+2018-07-09 wife give me money
+    Liabilities:花呗Huabei  RMB 1340
+    Equity:Wife
+    
+2018-07-10 水果
+    Expenses:Fruits  RMB 30
+    Assets:Savings:支付宝Alipay
