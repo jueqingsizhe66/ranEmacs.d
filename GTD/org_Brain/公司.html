@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-07-15 周日 15:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Ye Zhaoliang" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-org22a333f" class="outline-2">
+<h2 id="org22a333f"><a id="ID-028fb716-d540-4ae1-b1fa-d31ffb403996"></a>二建</h2>
+<div class="outline-text-2" id="text-org22a333f">
+</div>
+
+<div id="outline-container-org2bb7635" class="outline-3">
+<h3 id="org2bb7635"><a id="ID-53fb21ad-ff3c-4ddd-9fa5-5468f8d25226"></a>能建</h3>
+<div class="outline-text-3" id="text-org2bb7635">
+</div>
+
+<div id="outline-container-orgc768d2e" class="outline-4">
+<h4 id="orgc768d2e"><a id="ID-549ed3ac-2a91-4176-8423-3a68170d7b25"></a>董事长、执行董事</h4>
+<div class="outline-text-4" id="text-orgc768d2e">
+<p>
+汪健平
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org728961c"></a><a id="ID-cdd600fd-8d29-472a-bc6a-77750e911e88"></a>独立非执行董事<br />
+<div class="outline-text-5" id="text-org728961c">
+</div>
+</li>
+<li><a id="org3489593"></a><a id="ID-c0681d79-4165-4615-a5f0-f35f4596bb0f"></a>非执行董事<br />
+<div class="outline-text-5" id="text-org3489593">
+<p>
+马传景  丁原臣   王斌  郑起宇  张钰明
+</p>
+</div>
+</li>
+<li><a id="org7b2bfbc"></a><a id="ID-361d27e7-8357-41fa-9c1c-d40f56b68819"></a>副总经理、执行董事<br />
+<div class="outline-text-5" id="text-org7b2bfbc">
+<p>
+张羡崇
+</p>
+</div>
+</li>
+<li><a id="orge883d07"></a><a id="ID-cc4e0726-c55b-4f08-9e62-a0bca02c2c68"></a>副董事长、总经理、执行董事<br />
+<div class="outline-text-5" id="text-orge883d07">
+<p>
+丁焰章
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29c763c" class="outline-3">
+<h3 id="org29c763c"><a id="ID-af5e026a-d101-4997-b158-5a3bf196e17e"></a>电建</h3>
+<div class="outline-text-3" id="text-org29c763c">
+</div>
+<div id="outline-container-org56d1448" class="outline-4">
+<h4 id="org56d1448"><a id="ID-229e6d17-eebb-4747-bafb-6748a0c59c6e"></a>党委书记、董事长</h4>
+<div class="outline-text-4" id="text-org56d1448">
+<p>
+晏志勇
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orge2fbfb6"></a><a id="ID-2a5a30b1-42b8-4861-8cf2-5640bde0c175"></a>党委常委<br />
+<div class="outline-text-5" id="text-orge2fbfb6">
+<p>
+王民浩 姚强   李跃平   孙璀   李燕明
+</p>
+</div>
+</li>
+<li><a id="org3345768"></a><a id="ID-7721e515-eca7-43b7-bcdd-5d5c62388bdc"></a>党委常委、纪委书记<br />
+<div class="outline-text-5" id="text-org3345768">
+<p>
+符岳岩
+</p>
+</div>
+</li>
+
+<li><a id="org47ae47e"></a><a id="ID-21ad2c4f-fb0b-4744-98e0-ce8d801598bf"></a>党委副书记<br />
+<div class="outline-text-5" id="text-org47ae47e">
+<p>
+王斌
+</p>
+</div>
+</li>
+<li><a id="orgda8efdb"></a><a id="ID-95d17df3-581a-4321-aa87-a3fccee1ca1b"></a>党委副书记、总经理、董事<br />
+<div class="outline-text-5" id="text-orgda8efdb">
+<p>
+孙洪水
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc68f6d5" class="outline-2">
+<h2 id="orgc68f6d5"><a id="ID-de468881-4d4d-4507-96ef-262474709e21"></a>三大电气集团</h2>
+<div class="outline-text-2" id="text-orgc68f6d5">
+</div>
+
+<div id="outline-container-org604660e" class="outline-3">
+<h3 id="org604660e"><a id="ID-d26659cc-6d48-41c3-a692-c1de409ac410"></a>西电(中国西电集团有限公司)</h3>
+<div class="outline-text-3" id="text-org604660e">
+</div>
+
+<div id="outline-container-orgb86c72f" class="outline-4">
+<h4 id="orgb86c72f"><a id="ID-2b39a127-d2d7-4ce1-81d1-4651450ef0c2"></a>董事长、党委书记</h4>
+<div class="outline-text-4" id="text-orgb86c72f">
+<p>
+张雅林
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org7f708b6"></a><a id="ID-5efb12b6-fa7c-44db-be93-8544814c6794"></a>党委常委<br />
+<div class="outline-text-5" id="text-org7f708b6">
+<p>
+郝连明利  汪健忠
+</p>
+</div>
+</li>
+<li><a id="org641119a"></a><a id="ID-3b34cc72-f6c8-48c4-88e0-6af18a367b73"></a>董事、党委副书记<br />
+<div class="outline-text-5" id="text-org641119a">
+<p>
+张明才
+</p>
+</div>
+</li>
+<li><a id="org7a86143"></a><a id="ID-17ac75cb-c090-46d8-8793-22ff39a968aa"></a>党委副书记、纪委书记<br />
+<div class="outline-text-5" id="text-org7a86143">
+<p>
+牛新安
+</p>
+</div>
+</li>
+<li><a id="orgd8ed467"></a><a id="ID-28ceba70-d2aa-45bb-b463-924a9af947b3"></a>董事、党委常委<br />
+<div class="outline-text-5" id="text-orgd8ed467">
+<p>
+裴振江
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfabbaa8" class="outline-3">
+<h3 id="orgfabbaa8"><a id="ID-26e6a0e2-1915-4c27-a975-cc02232487f4"></a>东电(中国东方电气集团有限公司)</h3>
+<div class="outline-text-3" id="text-orgfabbaa8">
+</div>
+<div id="outline-container-org5aae89d" class="outline-4">
+<h4 id="org5aae89d"><a id="ID-eb8cf724-23d4-4a2f-b675-60c48a55801c"></a>党组书记、董事长</h4>
+<div class="outline-text-4" id="text-org5aae89d">
+<p>
+邹磊
+</p>
+
+<p>
+2018年6月29日，东方电气宣布，于2018年6月29日举行的董事会第一次会议上，邹磊被选举为董事会董事长，任期三年，并于同日起生效。
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org9fa7671"></a><a id="ID-822ff1d7-4d43-47e1-ad3d-824023f114e6"></a>党组副书记、董事、总经理<br />
+<div class="outline-text-5" id="text-org9fa7671">
+<p>
+张晓仓
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org67cdf16"></a><a id="ID-3f47075b-946e-4e21-83f8-41136aaf713a"></a>党组成员、总会计师<br />
+<div class="outline-text-6" id="text-org67cdf16">
+<p>
+白勇
+</p>
+</div>
+</li>
+<li><a id="org8f515a5"></a><a id="ID-09fa25d9-ba2e-40bb-8265-61178659da8f"></a>党组成员、副总经理<br />
+<div class="outline-text-6" id="text-org8f515a5">
+<p>
+徐鹏  张继烈
+</p>
+</div>
+</li>
+<li><a id="orga261094"></a><a id="ID-421e3b5f-c398-48b3-a289-a27bf2ec0c9b"></a>党组成员、党组纪检组组长<br />
+<div class="outline-text-6" id="text-orga261094">
+<p>
+胡乃民
+</p>
+</div>
+</li>
+<li><a id="org743675e"></a><a id="ID-32176ff0-fdf9-476e-bb5c-b7d17de92f03"></a>党组副书记、副总经理、总部直属党委书记<br />
+<div class="outline-text-6" id="text-org743675e">
+<p>
+黄伟
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org934a51c" class="outline-3">
+<h3 id="org934a51c"><a id="ID-96355895-3797-4e93-b2fc-921be65f5487"></a>哈电(哈尔滨电气集团公司)</h3>
+<div class="outline-text-3" id="text-org934a51c">
+</div>
+<div id="outline-container-orgf7ffc81" class="outline-4">
+<h4 id="orgf7ffc81"><a id="ID-a63184c6-48d0-4621-87d9-a889106597e3"></a>党委书记、董事长</h4>
+<div class="outline-text-4" id="text-orgf7ffc81">
+<p>
+斯泽夫
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgb757aa3"></a><a id="ID-d5fea995-c2c8-4f7b-85d9-97f1fa18089a"></a>总经理助理、企管总监<br />
+<div class="outline-text-5" id="text-orgb757aa3">
+<p>
+曲哲
+</p>
+</div>
+</li>
+<li><a id="orgd6b1fa1"></a><a id="ID-b80c7614-068b-49f9-9194-ee18df6a378c"></a>总经理助理、营销总监<br />
+<div class="outline-text-5" id="text-orgd6b1fa1">
+<p>
+张海权
+</p>
+</div>
+</li>
+<li><a id="org18cc1a3"></a><a id="ID-d0bb4c8c-772e-410e-b8d3-dd7f770450ea"></a>总经济师<br />
+<div class="outline-text-5" id="text-org18cc1a3">
+<p>
+王德兴
+</p>
+</div>
+</li>
+<li><a id="org0fc3a51"></a><a id="ID-5c4fd9a8-206c-49f0-931c-aebe3aab20f7"></a>总会计师<br />
+<div class="outline-text-5" id="text-org0fc3a51">
+<p>
+刘智全
+</p>
+</div>
+</li>
+<li><a id="org7d5ffdd"></a><a id="ID-bd1096d6-1211-4345-af0b-2b76d86c9233"></a>副总经理<br />
+<div class="outline-text-5" id="text-org7d5ffdd">
+<p>
+宋世麒
+</p>
+</div>
+</li>
+<li><a id="org7f4be0e"></a><a id="ID-68ed92e2-3d99-4e18-b2ea-e4295bf99a90"></a>党委常委、副总经理<br />
+<div class="outline-text-5" id="text-org7f4be0e">
+<p>
+张英健
+</p>
+</div>
+</li>
+<li><a id="orgb62c804"></a><a id="ID-80165841-21f0-4508-9998-2665c7814438"></a>党委副书记<br />
+<div class="outline-text-5" id="text-orgb62c804">
+<p>
+孙智勇
+</p>
+</div>
+</li>
+<li><a id="org1d2a67d"></a><a id="ID-2b3f2ed7-ad76-4fab-95bd-a72db6f5c6c6"></a>党委副书记、董事、总经理<br />
+<div class="outline-text-5" id="text-org1d2a67d">
+<p>
+吴伟章
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b4a503" class="outline-2">
+<h2 id="org6b4a503"><a id="ID-b1e17174-ea37-490c-810f-28f3778ebb8d"></a>四小</h2>
+<div class="outline-text-2" id="text-org6b4a503">
+</div>
+
+<div id="outline-container-org9fba7ed" class="outline-3">
+<h3 id="org9fba7ed"><a id="ID-4b644056-d415-43b4-8ffd-d625c48f4b2d"></a>华润电力</h3>
+<div class="outline-text-3" id="text-org9fba7ed">
+</div>
+
+<div id="outline-container-orgbd87344" class="outline-4">
+<h4 id="orgbd87344"><a id="ID-c03af0cc-f447-405f-87b8-83c595f64f7d"></a>董事、总裁</h4>
+<div class="outline-text-4" id="text-orgbd87344">
+<p>
+胡敏
+</p>
+
+<p>
+董事会和管理层的人不一样，我这普遍放的是“管理团队”的。华润电力“董事会”的第一位的确是李汝革。
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org5f2b026"></a><a id="ID-c74d8424-7da7-480d-ad04-e38e2db663c0"></a>助理总裁兼战略发展部总经理<br />
+<div class="outline-text-5" id="text-org5f2b026">
+<p>
+许红波
+</p>
+</div>
+</li>
+<li><a id="org7aed334"></a><a id="ID-602c520a-3e82-4097-b575-1dd28193b0d5"></a>助理总裁监总法律顾问<br />
+<div class="outline-text-5" id="text-org7aed334">
+<p>
+张刚
+</p>
+</div>
+</li>
+<li><a id="orgfce0646"></a><a id="ID-f4794b9e-3433-45c4-854d-63d4a3867291"></a>助理总裁兼信息管理总监<br />
+<div class="outline-text-5" id="text-orgfce0646">
+<p>
+安兴
+</p>
+</div>
+</li>
+<li><a id="org934aa7a"></a><a id="ID-cba1605b-d3fd-46db-97dc-ed49404383c9"></a>副总裁兼审计总监<br />
+<div class="outline-text-5" id="text-org934aa7a">
+<p>
+王国强
+</p>
+</div>
+</li>
+<li><a id="org0629484"></a><a id="ID-6015a4e6-b02c-49ca-932f-95e3dd62ba49"></a>副总裁<br />
+<div class="outline-text-5" id="text-org0629484">
+<p>
+丁琦  赵后昌   丁远奎   王林  后永杰
+</p>
+</div>
+</li>
+<li><a id="org8b0802f"></a><a id="ID-284a9192-cba4-4fb6-8e88-25cbe9e10721"></a>高级副总裁、财务总监<br />
+<div class="outline-text-5" id="text-org8b0802f">
+<p>
+朱国林
+</p>
+</div>
+</li>
+<li><a id="org918b8fa"></a><a id="ID-db858980-21c0-41f4-805f-c362ac076664"></a>高级副总裁<br />
+<div class="outline-text-5" id="text-org918b8fa">
+<p>
+姜利辉    
+</p>
+</div>
+</li>
+<li><a id="orga141fe1"></a><a id="ID-787a4ec0-2f98-4bf4-82d1-05d8817bc02f"></a>执行董事、首席财富官<br />
+<div class="outline-text-5" id="text-orga141fe1">
+<p>
+王小彬
+</p>
+</div>
+</li>
+<li><a id="org7179963"></a><a id="ID-d0e5fc9c-e098-4afb-8ced-3bd1eb065c73"></a>副主席、执行董事、高级副总裁<br />
+<div class="outline-text-5" id="text-org7179963">
+<p>
+葛长新
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18a66a5" class="outline-3">
+<h3 id="org18a66a5"><a id="ID-ef2f54dc-df67-4f79-883d-0dbf16fbe060"></a>三峡</h3>
+<div class="outline-text-3" id="text-org18a66a5">
+</div>
+<div id="outline-container-orgfd35787" class="outline-4">
+<h4 id="orgfd35787"><a id="ID-f66c5ca8-f5c7-4a54-98f3-e9df24d9892e"></a>党组书记、董事长、中国人名政治协商会议第十三届委员会常务委员</h4>
+<div class="outline-text-4" id="text-orgfd35787">
+<p>
+卢纯
+</p>
+
+<p>
+三峡集团董事长、党组书记卢纯1955年5月生，现已63岁。
+</p>
+
+<p>
+这些央企“一把手”或许即将面临人事变动。
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org6cc30bc"></a><a id="ID-1372e9ec-1e16-4549-b35b-633d08299639"></a>董事、总经理、党组副书记<br />
+<div class="outline-text-5" id="text-org6cc30bc">
+<p>
+王琳
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgb4cab57"></a><a id="ID-220cad41-44a9-4703-b5ed-5254a78f9991"></a>党组成员、纪检组组长<br />
+<div class="outline-text-6" id="text-orgb4cab57">
+<p>
+龙飞
+</p>
+</div>
+</li>
+<li><a id="orgb71eecc"></a><a id="ID-05b65628-b6ea-4b4e-ba24-94e4fa521b10"></a>党组成员、总会计师<br />
+<div class="outline-text-6" id="text-orgb71eecc">
+<p>
+杨亚
+</p>
+</div>
+</li>
+
+<li><a id="org749f6da"></a><a id="ID-234ca2b3-b204-4ac7-8911-e65afab3fa2d"></a>党组成员、副总经理<br />
+<div class="outline-text-6" id="text-org749f6da">
+</div>
+</li>
+<li><a id="org96b8c66"></a><a id="ID-2802bb43-708b-4aa7-adc0-cb1425898fc8"></a>党组副书记、副总经理<br />
+<div class="outline-text-6" id="text-org96b8c66">
+<p>
+林初学, 王良友， 范夏夏，张定明
+</p>
+
+<p>
+2018年7月3日，长江电力发布公告称，董事会于近日收到董事、总经理张定明的书面辞职报告。
+因工作原因，张定明辞去公司董事、总经理、战略与环境委员会委员职务。
+</p>
+
+<p>
+2018年7月5日，长江电力发布第四届董事会第二十六次会议决议公告，提名马振波先生、陈国庆先生、赵强先生为公司第四届董事会非独立董事候选人，
+任期自股东大会审议通过之日起，至第四届董事会任期届满时结束;聘任陈国庆先生担任公司总经理
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org82f9f10" class="outline-3">
+<h3 id="org82f9f10"><a id="ID-cda0c3e1-7927-40bf-85a2-eed7a65ea147"></a>中广核</h3>
+<div class="outline-text-3" id="text-org82f9f10">
+</div>
+<div id="outline-container-org39b29eb" class="outline-4">
+<h4 id="org39b29eb"><a id="ID-d29d5678-9fe2-49f3-a472-764dd1a6142f"></a>党委书记、董事长</h4>
+<div class="outline-text-4" id="text-org39b29eb">
+<p>
+贺禹
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgf12d0c0"></a><a id="ID-df93bc3e-2def-4fa4-a231-7ec138fe16d2"></a>党委副书记、总经理<br />
+<div class="outline-text-5" id="text-orgf12d0c0">
+<p>
+张善明
+</p>
+
+<p>
+7月11日，中广核技发布公告，张剑锋因个人原因向公司董事会辞去公司董事、董事长及董事会下属专门委员会相关职务。
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org0fbcb18"></a><a id="ID-086c80e7-8f17-41af-8191-1624c32acc5f"></a>副总裁<br />
+<div class="outline-text-6" id="text-org0fbcb18">
+<p>
+陈映坚  蒋达进
+5月29日，中广核电力发布公告，陈映坚和蒋达进已获委任为公司副总裁，自2018年5月29日起生效，任期均为3年。
+</p>
+</div>
+</li>
+<li><a id="org7489a1c"></a><a id="ID-e460c7b4-40da-4885-8358-9b4bb8b0ae2a"></a>党委常委、总会计师<br />
+<div class="outline-text-6" id="text-org7489a1c">
+<p>
+吴俊峰
+</p>
+</div>
+</li>
+<li><a id="orge68781b"></a><a id="ID-80b08431-0aa5-42ae-a627-d1fa369055cf"></a>党委常委、纪委书记<br />
+<div class="outline-text-6" id="text-orge68781b">
+<p>
+李友荣
+</p>
+</div>
+</li>
+<li><a id="orgdb5df6e"></a><a id="ID-aebde4bf-9ed4-403c-a02c-9a5e7493977a"></a>党委常委、中广核电力总裁<br />
+<div class="outline-text-6" id="text-orgdb5df6e">
+<p>
+高立刚
+</p>
+</div>
+</li>
+<li><a id="org984a361"></a><a id="ID-101a333a-f991-4b69-9444-d2582ca93ad7"></a>党委常委、副总经理<br />
+<div class="outline-text-6" id="text-org984a361">
+<p>
+谭建生  施兵   束国刚  庞松涛  
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc36cd7" class="outline-2">
+<h2 id="orgdc36cd7"><a id="ID-9e1bafc6-5406-4b80-900c-0e18ebfdae8d"></a>国家能源投资集团</h2>
+<div class="outline-text-2" id="text-orgdc36cd7">
+</div>
+<div id="outline-container-org2b3917e" class="outline-3">
+<h3 id="org2b3917e"><a id="ID-a0c7c3f3-a475-45e9-b54d-84f10ef95c58"></a>党组书记、董事长</h3>
+<div class="outline-text-3" id="text-org2b3917e">
+<p>
+乔保平
+</p>
+
+<p>
+国家能源集团党组书记、董事长乔保平1955年12月生，现已63岁
+</p>
+
+<p>
+7月6日，龙源电力发布第一次临时股东大会的投票结果及监事变更信息，于本公告日期，
+本公司的非执行董事为乔保平先生、刘金焕先生、栾宝兴先生和杨向斌先生;执行董事为李恩仪先生和黄群先生;
+及独立非执行董事为张颂义先生、孟焰先生和韩德昌先生。
+</p>
+</div>
+<div id="outline-container-orga2f3214" class="outline-4">
+<h4 id="orga2f3214"><a id="ID-f7ce463d-089b-41a4-a6bc-baedd2d33abd"></a>纪检组组长、党组成员</h4>
+<div class="outline-text-4" id="text-orga2f3214">
+<p>
+卞宝驰
+</p>
+</div>
+</div>
+<div id="outline-container-orgf1d8273" class="outline-4">
+<h4 id="orgf1d8273"><a id="ID-eee89d5f-08e8-4d66-9c5d-ef8d96095cc5"></a>总会计师、党组成员</h4>
+<div class="outline-text-4" id="text-orgf1d8273">
+<p>
+陈斌
+</p>
+</div>
+</div>
+<div id="outline-container-orge143a9a" class="outline-4">
+<h4 id="orge143a9a"><a id="ID-f9732d59-544e-4419-9e07-7f3092d8c6de"></a>副总经理、党组成员</h4>
+<div class="outline-text-4" id="text-orge143a9a">
+<p>
+高嵩  米树华  王金力  王树民 李东
+</p>
+</div>
+</div>
+<div id="outline-container-orge709749" class="outline-4">
+<h4 id="orge709749"><a id="ID-ec86cc9d-7e87-41bc-8132-4650bb5d2c01"></a>党组副书记</h4>
+<div class="outline-text-4" id="text-orge709749">
+<p>
+韩建国、 张国厚
+</p>
+
+<p>
+国家能源集团党组副书记韩建国，已于2018年5月15日向中国神华董事会递交辞呈，因已届退休年龄辞
+去中国神华执行董事职务，其董事会提名委员会委员、战略委员会委员职务也同时终止。韩建国1958年生，今年60岁。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5135770" class="outline-4">
+<h4 id="org5135770"><a id="ID-a7eff539-6a32-4ab0-bbf6-1354cadb4f61"></a>董事、总经理、党组副书记</h4>
+<div class="outline-text-4" id="text-org5135770">
+<p>
+凌文
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org76fe97c" class="outline-2">
+<h2 id="org76fe97c"><a id="ID-acb19baf-b9e8-4466-aa18-e7665c47eadb"></a>五大</h2>
+<div class="outline-text-2" id="text-org76fe97c">
+</div>
+<div id="outline-container-orga161e51" class="outline-3">
+<h3 id="orga161e51"><a id="ID-58d959ff-9e79-4f9c-a22b-77fc6e6c8a5f"></a>神华</h3>
+<div class="outline-text-3" id="text-orga161e51">
+</div>
+<div id="outline-container-org1c00e1f" class="outline-4">
+<h4 id="org1c00e1f"><a id="ID-674c542a-f508-4fc3-a89a-4735fef7a6d7"></a>党委书记、董事长</h4>
+<div class="outline-text-4" id="text-org1c00e1f">
+<p>
+张玉卓
+</p>
+
+<p>
+2018年5月31日，因已届退休年龄，中国神华副总裁张子飞向董事会辞任副总裁一职，即日生效。
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org4750236"></a><a id="ID-cf82a629-1f2f-4a6b-b16e-25e4b0366a28"></a>副总经理、党组成员<br />
+<div class="outline-text-5" id="text-org4750236">
+<p>
+王树民
+</p>
+</div>
+</li>
+<li><a id="org814b688"></a><a id="ID-e4efd636-433b-4e4f-8b67-0f7f41227f77"></a>总经理<br />
+<div class="outline-text-5" id="text-org814b688">
+<p>
+凌文
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2b5b782" class="outline-4">
+<h4 id="org2b5b782"><a id="ID-35a0750d-4925-4ea1-af88-6db56a1f00ae"></a>国华电力</h4>
+<div class="outline-text-4" id="text-org2b5b782">
+</div>
+<ul class="org-ul">
+<li><a id="org3a1a146"></a><a id="ID-02684a06-e267-44e7-a50a-730cb029ab63"></a>党委书记、董事长<br />
+<div class="outline-text-5" id="text-org3a1a146">
+<p>
+肖创英
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orge733ed1"></a><a id="ID-d1b8b5f8-862d-4317-b423-c7a20cddce60"></a>纪委书记<br />
+<div class="outline-text-6" id="text-orge733ed1">
+<p>
+邢仓
+</p>
+</div>
+</li>
+<li><a id="org72d897b"></a><a id="ID-d093fbee-97ab-4044-a658-0ee71e15c2ee"></a>副总经理<br />
+<div class="outline-text-6" id="text-org72d897b">
+<p>
+耿育
+</p>
+</div>
+</li>
+<li><a id="orgf468f53"></a><a id="ID-59bb8c9b-3abe-4793-a24e-9e2132ab5d8c"></a>总工程师<br />
+<div class="outline-text-6" id="text-orgf468f53">
+<p>
+陈寅彪
+</p>
+</div>
+</li>
+<li><a id="org86ee77d"></a><a id="ID-54a58a91-3407-4b4b-9d0a-ae44e7d06b95"></a>副总经理、财务总监<br />
+<div class="outline-text-6" id="text-org86ee77d">
+<p>
+沈玉章
+</p>
+</div>
+</li>
+<li><a id="org4336810"></a><a id="ID-13545036-236f-46c8-b817-393dfabb0a6f"></a>党委副书记、总经理<br />
+<div class="outline-text-6" id="text-org4336810">
+<p>
+李巍
+</p>
+</div>
+</li>
+<li><a id="org87d2697"></a><a id="ID-cdd4e20c-0377-45f8-aebb-336f2a367d71"></a>党委副书记、副董事长<br />
+<div class="outline-text-6" id="text-org87d2697">
+<p>
+夏利
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org22a58a4" class="outline-3">
+<h3 id="org22a58a4"><a id="ID-098f33f0-2e8e-41ba-a810-97f3c8f34c40"></a>国电投</h3>
+<div class="outline-text-3" id="text-org22a58a4">
+</div>
+<div id="outline-container-orgdb311a8" class="outline-4">
+<h4 id="orgdb311a8"><a id="ID-e9e59339-8089-46ae-a3c7-0984948dc701"></a>董事长、党组书记</h4>
+<div class="outline-text-4" id="text-orgdb311a8">
+<p>
+钱智明
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgc13409b"></a><a id="ID-5c737524-454c-4b84-a140-bd501f1dbce4"></a>党组副书记、总经理、董事<br />
+<div class="outline-text-5" id="text-orgc13409b">
+<p>
+孟振平
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org498c0b9"></a><a id="ID-e988707a-1a66-4f27-b0b8-f60938175bd4"></a>党组成员、纪检组组长<br />
+<div class="outline-text-6" id="text-org498c0b9">
+<p>
+谢俊
+</p>
+
+<p>
+2018年5月31日下午，国家电投召开领导班子扩大会议，通报了中组部关于谢俊同志任国家电力
+投资集团有限公司党组纪检组组长、党组成员;免去邓文奎同志的国家电力投资集团有限公司党组纪检组组长、党组成员职务的决定。
+</p>
+</div>
+</li>
+<li><a id="org5ba97bf"></a><a id="ID-2b023542-97e4-4940-a327-008eaeeb0198"></a>党组成员、总会计师<br />
+<div class="outline-text-6" id="text-org5ba97bf">
+<p>
+王益华
+</p>
+</div>
+</li>
+<li><a id="orgeef441f"></a><a id="ID-b73442e7-5ee3-4334-8dc0-91a1fa081220"></a>党组成员、副总经理<br />
+<div class="outline-text-6" id="text-orgeef441f">
+<p>
+夏钟  魏锁  时家林
+</p>
+</div>
+</li>
+<li><a id="orga3ea222"></a><a id="ID-84cb0d17-b430-47cb-8876-45c0ae2dd1eb"></a>党组副书记、董事<br />
+<div class="outline-text-6" id="text-orga3ea222">
+<p>
+江毅
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org8878158" class="outline-4">
+<h4 id="org8878158"><a id="ID-e23e47f9-3352-439c-8e0a-1807fa3cde8d"></a>中电投</h4>
+<div class="outline-text-4" id="text-org8878158">
+</div>
+<ul class="org-ul">
+<li><a id="orgd15042d"></a><a id="ID-1303dba5-a39b-428e-a355-f2201dda6397"></a>国投电力<br />
+<div class="outline-text-5" id="text-orgd15042d">
+</div>
+<ul class="org-ul">
+<li><a id="org8a32aad"></a><a id="ID-0ef02a17-c278-4bdd-8499-60cb02f85fd7"></a>党委书记、总经理<br />
+<div class="outline-text-6" id="text-org8a32aad">
+<p>
+朱基伟
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org91cc456"></a><a id="ID-f6a91230-7ffd-4bd4-8b5e-ba1623c5e8c2"></a>总经理秘书<br />
+<div class="outline-text-7" id="text-org91cc456">
+<p>
+杨林
+</p>
+</div>
+</li>
+<li><a id="org40f0c77"></a><a id="ID-4ae18f22-77e6-4593-9fb6-dd5100e49f25"></a>总经理助理<br />
+<div class="outline-text-7" id="text-org40f0c77">
+<p>
+江华
+</p>
+</div>
+</li>
+<li><a id="org242613c"></a><a id="ID-a8d4b7c9-e805-4b00-a020-3b6948c3629b"></a>副总经理<br />
+<div class="outline-text-7" id="text-org242613c">
+<p>
+曲立新  赵风波
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgbac088a"></a><a id="ID-79450a58-f41d-4f09-915e-14726ee4a9f7"></a>中核<br />
+<div class="outline-text-5" id="text-orgbac088a">
+</div>
+<ul class="org-ul">
+<li><a id="orgc24d380"></a><a id="ID-c1889cb4-a3e7-4b0a-b71f-403c8753a0cf"></a>党组书记、董事长<br />
+<div class="outline-text-6" id="text-orgc24d380">
+<p>
+王寿君
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgb853b4b"></a><a id="ID-ec9402cc-2e83-41f9-a375-78c68e007c0d"></a>中国核电董事长、党委书记<br />
+<div class="outline-text-7" id="text-orgb853b4b">
+<p>
+陈桦
+</p>
+</div>
+</li>
+<li><a id="orgfb7b956"></a><a id="ID-7097f2ed-8a93-4c11-be24-e74149285f80"></a>总工程师<br />
+<div class="outline-text-7" id="text-orgfb7b956">
+<p>
+雷增光
+</p>
+</div>
+</li>
+<li><a id="org0857c59"></a><a id="ID-6009d436-da5f-41e5-ad4f-b66755244ac3"></a>董事会秘书<br />
+<div class="outline-text-7" id="text-org0857c59">
+<p>
+潘建明
+</p>
+</div>
+</li>
+<li><a id="org83e6543"></a><a id="ID-44adaf5b-6b54-4c23-a55d-6a960fce89e4"></a>总经理助理<br />
+<div class="outline-text-7" id="text-org83e6543">
+<p>
+李晓明
+</p>
+</div>
+</li>
+<li><a id="org7697ae7"></a><a id="ID-affe7872-3b70-4c62-8dd8-d833d4aa68bb"></a>总经济师<br />
+<div class="outline-text-7" id="text-org7697ae7">
+<p>
+黄敏刚
+</p>
+</div>
+</li>
+<li><a id="orgc9d6c7e"></a><a id="ID-69f5fb72-5f85-45cb-abf7-bb82090d0e96"></a>党组成员、纪检组组长<br />
+<div class="outline-text-7" id="text-orgc9d6c7e">
+<p>
+王杰之
+</p>
+</div>
+</li>
+<li><a id="orge93403b"></a><a id="ID-0be4cecb-4a67-4297-947f-02f515d30ff4"></a>党组成员、副总经理<br />
+<div class="outline-text-7" id="text-orge93403b">
+<p>
+杨长利、 俞培根、曹述栋、和自兴
+</p>
+</div>
+</li>
+<li><a id="org3c488e0"></a><a id="ID-dcea3850-7b95-4a09-a623-9b3493fb517e"></a>党组副书记、总经理<br />
+<div class="outline-text-7" id="text-org3c488e0">
+<p>
+余剑锋
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org75ba888" class="outline-4">
+<h4 id="org75ba888"><a id="ID-55049e2a-fd23-49c6-9acd-a3a98656f82c"></a>国电</h4>
+<div class="outline-text-4" id="text-org75ba888">
+</div>
+</div>
+</div>
+<div id="outline-container-org44f9b52" class="outline-3">
+<h3 id="org44f9b52"><a id="ID-f0ef4795-a478-4dd5-b5a3-8beb3702bf9a"></a>大唐</h3>
+<div class="outline-text-3" id="text-org44f9b52">
+</div>
+<div id="outline-container-orgb59f23d" class="outline-4">
+<h4 id="orgb59f23d"><a id="ID-11d6aa9e-6af1-4a90-a73b-46a1276d389e"></a>董事长、党组书记</h4>
+<div class="outline-text-4" id="text-orgb59f23d">
+<p>
+陈进行
+大唐集团董事长、党组书记陈进行1955年6月生，现已63岁
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org19b76b1"></a><a id="ID-ef6fdaf9-fc4c-408a-bac3-d296d23ef6cd"></a>董事、总经理、党组副书记<br />
+<div class="outline-text-5" id="text-org19b76b1">
+<p>
+陈飞虎
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgae16b7d"></a><a id="ID-3d23d216-5c67-422b-8860-d2c3328cd388"></a>副总经理<br />
+<div class="outline-text-6" id="text-orgae16b7d">
+<p>
+金耀华
+</p>
+
+<p>
+2018年6月6日，大唐发电发布公告，董事会会议同意洪绍斌、孟繁逵及段忠民自2018年6月6日起不再担任公司副总经理。
+</p>
+
+<p>
+6月26日，大唐新能源公布了最新董事名单与其角色和职能。非执行董事为陈飞虎(董事长)、刘光明、李 奕、刘宝君;
+执行董事为周克文(副董事长)、孟令宾;独立非执行董事为刘朝安、卢敏霖、余顺坤。
+</p>
+</div>
+</li>
+<li><a id="orgc8990df"></a><a id="ID-c4c129b3-8776-4e48-91ed-4ceee059b4f1"></a>党组成员、总会计师<br />
+<div class="outline-text-6" id="text-orgc8990df">
+<p>
+刘传东
+</p>
+</div>
+</li>
+<li><a id="org7753a2d"></a><a id="ID-817ca460-a41d-4cbc-8451-d9a078cc7fc7"></a>党组成员、纪检组长<br />
+<div class="outline-text-6" id="text-org7753a2d">
+<p>
+熊皓
+</p>
+</div>
+</li>
+<li><a id="org0b5171a"></a><a id="ID-c6465f17-3e5f-466d-acfb-2be44461c4eb"></a>党组成员、副总经理<br />
+<div class="outline-text-6" id="text-org0b5171a">
+<p>
+胡绳木  王森  吴秀章
+</p>
+</div>
+</li>
+<li><a id="orge6814ab"></a><a id="ID-45b09fa3-e389-431f-b025-a04b01757ebe"></a>党组副书记、副总经理<br />
+<div class="outline-text-6" id="text-orge6814ab">
+<p>
+邹嘉华
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4bbffad" class="outline-3">
+<h3 id="org4bbffad"><a id="ID-5bec406d-f405-4939-9b17-421bf8a50549"></a>华电</h3>
+<div class="outline-text-3" id="text-org4bbffad">
+</div>
+<div id="outline-container-org747df1b" class="outline-4">
+<h4 id="org747df1b"><a id="ID-0bd41286-e545-4fc6-90e9-877a864938d7"></a>党组书记、董事长</h4>
+<div class="outline-text-4" id="text-org747df1b">
+<p>
+赵建国
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org3f6799e"></a><a id="ID-15868eac-a5d8-4b96-8951-2e285c2f45d6"></a>董事、总经理、党组副书记<br />
+<div class="outline-text-5" id="text-org3f6799e">
+<p>
+温枢刚
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org1aead9d"></a><a id="ID-c2ef002b-4fe3-437d-bbf6-221e8fdac71e"></a>党组成员、副总经理<br />
+<div class="outline-text-6" id="text-org1aead9d">
+<p>
+陈建华  杨清廷  王宏志
+</p>
+
+<p>
+2018年6月29日，华电福新发布公告，公告称由于个人工作调动原因，李一男先生辞任非执行董事及审核与风险管理委员会成员。
+</p>
+</div>
+</li>
+<li><a id="orga543227"></a><a id="ID-dacf20aa-8aa9-4919-b5a7-fccd4045396d"></a>党组成员、纪检组长<br />
+<div class="outline-text-6" id="text-orga543227">
+<p>
+张本平
+</p>
+</div>
+</li>
+<li><a id="org0bf7aa4"></a><a id="ID-f0aa7808-5691-40f9-b4b8-5cd4789554b0"></a>党组成员、总会计师<br />
+<div class="outline-text-6" id="text-org0bf7aa4">
+<p>
+邵国勇
+</p>
+</div>
+</li>
+<li><a id="org0006c4b"></a><a id="ID-7eece549-6fab-4dd9-beac-a679a91f2d17"></a>党组副书记、副总经理<br />
+<div class="outline-text-6" id="text-org0006c4b">
+<p>
+仁书辉
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1658dc8" class="outline-3">
+<h3 id="org1658dc8"><a id="ID-f626f05b-9600-4cbd-9fca-510116322ade"></a>华能</h3>
+<div class="outline-text-3" id="text-org1658dc8">
+</div>
+<div id="outline-container-org4db802d" class="outline-4">
+<h4 id="org4db802d"><a id="ID-64b52484-6e2b-400d-bf14-f7eb22bad12d"></a>董事长、党组书记</h4>
+<div class="outline-text-4" id="text-org4db802d">
+<p>
+曹培玺
+</p>
+
+<p>
+华能集团董事长、党组书记曹培玺1955年8月生，现已63岁；
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org1fc4935"></a><a id="ID-8b6dd6ed-0169-469f-8c56-0d9d818b1b8c"></a>党组成员、纪检组组长<br />
+<div class="outline-text-5" id="text-org1fc4935">
+<p>
+赵建明
+</p>
+</div>
+</li>
+<li><a id="org8cb0a94"></a><a id="ID-3aadce0b-8173-4492-bb40-b915e18b1c32"></a>副总经理、党组成员<br />
+<div class="outline-text-5" id="text-org8cb0a94">
+<p>
+樊启祥  王敏  叶向东  王文宗
+</p>
+</div>
+</li>
+<li><a id="orgd97d3ce"></a><a id="ID-fb15f321-662a-48d5-9a7e-829572ec21c8"></a>党组副书记、副总经理<br />
+<div class="outline-text-5" id="text-orgd97d3ce">
+<p>
+邓建玲
+</p>
+
+<p>
+已不在华能集团官网领导人之列的原华能集团董事、总经理、党组副书记黄永达1957年11月生，现已61岁
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd27289f" class="outline-2">
+<h2 id="orgd27289f"><a id="ID-8188bdbf-e40e-465e-9568-2249b1aa9f16"></a>二网</h2>
+<div class="outline-text-2" id="text-orgd27289f">
+</div>
+<div id="outline-container-org4fdcb71" class="outline-3">
+<h3 id="org4fdcb71"><a id="ID-5c24330a-357b-45d4-a184-bbad16a7338e"></a>国网</h3>
+<div class="outline-text-3" id="text-org4fdcb71">
+</div>
+<div id="outline-container-orgf6a8d62" class="outline-4">
+<h4 id="orgf6a8d62"><a id="ID-2c3b9444-7f63-459a-948e-4268d43359b5"></a>董事、总经理、党组副书记</h4>
+<div class="outline-text-4" id="text-orgf6a8d62">
+<p>
+寇伟
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org5bce3ab"></a><a id="ID-d7bc4160-25b1-4ebd-b1ea-3dc69025f2ba"></a>副总经理<br />
+<div class="outline-text-5" id="text-org5bce3ab">
+<p>
+韩君、刘泽红、张智刚
+</p>
+</div>
+</li>
+<li><a id="orgf81e694"></a><a id="ID-efb01e90-612b-40da-bd60-e502904e5e9a"></a>副总经理、党组成员<br />
+<div class="outline-text-5" id="text-orgf81e694">
+<p>
+刘国跃、 杨晋柏
+</p>
+</div>
+</li>
+<li><a id="org78c4602"></a><a id="ID-8f5c36cf-5d7d-4136-b1c7-2e1f1c30e58f"></a>总会计师、党组成员<br />
+<div class="outline-text-5" id="text-org78c4602">
+<p>
+罗乾宣
+</p>
+</div>
+</li>
+<li><a id="org3bffaca"></a><a id="ID-9c82ca85-90c3-4ce8-a43e-e3e517080241"></a>中央纪委驻国家电网公司纪检组长、国家电网公司党组成员<br />
+<div class="outline-text-5" id="text-org3bffaca">
+<p>
+黄德安
+</p>
+</div>
+</li>
+<li><a id="org8bba01d"></a><a id="ID-4908b466-4e7a-4af6-96f9-3dac3c70bb8f"></a>党委副书记、副总经理<br />
+<div class="outline-text-5" id="text-org8bba01d">
+<p>
+辛保安
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd590921" class="outline-4">
+<h4 id="orgd590921"><a id="ID-3f1de670-24d1-4258-8cb6-40d791f197b4"></a>董事长、党组书记</h4>
+<div class="outline-text-4" id="text-orgd590921">
+<p>
+舒印彪
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd706434" class="outline-3">
+<h3 id="orgd706434"><a id="ID-d752efe6-8871-46c1-8579-79d01b6279c8"></a>南网</h3>
+<div class="outline-text-3" id="text-orgd706434">
+</div>
+<div id="outline-container-orga9b1f25" class="outline-4">
+<h4 id="orga9b1f25"><a id="ID-85f03828-bf5e-4460-863f-9166e14a4df5"></a>董事、总经理、党组副书记</h4>
+<div class="outline-text-4" id="text-orga9b1f25">
+<p>
+曹志安
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgc35baf9"></a><a id="ID-6a9a697a-e797-41bf-bbe5-d4d5e5d68b23"></a>党组成员、党组纪检组组长<br />
+<div class="outline-text-5" id="text-orgc35baf9">
+<p>
+杨志宏
+</p>
+</div>
+</li>
+<li><a id="orge2e7f2c"></a><a id="ID-c02bb4f1-2333-44b5-9c5a-6b01b8e960f4"></a>党组成员、副总经理<br />
+<div class="outline-text-5" id="text-orge2e7f2c">
+<p>
+贺锡强,陈允鹏
+</p>
+</div>
+</li>
+<li><a id="orgd7f5e3a"></a><a id="ID-6a2d2fe9-218e-4239-8ac1-b801a2ea1c8f"></a>党组成员、总会计师<br />
+<div class="outline-text-5" id="text-orgd7f5e3a">
+<p>
+文利民
+</p>
+</div>
+</li>
+<li><a id="orgeecf955"></a><a id="ID-67937aee-3dd5-435c-93f7-f7975ac1f56b"></a>党组成员、副总经理<br />
+<div class="outline-text-5" id="text-orgeecf955">
+<p>
+毕亚雄
+</p>
+</div>
+</li>
+<li><a id="org5b2bb96"></a><a id="ID-58659906-6386-48c6-9e27-45499d2b8450"></a>党组副书记、副总经理<br />
+<div class="outline-text-5" id="text-org5b2bb96">
+<p>
+史正江
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org433636c" class="outline-4">
+<h4 id="org433636c"><a id="ID-12ebf867-2ba7-4065-ae62-8fad03f907b7"></a>党组书记、董事长</h4>
+<div class="outline-text-4" id="text-org433636c">
+<p>
+李庆奎
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ye Zhaoliang</p>
+<p class="date">Created: 2018-07-15 周日 15:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

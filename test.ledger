@@ -161,3 +161,15 @@
 2018-07-10 水果
     Expenses:Fruits  RMB 30
     Assets:Savings:支付宝Alipay
+
+2018-07-13 买水果
+    Expenses:Food  RMB 31
+    Assets:Savings:支付宝Alipay
+
+2018-07-16 劳务费
+    Assets:Savings:建行7889  RMB 1000
+    Income:SalaryKang
+
+2018-07-16 加氟
+    Expenses:House-living  RMB 650
+    Assets:Savings:建行7889

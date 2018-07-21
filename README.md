@@ -2592,13 +2592,15 @@ gpg --export-secret-keys >keyfile
 
 ![GPA][218]
 
-如果只是导入公匙到Kleopatra,那么再GPA显示的时候是没有黄色的私匙只有银色的公匙
+如果只是导入公匙到Kleopatra,那么再GPA显示的时候是没有黄色的私匙只有银色的公匙(一般如果kleopatra显示用户编号(user-Ids）未验证时候直接
+邮件，确认是本人的ID即可，当然你可能删掉全部，重新导入GNU privary Assitant(GPA),不然emacs在进行加密的时候，可能显示不被信任的ID)
 
 ![secret][219]
 
 所以这时候得从GPA导入私匙即可(我保存在我的电脑某一重要文件夹下，保证不丢失！)，很简单这里的import直接就可以导入密匙，这样
 重新打开Kleopatra即可，说了这么多一定得注意两把钥匙。
 
+<2018-07-15 13:51> 越来越喜欢org-mode+crypt模式！
 
 ### 67. org-alert 提醒功能
 
@@ -6137,7 +6139,9 @@ org-brain最重要的是他的org-id(虽然也可以使用org file形式来进�
 
 `h` or `*`是指在当前active idea文件下产生一个headline，而`c`会产生一个新文件，并让其成为当前文件的下级文件
 
-也就是说你得思考下一个你要添加的entry是否足够充当*文件级别*还是只是一个*headline*级别即可
+`t`我发现也挺好用的，经常你可能进行重命名
+
+`v`为了快速定位到某个node，也可以直接用v然后输入entry即可。
 
 ####   going up to broader topics or drilling down into more specifics
 
@@ -6408,6 +6412,7 @@ Finally, also supports navigation between folds using zj and zk.
 (global-set-key (kbd "C-c C-p") 'origami-toggle-all-nodes)  ;; o和p彼此靠近，所以选择C-p
 
 ```
+<2018-07-21 20:58>想起了他！
 
 ![vimish-fold][348]
 
@@ -6439,6 +6444,40 @@ pandoc -f vimwiki -t docx diary.wiki -o diary.docx
 ;; ace-link in your info-mode any other mode to create link in the text
 (ace-link-setup-default)
 ```
+
+
+### 136. Take to shell(cygwin)
+
+1. setting in the org configuration
+```  org
+;;(sh . t)  new 26.1 change sh to shell
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (shell . t)
+    ...other languages
+   ))
+```
+ 
+2. add exe to path
+
+put the cygwin bin into path , so you can execute unix executable program correctly.
+
+
+3. working in the org babel source code
+
+``` org
+
+#+BEGIN_SRC bash :dir "M:\\fluentYaw0\\"
+  pwd
+  ls sphere*.cas|awk -F"-" 'BEGIN{i=1}{print substr($5,0,length($5)-4),",",i; i=i+1}'
+#+END_SRC
+
+#+RESULTS:
+
+```
+
+use bash interpreter, and set the working dir by `:dir`
 
 ----------
 

@@ -962,7 +962,6 @@ In ~%s~:
    (scheme . t)
    ))
 
-
 (setq geiser-active-implementations '(racket))
 ;(setq geiser-active-implementations '(chez))
 

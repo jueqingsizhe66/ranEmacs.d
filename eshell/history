@@ -47,3 +47,13 @@ scribble gstd.scrbl
 ledger -f test.ledger bal savings
 ledger -f test.ledger bal 
 ledger -f test.ledger bal 
+ledger -f test.ledger reg
+ledger -f test.ledger bal
+ledger -f test.ledger leg 2018-06
+ledger -f test.ledger reg 2018-06
+ledger -f test.ledger reg 2018
+ledger -f test.ledger reg Alipay
+ledger -f test.ledger reg 18-Jun
+ledger -f test.ledger reg Jun
+ledger -f test.ledger reg 18
+ledger -f test.ledger reg 2018
