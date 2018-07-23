@@ -1,4 +1,3 @@
-﻿#+OPTIONS: ^:{}
 
 * 创意
 ** Introduction

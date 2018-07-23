@@ -6479,6 +6479,34 @@ put the cygwin bin into path , so you can execute unix executable program correc
 
 use bash interpreter, and set the working dir by `:dir`
 
+
+### 137. deft
+
+
+use [ deft ][352] to find the notes directory you specified quickly(his idea from  http://notational.net/) 
+
+1. 定义你的notes文件夹，比如 `(setq deft-directory "~/.emacs.d/GTD/")`
+2. 过滤你的文件，比如`(setq deft-extensions '("txt" "tex" "org" "md"))` 
+3. 设置你的deft快捷键  `(global-set-key [f8] 'deft)`
+4. 让你得到的笔记通过文件名形式呈现，默认文件里头的首行文字 `(setq deft-use-filename-as-title t)`
+
+当然你也可以统一设置
+
+```
+(use-package deft                                ;;
+  :bind ("<f8>" . deft)                          ;;
+  :commands (deft)                               ;;
+  :config (setq deft-directory "~/.emacs.d/GTD/" ;;
+                deft-extensions '("md" "org")))  ;;
+
+```
+
+![deft][351]
+
+
+速度真的很快，和`c-c p f`搜索文件不同的是，deft把你的notes目录下的文件放在一起，搜索你搜索的字段可能存在哪个文件下！
+所以deft是一个文本搜索神器，或者说等效于你的有道云笔记、印象笔记、onenote的搜索功能!
+
 ----------
 
 ----------
@@ -6835,3 +6863,5 @@ use bash interpreter, and set the working dir by `:dir`
 [348]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/vimish-fold.png
 [349]: https://github.com/jgm/pandoc/blob/master/INSTALL.md
 [350]: https://github.com/abo-abo/ace-link
+[351]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/deft.pngo
+[352]: https://jblevins.org/projects/deft/

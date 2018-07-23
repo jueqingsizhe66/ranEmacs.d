@@ -57,3 +57,9 @@ ledger -f test.ledger reg 18-Jun
 ledger -f test.ledger reg Jun
 ledger -f test.ledger reg 18
 ledger -f test.ledger reg 2018
+explorer .
+git add .
+git commit -am "	update- talk to Mr. Shell and org-brain for sicp and corporation"
+git push origin develop
+git push origin develop
+cmd

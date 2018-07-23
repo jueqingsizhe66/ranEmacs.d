@@ -1011,7 +1011,7 @@ In ~%s~:
 
 (defun get-journal-file-today ()
   "Return filename for today's journal entry."
-  (let ((daily-name (format-time-string "%Y%m%d")))
+  (let ((daily-name (concat (format-time-string "%Y%m%d") ".org")))
     ;(format "\"%S\"" (expand-file-name (concat org-journal-dir daily-name)))
     (expand-file-name (concat org-journal-dir daily-name))
     
@@ -1565,3 +1565,30 @@ e.g. Sunday, September 17, 2000."
 
 ;; ace-link in your info-mode any other mode to create link in the text
 (ace-link-setup-default)
+
+
+;; deft configuration
+;;By default, Deft looks for notes by searching for files with the extensions .txt, .text, .md, .markdown, or .org in the ~/.deft
+(setq deft-extensions '("org" "md" "txt" "tex"))
+(setq deft-directory "~/.emacs.d/GTD/")
+(setq deft-recursive t)  ;By default, Deft only searches for files in deft-directory but not in any subdirectories.
+
+(global-set-key [f8] 'deft)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package deft                                ;;
+;;   :bind ("<f8>" . deft)                          ;;
+;;   :commands (deft)                               ;;
+;;   :config (setq deft-directory "~/.emacs.d/GTD/" ;;
+;;                 deft-extensions '("md" "org")))  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq deft-use-filename-as-title t) ;; 
+;(setq deft-new-file-format "%Y-%m-%dT%H%M") ;; o
+
+;(setq deft-use-filter-string-for-filename t)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq deft-file-naming-rules '((noslash . "-")        ;;
+;;                                (nospace . "-")        ;;
+;;                                (case-fn . downcase))) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
