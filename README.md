@@ -6480,7 +6480,7 @@ put the cygwin bin into path , so you can execute unix executable program correc
 use bash interpreter, and set the working dir by `:dir`
 
 
-### 137. deft(make line of work funny)
+### 137. deft(make line of work funny)---text system(integrate vim and emacs working flow)
 
 背景
 ```
@@ -6534,6 +6534,16 @@ have that keyword in their title. That's useful if you have a lot of notes and w
 
 为了让日志文件也加入我的deft管理，只好重命名,TotalCmd(`Ctrl-M`重命名), 这样方便查找内容，虽然在calendar界面无法查到了
 但是如果想查到也可以直接再重命名一下即可
+
+并且vimwiki的文件夹移入GTD文件夹内，方便deft管理(That's cool, your text system).
+
+#### Very good keyshort
+
+
+`C-c C-f` in the screen of deft, you can find all the files with deft(like TotalCommand Ctrl+B, spread all files in 
+different folders into one folder, then let you find the file you specified with regex strings) 
+
+`C-c C-g` in the screen of deft, you can update the status of files.
 
 ----------
 
@@ -6891,5 +6901,5 @@ have that keyword in their title. That's useful if you have a lot of notes and w
 [348]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/vimish-fold.png
 [349]: https://github.com/jgm/pandoc/blob/master/INSTALL.md
 [350]: https://github.com/abo-abo/ace-link
-[351]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/deft.pngo
+[351]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/deft.png
 [352]: https://jblevins.org/projects/deft/

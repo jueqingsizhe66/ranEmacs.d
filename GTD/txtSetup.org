@@ -1,0 +1,68 @@
+
+My txt setup
+Merlin Mann | Dec 12 2005
+The explications continue.
+
+It's been a while since I talked about how I'm using text files, and my post a while ago on Quicksilver appending reminded me of a few little changes I've made over the past year or so that my fellow text geeks might find interesting.
+
+*  Reviewing: Why text?
+Like a lot of geeks and aspirational geeks, I do as many things as possible in plain text files. I've endlessly sung the praises of text on 43F, but in a nutshell, they're portable, efficient, tiny, and almost endlessly mungible. They're the lingua franca of Unix and most of the civilized world.
+
+As you'll see, I use text files for any variety of things, although my favorite use is for making and maintaining lists. The aforementioned append functionality lets me quickly add items to any file with nothing but muscle memory and a few keystrokes. Best thing ever.
+
+I also write in text files as well as store large amounts of reference information. Text is very easy to swap into HTML (I keep almost everything in Markdown format), and text is wonderfully searchable, whether using Spotlight, Find & Replace, or just via incremental search from within the editor.
+
+Point being: I use applications like OmniOutliner, iCal, and (formerly) Entourage to organize the relationships between silos in my life; but text files are the living repositories for as much of the actual information as I can manage.
+
+* Getting a system
+Like everything, this text system benefits from a loose organizational framework that lets me quickly create and change files without having to worry too much about what it's called, where it goes, and how I'll find it again. So here's a few high points from my text world.
+
+** One and only one place
+I've whittled down to a single folder for all my active text files with just two sub-directories, "Archives" and "Old."
+
+"Old" is simply where I dragged every text file I was pretty sure was dead or obviated (but you never know), and "Archives" is where I put the dearly-departed since making the move to the one folder to rule them all. Archiving is done...well...whenever I feel like it or notice that the top txt directory is starting to seem a little wooly.
+
+Everything else sits in one directory. I use a little system of "meta symbols" and intuitive naming to keep things organized in the one big folder.
+
+A smart name
+Nearly all my files are named according to this structure:
+
+Metasymbol SphereOfLife Project UniqueIntuitiveFilename VersionNumber.txt
+
+where:
+
+Metasymbol tells me whether the file is a running list, a reference file, or a static document (more on this in a minute)
+Sphere of Life is simply something like "work" or "home" or "43 folders" -- any über-silo that represents, say, 20% or more of your time and attention (hint: abbreviations are good here)
+Project is what it sounds like: "Make-Articles" or "Johns-Site" or whatever (hint: abbreviations are good here too)
+The unique file name is the first and most intuitive name that pops into my head, sometimes augmented with redundant acronyms, etc. For me it's important to be able to find stuff quickly in Quicksilver, so I leave big fat hooks that account for whatever I'm likely to be looking for in the future
+Version number is a slick little trick of mine. When I start a new version of a document, instead of adding a "2" or "3" to the most recent copy, I simply duplicate the document, then timestamp the old one -- ala "+ work haa site design proposal-2005-12-12_08-16-34.txt". That way I always know the unversioned copy is the most recent, but I still have backups I can roll back to any time. Neato.
+** Meta symbols
+I've discovered I have three basic kinds of text files, and chose a simple method for marking the type of files they are for quick visual cueing.
+
+This is super helpful for winnowing file names in Quicksilver: I start by typing one of these unusual (non-alpha-numeric) characters, and I can instantly pop to just a list of the types of files I want to see.
+
+** Running lists
+Running lists are the majority of my files. They're the kinds of lists that I mentioned in the appending article -- ongoing places to park ideas of any kind over time. They begin with a ">". This is, as with all these, purely my own convention, so you should feel free to pick symbols that make sense for you. This yields file names like:
+
+> broken.txt - items or functionalities in my world that need repair or fixes
+> mom birthday gift ideas.txt - ways to delight the one what brung me
+> webdav wish list and questions.txt - little projects for my newfound favorite technology
+Reference
+Reference items are evergreen and reusable content that I update fairly infrequently and refer to as needed.
+
+^ work resume.txt
+^ 43f site bio.txt
+^ work domains I'm not using.txt
+Static files
+These are things like blog posts, articles, and any kind of nonce content that will be used once, and then probably not needed again (making them very quick to archive every month or so).
+
++ 43f post new text setup.txt (this document)
++ 5ives post five ways to make the party all about you.txt (potential list for 5ives)
++ work letter larry tate 2005-10-23.txt
+So that's my current system. It's actually not as byzantine as it sounds. It really comes down to:
+
+1. fast creation
+2. fast addition
+3. fast archiving
+4. invisibility and intuitiveness
+Your mileage will certainly vary, but I hope this stuff helps if you've been working to tame your own text beast.
