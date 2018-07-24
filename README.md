@@ -6480,8 +6480,14 @@ put the cygwin bin into path , so you can execute unix executable program correc
 use bash interpreter, and set the working dir by `:dir`
 
 
-### 137. deft
+### 137. deft(make line of work funny)
 
+背景
+```
+Information: Whether we realize it or not, we collect a lot of it—interesting snippets, links, research for school or work, recipes, quotes, and a whole lot more.
+
+No matter what line of work you're in, it's inevitable you have to take a few notes. Often, more than a few. If you're like many people in this day and age, you take your notes digitally.
+```
 
 use [ deft ][352] to find the notes directory you specified quickly(his idea from  http://notational.net/) 
 
@@ -6506,6 +6512,25 @@ use [ deft ][352] to find the notes directory you specified quickly(his idea fro
 
 速度真的很快，和`c-c p f`搜索文件不同的是，deft把你的notes目录下的文件放在一起，搜索你搜索的字段可能存在哪个文件下！
 所以deft是一个文本搜索神器，或者说等效于你的有道云笔记、印象笔记、onenote的搜索功能!
+
+
+在deft页面下，使用`C-c Ret` 可以快速创建文件， 使用`C-c C-n`也可以创建文件名
+
+```
+https://github.com/jrblevin/deft/issues/21
+
+Yes. The first element of deft-extensions is the default extension used to create new files. So, make sure "org" appears first. Example:
+
+(setq deft-extensions '("org" "txt" "tex"))
+```
+
+
+```
+To open a note, just scroll down to it and press Enter. Deft does a bit more, though.
+According to Deft's developer, Jason Blevins, its primary operation is searching and filtering. 
+Deft does that simply but efficiently. Type a keyword and Deft displays only the notes that
+have that keyword in their title. That's useful if you have a lot of notes and want to find one quickly.
+```
 
 ----------
 

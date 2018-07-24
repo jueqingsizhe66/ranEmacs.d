@@ -1011,7 +1011,7 @@ In ~%s~:
 
 (defun get-journal-file-today ()
   "Return filename for today's journal entry."
-  (let ((daily-name (concat (format-time-string "%Y%m%d") ".org")))
+  (let (daily-name (format-time-string "%Y%m%d"))
     ;(format "\"%S\"" (expand-file-name (concat org-journal-dir daily-name)))
     (expand-file-name (concat org-journal-dir daily-name))
     
