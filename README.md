@@ -3013,7 +3013,7 @@ If you don't expect having to do it again,don't try to optimise it.
 通过C-c C-o打开链接(open)<2018-05-22 23:42>再次学习
 通过C-c C-l (打开保存的链接, 很强大，打开各种链接）
 通过C-c l(org-insert-link 然后可以通过C-c C-l使用 可以创建各种连接，直接跳出来，很是方便，爱上了org-mode <2018-04-23 17:38> ]
-  <2018-06-27 09:49> 一直想着实现vimwiki click <CR> to create file links
+  <2018-06-27 09:49> <2018-07-24 16:27> 一直想着实现vimwiki click <CR> to create file links
 ```
 
 
@@ -6531,6 +6531,9 @@ According to Deft's developer, Jason Blevins, its primary operation is searching
 Deft does that simply but efficiently. Type a keyword and Deft displays only the notes that
 have that keyword in their title. That's useful if you have a lot of notes and want to find one quickly.
 ```
+
+为了让日志文件也加入我的deft管理，只好重命名,TotalCmd(`Ctrl-M`重命名), 这样方便查找内容，虽然在calendar界面无法查到了
+但是如果想查到也可以直接再重命名一下即可
 
 ----------
 

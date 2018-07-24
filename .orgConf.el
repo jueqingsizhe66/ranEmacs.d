@@ -1569,7 +1569,7 @@ e.g. Sunday, September 17, 2000."
 
 ;; deft configuration
 ;;By default, Deft looks for notes by searching for files with the extensions .txt, .text, .md, .markdown, or .org in the ~/.deft
-(setq deft-extensions '("org" "md" "txt" "tex"))
+(setq deft-extensions '("org" "md" "wiki" "txt" "text"))
 (setq deft-directory "~/.emacs.d/GTD/")
 (setq deft-recursive t)  ;By default, Deft only searches for files in deft-directory but not in any subdirectories.
 
