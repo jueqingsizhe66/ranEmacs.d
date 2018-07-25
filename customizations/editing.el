@@ -129,7 +129,29 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C-c M-. ."   . mc/mark-all-dwim)
+         ("C-c M-. M-." . mc/mark-all-like-this-dwim)
+         ("C-c M-. n"   . mc/mark-next-like-this)
+         ("C-c M-. C-n" . mc/mark-next-like-this)
+         ("C-c M-. p"   . mc/mark-previous-like-this)
+         ("C-c M-. C-p" . mc/mark-previous-like-this)
+         ("C-c M-. a"   . mc/mark-all-like-this)
+         ("C-c M-. C-a" . mc/mark-all-like-this)
+         ("C-c M-. N"   . mc/mark-next-symbol-like-this)
+         ("C-c M-. C-N" . mc/mark-next-symbol-like-this)
+         ("C-c M-. P"   . mc/mark-previous-symbol-like-this)
+         ("C-c M-. C-P" . mc/mark-previous-symbol-like-this)
+         ("C-c M-. A"   . mc/mark-all-symbols-like-this)
+         ("C-c M-. C-A" . mc/mark-all-symbols-like-this)
+         ("C-c M-. f"   . mc/mark-all-like-this-in-defun)
+         ("C-c M-. C-f" . mc/mark-all-like-this-in-defun)
+         ("C-c M-. l"   . mc/edit-lines)
+         ("C-c M-. C-l" . mc/edit-lines)
+         ("C-c M-. e"   . mc/edit-ends-of-lines)
+         ("C-c M-. C-e" . mc/edit-ends-of-lines)
+         ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;; (("C-c m t" . mc/mark-all-like-this)            ;;
    ;;  ("C-c m m" . mc/mark-all-like-this-dwim)       ;;
@@ -230,3 +252,95 @@
 
 (global-set-key (kbd "C-c C-o") 'origami-toggle-node)
 (global-set-key (kbd "C-c C-p") 'origami-toggle-all-nodes)
+
+(wrap-region-global-mode t)
+(use-package wrap-region
+  :ensure   t
+  :config
+  (wrap-region-global-mode t)
+  (wrap-region-add-wrappers
+   '(("(" ")")
+     ("[" "]")
+     ("{" "}")
+     ("<" ">")
+     ("'" "'")
+     ("\"" "\"")
+     ("‘" "’"   "q")
+     ("“" "”"   "Q")
+     ("*" "*"   "b"   org-mode)                 ; bolden
+     ("*" "*"   "*"   org-mode)                 ; bolden
+     ("/" "/"   "i"   org-mode)                 ; italics
+     ("/" "/"   "/"   org-mode)                 ; italics
+     ("~" "~"   "c"   org-mode)                 ; code
+     ("~" "~"   "~"   org-mode)                 ; code
+     ("=" "="   "v"   org-mode)                 ; verbatim
+     ("=" "="   "="   org-mode)                 ; verbatim
+     ("_" "_"   "u" '(org-mode markdown-mode))  ; underline
+     ("**" "**" "b"   markdown-mode)            ; bolden
+     ("*" "*"   "i"   markdown-mode)            ; italics
+     ("`" "`"   "c" '(markdown-mode ruby-mode)) ; code
+     ("`" "'"   "c"   lisp-mode)                ; code
+     ))
+  :diminish wrap-region-mode)
+
+
+(defun surround (start end txt)
+  "Wrap region with textual markers.
+
+ Without active region (START and END), use the current 'symbol /
+word' at point instead of TXT.
+
+Useful for wrapping parens and angle-brackets to also
+insert the matching closing symbol.
+
+This function also supports some `org-mode' wrappers:
+
+  - `#s` wraps the region in a source code block
+  - `#e` wraps it in an example block
+  - `#q` wraps it in an quote block"
+  (interactive "r\nsEnter text to surround: " start end txt)
+
+  ;; If the region is not active, we use the 'thing-at-point' function
+  ;; to get a "symbol" (often a variable or a single word in text),
+  ;; and use that as our region.
+
+  (if (not (region-active-p))
+      (let ((new-region (bounds-of-thing-at-point 'symbol)))
+        (setq start (car new-region))
+        (setq end (cdr new-region))))
+
+  ;; We create a table of "odd balls" where the front and the end are
+  ;; not the same string.
+  (let* ((s-table '(("#e" . ("#+BEGIN_EXAMPLE\n" "\n#+END_EXAMPLE") )
+                    ("#s" . ("#+BEGIN_SRC \n"    "\n#+END_SRC") )
+                    ("#q" . ("#+BEGIN_QUOTE\n"   "\n#+END_QUOTE"))
+                    ("<"  . ("<" ">"))
+                    ("("  . ("(" ")"))
+                    ("{"  . ("{" "}"))
+                    ("["  . ("[" "]"))))    ; Why yes, we'll add more
+         (s-pair (assoc-default txt s-table)))
+
+    ;; If txt doesn't match a table entry, then the pair will just be
+    ;; the text for both the front and the back...
+    (unless s-pair
+      (setq s-pair (list txt txt)))
+
+    (save-excursion
+      (narrow-to-region start end)
+      (goto-char (point-min))
+      (insert (car s-pair))
+      (goto-char (point-max))
+      (insert (cadr s-pair))
+      (widen))))
+
+(global-set-key (kbd "C-+") 'surround)
+
+(defun surround-text-with (surr-str)
+  "Return an interactive function that when called, surrounds region (or word) with string, SURR-STR."
+  (lexical-let ((text surr-str))
+      (lambda ()
+        (interactive)
+        (if (region-active-p)
+            (surround (region-beginning) (region-end) text)
+          (surround nil nil text)))))
+

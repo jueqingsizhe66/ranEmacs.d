@@ -52,3 +52,10 @@
 
 
 笔记可能带给你一个迷惑，觉得记了就会了，其实不见得，还是得学习
+** 反复阅读你的writing，并进行修改 
+
+通过反复阅读你的text system，从而改进你的语言表达能力，进而提升你对事物的认知(还是认识?)
+
+在这个过程需要持之以恒的能力
+ *
+ [[file:~/.emacs.d/GTD/orgBoss/Note/notes.org::*tags%20important%20%5B#B%5D][tags important {#B}]]

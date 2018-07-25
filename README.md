@@ -93,6 +93,7 @@ click [clj-refactor][2]
 
 ```
 
+太喜欢emacs的查找替换功能， 首先选择一块区域，输入`s`,然后按照vim的`s///`的方式进行替换，还会出现替换后的效果，做的很人性化! <2018-07-25 14:50>
 ### 2.为了使用类似nerdtree的neotree(ui.el)【已删除】
 
 click [neotree][3]，不常用!使用ivy-counsel即可 参考标题91.
@@ -411,8 +412,48 @@ Seen from [emacs-rocks-13][37]
 4. mc/mark-all-like-this (C-c C-<)
 
 
+<2018-07-25 14:52>替换为如下形式，来自[ abrams ][354]
+```
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C-c M-. ."   . mc/mark-all-dwim)
+         ("C-c M-. C-." . mc/mark-all-like-this-dwim)
+         ("C-c M-. n"   . mc/mark-next-like-this)
+         ("C-c M-. C-n" . mc/mark-next-like-this)
+         ("C-c M-. p"   . mc/mark-previous-like-this)
+         ("C-c M-. C-p" . mc/mark-previous-like-this)
+         ("C-c M-. a"   . mc/mark-all-like-this)
+         ("C-c M-. C-a" . mc/mark-all-like-this)
+         ("C-c M-. N"   . mc/mark-next-symbol-like-this)
+         ("C-c M-. C-N" . mc/mark-next-symbol-like-this)
+         ("C-c M-. P"   . mc/mark-previous-symbol-like-this)
+         ("C-c M-. C-P" . mc/mark-previous-symbol-like-this)
+         ("C-c M-. A"   . mc/mark-all-symbols-like-this)
+         ("C-c M-. C-A" . mc/mark-all-symbols-like-this)
+         ("C-c M-. f"   . mc/mark-all-like-this-in-defun)
+         ("C-c M-. C-f" . mc/mark-all-like-this-in-defun)
+         ("C-c M-. l"   . mc/edit-lines)
+         ("C-c M-. C-l" . mc/edit-lines)
+         ("C-c M-. e"   . mc/edit-ends-of-lines)
+         ("C-c M-. C-e" . mc/edit-ends-of-lines)
+         ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
+
+```
+
+
 在没有[multiple-cursors][21]的前提下，你也可以使用`C-x r t` 来标记当前
 光标前的所有行，当作一个矩形区域，然后可以多行编辑
+
+
+#### C-x r t使用技巧
+
+1. 首先确定一个字母对角线起点
+2. 然后确定一个字母对角线终点，进而构成一块矩形区域
+3. 输入你要替换的string，比如把所有变量类型从float替换为double等
+
+
+
+
 
 当然你也可以使用`C-x Space Esc Down Down `(down必须向上或者向下箭头)等操作来标记多行
 
@@ -433,6 +474,21 @@ Seen from [emacs-rocks-13][37]
 
 较常用的命令，`M-x mc/mark-all-words-like-this`
 
+#### 使用技巧
+
+
+1. To get out of multiple-cursors-mode, press `<return> or C-g`. 
+The latter will first disable multiple regions before disabling multiple cursors.
+If you want to insert a newline in multiple-cursors-mode, use `C-j`.
+2. `C-c M-. M-.` or `C-c M-. C-a` 都是全选所有相同的symbols(只是mark而已,当然也支持中文)，然后执行动作比如`c`修改，`d`删除等
+最经常的情况是针对相同的word进行修正, 而且有时候需要快速产生一个列表
+也是很简单，先逐个罗列列表信息，然后自动产生数字和字母即可（用下面的insert技巧)
+列表只是方便读者看！写作者可以不需要也可以！
+3. 快速插入数字, `mc/insert-numbers`或者字母`mc/insert-letters`(在每行牵头
+4. 哈哈！！`C-M-鼠标左键` 表示`mc/add-cursor-on-click` 很方便定义多个位置
+
+
+体味到了mark的思想(visual状态), 以及批处理的感觉！
 ### 17. vim-surround to evil-surround
 
 有时候需要给单词或者字段组合增加个双引号或者单引号， 亦或者括号，
@@ -2602,6 +2658,16 @@ gpg --export-secret-keys >keyfile
 
 <2018-07-15 13:51> 越来越喜欢org-mode+crypt模式！
 
+<2018-07-25 14:17>
+If you trust your Emacs session on your computer, you can have Emacs cache the password.
+当然保存之后依然是加密码，`M-x org-decrypt-entry`就不需要在当前session输入密码了
+``` org
+(setq epa-file-cache-passphrase-for-symmetric-encryption t)
+```
+
+
+I have found that [ emacsdoctor ][353], `M-x doctor` will ask many questions about your status!
+
 ### 67. org-alert 提醒功能
 
 org-alert Provides notifications for scheduled or deadlined agenda entries.
@@ -2932,7 +2998,7 @@ and when you want to implement the internal function,just fe.
 2. M+Enter. you edit in the let block, then you can add parathesis
    in your new line.
 3. M+X mc/mark all like this. When visual select the word or
-parase, then `C-c C-<`
+parase, then `C-c C-<`(<2018-07-25 15:43>替换为 `C-c M-. .或者C-c M-. M-. 或者C-c M-. C-a` 不需要选择word)
 
 
 ### 79. ediff的强大之处
@@ -6545,6 +6611,30 @@ different folders into one folder, then let you find the file you specified with
 
 `C-c C-g` in the screen of deft, you can update the status of files.
 
+### 138. wrap-regions
+
+
+[Abrams block wrapper][355]介绍了关于注释块的使用，并结合[wrap-region][356]
+进行灵活使用，最后自定义了一个surround函数，方便进行text块的注释。
+
+```
+(global-set-key (kbd "C-+") 'surround)
+
+(defun surround-text-with (surr-str)
+
+
+```
+
+可以通过如下几种方式,进行包裹
+
+0. `#e` , emacs例子块
+1. `#s` , emacs代码块
+2. `#q` , emacs引用块
+3. `(`
+4. `[`
+5. `{`
+6. text
+
 ----------
 
 ----------
@@ -6903,3 +6993,7 @@ different folders into one folder, then let you find the file you specified with
 [350]: https://github.com/abo-abo/ace-link
 [351]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/deft.png
 [352]: https://jblevins.org/projects/deft/
+[353]: https://github.com/Pranshu258/emacsdoctor
+[354]: https://github.com/howardabrams/dot-files/blob/master/emacs.org#multiple-cursors
+[355]: https://github.com/howardabrams/dot-files/blob/master/emacs.org#block-wrappers
+[356]: 
