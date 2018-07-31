@@ -307,6 +307,13 @@ M-x package-install  markdown-mode+
 
 在init.el的my-package list 增加markdown-mode+，这样每次打开markdown的md后缀结尾的后缀名就会自动渲染，这也是emacs的[mode][18]的一种运用.
 
+1. `shift+tab`切换overview视图(标题间的outline模式)(第一步:Shift-tab多次，进入outline模式)
+2. `M-x markdown-cycle` 可以逐步children化，这样你就可以只工作在某一级别下(第二步:`M-x markdown-cycle` 不断进入子目录
+3. `Alt-n|p`上下移动标题
+
+当然说到底还是emacs的shift+tab切换效率高些！ 参考标题139
+
+![markdown-shifft][358]
 ### 11. server+clinet
 
 emacs经常地使用方式是
@@ -892,9 +899,9 @@ M-h  M-x comment-with-box 注释一个区域
 
 #### 函数
 
-1. projectile-find-file  快捷键C-c p f
+1. projectile-find-file  快捷键`C-c C-p f`  <2018-07-31 00:03>改成这种风格了(升级之后有所改变）
 
-你可以使用 M-x projectile 进入projectile模式
+你可以使用 M-x projectile-mode 进入projectile模式(默认进入)
 
 在vim中有一个类似的软件叫做[Ctrl-space][52],[projectile][51]会把git或者其他代码管理软件，亦或者你的lein，maven，budler等
 相关的文件夹当作一个project，如果啥都没有创建一个.projectile,那么该文件夹也会被识别为project
@@ -903,7 +910,7 @@ M-h  M-x comment-with-box 注释一个区域
 基本查找项目文件内的file(C-c是保留的快捷键)
 
 
-`C-c p f`
+`C-c c-p f`
 
 ![projectile][55]
 ### 34. Web-mode介绍
@@ -6635,6 +6642,52 @@ different folders into one folder, then let you find the file you specified with
 5. `{`
 6. text
 
+
+###  139. org-doing record what you are doing and done
+
+
+[org-doing][356]源自[doing][357]---a command line tool, 用于记录你正在做
+
+1. now(doing now "..."): add an entry
+2. later(doing later "...") : add an item to the later section 
+3. done(doing done ..) : Add an completed item with @done(date)
+4. meanwhile: Finish any @meanwhile tasks and optionally create a new one
+
+
+
+想法不错，但是org-agenda已经够好. 可以`C-c a T`输入`TODO`或者`DONE`或者其他，来快速找到你的任务状态
+
+#### 伟大的project outline thinking
+
+我又回看了Sachac的[baby-steps-org-todo][49], 学到了关于project outline的工作流
+
+1. 新建一个project二级标题，(不要让过多的任务压死你，分成项目去做_
+2. 在该标题下，建立TOOD三级标题，可以有多个TOOO
+    1. 贴任务标签(`C-c q`)
+    2. 指派(`C-c C-s`):不会忘记了deadline(不要太多，委托别人delegate,推迟postpone,去除eliminate
+    3. 设置截止日期(`C-c C-d`)
+    4. Clock in(`C-c C-x C-i`)  Clock-out (`C-c C-x C-o`) ...
+    5. 设置任务状态(`C-c C-t`)
+   
+   拟合一下工作过程
+   1. Tags
+   2. Schedule
+   3. Clock
+   4. Job Status
+   5. Tab
+在这种工作流模式，怕多，所以得把任务紧密围绕你的project！这点很重要！ 通过标题，所以可以使用`Tab`不断切换(父子标题间切换,go through different level of visibility ,hide the detail and then edit the detail)overview状态，可以指定某个project为当前你要工作的project
+(然后设置任务状态`doing`;`waiting`做了一些，合伙人还没做完中间，等待做；待做叫做`TODO`,这是任务的最后一个状态,做完重做叫`pending`)
+
+在这种工作流模式下，一个task不要超过7个词语！
+
+于是你也可以在你的org-agenda(`C-c a a`)设置任务状态( `t` ), 也可以设置日期( `C-c C-s`或者  `C-c C-d`), 也可以进行查看`Enter`进去.
+`C-f`向后一周看agenda状态，`C-b`往前看一周
+
+![Org-shifft][359]
+markdown-mode参考标题10.
+
+
+
 ----------
 
 ----------
@@ -6996,4 +7049,7 @@ different folders into one folder, then let you find the file you specified with
 [353]: https://github.com/Pranshu258/emacsdoctor
 [354]: https://github.com/howardabrams/dot-files/blob/master/emacs.org#multiple-cursors
 [355]: https://github.com/howardabrams/dot-files/blob/master/emacs.org#block-wrappers
-[356]: 
+[356]: https://github.com/rudolfolah/org-doing
+[357]: https://github.com/ttscoff/doing/
+[358]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift.png
+[359]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift1.png

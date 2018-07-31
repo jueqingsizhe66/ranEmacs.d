@@ -32,6 +32,7 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
+;(setq org-doing-file "~/.emacs.d/GTD/orgBoss/newgtd.org")
 ;(if (boundp 'org-user-agenda-files)
 ;  (setq org-agenda-files org-user-agenda-files)
  (setq org-agenda-files (list
@@ -488,10 +489,11 @@ In ~%s~:
 ; type 相当于 #+TYP_TODO  也有两种类型
 ; sequence 相当于 #+SEQ_TODO   也有两种类型
 ; 可以写出多个sequence 等你工作 学习 继续进行修改 但是注意无论是type还是sequence都得有|
+; TODO 要做 DOING正咋做 PENDING做完了再做  WAITING做了一半得等其他人完成
 (setq org-todo-keywords
   '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
     (type "REPORT(r!)" "BUG(b!)" "KNOWNCAUSE(k!)" "|" "FIXED(f!)")
-    (sequence "PENDING(p!)" "TODO(t!)" "DOING(i!)" "|" "DONE(d!)" "CANCELED(c!)" "ABORT(a@/!)")
+    (sequence "PENDING(p!)" "TODO(t!)" "DOING(i!)" "WAITING(e!)" "|" "DONE(d!)" "CANCELED(c!)" "ABORT(a@/!)")
 ))
 (setq org-todo-keyword-faces
   '(("工作" .      (:background "red" :foreground "white" :weight bold))
@@ -514,12 +516,6 @@ In ~%s~:
                       ("@Company" . ?o)
                       ("@Home" . ?H)
                       ("@NCEPU" . ?n)
-                      (:endgroup . nil)
-                      (:newline)
-                      (:startgroup . nil)
-                      ("WAITING" . ?w)
-                      ("HOLD" . ?h)
-                      
                       (:endgroup . nil)
                       (:newline)
                       (:startgroup . nil)

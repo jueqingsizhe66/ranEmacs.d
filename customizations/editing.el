@@ -344,3 +344,10 @@ This function also supports some `org-mode' wrappers:
             (surround (region-beginning) (region-end) text)
           (surround nil nil text)))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (use-package doom-todo-ivy            ;;
+;;   :ensure t                           ;;
+;;   :hook (after-init . doom-todo-ivy)) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'doom-todo-ivy)

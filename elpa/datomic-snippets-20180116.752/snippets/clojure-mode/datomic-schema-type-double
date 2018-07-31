@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: datomic-schema-type-double
-# key: dst
-# --
-:db.type/double`
-(datomic-snippets/show-docs ":db.type/double")`

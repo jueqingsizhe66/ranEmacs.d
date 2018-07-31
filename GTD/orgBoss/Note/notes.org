@@ -664,3 +664,10 @@ higher aerodynamic blade forces(又加上了balde） than for static stall(加�
 spanwise and temporal extend of the dyanmic stall region 
 
 进一步参考 [Wind turbine aerodynamic in yaw.pdf P153]
+** 校医院取药 [#B]                                                  :@NCEPU:
+DEADLINE: <2018-08-01 周三>
+:LOGBOOK:
+CLOCK: [2018-07-31 周二 16:12]--[2018-07-31 周二 16:13] =>  0:01
+:END:
+                         Added: [2018-07-31 周二 16:12]
+                         

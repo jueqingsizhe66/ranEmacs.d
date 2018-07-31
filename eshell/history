@@ -63,3 +63,5 @@ git commit -am "	update- talk to Mr. Shell and org-brain for sicp and corporatio
 git push origin develop
 git push origin develop
 cmd
+ledger -f test.ledger reg
+ledger -f test.ledger bal
