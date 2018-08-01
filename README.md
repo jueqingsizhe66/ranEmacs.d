@@ -273,6 +273,10 @@ C-c b 扫描所有的org文件！！！！【有用！】
 注意，在标题上面或者总任务上面的尾巴添加上[%]或者[/]即可，emacs org-mode会自动进行计算任务的[总进度][87]。
 只有在任务list才能添加勾选checkbox，标题不添加(操作方法，写上1.然后Alt+Shift+Enter, 既可以添加checkbox, 添加done标签标示完成 或者C-c C-c <2018-05-22 23:07>)。
 
+标题加上任务状态(doing或者todo或者pending才会在大标题的统计中显示出来，否则子标题不会出现在父标题的统计状态下),
+然后在小标题里面再填写任务的各个状态[checkbox]，标题没有checkbox，只有标题tag、任务状态、标题权限,三种属性!父标题
+统计子标题状态，一定得添加任务状态! <2018-08-01 10:50>
+
 ### 8. chez-scheme的集成(scheme-editing.el)
 
 注意你的scheme路径，参考 [emacs][16]
@@ -490,7 +494,7 @@ If you want to insert a newline in multiple-cursors-mode, use `C-j`.
 2. `C-c M-. M-.` or `C-c M-. C-a` 都是全选所有相同的symbols(只是mark而已,当然也支持中文)，然后执行动作比如`c`修改，`d`删除等
 最经常的情况是针对相同的word进行修正, 而且有时候需要快速产生一个列表
 也是很简单，先逐个罗列列表信息，然后自动产生数字和字母即可（用下面的insert技巧)
-列表只是方便读者看！写作者可以不需要也可以！
+列表只是方便读者看！写作者可以不需要也可以！(<2018-08-01 09:55>有道理!)
 3. 快速插入数字, `mc/insert-numbers`或者字母`mc/insert-letters`(在每行牵头
 4. 哈哈！！`C-M-鼠标左键` 表示`mc/add-cursor-on-click` 很方便定义多个位置
 
@@ -2978,6 +2982,7 @@ org-mode是一个超级好的gtd工具，每天都利用它帮你完成事情，
 额外再补充……
 
 
+
 ### 77. Emacs encode system乱码
 
 ```
@@ -4354,6 +4359,7 @@ prefill your clock history with (a given number of) things you actually clocked.
 
 而如果是`M-x counsel-org-clock-content`(功能比较强大，较为复杂)只是跳转而已,如果需要设置clock，还得用`M-o`(该命令调用了 `counsel-org-clock-default-action`),然后选择`I`,表示Clock-in。(20%时间可能会使用q设置标签 p设置属性等，有替换方法比如 C-c C-q  C-c, )
 
+<2018-08-01 09:54>
 
 
 ### 105. what is graphviz?(不错的thinking，think to get，wishful thinking)
@@ -4977,10 +4983,10 @@ org-dash的原理是通过读取标题里的任务量或者比重，通过org-da
 
 也就是这边的org-dash会处理两种类型的信息
 
-都是基于标题的[/]或者[%]来进行可视化
+都是基于标题的[/]或者[%]来进行可视化,分为以下两种形式：
 
-1. header 带todo done标签的, todo表示未完成(添加todo tag) done表示完成(添加done tag)
-2. header 带checkbox的list, checked表示已完成(C-c C-c),Alt+shift+enter添加新的unchecked box
+1. header 带todo done等标签的, todo表示未完成(添加todo tag) done表示完成(添加done tag)
+2. header 下方带checkbox的list（header本身不能带checkbox）, checked表示已完成(C-c C-c),Alt+shift+enter添加新的unchecked box
 
 
 ### 114. Copy codes into code-snippets.org file
@@ -5139,7 +5145,7 @@ how to input page break line, `Ctrl-q Ctrl-L`, 可以分页行为，copy到word�
    ((("kCHF" "25")
      ("recurrence" "3")
      ("kCHF" "30")
-     ("kCHF" "20")
+    ("kCHF" "20")
      ("kCHF" "10")
      ("recurrence" "5")
      ("kCHF" "50")

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: datomic-schema-attribute
+# key: dsa
+# --
+{:db/ident :${1:ident}
+ :db/valueType dst$0
+ :db/cardinality :db.cardinality/${2:one}}

@@ -8,6 +8,7 @@
 ;设置之后，打开 .org 扩展的文件会自动进入 org 模式;
 ;; The following lines are always needed. Choose your own keys.
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(setq shr-external-browser "chromium-browser")
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 ;(global-set-key "\C-c l" 'org-store-link) ;;有问题
 ;(global-set-key "\C-c a" 'org-agenda) ;; 有问题
@@ -270,11 +271,7 @@ Captured %<%Y-%m-%d %H:%M>
          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
        
          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-         ("p" "Protocol" entry (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Inbox")      ;;
-          "* %^{Title} \nSource: \n\n\n%?")                                                         ;;
-         ("L" "Protocol Link" entry (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Inbox") ;;
-          "* %? [[%:link][%:description]] \nCaptured On: %U")                                       ;;
-         ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+                  ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
             "* %?\n%(my/org-capture-code-snippet \"%F\")")        
          ))
 
@@ -1588,3 +1585,28 @@ e.g. Sunday, September 17, 2000."
 ;;                                (nospace . "-")        ;;
 ;;                                (case-fn . downcase))) ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; 加速 https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org#speed-commands
+(with-eval-after-load 'org-agenda
+  (bind-key "i" 'org-agenda-clock-in org-agenda-mode-map))
+(setq org-use-effective-time t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;    (defun my/org-use-speed-commands-for-headings-and-lists ()                                 ;;
+;;      "Activate speed commands on list items too."                                             ;;
+;;      (or (and (looking-at org-outline-regexp) (looking-back "^\**"))                          ;;
+;;          (save-excursion (and (looking-at (org-item-re)) (looking-back "^[ \t]*")))))         ;;
+;;    (setq org-use-speed-commands 'my/org-use-speed-commands-for-headings-and-lists)            ;;
+;;                                                                                               ;;
+;; (with-eval-after-load 'org                                                                    ;;
+;;    (add-to-list 'org-speed-commands-user '("x" org-todo "DONE"))                              ;;
+;;    (add-to-list 'org-speed-commands-user '("y" org-todo-yesterday "DONE"))                    ;;
+;;    (add-to-list 'org-speed-commands-user '("!" my/org-clock-in-and-track))                    ;;
+;;    (add-to-list 'org-speed-commands-user '("s" call-interactively 'org-schedule))             ;;
+;;    (add-to-list 'org-speed-commands-user '("d" my/org-move-line-to-destination))              ;;
+;;    (add-to-list 'org-speed-commands-user '("i" call-interactively 'org-clock-in))             ;;
+;;    (add-to-list 'org-speed-commands-user '("P" call-interactively 'org2blog/wp-post-subtree)) ;;
+;;    (add-to-list 'org-speed-commands-user '("o" call-interactively 'org-clock-out))            ;;
+;;    (add-to-list 'org-speed-commands-user '("$" call-interactively 'org-archive-subtree))      ;;
+;;    (bind-key "!" 'my/org-clock-in-and-track org-agenda-mode-map))                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

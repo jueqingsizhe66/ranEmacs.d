@@ -1206,6 +1206,18 @@ DEADLINE: <2019-04-15 周一>
                     :PROPERTIES:
                     :Effort: 16:00
                     :END:
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 10:49]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 10:49]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 10:49]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 10:48]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 10:48]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:51]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:50]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:48]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:48]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:47]
+                    - State "TODO"       from "TODO"          [2018-08-01 周三 09:41]
+                    - State "TODO"       from "TODO"       [2018-08-01 周三 08:48]
                     - State "TODO"       from "TODO"          [2018-07-31 周二 16:19]
                     :LOGBOOK:
                     CLOCK: [2018-06-25 周一 16:19]--[2018-06-26 周二 12:02] => 19:43
@@ -1237,6 +1249,7 @@ DEADLINE: <2018-07-01 周日>
                     :Effort: 4:00
                     :END:
                     :LOGBOOK:
+                    CLOCK: [2018-08-01 周三 11:44]--[2018-08-01 周三 11:45] =>  0:01
                     CLOCK: [2018-06-25 周一 08:37]--[2018-06-25 周一 08:37] =>  0:00
                     CLOCK: [2018-06-25 周一 08:34]--[2018-06-25 周一 08:36] =>  0:02
                     CLOCK: [2018-06-25 周一 08:30]--[2018-06-25 周一 08:34] =>  0:04
@@ -1257,12 +1270,14 @@ DEADLINE: <2018-07-01 周日>
    2. [X] 设置计算(定常+非定常(5deg 72*2))
    3. [ ] 处理结果
 
-*** TODO [#A] 双滑移英文初稿 <2018-06-20 周三 10:54>    [0/2]           :学术:
+*** TODO [#A] 双滑移英文初稿 <2018-06-20 周三 10:54>    [66%]           :学术:
 DEADLINE: <2018-07-08 周日>
                     :PROPERTIES:
                     :Effort:   4:00
                     :END:
                     :LOGBOOK:
+                    CLOCK: [2018-08-01 周三 09:41]--[2018-08-01 周三 09:48] =>  0:07
+                    CLOCK: [2018-08-01 周三 08:48]--[2018-08-01 周三 09:10] =>  0:22
                     CLOCK: [2018-06-23 周六 22:53]--[2018-06-24 周日 01:02] =>  2:09
                     CLOCK: [2018-06-23 周六 14:33]--[2018-06-23 周六 22:53] =>  8:20
                     CLOCK: [2018-06-20 周三 11:49]--[2018-06-20 周三 11:51] =>  0:02
@@ -1271,36 +1286,8 @@ DEADLINE: <2018-07-08 周日>
                     
                     Good writing starts with a plan(I need to finish it)
 
-                    必须完成
-1. [ ] 方法部分
-
-2. [ ] 结果处理部分
-
-3. [ ] 结论部分
-
-4. [ ] 引言部分
-
-   1. [ ] 看过的有用文章 
-    
- 
-5. [ ] 摘要部分
-
-| Experimental process         | Section of Paper           |
-|------------------------------+----------------------------|
-| What did I do in a nutshell? | Abstract                   |
-| What is the problem?         | Introduction               |
-| How did I solve the problem? | Materials and Methods      |
-| What did I find out?         | Results                    |
-| What does it mean?           | Discussion                 |
-| Who helped me out?           | Acknowledgments (optional) |
-| Whose work did I refer to?   | Literature Cited           |
-| Extra Information            | Appendices (optional)      |
-|                              |                            |
-
-
-   
-**** TODO [#A] Fluent双滑移的验证case <2018-06-25 周一 08:36>     [100%] :学术:
-DEADLINE: <2018-07-14 周六>
+**** DONE [#A] Fluent双滑移的验证case <2018-06-25 周一 08:36>     [100%] :学术:
+CLOSED: [2018-08-01 周三 09:41] DEADLINE: <2018-07-14 周六>
                     :PROPERTIES:
                     :Effort: 14:00
                     :END:
@@ -1325,8 +1312,8 @@ Numeca激活完毕
      2. [X] 2.5deg
      3. [X] 5deg
 
-**** TODO [#A] 双滑移(phaseVI)的数据处理 <2018-06-25 周一 08:38>        [0%] :学术:
-DEADLINE: <2018-07-03 周二>
+**** DONE [#A] 双滑移(phaseVI)的数据处理 <2018-06-25 周一 08:38>        [100%] :学术:
+CLOSED: [2018-08-01 周三 08:48] DEADLINE: <2018-07-03 周二>
                     :PROPERTIES:
                     :Effort: 4:00
                     :END:
@@ -1347,18 +1334,38 @@ DEADLINE: <2018-07-03 周二>
                     :END:
                     
                     
-1. [ ] 静态总体性能处理(时均结果)
-2. [ ] 静态截面气动性能处理
-   1. [ ] 平均Cp
-   2. [ ] Cn Ct分布
-3. [ ] 动态总体性能处理
-4. [ ] 动态截面气动性能处理
-   1. [ ] 平均Cp
-   2. [ ] Cn Ct 分布
-5. [ ] 静态和动态截面云图对比(如果分析出来 气动性能有差别，可以从定性角度先进性观察)
+1. [X] 静态总体性能处理(时均结果)
+2. [X] 静态截面气动性能处理
+   1. [X] 平均Cp
+   2. [X] Cn Ct分布
+3. [X] 动态总体性能处理
+4. [X] 动态截面气动性能处理
+   1. [X] 平均Cp
+   2. [X] Cn Ct 分布
+5. [X] 静态和动态截面云图对比(如果分析出来 气动性能有差别，可以从定性角度先进性观察)
+
+**** DOING [#A] 英文写作[20%]                    
+1. [X] 方法部分
+2. [ ] 结果处理部分
+3. [ ] 结论部分
+4. [ ] 引言部分
+   1. [ ] 看过的有用文章 
+5. [ ] 摘要部分
+
+| Experimental process         | Section of Paper           |
+|------------------------------+----------------------------|
+| What did I do in a nutshell? | Abstract                   |
+| What is the problem?         | Introduction               |
+| How did I solve the problem? | Materials and Methods      |
+| What did I find out?         | Results                    |
+| What does it mean?           | Discussion                 |
+| Who helped me out?           | Acknowledgments (optional) |
+| Whose work did I refer to?   | Literature Cited           |
+| Extra Information            | Appendices (optional)      |
+|                              |                            |
 
 
-*** TODO [#A] NREL 5MW fluent静态和动态偏航计算 <2018-06-25 周一 08:42>[/] :学术:
+*** TODO [#A] NREL 5MW fluent静态和动态偏航计算 <2018-06-25 周一 08:42>[2/4] :学术:
 DEADLINE: <2018-08-01 周三>
                     :PROPERTIES:
                     :Effort: 16:00
@@ -1366,19 +1373,19 @@ DEADLINE: <2018-08-01 周三>
                     :LOGBOOK:
                     CLOCK: [2018-06-25 周一 08:43]--[2018-06-25 周一 08:53] =>  0:10
                     :END:
-****  NREL5MW网格绘制
-***** 风轮部分(Numeca)
-:LOGBOOK:
-
-:END:
-***** 偏航部分(圆柱)
-***** 偏摆部分(圆球)
-***** 外场部分(矩形域)
-****  静态计算部分      [%]             
-1. [ ] 静态工况下的网格验证(定常)
-   1. [ ] 250w
-   2. [ ] 377w
-   3. [ ] 490W
+**** DONE NREL5MW网格绘制[100%]
+CLOSED: [2018-08-01 周三 10:49]
+1. [X] 风轮部分(Numeca)
+2. [X] 偏航部分(圆柱) 
+3. [X] 偏摆部分(圆球) 
+4. [X] 外场部分(矩形域)
+**** TODO 静态计算部分      [0%]             
+1. [-] 静态工况下的网格验证(定常)
+   1. [ ] 160w
+   2. [X] 309w
+   3. [X] 367w
+   4. [X] 531w
+   5. [X] 603w
 2. [ ] 静态工况下的湍流模型验证(定常)
    1. [ ] k-omega
    2. [ ] SST
@@ -1396,7 +1403,7 @@ DEADLINE: <2018-08-01 周三>
    6. [ ] 25°
    7. [ ] 30°
    8. [ ] -30°(所以边界条件得设置好)
-****  动态计算部分 [%]
+**** TODO 动态计算部分 [%]
 5. [ ] 偏航过程的计算
    1. [ ] 动态偏航
    2. [ ] 动态偏摆
@@ -1414,16 +1421,16 @@ DEADLINE: <2018-08-01 周三>
    1. [ ] 几何数据
    2. [ ] 模拟数据
    3. [ ] 计算结果
-****  其他计算 [%]
-10. [ ] Free vortex method and BEM (不同偏航角下)
-    1. [ ] Free vortex method
-    2. [ ] BEM
-**** NREL 5MW偏航+变桨实验 [/]
-***** 偏航实验 [%]
+**** DONE 其他计算 [100%]
+CLOSED: [2018-08-01 周三 10:48]
+1. [X] Free vortex method and BEM (不同偏航角下)
+   1. [X] Free vortex method
+   2. [X] BEM
+**** NREL 5MW偏航+变桨实验 [0/3]
+1. [ ] 偏航实验
+2. [ ] 变桨实验
+3. [ ] PIV实验
 
-***** 变桨实验 [%]
-
-***** PIV实验[%]
 
 *** DONE [#A] 工程热物理初稿 <2018-06-27 周三 15:38>        [100%]      :学术:
 CLOSED: [2018-07-31 周二 16:19] DEADLINE: <2018-07-04 周三>
@@ -1467,9 +1474,11 @@ DEADLINE: <2018-10-01 周一>
                     :END:
                     
                     一般3个月期限，比如0529== 0728过期!
-** TODO [#C] 校医院取外敷药 <2018-07-31 周二 16:17>
-DEADLINE: <2018-08-01 周三> SCHEDULED:<2018-07-31 周二>
+** DONE [#C] 校医院取外敷药 <2018-07-31 周二 16:17>
+CLOSED: [2018-08-01 周三 09:33] DEADLINE: <2018-08-01 周三> SCHEDULED:<2018-07-31 周二>
+- State "DONE"       from "TODO"          [2018-08-01 周三 09:33]
 :LOGBOOK:
+CLOCK: [2018-08-01 周三 09:10]--[2018-08-01 周三 09:28] =>  0:18
 CLOCK: [2018-07-31 周二 16:17]--[2018-07-31 周二 16:18] =>  0:01
 :END:
 
