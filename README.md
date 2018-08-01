@@ -4347,17 +4347,23 @@ If you want to compute time values use the T, t, or U flag, either in Calc formu
 
 [counsel-org-clock][245], 类似的还有[org-mru-clock][246](mru:most-recently-used),他们两者[有些不同点][247]
 
+使用org-mru-clock打开有一个好处，只打开那个标题下的信息，折叠所有不相关信息(<2018-08-01 17:21>)
+
 what is really the killer feature of counsel-org-clock package is that it can look through your agenda files and 
 prefill your clock history with (a given number of) things you actually clocked.
 
 1. supports more Ivy actions[show history, and goto the clocked item]
 2. more complete title shown in history list(while org-mru-clock is more simpler with "title(parent)" mode.
 
-`M-x counsel-org-clock-content` 显示所有最近newgtd.org: Tasks > TODO [#B] 查阅energy投稿信息 <2018-05-16 周三 17:08 +1w> :学术:标记过clock的标题
+`M-x counsel-org-clock-content` 显示所有最近newgtd.org: 
+Tasks > TODO [#B] 查阅energy投稿信息 <2018-05-16 周三 17:08 +1w> :学术:标记过clock的标题
 
-有一种工作风格（较为简单）： 如果你之前截止了某一段clock时间，然后想重新开始，直接`M-x org-mru-clock-in` 会跳出一个prompt框，直接选择其中一个即可。(80%时间是clock-in 并goto的风格)
+有一种工作风格（较为简单）： 如果你之前截止了某一段clock时间，然后想重新开始，直接`M-x org-mru-clock-in` 会跳出一个prompt框，
+直接选择其中一个即可。(80%时间是clock-in 并goto的风格)
 
-而如果是`M-x counsel-org-clock-content`(功能比较强大，较为复杂)只是跳转而已,如果需要设置clock，还得用`M-o`(该命令调用了 `counsel-org-clock-default-action`),然后选择`I`,表示Clock-in。(20%时间可能会使用q设置标签 p设置属性等，有替换方法比如 C-c C-q  C-c, )
+而如果是`M-x counsel-org-clock-content`(功能比较强大，较为复杂)只是跳转而已,如果需要设置clock，
+还得用`M-o`(该命令调用了 `counsel-org-clock-default-action`),然后选择`I`,表示Clock-in。
+(20%时间可能会使用q设置标签 p设置属性等，有替换方法比如 C-c C-q  C-c, )
 
 <2018-08-01 09:54>
 
@@ -7058,4 +7064,4 @@ markdown-mode参考标题10.
 [356]: https://github.com/rudolfolah/org-doing
 [357]: https://github.com/ttscoff/doing/
 [358]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift.png
-[359]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift1.png
+[359]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift2.png

@@ -656,7 +656,7 @@ Yaw misalignment introduces the unsteady load , dynamic stall is very important
  because it causes the larger load than static 
  
 
-Yaw misaligment introduces unsteady blade load(产生位置也有了). The occurentce fo dynamic stall
+Yaw misaligment introduces unsteady blade load(产生位置也有了). The occurentce for dynamic stall
 is of particular(采用of形式来表达) in this respect, since it can yield(产生)significantly (极大地)
 higher aerodynamic blade forces(又加上了balde） than for static stall(加上for， 然后在static后面
 再加上stall)

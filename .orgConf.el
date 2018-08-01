@@ -1465,8 +1465,14 @@ e.g. Sunday, September 17, 2000."
 (require 'org-listcruncher)
 
 ;(setq org-mru-clock-how-many 100)
-(setq org-mru-clock-completing-read #'ivy-completing-read)
-
+;(setq org-mru-clock-completing-read #'ivy-completing-read)
+(use-package org-mru-clock
+  :ensure t
+  :bind* (("C-c C-x i" . org-mru-clock-in)
+          ("C-c C-x C-j" . org-mru-clock-select-recent-task))
+  :init
+  (setq org-mru-clock-how-many 100
+        org-mru-clock-completing-read #'ivy-completing-read))
 
 ;;; org-brain
 
