@@ -6551,6 +6551,7 @@ put the cygwin bin into path , so you can execute unix executable program correc
 
 3. working in the org babel source code
 
+<2018-08-02 22:23> good work, 在语言中写`(shell . t)` 在代码块中使用`bash`
 ``` org
 
 #+BEGIN_SRC bash :dir "M:\\fluentYaw0\\"
@@ -6629,6 +6630,53 @@ have that keyword in their title. That's useful if you have a lot of notes and w
 different folders into one folder, then let you find the file you specified with regex strings) 
 
 `C-c C-g` in the screen of deft, you can update the status of files.
+
+#### export reference files to org
+
+
+1. install perl Encode `cpanm Encode`
+
+use dos cmd `tree > hello.org` to export 当前目录下的文件目录,然后由于存在中文乱码，于是得进行perl文件编码转换
+``` perl
+use strict;
+use warnings;
+use utf8;
+use Encode;
+ 
+#open(IN, "<", "hello.org");
+#open(OUT, ">","helloP.org");
+open(IN, "<", $ARGV[0]);
+open(OUT, ">",$ARGV[1]);
+ 
+while(<IN>){
+	chomp();
+    my $line = Encode::decode("GB2312", $_);   # 必须知道文件的原始编码格式
+	$line = Encode::encode("UTF-8", $line);
+	print OUT "$line\n";
+}
+close(IN);
+close(OUT);
+
+```
+
+
+使用方式
+
+``` perl
+
+perl hello.pl hello.org helloModify.org
+```
+
+把所有命令集中于sol.bat,以后直接执行sol.bat即可进行更新!
+``` cmd
+tree /f I:\ScienceBase.Attachments\Turbine > c:/users/yzl/AppData/Roaming/.emacs.d/GTD/writing/referencesBak/yaw-1.org
+perl hello.pl yaw-1.org yaw.org
+del yaw-1.org
+
+
+```
+
+这样就可以导出文件目录，提供给deft进行文件名搜索了！当然其实你用everything查找也是一样的！
 
 ### 138. wrap-regions
 
