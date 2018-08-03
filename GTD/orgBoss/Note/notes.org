@@ -668,10 +668,9 @@ spanwise and temporal extend of the dyanmic stall region
 
 记得在cygwin安装tree
 #+BEGIN_SRC bash :dir "I:\\ScienceBase.Attachments\\data missing estimation\\"
-  find . -name "*" > hello.org
+  find
 #+END_SRC
 
-#+RESULTS:
 
 #+BEGIN_SRC bash :dir "I:\\ScienceBase.Attachments\\data missing estimation\\"
   perl hello.pl 

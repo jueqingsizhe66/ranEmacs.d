@@ -384,7 +384,7 @@
 	 ((:keywords "convenience" "languages")
 	  (:url . "https://github.com/joaotavora/eglot"))])
  (el-search .
-	    [(1 7 4)
+	    [(1 7 5)
 	     ((emacs
 	       (25))
 	      (stream
@@ -933,7 +933,7 @@
 	((:url . "http://elpa.gnu.org/packages/rbit.html")
 	 (:keywords "data structures" "binary tree" "intervals"))])
  (rcirc-color .
-	      [(0 3)
+	      [(0 4)
 	       nil "color nicks" single
 	       ((:url . "http://elpa.gnu.org/packages/rcirc-color.html")
 		(:keywords "comm"))])
