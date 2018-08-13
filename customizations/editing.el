@@ -253,7 +253,7 @@
 (global-set-key (kbd "C-c C-o") 'origami-toggle-node)
 (global-set-key (kbd "C-c C-p") 'origami-toggle-all-nodes)
 
-(wrap-region-global-mode t)
+;(wrap-region-global-mode t)
 (use-package wrap-region
   :ensure   t
   :config
@@ -282,6 +282,8 @@
      ("`" "'"   "c"   lisp-mode)                ; code
      ))
   :diminish wrap-region-mode)
+
+
 
 
 (defun surround (start end txt)
@@ -350,4 +352,5 @@ This function also supports some `org-mode' wrappers:
 ;;   :hook (after-init . doom-todo-ivy)) ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'doom-todo-ivy)
+;(require 'doom-todo-ivy)
+

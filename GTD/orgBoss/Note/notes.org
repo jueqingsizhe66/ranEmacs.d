@@ -678,5 +678,424 @@ spanwise and temporal extend of the dyanmic stall region
 
 
 #+RESULTS:
+** NoteExpress标记 [#B]                                             :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-08-04 周六 09:33]--[2018-08-04 周六 09:44] =>  0:11
+:END:
+                         Added: [2018-08-04 周六 09:32]
+                         
+
+标记星级+优先级(刚开始是一级，如果觉得好变成2级，再看一遍觉得特别不错，变成三级..)
+** 搜索引擎出现的必然 [#B]                                          :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-08-04 周六 09:44]--[2018-08-04 周六 09:45] =>  0:01
+:END:
+                         Added: [2018-08-04 周六 09:44]
+                         
+从只言片语到书册，再到图书馆以及搜索引擎
+https://www.baidu.com/s?wd=how%20search%20works&rsv_spt=1&rsv_iqid=0x9c499bc9000313b6&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=17&rsv_sug1=7&rsv_sug7=100&rsv_sug2=0&inputT=4271&rsv_sug4=4272
+
+1. 爬虫抓取信息(following links ,inside links  connected into thousands and millions information web)，按照高质量网站优先原则
+2. 进行index
+3. 通过算法，better understand what you mean理解你的输入内容，进行搜索 base on the relevent clues, 
+4. 不断过滤掉垃圾网页（site & page quality高质量网站显示在前! 
+
+https://www.google.com/intl/bn/insidesearch/howsearchworks/thestory/
+Jake Hubert, Google Product Manager, said in a blog, “Here you can follow the entire life of a search query,
+ from the web, to crawling and indexing(1), to algorithmic ranking(2) and serving(3), to fighting webspam(去掉垃圾信息).”
+ 
+
+ 
+1. keyword
+2. rank and sort(整理)
+3. qualitiy
 
 
+级别1： 只会输入单词的
+级别2： 关键词组合 基本逻辑关系(and：空格表示 or not)  高级检索(site:  ftp:   filetype:pdf)
+句子的话涉及拆词问题(关键词组合，跟浏览器的搜商有关)，  + 强制添加   -减号强制剔除
+级别3： 高校检索 黑客级别
+
+各个搜搜引擎差异在于专业性知识收集不同、展示界面不同
+
+乔纳森-弗莱彻：被遗忘的搜索引擎之父
+腾讯科技[微博]瑞雪2013年09月05日02:47我要分享
+[导读]20年前，弗莱彻发明了全世界第一个能进行网络搜索的搜索引擎。
+
+乔纳森-弗莱彻：被遗忘的搜索引擎之父
+
+弗莱彻（中）与SIGIR大会的其他与会者在一起（腾讯科技配图）
+
+腾讯科技 瑞雪 9月5日编译
+
+在谷歌(微博)庆祝其15周年诞辰之际，这家网络巨头已经成为信息检索的代名词。
+
+但是，如果你在谷歌搜索引擎中输入乔纳森·弗莱彻（Jonathon Fletcher）的名字，那么在马上得出的搜索结果中不会找到什么线索指向他曾在万维网发展的过程中所扮演的角色。当然，也不会有任何信息能表明他作为现代搜索引擎之父的身份。
+
+但在20年以前，正是弗莱彻在苏格兰斯特灵大学（University of Stirling）的一个电脑实验室中发明了全世界第一个能进行网络搜索的搜索引擎，也正是他发明的这种技术为谷歌、必应（Bing）、雅虎和今天网络上的所有大型搜索工具提供了支持。
+
+解决网络搜索问题
+
+在1993年时，网络正处于刚刚开始发展的婴儿期。在那时，第一个拥有类似于今天我们使用的界面的流行浏览器Mosaic刚刚发布，网页的总数量还只是以千为单位来进行计算而已。
+
+尽管当时网络已经诞生，但如何在网络上找到内容的问题尚未得到解决。Mosaic拥有一个名为“What's New”的页面，能在新网站被创立时检索到这些网站。但问题在于，如果想要Mosaic的开发者能够知道一个新网站的诞生，那么其创立者就必须写信给美国伊利诺伊大学香槟分校（University of Illinois Urbana-Champaign）的国家超级计算应用中心（NCSA），也就是Mosaic浏览器团队的基地。
+
+在那时，弗莱彻是斯特灵大学一名颇有前途的研究生，而且已经被推荐到格拉斯哥大学（University of Glasgow）攻读博士学位。但是，格拉斯哥大学的资金链在弗莱彻还没能到这所大学以前就已断裂，这让他变得无所事事。
+
+“在突然之间，我变得非常渴望找到一种收入来源。”弗莱彻回忆道。“因此我回到了原来的大学，找到了一个为技术部门工作的岗位。”
+
+正是在这个工作岗位上，弗莱彻第一次与万维网和Mosaic的“What's New”页面邂逅。
+
+更好的方法
+
+在为斯特灵大学建设一个网络服务器的过程中，弗莱彻意识到，“What's New”页面存在根本上的缺陷。由于网站是以人工方式被添加到这个网页的列表中的缘故，没有什么东西能被用来追踪网站内容的变化。其结果是，许多链接很快就会变得过期或是被错误标记。
+
+“如果你想要看看有什么东西发生了变化，那么就不得不回过头去查看。”弗莱彻在谈及Mosaic的链接时说道。“抱着必须推出一种更好的方法的念头，拥有计算机科学学位的我决定要编写一些东西来改变这种情况。”
+
+弗莱彻所说的“一些东西”就是全世界的第一个“网络爬虫”（web crawler）。弗莱彻把自己的这种发明称作“JumpStation”，他建立起了一个页面索引，能通过“网络爬虫”来对页面进行搜索，这基本上来说是一种自动化的处理程序，能对被其发现的每个网站页面进行访问和索引。这种自动化处理的程序会一直继续下去，直到“网络爬虫”再也找不到东西可以访问时为止。
+
+在十年以后，也就是1993年12月21日，JumpStation就再也找不到可以访问的东西，结果是将2.5万个页面编入索引。而在今天，谷歌已经编入索引的页面数量已经超过了1万亿个。
+
+乔纳森-弗莱彻：被遗忘的搜索引擎之父
+
+JumpStatio诞生几个月以前的“What's New”页面（腾讯科技配图）
+
+搜索的诞生
+
+弗莱彻很快就为这个索引开发出了一种易于导航的搜索工具，将自己的网站嵌入了Mosaic的“What's New”页面，这标志着全世界第一个现代搜索引擎开始运作。
+
+“我会说，他是网络搜索引擎之父。”墨尔本皇家理工大学（Royal Melbourne Instituteof Technology）的马克·桑德森（Mark Sanderson）教授说道，他专门负责研究信息检索的历史。“（在弗莱彻发明第一个网络搜索引擎之前的）很长一段时间里，很明显一直都有计算机在从事搜索工作；在网络诞生以前，当然也已经有搜索引擎存在。然而，是弗莱彻第一个创造了一种拥有现代搜索引擎所有组成部分的搜索引擎。”
+
+但在今天，谷歌的两名联合创始人塞吉·布林（Sergey Brin）和拉里·佩奇（Larry Page）都已经成为家喻户晓的名人，而目前居住在中国香港的弗莱彻却几乎没有因为他为互联网进化作出的贡献而为人所知。
+
+之所以会出现这种情况，或许与他的项目最终被放弃有关。随着JumpStation的成长，这个项目需要的投资越来越大，而这种投资却是斯特灵大学所不愿提供的。“当时JumpStation是在一个共享服务器上运行的。”弗莱彻解释道。“那时没有很大的磁盘空间，而且当时的磁盘很小，价格也很昂贵。”
+
+空间控制
+
+到1994年6月份，JumpStation已经对27.5万个页面进行了索引。空间方面的限制迫使弗莱彻仅对网页的标题进行索引，而不是对网页的全部内容进行索引；但即使是在作出了这种妥协以后，JumpStation也仍旧开始面临着过载的困境。
+
+弗莱彻也同样已不堪重负。“那并非我的本职工作。”他说道。“那时我的工作职责是维持学生实验室的正常运作，并从事一些系统管理和技术方面的杂活儿。”
+
+在当时，弗莱彻得到了一个到东京工作的机会。对他来说，这个工作机会的吸引力大到令人难以抗拒，而斯特灵大学也几乎没有尝试做些什么来挽留他或是挽留JumpStation。
+
+“很明显，在尝试说服他们相信这个项目很有潜力的问题上，我做得很不成功。”弗莱彻说道。“在当时，我做了自己认为是正确的事情（到日本去工作）。但在过去20年时间里，总有那么些时候我会回首这段往事。”
+
+斯特灵大学计算机科学及数学系主任莱斯利·史密斯（Leslie Smith）教授还记得弗莱彻，他承认JumpStation最终“被证明是领先于时代的”，并在接受BBC采访时表示：“斯特灵大学的同仁们都为他能因自己取得的成就而为人所知感到高兴。”
+
+未来展望
+
+尽管弗莱彻对不得不放弃JumpStation项目而感到失望，但他的这种先驱技术在后来却成为了所有网络搜索引擎的基础。
+
+“在1993年时，网络社区的规模非常小。”桑德森教授说道。“在当时，在网上做任何事情的人都会知道JumpStation。”他还补充道：“到1994年年中前后，网络搜索引擎将变得非常重要这件事情已经开始变得明显。谷歌直到1998年才出现，而弗莱彻在1993年就已经做了这件事情。”
+
+在几个星期以前于爱尔兰首都都柏林召开的SIGIR（国际计算机协会主办的国际信息检索大会）上，弗莱彻由于他在网络搜索引擎方面作出的成就而获得了一些知名度。在当时，他曾跟来自于微软、雅虎和谷歌的与会代表进行过小组讨论。但在弗莱彻的言谈中，他所谈论的并非自己以往的成就，而是对未来作出了展望。
+
+“在我看来，网络不会永远存在。”弗莱彻说道。“但是，找到信息的问题则将永远存在，因为对内容进行搜索并找到信息的愿望是独立于媒介以外的。”
+
+对于追随弗莱彻其后建立起网络搜索引擎的人们来说，当前的这种媒介已经让他们赚到了大笔的钞票。但是，弗莱彻这位出生于英格兰自治市斯卡伯勒（Scarborough）的先驱者并不对此感到遗憾。“我的父母以我为骄傲，我的妻子和孩子也是如此。对我来说，这才是无价之宝，所以我感到非常幸福。”
+** 最喜欢的一段perl代码 [#B]                                        :@NCEPU:
+                         Added: [2018-08-05 周日 03:47]
+                         
+
+#+BEGIN_SRC perl
+
+#!/usr/bin/env perl
+#===============================================================================
+#
+#         FILE: accessPeople.pl
+#
+#        USAGE: ./accessPeople.pl
+#
+#  DESCRIPTION:
+#
+#      OPTIONS: ---
+# REQUIREMENTS: ---
+#         BUGS: ---
+#        NOTES: ---
+#       AUTHOR: YOUR NAME (),
+# ORGANIZATION:
+#      VERSION: 1.0
+#      CREATED: 2017/12/10 22:03:34
+#     REVISION: ---
+#===============================================================================
+
+use strict;
+use warnings;
+use utf8;
+
+my @records;
+my @cols = ( 's_name', 'f_name', 'job' );
+
+my $FILE_file_name = 'people.dat';    # output file name
+
+open my $FILE, '<', $FILE_file_name
+    or die "$0 : failed to open  output file '$FILE_file_name' : $!\n";
+while (<$FILE>) {
+    chomp;
+    my %rec;
+    @rec{@cols} = split /,/;
+    push @records, \%rec;
+}
+
+close $FILE
+    or warn "$0 : failed to close output file '$FILE_file_name' : $!\n";
+
+foreach (@records) {
+    print "$_->{f_name} ", "$_->{s_name} ", "is a $_->{job}\n";
+}
+
+#+END_SRC
+
+
+
+
+
+#+BEGIN_EXAMPLE people.dat
+Jones, Martha, UNIT
+Harkness,JACK,Torchwood
+Smith,Sarah Jane, Journalist
+#+END_EXAMPLE
+** 常用perl解析中文 [#B]                                            :@NCEPU:
+                         Added: [2018-08-05 周日 03:55]
+                         
+
+                         #+BEGIN_SRC perl
+                           #!/usr/bin/env perl
+                           #===============================================================================
+                           #
+                           #         FILE: analysisFeiji.pl
+                           #
+                           #        USAGE: ./analysisFeiji.pl  
+                           #
+                           #  DESCRIPTION: 
+                           #
+                           #      OPTIONS: ---
+                           # REQUIREMENTS: ---
+                           #         BUGS: ---
+                           #        NOTES: ---
+                           #       AUTHOR: Ye Zhao Liang (YZL), yezhaoliang@ncepu.edu.cn
+                           # ORGANIZATION: NCEPU
+                           #      VERSION: 1.0
+                           #      CREATED: 2017/12/19 21:46:42
+                           #     REVISION: ---
+                           #===============================================================================
+
+                           use strict;
+                           use warnings;
+                           use utf8;
+
+                           binmode(STDIN,":encoding(gb2312)");
+                           binmode(STDOUT,":encoding(gb2312)");
+
+                           # while ( <> ) {
+                           #     chomp;
+                           #     print $_,"\n";
+                           #     last if $_ =~ m/q/xm;
+                           # }
+
+                           open(FEIJI,"feiji.txt") or die "can't open the file \n";
+                           my $car ="尾翼";
+
+                           binmode(FEIJI,":encoding(gb2312)");
+                           # binmode( STDIN,  ':encoding(gbk2312)' );
+                           #binmode( FEIJI,  ':encoding(utf8)' );
+                           #binmode( STDOUT, ':encoding(gbk2312)' );   
+                           #binmode( STDERR, ':encoding(gbk2312)' ); 
+                           #while( my $line = <FEIJI>){
+                           #my $re = Encode::decode('GB2312','汽车');
+                           my $count=1;
+                           while( <FEIJI>){
+                               #print "$_ \n" ;
+                               #     print "$_ \n" if $_ =~ /.*$re.*/;
+                               #    Encode::_utf8_on($_);
+                               #    Encode::decode_utf8($_);
+                               #print "$_\n" ;#if $_ =~ m/$car/xm;
+                               #print "$count: $_\n" if $_ =~ m/$car/xm;
+                               #$count +=1;
+
+                               s/汽车/风力机/g;
+                               print;
+                           }
+
+                         #+END_SRC
+** perl正则学习 [#B]                                                  :perl:
+                         Added: [2018-08-13 周一 11:38]
+                         
+
+                         
+perl中有一个tr命令，代表代换，任何的编译器也有着代换的概念（代换就是一一代换吗，
+在perl中其实就是一个一个字母进行代换
+
+s///其实是模式代换，tr叫做字母代换，不考虑模式
+
+现在编辑器，vim，emacs等对于多文件搜索(配合上fzf，ag等代码、字符搜索工具）,可以很容易进行
+
+很多编辑器内置了正则表达式引擎，比如vim和emacs的:%s///功能,
+
+
+*** 反向引用
+
+如果想在s"""运算符的第一部分使用反向引用，使用语法\1 \2等
+如果相杂第二部分使用反向引用，使用$1,$2
+
+比如 
+#+BEGIN_SRC  perl
+$string=~ s"(far)(out)" $2 $1"; ====> 'Out far’
+
+$string=' sample examples'; if($string=~m"(amp..) ex\1") {print "matches!\n";}
+
+#+END_SRC
+所以s命令进行匹配的时候是有进行两个隐式的赋值工作(很多人没说好这一点，因为比较细)
+
+比如
+
+#+BEGIN_SRC perl
+
+  $string = ' bballball';
+  $string =~ s" (b)\1(a...)\1\2" $1$2";
+
+  #让我们详细地看看这个例子。该例完成匹配，但是原因不是太明显。对这个字符串的匹
+  #配有五个步骤：
+      1)在圆括号中的第一个b匹配字符串的开头，接着将其存放在\1 和$1 中。
+      2)\1 于是匹配字符串中的第二个b，因为与b 相等，而第二个字符碰巧是b。
+      3)(a..)匹配字符串all且被存在\2 和$2 中。
+      4)\1 匹配下一个b。
+      5)因为\2等于all所以匹配下一个且是最后三个字符(all)。
+      将他们放到一起就得到正则表达式匹配bballball，或者说是整个字符串。既然$1 等于'
+      b'，$2 等于all，则整个表达式：
+
+  $string = ' bballball' ;
+  $string =~ s" (b)\1(a..)\1\2" $1$2";
+  #(在这个例子中)转换为如下代码：
+  $string =~ s" (b)b(all)ball" ball";
+  #或者用行话讲，用bballball 替换ball。
+
+
+  一般第一部分替换比较少一些(第二部分可以直接使用)
+#+END_SRC
+
+
+***  scalars
+
+三种内建的数据结构
+1. scalars
+2. arrays of scalars(arrays)
+3. associates arrays of scalars(hashes)
+
+
+基于scalars的语法规则！
+
+
+#my  @words   = $_=~/(\S+)/g; 等效于 #my  @words =  /(\S+)/g; 
+
+
+
+*** 零宽断言
+
+位置坐落于匹配单词物理上的左侧(?=匹配词) (?!匹配词)
+位置坐落于匹配单词物理上的右侧(?<=匹配词) (?<!匹配词)
+
+
+#+BEGIN_EXAMPLE
+   源字符串：<div>a test</div>
+
+   正则表达式：(?<=<div>)[^<]+(?=</div>)
+    这个正则的意义就是匹配<div>和</div>标签之间的内容，而不包括<div>和</div>标签本身。
+
+有个问题，是否领款断言的表达式可以匹配呢
+   正则表达式：(?=<div>)[^<]+(?=</div>)
+#+END_EXAMPLE\b匹配单词边界
+
+\w匹配[a-zA-Z0-9]  \W匹配非\w
+\d匹配[0-9] \D匹配非数字
+^匹配行字符串开头  $ 匹配行字符串结尾
+\A匹配行头  \Z匹配行尾
+
+
+#+BEGIN_SRC perl
+  print "**********************zero width predicting and backslash g**************************************\n";
+
+  my  $divS= "<div> a test </div>               <div> hello  another test</div>";
+
+  #注意这边不适用//,而使用""来代替，避免和html标签</div>冲突
+  #$divS =~ m"(?<=<div>)[^<]+(?=</div>)"xm;
+  $divS =~ m"((?<=<div>)[^<]+)(?=</div>)"mx;
+
+  print "THe matched string is $1\n";
+
+  while ( $divS =~ m"((?<=<div>)[^<]+)(?=</div>)"mxg ) {
+      print "THe matched string is $1\n";
+  }
+
+
+  ## result
+  #**********************zero width predicting and backslash g**************************************
+  THe matched string is  a test
+  THe matched string is  a test
+  THe matched string is  hello  another test
+#+END_SRC
+
+注意还有一点，正则表达式\< 和\>匹配单词边界(分别匹配the start position of a word and the end position of a word
+还有就是命名捕获也会用尖括号！
+
+由于零宽断言，最终只获得一个位置，我们是否可以获取其匹配的内容？多此一举，直接不使用零宽断言不就ok了！！
+
+零宽断言其实也叫作夹逼定理(洛必达法则，嘚瑟的说出来 luo重音 必(重音)达(达平音）
+
+边界本身也是一个夹逼的过程，答案本身也是夹逼的过程，数值计算也是夹逼的过程！人生也是夹逼的过程！
+并行： 分别夹逼的过程!
+所以一定得把逼夹紧！
+
+**** 正则命名捕获
+
+
+#+BEGIN_SRC perl
+  print "*********************** named capture*************************************\n";
+
+  ## All named capture string are stored in the associative arrays of scalars(hash) named %+
+  # So yuu can use $+{name} to reference the value of the captured term.
+  my $str = "jack and rose"; 
+  if ($str =~ /(?<first>\S+) (and|or) (?<second>\S+)/) { 
+      my ($first, $second) = ($+{first}, $+{second}); 
+      print "$first\n$second\n";  # jack, rose 
+      print "the current \$1 \$2 \$3 is $1 , $2 , $3\n";
+  } 
+
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+
+
+#########*********************** named capture*************************************
+jack
+rose
+the current $1 $2 $3 is jack , and , rose
+
+
+
+#+END_EXAMPLE
+
+**** 不捕获
+
+
+use ?: to stop capturing the content into $number array!
+#+BEGIN_SRC perl
+  if ($str =~ /(?<first>\S+) (?:and|or) (?<second>\S+)/) { 
+      my ($first, $second) = ($+{first}, $+{second}); 
+      print "$first\n$second\n";  # jack, rose 
+      print "Now  \$1 \$2 \$3 is $1 , $2 , $3\n";
+  } 
+
+#+END_SRC
+
+
+#+BEGIN_EXAMPLE
+#*********************** named capture*************************************
+jack
+rose
+Use of uninitialized value $3 in concatenation (.) or string at testArray2.pl line 118.
+Now  $1 $2 $3 is jack , rose ,
+
+#+END_EXAMPLE
+
+所以命名捕获其实是让程序多做事情!

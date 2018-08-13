@@ -1,5 +1,64 @@
 https://github.com/gregsexton/SICP-Clojure
+
 http://mitpress.mit.edu/sites/default/files/sicp/index.html
+
+1. 前面都在讲什么是计算（声明式与指令式的关系、过程、Y算子、形式语义）、怎么做计算（迭代、递归）、数理逻辑跟计算直接的关系（逻辑式程序设计），
+2. 然后最后再用不可计算引出“停机问题”，
+3. 再用halt一语双关，指出课程结束。
+项目主页：https://github.com/DeathKing/Learning-SICP
+信息整合：https://learningsicp.github.io
+Racket FAQ：https://racket-zh.org/faq
+Racket编程指南: https://blog.csdn.net/chinazhangyong/article/details/79331809
+* Drracket
+
+:PROPERTIES:
+:ID:       7f09c147-afa3-4968-9c59-e9ec56c9695f
+:END:
+Some useful shortcuts for DrRacket.
+Inspired by paredit
+
+Implemented:
+
+  Movement:
+    ("c-Alt-f") paredit-forward-sexp
+    ("c-Alt-b") paredit-backward-sexp
+
+    ("cⓂ️d") down-sexp ;rebind to "cⓂ️d"
+
+    ("m:right") forward-atom ;this is not paredit shortcuts, but alternative for forward-word
+    ("m:left") backward-atom ;ditto
+
+  Depth-Changing:
+    ("m:s") paredit-splice-sexp
+    ("m:(") paredit-wrap-round
+    ("m:up") paredit-splice-sexp-killing-backward
+    ("m:down") paredit-splice-sexp-killing-forward
+    ("m:r") paredit-raise-sexp
+    ("m:?") paredit-convolute-sexp
+
+  Slurpage & barfage
+    ("c:right" "c:)" "c:]") paredit-slurp-forward
+    ("cⓂ️left" "c:(" "c:[") paredit-slurp-backward
+    ("c:left" "c:}") paredit-barf-forward
+    ("cⓂ️right" "c:{") paredit-barf-backward
+
+Note:
+
+  All the key bindings involving meta key ("m:") can also be accessed
+  using the Escape key, by pressing and releasing it before proceeding
+  with the remaining keys, just like in Emacs. This is equivalent to
+  replacing "m:" with prepended "esc;".
+
+  You can see the up-to-date list of all the key bindings applied on
+  your platform, by selecting from DrRacket's menu Edit, Keybindings,
+  Show Active Keybindings, and filtering the list with "paredit."
+
+Install:
+  raco pkg install drracket-paredit
+
+or manually:
+  1. Download the "paredit.rkt"
+  2. Open the 'Edit|Keybindings|Add user-defined-keybindings' dialog, select "paredit.rkt".
 * 计算机科学
 :PROPERTIES:
 :ID:       638585e2-c594-4f9d-8a68-bd809ab31de0

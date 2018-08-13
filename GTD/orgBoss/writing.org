@@ -70,3 +70,349 @@
 叶：认识源于过程，专业始于投入
 
 这阶段、今年、五年内你要做什么最重要的一件事情呢？
+** 任何一项研究，都得写明背景 
+
+一项研究，如果能对idea的来源写的让读者一目了然，那么就值得好好思考，进而不断衍生出新的想法
+
+而背景是什么？ 历史长河中不断演变的过程，对相似问题的整体描述，并提出新的观点想法等
+
+据研究，2.5~4D范围内对风力机气动性能的CFD计算不会有太大的影响，但是如果是尾流则会
+有所影响！尾流至少得5D左右！
+**  我们总是活在别人的不同级别的抽象级别中 
+
+说不定我们就被定义某人的abstract类中，肆无忌惮的划分，不去管你的感受
+
+当然这就决定人们对于world的看法，对于life的看法
+
+当你自己也局限于那个level的时候，的确，你就是划分为那个abstract类中
+
+world是复杂的，过度的abstract，会导致过度的分级，进而导致传输出现问题，(上行下效有时候是好事，但是有时候也是坏事), 口是心非，阳奉阴违，表里不一、
+消极怠工。 也许你就是那个abstract也无所谓， 每个人都是可以evolving的，可以跳出不同的abstract圈， 只要你不要影响到
+那个圈子里面的人即可！
+
+
+ [[file:c:/Users/yzl/perl/testProcessOut.pl::#%20);]]
+** 不同的时代总是有灰色交易 
+
+国家会默许这些灰色收入，但是有一点特别重要！决不能吃独食，要团伙作案(大家一起吃，别人也不会把你抖出去)
+
+不同的时代，总会那么的机会，让你吃惊、胆寒，需要你去把握，当然也有一些老狐狸在看着你！
+
+当然这些机会总是给那些消息通天的人得到！这也是为什么大家不断地参与聚会、交流信息
+
+
+善守者，别人不知其所守，守其不备，功其乏！
+善攻者，敌不知其所攻，
+
+
+善攻者，敌不知其所守，善守者，敌不知其所攻
+进攻的人，可以让敌人不知道该防守什么地方；善于防守的人，可以让敌人不知道该从什么地方进攻
+
+兵者，诡道也!
+** reviewer 's 态度 
+
+review your life!Review your path! Review your time!
+
+*** 1. 关于we
+
+**** 一般
+Add a comment to the complex algorithm you wrote.
+**** 好
+With such a complex algorithm, we should add a clarifying comment.
+**** 更好
+With such an innovative approach to solving this problem, should we add a clarifying comment explaining it,
+ or should we break out some of the expressions into functions that we could name to help the reader follow
+ the logical flow?
+
+*** 2.关于问号(golden rule)
+**** 2.1一般
+Inline this function, please.
+**** 2.2较好
+Since the function called is a single line, and only called here, let’s inline the function.
+**** 2.3最好
+Do you think that since this function is a single line, and only called here, 
+would it be more understandable to inline it?
+
+通过增加更多的"why"，一方面为大多数人解惑，另一方面也在提高团队的质量
+
+Sensei is the one who is further ahead on the path;
+      which characterizes a teacher as one who can look back along a path and say,
+ 
+     “Watch your step there, that’s a particularly slippery spot. 
+     If you do fall, it’s okay, because I fell too.” 
+
+It’s a compassionate approach to teaching, which we should all adopt.
+Use your intelligent to become an sensei!
+
+
+Start including more "why" into your explaination, including code examples, deep links into
+style guide, and references to existing code that may illustrate your point!
+
+
+While they all state the same request, I’d argue the last one is the nicest. 
+1. First, since we’ve already established that we might not have all the context and be wrong, 
+asking a question not only softens the request, but initiates a dialog, not a response.[1.softens the request! 2.initiates a dialog]
+
+2.The other feature it brings is an ego-supporting back-door for both of you. 
+Since this isn’t a direct command, the author may be more willing to accept the comment, 
+but if the author responds with clarifying information why it should stay, you too, 
+are more apt to accept it since it was just a question.
+
+This tip is golden, and I often rephrase all my suggestions as questions.
+
+linter 是 一类 小程序 的总称，它不像编译器程序那么大，它可以用来检查程序的 文体，语句 的 语法，句法错误，并即时标注和指出来
+（例如，把声明了但没使用的多余变量指出来，把错误语句 变成黑体）， 是程序开发的辅助工具
+** 讲课，意味着找出你所知道的知识并解释给别人，这是学习的最佳方法
+
+一方面首先你需要通过自己(透过自身)扎到问题的答案，来提高自己的能力。
+
+这比简单的问别人须付出更多的努力，不过你正是靠这个来积累经验，同时避免过度地打扰同事。
+ 
+A master never stop learning
+** suggest, input, filter, target(SIFT) 
+
+For this article, I will use terms suggestion and completion to
+mean subtly different concepts. I'll also use terms explore and
+filter in describing various phases in user interaction.
+
+***  Suggestion
+Offer the user some suggestions that help explore the space of choices. (metaphor: avoid the blank sheet of paper syndrome).
+***  Completion
+Filter the available choices based on user input with the goal of reaching the target as rapidly as possible.
+***  Explore
+User does not necessarily know what he is looking for, but expects to be able to recognize what he wants from the displayed choices.
+***  Target
+User knows exactly what he wants, e.g., filename, or function-name, but would still like to get there with the fewest possible number of keystrokes, along with the needed memory aids to guide the decision.
+
+
+Note that in practice, suggestions and completions work
+hand-in-hand, with the visual display playing a central role in
+guiding the user through the pace of available choices. In a typical
+user interaction session, the space of suggestions gets filtered by
+user input to produce the available completions (choices) for the next
+round of user input — think of this as a
+Suggest/Input/Filter/Target (SIFT) interaction loop. Similarly, explore and
+target type activities typically go hand-in-hand, with explore
+serving as a memory-aid for locating the target.
+
+
+
+#+BEGIN_EXAMPLE
+Effective Suggest And Complete In An Eyes-Free Environment
+1 Executive Summary
+Emacs has always provided a wealth of techniques for rapid keyboard
+input (abbrev, dabbrev, hippie-expandand completion come to mind)
+alongside a rich collection of tools for navigating among open
+buffers. And these affordances have significantly increased over the
+last few years with the arrival of packages like ido, company,
+helm etc., each replete with different strategies for rapid task
+completion such as flex and fuzzy matching. This article investigates
+these tools in an eyes-free environment, specifically in the context
+of Emacspeak and rapid task completion. I've not investigated every
+possible package in this space — instead, I've picked a collection
+of packages and techniques that have worked well in an eyes-free
+context. Finally, the ultimate metric I use in each case is the time
+to successful task completion — since at the end of the day, that's
+the only metric that counts when it comes to user productivity.
+
+2 Terminology
+For this article, I will use terms suggestion and completion to
+mean subtly different concepts. I'll also use terms explore and
+filter in describing various phases in user interaction.
+
+Suggestion
+Offer the user some suggestions that help explore the space of choices. (metaphor: avoid the blank sheet of paper syndrome).
+Completion
+Filter the available choices based on user input with the goal of reaching the target as rapidly as possible.
+Explore
+User does not necessarily know what he is looking for, but expects to be able to recognize what he wants from the displayed choices.
+Target
+User knows exactly what he wants, e.g., filename, or function-name, but would still like to get there with the fewest possible number of keystrokes, along with the needed memory aids to guide the decision.
+
+
+Note that in practice, suggestions and completions work
+hand-in-hand, with the visual display playing a central role in
+guiding the user through the pace of available choices. In a typical
+user interaction session, the space of suggestions gets filtered by
+user input to produce the available completions (choices) for the next
+round of user input — think of this as a
+Suggest/Input/Filter/Target (SIFT) interaction loop. Similarly, explore and
+target type activities typically go hand-in-hand, with explore
+serving as a memory-aid for locating the target.
+
+
+3 Tasks Where Suggestions And Completions Help Speed Up Task Completion
+Here are exemplars of tasks that I perform often and where I require
+all the help that Emacs can provide in completing the task as rapidly
+as possible:
+
+File Navigation
+Navigating to and opening a file — either code or prose.
+Content Navigation
+Jump to a specific location (section, function, class/method, or pattern-match) in that file.
+Buffer Navigation
+Jump to an already open buffer in a long-running Emacs.
+If that buffer existed — but has since been killed (by
+midnight for example), then re-open that buffer.
+I do everything in Emacs, so open buffers include a large
+number of ORG and LaTeX documents, Web Pages opened in EWW 
+(news sites, documentation, blog articles), IM Chats (I use
+jabber), Mail Buffers — both open folders and previously
+sent messages, and much, much more.
+Media
+Easily launch media streams including local and streaming media.
+EBooks
+Open (or jump to an already open) EBook to continue reading.
+Code Completion
+Complete function/method-name as I type, with an easy affordance to move among the available choices. The Suggest/Input/Filter/Target interaction loop applies here as well.
+
+
+Notice that as one performs all of these tasks, every target is an
+Emacs buffer or Emacs buffer location. In the case of completion, the
+target is a string that gets inserted at the current location.
+
+4 Features Of Eyes-Free Interaction
+Using spoken output — as opposed to a rich visual display — has
+the following special features and/or drawbacks:
+
+A large visual display can offer the user many choices at a time,
+and the eye's ability to rapidly scan these choices makes for an
+extremely fast Suggest/Input/Filter/Target loop. As an example, an
+interface like helm can display a large number of initial
+choices, with the user filtering these down with a few strategic key-presses.
+Spoken output takes time — and there is simply no way around
+this — speeding up speech-rate helps to a point, but speaking
+50 choices very fast does not help the user in the explore
+phase. This means that effective filtering and ranking of the available
+choices takes on added importance.
+More importantly, picking a Suggest/Input/Filter/Target (SIFT)
+interaction loop that depends on a large display is sub-optimal
+for eyes-free interaction.
+Given (2,3), smart filtering, flex/fuzzy matching, and ranking
+based on past user behavior take on added importance in an
+eyes-free environment. As an aside, I have high hopes in this
+area for package prescient — though in my few days of usage,
+it has yet to make a difference in my productivity.
+For many of the tasks enumerated in the previous section, (2, 3
+and 4) make ido with flex and fuzzy matching extremely
+effective. In contrast, helm with similar flex and fuzzy
+matching (via packages helm-flx and helm-fuzzier) adds little
+extra benefit — and the fractional extra time to compute and
+display the choices can even lead to a minor productivity hit.
+When it comes to writing code with completion, package company
+has proven extremely effective. Notice that when writing code,
+one rarely if ever resorts to fuzzy matching — this may well
+be subjective. Speaking for myself, I cannot think of function
+or method names in the context of fuzzy matching — said
+differently, it's hard to think xl for function-name
+next-line — even though in a given filtering context, xl
+might define the shortest path through the available choices to
+the target next-line. Given this, emacspeak implements a
+company front-end that allows the user to navigate through the
+available choices with succinct spoken feedback, and I use those
+choices only after I have typed sufficiently many characters to
+have a manageable number of choices — said differently, though
+package company is set up to trigger after 3 characters have
+been typed, I usually end up typing more — and often resort to
+dabbrev or hippee-expand to input this longer prefix.
+Some of the shortcomings with eyes-free interaction enumerated
+above lead to my looking for effective work-arounds that might
+well work well outside the eyes-free context, e.g. when the
+available choices are too large to fit on a typical visual
+display. Interestingly, most of these have also been solved by
+mainstream Emacs developers in their never-ending/unerring quest for increased
+productivity — package ido and company are excellent exemplars.
+
+
+Mapping Solutions To Tasks
+
+This section maps the various solutions I use to speed up the tasks
+enumerated earlier in this article.
+
+4.1 File And Buffer Navigation
+I use package ido with add-ons flx-ido and ido-completing-read+
+(formerly ido-ubiquitous) as my primary/only solution for this
+task. I've dabbled with package helm — primarily via command
+helm-mini but have found almost no use-cases where I did better with
+helm. I also use command org-switchb to quickly jump to any of my
+open org buffers – since that automatically filters the choices
+down for me — I can then get to the org-mode buffer I want with
+one or two keystrokes. Notice that in all of these cases, I'm relying
+on the fact that I mostly know what I want, i.e., the explore phase
+does not start with an entirely blank sheet of paper.
+
+4.2 Content Navigation
+Incremental search is your biggest and most effective friend in
+effective eyes-free interaction — this simply cannot be stressed
+enough. That everything in Emacs is searchable via
+incremental-search is a big win for eyes-free interaction. When you
+have a large visual display, the human eye is the search interface of
+first resort – you typically use a search-command only if the
+target is below the fold or far away from the cursor. Because spoken
+output takes time, I use isearch even when the target is one or two
+lines away.
+
+Structured navigation comes next in my toolbox for navigating content
+— imenu for code, and section navigation for documents (org,
+LaTeX). I also use command occur to advantage since that provides a
+quick way of finding all the desired targets in a document. Given that
+program source-code uses indentation for displaying structure,
+hbuilt-in command selective-display remains one of Emacs' hidden
+treasures with respect to expanding/collapsing source-code.
+
+Finally, I
+use a combination of isearch and structured navigation in
+org-mode buffres by collapsing the document, and then using
+isearch to reveal the desired content fragment.
+In the case of LaTeX documents, I use package reftex to
+generate a navigation buffer that functions as an interactive table
+of contents. 
+
+4.3 Locating And Playing Media
+I keep all my music content organized under ~/mp3.
+I keep playlist files that contain stream-links to my favorite
+Internet streams under emacspeak/media.
+The afore-mentioned techniques using ido enables me to launch
+local and streaming media with a small number of keystrokes. Once
+selected, the content is played via package emacspeak-m-player
+which provides Emacs bindings to all mplayer functionality
+via that program's slave-mode. In addition, Emacspeak also
+implements a smart emacspeak-m-player-locate-media which uses
+Emacs' integration with command locate to turn the located
+files matching a given pattern into an interactive play-list.
+
+4.4 EBooks
+Jumping to already open ebooks is no different than buffer
+navigation. I organize all my ebooks under a single directory
+tree, and module emacspeak-epub implements a bookshelf that
+allows me to organize and browse my collection along various
+axies. Finally, Emacspeak implements a light-weight bookmark
+facility that works with eww so that I can save my place in an
+ebook across Emacs sessions.
+
+4.5 Code Completion
+As covered earlier, I use company along with dabbrev and
+hippee-expand while writing code. I also use yasnippet to
+generate skeleton code. I use auto-correct-mode to
+automatically correct repeated errors, and add abbrevs for
+commonly occurring typos. 
+
+5 Summary
+Emacs' Suggest/Input/Filter/Target (SIFT) interaction loop is just as
+effective in eyes-free interaction — in fact more so .
+Fuzzy matching when filtering is a big win when working with spoken
+output — it leads to faster task completion.
+Navigating ones computing environment based on the underlying
+structure and semantics of electronic content is a major win —
+both when working with a visual or spoken display. The advantages
+just become evident far sooner in the eyes-free context due to the
+inherently temporal nature of spoken interaction.
+Date: 2018-06-22 Fri 00:00
+
+Author: T.V Raman
+
+Created: 2018-06-23 Sat 17:22
+#+END_EXAMPLE
+
+ [[brain:7f09c147-afa3-4968-9c59-e9ec56c9695f][Drracket]]
+

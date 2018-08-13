@@ -7,6 +7,9 @@
 [[https://github.com/jueqingsizhe66/ranEmacs.d]]
 
 ** 15:40 perl writing                                                 :perl:
+:LOGBOOK:
+CLOCK: [2018-08-06 周一 11:48]--[2018-08-06 周一 11:49] =>  0:01
+:END:
 
 *** scalar context
 

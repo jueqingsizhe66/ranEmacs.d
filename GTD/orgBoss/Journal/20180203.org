@@ -118,6 +118,8 @@
 
 #+END_SRC
 
+#+RESULTS:
+
 
 statistics.dat------------------------->
 
@@ -680,4 +682,25 @@ https://github.com/rancher/rancher
 #+END_SRC
 
 
-** 13:37 
+** 13:37 perl查看模块 
+
+
+#+BEGIN_SRC perl
+  use strict;
+  use warnings;
+  use utf8;
+  use ExtUtils::Installed;
+
+  my $inst = ExtUtils::Installed->new();
+
+  my @modules = $inst->modules();
+
+  foreach  (@modules) {
+          my  $ver = $inst->version($_) || "???";
+          printf("%-22s -Version- %-22s\n", $_, $ver);
+  }
+#  exit;
+
+#+END_SRC
+
+#+RESULTS:
