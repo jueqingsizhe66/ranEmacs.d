@@ -44,10 +44,10 @@
  (rear-context-string . "5-03 Sun 21:38]\n")
  (position . 499))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/Journal/20180805")
- (front-context-string . "* Event: \n\n  \n\n ")
- (rear-context-string)
- (position . 2))
+ (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+ (front-context-string . "*  插入文件(基于base65")
+ (rear-context-string . "D_SRC\n#+END_SRC\n")
+ (position . 2174))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

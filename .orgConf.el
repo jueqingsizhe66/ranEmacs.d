@@ -57,7 +57,6 @@
                        ;(append (file-expand-wildcards "~/.emacs.d/GTD/orgBoss/Journal/2*"))
                        ;"~/.emacs.d/GTD/orgBoss/Journal/"
                         ))  
-;  )
 
 
 
@@ -231,8 +230,8 @@ Captured %<%Y-%m-%d %H:%M>
                          "** %^{Tip} %U \n \n %?"
                         ;:immediate-finish t
                         )
-          ("R" "Finance" entry  (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" ) 
-                        "** %^{BriefDesc} %T %^g\n%?"   :clock-in t :clock-resume t :immediate-finish t )
+           ;; ("R" "Finance" entry  (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Financial/finances.org" )     
+           ;;               "** %^{BriefDesc} %T %^g\n%?"   :clock-in t :clock-resume t :immediate-finish t ) 
           ("b" "Book" entry  (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Book/book.org")   
                         "** %^{Enter the Book Name} %t :BOOK: \n%[~/.emacs.d/GTD/orgTemplate/.book_template.txt]\n")
           ("f" "Film" entry (  file+olp+datetree "~/.emacs.d/GTD/orgBoss/Film/film.org")  
@@ -249,12 +248,12 @@ Captured %<%Y-%m-%d %H:%M>
                         "* %^{Enter the Name of the Site}\n %?" )
           ("s" "Someday"  entry   (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Someday/someday.org") 
                         "** %^{Someday Heading} [#B] %U\n%?\n"  )
-          ("v" "Vocab"  entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" ) 
-                        "** %^{Word?}\n%?\n"  )
+          ;; ("v" "Vocab"  entry (file+olp+datetree  "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" )  
+          ;;                "** %^{Word?}\n%?\n"  )                                               
           ( "r" "Private" entry (file+olp+datetree "~/.emacs.d/GTD/orgBoss/Private/privnotes.org")  
                          "\n* %^{topic} [#A] %T \n%i%?\n")
-         ("o" "contact"  entry  (file+olp+datetree "~/.emacs.d/gtd/phone.org" ) 
-                        "\n* %^{name} :contact:\n\n")
+          ;; ("o" "contact"  entry  (file+olp+datetree "~/.emacs.d/gtd/phone.org" )  
+          ;;                "\n* %^{name} :contact:\n\n")                            
          ("q" "Quick note" entry
           (file+headline "~/.emacs.d/GTD/orgBoss/Note/notes.org" "Quick notes")
                         "* %^{Keyword?} [#B]  %^g
@@ -264,16 +263,12 @@ Captured %<%Y-%m-%d %H:%M>
           )
          ("h" "Habit" entry (file "~/.emacs.d/GTD/orgBoss/Habit/habits.org")
           "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"  :clock-in t :clock-resume t )
-         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-         ;; ("k" "work" entry (file+headline org-default-notes-file "Cocos2D-X") ;;
-         ;;  "* Cos [#A] %?\n  %i\n %U"                                          ;;
-         ;;  :empty-lines 1)                                                     ;;
-         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-       
-         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                  ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+        ("k" "work" entry (file+headline org-default-notes-file "Cocos2D-X") 
+           "* Cos [#A] %?\n  %i\n %U"                                          
+           :empty-lines 1)                                                     
+        ("c" "code snippet" entry (file "~/.emacs.d/GTD/orgBoss/code-snippets.org")
             "* %?\n%(my/org-capture-code-snippet \"%F\")")        
-         ))
+))
 
 ;;; http://www.howardism.org/Technical/Emacs/capturing-content.html
 ;;; copy item to the clock capture item
@@ -303,10 +298,8 @@ Captured %<%Y-%m-%d %H:%M>
 string that will enable syntax highlighting for that language
 
 E.g. tuareg-mode will return 'ocaml', python-mode 'python', etc..."
-
   (let ((mm (intern (replace-regexp-in-string "-mode" "" (format "%s" major-mode)))))
     (or (car (rassoc mm org-src-lang-modes)) (format "%s" mm))))
-
 (defun my/org-capture-code-snippet (f)
   (with-current-buffer (find-buffer-visiting f)
     (let ((code-snippet (buffer-substring-no-properties (mark) (- (point) 1)))
@@ -325,6 +318,7 @@ In ~%s~:
        func-name
        org-src-mode
     code-snippet))))
+
 (defun my/org-dir-file (name)
     "Prepend name with path to the org-directory root"
     (concat org-directory name))
@@ -1616,3 +1610,22 @@ e.g. Sunday, September 17, 2000."
 ;;    (add-to-list 'org-speed-commands-user '("$" call-interactively 'org-archive-subtree))      ;;
 ;;    (bind-key "!" 'my/org-clock-in-and-track org-agenda-mode-map))                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defun org-insert-file (filename)                                                                                                                                                                              ;;
+;;       "Insert Elisp code block recreating FILE in the current                                                                                                                                                  ;;
+;; directory."                                                                                                                                                                                                    ;;
+;;       (interactive "f")                                                                                                                                                                                        ;;
+;;       (let ((basename (file-name-nondirectory filename))                                                                                                                                                       ;;
+;; 	    (base64-string                                                                                                                                                                                        ;;
+;; 	     (with-temp-buffer                                                                                                                                                                                    ;;
+;; 	       (insert-file-contents-literally filename)                                                                                                                                                          ;;
+;; 	       (base64-encode-region (point-min) (point-max))                                                                                                                                                     ;;
+;; 	       (buffer-string))))                                                                                                                                                                                 ;;
+;; 	(save-excursion                                                                                                                                                                                           ;;
+;; 	  (insert (format "[[./%s]]\n#+BEGIN_SRC emacs-lisp :results output silent\n  (with-temp-file %S\n    (insert (base64-decode-string\n      %S)))\n#+END_SRC" basename basename base64-string)))           ;;
+;; 	(forward-line)                                                                                                                                                                                            ;;
+;; 	(copy-file filename basename 1)                                                                                                                                                                           ;;
+;; 	(org-display-inline-images)))                                                                                                                                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

@@ -188,3 +188,19 @@
 2018-08-04 麦当劳
     Expenses:Food  RMB 45.4
     Expenses:Food
+2018-08-14 金堂鱼粉
+    Expenses:Food  RMB 13
+    Liabilities:花呗Huabei
+    
+2018-08-14 爸給2000
+    Assets:Savings:支付宝Alipay  RMB 2000
+    Income:Donation
+    
+2018-08-17 水蜜桃+葡萄
+    Expenses:Fruits  RMB 24
+    Assets:Savings:支付宝Alipay
+    
+
+2018-08-17 金堂鱼粉会员卡
+    Expenses:Fruits  RMB 130
+    Liabilities:花呗Huabei

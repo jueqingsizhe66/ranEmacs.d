@@ -63,3 +63,24 @@ In ~提交双滑移初稿 <2018-05-15 周二 11:56 +1w>~:
 
 #+END_SRC
 #+END_SRC
+*  插入文件(基于base65加密)
+file:c:/Users/yzl/AppData/Roaming/.emacs.d/.orgConf.el::1614
+In ~org-insert-file~:
+#+BEGIN_SRC elisp
+(defun org-insert-file (filename)
+      "Insert Elisp code block recreating FILE in the current
+directory."
+      (interactive "f")
+      (let ((basename (file-name-nondirectory filename))
+            (base64-string
+             (with-temp-buffer
+               (insert-file-contents-literally filename)
+               (base64-encode-region (point-min) (point-max))
+               (buffer-string))))
+        (save-excursion
+          (insert (format "[[./%s]]\n#+BEGIN_SRC emacs-lisp :results output silent\n  (with-temp-file %S\n    (insert (base64-decode-string\n      %S)))\n#+END_SRC" basename basename base64-string)))
+        (forward-line)
+        (copy-file filename basename 1)
+        (org-display-inline-images)))
+#+END_SRC
+http://mbork.pl/2018-08-18_Embedding_files_in_Org-mode_revisited

@@ -908,9 +908,26 @@ M-h  M-x comment-with-box 注释一个区域
 
 #### 函数
 
-1. projectile-find-file  快捷键`C-c C-p f`  <2018-07-31 00:03>改成这种风格了(升级之后有所改变）
+1. projectile-find-file  快捷键`C-c C-p f`  <2018-07-31 00:03>改成这种风格了([projectile7月升级][361]之后有所改变）
 
+
+但是随着更新又发生了默认的改变([8月升级][362]),得添加`projectile-mode-map`
+
+``` org
+
+;;<2018-08-18 21:52>
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;Ivy-resume and other commands
+```
 你可以使用 M-x projectile-mode 进入projectile模式(默认进入)
+
+有一个比较有趣的命令，`C-c p l` 在当前目录查找文件(类似在当前项目查找文件`C-c p f`) , 对应函数为`projectile-counsel-find-file-in-diretory`
+
+还有一个有趣的命令`C-c p F` 表示在一直项目下查找文件,对应函数为`projectile-find-file-in-known-projects`
+
+
 
 在vim中有一个类似的软件叫做[Ctrl-space][52],[projectile][51]会把git或者其他代码管理软件，亦或者你的lein，maven，budler等
 相关的文件夹当作一个project，如果啥都没有创建一个.projectile,那么该文件夹也会被识别为project
@@ -922,6 +939,25 @@ M-h  M-x comment-with-box 注释一个区域
 `C-c c-p f`
 
 ![projectile][55]
+
+#### what is counsel-projectile
+
+``` org
+  Projectile has native support for using ivy as its completion system.
+Counsel-projectile provides further ivy integration into projectile 
+by taking advantage of ivy's support for selecting from a list of actions 
+and applying an action without leaving the completion session.
+Concretely, counsel-projectile defines replacements for existing projectile 
+commands as well as new commands that have no projectile counterparts.
+A minor mode is also provided that adds key bindings for all these commands on top of the projectile key bindings.
+
+```
+
+1. [ projectile ][51]是基本emacs包，他有很多拓展，包括[ counsel-projectile ][363], [ helm-projectile ][364], [ persp-projectile ][365],[ projectiel-rails ][366]
+2. counsel-projectile是连接projectile和ivy的工具，相当于map过程，把projectile输出的结果，通过ivy封装，利用ivy的一个特性，list显示出来所有
+选项，使得显示效果好看些.(原来ivy是一个图形化的list列表显示工具)
+
+
 ### 34. Web-mode介绍
 
 [web-mode.el][53] is an emacs major mode for editing web templates aka HTML files embedding parts (CSS/JavaScript) and blocks (pre rendered by client/server side engines).
@@ -6751,7 +6787,33 @@ del yaw-1.org
 ![Org-shifft][359]
 markdown-mode参考标题10.
 
+### 140. workspace by Perspective-el
 
+[Perspective-el][367] is a tool to save the current project tagged workspace(keep project related buffers and windows setting separate
+form other projects unit!)
+
+```
+Each perspective == A window configuration + a set of buffers related by project
+```
+Switching to a perspective activates its window configuration, and when in a perspective only its buffers are available by default.
+
+[persp-projectile][365] connect projectile with perspective
+
+
+#### shortkey for perspective
+
+
+`C-x x`, then 
+
+1. s -- persp-switch: Query a perspective to switch or create
+2. k -- persp-remove-buffer: Query a buffer to remove from current perspective
+3. c -- persp-kill : Query a perspective to kill
+4. r -- persp-rename: Rename current perspective
+5. a -- persp-add-buffer: Query an open buffer to add to current perspective
+6. A -- persp-set-buffer: Add buffer to current perspective and remove it from all others
+7. i -- persp-import: Import a given perspective from another frame.
+8. n, `<right>` -- persp-next : Switch to next perspective
+9. p, `<left>` -- persp-prev: Switch to previous perspective
 
 ----------
 
@@ -7119,3 +7181,10 @@ markdown-mode参考标题10.
 [358]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift.png
 [359]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/shift2.png
 [360]: https://github.com/rejeep/wrap-region.el
+[361]: https://github.com/bbatsov/projectile/commit/e2762f20d65a4372d4eed766d1c71b09e9e4ef8c
+[362]: https://github.com/bbatsov/projectile/commit/9c6e9813abec6e067c659e9107bf356086a95e04
+[363]: https://github.com/ericdanan/counsel-projectile
+[364]: https://github.com/bbatsov/helm-projectile
+[365]: https://github.com/bbatsov/persp-projectile
+[366]: https://github.com/asok/projectile-rail
+[367]: https://github.com/nex3/perspective-el

@@ -36,3 +36,21 @@ https://clojure.org/api/cheatsheet  clojure官方API
 https://github.com/sicper/emacs-for-clojure  专为 Clojure 初学者准备的 Emacs 开发环境
 ** 2017-10 十月
 *** 2017-10-07 星期六
+* 2018
+** 2018-08 八月
+*** 2018-08-13 星期一
+**** <2018-08-13 周一>                                             :COACH: 
+:LOGBOOK:
+CLOCK: [2018-08-13 周一 19:07]--[2018-08-13 周一 19:07] =>  0:00
+:END:
+ - What did I enjoy doing today?
+
+ - What would I like to more of?
+
+ - What would I like to do less of?
+
+ - What did I learn today?
+
+ - What will I do differently tomorrow?
+
+ - Thought for the day

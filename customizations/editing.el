@@ -354,3 +354,6 @@ This function also supports some `org-mode' wrappers:
 
 ;(require 'doom-todo-ivy)
 
+
+
+(persp-mode)

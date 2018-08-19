@@ -859,63 +859,74 @@ Smith,Sarah Jane, Journalist
                          Added: [2018-08-05 周日 03:55]
                          
 
-                         #+BEGIN_SRC perl
-                           #!/usr/bin/env perl
-                           #===============================================================================
-                           #
-                           #         FILE: analysisFeiji.pl
-                           #
-                           #        USAGE: ./analysisFeiji.pl  
-                           #
-                           #  DESCRIPTION: 
-                           #
-                           #      OPTIONS: ---
-                           # REQUIREMENTS: ---
-                           #         BUGS: ---
-                           #        NOTES: ---
-                           #       AUTHOR: Ye Zhao Liang (YZL), yezhaoliang@ncepu.edu.cn
-                           # ORGANIZATION: NCEPU
-                           #      VERSION: 1.0
-                           #      CREATED: 2017/12/19 21:46:42
-                           #     REVISION: ---
-                           #===============================================================================
 
-                           use strict;
-                           use warnings;
-                           use utf8;
+#+BEGIN_SRC perl
 
-                           binmode(STDIN,":encoding(gb2312)");
-                           binmode(STDOUT,":encoding(gb2312)");
+# 统一形式  '*(<|>|>>):encoding\(\w+\)'
 
-                           # while ( <> ) {
-                           #     chomp;
-                           #     print $_,"\n";
-                           #     last if $_ =~ m/q/xm;
-                           # }
+open my( $read_fh), '<:encoding(UTF-8)', $filename;
+open my( $write_fh), '>:encoding(UTF-8)', $filename;
+open my( $append_fh), '>>:encoding(UTF-8)', $filename;
+#+END_SRC
 
-                           open(FEIJI,"feiji.txt") or die "can't open the file \n";
-                           my $car ="尾翼";
 
-                           binmode(FEIJI,":encoding(gb2312)");
-                           # binmode( STDIN,  ':encoding(gbk2312)' );
-                           #binmode( FEIJI,  ':encoding(utf8)' );
-                           #binmode( STDOUT, ':encoding(gbk2312)' );   
-                           #binmode( STDERR, ':encoding(gbk2312)' ); 
-                           #while( my $line = <FEIJI>){
-                           #my $re = Encode::decode('GB2312','汽车');
-                           my $count=1;
-                           while( <FEIJI>){
-                               #print "$_ \n" ;
-                               #     print "$_ \n" if $_ =~ /.*$re.*/;
-                               #    Encode::_utf8_on($_);
-                               #    Encode::decode_utf8($_);
-                               #print "$_\n" ;#if $_ =~ m/$car/xm;
-                               #print "$count: $_\n" if $_ =~ m/$car/xm;
-                               #$count +=1;
+                          #+BEGIN_SRC perl
+                             #!/usr/bin/env perl
+                             #===============================================================================
+                             #
+                             #         FILE: analysisFeiji.pl
+                             #
+                             #        USAGE: ./analysisFeiji.pl  
+                             #
+                             #  DESCRIPTION: 
+                             #
+                             #      OPTIONS: ---
+                             # REQUIREMENTS: ---
+                             #         BUGS: ---
+                             #        NOTES: ---
+                             #       AUTHOR: Ye Zhao Liang (YZL), yezhaoliang@ncepu.edu.cn
+                             # ORGANIZATION: NCEPU
+                             #      VERSION: 1.0
+                             #      CREATED: 2017/12/19 21:46:42
+                             #     REVISION: ---
+                             #===============================================================================
 
-                               s/汽车/风力机/g;
-                               print;
-                           }
+                             use strict;
+                             use warnings;
+                             use utf8;
+
+                             binmode(STDIN,":encoding(gb2312)");
+                             binmode(STDOUT,":encoding(gb2312)");
+
+                             # while ( <> ) {
+                             #     chomp;
+                             #     print $_,"\n";
+                             #     last if $_ =~ m/q/xm;
+                             # }
+
+                             open(FEIJI,"feiji.txt") or die "can't open the file \n";
+                             my $car ="尾翼";
+
+                             binmode(FEIJI,":encoding(gb2312)");
+                             # binmode( STDIN,  ':encoding(gbk2312)' );
+                             #binmode( FEIJI,  ':encoding(utf8)' );
+                             #binmode( STDOUT, ':encoding(gbk2312)' );   
+                             #binmode( STDERR, ':encoding(gbk2312)' ); 
+                             #while( my $line = <FEIJI>){
+                             #my $re = Encode::decode('GB2312','汽车');
+                             my $count=1;
+                             while( <FEIJI>){
+                                 #print "$_ \n" ;
+                                 #     print "$_ \n" if $_ =~ /.*$re.*/;
+                                 #    Encode::_utf8_on($_);
+                                 #    Encode::decode_utf8($_);
+                                 #print "$_\n" ;#if $_ =~ m/$car/xm;
+                                 #print "$count: $_\n" if $_ =~ m/$car/xm;
+                                 #$count +=1;
+
+                                 s/汽车/风力机/g;
+                                 print;
+                             }
 
                          #+END_SRC
 ** perl正则学习 [#B]                                                  :perl:
@@ -992,8 +1003,13 @@ $string=' sample examples'; if($string=~m"(amp..) ex\1") {print "matches!\n";}
 
 *** 零宽断言
 
-位置坐落于匹配单词物理上的左侧(?=匹配词) (?!匹配词)
-位置坐落于匹配单词物理上的右侧(?<=匹配词) (?<!匹配词)
+从假设出发吧！假设存在那么一个位置！我想找到他的右边单词是。。。就用(?=)
+我想找打他的左侧单词就用(?<=)
+
+但是该位置可能不存在， 而匹配词也可能不存在，假设有风险!夹逼须果断！
+
+位置坐落于匹配单词物理上的左侧(?=匹配词) (?!匹配词)  ---或者这样说以当前位置角度出发：如果当前位置的右边存在匹配词
+位置坐落于匹配单词物理上的右侧(?<=匹配词) (?<!匹配词)---如果当前位置的左边存在该匹配信息(假设存在这个位置)
 
 
 #+BEGIN_EXAMPLE
@@ -1099,3 +1115,320 @@ Now  $1 $2 $3 is jack , rose ,
 #+END_EXAMPLE
 
 所以命名捕获其实是让程序多做事情!
+
+
+*** 两字字符
+
+
+跟踪一个人并不简单，至少得10个人，如果只有一个人，那么至少要挡住自己的脸
+
+
+perl有两种字符单元
+1. 元字符(\w \b \a \z ^ $ \1 \2 $1 $2 \< \>  a-zA-Z0-9 \s \S \d \D .   + ? {3,5} -) 特殊意义的字符
+2. 基本字符a-z A-Z 0-9（字面值）
+   
+正则表达式的思维！
+
+要想正确使用正则表达式，清楚地了解目标文本是非常重要的
+
+
+****  字符组和多选结构的区别
+
+字符组(character set)只是针对单个单词，基本可以算是一门独立的微型语言(例如 对于元字符，他们有自己的规定)
+
+而多选结构(alternative)是"正则表达式语言主体(main regular expression language)"的一部分。
+多选结构(alternative)可以包括很多字符，但不能超越括号的界限！
+
+gr[ae]y 和 gr(a|e)y虽然一样，但是理念不一样
+
+'^From|Subject|Date:' 查三种类型的信息
+
+'^(From|Subject|Date):'  查询From或者Subject或者Date开头并以冒号结尾的
+
+
+竖线的本质就是匹配分割两边的任意一个表达式
+也就是说括号通常是和竖线合在一起使用的,也就是限制竖线的作用范围！
+
+
+一般字符组的效率差些，最好用分支结构!
+多选项缺点: 没有像字符组那样排除功能，可以匹配任意长度的文本,相当于一个一个选项!
+
+
+#+BEGIN_SRC perl
+  ([\u4e00-\u9fa5\w])\1+
+
+
+  ([a-zA-Z0-9]+)\1+  查找重复英文
+    
+  (\w+)\1+
+  (\w+)\s\1+    可以查到the the
+
+#+END_SRC
+
+
+
+正则表达式包含多个流派！
+弄懂正则表达式的工作原理，才是真正理解的关键
+
+学习正则表达式犹如造车一样，是一种艺术形式，而不是仅仅开车（不需要懂得车运行原理）
+在造车之前，必须了解汽车的工作原理。
+
+你有开过车，知道怎么用起来就可以了！但是真想开的好，也不一定得精通车的原理！
+
+1. 开车的经验
+2. 开车的历史 详细考察正则表达式的流派的主要内容
+3. 正则表达式流派重要引擎
+4. 更为复杂内容
+5. 设置具体的正则引擎
+6. 检查具体的产品和模型！
+   
+
+***  华氏转为摄氏度
+
+
+#+BEGIN_SRC perl
+  print "**********************huashi ******************************************\n";
+
+  print "Enter a temperature (e.g., 32F, 100C):\n";
+  my  $input= <STDIN>; ## 接收用户一行文本
+  chomp($input);
+
+
+  #if ( $input =~ m/^([-+]?[0-9]+)([CF])$/xm ) {
+  #此时 $1 保存 数字     $2保存类型
+  if ( $input =~ m/^([-+]?[0-9]+(\.[0-9]*)?)([CF])$/xm ) {
+  #此时 $1 保存 数字和小数点数字    $2保存小数点 $3保存类型
+     my $InputNum = $1; ## 数据存储
+     my  $type = $3;  ## 保证程序清晰易懂
+
+     my  $celsius;
+     my  $fahrenheit;
+
+     if ( $type eq "C" ) {
+         #输入为摄氏温度
+         $celsius = $InputNum;
+         $fahrenheit = ($celsius * 9 /5.0) + 32;
+     }
+     else {
+         $fahrenheit = $InputNum;
+         $celsius = ($fahrenheit - 32)*5 / 9.0;
+     }
+
+     printf "%.2f C is %.2f F \n", $celsius,$fahrenheit;
+  }
+  else {
+      print "Expecting a number followed by \"C\" or \"F\", \n";
+      print "So I don't understand \"$input\". \n";
+  }
+
+#+END_SRC
+
+
+改进写法，支持大小写(也许你更喜欢/i,因为它更简洁，类似\s)，支持小数点!
+#+BEGIN_SRC perl
+  ##if ( $input =~ m/^([-+]?[0-9]+)([CF])$/xm ) {
+  #此时 $1 保存 数字     $2保存类型
+  #if ( $input =~ m/^([-+]?[0-9]+(\.[0-9]*)?)([CF])$/xm ) {
+  #if ( $input =~ m/^([-+]?[0-9]+(\.[0-9]*)?)\s*([cCfF])$/xm ) {
+  if ( $input =~ m/^([-+]?[0-9]+(\.[0-9]*)?)\s*([CF])$/ixm ) {
+  ## /i 不区分大小写
+  #此时 $1 保存 数字和小数点数字    $2保存小数点 $3保存类型
+     my $InputNum = $1; ## 数据存储
+     my  $type = $3;  ## 保证程序清晰易懂
+
+     my  $celsius;
+     my  $fahrenheit;
+
+     if ( $type eq "C" || $type eq "c" ) {
+    # if ( $type =~ m/c/i) {   #或者这种方式更加简洁些！ 伟大的i    伟大的g
+
+         #输入为摄氏温度
+         $celsius = $InputNum;
+         $fahrenheit = ($celsius * 9 /5.0) + 32;
+     }
+     else {
+         $fahrenheit = $InputNum;
+         $celsius = ($fahrenheit - 32)*5 / 9.0;
+     }
+
+     printf "%.2f C is %.2f F \n", $celsius,$fahrenheit;
+  }
+  else {
+      print "Expecting a number followed by \"C\" or \"F\", \n";
+      print "So I don't understand \"$input\". \n";
+  }
+
+#+END_SRC
+
+***  括号三种用法
+
+1. 限定多选方案的范围比如 gr(a|e)y  竖线的作用范围只能在a和e之间，而如果是gra|ey则变成gra和ey两个表达式
+2. 分组，比如(wor)fdf(hel)  分组$1 $2
+3. 捕获 。。。 也有不捕获比如(?:...)
+
+
+*** 反斜杠(反斜线)backslash的四种用法
+
+1. \> \< 构成元字符(不同流程构成了不同对应元字符的定义)
+2. \w([a-zA-Z0-9] \W([^a-zA-Z0-9] \d([0-9]) \D([^0-9] \s(所有空白字符:空格符、制表符、换行符、
+   回车符, 更方便些) \S \A \Z 和字母结合构成元字符, \b单词边界 \B
+3. \\ \( \) 去除某些元字符的意义，保存字符特殊含义
+4. \t(字表符) \n \r \l 构成特殊孔子字符
+   
+*** 斜杠(斜线)slash两种用法
+1. 斜线用来标记正则表达式的边界 比如m//  s///也可以用m""  m{}等来代替斜线！
+2. /和某些字母结合，充当匹配表达式的拓展功能，比如/i表示不区分大小写，/g表示全局匹配行， /m多行匹配 , /x表示正则表达式
+   正则表达式可以写成多行的形式，忽略中间的换行符!
+
+
+***  破折号两种用法
+
+1. 放在character set第一个位置表示破折号意思
+2. 放在character set中间某个位置比如[a-z] 表示到（范围的意思）
+3. perl -i 表示直接写进文件, -p表示对目标文件每一行进行查找和替换  perl -p -e -i 's/sysread/read/g' file
+
+类似的意思还比如尖角号
+
+****  尖角号三种用法
+
+1. 放在character set第一个位置表示逻辑非
+2. 放在character set其他位置表示尖角字面值意思
+3. 放在表达式首位类表征匹配要匹配字符串的首位，对应$为尾位
+   
+而且一般限定尖角和dollar符号可以加快匹配速度
+
+*** 单词的定义
+
+perl和其他语言一样都把数字、字母、下划线当做单词一部分
+
+单词分界符意思：在此位置一侧是单词(例如数字、字母）另一侧不是(例如行的末尾或者数字后面的空格）
+一侧如此这般，另一侧如此那般：(是不是类似顺序环视和逆序环视）
+
+
+*** 栈式测试操作符
+
+
+#+BEGIN_SRC perl
+  #perl 5.10引入栈式操作
+
+  # 5.10以前写法
+  if(-r $file and -w _){
+      print "hel..";
+  }
+
+  # 5.10以后写法
+  use 5.010;
+  if(-w -r -d -x -o $file){
+      print "My directory is readable ,writable, and executable!\n");
+  }
+
+  # 靠近$file的先进性判断
+
+  Learning Perl P238回看可能的误用!
+#+END_SRC
+
+
+*** 尖括号的作用(diamond)
+
+通配符匹配所有当前文件夹下pm结尾可以写为 "*.pm"
+
+perl可以使用 glob "*.pm" 获取所有文件，当然也可以使用<"**.pm">获取
+
+
+这种运用场景也用于文件读取
+
+也就是说diamond（尖括号）既可以表示文件句柄读取又代表文件名通配操作，那么perl又是如何判断取舍？
+
+因为合理的文件句柄必须是严格意义上的Perl标识符，所以如果满足Perl标识符条件的，就作为文件句柄读取，otherwise,..
+
+
+#+BEGIN_SRC perl
+  my @files = <FRED/*>; ## 文件名 通配符
+  my @lines = <FRED>; ##文件句柄
+  my @lines = <$fred>; #文件句柄
+  my $nane = 'FRED';
+  my @files = <$name/*>;  #文件名通配操作
+
+
+  # 唯一例外
+
+  my $name ='FRED';
+  my @lines = <$name>; # $name解析为FRED句柄，当做文件句柄! 不要用间接文件句柄！！！！
+#+END_SRC
+
+
+**** 目录句柄
+
+open     ---> opendir
+readline ---> readdir
+close    ---> closedir
+
+
+
+#+BEGIN_SRC perl
+      ## file
+        my	$letterfile_file_name = 'someFiles.md';		# input file name
+
+        open  my $letterfile, '<', $letterfile_file_name
+            or die  "$0 : failed to open  input file '$letterfile_file_name' : $!\n";
+
+        close  $letterfile
+            or warn "$0 : failed to close input file '$letterfile_file_name' : $!\n";
+
+
+      ## directory
+        my	$letterfile_direcotry_name = 'Directory/';		# input file name
+
+        opendir  my $letterfile, '<', $letterfile_direcotry_name
+            or die  "$0 : failed to open  input file '$letterfile_direcotry_name' : $!\n";
+
+    while($name = readdir $letterfile_direcotry_name){
+        next unless $name=~ /\.pm$/;
+  next if $name=~ /^\./;
+next if $name eq '.' or $name eq '..';
+    }
+        closedir  $letterfile
+            or warn "$0 : failed to close input file '$letterfile_direcotry_name' : $!\n";
+
+#+END_SRC
+
+
+****  File::Spec::Functions
+
+
+
+#+BEGIN_SRC perl
+  #为了让程序健壮和可移植 使用File::Spec::Functions
+
+  use File::Spec::Functions;
+
+  opendir my $somedir,$dirname or die "Cannot open$dirnmame:$!";
+  while(my $name = readdir $somedir){
+
+      next if $name =~ /^\./; # 跳过点号开头的文件
+      $name =catfile($dirname,$name); #拼合完整路径
+      next unless -f $name and -r $name; #如果没有拼合路径，文件测试操作符会在当前目录下查找文件，而不是在$dirname指定目录下。
+  }
+#+END_SRC
+
+
+**** 递归访问目录 Fild::Find
+
+
+File::Find:Rule和File::Finder都是基于File::Find
+
+**** 删除文件unlink
+
+unlink 'slate'; #会把当期目录下的slate文件扔进粉碎纸机，消失在系统中
+unlink glob '*.o';
+unlink <'*.o'>;
+
+
+my $successful = unlink "slate","bedrock","java";
+print "I deleted $successful file(s) just now\n"; #如果是0，表示没有删除任何文件
+
+
+
+* Sun set(光符集 sun character set)
+
+sunset日落（日落字符)

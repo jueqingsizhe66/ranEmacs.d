@@ -66,3 +66,6 @@ cmd
 ledger -f test.ledger reg
 ledger -f test.ledger bal
 perldoc List::Util
+ledger -f test.ledger -reg
+ledger -f test.ledger 
+ledger -f test.ledger -t reg

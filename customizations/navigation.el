@@ -85,9 +85,13 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
-
+;;<2018-08-18 21:52>
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;Ivy-resume and other commands
-
+;(require 'persp-projectiles)
+;;(define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project)
 ;    ivy-resume resumes the last Ivy-based completion.
 
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
