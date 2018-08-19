@@ -953,7 +953,7 @@ A minor mode is also provided that adds key bindings for all these commands on t
 
 ```
 
-1. [ projectile ][51]是基本emacs包，他有很多拓展，包括[ counsel-projectile ][363], [ helm-projectile ][364], [ persp-projectile ][365],[ projectiel-rails ][366]
+1. [ projectile ][51]是基本emacs包(实际上projectile will index all the files under the folder of your specified project,indexing mechanism)，他有很多拓展，包括[ counsel-projectile ][363], [ helm-projectile ][364], [ persp-projectile ][365],[ projectiel-rails ][366]
 2. counsel-projectile是连接projectile和ivy的工具，相当于map过程，把projectile输出的结果，通过ivy封装，利用ivy的一个特性，list显示出来所有
 选项，使得显示效果好看些.(原来ivy是一个图形化的list列表显示工具)
 
@@ -6814,6 +6814,21 @@ Switching to a perspective activates its window configuration, and when in a per
 7. i -- persp-import: Import a given perspective from another frame.
 8. n, `<right>` -- persp-next : Switch to next perspective
 9. p, `<left>` -- persp-prev: Switch to previous perspective
+
+
+### 141. 折腾的道理
+
+生命在于折腾，越折腾越年轻。
+
+    身后有余忘缩手，眼前无路想回头。
+
+ 
+
+``` org
+小说《乾隆皇帝》里乾隆有一段话，说他为什么要不停地折腾。
+他说，他也知道射出去的箭，总有会落地的一天，强弩之末，势不能穿鲁缟。
+他所能做的，就是拼命把弓拉满，力求让射出去的箭，晚一点落地。
+```
 
 ----------
 
