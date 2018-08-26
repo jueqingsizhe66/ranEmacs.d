@@ -480,4 +480,41 @@ We all benifit from living in a more compassionate time(day)
 
 切记！切记！
 
+Review: 综述(回看--->Predict预测）
+Research: 研究(再搜索==研究)
+
  [[file:~/.emacs.d/README.md::%E6%9B%B4%E8%AF%A6%E7%BB%86%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%8F%82%E8%80%83%5BWeb-mode.org%5D%5B54%5D]]
+** old school and modern feature                                 :emacslisp:
+
+James Gill has a nice tweet about the community of Emacs users:
+
+    I’ve never encountered a community like that of #Emacs users. So many with 10, 20, 30+ years using the tool,
+    endless resources and helpful people.
+    And so delightfully ‘old school’ and modern at the same time.
+
+An elegant weapon, for a more civilized age.
+
+— James Gill (@IamJamesGill) August 21, 2018
+
+Like most of you, I belong to several tech communities. Not all of them have as nice a reputation.
+ The Lisp community, for example, can be notoriously hostile to n00bs.
+ A lot of that is residual grumpiness about the fact that the first thing many n00bs do when 
+they arrive is suggest some scheme for doing away with parentheses.
+ If you heard that as often as the typical Lisper, you’d be grumpy too.
+
+Still, there’s no denying that the Emacs community is exceptionally welcoming to n00bs and that,
+ as Gill says, we have a lot of people with extensive experience who are willing to help n00bs as well as more seasoned users.
+ We also have folks like Mike Zamansky, Sacha Chua, and Rainer König who spend hours of their own time 
+making instructional videos and doing other chores that benefit us all.
+
+I think Gill has it exactly right: We’re old school and modern at the same time.
+ Old school because we’re employing an editor that’s older than many of its users 
+and modern because that same tool is more powerful and adaptable than its more “modern” competitors.
+ In any event, it’s a great community and I’m proud to be a member.
+
+ 
+old with adaption and modern with more powerful
+** 守时是他们的强项 
+
+别小看人(鸡鸣狗盗之人)，守时是他们的强项
+ [[file:~/.emacs.d/GTD/orgBoss/newgtd.org::*CFX30%C2%B0%E7%BB%99%E5%AE%9A%E5%81%8F%E8%88%AA%E8%A1%A5%E5%85%85%E8%AE%A1%E7%AE%97%20<2018-06-25%20%E5%91%A8%E4%B8%80%2008:30>][CFX30°给定偏航补充计算 <2018-06-25 周一 08:30>      {100%}]]

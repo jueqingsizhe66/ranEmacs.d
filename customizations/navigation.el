@@ -187,3 +187,46 @@
 ;;   (moody-replace-mode-line-buffer-identification) ;;
 ;;   (moody-replace-vc-mode))                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; for helpful
+;; http://xenodium.com/#basic-imenu-in-helpful-mode
+(defun helpful--create-imenu-index ()
+  "Create an `imenu' index for helpful."
+  (beginning-of-buffer)
+  (let ((imenu-items '()))
+    (while (progn
+             (beginning-of-line)
+             ;; Not great, but determine if looking at heading:
+             ;; 1. if it has bold face.
+             ;; 2. if it is capitalized.
+             (when (and (eq 'bold (face-at-point))
+                        (string-match-p
+                         "[A-Z]"
+                         (buffer-substring (line-beginning-position)
+                                           (line-end-position))))
+               (add-to-list 'imenu-items
+                            (cons (buffer-substring (line-beginning-position)
+                                                    (line-end-position))
+                                  (line-beginning-position))))
+             (= 0 (forward-line 1))))
+    imenu-items))
+
+(defun helpful-mode-hook-function ()
+  "A hook function for `helpful-mode'."
+  (setq imenu-create-index-function #'helpful--create-imenu-index))
+
+(add-hook 'helpful-mode-hook
+          #'helpful-mode-hook-function)
+
+
+;;; http://xenodium.com/#actionable-urls-in-emacs-buffers
+
+(use-package goto-addr
+  :hook ((compilation-mode . goto-address-mode)
+         (prog-mode . goto-address-prog-mode)
+         (eshell-mode . goto-address-mode)
+         (shell-mode . goto-address-mode))
+  :bind (:map goto-address-highlight-keymap
+              ("<RET>" . goto-address-at-point)
+              ("M-<RET>" . newline))
+  :commands (goto-address-prog-mode
+             goto-address-mode))

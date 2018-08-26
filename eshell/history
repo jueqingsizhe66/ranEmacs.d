@@ -69,3 +69,18 @@ perldoc List::Util
 ledger -f test.ledger -reg
 ledger -f test.ledger 
 ledger -f test.ledger -t reg
+ls
+cd ..
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+exit
+ls
+cd auto-save-list/
+ls
+ls
+cd ..
+ls

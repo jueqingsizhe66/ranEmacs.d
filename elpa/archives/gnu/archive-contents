@@ -121,7 +121,7 @@
 	  ((:url . "https://github.com/Malabarba/beacon")
 	   (:keywords "convenience"))])
  (brief .
-	[(5 82)
+	[(5 84)
 	 nil "Brief Editor Emulator" single
 	 ((:url . "http://elpa.gnu.org/packages/brief.html")
 	  (:keywords "brief" "emulations" "crisp"))])
@@ -1253,7 +1253,7 @@
 	    (:keywords))])
  (xclip .
 	[(1 4)
-	 nil "use xclip to copy&paste" single
+	 nil "Copy&paste GUI clipboard from text terminal" single
 	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
 	  (:keywords "convenience" "tools"))])
  (xelb .

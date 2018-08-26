@@ -257,6 +257,7 @@
 (load "setup-clojure.el")
 ;(load "setupsbcl.el")
 (load "setup-js.el")
+(load "setup-eshell.el")
 (load "setup-rust.el")
 (load "fortran-editing.el")
 (load "fortran-index-args.el")

@@ -5717,6 +5717,12 @@ if (...) {
 [emacs-notes][293] from [sachac][294]
 
 
+[xml C parser and toolkit of gnome][369]对应的[libxml2仓库][371]
+[libxml2 dll][370] put the libxml2.dll in the `C:\WINDOWS\system32\libxml2.dll`
+
+
+哈哈哈！<2018-08-26 13:41>, 至此加入了libxml2.dll之后，你的eamcs支持eww和图片浏览了，太棒了!
+
 ####  Structure templates:
 
 ``` org
@@ -6075,6 +6081,37 @@ C-x + 所有窗口等宽  C-x ^提高当前光标所在窗口
 [helpful][320] 更好的显示帮助信息，并且相当全面。
 <2018-07-03 21:08> 再次使用helpful
 
+如果是源代码文档，如果添加下面[代码][368]到emacs配置文档，可以使用`M-x imenu`快速提取当前文档的变化和文档
+
+``` emacs-lisp
+(defun helpful--create-imenu-index ()
+  "Create an `imenu' index for helpful."
+  (beginning-of-buffer)
+  (let ((imenu-items '()))
+    (while (progn
+             (beginning-of-line)
+             ;; Not great, but determine if looking at heading:
+             ;; 1. if it has bold face.
+             ;; 2. if it is capitalized.
+             (when (and (eq 'bold (face-at-point))
+                        (string-match-p
+                         "[A-Z]"
+                         (buffer-substring (line-beginning-position)
+                                           (line-end-position))))
+               (add-to-list 'imenu-items
+                            (cons (buffer-substring (line-beginning-position)
+                                                    (line-end-position))
+                                  (line-beginning-position))))
+             (= 0 (forward-line 1))))
+    imenu-items))
+
+(defun helpful-mode-hook-function ()
+  "A hook function for `helpful-mode'."
+  (setq imenu-create-index-function #'helpful--create-imenu-index))
+
+(add-hook 'helpful-mode-hook
+          #'helpful-mode-hook-function)
+```
 ### 128. 很有趣的suggest.el
 
 通过打开特定的suggest窗口`M-x suggest`，然后
@@ -6708,7 +6745,7 @@ close(OUT);
 perl hello.pl hello.org helloModify.org
 ```
 
-把所有命令集中于sol.bat(这个文件很重要，时不时用于更新),以后直接执行sol.bat即可进行更新!
+把所有命令集中于sol.bat(这个文件很重要，时不时用于更新),以后直接执行sol.bat即可进行更新!<2018-08-24 13:25>
 ``` cmd
 tree /f I:\ScienceBase.Attachments\Turbine > c:/users/yzl/AppData/Roaming/.emacs.d/GTD/writing/referencesBak/yaw-1.org
 perl hello.pl yaw-1.org yaw.org
@@ -7203,3 +7240,7 @@ Switching to a perspective activates its window configuration, and when in a per
 [365]: https://github.com/bbatsov/persp-projectile
 [366]: https://github.com/asok/projectile-rail
 [367]: https://github.com/nex3/perspective-el
+[368]: http://xenodium.com/#basic-imenu-in-helpful-mode
+[369]: http://xmlsoft.org/downloads.html
+[370]: http://www.zlatkovic.com/libxml.en.html
+[371]: https://gitlab.gnome.org/GNOME/libxml2/
