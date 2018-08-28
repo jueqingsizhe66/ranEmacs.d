@@ -39,15 +39,15 @@
  (rear-context-string . "ge-install p)))\n")
  (position . 3617))
 ("org-refile-last-stored"
- (filename . "~/.emacs.d/GTD/newgtd.org")
- (front-context-string . "*** TODOS PhaseV")
- (rear-context-string . "5-03 Sun 21:38]\n")
- (position . 499))
-("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/newgtd.org")
- (front-context-string . "** TODO [#B]  NR")
- (rear-context-string . "进行，分别在7号刀片和孟机器上\n")
- (position . 59452))
+ (front-context-string . "**** TODO [#B]  ")
+ (rear-context-string . "\n3. [ ] PIV实验\n\n\n")
+ (position . 56775))
+("org-capture-last-stored"
+ (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
+ (front-context-string . "* 拷贝一堆文件到一个文件 \nf")
+ (rear-context-string . "\n  }\n\n#+END_SRC\n")
+ (position . 3495))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

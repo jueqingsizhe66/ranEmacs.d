@@ -1,7 +1,3 @@
-* df 
-%![Error: (void-function which-function)]
-* dfdf
-%![Error: (void-function which-function)]
 * comment 
 file:k:/clojure-home/clj-new-github/src/clj_new_github/core.clj::17
 In ~foo~:
@@ -47,8 +43,6 @@ In ~PostAlignTables - Align and calculate multiple tables of an ~:
    #+END_SRC
 
 #+END_SRC
-* 
-%![Error: (void-function which-function)]
 * 代码标注 
 file:c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/newgtd.org::1085
 In ~提交双滑移初稿 <2018-05-15 周二 11:56 +1w>~:
@@ -84,3 +78,43 @@ directory."
         (org-display-inline-images)))
 #+END_SRC
 http://mbork.pl/2018-08-18_Embedding_files_in_Org-mode_revisited
+* 一定模式下面后面5行删掉 
+file:c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/Note/notes.org::1519
+In ~perl seek [#B]~:
+#+BEGIN_SRC org
+  while ( <$journal2018> ) {
+    
+      if (/^\*\skeep/ ) {
+          print tell $journal2018,"$_\n";
+          seek($journal2018,(tell $journal2018)+150,0);
+      }else{
+          print $journalOut $_;
+      }
+  }
+
+#+END_SRC
+* 拷贝一堆文件到一个文件 
+file:c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/Note/notes.org::1577
+In ~perl收集所有文件内容到一个文件 [#B]~:
+#+BEGIN_SRC org
+  #while ( glob("*") ) {
+  while ( <*> ) {
+
+      my        $journalF_file_name = "$_";# input file name
+
+      print "$_\n";
+      open  my $journalF, '<', $journalF_file_name
+          or die  "$0 : failed to open  input file '$journalF_file_name' : $!\n";
+
+      print $journalOne "* $_\n";
+      my  $lineNumber=1;
+      while ( <$journalF> ) {
+          if($lineNumber >8)
+          {
+              print $journalOne "$_\n";
+          }
+          $lineNumber=$lineNumber+1;
+      }
+      close  $journalF
+          or warn "$0 : failed to close input file '$journalF_file_name' : $!\n";
+#+END_SRC

@@ -84,3 +84,5 @@ ls
 ls
 cd ..
 ls
+ledger -f test.ledger reg
+ledger -f test.ledger bal

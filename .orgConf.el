@@ -7,7 +7,7 @@
 ;把下面几行加到 .emacs 文件里。后三行是为命令定义全局快捷键――请改成适合你自己的。 
 ;设置之后，打开 .org 扩展的文件会自动进入 org 模式;
 ;; The following lines are always needed. Choose your own keys.
-(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\|wiki\\)$" . org-mode))
 (setq shr-external-browser "chromium-browser")
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 ;(global-set-key "\C-c l" 'org-store-link) ;;有问题
@@ -23,7 +23,9 @@
 (setq org-hide-emphasis-markers t)
 
 (setq org-log-done t)
-(setq which-func-modes t)  ;; start the which-function-mode to let you capture the template code with c-c c c!!!
+;(setq which-func-mode t)  ;; start the which-function-mode to let you capture the template code with c-c c c!!!
+; which func-mode had been obsolete , use which-function-mode instead
+(setq which-function-mode t)  ;; start the which-function-mode to let you capture the template code with c-c c c!!!
 (setq org-startup-indented t)  ;; or M-x org-indent-mode  to clean the org file 
 (setq auto-image-file-mode t)  ;;  let emacs show image
 
@@ -296,7 +298,6 @@ Captured %<%Y-%m-%d %H:%M>
 (defun my/org-capture-get-src-block-string (major-mode)
   "Given a major mode symbol, return the associated org-src block
 string that will enable syntax highlighting for that language
-
 E.g. tuareg-mode will return 'ocaml', python-mode 'python', etc..."
   (let ((mm (intern (replace-regexp-in-string "-mode" "" (format "%s" major-mode)))))
     (or (car (rassoc mm org-src-lang-modes)) (format "%s" mm))))
@@ -1227,9 +1228,10 @@ Use a prefix arg to get regular RET. "                                          
 
 ;;add alert notify
 (require 'org-alert)
-;;(setq alert-default-style 'libnotify) ;; libnotify need you path *.so in ubuntu platform
-;(setq alert-default-style 'fringe)
-(setq alert-default-style 'mode-line)
+(setq alert-default-style 'libnotify) ;; libnotify need you path *.so in ubuntu platform
+;(setq alert-default-style 'x11) ;; libnotify need you path *.so in ubuntu platform
+(setq alert-default-style 'fringe)
+;(setq alert-default-style 'mode-line)
 ;(setq alert-default-style 'message)
 (setq org-alert-interval 1800);;default 300s
 
@@ -1629,3 +1631,14 @@ e.g. Sunday, September 17, 2000."
 ;; 	(org-display-inline-images)))                                                                                                                                                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+
+;; org-ref
+
+(require 'org-ref)
+(setq reftex-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib"))
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/.emacs.d/GTD/orgref/notes.org"
+      org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib")
+      org-ref-pdf-directory "~/.emacs.d/GTD/orgref/bibtex-pdfs/")

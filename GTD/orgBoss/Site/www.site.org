@@ -305,8 +305,8 @@ stevey’s Blog Rangts 程序员的呐喊
  
 Public Health
 
-    公共卫生知识整理
-    人民卫生出版社
+    公共卫生知识整理cite:ZhuShen-26073 
+    人民卫生出版社cite:叶昭良王晓东-26083 
 ** https://mooc.study.163.com/course/2001280005
  吴恩达 机器学习
 ** https://github.com/ggreer/the_silver_searcher
@@ -325,4 +325,56 @@ nothing
 区域连技术指北 
 ** http://www.bootdo.com/blog
 bootdo 不错的官网
+** emacs windows download
+ http://alpha.gnu.org/gnu/emacs/pretest/windows/
+
+https://emacs.stackexchange.com/questions/27202/how-do-i-install-gnutls-for-emacs-25-1-on-windows/27251#27251
+
+@StuartHickinbottom explained what I was doing wrong: using libgnutls-28.dll 
+when Emacs 25.1 requires the newer and incompatible libgnutls-30.dll.
+ Then it was a matter of finding binaries of libgnutls-30.dll and other required libraries.
+ Thankfully Phillip Lord has compiled Windows versions of all the GnuTLS libraries and dependencies and 
+many other libraries you might want for Emacs! 
+They are available here: get emacs-25-i686-deps.zip if you use 32-bit Windows and get emacs-25-x86_64-deps.zip 
+if you use 64-bit; then unzip in the root folder of your Emacs installation (so that the bin folder of the zip
+ files gets decompressed into the bin folder of your Emacs installation, etc.)
+** magnars github
+ https://github.com/magnars/.emacs.d
+** emacs load vars into env
+ https://github.com/diasjorge/emacs-load-env-vars
+** org-ref
+ https://github.com/jkitchin/org-ref
+** Emacs Hacker AIVaro Ramirez
+ http://xenodium.com/#actionable-urls-in-emacs-buffers
+** 大神emacs配置
  
+Steve Purcell的配置	https://github.com/purcell/emacs.d
+Matt Briggs的配置	https://github.com/mbriggs/.emacs.d
+我的配置(抄Steve Purcell的,加中文和C++支持)	https://github.com/redguardtoo/emacs.d
+** eww eosconfig
+ 
+https://github.com/dakrone/eos/blob/master/eos-web.org
+https://writequit.org/eos/eos.html
+** research gate
+ https://www.researchgate.net/
+** new energy outlook
+ https://about.bnef.com/new-energy-outlook/
+Extended our outlook from 2040 to 2050.
+Expanded our new-build algorithm to include utility-scale lithium-ion batteries – both stand-alone and paired with renewables – for energy arbitrage as well as peaking capacity.
+Expanded our assessment of new air-conditioning load to include Brazil, Indonesia, India, Mexico, Malaysia, Philippines and Thailand.
+Added chapters on materials demand, market design and coal phase-out scenarios.
+Updated our PV and wind cost and lithium-ion battery cost curves with 2017 data.
+Updated our comparative cost of energy analysis to better capture difference between technologies and 
+the cost of bulk electricity and flexibility, and enhanced the digital experience when interacting with our data models.
+** emacs erc chat internet
+ 
+http://savannah.gnu.org/projects/erc
+https://www.gnu.org/software/emacs/manual/html_mono/erc.html
+** orgmode 4years
+orgmode
+ https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
+
+https://emacs.cafe/
+
+ledger
+https://emacs.cafe/ledger/emacs/ynab/budgeting/2018/06/12/elbank-ynab.html

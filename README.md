@@ -2557,6 +2557,19 @@ flat-list to tree list
 在dired目录下使用i打开折叠目录(关闭折叠，展开)，;则可以用来折叠目录。
 
 
+dired常用命令学习
+
+```
+
+* / 标记所有文件夹
+u 去除标记
+m 标记文件
+R 移动或者重命名
+C 复制
+D 删除(d x)
+
+```
+
 ### 65. org-mind-map 结合grpahviz创建思维导图
 
 1. [graphviz][133]安装
@@ -5079,6 +5092,8 @@ In ~%s~:
     (concat org-directory name))
 ```
 
+必须得使用`M-x which-function-mode` 才可以进行code snippet捕捉, 否则提示`(void-function which-function)`--->A bug!
+
 ####  Template design for org-capture
 
 vim中使用书签进行[临时代码收藏][299] 大写字母可以是跨文件调用，小写字母
@@ -5720,10 +5735,30 @@ if (...) {
 [xml C parser and toolkit of gnome][369]对应的[libxml2仓库][371]
 [libxml2 dll][370] put the libxml2.dll in the `C:\WINDOWS\system32\libxml2.dll`
 
+[emacs eww上网][372],只不过我只是配置了libxml2.dll
 
 哈哈哈！<2018-08-26 13:41>, 至此加入了libxml2.dll之后，你的eamcs支持eww和图片浏览了，太棒了!
 
+安装eww-lnum链接使用数字表示，方便跳转!
+
+有用的[gnutls][373]帮助
+
+我发现emacs27.0.50包下的bin文件夹下的dll拷贝到25.3可以解决有些网页无法访问443端口问题！hack!!
+
+为此org-alert或者org-ref就都可以使用了，因为之前都是提醒`libxml2库未安装`
+
+
+让网页访问更加顺畅些!
+```
+  (use-package link-hint
+    :ensure t
+    :bind ("C-c f" . link-hint-open-link))
+  )
+
+
+```
 ####  Structure templates:
+
 
 ``` org
 (setq org-structure-template-alist
@@ -6800,7 +6835,7 @@ del yaw-1.org
 我又回看了Sachac的[baby-steps-org-todo][49], 学到了关于project outline的工作流
 
 1. 新建一个project二级标题，(不要让过多的任务压死你，分成项目去做_
-2. 在该标题下，建立TOOD三级标题，可以有多个TOOO
+2. 在该标题下，建立TOOD三级标题，可以有多个TOOO([ ticklet ][374]可以说是org-mode比较重要的一个概念)
     1. 贴任务标签(`C-c q`)
     2. 指派(`C-c C-s`):不会忘记了deadline(不要太多，委托别人delegate,推迟postpone,去除eliminate
     3. 设置截止日期(`C-c C-d`)
@@ -6823,6 +6858,8 @@ del yaw-1.org
 
 ![Org-shifft][359]
 markdown-mode参考标题10.
+
+可以使用`C-c C-w` 来改变标题的层级关系（也就是说默认org文件是按照一个一个标题进行的), moving the entry to the appropriate place.
 
 ### 140. workspace by Perspective-el
 
@@ -7244,3 +7281,7 @@ Switching to a perspective activates its window configuration, and when in a per
 [369]: http://xmlsoft.org/downloads.html
 [370]: http://www.zlatkovic.com/libxml.en.html
 [371]: https://gitlab.gnome.org/GNOME/libxml2/
+[372]: https://blog.csdn.net/MathaDora/article/details/79468528
+[373]: https://emacs.stackexchange.com/questions/27202/how-do-i-install-gnutls-for-emacs-25-1-on-windows/27251#27251
+[374]: https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
+

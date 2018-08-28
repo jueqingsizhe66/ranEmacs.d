@@ -1426,9 +1426,183 @@ unlink <'*.o'>;
 
 my $successful = unlink "slate","bedrock","java";
 print "I deleted $successful file(s) just now\n"; #如果是0，表示没有删除任何文件
+** perl seek [#B]                                                     :perl:
+:LOGBOOK:
+CLOCK: [2018-08-28 周二 18:05]--[2018-08-28 周二 21:21] =>  3:16
+:END:
+                         Added: [2018-08-28 周二 18:05]
+                         
+                https://blog.csdn.net/bingfengxiao/article/details/6657696         
+
+#+BEGIN_SRC perl
+                  seek 设置文件的当前位置！
+
+                  当一个文件非常大时可以从指定位置读起。 
+                  seek FILEHANDLE,POSITION,WHENCE
+
+                  成功返回真，失败返回假。 
+                  POSITION 是读入的新位置（字节）。 
+                  WHENCE有3个值，0表示新位置是POSITION,1表示当前位置加上POSITION，2表示文件尾加上POSITION 
+                  例如：从file.txt的12字节开始读起并打印出来。 
+                  open (FILEHANDLE,"<file.txt") or die "cannot open file.txt"; 
+                  seek FILEHANDLE,12,0; 
+                  while (<FILEHANDLE>){ 
+                  print; 
+                  } 
+                  close (FILEHANDLE);
+#+END_SRC
+
+perl 在操作文件指针时，可以用seek 函数移动文件指针
+
+seek (filevar, distance, relative_to);
+seek (filevar, position, whence);
+在文件中向前/后移动，有三个参数：
+1、filevar，文件指针
+2、distance，移动的字节数，正数向前移动，负数往回移动
+3、reletive_to，值可为0、1或2。为0时，0表示新位置为position位置或者distance位置，为1时，相对于当前位置（将要读的下一行,）移动(当前位置加上position)，
+为2时，相对于文件末尾移动+position位置。
+运行成功返回真（非零值），失败则返回零，常与tell函数合用。
+
+
+如果用户想直接获得文件的字节数，可以先偏移到文件末尾(所以第二个参数为0，如果不为0，表示末尾数值加上该值)，再查看当前偏移位置来查看
+
+#+BEGIN_SRC perl
+open FILE, "<", "/opt/test/test.txt";
+
+seek(FILE, 0, 2);
+
+my $position = tell(FILE);
+#+END_SRC
 
 
 
-* Sun set(光符集 sun character set)
+运用到实际程序
+
+
+#+BEGIN_SRC perl
+  #!/usr/bin/env perl
+  #===============================================================================
+  #
+  #         FILE: testOneFileDelete.pl
+  #
+  #        USAGE: ./testOneFileDelete.pl  
+  #
+  #  DESCRIPTION: 
+  #
+  #      OPTIONS: ---
+  # REQUIREMENTS: ---
+  #         BUGS: ---
+  #        NOTES: ---
+  #       AUTHOR: Ye Zhao Liang (YZL), yezhaoliang@ncepu.edu.cn
+  # ORGANIZATION: NCEPU
+  #      VERSION: 1.0
+  #      CREATED: 2018/8/28 17:32:03
+  #     REVISION: ---
+  #===============================================================================
+
+  use strict;
+  use warnings;
+  use utf8;
+
+
+  my	$journal2018_file_name = '20171000112.org';		# output file name
+
+  open  my $journal2018, '<', $journal2018_file_name
+      or die  "$0 : failed to open  output file '$journal2018_file_name' : $!\n";
+
+
+  my	$journalOut_file_name = 'outputTest.org';		# output file name
+
+  open  my $journalOut, '>', $journalOut_file_name
+      or die  "$0 : failed to open  output file '$journalOut_file_name' : $!\n";
+
+  while ( <$journal2018> ) {
+    
+      if (/^\*\skeep/ ) {
+          print tell $journal2018,"$_\n";
+          seek($journal2018,(tell $journal2018)+150,0);
+      }else{
+          print $journalOut $_;
+      }
+  }
+
+  close  $journal2018
+      or warn "$0 : failed to close output file '$journal2018_file_name' : $!\n";
+  close  $journalOut
+      or warn "$0 : failed to close output file '$journalOut_file_name' : $!\n";
+
+
+
+
+#+END_SRC
+** perl收集所有文件内容到一个文件 [#B]                                :perl:
+:LOGBOOK:
+CLOCK: [2018-08-28 周二 21:21]--[2018-08-28 周二 21:21] =>  0:00
+:END:
+                         Added: [2018-08-28 周二 21:21]
+                         
+
+#+BEGIN_SRC perl
+  #!/usr/bin/env perl
+  #===============================================================================
+  #
+  #         FILE: testCollect.pl
+  #
+  #        USAGE: ./testCollect.pl  
+  #
+  #  DESCRIPTION: 
+  #
+  #      OPTIONS: ---
+  # REQUIREMENTS: ---
+  #         BUGS: ---
+  #        NOTES: ---
+  #       AUTHOR: Ye Zhao Liang (YZL), yezhaoliang@ncepu.edu.cn
+  # ORGANIZATION: NCEPU
+  #      VERSION: 1.0
+  #      CREATED: 2018/8/28 17:07:32
+  #     REVISION: ---
+  #===============================================================================
+
+  use strict;
+  use warnings;
+  use utf8;
+
+
+
+  my	$journalOne_file_name = '../OneJournal.org';		# output file name
+
+  open  my $journalOne, '>', $journalOne_file_name
+      or die  "$0 : failed to open  output file '$journalOne_file_name' : $!\n";
+
+  #while ( glob("*") ) {
+  while ( <*> ) {
+
+      my	$journalF_file_name = "$_";# input file name
+
+      print "$_\n";
+      open  my $journalF, '<', $journalF_file_name
+          or die  "$0 : failed to open  input file '$journalF_file_name' : $!\n";
+
+      print $journalOne "* $_\n";
+      my  $lineNumber=1;
+      while ( <$journalF> ) {
+          if($lineNumber >8)
+          {
+              print $journalOne "$_\n";
+          }
+          $lineNumber=$lineNumber+1;
+      }
+      close  $journalF
+          or warn "$0 : failed to close input file '$journalF_file_name' : $!\n";
+
+  }
+
+  close  $journalOne
+      or warn "$0 : failed to close output file '$journalOne_file_name' : $!\n";
+
+
+
+#+END_SRC
+** Sun set(光符集 sun character set)
 
 sunset日落（日落字符)

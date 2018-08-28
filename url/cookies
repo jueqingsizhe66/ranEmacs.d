@@ -2,16 +2,46 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '(("www.baidu.com"
-  [url-cookie "delPer" "0" "23-Jul-2048 13:37:43.00 GMT" "/" "www.baidu.com" nil])
- (".baidu.com"
-  [url-cookie "PSTM" "1505978434" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
-  [url-cookie "BIDUPSID" "86DED75CEFB50BF41FD43C8A16CE7A5E" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
+ '((".baidu.com"
+  [url-cookie "BAIDUID" "86DED75CEFB50BF41FD43C8A16CE7A5E:FG=1" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
   [url-cookie "max-age" "2147483647" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
-  [url-cookie "BAIDUID" "86DED75CEFB50BF41FD43C8A16CE7A5E:FG=1" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]))
+  [url-cookie "BIDUPSID" "86DED75CEFB50BF41FD43C8A16CE7A5E" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
+  [url-cookie "PSTM" "1505978434" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil])
+ ("www.cctry.com"
+  [url-cookie "Vguy_2132_visitedfid" "97" "26-Sep-2018 06:04:40.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "Vguy_2132_lastact" "1535349937%09home.php%09space" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "Vguy_2132_sid" "U5B65N" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "Vguy_2132_lastvisit" "1535346099" "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "httponly" nil "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "Max-Age" "86400" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
+  [url-cookie "Vguy_2132_saltkey" "fzBSQBES" "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil])
+ (".github.com"
+  [url-cookie "_octo" "GH1.1.1491915472.1535284963" "Wed, 26 Aug 2020 12:02:43 -0000" "/" ".github.com" nil])
+ (".sachachua.com"
+  [url-cookie "__cfduid" "d44e7b3dce5b1e9ca0996a44febbfecc41535274904" "26 Aug 19 09:15:04 [GMT]" "/" ".sachachua.com" nil]
+  [url-cookie "HttpOnly" nil "26 Aug 19 09:15:04 [GMT]" "/" ".sachachua.com" nil])
+ (".doi.org"
+  [url-cookie "__cfduid" "db0d340f6109c3aa99186b1e67a18cb0f1535290636" "26 Aug 19 13:37:16 [GMT]" "/" ".doi.org" nil]
+  [url-cookie "HttpOnly" nil "26 Aug 19 13:37:16 [GMT]" "/" ".doi.org" nil])
+ (".www.tandfonline.com"
+  [url-cookie "I2KBRCK" "1" "26-Aug-2019 13:37:20.00 GMT" "/" ".www.tandfonline.com" nil]
+  [url-cookie "MAID" "N/bQsJomT+inukUS8dQ6rw==" "22-Jun-2019 13:37:27.00 GMT" "/" ".www.tandfonline.com" nil]
+  [url-cookie "MACHINE_LAST_SEEN" "2018-08-26T06%3A37%3A26.668-07%3A00" "22-Jun-2019 13:37:27.00 GMT" "/" ".www.tandfonline.com" nil])
+ ("www.baidu.com"
+  [url-cookie "delPer" "0" "19-Aug-2048 02:50:37.00 GMT" "/" "www.baidu.com" nil]
+  [url-cookie "NOJS" "1" "19-Aug-2048 02:50:37.00 GMT" "/" "www.baidu.com" nil]))
 )
 (setq url-cookie-secure-storage
- 'nil)
+ '((".github.com"
+  [url-cookie "HttpOnly" nil "Thu, 26 Aug 2038 12:02:43 -0000" "/" ".github.com" t]
+  [url-cookie "logged_in" "no" "Thu, 26 Aug 2038 12:02:43 -0000" "/" ".github.com" t])
+ (".www.researchgate.net"
+  [url-cookie "cirgu" "_1_dvLcklkgp%2B%2BdL8OrVsPUw89ziSSRUzyn8Hj9KLV%2BGmRA65IKw0wCy2DeGaaax%2FI2WW9w4Qw%3D" "27-Aug-2019 12:11:30.00 GMT" "/" ".www.researchgate.net" t]
+  [url-cookie "ptc" "RG1.3101834151598738740.1535350847" "26-Aug-2020 06:20:47.00 GMT" "/" ".www.researchgate.net" t]
+  [url-cookie "Max-Age" "94694400" "27-Aug-2021 06:22:44.00 GMT" "/" ".www.researchgate.net" t]
+  [url-cookie "did" "i131EwUYw3hxKuK5N5ryPO0QBb2bhfCveBP2VOVAigfJozkSSyFG4hUKkA6Vh45s" "27-Aug-2021 06:22:44.00 GMT" "/" ".www.researchgate.net" t]
+  [url-cookie "HttpOnly" nil "27-Aug-2021 06:22:44.00 GMT" "/" ".www.researchgate.net" t]))
+)
 
 ;; Local Variables:
 ;; version-control: never
