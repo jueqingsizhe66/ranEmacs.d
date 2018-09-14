@@ -118,3 +118,27 @@ In ~perl收集所有文件内容到一个文件 [#B]~:
       close  $journalF
           or warn "$0 : failed to close input file '$journalF_file_name' : $!\n";
 #+END_SRC
+* MIT技术 file:c:/Users/yzl/AppData/Roaming/.emacs.d/GTD/orgBoss/Note/notes.org::1816
+In ~科研? [#B]~:
+MIT技术Review(From 克克老师)
+https://www.technologyreview.com/
+
+
+Phys.org
+https://phys.org/
+
+Science
+http://www.sciencemag.org/
+
+
+Nature:
+https://www.nature.com/
+
+
+
+MIT公开课
+https://ocw.mit.edu/index.htm
+
+网易公开课
+http://open.163.com/special/opencourse/
+

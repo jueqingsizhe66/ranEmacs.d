@@ -7,13 +7,13 @@
   [url-cookie "max-age" "2147483647" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
   [url-cookie "BIDUPSID" "86DED75CEFB50BF41FD43C8A16CE7A5E" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
   [url-cookie "PSTM" "1505978434" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil])
+ ("study.163.com"
+  [url-cookie "Max-Age" "157680000" "03-Sep-2023 11:48:54.00 GMT" "/" "study.163.com" nil]
+  [url-cookie "EDUWEBDEVICE" "a7fdd09f657a487fa13741264250149c" "03-Sep-2023 11:48:54.00 GMT" "/" "study.163.com" nil])
  ("www.cctry.com"
   [url-cookie "Vguy_2132_visitedfid" "97" "26-Sep-2018 06:04:40.00 GMT" "/" "www.cctry.com" nil]
-  [url-cookie "Vguy_2132_lastact" "1535349937%09home.php%09space" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
-  [url-cookie "Vguy_2132_sid" "U5B65N" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
   [url-cookie "Vguy_2132_lastvisit" "1535346099" "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil]
   [url-cookie "httponly" nil "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil]
-  [url-cookie "Max-Age" "86400" "28-Aug-2018 06:05:37.00 GMT" "/" "www.cctry.com" nil]
   [url-cookie "Vguy_2132_saltkey" "fzBSQBES" "26-Sep-2018 06:01:39.00 GMT" "/" "www.cctry.com" nil])
  (".github.com"
   [url-cookie "_octo" "GH1.1.1491915472.1535284963" "Wed, 26 Aug 2020 12:02:43 -0000" "/" ".github.com" nil])
@@ -27,6 +27,9 @@
   [url-cookie "I2KBRCK" "1" "26-Aug-2019 13:37:20.00 GMT" "/" ".www.tandfonline.com" nil]
   [url-cookie "MAID" "N/bQsJomT+inukUS8dQ6rw==" "22-Jun-2019 13:37:27.00 GMT" "/" ".www.tandfonline.com" nil]
   [url-cookie "MACHINE_LAST_SEEN" "2018-08-26T06%3A37%3A26.668-07%3A00" "22-Jun-2019 13:37:27.00 GMT" "/" ".www.tandfonline.com" nil])
+ (".stackexchange.com"
+  [url-cookie "prov" "2a39fc26-8406-d5ae-f169-de2a88d82c4b" "01-Jan-2055 00:00:00.00 GMT" "/" ".stackexchange.com" nil]
+  [url-cookie "HttpOnly" nil "01-Jan-2055 00:00:00.00 GMT" "/" ".stackexchange.com" nil])
  ("www.baidu.com"
   [url-cookie "delPer" "0" "19-Aug-2048 02:50:37.00 GMT" "/" "www.baidu.com" nil]
   [url-cookie "NOJS" "1" "19-Aug-2048 02:50:37.00 GMT" "/" "www.baidu.com" nil]))

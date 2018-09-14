@@ -45,9 +45,9 @@
  (position . 56775))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
- (front-context-string . "* 拷贝一堆文件到一个文件 \nf")
- (rear-context-string . "\n  }\n\n#+END_SRC\n")
- (position . 3495))
+ (front-context-string . "* MIT技术 \nfile:c:")
+ (rear-context-string . "!\\n\";\n#+END_SRC\n")
+ (position . 4046))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

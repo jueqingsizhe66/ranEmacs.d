@@ -948,8 +948,10 @@ In ~%s~:
    (perl . t)
    (C . t)
    (scheme . t)
+   (plantuml . t)
    ))
 
+(setq org-plantuml-jar-path (expand-file-name "~/.emacs.d/customizations/plantuml.jar"))
 (setq geiser-active-implementations '(racket))
 ;(setq geiser-active-implementations '(chez))
 

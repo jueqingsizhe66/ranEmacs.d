@@ -131,7 +131,7 @@ https://www.baidu.com/s?wd=4-20ma%E8%A1%A8%E5%A4%B4&rsv_spt=1&rsv_iqid=0xf4212a0
 4-20ma表头 接地，为了实现各种电气设备的零电位点与大地作良性电气连接，由金属接地体引至各种电气设备零电位部位的一切装置的总称。 可靠接地，应该值得是接地系统的可靠性吧， 为减小接地电阻尽量采取利用自然接地体，多点接地，网状接地等。
 https://github.com/CarpenterLee/JCFInternals
 
-    State “TODO” from [2017-10-14 周六 14:26] 深入理解java collections
+State “TODO” from [2017-10-14 周六 14:26] 深入理解java collections
 
 https://github.com/dfeich/org-babel-examples
 
@@ -300,23 +300,23 @@ http://steve-yegge.blogspot.com/
 stevey’s Blog Rangts 程序员的呐喊
 * SITES
 ** 科研动力
- http://www.howsci.com/sci-hub-alternative.html
+http://www.howsci.com/sci-hub-alternative.html
 ** https://github.com/erstern/public_health
  
 Public Health
 
-    公共卫生知识整理cite:ZhuShen-26073 
-    人民卫生出版社cite:叶昭良王晓东-26083 
+公共卫生知识整理cite:ZhuShen-26073 
+人民卫生出版社cite:叶昭良王晓东-26083 
 ** https://mooc.study.163.com/course/2001280005
- 吴恩达 机器学习
+吴恩达 机器学习
 ** https://github.com/ggreer/the_silver_searcher
- the_silver_searcher
+the_silver_searcher
 ** https://gitee.com/hank-whu/turbo-rpc                               :java:
- turbo-rpc 是一款速度超凡的异步响应式RPC框架
+turbo-rpc 是一款速度超凡的异步响应式RPC框架
 ** http://www.cs.cornell.edu/courses/cs3110/2015fa/                 :scheme:
- 数据结构和函数式编程
+数据结构和函数式编程
 ** https://github.com/kelseyhightower/nocode
- 佛系application
+佛系application
 nothing
 ** https://liuboyu.github.io/blockchain/
 ** https://gitee.com/gvp
@@ -326,26 +326,26 @@ nothing
 ** http://www.bootdo.com/blog
 bootdo 不错的官网
 ** emacs windows download
- http://alpha.gnu.org/gnu/emacs/pretest/windows/
+http://alpha.gnu.org/gnu/emacs/pretest/windows/
 
 https://emacs.stackexchange.com/questions/27202/how-do-i-install-gnutls-for-emacs-25-1-on-windows/27251#27251
 
 @StuartHickinbottom explained what I was doing wrong: using libgnutls-28.dll 
 when Emacs 25.1 requires the newer and incompatible libgnutls-30.dll.
- Then it was a matter of finding binaries of libgnutls-30.dll and other required libraries.
- Thankfully Phillip Lord has compiled Windows versions of all the GnuTLS libraries and dependencies and 
+Then it was a matter of finding binaries of libgnutls-30.dll and other required libraries.
+Thankfully Phillip Lord has compiled Windows versions of all the GnuTLS libraries and dependencies and 
 many other libraries you might want for Emacs! 
 They are available here: get emacs-25-i686-deps.zip if you use 32-bit Windows and get emacs-25-x86_64-deps.zip 
 if you use 64-bit; then unzip in the root folder of your Emacs installation (so that the bin folder of the zip
- files gets decompressed into the bin folder of your Emacs installation, etc.)
+files gets decompressed into the bin folder of your Emacs installation, etc.)
 ** magnars github
- https://github.com/magnars/.emacs.d
+https://github.com/magnars/.emacs.d
 ** emacs load vars into env
- https://github.com/diasjorge/emacs-load-env-vars
+https://github.com/diasjorge/emacs-load-env-vars
 ** org-ref
- https://github.com/jkitchin/org-ref
+https://github.com/jkitchin/org-ref
 ** Emacs Hacker AIVaro Ramirez
- http://xenodium.com/#actionable-urls-in-emacs-buffers
+http://xenodium.com/#actionable-urls-in-emacs-buffers
 ** 大神emacs配置
  
 Steve Purcell的配置	https://github.com/purcell/emacs.d
@@ -356,9 +356,9 @@ Matt Briggs的配置	https://github.com/mbriggs/.emacs.d
 https://github.com/dakrone/eos/blob/master/eos-web.org
 https://writequit.org/eos/eos.html
 ** research gate
- https://www.researchgate.net/
+https://www.researchgate.net/
 ** new energy outlook
- https://about.bnef.com/new-energy-outlook/
+https://about.bnef.com/new-energy-outlook/
 Extended our outlook from 2040 to 2050.
 Expanded our new-build algorithm to include utility-scale lithium-ion batteries – both stand-alone and paired with renewables – for energy arbitrage as well as peaking capacity.
 Expanded our assessment of new air-conditioning load to include Brazil, Indonesia, India, Mexico, Malaysia, Philippines and Thailand.
@@ -372,9 +372,103 @@ http://savannah.gnu.org/projects/erc
 https://www.gnu.org/software/emacs/manual/html_mono/erc.html
 ** orgmode 4years
 orgmode
- https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
+https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
 
 https://emacs.cafe/
 
 ledger
 https://emacs.cafe/ledger/emacs/ynab/budgeting/2018/06/12/elbank-ynab.html
+** Numerical Simulation(TongChitopakdee 2015)
+ 
+https://www.researchgate.net/publication/228648097_Numerical_Simulation_of_the_Aerodynamics_of_Horizontal_Axis_Wind_Turbines_Under_Yawed_Flow_Conditions/citations
+
+using both B-L and S-A
+** json web token for chez scheme
+https://github.com/guenchi/jwt?tdsourcetag=s_pctim_aiomsg
+ 
+https://github.com/guenchi/json/
+
+https://emacs-china.org/
+
+http://riemann.io/
+
+https://github.com/nathanmarz/specter/
+
+
+https://github.com/jiacai2050/clj-json
+** shen languae
+http://www.shenlanguage.org/?tdsourcetag=s_pctim_aiomsg
+** emacs中文
+https://emacs-china.org/
+** phys and mit-technology review
+https://www.technologyreview.com/
+
+
+https://phys.org/
+** ruby tutorial
+ http://www.runoob.com/ruby/ruby-tutorial.html?tdsourcetag=s_pctim_aiomsg
+** mastodon
+ https://github.com/tootsuite/mastodon
+
+https://ruby.social/web/getting-started
+ 全球微博
+** emacs stackexchage
+ https://emacs.stackexchange.com/
+** vi/vim stack exchange
+ https://vi.stackexchange.com/
+** english stack exchange
+ https://english.stackexchange.com/
+https://ell.stackexchange.com/users/63482/%E9%99%B3-%E5%8A%9B
+** emcas another email server
+ https://github.com/wanderlust/wanderlust
+ 
+
+https://emacs-china.org/t/topic/2552
+
+
+https://github.com/LdBeth/Emacs-for-Noobs/blob/master/WanderLust.org
+** Software foundations for broad introduction
+ https://www.seas.upenn.edu/~cis500/current/sf/index.html?tdsourcetag=s_pctim_aiomsg
+
+ 分为四卷
+1. Logical foundations  https://www.seas.upenn.edu/~cis500/current/sf/lf-current/toc.html
+2. Programming language foundations  https://www.seas.upenn.edu/~cis500/current/sf/plf-current/toc.html
+3. Verified Functional Algorithms
+4. Quick chick
+** 交换博客链接
+ https://emacs-china.org/t/topic/4162/9
+ 
+
+http://www.zmonster.me/
+
+https://macplay.github.io/index-1.html
+
+
+**** 写作管理:
+
+https://github.com/Linusp/emacs_config/blob/master/emacs_config.org#%E5%86%99%E4%BD%9C%E8%AE%BE%E7%BD%AE
+
+****  学术科研
+https://lengyueyang.github.io/
+
+****  rss
+
+https://www.linkedinfo.co/
+
+
+****  clojure
+
+https://kevinjiang.info/
+
+**** vimer
+
+
+http://www.wklken.me/
+
+****  bash utils
+
+https://github.com/wklken/bash-utils
+** d3 js可视化数据库
+ https://github.com/d3/d3
+ 
+鼻祖级的做大数据可视化展现

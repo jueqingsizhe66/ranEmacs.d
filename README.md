@@ -252,6 +252,10 @@ Tab打开标题
 
     c-c shift-< 打开calendar
     c-c shift-> 添加calendar鼠标下的日期
+    
+    
+    C-c *  从普通文字切换到标题 <2018-09-04 23:36>
+    C-c -  从
 
 修改：------
 
@@ -312,7 +316,7 @@ M-x package-install  markdown-mode+
 ```
 
 在init.el的my-package list 增加markdown-mode+，这样每次打开markdown的md后缀结尾的后缀名就会自动渲染，这也是emacs的[mode][18]的一种运用.
-
+xs
 1. `shift+tab`切换overview视图(标题间的outline模式)(第一步:Shift-tab多次，进入outline模式)
 2. `M-x markdown-cycle` 可以逐步children化，这样你就可以只工作在某一级别下(第二步:`M-x markdown-cycle` 不断进入子目录
 3. `Alt-n|p`上下移动标题
@@ -6690,7 +6694,7 @@ No matter what line of work you're in, it's inevitable you have to take a few no
 
 use [ deft ][352] to find the notes directory you specified quickly(his idea from  http://notational.net/) 
 
-1. 定义你的notes文件夹，比如 `(setq deft-directory "~/.emacs.d/GTD/")`
+1. 定义你的notes文件夹，比如 `(setq deft-directory "~/.emacs.d/GTD/")` <2018-09-11 03:46>的确是!
 2. 过滤你的文件，比如`(setq deft-extensions '("txt" "tex" "org" "md"))` 
 3. 设置你的deft快捷键  `(global-set-key [f8] 'deft)`
 4. 让你得到的笔记通过文件名形式呈现，默认文件里头的首行文字 `(setq deft-use-filename-as-title t)`
@@ -6843,11 +6847,25 @@ del yaw-1.org
     5. 设置任务状态(`C-c C-t`)
    
    拟合一下工作过程
-   1. Tags
+   1. Tags(在这个过程中是有一个收集的前提的)
    2. Schedule
    3. Clock
    4. Job Status
    5. Tab
+   
+   再次温故[GTD流程][375]
+  1. Collection. Collect all your stuff into a inbox.(基于一定主题的收集)
+  2. Refile. Identify each stuff and make a decision on each of them with deleting, archive or generate a new task to do.
+  3. Organization. Judge each stuff’s importance and time consideration, send(refile) them into specification destinations.
+  4. Review. Check the list of things to be done, and mark them with some tags, deadlines, schedules and status.
+  5. Do it. Select the right things to do with a right time and right place. 
+
+   GTD核心：
+   
+``` org
+    WRITE DOWN ALL THE STUFF IN YOUR MIND, AND ORGANIZE THEM INTO STREAM OF DOING THINGS.
+    写下你脑中的所有琐事，然后重新组织他们，形成你自己的工作流
+```
 在这种工作流模式，怕多，所以得把任务紧密围绕你的project！这点很重要！ 通过标题，所以可以使用`Tab`不断切换(父子标题间切换,go through different level of visibility ,hide the detail and then edit the detail)overview状态，可以指定某个project为当前你要工作的project
 (然后设置任务状态`doing`;`waiting`做了一些，合伙人还没做完中间，等待做；待做叫做`TODO`,这是任务的最后一个状态,做完重做叫`pending`)
 
@@ -6873,6 +6891,10 @@ Switching to a perspective activates its window configuration, and when in a per
 
 [persp-projectile][365] connect projectile with perspective
 
+<2018-09-05 11:55> 这个persp-mode挺好玩的，比如你保存一个code-mode
+在保存一个org-mode,再保存一个main等，打开对应persp相当于打开一个新的
+窗口, 比如你在code-mode打开两个水平平齐窗口，在main打开一个窗口，切换
+persp视角看看吧！或者你在main视角上网, 好用!
 
 #### shortkey for perspective
 
@@ -6903,6 +6925,36 @@ Switching to a perspective activates its window configuration, and when in a per
 他说，他也知道射出去的箭，总有会落地的一天，强弩之末，势不能穿鲁缟。
 他所能做的，就是拼命把弓拉满，力求让射出去的箭，晚一点落地。
 ```
+
+### 142.真正的木匠
+
+一根木匠的材质是一个木制艺术品诞生的前提，一个真正的木匠可以看到他！
+
+耶稣也是一名木匠
+
+1. 自然感
+2. 保温感
+3. 材质好
+
+我[脑海中的橡皮擦][376]描述了关于木匠的本质。
+
+
+一个真正的木匠，在他的心中也会有一座美丽的房子（你心中纵然没有，但也可以多多联想，但是你不是真正的木匠，通过你的包容
+慢慢在心中滋生，无论多久，总是有那么一天；宽容的开启心中的窗户，去感受; 你有没有听过一句鸡汤：“宽容会在你心中打开一扇
+窗户”， 宽容你的过去！宽容你的同事）
+
+[诚信基础上建立起来的为人正直][377]
+
+### 143. plantuml 绘制时序图
+
+之前就了解过[plantuml][279],是一个用于绘制时序图、用例图等的java jar包（类似于[ditta][381]转变ASCII图为图形)
+
+知道最近发现[vim-slumlord][380],一个vim插件，用于调用plantuml.jar绘制时序图, 于是也在emacs中接着学习, 增加了plantuml-mode。
+
+[参考时序图用例][378]
+
+[官网的getting started][382]
+
 
 ----------
 
@@ -7284,4 +7336,11 @@ Switching to a perspective activates its window configuration, and when in a per
 [372]: https://blog.csdn.net/MathaDora/article/details/79468528
 [373]: https://emacs.stackexchange.com/questions/27202/how-do-i-install-gnutls-for-emacs-25-1-on-windows/27251#27251
 [374]: https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
-
+[375]: http://ev6r.github.io/blog/2013/10/25/try-to-join-in-gtd-with-org-mode/
+[376]: https://baike.baidu.com/item/%E6%88%91%E8%84%91%E6%B5%B7%E4%B8%AD%E7%9A%84%E6%A9%A1%E7%9A%AE%E6%93%A6/1929639?fr=aladdin
+[377]: http://ev6r.github.io/blog/2015/01/09/liu-mei-xiao-jie-%28%5B%3F%5D-%29/
+[378]: https://www.cnblogs.com/yangwen0228/p/6825560.html
+[379]: http://plantuml.com/
+[380]: https://github.com/scrooloose/vim-slumlord
+[381]: http://blog.51cto.com/lavenliu/1630191
+[382]: http://plantuml.com/starting

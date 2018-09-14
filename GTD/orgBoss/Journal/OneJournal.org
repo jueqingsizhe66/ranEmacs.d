@@ -1207,7 +1207,7 @@ Graphviz提供6种布局方式:
 
 
 
-#+BEGIN_SRC dot :file img/.png :cmdline -Kdot -Tpng :exports results :results silent
+#+BEGIN_SRC dot :file 1.png :cmdline -Kdot -Tpng :exports results
 
   digraph G {
 
@@ -1235,9 +1235,11 @@ Graphviz提供6种布局方式:
 
   #+END_SRC
 
+  #+RESULTS:
+  [[file:1.png]]
 
 
-[[file:img/.png]]
+
 
 
 
