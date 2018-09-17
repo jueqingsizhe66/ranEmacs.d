@@ -12,7 +12,8 @@ CLOCK: [2017-09-28 周四 13:41]--[2017-09-28 周四 13:42] =>  0:01
   ● 开心网的偷菜游戏？你是不是老是惦记着收菜的时间？你收的不是菜，是番茄
   ● 奥运会倒计时，高考倒计时？很大很重要的一个番茄
   ● 老板明天要的资料？味道不怎么样的番茄
-我想说的是，番茄时间的核心是倒计时所产生的紧迫感。这是中科院心理学专业毕业的老郭（郭军峰）告诉我的，感谢哦。
+我想说的是，番茄时间的核心是倒计时所产生的紧迫感。这是中科院心理学专业毕业的老郭（郭军峰）告诉我的，感谢哦。 
+
 ** cljrefactor call last thread call [#B]                            :@work:
                            Added: [2017-09-30 周六 05:21]
 -https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-thread-first-all
@@ -2152,4 +2153,78 @@ rectangle 买单 {
 
 #+RESULTS:
 [[file:test_graphviz.png]]
+** workflow management system [#B]                                  :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-16 周日 03:35]--[2018-09-16 周日 03:44] =>  0:09
+:END:
+                         Added: [2018-09-16 周日 03:34]
+                         
+Since designing and launching a specialized workflow(knowledgement) mangement system in 2010,
 
+a reasearch team from the US Departement of Energy's Oak Ridge National Laboratory has continuously 
+updated the technology to help computaional scientists develop software, visualize data and solve
+problems. 
+
+Workflow management systems allow users to prepare ,produce and analyze scientific process to 
+help simplify complex simulations. Known as the Eclipse integrated Computational Environment, or ICE
+this particular system incorporates a comprehensive suite of scientific computing tools designed to 
+save time and effort expended during modeling and simulation experiments.
+
+Compiling these resources into a single platform both improves the overall user experience and 
+expedites scientific breakthroughts. Using ICE, software developers, engineers, scientists and programmers
+can define problems, run simulations locally on personal computers or remotely on other systems--
+even supercomputers--and then analyze results and archive data. Recently, the team published an 
+article in SoftwareX that both details the history of the system and previews the potential benefits of 
+upcoming versions.
+
+"What I really love about this project is making complicated computational science automatic," said Jay Jay Billings,
+a researcher in ORNL's Computer Science and Mathematicas Division who leads the ICE development team. "Building workflow
+management systems and automation tools is a type of futurism, and it's challenging and rewording to operate
+at the edge of what's possible.""
+
+upcoming versions.
+
+
+Researchers use ICE to study topics in fields including nuclear energy, astrophysics, additive manufacturing, 
+advanced materials, neutron science and quantum computing, answering questions such as how batteries behave 
+and how some 3-D-printed parts deform when exposed to heat.
+
+Several factors differentiate ICE from other workflow management systems. For example, 
+because ICE exists on an open-source software framework called the Eclipse Rich Client Platform,
+ anyone can access, download and use it. Users also can create custom combinations of reusable 
+resources and deploy simulation environments tailored to tackle specific research challenges.
+
+"Eclipse ICE is an excellent example of how open-source software can be leveraged to accelerate 
+science and discovery, especially in scientific computing," said Eclipse Foundation 
+Executive Director Mike Milinkovich. "The Eclipse Foundation, through its community-led
+ Science Working Group, is fostering open-source solutions for advanced research in all areas of science
+
+Additionally, ICE circumvents the steep and time-consuming learning curve that usually accompanies any computational science project. Although other systems require expert knowledge of the code and computer in question, ICE enables users to immediately begin facilitating their experiments, thus helping them gather data and achieve results much faster.
+
+"We've produced a streamlined interface to computational workflows that differs from complicated systems that you have to be specifically qualified in to use properly," Billings said.
+
+Throughout this project, Billings has also emphasized the importance of accessibility and usability to ensure that users of all ages and experience levels, including nonscientists, can use the system without prior training.
+cite:LiuLu-26025
+"The problem with a lot of workflow management systems and with modeling and simulation codes in general is that they are usually unusable to the lay person," Billings said. "We designed ICE to be usable and accessible so anyone can pick up an existing code and use it to address pressing computational science problems."
+
+ICE uses the programming language Java to define workflows, whereas other systems use more obscure languages. Thus, students in grade school, high school and college have successfully run codes using ICE.
+
+Finally, instead of relying on grid workflows—collections of orchestrated computing processes—ICE focuses on flexible modeling and simulation workflows that give users interactive control over their projects. Grid workflows are defined by strict parameters and executed without human intervention, but ICE allows users to input additional information during simulations to produce more complicated scenarios.
+
+"In ICE you can have humans in the loop, meaning the program can stop, ask questions and receive instructions before resuming activity," Billings said. "This feature allows system users to complete more complex tasks like looping and conditional branching."
+
+Next, the development team intends to combine the most practical aspects of ICE and other systems through workflow interoperability, a concept referring to the ability of two different systems to seamlessly communicate. Combining the best features of grid workflows with modeling and simulation workflows would allow scientists to address even greater challenges and solve scientific mysteries more efficiently.
+
+"If I'm using ICE and someone else is using a different system, we want to be able to address problems together with our combined resources," Billings said. "With workflow interoperability, our systems would have a standard method of 'talking' to one another."
+
+To further improve ICE's accessibility and usability, the team is also developing a cloud-based version to provide even more interactive computing services for simplifying scientific workflows.
+
+"That's what research is—we keep figuring out the next step to understand the system better," Billings said.
+
+Read more at: https://phys.org/news/2018-09-technology-science.html#jCp cite:叶昭良王晓东-26083 
+
+Read more at: https://phys.org/news/2018-09-technology-science.html#jCp
+
+https://phys.org/news/2018-09-technology-science.html
+
+cite:叶昭良王晓东-26083

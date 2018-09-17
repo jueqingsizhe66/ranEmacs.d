@@ -991,6 +991,9 @@ context类似于签到地方，使用@字符打头的。
 
 ### 37. org-capture-template的修改
 
+
+Capture is a facility for quickly adding to your org-files with minimal distruption to your [work flow][383].
+It super
 ```
 ("t" "Todo" entry  (file+headline "~/.emacs.d/GTD/newgtd.org" "Tasks")
                     "* TODO [#B] %^{Task} %^g
@@ -6955,6 +6958,49 @@ persp视角看看吧！或者你在main视角上网, 好用!
 
 [官网的getting started][382]
 
+### 144. org-ref引用
+
+org-ref设置
+
+``` org
+
+;; org-ref
+
+(require 'org-ref)
+(setq reftex-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib"))
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/.emacs.d/GTD/orgref/notes.org"
+      org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib")
+      org-ref-pdf-directory "~/.emacs.d/GTD/orgref/bibtex-pdfs/")
+```
+
+很方便添加额外的参考文献,比如下面的ref2.bib,这样就可以无限添加了!
+
+```
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes "~/.emacs.d/GTD/orgref/notes.org"
+      org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib" "~/.emacs.d/GTD/orgref/ref2.bib")
+      org-ref-pdf-directory "~/.emacs.d/GTD/orgref/bibtex-pdfs/")
+```
+
+`C-c ]` 表示`org-ref-helm-insert-cite-link`会去调用reference.bib里头的文献信息, 然后选择添加。
+
+`C-c C-o` 打开菜单--`o`标识打开entry, `n`表示为这个entry添加说明【很喜欢，看完即可 做笔记】，相当于noteexpress的笔记的功能
+
+
+#### What is helm-bibtex?
+
+[helm-bibtex][384] 用于引用参考文献 using the method of helm。
+
+
+#### what is org-ref?
+
+[org-ref][385] 结合pdf_tools,helm-bibtex,helm等工具，组合成一个文献管理平台。
+
+
+
 
 ----------
 
@@ -7344,3 +7390,6 @@ persp视角看看吧！或者你在main视角上网, 好用!
 [380]: https://github.com/scrooloose/vim-slumlord
 [381]: http://blog.51cto.com/lavenliu/1630191
 [382]: http://plantuml.com/starting
+[383]: http://members.optusnet.com.au/~charles57/GTD/datetree.html
+[384]: https://github.com/tmalsburg/helm-bibtex
+[385]: https://github.com/jkitchin/org-ref

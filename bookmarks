@@ -44,10 +44,10 @@
  (rear-context-string . "\n3. [ ] PIV实验\n\n\n")
  (position . 56775))
 ("org-capture-last-stored"
- (filename . "~/.emacs.d/GTD/orgBoss/code-snippets.org")
- (front-context-string . "* MIT技术 \nfile:c:")
- (rear-context-string . "!\\n\";\n#+END_SRC\n")
- (position . 4046))
+ (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
+ (front-context-string . "** workflow mana")
+ (rear-context-string . "_graphviz.png]]\n")
+ (position . 66791))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

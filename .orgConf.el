@@ -1642,5 +1642,5 @@ e.g. Sunday, September 17, 2000."
 
 ;; see org-ref for use of these variables
 (setq org-ref-bibliography-notes "~/.emacs.d/GTD/orgref/notes.org"
-      org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib")
+      org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib" "~/.emacs.d/GTD/orgref/20180324.bib" "~/.emacs.d/GTD/orgref/20180303.bib" "~/.emacs.d/GTD/orgref/higherMegawatt.bib" "~/.emacs.d/GTD/orgref/20161223.bib")
       org-ref-pdf-directory "~/.emacs.d/GTD/orgref/bibtex-pdfs/")

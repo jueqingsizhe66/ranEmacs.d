@@ -1,0 +1,33 @@
+
+** TODO 2018 - 水平轴风力机偏航气动性能分析
+ :PROPERTIES:
+  :Custom_ID: 叶昭良王晓东-26083
+  :AUTHOR: 叶昭良, 王晓东 \& 康顺
+  :JOURNAL: 工程热物理学报
+  :YEAR: 2018
+  :VOLUME: 
+  :PAGES: 985-991
+  :DOI: 
+  :URL: 
+ :END:
+
+cite:叶昭良王晓东-26083
+
+这篇文章是我的第一篇文章。
+
+
+** TODO 2017 - Effects of aerodynamic damping on the tower load of offshore horizontal axis wind turbines
+ :PROPERTIES:
+  :Custom_ID: LiuLu-26025
+  :AUTHOR: Liu, Lu, Li, Godbole \& Chen
+  :JOURNAL: Applied Energy
+  :YEAR: 2017
+  :VOLUME: 204
+  :PAGES: 1101-1114
+  :DOI: https://doi.org/10.1016/j.apenergy.2017.05.024
+  :URL: 
+ :END:
+
+cite:LiuLu-26025
+
+Ye Funnay

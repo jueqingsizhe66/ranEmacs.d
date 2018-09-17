@@ -1,0 +1,5 @@
+** Dynamics response
+What's the job of the design engineering for the wind turbines?
+
+It will be atempted to reduce the high alternating loads on the rotor 
+blades. They dynamics response of the rotor to the wind gusts affects
