@@ -606,6 +606,8 @@ ivy ivy-dired-history all-the-icons-ivy ivy-rich
 
 ### 19. 改进org-mode配置
 
+org-mode organize your life into plain text(朴素的文字形势)
+
 在.orgConf.el中添加的正确org-capture-templates，使用快捷键`C-c c`来捕捉你的想法并进行记录。 org-remember打算删掉。
 
 有趣的大纲查看命令 
@@ -770,7 +772,8 @@ the character you wana jump.
 emacs对应的先标记
 `C-x SPC a`, a代表标记键，可以为a-z
 然后调回来使用，
-`C-x r j` ,输入a即可
+`C-x r j` : 表示跳转到某个文件
+`C-x r s` : 表示复制当前信息到某个文件
  
  有些人也说可以用C-SPC，然后C-x c-x跳转即可(进一步可以参考[标题16][151])。
  
@@ -3497,6 +3500,8 @@ Add [defshortcut code][179] inside the .orgConf.el
 ```
 
 然后你就可以敲入`C-x r j` ，输入对应字母，跳转到对应的文件下。
+
+<2018-09-20 18:21> `C-x r s` 表示复制内容到对应的文件内(有用的快捷键)。
 
 
 ### 88. magit cannot commit
@@ -7000,6 +7005,83 @@ org-ref设置
 [org-ref][385] 结合pdf_tools,helm-bibtex,helm等工具，组合成一个文献管理平台。
 
 
+### 145. Copy 当前文件的路径名+文件名
+
+```
+(defun copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
+```
+
+
+对应还有复制文件到某个路径， 对应的是`M-x copy-file`
+
+
+###  146. weasel word deleted ###
+
+
+[ Artbollocks-mode ][386] is written by [sachac][387] who is very keen on the development of the emacs.
+
+通过该mode可以让一些关键字、重复字和你定义的术语显示出来，自己再进行修改
+
+```
+(use-package artbollocks-mode
+  :defer t
+  :load-path  "~/elisp/artbollocks-mode"
+  :config
+  (progn
+    (setq artbollocks-weasel-words-regex
+          (concat "\\b" (regexp-opt
+                         '("one of the"
+                           "should"
+                           "just"
+                           "sort of"
+                           "a lot"
+                           "probably"
+                           "maybe"
+                           "perhaps"
+                           "I think"
+                           "really"
+                           "pretty"
+                           "nice"
+                           "action"
+                           "utilize"
+                           "leverage") t) "\\b"))
+    ;; Don't show the art critic words, or at least until I figure
+    ;; out my own jargon
+    (setq artbollocks-jargon nil)))
+```
+
+
+### 147. 记录一下你的敲击速度
+
+
+怎么用？ 当你打开一个.org文件，然后在一个标题下开始定时`C-c C-x C-i` 并且开始敲入单词，
+一顿猛敲之后，关闭计时`C-c C-x C-o`,执行`M-x my/org-entry-wpm`，按照当前标题下的总字数/总时间得到你的 wpm.
+
+```
+(require 'org-clock)
+(defun my/org-entry-wpm ()
+  (interactive)
+  (save-restriction
+    (save-excursion
+      (org-narrow-to-subtree)
+      (goto-char (point-min))
+      (let* ((words (count-words-region (point-min) (point-max)))
+	     (minutes (org-clock-sum-current-item))
+	     (wpm (/ words minutes)))
+	(message "WPM: %d (words: %d, minutes: %d)" wpm words minutes)
+	(kill-new (number-to-string wpm))))))
+
+```
+
+
 
 
 ----------
@@ -7393,3 +7475,5 @@ org-ref设置
 [383]: http://members.optusnet.com.au/~charles57/GTD/datetree.html
 [384]: https://github.com/tmalsburg/helm-bibtex
 [385]: https://github.com/jkitchin/org-ref
+[386]: https://github.com/sachac/artbollocks-mode
+[387]: https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org#avoiding-weasel-words

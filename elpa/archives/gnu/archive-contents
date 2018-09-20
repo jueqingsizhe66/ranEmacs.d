@@ -433,7 +433,7 @@
 		  ((:keywords "convenience")
 		   (:url . "https://github.com/ergoemacs/ergoemacs-mode"))])
  (excorporate .
-	      [(0 8 0)
+	      [(0 8 1)
 	       ((emacs
 		 (24 1))
 		(fsm
@@ -443,7 +443,7 @@
 		(url-http-ntlm
 		 (2 0 3))
 		(nadvice
-		 (0 2)))
+		 (0 3)))
 	       "Exchange integration" tar
 	       ((:keywords "calendar")
 		(:url . "http://elpa.gnu.org/packages/excorporate.html"))])
@@ -772,7 +772,7 @@
 	 ((:url . "http://elpa.gnu.org/packages/myers.html")
 	  (:keywords "list" "containers"))])
  (nadvice .
-	  [(0 2)
+	  [(0 3)
 	   nil "Forward compatibility for Emacs-24.4's nadvice" single
 	   ((:url . "http://elpa.gnu.org/packages/nadvice.html")
 	    (:keywords))])
@@ -854,7 +854,7 @@
 	    ((:keywords "convenience" "text" "org")
 	     (:url . "https://savannah.nongnu.org/projects/org-edna-el/"))])
  (orgalist .
-	   [(1 8)
+	   [(1 9)
 	    ((emacs
 	      (24 4)))
 	    "Manage Org-like lists in non-Org buffers" single

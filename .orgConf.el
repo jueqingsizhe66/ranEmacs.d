@@ -613,6 +613,8 @@ In ~%s~:
 (run-with-idle-timer 300 t 'jump-to-org-agenda)
 
 
+
+;https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org#strike-through-done-headlines
 ;; change "DONE" keyword style
 (setq org-fontify-done-headline t)
 (custom-set-faces
@@ -1644,3 +1646,88 @@ e.g. Sunday, September 17, 2000."
 (setq org-ref-bibliography-notes "~/.emacs.d/GTD/orgref/notes.org"
       org-ref-default-bibliography '("~/.emacs.d/GTD/orgref/reference.bib" "~/.emacs.d/GTD/orgref/20180324.bib" "~/.emacs.d/GTD/orgref/20180303.bib" "~/.emacs.d/GTD/orgref/higherMegawatt.bib" "~/.emacs.d/GTD/orgref/20161223.bib")
       org-ref-pdf-directory "~/.emacs.d/GTD/orgref/bibtex-pdfs/")
+
+
+
+(defun copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+
+;(require 'artbollocks-mode)
+;(add-hook 'text-mode-hook 'artbollocks-mode)
+
+(use-package artbollocks-mode
+  :defer t
+  :config
+  (progn
+    (setq artbollocks-weasel-words-regex
+          (concat "\\b" (regexp-opt
+                         '("one of the"
+                           "should"
+                           "just"
+                           "sort of"
+                           "a lot"
+                           "probably"
+                           "maybe"
+                           "perhaps"
+                           "I think"
+                           "really"
+                           "pretty"
+                           "nice"
+                           "action"
+                           "utilize"
+                           "leverage") t) "\\b"))
+    ;; Don't show the art critic words, or at least until I figure
+    ;; out my own jargon
+    (setq artbollocks-jargon nil)))
+
+;;; http://emacsredux.com/blog/2013/03/27/open-file-in-external-program/
+(defun prelude-open-with (arg)
+  "Open visited file in default external program.
+
+With a prefix ARG always prompt for command to use."
+  (interactive "P")
+  (when buffer-file-name
+    (shell-command (concat
+                    (cond
+                     ((and (not arg) (eq system-type 'darwin)) "open")
+                     ((and (not arg) (member system-type '(gnu gnu/linux gnu/kfreebsd))) "xdg-open")
+                     (t (read-shell-command "Open current file with: ")))
+                    " "
+                    (shell-quote-argument buffer-file-name)))))
+
+(add-to-list 'org-file-apps '("pdf" . "acrobat %s"))
+
+
+;; https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org#estimating-wpm
+(require 'org-clock)
+(defun my/org-entry-wpm ()
+  (interactive)
+  (save-restriction
+    (save-excursion
+      (org-narrow-to-subtree)
+      (goto-char (point-min))
+      (let* ((words (count-words-region (point-min) (point-max)))
+	     (minutes (org-clock-sum-current-item))
+	     (wpm (/ words minutes)))
+	(message "WPM: %d (words: %d, minutes: %d)" wpm words minutes)
+	(kill-new (number-to-string wpm))))))
+
+
+
+(defun my/org-send-to-bottom-of-list ()
+  "Send the current line to the bottom of the list."
+  (interactive)
+  (beginning-of-line)
+  (let ((kill-whole-line t))
+    (save-excursion
+      (kill-line 1)
+      (org-end-of-item-list)
+      (yank))))

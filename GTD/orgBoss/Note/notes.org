@@ -2228,3 +2228,284 @@ Read more at: https://phys.org/news/2018-09-technology-science.html#jCp
 https://phys.org/news/2018-09-technology-science.html
 
 cite:叶昭良王晓东-26083
+** 知识生态 [#B]                                                    :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-18 周二 15:56]--[2018-09-18 周二 16:16] =>  0:20
+:END:
+                         Added: [2018-09-18 周二 15:55]
+                         
+                         
+关键词: 技术佣兵,知识生态，产品生态，工业生态, 商业价值，未来走向
+
+
+地图导航，如果你纯粹用这个方式去做，你只是把一个拥挤的地方移到另外一个拥挤的地方。
+经济学，它对问题的建模是不一样的。它起点是假定是一个整体的一个生态，每个人的输入
+都是另外一个人的输出，你要用经济学的方式来描述地图导航的问题，你就会去算一个Equilibrium，市场也是这样
+
+知识构成一个一个的生态。
+
+
+前百度内部Engineering Leadership：陆奇（现Y Combinator中国创始人），作为计算机科学博士及优秀的管理者，
+他提出的五点要求，对每一位百度工程师都适用。
+
+    “我们一定要有一个坚定不移的深刻的理念，相信整个世界终究是为技术所驱动的。”
+
+    “有没有其他人已经解决这个问题？然后你可以把你的时间放在更好的创新上。” 
+
+    “做什么事情一定要做最好，一定要是做业界最强的。”
+
+    “我把自己想象是一个软件、一个代码，今天的版本一定要比昨天版本好，明天的版本肯定会比今天好。”
+
+    “看到问题也不要去问别人，就把它Fix。”
+
+
+
+
+
+
+= 01 Believe in 技术 =
+
+  
+首先要相信技术，我刚才已经讲了，整个我们工业界，特别是像百度这样的公司，对技术坚定的、不动摇的信念特别重要。
+
+我也分享一下，盖茨提到微软公司的宗旨就是：写软件代表的是世界的将来。
+
+为什么？未来任何一个工业都会变成软件工业。盖茨是对的，因为任何工业任何行业自动化的程度会越来越高，最后你所处理的就是信息和知识。
+
+但现在软件的做法又往前提了一次，因为在人工智能时代，不光是写代码，你必须懂算法，懂硬件，懂数据，整个人工智能的开发过程有一个很大程度的提高，
+但是，技术，特别是我们这个工业所代表的技术一定是将来任何工业的前沿。
+
+所以我们一定要有一个坚定不移的深刻的理念，相信整个世界终究是为技术所驱动的。
+
+
+
+= 02 站在巨人的肩膀上做创新 =
+
+重复了？ 你的灯还亮着?
+
+我们观察一下，在美国硅谷、在中国，互联网创业公司也好，大型公司也好，大家的起点是越来越高的。为什么现在创新速度那么快？
+主要是起点高了。我们可以使用的代码模块，使用的服务的能力，都是大大的提升。
+
+在内部我想强调这一点，很多大公司包括微软在内，内部的Code都重做了无数遍。
+
+我现在的要求是，每一次你写一行新的代码，第一要做的，先想一想你这行代码值得不值得写，是不是有人已经做了同样的工作，
+可能做得比你还好一点。有没有其他人已经解决这个问题，然后你可以把你的时间放在更好的创新上。
+
+特别是大公司里面重复或者是几乎重复的Code实在太多，浪费太多的资源，对每个人的职业生涯都不是好事情。
+
+我再强调，在大公司内部，你写代码之前想一想，你这行代码要不要写，是不是别人已经有了，站在别人的肩膀上去做这件事情。
+
+
+
+= 03 追求Engineering Excellence =
+
+     
+我要另外强调的一点就是Engineering Excellence，工程的技术的卓越性和能力。
+
+任何市场上竞争就像打仗一样，就看你的部队体能、质量，每一个士兵他的训练的程度，和你给他使机关枪、坦克，还是什么样的武器。
+
+所以Engineering Excellence跟这个类比，我们要建的是一支世界上最强的部队，每一个士兵，每一个领军人，每个人的能力，
+他的训练都是超强的，然后我们给每个人提供的工具和武器都是一流的。
+
+所以Engineering Excellence是一个永无止境的、个人的、团队的，能力的追求和工具平台的创新，综合在一起可以给
+我们带来的长期的、核心的竞争力，为社会创造价值，最终的目的是给每个用户、每个企业、整个社会创造价值。
+
+我另外还要在这里强调的一点就是Relentless pursuit of excellence：永无止境的不断的持续的追求。
+
+我们要么不做，要做的事情一定做最好，这是我对大家的要求。数据库也好，做大平台也好，大数据也好，我们要做什么事情，
+我们一定要下决心，这是我对你们每个人的要求，做什么事情一定要做最好，一定要是做业界最强的。
+
+
+
+= 04 每天学习 =
+
+
+每天学习，可能是对每个人都是最最重要的。
+
+我今天分享一下，我自己怎么想我自己的。就很简单一个概念，我把自己想象是一个软件、一个代码，
+今天的版本一定要比昨天版本好，明天的版本肯定会比今天好，因为即使犯了错误，我里面有If statement，说如果见到这个错误，绝对不要再犯。
+
+英语，另外有一句说法就是Life is too short, don’t live the same day twice. 同样一天不要重活两次。
+每天都是不一样，每天为什么不一样，因为每天都变成最好，每天都变得更好。今天的版本一定要比昨天好，
+每个好的、杰出的工程师，杰出的技术领袖，一定要保持自己学习的能力，特别是学习的范围。
+
+在这上面我也稍微引申一下，做Computer science的，如果只学Computer science，不去学一些其他的行业，肯定不够。
+我举个例子，经济学必须要学。为什么这样讲？Computer science它有个很大的限制，他是假定你有输入以后有输出，
+这种解决问题的方式有它的好处，但有它的限制性。
+
+我给大家举个例子，地图导航，如果你纯粹用这个方式去做，你只是把一个拥挤的地方移到另外一个拥挤的地方。
+经济学，它对问题的建模是不一样的。它起点是假定是一个整体的一个生态，每个人的输入都是另外一个人的输出，
+你要用经济学的方式来描述地图导航的问题，你就会去算一个Equilibrium，市场也是这样。
+
+如果把深度学习真的要想彻底，必须把物理重学一遍，把生物学看一遍，再把进化论再看一遍。
+因为深度学习跟这些东西完全相关，自己肯定想不清楚，要彻底想清楚，必须学。
+
+另外，学产品，我以前跟所有的工程师都讲，如果不懂产品，你不可能成为一个最好的工程师。
+真正要做世界一流的工程师不光要懂产品，还要懂整个商业，懂生态。因为你的工作的责任，
+是能够看到将来，把技术展望到将来的需求，把平台、把开发流程、把你的团队为将来做准备。所以学习是非常非常重要的。
+
+
+
+= 05 Ownership =
+
+     
+最后是从我做起。
+
+我们公司有个非常大的使命，用科技让复杂的世界更简单。整个世界非常非常复杂，人其实所做的事情基本上都是Reduce entropy。
+
+因为从热力学第二定律来讲，世界是会变得越来越乱的，我们想做的事情就是把它变的更简单，让我们生活变得更美好。
+
+而且具体的，我们可以通过人工智能技术来做到唤醒万物，但是这一切是通过每一个人的一点一滴的行为累计起来，
+从我做起。还有Ownership，看到机会不需要问别人，有机会就去做，看到问题也不要去问别人，就把它Fix。
+
+把我们的使命、把我们的公司当成我们自己每个人的事业来做，我可以坦诚的给每个人讲，如果你把公司的使命，
+把公司的事业，当成你自己个人的事业，Own everything，你在职业生涯一定是走得最快。从我做起，从身边的每一件事情做起。
+
+Believe in 技术、站在巨人的肩膀上做创新、追求Engineering Excellenc
+** 穷病真没法治? [#B]                                                 :学术:
+:LOGBOOK:
+CLOCK: [2018-09-19 周三 02:40]--[2018-09-19 周三 02:51] =>  0:11
+:END:
+                         Added: [2018-09-19 周三 02:39]
+                         
+
+药贩子真的觉得穷病没法治？
+
+
+虽然很多人不想买假烟，假酒等，但为什么市场就会有那么多假玩意？因为大家缺钱？
+是的，正经生意不挣钱，只好作假的。
+
+那为什么有些人喜欢通过走私人渠道、走海外通道、走水货？因为便宜，自己缺钱！
+
+经济的到底最终都是平衡，为什么有那么多人没钱？因为很多钱流入一些人手中。
+
+怎么从这些人手中拿出来？ 抢、起义、偷、骗、坑、蒙，没有再生，只是交换，不平衡了
+就会有这种事情发生。
+
+
+穷病如何治？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+** 一个目标 [#B]                                                    :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-19 周三 22:23]--[2018-09-19 周三 22:24] =>  0:01
+:END:
+                         Added: [2018-09-19 周三 22:23]
+                         
+瞄准一个目标，纹丝不动，反复琢磨
+
+1. 目标goal
+2. 计划Plan, sketch, outline
+3. 分派任务 specify  or impletation(指定谁来做，自己做，别人做)
+4. 执行 do， perform
+5. 获得perceive 观察
+6. 解释interpret
+7. 比较compare
+** 对文字的敬畏 [#B]                                                :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-20 周四 19:05]--[2018-09-20 周四 19:05] =>  0:00
+CLOCK: [2018-09-20 周四 17:13]--[2018-09-20 周四 17:13] =>  0:00
+CLOCK: [2018-09-20 周四 15:09]--[2018-09-20 周四 16:40] =>  1:31
+CLOCK: [2018-09-20 周四 13:49]--[2018-09-20 周四 15:09] =>  1:20
+:END:
+                         Added: [2018-09-20 周四 13:49]
+                         
+文字生来得让人敬畏。搞了几年文字工作，特别觉得有道理。文字上得下功夫，
+因为这也能看到一个人对于工作的态度，以及对于他完成目标的决心。
+
+有些东西可以随意，但是写出来的白纸黑字最好不要随意。
+
+写出来的东西一定得仔细琢磨，这是老一辈科学家经常用到的，当然现在也是。
+
+因为敬畏，所以放慢了前进的脚步，坚定了批判性的思考（不断地反思、纠正)
+
+生而为人，应有所敬畏!懂得尊重文字，把握分寸，守住底线。
+
+敬畏虽有畏字，但不代表害怕、怯弱，而更加强调的是一种敬，尊敬，友好，对文字工作和个人的
+尊敬。
+
+What am I investigating?
+What am I doing?
+What am I feeling?
+What am I needing right now?
+Do I have a request of myself or someone else?
+
+
+Give yourself kindness & care ==  self-compassion
+Remind yourself pain is part of shared human experiment
+** thought of helping and thinking copy [#B]                        :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-20 周四 16:40]--[2018-09-20 周四 17:13] =>  0:33
+:END:
+                         Added: [2018-09-20 周四 16:39]
+                         
+But I shouldn’t let this get in my way(Fuck, get out of my way), since people don’t expect me to be those things.
+ (And if they do, that’s under their control, not mine.) Instead, I can focus on the fact that people are often 
+looking for a discussion of workflow options with some ideas, and that they’re going to translate those thoughts
+ into something applicable to their situation anyway.(Tranlate the thought in your brains to his brain)
+** Learn to think [#B]                                              :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-20 周四 17:13]--[2018-09-20 周四 19:05] =>  1:52
+:END:
+                         Added: [2018-09-20 周四 17:13]
+                         
+You know that feeling of struggling to learn something that everyone else seems to have an easy time with?
+ The one that makes you think, “Maybe this isn’t a good fit for me.” Or worse, “Maybe I’m not smart enough.”
+
+That one.
+
+Embrace it. Learn how to deal with it. This is the real hard work in a degree in computer science or IT or whatever.
+ The rest is just implementation.
+
+You see, there will always be more to learn. There will always be challenges to pick apart and overcome.
+ If you’re not running into them, you’re not pushing yourself enough. There will always be those moments when you think,
+ “How on earth do I even begin to learn how to solve this?”
+
+1. You aren’t learning a computer language or a platform or a system of abstract concepts.
+2. You are learning a way of thinking.
+3. You are learning how to break down a big challenge into smaller pieces.
+4. You are learning how to try different approaches to understand and solve each small part.
+5. You are learning to set aside your worries and fears so that you can focus. You are learning how to adapt,
+ even as changes come quicker and quicker.
+6. You are learning how to organize your thoughts. It just so happens that you’re organizing them in a way a computer can understand.
+
+What can help you build your confidence? Start by building a small base of things you know well.
+ Celebrate that. Expand through practice and curiosity. Ask for the help you need. If you don’t get it,
+ fight on anyway. All learning feels weird in the beginning. It only becomes natural through repetition.
+
+1. If you’re taking a course, learn what you have to learn, but leave yourself room to learn what you want to learn at your own pace.
+ You don’t have to learn everything the first time around. 
+2. If you know it takes you several tries to understand something, start before you take something up in class.
+That way, you’ll have better questions. Continue afterwards, too.
+ Computer science lessons build on each other, like the way mathematics lessons do.
+ They assume you understand the previous material. Practice and questions pay off.
+
+[Awesome person] There will always be people who have learned what you want to learn,
+ or who will pick up things faster than you can. Most of these people are awesome.
+ They know that your questions can help them learn even more,
+ and they’re happy to pay it forward because people helped them too.
+ Pay them back by writing about what you’ve learned and sharing that with them and others.
+ Other people who are also learning will find your questions and answers useful, too.
+ This is true whether you’re learning in class or on the Internet, so go ahead and share your journey.
+
+There will always be some people who haven’t quite figured out their own insecurities – 
+people who want to establish their position by putting you down.
+ You can learn how to recognize what they’re doing. That makes it easier to ignore them.
+ Don’t mind them if they try to make you feel bad for asking stupid questions.
+ It just means they’re missing out on opportunities to learn how to ask and learn how to learn.
+ Don’t partner with them. Look for people who help others up, not tear them down.
+
+It is not easy to wrap your mind around new topics or break down a complex unknown.
+ If you can get good enough at it, you may come to enjoy that excitement when a problem looks like it’s solvable.
+ You’ll learn how to tell if you’re going in roughly the right direction.
+ You’ll be able to celebrate even the tiniest progress. If you can do that, you’ll do fine.
+
+Besides, the real world is little like the classroom.
+ Even if you never get the hang of the artificial projects you do for education,
+ you may find that you like working with technology. Don’t count yourself out just yet!
+
+ 
+
+People don’t need more information. They need to figure out where to start.
+ For me, the value I provide in the Helpout is in the back-and-forth of a quick conversation that clarifies what people need.
+ That way, I can either point them to the right resources or give them some tips in case there are no such resources handy.
+ (And then I can build those!) It’s a little difficult to do with a group session, although maybe if I get better at Q&A,
+ I might be able to pull that off.
