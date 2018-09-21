@@ -255,6 +255,7 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
+(load "setup-autoinsert.el")
 ;(load "setupsbcl.el")
 (load "setup-js.el")
 (load "setup-eshell.el")

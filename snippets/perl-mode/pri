@@ -1,0 +1,4 @@
+# name: print (...) { ... }
+# key: pri
+# --
+print "${1:var}\n";

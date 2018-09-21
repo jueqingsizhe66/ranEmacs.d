@@ -2443,9 +2443,11 @@ looking for a discussion of workflow options with some ideas, and that they’re
  into something applicable to their situation anyway.(Tranlate the thought in your brains to his brain)
 ** Learn to think [#B]                                              :@NCEPU:
 :LOGBOOK:
+CLOCK: [2018-09-21 周五 02:39]--[2018-09-21 周五 02:40] =>  0:01
 CLOCK: [2018-09-20 周四 17:13]--[2018-09-20 周四 19:05] =>  1:52
 :END:
                          Added: [2018-09-20 周四 17:13]
+                         
                          
 You know that feeling of struggling to learn something that everyone else seems to have an easy time with?
  The one that makes you think, “Maybe this isn’t a good fit for me.” Or worse, “Maybe I’m not smart enough.”
@@ -2509,3 +2511,20 @@ People don’t need more information. They need to figure out where to start.
  That way, I can either point them to the right resources or give them some tips in case there are no such resources handy.
  (And then I can build those!) It’s a little difficult to do with a group session, although maybe if I get better at Q&A,
  I might be able to pull that off.
+** Emacs not a text-based tools [#B]                             :emacslisp:
+:LOGBOOK:
+CLOCK: [2018-09-21 周五 19:19]--[2018-09-21 周五 19:43] =>  0:24
+:END:
+                         Added: [2018-09-21 周五 19:19]
+                         
+There are few pieces of software as widely misunderstood as Emacs. Emacs
+is frequetyly advertised as a text editor, but please be clear on this:
+Emacs is not just a text editor.
+
+Emacs is a platform for developing end-user applications with a text-based core.
+The Emacs platform ships with a few built-in applications, such as: a calculator,
+a terminal shell, a fill manager, a merge tool, and yes , a text editor. You can
+extend it into the mail reading tools, music listening tools, movie playing tools,  also gtd tools.
+
+
+I started using Emacs a

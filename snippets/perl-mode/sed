@@ -1,0 +1,4 @@
+# name:  substitde  regex
+# key: is
+# --
+\$${1:var} =~ s/${2:*}/${3:*}/xm

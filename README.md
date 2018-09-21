@@ -3213,6 +3213,11 @@ load 'ruby-end.el'
  pip install ipython jedi flake8 importmagic autopep8 yapf
 ```
 
+<2018-09-21 19:29> 后来我知道[jedi][391]是一个静态分析器
+大家知道[SirVer/utisnips][388]是一个不错的python vim库，当然在当前咱们的emacs库中也是存在的，为什么？
+因为我们有[yasnippet][389], 所以能达到utisnips类似的效果。
+
+Vim中，可以使用[jedi-vim][390]替换python-mode,
 2. 安装emacs的插件
 
 配置下载仓库
@@ -7081,6 +7086,21 @@ org-ref设置
 
 ```
 
+### 148. Auto insert file header with suffix specified
+
+
+emacs已经提供了自动插入工具[AutoInsertMode][392],需要进行适当配置
+
+Auto insert file header with specified file suffix have been
+setted in the [setup_autoinsert.el][394], there are two different
+kinds of config style out there in the file, 
+
+1. yasnippet style and emacs
+2. expression evaluation style
+
+In addition, [Perl-mode yasnippet][393] have been injected in the current emacs config, which originates from
+the [WolfgangMehner Perl-support][395].
+
 
 
 
@@ -7477,3 +7497,11 @@ org-ref设置
 [385]: https://github.com/jkitchin/org-ref
 [386]: https://github.com/sachac/artbollocks-mode
 [387]: https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org#avoiding-weasel-words
+[388]: https://github.com/SirVer/ultisnips
+[389]: https://github.com/jueqingsizhe66/ranEmacs.d/tree/develop/snippets/python-mode
+[390]: https://github.com/davidhalter/jedi-vim/
+[391]: https://github.com/davidhalter/jedi
+[392]: https://www.emacswiki.org/emacs/AutoInsertMode
+[393]: https://github.com/jueqingsizhe66/ranEmacs.d/tree/develop/snippets/perl-mode
+[394]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/setup-autoinsert.el
+[395]: https://github.com/WolfgangMehner/vim-plugins

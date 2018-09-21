@@ -1,0 +1,4 @@
+# name:  transform the letter by leter
+# key: it
+# --
+\$${1:var} =~ tr/${2:*}/${3:*}/xm

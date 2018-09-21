@@ -1,0 +1,4 @@
+# name: scalar2 $ 
+# key: ida
+# --
+my $${1:scalar_name}=${2};

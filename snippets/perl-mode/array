@@ -1,0 +1,4 @@
+# name: array2 @
+# key: ia
+# --
+my @${1:array_name};

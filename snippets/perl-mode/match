@@ -1,0 +1,4 @@
+# name:  match  regex
+# key: im
+# --
+\$${1:var} =~ m/${2:*}/xm

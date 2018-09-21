@@ -1,0 +1,4 @@
+# name: scalar1 $ 
+# key: id
+# --
+my $${1:scalar_name};

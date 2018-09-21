@@ -1,0 +1,15 @@
+# name: open read (...) { ... }
+# key: ii
+# --
+my \$${1:what}_file_name = '${2:Input FileName}';		# input file name
+
+open  my \$$1, '<', $hello_file_name
+    or die  "$0 : failed to open  input file ' \$$1_file_name' : $!\n";
+
+${3:Do Something Here}
+
+close  $$1
+    or warn "$0 : failed to close input file '\$$1_file_name' : $!\n";
+
+
+

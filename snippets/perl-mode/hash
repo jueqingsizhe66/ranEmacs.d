@@ -1,0 +1,4 @@
+# name: hash1 %
+# key: ih
+# --
+my %${1:hash_name};
