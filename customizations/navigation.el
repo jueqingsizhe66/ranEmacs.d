@@ -85,6 +85,13 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
+;; <2018-09-22 16:49> company with emacs-wgrep  https://github.com/mhayashi1120/Emacs-wgrep
+;; to edit buffer, then apply buffer to the file
+(require 'wgrep)
+(setq wgrep-auto-save-buffer t)
+;; You can change the default key binding to switch to wgrep.
+(setq wgrep-enable-key "r")
+(setq wgrep-change-readonly-file t)
 ;;<2018-08-18 21:52>
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)

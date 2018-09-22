@@ -226,12 +226,14 @@
 (add-to-list 'load-path "~/.emacs.d/customizations")
 ;;for magnars folders
 (add-to-list 'load-path "~/.emacs.d/customizations/magnars/")
+(add-to-list 'load-path "~/.emacs.d/customizations/color-rg/")
 ;(add-to-list 'load-path "~/.emacs.d/customizations/alphapapa/")
 ;;(set-fontset-font t 'han (font-spec :family "Microsoft Yahei" :size 16)
 (load "font-lock+.el")
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
+(load "color-rg.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
@@ -297,6 +299,31 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-insert (quote other))
+ '(auto-insert-alist
+   (quote
+    ((("\\.\\([Hh]\\|hh\\|hpp\\)\\'" . "C / C++ header")
+      .
+      ["template.h" c++-mode my/autoinsert-yas-expand])
+     (("\\.sh\\'" . "Shell script")
+      .
+      ["sh-template.sh" my/autoinsert-yas-expand])
+     (("\\.el\\'" . "Emacs Lisp")
+      .
+      ["template.el" my/autoinsert-yas-expand])
+     (("\\.pm\\'" . "Perl module")
+      .
+      ["template.pm" my/autoinsert-yas-expand])
+     (("\\.py\\'" . "Python script")
+      .
+      ["py-template.py" my/autoinsert-yas-expand])
+     (("[mM]akefile\\'" . "Makefile")
+      .
+      ["cmake-template" my/autoinsert-yas-expand])
+     (("\\.tex\\'" . "TeX/LaTeX")
+      .
+      ["template.tex" my/autoinsert-yas-expand]))))
+ '(auto-insert-directory "~/.emacs.d/template/")
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(canlock-password "9d4c00813f66a64dfd7ed230bf179494796588e6")
  '(coffee-tab-width 2)
@@ -328,7 +355,7 @@
     ("~/.emacs.d/GTD/orgBoss/Note/notes.org" "~/.emacs.d/GTD/orgBoss/newgtd.org" "~/.emacs.d/GTD/orgBoss/Book/book.org" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org" "~/.emacs.d/GTD/orgBoss/Financial/finances.org" "~/.emacs.d/GTD/orgBoss/Film/film.org" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org" "~/.emacs.d/GTD/orgBoss/Someday/someday.org" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "~/.emacs.d/GTD/orgBoss/writing.org" "~/.emacs.d/GTD/orgBoss/Habit/habits.org" "~/.emacs.d/GTD/phd1.org" "~/.emacs.d/GTD/Dissertation.org" "~/.emacs.d/GTD/thesis-proposal.org")))
  '(package-selected-packages
    (quote
-    (artbollocks-mode plantuml-mode beginend link-hint helm-eww log4j-mode org-ref language-detection eww-lnum persp-projectile perspective clj-refactor wrap-region howm deft ace-link 4clojure evil-vimish-fold origami scribble-mode ac-geiser geiser srcery-theme ascii-art-to-unicode visual-ascii-mode org-brain suggest counsel-world-clock ivy-yasnippet helpful abyss-theme ledger-mode flycheck-ledger org-agenda-property org-link-minor-mode org-dashboard dashboard page-break-lines writeroom-mode writegood-mode poporg org-mru-clock epresent xpm window-numbering evil-visualstar git-timemachine git-gutter org-wild-notifier dumb-diff fringe-current-line ag highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy flycheck-clojure counsel-projectile spacemacs-theme w3m use-package simplezen zencoding-mode move-text highlight-escape-sequences dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+    (wgrep-ag wgrep-ack wgrep artbollocks-mode plantuml-mode beginend link-hint helm-eww log4j-mode org-ref language-detection eww-lnum persp-projectile perspective clj-refactor wrap-region howm deft ace-link 4clojure evil-vimish-fold origami scribble-mode ac-geiser geiser srcery-theme ascii-art-to-unicode visual-ascii-mode org-brain suggest counsel-world-clock ivy-yasnippet helpful abyss-theme ledger-mode flycheck-ledger org-agenda-property org-link-minor-mode org-dashboard dashboard page-break-lines writeroom-mode writegood-mode poporg org-mru-clock epresent xpm window-numbering evil-visualstar git-timemachine git-gutter org-wild-notifier dumb-diff fringe-current-line ag highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy flycheck-clojure counsel-projectile spacemacs-theme w3m use-package simplezen zencoding-mode move-text highlight-escape-sequences dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(smtpmail-smtp-server "smtp.163.com")
@@ -437,51 +464,55 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;https://www.emacswiki.org/emacs/PrettyGreek
- (defun pretty-greek ()
-  (let ((greek '("alpha" "beta" "gamma" "delta" "epsilon" "zeta" "eta" "theta" "iota" "kappa" "lambda" "mu" "nu" "xi" "omicron" "pi" "rho" "sigma_final" "sigma" "tau" "upsilon" "phi" "chi" "psi" "omega")))
-    (loop for word in greek
-          for code = 97 then (+ 1 code)
-          do  (let ((greek-char (make-char 'greek-iso8859-7 code))) 
-                (font-lock-add-keywords nil
-                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[a-zA-Z]")
-                                           (0 (progn (decompose-region (match-beginning 2) (match-end 2))
-                                                     nil)))))
-                (font-lock-add-keywords nil 
-                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[^a-zA-Z]")
-                                           (0 (progn (compose-region (match-beginning 2) (match-end 2)
-                                                                     ,greek-char)
-                                                     nil)))))))))  (add-hook 'lisp-mode-hook 'pretty-greek)
-  (add-hook 'emacs-lisp-mode-hook 'pretty-greek)
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; (defun pretty-greek ()                                                                                                 ;;
+ ;;  (let ((greek '("alpha" "beta" "gamma" "delta" "epsilon" "zeta" "eta" "theta" "iota" "kappa" "lambda" "mu" "nu" "xi" "omicron" "pi" "rho" "sigma_final" "sigma" "tau" "upsilon" "phi" "chi" "psi" "omega"))) ;;
+ ;;    (loop for word in greek                                                                                             ;;
+ ;;          for code = 97 then (+ 1 code)                                                                                 ;;
+ ;;          do  (let ((greek-char (make-char 'greek-iso8859-7 code)))                                                     ;;
+ ;;                (font-lock-add-keywords nil                                                                             ;;
+ ;;                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[a-zA-Z]")        ;;
+ ;;                                           (0 (progn (decompose-region (match-beginning 2) (match-end 2))               ;;
+ ;;                                                     nil)))))                                                           ;;
+ ;;                (font-lock-add-keywords nil                                                                             ;;
+ ;;                                        `((,(concatenate 'string "\\(^\\|[^a-zA-Z0-9]\\)\\(" word "\\)[^a-zA-Z]")       ;;
+ ;;                                           (0 (progn (compose-region (match-beginning 2) (match-end 2)                  ;;
+ ;;                                                                     ,greek-char)                                       ;;
+ ;;                                                     nil)))))))))  (add-hook 'lisp-mode-hook 'pretty-greek)             ;;
+ ;;  (add-hook 'emacs-lisp-mode-hook 'pretty-greek)                                                                        ;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 设置编辑环境
+(set-language-environment 'utf-8)
 
 
-(set-language-environment "utf-8")
+
+                                        ;(set-language-environment "Chinese-GB")
+
+                                        ;(set-language-environment-charset "utf-8")
+                                        ;(set-language-environment-coding-systems "utf-8")
 
 
-;(set-language-environment "Chinese-GB")
+  
 
-;(set-language-environment-charset "utf-8")
-;(set-language-environment-coding-systems "utf-8")
-
-
- 
-
-(global-set-key (kbd "C-x C-e") 'eval-last-sexp)
-; (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ; '(org-level-1 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.75))))
- ; '(org-level-2 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.5))))
- ; '(org-level-3 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.25))))
- ; '(org-level-4 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.1))))
- ; '(org-level-5 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
- ; '(org-level-6 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
- ; '(org-level-7 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
- ; '(org-level-8 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro")))))
+  (global-set-key (kbd "C-x C-e") 'eval-last-sexp)
+                                        ; (custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+                                        ; '(org-level-1 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.75))))
+                                        ; '(org-level-2 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.5))))
+                                        ; '(org-level-3 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.25))))
+                                        ; '(org-level-4 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro" :height 1.1))))
+                                        ; '(org-level-5 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
+                                        ; '(org-level-6 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
+                                        ; '(org-level-7 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
+                                        ; '(org-level-8 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro")))))
 
 
-(toggle-truncate-lines 1)
+  (toggle-truncate-lines 1)
+  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -499,4 +530,4 @@
  '(org-level-7 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro"))))
  '(org-level-8 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro")))))
 
-(load "setup-eww.el")
+  (load "setup-eww.el")

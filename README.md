@@ -1,4 +1,4 @@
-# 主要目的：clojure learning
+jjjjjj# 主要目的：clojure learning
 次要目的: emacs learning(org-mode)
 
 能为他人创造点价值，那是最好的feedback([故事编程story programming][300])
@@ -3647,8 +3647,11 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 
 `C-c p p ` 切换项目
 
-`C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中（支持中文，稍微等一小会），并安装了`M-x package-install ag`文件。
+`C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中（支持中文， 不需要额外添加到path目录），并安装了`M-x package-install ag`文件。
 <2018-06-14 15:57> 确认支持中文,捡到宝的感觉,难道是更新的缘故!
+
+<2018-09-22 17:22>可否替换为rg.exe，据说比ag快点，现在库中也集成了[color-rg][396] 见标题149.
+安装`M-x package-install projectile-ripgrep`, 就可以使用`C-c p s r`
 
 `C-c k`也可以搜索但是不支持中文
 得经常看看[Counsel-projectile文档][191]
@@ -3680,6 +3683,7 @@ don't use stable!
 ### 93. ag  or rg  or pt
 
 [dumb-jump][193] with [ag][195] or [rg][192]
+
 
 ag只要添加到path路径即可【windows系统】
 
@@ -7101,6 +7105,15 @@ kinds of config style out there in the file,
 In addition, [Perl-mode yasnippet][393] have been injected in the current emacs config, which originates from
 the [WolfgangMehner Perl-support][395].
 
+### 149. color-rg代码重构利器
+
+[color-rg][396]源自作者 [manateelazycat][398]在emacs-china.org中的讨论, 支持二次过滤和关键词跳转。
+该作者实现了所有 [color-moccur.el][400]以及对应的[moccur-extendsion.el][401], 集成与color-rg中。
+
+早先有人提出的方案是基于[ag][397]和[wgrep][399]
+
+但是上面两种方式都是和evil-mode冲突的，进入wgrep或者color-rg事先得关掉`M-x evil-mode`.
+
 
 
 
@@ -7505,3 +7518,9 @@ the [WolfgangMehner Perl-support][395].
 [393]: https://github.com/jueqingsizhe66/ranEmacs.d/tree/develop/snippets/perl-mode
 [394]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/setup-autoinsert.el
 [395]: https://github.com/WolfgangMehner/vim-plugins
+[396]: https://github.com/manateelazycat/color-rg
+[397]: https://github.com/Wilfred/ag.el
+[398]: https://emacs-china.org/t/topic/6313/61
+[399]: https://github.com/mhayashi1120/Emacs-wgrep
+[400]: https://www.emacswiki.org/emacs/color-moccur.el
+[401]: https://www.emacswiki.org/emacs/moccur-extension.el

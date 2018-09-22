@@ -2528,3 +2528,162 @@ extend it into the mail reading tools, music listening tools, movie playing tool
 
 
 I started using Emacs a
+ 
+
+
+** 2018蜜柚 [#B]                                                    :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-22 周六 15:19]--[2018-09-22 周六 15:48] =>  0:29
+:END:
+                         Added: [2018-09-22 周六 15:19]
+                         
+                         
+| 地址                                                     | 姓名       |        电话 | 斤数(斤) |
+|----------------------------------------------------------+------------+-------------+----------|
+| 华电                                                     | 叶昭良     |             |      120 |
+| 吉林省长春市高新区恒盛豪庭(创意路南200米)13栋104恒盛超市 | 郭淑英     | 15044044364 |      100 |
+| 北京市大兴区黄村镇 桂村 荣庆物流                         | 肖霞       | 18911012938 |       60 |
+| 华电                                                     | 祝健       |             |       30 |
+| 华电                                                     | 张仪       |             |       20 |
+| 唐山市路北区果园乡袁家庄卫东超市                         | 武家大闺女 | 13803783677 |       20 |
+|                                                          |            |             |          |
+|----------------------------------------------------------+------------+-------------+----------|
+| 总计                                                     |            |             |      350 |
+#+TBLfm: @>$4=vsum(@2..@-1);
+
+
+
+邵振州(华电)： 茶叶，熟茶和绿茶各一斤,不包装
+** 计算机程序技术 [#B]                                            :@Company:
+:LOGBOOK:
+CLOCK: [2018-09-22 周六 16:11]--[2018-09-22 周六 17:01] =>  0:50
+:END:
+                         Added: [2018-09-22 周六 16:11]
+                         
+                         
+                         
+第一步： 读COSMaC ELF http://www.cosmacelf.com/publications/books/short-course-in-programming.html 
+      最好自已试着实現它的 emulator，以了解计算机原理和汇编
+第二步: 再把 http://www.cs.utexas.edu/users/boyer/acl.pdf (400页)和一些papers http://www.cs.utexas.edu/users/moore/publications/acl2-papers.html#Books
+第三步: 看看The Scientific Computation System http://www.axiom-developer.org/axiom-website/books.html 主要是源代码 
+ 并学会它们的用法，以了解逻辑和数学，再开始看第一卷
+相比之下，Maxima (Axiom 也是用 Common Lisp 写的 CAS，但实际上技術含量远高于 Maxima)，PlantUML，Emacs Lisp 涉及的內容太 trivial 了
+
+The art of computer programming(TAOCP)一直在更新
+
+https://www-cs-faculty.stanford.edu/~knuth/taocp.html
+
+量子计算的博文，和现在的编程技术貌似有很大的区别
+
+Computer-Aided Reasoning 5 是 A Computational Logic 的续作，后者并非是 ACL2 而是其旧版本，
+但大部分通用而且是 Public Domain 的，前者并非免費且定价挺高(不過 Appendices 可以免費看，是个简要使用说明，还比較有用)，
+是不是要看就看个人意愿了。
+
+http://www.cs.utexas.edu/users/moore/acl2/current/combined-manual/?topic=ACL2____BOOKS-CERTIFICATION
+真要說的話 ACL2 超过了 TAOCP 的內容，但我也只是指望你能过一遍，这樣的好处在于：
+
+看到 TAOCP 中偏向数学和逻辑的部分不会立马懵逼。
+不会再产生「学会这个有什麼用」的问題。能解決几亿美圓问題的工具会沒用？
+TAOCP 中的一些习題用 ACL2 做可以减少心智负担，也就是說你知道 ACL2 怎么工作，然後能用 ACL2 证明就代表你会做这个证明，
+而不用亲自去做证明，which 对习慣写代碼的人很伤。
+
+
+PVS 和 HOL是Higher Order Logic,  ACL2 是 first class logic。
+Higher Order Logic 通常涉及 type theory，建议深入学习 Haskell 或 Standard ML 或 Ocaml 中一個再去了解。
+Knuth 的书并沒有涉及 Higher Order Logic，而且使用 high order logic 的 proof assistant 自动化程度并不高，总之对于看 TAOCP 沒有太多帮助。
+
+
+
+1. TeX 是一个偏向于美学的工具，能从中受益的基本是字体设计和排版方面的从业者。TeX 宏语言也算不上多好的编程语言，
+   甚至可以当作编程语言设计和软件项目管理的反面教材。
+2. LaTeX 只是一个封装，就算熟练使用它也不见得需要对 TeX 有多少理解，Don Knuth 写了说明书 The TeXbook，
+然而同上条所说，这本书讲的完全是排版上的美学，和符号更是完全不沾边
+当然，花点时间学会基本的使用还是值得的。反正就是想学就学，不需要什么理由，实际上写几份 paper 基本就熟悉了
+
+到今天我认为全世界顶级 Emacs 黑客中, 日本开发者的数量和顶级程度最恐怖.
+IRC 里面有很多和 RMS 同样时代的日本 emacser.
+包括当年和我一起开发 anything 的 rubkitch 也是牛逼的不行了, 用 600x480 的分辨率屏幕码代码.
+就freenode里面的#emacs频道，有一些六十多岁的emacs开发者，简直牛逼的不行了
+
+
+
+这种重构主要对语言支持比较好的情况, 比如Java, 非常成熟和安全. 但是对于那些脚本语言, 很难保证重构的正确性.
+
+IDE 的 rename refactor 主要是对变量的重构比较方便, 有时候会进行一些代码级别复杂API重构,IDE就很难做到.
+
+举个例子: 在项目中找到匹配某个正则表达式的行并进行 API 重新设计:
+
+1. color-moccur.el 中进行正则表达式匹配, 找到整个项目中所有匹配的行, 而不仅仅只是一个变量
+2. 在 moccur buffer 中按 r 进入编辑模式
+3. 然后在 moccur buffer 中用 multiple-cursor.el 进行批量匹配编辑, 多光标改 API
+4. 最后 Ctrl + C Ctrl + C 重构所有 API
+这种级别的操作时, IDE 那种只是单纯的改变量和函数名称的动作就做不了了.
+color-moccur。把相同文件名的聚合在一起，文件名单独一行，比较方便
+
+
+现在IDE都做的不错, 只是不喜欢点鼠标, 点一下, 我就忍不住卸载了.
+我装 IDE 的目的就是定期去模仿一下他们优秀的插件.
+商业世界, 唯快不破.
+IDE世界都是面向鼠标快速出产品的, 没人像 Emacs/VIM 这些黑客慢慢磨细节.
+
+主要是要基于抽象语法树来做这些基础设施, Emacs底层是正则表达式, 这种东西在复杂场景一定都不靠谱.
+
+可以使用ag.el, 搜索文件, 然后生成一个类似occur的buffer, 在里面开启wgrep, 就可以同样的操作了, 一直在用.
+
+（很多都改用rg)ag.el: https://github.com/Wilfred/ag.el 3 wgrep: https://github.com/mhayashi1120/Emacs-wgrep 8
+
+跟你说的操作方式很类似, 不过这两个有人维护.
+** rg-color.el [#B]                                                 :@NCEPU:
+:LOGBOOK:
+:END:
+                         Added: [2018-09-22 周六 17:01]
+                         
+https://github.com/manateelazycat/color-rg
+
+https://github.com/dajva/rg.el    https://github.com/mhayashi1120/Emacs-wgrep
+我只说差异吧:
+
+rg.el 一旦改成分组模式显示分组, wgrep 就废了, color-rg.el 自己就包含了 rg.el 和 wgrep.el 功能, 不需要额外安装 wgrep.el
+默认尽量少问问题, 快速搜索, 搜索后觉得需要缩小范围再动态过滤不想看的文件类型
+默认智能的抓取当前光标处的单词, 而不仅仅是 symbol , 比如 CSS 的 class name, .foo 和 #foo 自动回转换成 foo 再搜索 (当然搜索之前都可以调), 避免大部分情况, 要各种删除 . 或者 # 才能搜索
+如果正则表达式搜索错误以后, 会智能探测, 并用 literal 模式重新刷一遍 (这个 rg.el 没有)
+如果搜索出来的东西需要全部从文件中删除, 直接 C-c C-D 行了, 具体的更多贴心命令看上面的 keymap 吧.
+删除的地方是先标记, 最后 C-c C-c 再删除 filter 是过滤显示结果, 不是删除 替换操作就是 query-replace 操作, 当然也有那种全部一键替换的操作.
+
+color-rg.el 的功能非常复杂, 我建议你尝试一下, 不喜欢就不用. 这样一个一个的问, 也没有直观的认识.
+
+
+rg.el比ag功能还是多不少，看看顶部的几个toggles，运行时可以随时切换，不必全部从来一次。
+ 几个比较好用的命令：rg, rg-dwim, rg-project, rg-literal。 默认键绑定c-c s
+ 
+在lsp(分层服务提供商)还没有成熟的时候，这种简单的重构工具还是挺常用的，经常用，用的ag.el，调用的命令是rg。
+它的搜索结果buffer是基于compilation-mode，不太好定制，因为不是专门的major-mode，功能有一些局限，
+比如不能记住搜索的关键词，不能在搜索结果里的关键词之间跳转，不能二次过滤和手动删除不想要的结果项。
+
+二次过滤和手动删除，这个功能比较需要，喜欢的体验是类似dired的效果，可以先标记，再删除。
+标记好之后方便检查一遍有没有标记错误，避免删错，如果能只显示标记项，暂时隐藏其他，这样更方便检查。还可以用搜索的方式来标记，也类似dired
+
+
+https://www.emacswiki.org/emacs/color-moccur.el 19 color-moccur.el 的作用是搜索指定的目录, 然后按匹配的文件进行匹配行导航
+
+如果要重构文档, 直接按 r 进入编辑模式 (类似 wdired 的感觉), 在 moccur buffer 编辑完成以后, 按 Ctrl + C Ctrl + C 就可以改动到实际的文件中.
+
+十年前从一个日本人的 ftp 里面翻出来的时候都把我惊呆了, 这个插件是我这么多年开发必用的超级大杀器.
+
+然后配合我写的 https://www.emacswiki.org/emacs/moccur-extension.el 15 , 各种方便.
+
+给一张霸气截图, 不要小看截图, 按照我上面的方法操作, 你们会震惊的
+** languge server protocol(LSP) [#B]                             :emacslisp:
+:LOGBOOK:
+CLOCK: [2018-09-22 周六 23:20]--[2018-09-22 周六 23:22] =>  0:02
+:END:
+                         Added: [2018-09-22 周六 23:19]
+                         
+LSP-mode: Emacs client/library for the Language Server Protocol
+https://github.com/emacs-lsp/lsp-mode 
+
+lsp-mode provides a handful of hooks that can be used to extend and
+ configure the behaviour of language servers. A full list of hooks is available in the API documentation.
+ 
+
+https://github.com/joaotavora/eglot

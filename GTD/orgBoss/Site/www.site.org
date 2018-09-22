@@ -538,3 +538,5 @@ https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
 https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Tips
 
 宏代表着二次解析，从你的字符串提取出可运行的lisp表达式
+** chez scheme库管理器
+ http://ravensc.com/?tdsourcetag=s_pctim_aiomsg

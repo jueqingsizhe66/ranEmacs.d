@@ -45,9 +45,9 @@
  (position . 56775))
 ("org-capture-last-stored"
  (filename . "~/.emacs.d/GTD/orgBoss/Note/notes.org")
- (front-context-string . "** Emacs not a t")
- (rear-context-string . " pull that off.\n")
- (position . 83183))
+ (front-context-string . "** languge serve")
+ (rear-context-string . "上面的方法操作, 你们会震惊的\n")
+ (position . 89747))
 #1=(#("org-remember-last-stored" 0 24
       (bmkp-full-record #1#))
     (annotation)

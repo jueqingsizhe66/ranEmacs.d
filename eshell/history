@@ -86,3 +86,20 @@ cd ..
 ls
 ledger -f test.ledger reg
 ledger -f test.ledger bal
+ls
+cd ..
+ls
+cd e:
+ls
+rg -i "color-rg" .
+rg -i --column "color-rg" .
+rg -i --vimgrep --column "color-rg" .
+rg -i --smartcase --column "color-rg" .
+rg -i --smart-case --column "color-rg" .
+rg -i --smart-case --column --color=always "color-rg" .
+rg -i --smart-case --column --color=always -e "color-rg" .
+rg -i --smart-case --column --color=always -e "mapconcat" .
+rg -i --crlf --smart-case --column --color=always -e "mapconcat" .
+rg -i --crlf --smart-case --column --color=always --no-filename -e "mapconcat" .
+rg -i --crlf --smart-case --column --color=always --no-heading -e "mapconcat" .
+rg -i --crlf --smart-case --column --color=always --heading -e "mapconcat" .
