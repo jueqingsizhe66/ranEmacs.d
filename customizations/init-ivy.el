@@ -164,20 +164,15 @@
     :init (counsel-projectile-mode 1))
 
   ;; Stylesheet-selector-aware swiper
-  (use-package counsel-css
-    :bind (:map counsel-mode-map
-                ("C-c c c" . counsel-css))
-    :hook (css-mode . counsel-css-imenu-setup))
-
   ;; Display world clock using Ivy
   (use-package counsel-world-clock
     :bind (:map counsel-mode-map
-                ("C-c c k" . counsel-world-clock)))
+                ("C-c k" . counsel-world-clock)))
 
   ;; Tramp ivy interface
   (use-package counsel-tramp
     :bind (:map counsel-mode-map
-                ("C-c c v" . counsel-tramp)))
+                ("C-c v" . counsel-tramp)))
 
   ;; Improve `counsel-ag', also impact `counsel-rg', `counsel-pt'.
   ;; search the selection or current symbol by default

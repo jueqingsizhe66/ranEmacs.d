@@ -7151,6 +7151,21 @@ rg -i --column --color=always --smart-case -e "color-rg" c:/Users/yzl/AppData/Ro
 
 还是有点问题,特别是Ret。
 
+### 150. linum-mode 存在卡顿现象
+
+以往有相关链接说明:
+
+1. [只让编程语言具备行号: prog-mode集成linum-mode][408]
+`(add-hook 'prog-mode-hook 'linum-mode)`
+linum 大文件莫名卡死
+2. [chenbin more than 300000 lines][409]
+
+3. [Emacs Wiki Line Numbers][410]
+
+
+据说[nlinum-mode更加快][413] because of its use of [jit-lock][412], [nlinum-relative][411], which is based on the nlinum-mode, only redisplays line numbers(看着花眼，于是不用了) when idle which is much more smoother especially with big files.
+
+nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加大的效果。
 
 
 ----------
@@ -7566,3 +7581,9 @@ rg -i --column --color=always --smart-case -e "color-rg" c:/Users/yzl/AppData/Ro
 [405]: https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
 [406]: https://github.com/seagle0128/.emacs.d
 [407]: https://github.com/mhayashi1120/Emacs-wgrep/issues/36
+[408]: https://emacs-china.org/t/emacs/6975
+[409]: https://github.com/redguardtoo/emacs.d/issues/178
+[410]: https://www.emacswiki.org/emacs/LineNumbers#toc1
+[411]: https://github.com/CodeFalling/nlinum-relative
+[412]: https://github.com/jwiegley/emacs-release/blob/master/lisp/jit-lock.el
+[413]: https://elpa.gnu.org/packages/nlinum.html
