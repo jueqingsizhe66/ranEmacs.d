@@ -12,3 +12,4 @@ server/*
 cider-history
 projectile-bookmarks.eld
 *.pdf
+url/*
