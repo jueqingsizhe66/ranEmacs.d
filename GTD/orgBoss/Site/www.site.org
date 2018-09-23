@@ -532,6 +532,8 @@ https://cjohansen.no/an-introduction-to-elisp/
 
 
 http://joelmccracken.github.io/entries/emacs-lisp-for-hackers-part-1-lisp-essentials/
+
+https://www.emacswiki.org/emacs
 Elisp高级教程
 https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
 

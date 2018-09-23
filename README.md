@@ -7176,6 +7176,7 @@ nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加
 
 快捷键`C-c y` 打开一个新的窗口，`C-c Y `直接一个右键弹出的效果(很棒!)
 
+![youdao][416]
 
 
 ----------
@@ -7599,3 +7600,4 @@ nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加
 [413]: https://elpa.gnu.org/packages/nlinum.html
 [414]: https://github.com/xuchunyang/youdao-dictionary.el
 [415]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/init-utils.el
+[416]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/youdao.png

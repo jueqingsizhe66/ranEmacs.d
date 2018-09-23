@@ -2529,7 +2529,6 @@ extend it into the mail reading tools, music listening tools, movie playing tool
 
 I started using Emacs a
  
-https://www.emacswiki.org/emacs
 
 ** 2018蜜柚 [#B]                                                    :@NCEPU:
 :LOGBOOK:
@@ -2670,7 +2669,7 @@ https://www.emacswiki.org/emacs/color-moccur.el 19 color-moccur.el 的作用是�
 
 十年前从一个日本人的 ftp 里面翻出来的时候都把我惊呆了, 这个插件是我这么多年开发必用的超级大杀器.
 
-然后配合我写的 https://www.emacswiki.org/emacs/moccur-extension.el 15 , 各种方便.
+然后配合我写的 https://www.emacswiki.org/emacs/moccur-extension.el (已废弃，不用) 各种方便.
 
 给一张霸气截图, 不要小看截图, 按照我上面的方法操作, 你们会震惊的
 ** languge server protocol(LSP) [#B]                             :emacslisp:
