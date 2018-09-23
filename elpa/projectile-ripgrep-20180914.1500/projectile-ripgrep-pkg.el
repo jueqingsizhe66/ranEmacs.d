@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "projectile-ripgrep" "20180914.1500" "Run ripgrep with Projectile" '((ripgrep "0.3.0") (projectile "0.14.0")) :commit "93eca9138f6d6eea1af92f476c797ce19fa573d9" :keywords '("ripgrep" "projectile") :authors '(("Nicolas Lamirault" . "nicolas.lamirault@gmail.com")) :maintainer '("Nicolas Lamirault" . "nicolas.lamirault@gmail.com") :url "https://github.com/nlamirault/ripgrep.el")

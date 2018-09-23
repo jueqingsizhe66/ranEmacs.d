@@ -223,7 +223,7 @@
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
-(add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path "~/.emacs.d/customizations/")
 ;;for magnars folders
 (add-to-list 'load-path "~/.emacs.d/customizations/magnars/")
 (add-to-list 'load-path "~/.emacs.d/customizations/color-rg/")
@@ -355,7 +355,7 @@
     ("~/.emacs.d/GTD/orgBoss/Note/notes.org" "~/.emacs.d/GTD/orgBoss/newgtd.org" "~/.emacs.d/GTD/orgBoss/Book/book.org" "~/.emacs.d/GTD/orgBoss/Clipboard/clipboard.org" "~/.emacs.d/GTD/orgBoss/DailyReview/daily.org" "~/.emacs.d/GTD/orgBoss/Financial/finances.org" "~/.emacs.d/GTD/orgBoss/Film/film.org" "~/.emacs.d/GTD/orgBoss/IDEA/idea.org" "~/.emacs.d/GTD/orgBoss/Journal/journal.org" "~/.emacs.d/GTD/orgBoss/Private/privnotes.org" "~/.emacs.d/GTD/orgBoss/Someday/someday.org" "~/.emacs.d/GTD/orgBoss/Vocab/vocab.org" "~/.emacs.d/GTD/orgBoss/Site/www.site.org" "~/.emacs.d/GTD/orgBoss/writing.org" "~/.emacs.d/GTD/orgBoss/Habit/habits.org" "~/.emacs.d/GTD/phd1.org" "~/.emacs.d/GTD/Dissertation.org" "~/.emacs.d/GTD/thesis-proposal.org")))
  '(package-selected-packages
    (quote
-    (wgrep-ag wgrep-ack wgrep artbollocks-mode plantuml-mode beginend link-hint helm-eww log4j-mode org-ref language-detection eww-lnum persp-projectile perspective clj-refactor wrap-region howm deft ace-link 4clojure evil-vimish-fold origami scribble-mode ac-geiser geiser srcery-theme ascii-art-to-unicode visual-ascii-mode org-brain suggest counsel-world-clock ivy-yasnippet helpful abyss-theme ledger-mode flycheck-ledger org-agenda-property org-link-minor-mode org-dashboard dashboard page-break-lines writeroom-mode writegood-mode poporg org-mru-clock epresent xpm window-numbering evil-visualstar git-timemachine git-gutter org-wild-notifier dumb-diff fringe-current-line ag highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy flycheck-clojure counsel-projectile spacemacs-theme w3m use-package simplezen zencoding-mode move-text highlight-escape-sequences dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
+    (rg ivy-xref flx ivy-bibtex projectile-ripgrep projectile-rails ripgrep artbollocks-mode plantuml-mode beginend link-hint helm-eww log4j-mode org-ref language-detection eww-lnum persp-projectile perspective clj-refactor wrap-region howm deft ace-link 4clojure evil-vimish-fold origami scribble-mode ac-geiser geiser srcery-theme ascii-art-to-unicode visual-ascii-mode org-brain suggest counsel-world-clock ivy-yasnippet helpful abyss-theme ledger-mode flycheck-ledger org-agenda-property org-link-minor-mode org-dashboard dashboard page-break-lines writeroom-mode writegood-mode poporg org-mru-clock epresent xpm window-numbering evil-visualstar git-timemachine git-gutter org-wild-notifier dumb-diff fringe-current-line ag highlight-indentation elpy ruby-end ruby-tools ruby-refactor cljr-helm org-bookmark-heading nyan-mode org-alert org-mind-map spaceline dired-narrow dired-rainbow dired-icon dired-subtree emms sotclojure sotlisp ox-reveal pretty-symbols org-journal org-autolist org-babel-eval-in-repl org-bullets request-deferred fortpy flycheck-clojure counsel-projectile spacemacs-theme w3m use-package simplezen zencoding-mode move-text highlight-escape-sequences dired-details+ dired+ ace-jump-mode paredit-menu iy-go-to-char key-chord string-edit flycheck-perl6 company-anaconda company cal-china-x image+ 2048-game 0xc ivy-rich all-the-icons-ivy all-the-icons-dired ivy-dired-history ivy smart-mode-line mo-git-blame evil-surround markdown-mode+ scheme-complete chicken-scheme 0blayout org-plus-contrib cl-lib-highlight tagedit smex rainbow-delimiters paredit magit ido-ubiquitous clojure-mode-extra-font-locking cider)))
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(smtpmail-smtp-server "smtp.163.com")
@@ -367,7 +367,7 @@
 ;  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ; 'noerror)
 ;
-(setq default-directory "K:/clojure-home")
+(setq default-directory "~/.emacs.d/")
 ; (require 'org-install)
 ;
 ; ;; The following lines are always needed. Choose your own keys.
@@ -531,3 +531,9 @@
  '(org-level-8 ((t (:inherit default :weight bold :foreground "#FCE8C3" :font "Source Sans Pro")))))
 
   (load "setup-eww.el")
+
+(load "init-const.el")
+(load "init-utils.el")
+
+(load "init-projectile.el")
+(load "init-ivy.el")

@@ -1,6 +1,6 @@
 
-(setenv "HOME" "G:/clojure-home")
-(setenv "PATH" "G:/clojure-home")
+(setenv "HOME" "~/.emacs.d/")
+(setenv "PATH" "~/.emacs.d/")
 (setq default-directory "~/")
 
 

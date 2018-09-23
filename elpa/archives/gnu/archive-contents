@@ -788,7 +788,9 @@
 	 ((emacs
 	   (24 1))
 	  (cl-lib
-	   (0 5)))
+	   (0 5))
+	  (nadvice
+	   (0 3)))
 	 "Namespaces for emacs-lisp. Avoid name clobbering without hiding symbols." tar
 	 ((:keywords "extensions" "lisp")
 	  (:url . "https://github.com/Malabarba/names"))])

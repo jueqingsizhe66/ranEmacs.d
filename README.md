@@ -7111,9 +7111,45 @@ the [WolfgangMehner Perl-support][395].
 该作者实现了所有 [color-moccur.el][400]以及对应的[moccur-extendsion.el][401], 集成与color-rg中。
 
 早先有人提出的方案是基于[ag][397]和[wgrep][399]
+``` org
+我一般用counsel-rg或者counsel-ag，然后C-c C-o搭配wgrep操作。当然，纯用ag或者rg也能实现，而且能分组显示。
+强烈推荐rg.el 11，不是ripgrep。个人感觉这是目前效率最高的。感兴趣可以参考Centaur Emacs 6的配置。
+```
+参考 ：[rg.el][403], [Nuclear weapon multi-editing via ivy and Ag][405],[seagle0128][406]有很多不错的配置，我的
+ivy和projectile的配置就是参考他的。所以现在`C-c p s s` `C-c p s r` `c-c s` `C-c r` 都得用`C-c C-o`配合wgrep使用了.<2018-09-23 15:12>有效 
 
+结果： 使用`C-c p s s`进行搜索，使用`wgrep-change-to-wgrep-mode`进行替换,支持vim模式，使用`:1,4s///`替换也是可以的
+
+当然wgrep还是[有点问题][407]
 但是上面两种方式都是和evil-mode冲突的，进入wgrep或者color-rg事先得关掉`M-x evil-mode`.
 
+
+``` org
+默认情况下，rg是分组显示。您看到的上面我的截图没有分组，因为存在--vimgrep选项。
+
+而color-rg.el执行的命令是： 
+rg -i --column --color=always --smart-case -e "color-rg" c:/Users/yzl/AppData/Roaming/.emacs.d/customizations/color-rg/
+
+在windows下的cmd没问题（linux和macs据作者说也没问题），但是emacs调用的是eshell，
+在eshell输入上面命令行依然不是分组模式显示（每行都有文件路径名:行号:列号）
+
+结论是： 在windows emacs中,需要在color-rg-build-command强制添加--heading选项，表示的意思是Print matches grouped by each file。
+
+然后显示就正常，常用函数也可以使用。
+
+```
+
+原作者已经提交了[补丁][402], rg也有关于[Add line grouping option][404]的讨论
+
+#### color-rg工作原理
+
+1. rg.el 一旦改成分组模式显示分组, wgrep 就废了, color-rg.el 自己就包含了 rg.el 和 wgrep.el 功能, 不需要额外安装 wgrep.el
+2. 默认尽量少问问题, 快速搜索, 搜索后觉得需要缩小范围再动态过滤不想看的文件类型
+3. 默认智能的抓取当前光标处的单词(的确有), 而不仅仅是 symbol , 比如 CSS 的 class name, .foo 和 #foo 自动回转换成 foo 再搜索 (当然搜索之前都可以调), 避免大部分情况, 要各种删除 . 或者 # 才能搜索
+4. 如果正则表达式搜索错误以后, 会智能探测(还没感觉到), 并用 literal 模式重新刷一遍 (这个 rg.el 没有)
+5. 如果搜索出来的东西需要全部从文件中删除, 直接 C-c C-D 行了, 具体的更多贴心命令看上面的 keymap 吧.
+
+还是有点问题,特别是Ret。
 
 
 
@@ -7524,3 +7560,9 @@ the [WolfgangMehner Perl-support][395].
 [399]: https://github.com/mhayashi1120/Emacs-wgrep
 [400]: https://www.emacswiki.org/emacs/color-moccur.el
 [401]: https://www.emacswiki.org/emacs/moccur-extension.el
+[402]: https://github.com/manateelazycat/color-rg/commit/cd1ed3974419339c60b87e088173b8cd499d673f
+[403]: https://github.com/dajva/rg.el
+[404]: https://github.com/dajva/rg.el/pull/5/commits/427338b3abb603a051744488290b13268664c14a
+[405]: https://sam217pa.github.io/2016/09/11/nuclear-power-editing-via-ivy-and-ag/
+[406]: https://github.com/seagle0128/.emacs.d
+[407]: https://github.com/mhayashi1120/Emacs-wgrep/issues/36
