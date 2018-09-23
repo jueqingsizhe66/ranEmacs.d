@@ -3650,6 +3650,7 @@ so you should copy `.gitConfig` inside it.  Idea came from [ fatal unable to aut
 `C-c p s s` 项目中搜索文件内容,已经把ag.exe拷贝到~/.emacs.d中（支持中文， 不需要额外添加到path目录），并安装了`M-x package-install ag`文件。
 <2018-06-14 15:57> 确认支持中文,捡到宝的感觉,难道是更新的缘故!
 
+
 <2018-09-22 17:22>可否替换为rg.exe，据说比ag快点，现在库中也集成了[color-rg][396] 见标题149.
 安装`M-x package-install projectile-ripgrep`, 就可以使用`C-c p s r`
 
@@ -7168,6 +7169,15 @@ linum 大文件莫名卡死
 nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加大的效果。
 
 
+### 151. Youdao-dictionary
+
+[youdao-dictionary][414] 有道词典接口for emacs.
+配置文件在[init-utils.el][415].
+
+快捷键`C-c y` 打开一个新的窗口，`C-c Y `直接一个右键弹出的效果(很棒!)
+
+
+
 ----------
 
 ----------
@@ -7587,3 +7597,5 @@ nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加
 [411]: https://github.com/CodeFalling/nlinum-relative
 [412]: https://github.com/jwiegley/emacs-release/blob/master/lisp/jit-lock.el
 [413]: https://elpa.gnu.org/packages/nlinum.html
+[414]: https://github.com/xuchunyang/youdao-dictionary.el
+[415]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/init-utils.el
