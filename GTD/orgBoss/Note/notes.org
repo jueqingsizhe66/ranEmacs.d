@@ -2533,31 +2533,31 @@ I started using Emacs a
 ** 2018蜜柚 [#B]                                              :@NCEPU:crypt:
 -----BEGIN PGP MESSAGE-----
 
-hQEMAw7kGOoigxp9AQf8Dr7laERuP2mw6CneCl8ckmoj86w8U8821xY5PDOsMoHU
-a0ATY/aoMaWmfkRkkj+KBlK2s01qQoBrWHY903mBTe7okXtcJ4AYAKUjZqLx3imm
-bZOjQku3/2Io/8hMT4MjMQzGxmHlG78blxdOs1OPqgYvNvopXATJ0/gAKncGUUv6
-5g+8FVfvfwWFoObwh2Po1fN8W7DESp7CsGqWlVrpsFmeJAKt2tFd9It65wCbGApz
-Wg1m8P8wyjkVZx63Q77t7oTbM1o4HqN+F0z6Oho9DKj5u/UNIHyzpQiuALRp1VUw
-ZgoChuRr62HvWC7J8/eBoHpqGhmi7cy0lMlsPG7OHtLpATVUJFf1+nvpe32FlJwP
-0rJHEOWgRoG6z1xo8gSbCqX+sYLMvCzWx8Y5VGwIS9Ecm8cLbG14UVe8tR5Hae3m
-WNYAuSr8iTJB46kz9KL65UxhoSELp/FN8E9b7O3PRVu1UwWiov9Ui0X5WqnakqVk
-sZEgQg82euM5TTNEcrlL7QOjzNczo6HRXwK3DVtdQ7SU1hrswnvDDB9crAExdvOy
-/hzVEzyi6d42fvbm3mdgk0XK1Ocfzgd7Eezn4Yd46mhMV4WP6IeESiJy/9S/wHAw
-2607wbLk74t9enxyxQARpeYuGkk2l27bikfRB/gXADXd2hRtmiMeFegIlgBsIZkx
-E5V0+DKbLnoGewUXDIMMSPqtHnqS/R9rcKwKtJKtrXeEzJ3IeLG24ferjR15Oa4G
-7RGzNV4sTVUd1eRjHH9L+O9WsMAT9cUTCi89ZCSZwhKl5uTKnQoerpg7CdrceIsa
-xa/2ortOkM/K9/CRGuH3231Uh191X0Y3eEdtmNkmdGp4YbPv+/eAZPaisJdTUElC
-ITc9ciJgX5Ne5tINctOaXUP/SRRklkM5HtUuR2VvSaWtV8TIMMfPYt/XkT6fFXte
-woXOIV2fKOySanj4Dq/0X+vnQlBhyxyczaYgyTbmmwHu3aXLh60h4z5dOjtUnoly
-XnMoBDGRKm+pKlrmyAY8Z77Ag10+6eClhjxOxEQzikz8Rl4M89DU8DX1y93TfjIo
-ODRvcDnN417V/dnLYpG3xMRGt9mzZtE4VCZrL+6D6pHHila3F8m7U0ZH3rnoXJtj
-ECe2yyQ7UCxpcaW+zSwwLCgGaoW58lzMvt1ZARi8Tsxm8TD5lwhrt6p/SjBEjiiX
-B/51xbIgVCEG6ul0yf7Rbg4GPMuccJp3q0aPLe8gdVBpc64CbxhxEfqw6BqI6z3n
-qmLPiU4TK39IpW2/8z3aEkoaWPZZKAcFStgjXMpRuBoYGAQCWmPZFN55aE7sY5DP
-r18obUV1GoRg1u0URO72FwjdJiedCfxFjv95pHnHEpCrLFY+v7U99ZAYAB9fnKg0
-zLAvti2qnpRfM4fGdhQ9mlSPj48wvNETKkOZ4OwqI/TRWz8i/GWAJI3lZHm5ME+1
-RbHe58zn
-=86eE
+hQEMAw7kGOoigxp9AQf+MSE1ZQ2/owjgxi7G6W+M8WK/l38Ijn4PrYgrCteVzWPB
+w088DNAG5JYhrQ/Lt2fGunnS/MfDPYM9+TE1UPifpDEbFAm4u+qWBLcDlyKp+PDg
+IE1EQYF3z68WD5fOAs5JsPSFQDQqkmT/O5lOAqaBmxd77CJHThLacfynemINcR11
+pN5XDBQ4akMqIw1yJz0xWoCP1fJYtVH+ydzOznGVuqf5g0zsEFcZacPbGPYBpVnH
+AxJToa/CBrFoWm74kLYH9+fWczC0hKUIdQPi550EPzl4kkPVpWWsFFVI06lYqWWU
+JJSJTjJMnHyDUymDhVC1HDEk26K8QxGfS5uUXd9JldLpAW29lmoIGQ/W3hytnUzq
+KttWaj+qXK/tNEMCOzyNSR5nzobU1DbCkMbwcnNKJDmXGIEo7jc6WBlIuEpqU3OX
+3QI9AHiGbjO1/92B3yHd9z/QTRA0VbT6NmQQXAVrDQ2uvEwmPjwhoSYlYlQtX1Vd
+UNpuRcqYpc+awV7gAYT4ryIb/K7doge7mtVrrV7GWpsV000y/ptVRZutgAGgzp6J
+T7t1KsdL/ysv4oqCiedknPS9ClGJZC/s0gPiytqRC0nrPEq3BQ7H2txP99gc/sHM
+l8J0W+gF5jS+lbgcdvZzlXDnG9/wRaroFvVTIvFQkZxRclOesLotJ6Y243mruefj
+YOr55o3BJ82Dz2IZHXTrRG2rUWvm9cw6XRi3Tohed2jbdC7Mtu/7qatQC06MbbU4
+f1oIRrf4LcJB1PPlHh8J1sbr0jL7+fKk/jG9EGLDJB7Td7D5B6s1mnncYOFbYXWR
+t8sJlxRtOt6pTx/cvVo4sqy9DG0zxGShihjqagpvGQWHf+IKc/pg2ATlfx5L+18S
+E8pPrUp3M/viPsRdE2rc3Alz5VNzL4m6yAUCsrS6YxAFvFV/5wjewFUsoPwfOZTJ
+H7dV5diCtVHnrr+1fmlgOaD+qZnc7r9BuQ8Ibign3EA1RrpgA8NkXHlXe/fi1G5A
+Wl81qrU9hwsaV8jHGvIMZC3Aib46Qn4CuDmU08NpCy0QhzQk5ukZRVaz/8btcCTv
+OG2w3A3YA1yVTNMvfBTnK9jKUzOGRV7EkX93jmMzc8TS2+8xokgt709kW2I5o6MS
+NCSid8YwLT99Ut7spG/KWLx3d8mkqgn2aoNVWzus/sNKQOhAzN7RvoliH8EGFtTd
+mg+pukdTd+SAOnD3TlwClHwpMCODS6az/6jWcLVdjoJlwfZoFZVsV1VGXM39+K8K
+dMy1uuPfGIIa99OGFbvGH3IMQTHMJUwAKHIvoROhByjEU4/pYMIQyszIFntOFysT
+Qdm8rSjPz9tcBQwQz/1Ros/J0pw/J3IQaDGA1lUjBW/StWW9WknWMmXeO7wHgPbZ
+YoQ1d8nQSG9/jF7Z7wc8oYX5KHNy5UmGO0O9VcWCzbvtiywh3UABK5E1aRfMLuD5
+P8zmz2MooCkjHWPm
+=xL70
 -----END PGP MESSAGE-----
 ** 计算机程序技术 [#B]                                            :@Company:
 :LOGBOOK:
@@ -2683,7 +2683,9 @@ https://www.emacswiki.org/emacs/color-moccur.el 19 color-moccur.el 的作用是�
 CLOCK: [2018-09-22 周六 23:20]--[2018-09-22 周六 23:22] =>  0:02
 :END:
                          Added: [2018-09-22 周六 23:19]
-                         
+ LSP (Language Server Protocol) 是微软领导开发的编程语言语法补全和代码分析框架, 
+好处是全世界黑客都一起开发 LSP 后端, 不论你用的是 Emacs, Vim 还是 Sublime, VSCode,
+ Elicpse, IntelliJ 等编程工具, 都可以享受同等智能的语法补全后端.                        
 LSP-mode: Emacs client/library for the Language Server Protocol
 https://github.com/emacs-lsp/lsp-mode 
 
@@ -2703,4 +2705,22 @@ CLOCK: [2018-09-26 周三 16:45]--[2018-09-26 周三 16:46] =>  0:01
 #+BEGIN_SRC bash
 git log --pretty=oneline --graph
 #+END_SRC
+** what is a graph？ [#B]                                           :@NCEPU:
+:LOGBOOK:
+CLOCK: [2018-09-26 周三 20:26]--[2018-09-26 周三 20:37] =>  0:11
+:END:
+                         Added: [2018-09-26 周三 20:25]
+                         
 
+    A graph refers to a collection of nodes and a collection of edges that connect pairs of nodes.
+
+Graph theory can be used to describe a lot of things,
+but I'll start off with one of the most straightforward examples: maps.
+You can think of graph theory as a way of encoding information about two aspects of a map:
+
+1. places to go, and 
+2. ways to get there.
+
+Each land mass can be represented by a point, and each bridge is just a line between two points.
+
+Hook is a tool  for connection as edge, a bridge, which let you cross the wide gap(river).

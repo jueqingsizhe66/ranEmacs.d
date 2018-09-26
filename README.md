@@ -1,5 +1,7 @@
-﻿# 主要目的：clojure learning
-次要目的: emacs learning(org-mode)
+# 主要目的: Emacs learning(org-mode) ---Emacsable
+次要目的: clojure(closure) learning ----Clojureable
+
+    Use your force, make it reachable(reference--relationship), Zhao!
 
 能为他人创造点价值，那是最好的feedback([故事编程story programming][300])
 
@@ -7217,7 +7219,101 @@ The blog [record-org-mode-recent-activity][420] and [his agenda.el][419] will gi
 how to remember your working process. Detailed message can traced into [.orgConf.el][421]
 
 
+### 154. What is hook?
 
+在之前有人讨论过
+
+1. [add-hook和lambda][422] 得到结论add-hook返回函数对象值(函数也是first-order value) , 更准确的说是一个函数调用的表达式(lambda表达式)
+add-hook 也不建议使用 lambda, 进一步参考[emacs-lisp-style-guide][423]
+``` elisp
+
+懒惰的写法：
+
+(add-hook 'xxx-mode-hook
+          (lambda ()
+            ...)) ;;; 注意lambda前面没有单引号
+
+不厌其烦的写法：
+
+(defun foo (lambda ()
+            ...))
+
+(add-hook 'xxx-mode-hook 'foo)
+
+```
+
+add-hook 第二参数必须是 FUNCTION，不能是 S 表达式。答案也很简单：因为 add 之后，
+将由 (funcall FUNCTION) 来执行传进来的函数，如果不是函数就会出错。而参数列表本身不具备约束力，传什么都可以。
+
+`(add-hook 'xxx-mode-hook foo) `,那么 foo 就会被当作变量处理了, 所以写成了 `(add-hook 'xxx-mode-hook 'foo)`,
+这样foo就解析成了symbol,而不进行求值，直到通过funcall的时候才求值，也就是函数调用!
+
+``` elisp
+(add-hook 'xxx-mode-hook 'foo)           ;; 指针（传引用）
+(add-hook 'xxx-mode-hook (lambda ()...)) ;; 结构体（传值，一大拖东西）
+```
+
+#### xxx-mode-hook到底存的什么东西?
+
+虽然传递函数名和 lambda 执行效果没什么区别，但还是有些需要注意的，例如：
+``` elisp
+
+(add-hook 'xxx-mode-hook 'foo) 之后，xxx-mode-hook 的内容是
+
+(foo ;; <-- 最近添加
+ bar
+ quux
+ ...)
+ ```
+而 `(add-hook 'xxx-mode-hook (lambda () (message "foo")))` 之后，其内容则是
+``` elisp
+((lambda () (message "foo")) ;; <-- 最近添加
+ bar
+ quux
+ ...)
+```
+所以如果是传递的是函数名，将来需要改变函数 `foo `的行为，直接修改就可以了。但如果传递的是 `(lambda ...)`，要修改就比较麻烦了，必须整个 `(lambda ..)` 一字不漏抄一遍：
+
+``` elisp
+(remove-hook 'xxx-mode-hook (lambda () (message "foo")))
+然后，修改，重新添加:
+
+(add-hook 'xxx-mode-hook (lambda () (message "bar")))
+```
+
+所以说，偷懒是有代价的。
+
+2. [add-hook怎样写比较好?][424]
+ 结论方便查看、修改、删除
+ ```
+ (let ((func (lambda () (message "Do something"))))
+  (add-hook 'foo-hook func)
+  (add-hook 'bar-hook func))
+ ```
+3. [分享一下我的LSP配置文件][425]
+4. [linum-mode add into prog-mode-hook][408]
+
+    A graph refers to a collection of nodes and a collection of edges that connect pairs of nodes.
+
+Graph theory can be used to describe a lot of things,
+but I'll start off with one of the most straightforward examples: maps.
+You can think of graph theory as a way of encoding information about two aspects of a map: 
+
+1. places to go, and 
+2. ways to get there.
+
+Each land mass can be represented by a point, and each bridge is just a line between two points.
+
+1. Nodes: Places to be 
+2. Edges: Ways to get there
+
+公众交通: we love us some public transit. We've got buses, light rail, commuter rail, streetcars, and even an aerial tram.
+
+Hook is a tool  for connection as edge, a bridge.
+
+![A connection viliage][426]
+
+[References make commit reachable][427], reference means commit blob, tag, local branch, remote branches etc(what is reachable? what is a -able? Make it able! Make it available).
 
 ----------
 
@@ -7646,3 +7742,9 @@ how to remember your working process. Detailed message can traced into [.orgConf
 [419]: https://github.com/yqrashawn/.emacs.d/blob/master/modules/org-agenda.el
 [420]: http://yqrashawn.com/2018/09/17/record-org-mode-recent-activity/
 [421]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/.orgConf.el
+[422]: https://emacs-china.org/t/topic/4815/78
+[423]: https://github.com/bbatsov/emacs-lisp-style-guide#functions
+[424]: https://emacs-china.org/t/topic/3671/3
+[425]: https://emacs-china.org/t/lsp/6963
+[426]: http://think-like-a-git.net/assets/images2/bridges_of_konigsberg.jpg
+[427]: http://think-like-a-git.net/sections/experimenting-with-git/references-make-commits-reachable.html
