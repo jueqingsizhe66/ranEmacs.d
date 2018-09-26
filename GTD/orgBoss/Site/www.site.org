@@ -542,3 +542,17 @@ https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Tips
 宏代表着二次解析，从你的字符串提取出可运行的lisp表达式
 ** chez scheme库管理器
  http://ravensc.com/?tdsourcetag=s_pctim_aiomsg
+** 王勇emacs-chian
+ 
+*** github
+https://github.com/manateelazycat/awesome-tab
+
+https://github.com/manateelazycat/insert-translated-name/commit/51e409a58f5519c47e3ff4001c64a42baf672b8c
+
+https://github.com/manateelazycat/color-rg
+*** emacs-china
+https://emacs-china.org/t/emacs/7098/31
+
+https://emacs-china.org/t/awesome-tab-1-0-emacs/7053/108
+
+https://emacs-china.org/t/topic/6313/139

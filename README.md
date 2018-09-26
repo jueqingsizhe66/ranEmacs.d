@@ -1,4 +1,4 @@
-jjjjjj# 主要目的：clojure learning
+﻿# 主要目的：clojure learning
 次要目的: emacs learning(org-mode)
 
 能为他人创造点价值，那是最好的feedback([故事编程story programming][300])
@@ -7179,6 +7179,46 @@ nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加
 ![youdao][416]
 
 
+### 152. awesome tab
+
+[awesome tab][417]分组定制显示buffer tabs. 比如 html,css,js 或者org为一组。
+
+#### 配置
+
+```
+(add-to-list 'load-path (expand-file-name "~/elisp"))
+(require 'awesome-tab)
+(awesome-tab-mode t)
+```
+
+#### 常用命令
+
+
+```
+awesome-tab-forward-tab	切换到左边的标签
+awesome-tab-backward-tab	切换到右边的标签
+awesome-tab-forward-group	切换到前一个分组
+awesome-tab-backward-group	切换到后一个分组
+awesome-tab-kill-other-buffers-in-current-group
+```
+
+进一步可参考[emacs-china awesome-tab][418]
+
+### 153. Record agenda activity inside specified days
+
+1. You are changing the job status from TODO to DONE?
+2. You are changing the head title tag?
+3. Yes, you are working in the org-mode， and wanna log your recenty activiy?
+
+That's it. Org-agenda show too many info, so you wanna simplify it, only shows the thing that changes in some periods.
+
+
+The blog [record-org-mode-recent-activity][420] and [his agenda.el][419] will give you some advice about
+how to remember your working process. Detailed message can traced into [.orgConf.el][421]
+
+
+
+
 ----------
 
 ----------
@@ -7601,3 +7641,8 @@ nlinum-mode的好处是当处于org文件时候，标题处的行号字体有加
 [414]: https://github.com/xuchunyang/youdao-dictionary.el
 [415]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/init-utils.el
 [416]:https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/customizations/img/youdao.png
+[417]: https://github.com/manateelazycat/awesome-tab
+[418]: https://emacs-china.org/t/awesome-tab-1-0-emacs/7053
+[419]: https://github.com/yqrashawn/.emacs.d/blob/master/modules/org-agenda.el
+[420]: http://yqrashawn.com/2018/09/17/record-org-mode-recent-activity/
+[421]: https://github.com/jueqingsizhe66/ranEmacs.d/blob/develop/.orgConf.el

@@ -1,4 +1,4 @@
-;;;;
+﻿;;;;
 ;; Packages
 ;;;;
 
@@ -532,8 +532,10 @@
 
   (load "setup-eww.el")
 
-(load "init-const.el")
-(load "init-utils.el")
 
-(load "init-projectile.el")
-(load "init-ivy.el")
+(load "init-const.el")      ;;
+(load "init-utils.el")      ;;
+
+(load "init-projectile.el") ;;
+(load "init-ivy.el")        ;;
+(load "setup-tab.el")

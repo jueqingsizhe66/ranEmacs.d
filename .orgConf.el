@@ -399,6 +399,11 @@ In ~%s~:
         ("lg" "git" tags "+git")
         ("ld" "Docker" tags "+Docker")
         ("lc" "CFD" tags "+CFD")
+        ("R" "Recent activity"
+                ((tags "*"
+                        ((org-agenda-overriding-header "Recent Activity")
+                        (org-agenda-skip-function '(+org/has-child-and-last-update-before 14)))))
+                nil nil)
         ))
 ; (setq org-capture-templates
 ;     '(("Todo" ?t "* TODOS %^{To Do What?(Brief Description)} %^g\n%?\nAdded: %U" "~/.emacs.d/GTD/newgtd.org" "Tasks")
@@ -1734,3 +1739,63 @@ With a prefix ARG always prompt for command to use."
 
 
 
+;; record orgmode recent activity
+;; enable the log feature
+(setq org-log-into-drawer t)
+(setq org-log-reschedule 'time)
+(setq org-log-redeadline 'note)
+(setq org-log-note-clock-out t)
+
+;; add T: before timestamp for easy regex search
+(setq org-log-note-headings '((done . "CLOSING NOTE T:%t")
+                              (state . "State %-12s from %-12S T:%t")
+                              (note . "Note taken on T:%t")
+                              (reschedule . "Rescheduled from %S on T:%t")
+                              (delschedule . "Not scheduled, was %S on T:%t")
+                              (redeadline . "New deadline from %S on T:%t")
+                              (deldeadline . "Removed deadline, was %S on T:%t")
+                              (refile . "Refiled on T:%t")
+                              (clock-out . "Clocked out on T:%t")))
+
+(defun +org/find-state (&optional end)
+  "Used to search through the logbook of subtrees.
+
+    Looking for T:[2018-09-14 Fri 10:50] kind of time stamp in logbook."
+  (let* ((closed (re-search-forward "^CLOSED: \\[" end t))
+         (created (if (not closed) (re-search-forward "^:CREATED: \\[" end t)))
+         (logbook (if (not closed) (re-search-forward ".*T:\\[" end t)))
+         (result (or closed logbook created)))
+    result))
+
+(defun +org/date-diff (start end &optional compare)
+  "Calculate difference between  selected timestamp to current date.
+
+  The difference between the dates is calculated in days.
+  START and END define the region within which the timestamp is found.
+  Optional argument COMPARE allows for comparison to a specific date rather than to current date."
+  (let* ((start-date (if compare compare (calendar-current-date))))
+    (- (calendar-absolute-from-gregorian start-date) (org-time-string-to-absolute (buffer-substring-no-properties start end)))))
+
+(defun +org/last-update-before (since)
+  "List Agenda items that updated before SINCE day."
+  (let ((next-headline (save-excursion (or (outline-next-heading) (point-max)))))
+    (let* ((subtree-end (save-excursion (org-end-of-subtree t)))
+           (subtree-valid (save-excursion
+                            (forward-line 1)
+                            (if (and (< (point) subtree-end)
+                                     ;; Find the timestamp to test
+                                     (+org/find-state subtree-end))
+                                (let ((startpoint (point)))
+                                  (forward-word 3)
+                                  ;; Convert timestamp into days difference from today
+                                  (+org/date-diff startpoint (point)))
+                              (point-max)))))
+      (if (and subtree-valid (>= subtree-valid since))
+          next-headline
+        nil))))
+
+(defun +org/has-child-and-last-update-before (day)
+  (if (+org/has-child-p) (point)
+    (+org/last-update-before day)))    
+(defun +org/has-child-p ()
+  (save-excursion (org-goto-first-child)))
