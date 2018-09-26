@@ -2692,3 +2692,15 @@ lsp-mode provides a handful of hooks that can be used to extend and
  
 
 https://github.com/joaotavora/eglot
+** 美丽的git [#B]                                                      :git:
+:LOGBOOK:
+CLOCK: [2018-09-26 周三 16:45]--[2018-09-26 周三 16:46] =>  0:01
+:END:
+                         Added: [2018-09-26 周三 16:44]
+                         
+
+
+#+BEGIN_SRC bash
+git log --pretty=oneline --graph
+#+END_SRC
+

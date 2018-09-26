@@ -55,7 +55,7 @@
          ("C-c l" . counsel-locate)
          ("C-c r" . counsel-rg)
 
-         ("C-c s" . counsel-ag)
+         ("C-c t" . counsel-ag)
          ("C-c z" . counsel-fzf)
          ("C-c o" . counsel-outline)
 

@@ -205,7 +205,7 @@
     Expenses:Fruits  RMB 130
     Liabilities:花呗Huabei
 2018-08-26 绝味
-    Expenses:Food  RMB 45
+     RMB 45
     Liabilities:花呗Huabei
     
 2018-08-26 苹果+桃子
@@ -215,5 +215,19 @@
 2018-08-26 给欣然礼钱+麻辣烫
     Equity:Wife  RMB 500
     Assets:Savings:支付宝Alipay
-    
 
+2018-09-07 花甲盖饭170
+    Expenses:Food  RMB 170
+    Liabilities:花呗Huabei
+
+2018-09-22 麻辣烫 中秋前小聚
+    Expenses:Food  RMB 78
+    Assets:Savings:微信Weixin   
+
+2018-09-24 中秋聚餐 鲈鱼 蛏子 花甲 牛肉 鸡胗
+    Expenses:Food  RMB 150
+    Liabilities:花呗Huabei
+
+2018-09-26 麻辣烫小龙虾
+    Expenses:Food  RMB 26
+    Liabilities:花呗Huabei
