@@ -3,12 +3,16 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        evil-append
         evil-change
         evil-delete
+        evil-delete-backward-char-and-join
         evil-delete-char
+        evil-digit-argument-or-evil-beginning-of-line
         evil-find-char
         evil-force-normal-state
         evil-forward-char
+        evil-goto-line
         evil-insert
         evil-next-line
         evil-normal-state
@@ -16,6 +20,8 @@
         ivy-switch-buffer
         keyboard-escape-quit
         kill-region
+        org-self-insert-command
+        paredit-newline
         ))
 
 (setq mc/cmds-to-run-once
@@ -25,6 +31,7 @@
         evil-backward-char
         evil-mouse-drag-region
         evil-previous-line
+        evil-repeat-pop-next
         markdown-outdent-or-delete
         mouse-set-region
         paredit-backslash

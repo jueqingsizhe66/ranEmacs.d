@@ -422,7 +422,7 @@ C-x 5 2 打开当前window相同的frame
 `C-M-e`  Move to end       of defun
 
 
-### 16. multiple-cursors(editiing.el)(再次学习)
+### 16. multiple-cursors(editiing.el)(再次学习)(删掉，使用evil-mc)
 
 Seen from [emacs-rocks-13][37]
 
@@ -511,6 +511,42 @@ If you want to insert a newline in multiple-cursors-mode, use `C-j`.
 
 
 体味到了mark的思想(visual状态), 以及批处理的感觉！
+
+First mark, and then add cursors.
+
+<2018-09-27 00:59> However ,there are [some issues][428] in the evil-mode for multiple-cursors
+然而evil-mc-mode基本上可以解决问题
+
+工作流第一步选择单词(然后才会进行mark)
+
+1. 选择功能:(第一步)
+
+`g r m` 三个组合字母进入多cursors模式, `C-n 和C-p`支持向上选择和向下选择
+`g r h` create a cursors here
+`g r j` 表示向下行插入cursor
+`g r k` 表示向上行插入cursor
+
+2. 切换功能:
+
+`g r f` 调到第一个mark cursor, `g r l` 跳到最后一个
+`C-t` 很重要就是去掉选择作用，去掉mark cursor(类似于`g r p`和`g r n`)
+
+3. 退出功能
+`g r u` 三个组合字母退出多cursors模式(finally,工作流的最后一步
+
+很多其他的工具命令都是跳过不跳过，mark不mark的关系
+
+in short, `C-n / C-p` are used for creating cursors(because of what to create cursor? ), and `M-n / M-p` are used for cycling through cursors
+
+于是改用evil-mc mode
+
+额外的[evil-mc-extras][429],增加了当前光标数字自动增加
+
+1. gr+ `evil-mc-inc-num-at-each-cursor`
+2. gr- `evil-mc-dec-num-at-each-cursor`
+
+配合行插入`g r j`和`g r k`即可实现快如插入1，2，3. 实现插入1，然后使用`gr+`使得递增。
+
 ### 17. vim-surround to evil-surround
 
 有时候需要给单词或者字段组合增加个双引号或者单引号， 亦或者括号，
@@ -7748,3 +7784,4 @@ Hook is a tool  for connection as edge, a bridge.
 [425]: https://emacs-china.org/t/lsp/6963
 [426]: http://think-like-a-git.net/assets/images2/bridges_of_konigsberg.jpg
 [427]: http://think-like-a-git.net/sections/experimenting-with-git/references-make-commits-reachable.html
+[428]: https://github.com/magnars/multiple-cursors.el/issues/17

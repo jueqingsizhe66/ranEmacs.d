@@ -125,33 +125,35 @@
 ;; 2017/7/13
 (browse-kill-ring-default-keybindings)
 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-(use-package multiple-cursors
-  :ensure t
-  :bind (("C-c M-. ."   . mc/mark-all-dwim)
-         ("C-c M-. M-." . mc/mark-all-like-this-dwim)
-         ("C-c M-. n"   . mc/mark-next-like-this)
-         ("C-c M-. C-n" . mc/mark-next-like-this)
-         ("C-c M-. p"   . mc/mark-previous-like-this)
-         ("C-c M-. C-p" . mc/mark-previous-like-this)
-         ("C-c M-. a"   . mc/mark-all-like-this)
-         ("C-c M-. C-a" . mc/mark-all-like-this)
-         ("C-c M-. N"   . mc/mark-next-symbol-like-this)
-         ("C-c M-. C-N" . mc/mark-next-symbol-like-this)
-         ("C-c M-. P"   . mc/mark-previous-symbol-like-this)
-         ("C-c M-. C-P" . mc/mark-previous-symbol-like-this)
-         ("C-c M-. A"   . mc/mark-all-symbols-like-this)
-         ("C-c M-. C-A" . mc/mark-all-symbols-like-this)
-         ("C-c M-. f"   . mc/mark-all-like-this-in-defun)
-         ("C-c M-. C-f" . mc/mark-all-like-this-in-defun)
-         ("C-c M-. l"   . mc/edit-lines)
-         ("C-c M-. C-l" . mc/edit-lines)
-         ("C-c M-. e"   . mc/edit-ends-of-lines)
-         ("C-c M-. C-e" . mc/edit-ends-of-lines)
-         ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)          ;;
+;; (global-set-key (kbd "C->") 'mc/mark-next-like-this)         ;;
+;; (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)     ;;
+;; (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)      ;;
+;; (use-package multiple-cursors                                ;;
+;;   :ensure t                                                  ;;
+;;   :bind (("C-c M-. ."   . mc/mark-all-dwim)                  ;;
+;;          ("C-c M-. M-." . mc/mark-all-like-this-dwim)        ;;
+;;          ("C-c M-. n"   . mc/mark-next-like-this)            ;;
+;;          ("C-c M-. C-n" . mc/mark-next-like-this)            ;;
+;;          ("C-c M-. p"   . mc/mark-previous-like-this)        ;;
+;;          ("C-c M-. C-p" . mc/mark-previous-like-this)        ;;
+;;          ("C-c M-. a"   . mc/mark-all-like-this)             ;;
+;;          ("C-c M-. C-a" . mc/mark-all-like-this)             ;;
+;;          ("C-c M-. N"   . mc/mark-next-symbol-like-this)     ;;
+;;          ("C-c M-. C-N" . mc/mark-next-symbol-like-this)     ;;
+;;          ("C-c M-. P"   . mc/mark-previous-symbol-like-this) ;;
+;;          ("C-c M-. C-P" . mc/mark-previous-symbol-like-this) ;;
+;;          ("C-c M-. A"   . mc/mark-all-symbols-like-this)     ;;
+;;          ("C-c M-. C-A" . mc/mark-all-symbols-like-this)     ;;
+;;          ("C-c M-. f"   . mc/mark-all-like-this-in-defun)    ;;
+;;          ("C-c M-. C-f" . mc/mark-all-like-this-in-defun)    ;;
+;;          ("C-c M-. l"   . mc/edit-lines)                     ;;
+;;          ("C-c M-. C-l" . mc/edit-lines)                     ;;
+;;          ("C-c M-. e"   . mc/edit-ends-of-lines)             ;;
+;;          ("C-c M-. C-e" . mc/edit-ends-of-lines)             ;;
+;;          ("C-M-<mouse-1>" . mc/add-cursor-on-click)))        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;; (("C-c m t" . mc/mark-all-like-this)            ;;
    ;;  ("C-c m m" . mc/mark-all-like-this-dwim)       ;;
@@ -163,8 +165,10 @@
    ;;  ("C-c m s" . mc/mark-sgml-tag-pair)            ;;
    ;;  ("C-c m d" . mc/mark-all-like-this-in-defun))) ;;
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
+(require 'evil-mc)
+(require 'evil-mc-extras)
+(global-evil-mc-mode  1) ;; enable
+(global-evil-mc-extras-mode  1) ;; enable
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
