@@ -521,7 +521,7 @@ First mark, and then add cursors.
 
 1. 选择功能:(第一步)
 
-`g r m` 三个组合字母进入多cursors模式, `C-n 和C-p`支持向上选择和向下选择
+`g r m` 三个组合字母进入多cursors模式, `C-n 和C-p`支持向上选择和向下选择(完全等同于vim的操作方式)
 `g r h` create a cursors here
 `g r j` 表示向下行插入cursor
 `g r k` 表示向上行插入cursor

@@ -3,18 +3,25 @@
 CLOCK: [2018-09-21 周五 14:33]--[2018-09-21 周五 15:17] =>  0:44
 :END:
 
-Physically, The flow-field around a rotating horizontal wind turbine is significantly influenced by the existence of wind
-shear, turbulence, gust and yaw motion of the nacelle. For a yawing wind turbine, flow characteristics become more complex
-than those of a fixed yaw wind turbine, the additional effect of the wind contribution which is basiccally transmitted to the
-rotor due to the nacelle motion needs to be considered. Therefore, the accurate prediction of unsteady aerodynamic
-load which is calculated by many conventional numerical approaches is still questionable for an yawing wind turbine. 
-In this study, the unsteady computational fluid dynamics(CFD) simulations based on the sliding mesh technique 
-were applied for analyzing the yawing motion of the wind turbine due to the nacelle motion. The yawing motion 
-of the rotating turbine blades due to the nacelle motion is considered to investigate the effects of vortex-wake-blade 
-interaction for the aerodynamic performance . The work first validated the employed computational fluid dynamics(CFD) method
-with the fixed yaw and yawing of NREL PhaseVI wind turbine. Then focus the investigation into the flow-field analysis of the large
-utility-scale wind turbine.  It is shown that the unsteday aerodynamic loads of the yawing wind turbine become
-more sensitively changed due to the varition of yaw angle. 
+  Physically, The flow-field around a rotating horizontal wind turbine is 
+significantly influenced by the existence of wind shear, turbulence, gust
+and yaw motion of the nacelle. For a yawing wind turbine, flow characteristics
+become more complex than those of a fixed yaw wind turbine, the additional 
+effect of the wind contribution which is basiccally transmitted to the rotor 
+due to the nacelle motion needs to be considered. Therefore, the accurate 
+prediction of unsteady aerodynamic load which is calculated by many conventional 
+numerical approaches is still questionable for an yawing wind turbine. 
+In this study, the unsteady computational fluid dynamics(CFD) simulations 
+based on the sliding mesh technique were applied for analyzing the yawing
+ motion of the wind turbine due to the nacelle motion. The yawing motion 
+of the rotating turbine blades due to the nacelle motion is considered to 
+investigate the effects of vortex-wake-blade interaction for the aerodynamic 
+performance . The work first validated the employed computational fluid 
+dynamics(CFD) method with the fixed yaw and yawing of NREL PhaseVI wind 
+turbine. Then focus the investigation into the flow-field analysis of the 
+large utility-scale wind turbine.  It is shown that the unsteday aerodynamic 
+loads of the yawing wind turbine become more sensitively changed due to 
+the varition of yaw angle. 
 
 
 Keywords: unsteady, yawing, aerodynamic performance, flow-field analysis
@@ -23,6 +30,39 @@ We used two different turbine models to assess how the size of the  turbine roto
 affects the farm efficiency and effectiveness of the control starategy. T
 * Introduction
 
+* Test cases
+First, the NREL Phase VI[13] wind turbine was employed due to available test 
+data under yaw. Seven test cases under yaw were considered, and the results 
+were compared to experiments. 
+
+Next, the NREL 5MW reference wind turbine(RWT)[14] was studied. Table.2 list 
+all the test cases in this paper concern the wind turbines with constant yaw
+misalignment, and with sinusoidal yawing motions. The inflow was considered 
+uniform for those cases, and the blades were assumed rigid.
+** 3.1 NREL Phase VI wind turbine
+A stall-regulated wind turbine, with a power rating of 19.8kW, is applied 
+for the validation of the numerical method. The blade is made entirely of 
+the S809 aerofoil with relative thickness of 21%. It has non-linear distribution
+of the twist and linear distribution of the chord. The rotor diameter is 
+10.058m, and the wind turbine operates at a wind speed of 7m/s with a rotational
+speed of 71.9rpm resulting in tip speed ratio lambda=5.41.
+
+*** 3.1.1 Grid and computational parameters
+
+The NREL Phase VI rotor was modelled including a hub, but without the tower,
+instrumentation boxes[yu]. The rotor grid consisted of 4.5M cells, giving a
+about 1.5M cells per blade. The normal distance of the first cells in the 
+blocks adjacent to the blade surface was 8.0*10-5m. Based on the free-stream
+condition and the size of the first cell, the y+ parameter was y+=1.7,
+The viscous sublayer consisted of 15 cell with grid ratio=1.14, and 196 cells
+were distributed around the aerofoil section. The blade surface were resolved
+with 81 cells along the span.
+
+An inflow boundary condition was placed D upstream of the rortor, and pressure
+outlet was placed D down-stream. The no-slip wall was assigned on other 
+surfaces.  
+** 3.2 NREL 5MW wind turbine
+y+=0.3
 * Results and Discussion
 
 * Conclusion
